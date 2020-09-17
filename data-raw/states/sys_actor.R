@@ -1,5 +1,5 @@
 library(countrycode)
-sys_actor <- read.csv("data-raw/Stat_Actor/StateSys.csv",
+sys_actor <- read.csv("data-raw/states/StateSys.csv",
                       stringsAsFactors = F, na.strings = "") %>%
   transmutate(
     StatID = recode(Id, PAP="VAT"),

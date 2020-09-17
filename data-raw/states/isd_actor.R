@@ -1,6 +1,6 @@
 library(countrycode)
 # Get Griffiths/Butcher ISD data ####
-isd_actor <- read.csv("data-raw/Stat_Actor/ISD_Version1_Dissemination.csv",
+isd_actor <- read.csv("data-raw/states/ISD_Version1_Dissemination.csv",
                       stringsAsFactors = F)[,1:7] %>% mutate(
                         StatID = coalesce(countrycode(State.Name, "country.name", "iso3c"),
                                           COW.ID),
