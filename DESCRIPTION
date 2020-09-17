@@ -1,18 +1,25 @@
 Package: qStates
-Title: States for Qdatr
+Title: States for qdatr
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "James",
-           family = "Hollway",
-           role = c("aut", "cre"),
-           email = "james.hollway@graduateinstitute.ch",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+    c(person(given = "James",
+             family = "Hollway",
+             role = c("cre", "aut", "ctb"),
+             email = "james.hollway@graduateinstitute.ch",
+             comment = c("IHEID", ORCID = "0000-0002-8361-9647")),
+      person(given = "Henrique",
+             family = "Sposito",
+             role = "ctb",
+             comment = "IHEID"))
+Description: The package provides data on States across time. It compiles raw datasets and modified datasets 
+    which can be used for visualization, analysis and comparison in the core package qdatr.
+License: AGPL-3
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
+Suggests: 
+    testthat
 Imports: 
-    textclean
+    roxygen2
+    
