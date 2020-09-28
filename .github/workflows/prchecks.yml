@@ -91,5 +91,5 @@ jobs:
           name: ${{ matrix.config.asset_name }}
           path: build/
           
-      - name: Calculate code coverage
-        run: Rscript -e "covr::codecov()"
+#      - name: Calculate code coverage
+#        run: Rscript -e "covr::codecov()"
