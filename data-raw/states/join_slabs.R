@@ -4,7 +4,7 @@ cowslab1 <- cowslab %>% select(id, startdate, enddate)
 
 isdslab1 <- isdslab %>% select(id, startdate, enddate)
 
-slabs <- inner_join(cowslab, isdslab1)
+slabs <- inner_join(cowslab1, isdslab1)
 
 #Returns only 29 rows because most dates do not match ...
 
