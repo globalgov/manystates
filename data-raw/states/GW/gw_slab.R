@@ -1,10 +1,9 @@
 # GW Slab
-
 library(qDatr)
-library(tidyr)
-library(lubridate)
-
-gwslab <- as_tibble(gwstates) %>% transmutate(ccode = `Cow Nr.`) %>% transmutate(id = `Cow ID`) %>% 
-  transmutate(statename = `Name of State`) %>% transmutate(startdate = lubridate::dmy(Start)) %>% transmutate(enddate = lubridate::dmy(End))
-
-
+gwstates <- read_excel("data-raw/states/GW/gwstates.xlsx")
+#   gwslab <- as_tibble(gwstates) %>% transmutate(ccode = `Cow Nr.`) %>% 
+#   transmutate(Id = `Cow ID`) %>% 
+#   transmutate(statename = `Name of State`) %>% 
+#   transmutate(Beg = lubridate::dmy(Start)) %>% 
+#   transmutate(End = lubridate::dmy(End))
+usethis::use_data(gwstates)
