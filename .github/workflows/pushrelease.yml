@@ -61,8 +61,8 @@ jobs:
           remotes::install_cran("rcmdcheck")
         shell: Rscript {0}
 
-      - name: Document
-        run: Rscript -e 'roxygen2::roxygenise()'
+#      - name: Document
+#        run: Rscript -e 'roxygen2::roxygenise()'
 
       - name: Check
         env:
@@ -91,8 +91,8 @@ jobs:
           name: ${{ matrix.config.asset_name }}
           path: build/
           
-      - name: Calculate code coverage
-        run: Rscript -e "covr::codecov()"
+ #     - name: Calculate code coverage
+ #       run: Rscript -e "covr::codecov()"
 
   release:
     name: Bump version and release
@@ -110,6 +110,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
           DEFAULT_BUMP: patch
+          RELEASE_BRANCHES: main
       - name: Checkout two
         uses: actions/checkout@v2
       - name: Create Release
@@ -132,7 +133,7 @@ jobs:
       - name: Zip up
         uses: montudor/action-zip@v0.1.0
         with:
-          args: zip -qq -r qdatr_AllOS.zip . -i ./macOS/* ./winOS/* ./linuxOS/*
+          args: zip -qq -r qStates_AllOS.zip . -i ./macOS/* ./winOS/* ./linuxOS/*
 
       - name: Display structure of downloaded files again
         run: ls -R
@@ -144,6 +145,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: qdatr_AllOS.zip
-          asset_name: qdatr_AllOS.zip
+          asset_path: qStates_AllOS.zip
+          asset_name: qStates_AllOS.zip
           asset_content_type: application/zip
+          

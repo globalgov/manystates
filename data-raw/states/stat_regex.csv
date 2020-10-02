@@ -1,0 +1,325 @@
+StatID,Label,Regex
+ABK,Abkhazia,NA
+ACH,Aceh,NA
+AFG,Afghanistan,afghan
+AGO,Angola,angola
+ALB,Albania,albania
+ALT,Los Altos,NA
+AND,Andorra,andorra
+ARE,United Arab Emirates,emirates|u\.?a\.?e\.?$|united.?arab.?em
+ARG,Argentina,argentin
+ARM,Armenia,armenia
+ASA,Assam,NA
+ASI,Asir,NA
+AST,Ashanti,NA
+ATG,Antigua and Barbuda,antigua
+AUH,Austria-Hungary,austria-hungary
+AUS,Australia,australia
+AUT,Austria,(?!.*hungary).*austria|\baustri.*\bemp
+AZA,Azande,NA
+AZE,Azerbaijan,azerbaijan
+BAD,Baden,baden
+BAV,Bavaria,bavaria
+BDI,Urundi,burundi
+BEL,Belgium,(?!.*luxem).*belgium
+BEN,Dahomey,benin|dahome
+BFA,Burkina Faso,burkina|\bfaso|upper.?volta
+BGD,Bangladesh,bangladesh|(?=.*east).*paki?stan
+BGR,Bulgaria,bulgaria
+BHP,Bhopal,NA
+BHR,Bahrain,bahrain
+BHS,Bahamas,bahamas
+BHT,Bharatpur,NA
+BIH,Bosnia and Herzegovina,herzegovina|bosnia
+BIK,Bikaner,NA
+BLR,Belarus,belarus|byelo
+BLZ,Belize,belize|(?=.*british).*honduras
+BNJ,Benjermassin,NA
+BOL,Plurinational State of Bolivia,bolivia
+BPR,Bahawalpur,NA
+BRA,Brazil,brazil
+BRB,Barbados,barbados
+BRE,Bremen,NA
+BRN,Brunei,brunei
+BTN,Bhutan,bhutan
+BUK,Bukhara,NA
+BUR,Urundi,NA
+BWA,Botswana,botswana|bechuana
+CAF,Central African Republic,\bcentral.african.republic
+CAN,Canada,canada
+CAY,Cayor,NA
+CHE,Switzerland,switz|swiss
+CHL,Chile,\bchile
+CHM,Chamba,NA
+CHN,China,(?!.*\bmac)(?!.*\bhong)(?!.*\btai)(?!.*\brep).*china|(?=.*peo)(?=.*rep).*china
+CIV,Cote d'Ivoire,ivoire|ivory
+CMR,Cameroon,cameroon
+COD,Democratic Republic of the Congo,\bdem.*congo|congo.*\bdem|congo.*\bd[\.]?r|\bd[\.]?r.*congo|belgian.?congo|congo.?free.?state|kinshasa|zaire|l.opoldville|drc|droc|rdc
+COG,Congo,(?!.*\bdem)(?!.*\bd[\.]?r)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l.opoldville)(?!.*free).*\bcongo
+COK,Cook Islands,\bcook
+COL,Colombia,colombia
+COM,Comoros,comoro
+CPV,Cape Verde,verde
+CRI,Costa Rica,costa.?rica
+CUB,Cuba,\bcuba
+CUT,Cutch,NA
+CYP,Cyprus,cyprus
+CZE,Czech Republic,(?=.*rep).*czech|czechia|bohemia|czechoslovakia
+DDR,German Democratic Republic,german.?democratic.?rep|democratic.?rep.*germany|east.germany|germany.*east
+DEU,Germany (Prussia),(?!.*east).*germany|(?=.*\bfed.*\brep).*german
+DFR,Darfur,NA
+DIR,Dir,NA
+DJA,Fouta Djallon,NA
+DJI,Djibouti,djibouti
+DMA,Dominica,dominica(?!n)
+DNK,Denmark,denmark
+DOM,Dominican Republic,dominican.rep
+DRV,Annam,NA
+DZA,Ottoman Algeria,algeria
+DZG,Free City of Danzig,NA
+EAZ,Zanzibar,zanzibar
+ECU,Ecuador,ecuador
+EGY,Egypt,egypt
+EHT,State of Haiti,NA
+ERI,Eritrea,eritrea
+ESP,Spain,spain|castile
+EST,Estonia,estonia
+ETH,Ethiopia,ethiopia|abyssinia
+ETS,Eastern Turkistan,NA
+EUE,European Union,NA
+FIN,Finland,finland
+FJI,Fiji,fiji
+FNJ,Funj,NA
+FRA,France,(?!.*\bdep)(?!.*martinique).*france|french.?republic|\bgaul
+FRO,Faroe Islands,faroe|faeroe
+FSM,Federated States of Micronesia,fed.*micronesia|micronesia.*fed
+FTO,Fouta Toro,NA
+GAB,Gabon,gabon
+GBR,United Kingdom,united.?kingdom|britain|u\.?k\.?$
+GCL,Gran Colombia,NA
+GEO,Georgia,(?!.*south).*georgia
+GHA,Ghana,ghana|gold.?coast
+GIN,Guinea,(?!.*eq)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*new).*guinea
+GMB,Gambia,gambia
+GNB,Guinea-Bissau,bissau|(?=.*portu).*guinea
+GNQ,Equatorial Guinea,guine.*eq|eq.*guine|(?=.*span).*guinea
+GRC,Greece,greece|hellenic|hellas
+GRD,Grenada,grenada
+GTM,Guatemala,guatemala
+GUY,Guyana,guyana|british.?guiana
+GWA,Gwalior,NA
+HAN,Hanover,hanover
+HAW,Hawaii,NA
+HBG,Hamburg,hamburg
+HEJ,Hejaz,NA
+HND,Honduras,(?!.*brit).*honduras
+HRV,Croatia,croatia
+HSE,Hesse Electoral,hesse.*lectoral|hesse.kassel
+HSG,Hesse Grand Ducal,hess.*gran.*ducal|hesse.darmstadt
+HTI,Haiti,haiti
+HUN,Hungary,(?!.*austr).*hungary
+IDN,Indonesia,indonesia
+IND,India,india(?!.*ocea)
+INO,Indore,NA
+IPH,Perak,NA
+IRL,Ireland,(?=.*(?<!northern )ireland)(?=.*(?<!britain and )ireland)
+IRN,Iran_Islamic Republic of Iran,\biran|persia
+IRQ,Iraq,\biraq|mesopotamia
+ISL,Iceland,iceland
+ISR,Israel,israel
+ITA,Italy,italy
+JAM,Jamaica,jamaica
+JMK,Jimma-Kakka,NA
+JOD,Jodhpur,NA
+JOH,Johore,NA
+JOR,Jordan,jordan
+JPN,Japan,japan
+JPR,Jaipur,NA
+KAF,Kaffa,NA
+KAS,Kasanje,NA
+KAT,Kathiri Sultanate,NA
+KAZ,Kazakhstan,kazak
+KED,Kedah,NA
+KEL,Kelantan,NA
+KEN,Kenya,kenya|british.?east.?africa|east.?africa.?prot
+KGZ,Kyrgyzstan,kyrgyz|kirghiz
+KHI,Khaipur,NA
+KHM,Cambodia,cambodia|kampuchea|khmer
+KHV,Khiva,NA
+KIR,Kiribati,kiribati
+KLT,Kalat,NA
+KNA,St. Kitts and Nevis,kitts|\bnevis
+KNB,Kanem-Bornu,NA
+KOK,Kokand,NA
+KON,Kongo Kingdom,NA
+KOR,Republic of Korea,(?!.*d.*p.*r)(?!.*democrat)(?!.*people)(?!.*north).*\bkorea(?!.*d.*p.*r)
+KOS,Kosovo,kosovo
+KOT,Kotah,NA
+KPT,Kapurthala,NA
+KRG,Karangasem (Bali and Lombok),NA
+KTA,Kaarta,NA
+KUB,Kuba,NA
+KWT,Kuwait,kuwait
+KZB,Kazembe,NA
+LAO,Lao People's Democratic Republic,\blaos?\b
+LBN,Lebanon,lebanon
+LBR,Liberia,liberia
+LBY,Tripolitania,libya
+LCA,St. Lucia,\blucia
+LIE,Liechtenstein,liechtenstein
+LIM,Enarya (Limmu),NA
+LIP,Lippe,NA
+LKA,Sri Lanka,sri.?lanka|ceylon
+LSO,Basutoland (Lesotho),lesotho|basuto
+LTU,Lithuania,lithuania
+LUB,Luba,NA
+LUN,Lunda Empire,NA
+LUX,Luxembourg,(?!.*belg).*luxem
+LVA,Latvia,latvia
+MAR,Morocco,morocco|\bmaroc
+MAS,Massina,NA
+MCO,Monaco,monaco
+MDA,Moldavia,moldov|b(a|e)ssarabia
+MDG,Madagascar,madagascar|malagasy
+MDK,Mandinka Empire (Wassulu),NA
+MDV,Maldives,maldive
+MEC,Mecklenburg Schwerin,mecklenbur.*schwerin
+MEX,Mexico,\bmexic
+MHL,Marshall Islands,marshall
+MIN,Minangkabau,NA
+MKD,The former Yugoslav Republic of Macedonia,macedonia|fyrom
+MLI,Mali,\bmali\b
+MLT,Malta,\bmalta
+MMR,Myanmar,myanmar|burma
+MNE,Montenegro,(?!.*serbia).*montenegro
+MNG,Mongolia,mongolia
+MOD,Modena,modena
+MOS,Yatenga (Mossi),NA
+MOZ,Mozambique,mozambique
+MPR,Manipur,NA
+MRT,Mauritania,mauritania
+MUS,Mauritius,mauritius
+MWI,Malawi,malawi|nyasa
+MYS,Malaysia,malaysia
+NAG,Nagpur,NA
+NAM,Namibia,namibia
+NAS,Nassau,nassau
+NER,Niger,\bniger(?!ia)
+NGA,Nigeria,nigeria
+NIC,Nicaragua,nicaragua
+NIU,Niue,niue
+NLD,Netherlands,(?!.*\bant)(?!.*\bcarib).*netherlands|netherlands.antil|dutch.antil
+NOR,Norway,norway|norweg
+NPL,Nepal,nepal
+NRU,Nauru,nauru
+NZL,New Zealand,new.?zealand
+OFS,Orange Free State,NA
+OLD,Oldenburg,oldenburg
+OMN,Oman,\boman|trucial
+OVB,Ovimbundu,NA
+OYO,Oyo,NA
+PAH,Pahang,NA
+PAK,Pakistan,(?!.*east).*paki?stan
+PAL,Palembang,NA
+PAN,Panama,panama
+PER,Peru,peru
+PES,Peshwa,NA
+PHL,Philippines,philippines
+PLW,Palau,palau
+PMA,Parma,parma
+PNG,Papua New Guinea,papua|new.?guinea
+POL,Poland,poland
+PRK,Democratic People's Republic of Korea,dprk|d.p.r.k|korea.+(d.p.r|dpr|north|dem.*peo.*rep.*)|(d.p.r|dpr|north|dem.*peo.*rep.*).+korea
+PRT,Portugal,portugal
+PRY,Paraguay,paraguay
+PSE,Gaza Empire,palestin|\bgaza|west.?bank
+PUN,Punjab,NA
+QAT,Qatar,qatar
+QUA,Qu'aiti Sultanate,NA
+ROU,Romania,r(o|u|ou)mania
+RUS,Russia_Russian Federation,\brussia|soviet.?union|u\.?s\.?s\.?r|socialist.?republics
+RVN,Republic of Vietnam,NA
+RWA,Ruanda,rwanda
+SAL,Saloum,NA
+SAU,Emirate of Diriyah,\bsa\w*.?arabia
+SAW,Sawantvadi,NA
+SAX,Saxony,saxony
+SDN,Funj Sultanate of Sennar,(?!.*\bs(?!u)).*sudan
+SEG,Segou,NA
+SEL,Selangor,NA
+SEN,Senegal,senegal
+SGP,Singapore,singapore
+SHO,Shoa,NA
+SIA,Siak,NA
+SIC,Two Sicilies,two.?sicilies
+SID,Sind,NA
+SIK,Sikkim,NA
+SIR,Sirohi,NA
+SLB,Solomon Islands,solomon
+SLE,Sierra Leone,sierra
+SLV,El Salvador,el.?salvador
+SMR,San Marino,san.?marino
+SOK,Sokoto,NA
+SOM,Somalia,somali
+SOT,South Ossetia,NA
+SRB,Yugoslavia-Serbia,(?!.*monte).*serbia|yugoslavia
+SSD,South Sudan,\bs\w*.?sudan
+STP,Sao Tome and Principe,\bs(a|ã)o.?tom(e|é)
+SUL,Sulu,NA
+SUR,Suriname,surinam|dutch.?guiana
+SVK,Slovakia,(?!.*cze).*slovak
+SVN,Slovenia,slovenia
+SWA,Swat,NA
+SWE,Sweden,swed
+SWZ,Swaziland,swaziland
+SXA,Saxe-Atenburg,NA
+SXG,Saxe-Coburg-Gotha,NA
+SXM,Saxe-Meiningen-Hidburghausen,(?!.*martin)(?!.*saba).*maarten
+SXW,Saxe-Wiemar-Eisenach,saxe.weimar.eisenach
+SYC,Seychelles,seychell
+SYR,Syrian Arab Republic,syria
+TBT,Tibet,NA
+TCD,Chad,\bchad
+TER,Terengganu,NA
+TEX,Texas,NA
+TGO,Togo,togo
+THA,Thailand,thailand|\bsiam
+TJK,Tajikistan,tajik
+TKL,Tokelau,tokelau
+TKM,Turkmenistan,turkmen
+TLS,Timor-Leste,(?=.*leste).*timor|(?=.*east).*timor
+TOK,Tokolor,NA
+TON,Tonga,tonga
+TRA,Transvaal,NA
+TTO,Trinidad and Tobago,trinidad|tobago
+TUN,Tunisia,tunisia
+TUR,Turkey,turkey
+TUS,Tuscany,tuscany
+TUV,Tuvalu,tuvalu
+TWN,Chinese Taipei,taiwan|taipei|formosa|(?!.*peo)(?=.*rep).*china
+TZA,United Republic of Tanzania,tanzania
+UGA,Buganda,uganda
+UKR,Ukrainian SSR,ukrain
+UPC,United Provinces of Central America,NA
+UPR,Udaipur,NA
+URY,Uruguay,uruguay
+USA,United States of America,united.?states\b(?!.*islands)|\bu\.?s\.?a\.?\b|\s*u\.?s\.?\b(?!.*islands)
+UZB,Uzbekistan,uzbek
+VAT,Papal States,holy.?see|vatican|papal.?st
+VCT,St. Vincent and the Grenadines,vincent
+VEN,Bolivarian Republic of Venezuela,venezuela
+VNM,Viet Nam,(?!.*republic).*viet.?nam|(?=.*socialist).*viet.?nam
+VUT,Vanuatu,vanuatu|new.?hebrides
+WAD,Wadai,NA
+WRT,Wuerttemburg,w(ue|ü)rttemburg|w.rtemberg
+WSM,Samoa,(?!.*amer).*samoa
+YAR,Yemen Arab Republic,NA
+YEK,Yeke Kingdom,NA
+YEM,Yemen,(?=.*arab).*yemen|(?=.*north).*yemen|(?=.*sana).*yemen
+YPR,Yemen People’s Republic,(?=.*peo).*yemen|(?!.*rep)(?=.*dem).*yemen|(?=.*south).*yemen|(?=.*aden).*yemen|(?=.*\bp\.?d\.?r).*yemen
+YUG,Yugoslavia,NA
+ZAF,South Africa,south.africa|s\\..?africa
+ZIN,Zinder (Damagaram),NA
+ZMB,Zambia,zambia|northern.?rhodesia
+ZUL,Zululand,NA
+ZWE,Zimbabwe,zimbabwe|(?!.*northern).*rhodesia

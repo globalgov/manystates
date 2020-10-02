@@ -1,3 +1,5 @@
+library(tidyverse)
+library(qDatr)
 library(countrycode)
 # Get Griffiths/Butcher ISD data ####
 isd_actor <- read.csv("data-raw/states/ISD_Version1_Dissemination.csv",
@@ -93,3 +95,26 @@ isd_actor[isd_actor$StatID=="MDG" & isd_actor$Beg=="1816-01-01",c("Beg","End")] 
 isd_actor[isd_actor$StatID=="SYR" & isd_actor$Beg=="1946-04-17",c("Beg","End")] <- NA
 isd_actor[isd_actor$StatID=="EST" & isd_actor$Beg=="1991-09-06",c("Beg","End")] <- NA
 isd_actor[isd_actor$StatID=="DOM","Beg"] <- NA
+
+library(sticky)
+isd_actor <- as_tibble(isd_actor)
+library(haven)
+isd_actor <- isd_actor %>% mutate(Beg = labelled(Beg, label = "This is a date"))
+isd_not <- isd_actor %>% filter(Beg > "1990-01-01")
+
+isd_sans <- subset(isd_actor, Beg > "1990-01-01")
+str(isd_sans)
+
+isd_all <- full_join(isd_actor, isd_not)
+str(isd_all)
+
+library(table1)
+label(isd_actor$End) <- "This is also a date"
+table1(Beg ~ End, isd_actor)
+has.label(isd_actor$End)
+
+attr(isd_actor$Beg, 'label') <- "This is a date"
+
+library(pointblank)
+scan_data(as_tibble(isd_actor), c("overview", "variables", "missing", "sample"))
+info_tabular(isd_actor)

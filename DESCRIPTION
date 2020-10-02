@@ -1,6 +1,6 @@
 Package: qStates
-Title: States for qdatr
-Version: 0.0.0.9000
+Title: States for qDatr
+Version: 0.0.1
 Authors@R: 
     c(person(given = "James",
              family = "Hollway",
@@ -11,15 +11,12 @@ Authors@R:
              family = "Sposito",
              role = "ctb",
              comment = "IHEID"))
-Description: The package provides data on States across time. It compiles raw datasets and modified datasets 
-    which can be used for visualization, analysis and comparison in the core package qdatr.
-License: AGPL-3
+Description: The package provides data on states in the international system across time. 
+    It combines and cross-references several existing datasets consistent with the qDatr package aims.
+License: CC BY 4.0
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
-Suggests: 
-    testthat
+RoxygenNote: 7.1.0
 Imports: 
-    roxygen2
-    
+    covr
