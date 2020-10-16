@@ -1,6 +1,6 @@
 # Cow Slab
 library(qDatr)
-cow <- read_csv("data-raw/states/COW/states2016.csv")
+cow <- readr::read_csv("data-raw/states/COW/states2016.csv")
 #   cowslab <- as_tibble(states2016) %>% 
 #   transmutate(statename = entitle(statenme)) %>% 
 #   transmutate(Id = stateabb) %>% 
@@ -10,4 +10,4 @@ cow <- read_csv("data-raw/states/COW/states2016.csv")
 #   select(-version) %>% 
 #   transmutate(Beg = lubridate::dmy(stdate)) %>% 
 #   transmutate(End = lubridate::dmy(edate))  
-usethis::use_data(cow)
+qDatr::use_qData(cow)
