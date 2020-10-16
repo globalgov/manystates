@@ -1,5 +1,3 @@
-#' Please cite as: 
-#' 
 #' Correlates	of	War	Project.	2016.	“State	System	Membership	List,	v2016.”	Online,
 #' http://correlatesofwar.org.
 #'
