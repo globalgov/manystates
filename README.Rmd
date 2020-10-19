@@ -1,0 +1,12 @@
+# qStates
+
+qStates is a hush-hush secret project (for now) by James. 
+Please watch this space. 
+
+Check out [qDatr](https://github.com/globalgov/qDatr) for more.
+
+## Data included
+
+```{r datasets}
+data(package = "qStates")
+```
