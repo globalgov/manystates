@@ -6,7 +6,7 @@
 #'
 #' @format A data frame with 243 rows and 10 variables:
 #' \describe{
-#'   \item{Id}{Abbreviation of state name, follows ISO format}
+#'   \item{Id}{# letter abbreviation of state name}
 #'   \item{ccode}{COW	state	number}
 #'   \item{Statename}{Primary COW state name}
 #'   \item{Beg}{Beginning	date	of	state	tenure}
