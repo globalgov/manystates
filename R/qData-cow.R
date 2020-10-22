@@ -6,16 +6,11 @@
 #'
 #' @format A data frame with 243 rows and 10 variables:
 #' \describe{
-#'   \item{stateabb}{Abbreviation of state name, follows ISO format}
+#'   \item{Id}{Abbreviation of state name, follows ISO format}
 #'   \item{ccode}{COW	state	number}
-#'   \item{StateNme}{Primary COW state name}
-#'   \item{StYear}{Beginning	year	of	state	tenure}
-#'   \item{StMonth}{Beginning	month	of	state tenure}
-#'   \item{StDay}{Beginning	day	of	state	tenure}
-#'   \item{EndYear}{Ending	year	of	state	tenure}
-#'   \item{EndMonth}{Ending	month	of	state	tenure}
-#'   \item{EndDay}{Ending	day	of	state	tenure}
-#'   \item{Version}{Data	file	version	number}
+#'   \item{Statename}{Primary COW state name}
+#'   \item{Beg}{Beginning	date	of	state	tenure}
+#'   \item{End}{End date of state tenure}
 #' }
 #' @source \url{https://correlatesofwar.org/data-sets/state-system-membership}
 "cow"
