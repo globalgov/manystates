@@ -9,10 +9,10 @@
 #' 
 #' @format A data frame with 216 rows and 5 variables:
 #' \describe{
-#'   \item{Cow Nr}{Reference number for country according to COW project}
-#'   \item{Cow ID}{Three letter country ID according to COW project}
-#'   \item{Name of State}{Name of the state}
-#'   \item{Start}{Date of beggining of state tenure}
+#'   \item{ccode}{Reference number for country according to COW project}
+#'   \item{Id}{Three letter country ID according to COW project}
+#'   \item{Statename}{Name of the state}
+#'   \item{Beg}{Date of beggining of state tenure}
 #'   \item{End}{Date of ending of state tenure}
 #' }
 #' @source \url{http://ksgleditsch.com/statelist.html}
