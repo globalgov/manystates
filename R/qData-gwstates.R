@@ -5,7 +5,8 @@
 #' Please refer to the original article and the revised codebook (http://ksgleditsch.com/data/iisyst_casedesc.pdf) for a detailed 
 #' discussion of the coding rules, sources, general criteria  and issues in assessing
 #' effective independence. The data contain some changes over the table in the Gleditsch and Ward (1999) article. 
-#' These are documented in the revised codebook.
+#' These are documented in the revised codebook. The additional (tentative) list of microstates and dates 
+#' provided by the authors in the supplementary materials has not been added here. 
 #' 
 #' @format A data frame with 216 rows and 5 variables:
 #' \describe{
