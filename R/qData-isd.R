@@ -12,10 +12,10 @@
 #'
 #' @format A data frame with 375 rows and 6 variables:
 #' \describe{
-#'   \item{Cow Nr}{Reference number for country according to COW project}
-#'   \item{Cow ID}{Three letter country ID according to COW project}
-#'   \item{State Name}{Name of the state}
-#'   \item{Start}{Date of beggining of state tenure}
+#'   \item{ccode}{Reference number for country according to COW project}
+#'   \item{Id}{Three letter country ID according to COW project}
+#'   \item{Statename}{Name of the state}
+#'   \item{Beg}{Date of beggining of state tenure}
 #'   \item{End}{Date of ending of state tenure}
 #'   \item{Micro}{Whether or not state is considered a micro state, dummy variable}
 #'   \item{New State}{Whether or not state appeared in COW or GW datasets previously, dummy variable}
