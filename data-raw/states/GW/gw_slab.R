@@ -1,9 +1,11 @@
 # GW Slab
 library(qDatr)
-gwstates <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
-#   gwslab <- as_tibble(gwstates) %>% transmutate(ccode = `Cow Nr.`) %>% 
+gwdata <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
+qDatr::import_data(gwdata)
+#   gwstates <- as_tibble(gwstates) %>% 
+#   transmutate(ccode = `Cow Nr.`) %>% 
 #   transmutate(Id = `Cow ID`) %>% 
-#   transmutate(statename = `Name of State`) %>% 
+#   transmutate(statename = entitle(`Name of State`)) %>% 
 #   transmutate(Beg = lubridate::dmy(Start)) %>% 
 #   transmutate(End = lubridate::dmy(End))
-qDatr::use_qData(gwstates, overwrite = TRUE)
+qDatr::export_data(gwstates)
