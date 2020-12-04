@@ -1,8 +1,8 @@
 # GW Dataset
-library(qDatr)
+library(qData)
 library(tidyverse)
 gwstates <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
-# qDatr::import_data("gwstates", 'states')
+# qData::import_data("gwstates", 'states')
   gwstates <- as_tibble(gwstates) %>%
   transmutate(ccode = `Cow Nr.`) %>%
   transmutate(Id = `Cow ID`) %>%
@@ -11,4 +11,4 @@ gwstates <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
   rename(eDate = End) %>%
   transmutate(End = lubridate::dmy(eDate))%>%
   relocate(Id, ccode, statename, Beg, End)
-qDatr::export_data(gwstates)
+qData::export_data(gwstates)

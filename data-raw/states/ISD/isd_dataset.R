@@ -1,8 +1,8 @@
 #ISD Dataset
-library(qDatr)
+library(qData)
 library(tidyverse)
 isd <- readr::read_csv("data-raw/states/ISD/ISD_Version1_Dissemination.csv")
-# qDatr::import_data(isd)
+# qData::import_data(isd)
   isd <- as_tibble(isd) %>%
   transmutate(ccode = `COW Nr.`) %>%
   transmutate(Id = `COW ID`) %>%
@@ -17,4 +17,4 @@ isd <- readr::read_csv("data-raw/states/ISD/ISD_Version1_Dissemination.csv")
   mutate_at(vars(newstate), ~replace(., .==10 , 1)) %>%  # standardizes the dummies like the previous lines, na becomes 0 and 10 becomes 1
   dplyr::select(-X8, -X9, -X10, -X11, -X12,  -X13,  -X14,  -X15) %>%
   relocate(Id, ccode, statename, Beg, End, Micro, newstate)
-qDatr::export_data(isd)
+qData::export_data(isd)
