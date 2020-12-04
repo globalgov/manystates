@@ -2,3 +2,7 @@
 ^\.Rproj\.user$
 ^LICENSE\.md$
 ^data-raw$
+^data$
+^data/cow$
+^data/isd$
+^data/gwstates$

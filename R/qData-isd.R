@@ -10,15 +10,15 @@
 #' discussion and the codebook for details on coding rules and cases here
 #' (https://static1.squarespace.com/static/54eccfa0e4b08d8eee5174af/t/54ede030e4b0a0f14faa8f84/1424875568381/ISD+Codebook_version1.pdf)
 #'
-#' @format A data frame with 375 rows and 6 variables:
+#' @format This dataset contains  369 observations and 7 variables:
 #' \describe{
-#'   \item{ccode}{Reference number for country according to COW project}
 #'   \item{Id}{Three letter country ID according to COW project}
-#'   \item{Statename}{Name of the state}
+#'   \item{ccode}{Reference number for country according to COW project}
+#'   \item{statename}{Name of the state}
 #'   \item{Beg}{Date of beggining of state tenure}
 #'   \item{End}{Date of ending of state tenure}
 #'   \item{Micro}{Whether or not state is considered a micro state, dummy variable}
-#'   \item{New State}{Whether or not state appeared in COW or GW datasets previously, dummy variable}
+#'   \item{newstate}{Whether or not state appeared in COW or GW datasets previously, dummy variable}
 #' }
 #' @source \url{https://www.tandfonline.com/doi/full/10.1080/03050629.2013.834259}
 "isd"

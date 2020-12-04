@@ -2,13 +2,13 @@
 #' http://correlatesofwar.org.
 #'
 #' This dataset contains 	list	of	states	in	the	international	system	as	updated	and	distributed	by
-#' the	Correlates	of	War	Project (COW). The dates range from 1816 until 2016. 	
+#' the	Correlates	of	War	Project (COW). The dates range from 1816 until 2016. 
 #'
-#' @format A data frame with 243 rows and 10 variables:
+#' @format This dataset contains  243 observations and 5 variables:
 #' \describe{
 #'   \item{Id}{# letter abbreviation of state name}
 #'   \item{ccode}{COW	state	number}
-#'   \item{Statename}{Primary COW state name}
+#'   \item{statename}{Primary COW state name}
 #'   \item{Beg}{Beginning	date	of	state	tenure}
 #'   \item{End}{End date of state tenure}
 #' }
