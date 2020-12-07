@@ -14,13 +14,30 @@ Authors@R:
 Description: The package provides data on states in the international system across time. 
     It combines and cross-references several existing datasets consistent with the qData package aims.
 License: CC BY 4.0
+Depends: 
+    R (>= 2.10)
+Imports: 
+    qDatr,
+    covr,
+    desc,
+    dplyr,
+    english,
+    lubridate,
+    pkgdown,
+    pointblank,
+    purrr,
+    rlang,
+    roxygen2,
+    stringr,
+    textclean,
+    usethis,
+    whisker
+Suggests: 
+    fs,
+    librarian,
+    testthat,
+    xfun
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
-Imports: 
-    covr, pointblank
-Suggests: 
-    testthat
-Depends: 
-    R (>= 2.10)
