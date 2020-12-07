@@ -1,5 +1,5 @@
 library(tidyverse)
-library(qDatr)
+library(qData)
 library(countrycode)
 # Get Griffiths/Butcher ISD data ####
 isd_actor <- read.csv("data-raw/states/ISD_Version1_Dissemination.csv",

@@ -7,12 +7,12 @@
 #' effective independence. The data contain some changes over the table in the Gleditsch and Ward (1999) article. 
 #' These are documented in the revised codebook. The additional (tentative) list of microstates and dates 
 #' provided by the authors in the supplementary materials has not been added here. 
-#' 
-#' @format A data frame with 216 rows and 5 variables:
+#'
+#' @format This dataset contains  216 observations and 5 variables:
 #' \describe{
-#'   \item{ccode}{Reference number for country according to COW project}
-#'   \item{Id}{Three letter country ID according to COW project}
-#'   \item{Statename}{Name of the state}
+#'   \item{Id}{Reference number for country according to COW project}
+#'   \item{ccode}{Three letter country ID according to COW project}
+#'   \item{statename}{Name of the state}
 #'   \item{Beg}{Date of beggining of state tenure}
 #'   \item{End}{Date of ending of state tenure}
 #' }
