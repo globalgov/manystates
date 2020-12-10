@@ -15,9 +15,10 @@ Description: The package provides data on states in the international system acr
     It combines and cross-references several existing datasets consistent with the qData package aims.
 License: CC BY 4.0
 Depends: 
-    R (>= 2.10)
+    R (>= 2.10),
+    tibble
 Imports: 
-    qDatr,
+    qData,
     covr,
     desc,
     dplyr,

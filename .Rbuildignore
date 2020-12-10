@@ -6,3 +6,6 @@
 ^data/cow$
 ^data/isd$
 ^data/gwstates$
+^data-raw/states$
+^data-raw/states/COW$
+^data-raw/states/GW$
