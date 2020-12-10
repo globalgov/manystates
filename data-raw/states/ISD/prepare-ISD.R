@@ -1,0 +1,63 @@
+# #ISD Dataset
+# library(qData)
+# library(tidyverse)
+# isd <- readr::read_csv("data-raw/states/ISD/ISD_Version1_Dissemination.csv")
+# # qData::import_data(isd)
+#   isd <- as_tibble(isd) %>%
+#   transmutate(ccode = `COW Nr.`) %>%
+#   transmutate(Id = `COW ID`) %>%
+#   transmutate(statename = entitle(`State Name`)) %>%
+#   transmutate(newstate = entitle(`New State`)) %>% # Added this to rename the newstate column 
+#   transmutate(Beg = lubridate::dmy(Start)) %>%
+#   rename(eDate = End) %>% # renamed it for the next function not to be auto-referencing itself
+#   transmutate(End = lubridate::dmy(eDate)) %>%
+#   mutate_at(vars(Micro), ~replace(., is.na(.), 0)) %>% # replaced mutate_all(funs(ifelse(is.na(.), 0, .))) %>%, standardizes the dummies
+#   mutate_at(vars(Micro), ~replace(., .=="X" , 1)) %>%  # replaced mutate(across(everything(), ~replace(., . ==  "X" , 1))) %>%, standardizes the dummies
+#   mutate_at(vars(newstate), ~replace(., is.na(.), 0)) %>% # standardizes the dummies like the previous lines, na becomes 0 and 10 becomes 1
+#   mutate_at(vars(newstate), ~replace(., .==10 , 1)) %>%  # standardizes the dummies like the previous lines, na becomes 0 and 10 becomes 1
+#   dplyr::select(-X8, -X9, -X10, -X11, -X12,  -X13,  -X14,  -X15) %>%
+#   relocate(Id, ccode, statename, Beg, End, Micro, newstate)
+# qData::export_data(isd)
+
+
+# ISD Preparation Script
+
+# This is a template for importing, cleaning, and exporting data
+# ready for the qPackage.
+library(qData)
+
+# Stage one: Collecting data
+ISD <- read.csv("data-raw/states/ISD/ISD_Version1_Dissemination.csv")
+
+# Stage two: Correcting data
+# In this stage you will want to correct the variable names and
+# formats of the 'ISD' object until the object created
+# below (in stage three) passes all the tests. 
+ISD <- as_tibble(ISD) %>%
+  rename(Finish = End) %>% # Renaming the end date column to avoid self reference in transmutate.
+  transmutate(ID = `COW.ID`,
+              Beg = standardise_dates(Start),
+              End = standardise_dates(Finish),
+              Label = standardise_titles(`State.Name`),
+              COW_Nr = standardise_titles(as.character(COW.Nr.))) %>%
+  mutate_at(vars(Micro), ~replace(., .=="", 0)) %>% #  standardizes the dummies
+  mutate_at(vars(Micro), ~replace(., .=="X" , 1)) %>%  # replaced mutate(across(everything(), ~replace(., . ==  "X" , 1))) %>%, standardizes the dummies
+  mutate_at(vars(New.State), ~replace(., .=="", 0)) %>% # standardizes the dummies like the previous lines, na becomes 0 and X becomes 1
+  mutate_at(vars(New.State), ~replace(., .=="X" , 1)) %>% # standardizes the dummies like the previous lines, na becomes 0 and X becomes 1
+  dplyr::select(-X, -X.1, -X.2, -X.3, -X.4,  -X.5,  -X.6,  -X.7) %>% #Dropping certain unnecessary columns.
+  dplyr::relocate(COW_Nr, ID, Beg, End, Label, Micro, New.State) %>%
+  dplyr::arrange(Beg, ID)
+# qData includes several functions that should help cleaning and standardizing your data.
+# Please see the vignettes or website for more details.
+
+# Stage three: Connecting data
+# Next run the following line to make ISD available within the qPackage.
+export_data(ISD, database = "states")
+# This function also does two additional things.
+# First, it creates a set of tests for this object to ensure adherence to certain standards.
+# You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows) to run these tests locally at any point.
+# Any test failures should be pretty self-explanatory and may require you to return
+# to stage two and further clean, standardize, or wrangle your data into the expected format.
+# Second, it also creates a documentation file for you to fill in.
+# Please make sure that you cite any sources appropriately and fill in as much detail
+# about the variables etc as possible.

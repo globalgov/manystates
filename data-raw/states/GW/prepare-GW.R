@@ -12,11 +12,15 @@ GW <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
 # formats of the 'GW' object until the object created
 # below (in stage three) passes all the tests. 
 GW <- as_tibble(GW) %>%
+  rename(Finish = End) %>% # Renaming the end date column to avoid self reference in transmutate.(can't do it inside the transmutate since we also work on dates)
   transmutate(ID = `Cow ID`,
               Beg = standardise_dates(Start),
-              Label = standardise_titles(`Name of State`)) %>%
+              End = standardise_dates(Finish), 
+              Label = standardise_titles(`Name of State`),
+              COW_Nr = standardise_titles(`Cow Nr.`)) %>%
+  dplyr::relocate(COW_Nr, ID, Beg, End, Label) %>%
   dplyr::arrange(Beg, ID)
-# qData includes several functions that should help cleaning and standardising your data.
+# qData includes several functions that should help cleaning and standardizing your data.
 # Please see the vignettes or website for more details.
 
 # Stage three: Connecting data
@@ -26,7 +30,7 @@ export_data(GW, database = "states")
 # First, it creates a set of tests for this object to ensure adherence to certain standards.
 # You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows) to run these tests locally at any point.
 # Any test failures should be pretty self-explanatory and may require you to return
-# to stage two and further clean, standardise, or wrangle your data into the expected format.
+# to stage two and further clean, standardize, or wrangle your data into the expected format.
 # Second, it also creates a documentation file for you to fill in.
 # Please make sure that you cite any sources appropriately and fill in as much detail
 # about the variables etc as possible.

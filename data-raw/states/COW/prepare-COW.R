@@ -15,11 +15,13 @@ COW <-as_tibble(COW) %>%
   transmutate(ID = stateabb,
          Beg = standardise_dates(styear, stmonth, stday),
          End = standardise_dates(endyear, endmonth, endday),
-         Label = standardise_titles(statenme)) %>%
-  dplyr::select(ID, Beg, End, Label) %>%
+         Label = standardise_titles(statenme),
+         COW_Nr = standardise_titles(as.character(ccode))) %>%
+  dplyr::select(COW_Nr, ID, Beg, End, Label) %>% # Added COW_Nr to perform inner joins on datasets.
   # dplyr::select(ID, Beg, End, Label, everything()) %>%
+  dplyr::relocate(COW_Nr, ID, Beg, End, Label) %>%
   dplyr::arrange(Beg, ID)
-# qData includes several functions that should help cleaning and standardising your data.
+# qData includes several functions that should help cleaning and standardizing your data.
 # Please see the vignettes or website for more details.
 
 # Stage three: Connecting data
@@ -29,7 +31,7 @@ export_data(COW, database = "states")
 # First, it creates a set of tests for this object to ensure adherence to certain standards.
 # You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows) to run these tests locally at any point.
 # Any test failures should be pretty self-explanatory and may require you to return
-# to stage two and further clean, standardise, or wrangle your data into the expected format.
+# to stage two and further clean, standardize, or wrangle your data into the expected format.
 # Second, it also creates a documentation file for you to fill in.
 # Please make sure that you cite any sources appropriately and fill in as much detail
 # about the variables etc as possible.
