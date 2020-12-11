@@ -40,10 +40,10 @@ ISD <- as_tibble(ISD) %>%
               End = standardise_dates(Finish),
               Label = standardise_titles(`State.Name`),
               COW_Nr = standardise_titles(as.character(COW.Nr.))) %>%
-  mutate_at(vars(Micro), ~replace(., .=="", 0)) %>% #  standardizes the dummies
+  mutate_at(vars(Micro), ~replace(., .=="", 0)) %>% #  standardizes the dummies in the ISD dataset.
   mutate_at(vars(Micro), ~replace(., .=="X" , 1)) %>%  # replaced mutate(across(everything(), ~replace(., . ==  "X" , 1))) %>%, standardizes the dummies
-  mutate_at(vars(New.State), ~replace(., .=="", 0)) %>% # standardizes the dummies like the previous lines, na becomes 0 and X becomes 1
-  mutate_at(vars(New.State), ~replace(., .=="X" , 1)) %>% # standardizes the dummies like the previous lines, na becomes 0 and X becomes 1
+  mutate_at(vars(New.State), ~replace(., .=="", 0)) %>% # standardizes the dummies like the previous lines, "" becomes 0 and X becomes 1
+  mutate_at(vars(New.State), ~replace(., .=="X" , 1)) %>% # standardizes the dummies like the previous lines, "" becomes 0 and X becomes 1
   dplyr::select(-X, -X.1, -X.2, -X.3, -X.4,  -X.5,  -X.6,  -X.7) %>% #Dropping certain unnecessary columns.
   dplyr::relocate(COW_Nr, ID, Beg, End, Label, Micro, New.State) %>%
   dplyr::arrange(Beg, ID)
