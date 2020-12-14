@@ -8,38 +8,30 @@
 library(pointblank)
 
 test_that("object is correct", {
-  expect_col_exists(states[[COW]], vars("ID"))
-  expect_col_exists(states[[COW]], vars(Beg))
-  expect_col_exists(states[[COW]], vars(End))
+  expect_col_exists(states[["COW"]], vars(ID))
+  expect_col_exists(states[["COW"]], vars(Beg))
+  expect_col_exists(states[["COW"]], vars(End))
 })
 
 # # Uniformity tests (countries have a numerical COW_Nr, a unique string ID, a beginning and an end of tenure as well as a name.)
 # test_that("object is correct", {
-#   expect_col_exists(states[[COW]], vars(COW_Nr))
-#   expect_col_exists(states[[COW]], vars(ID))
-#   expect_col_exists(states[[COW]], vars(Beg))
-#   expect_col_exists(states[[COW]], vars(End))
-#   expect_col_exists(states[[COW]], vars(Label))
+#   expect_col_exists(states[["COW"]], vars(COW_Nr))
+#   expect_col_exists(states[["COW"]], vars(ID))
+#   expect_col_exists(states[["COW"]], vars(Beg))
+#   expect_col_exists(states[["COW"]], vars(End))
+#   expect_col_exists(states[["COW"]], vars(Label))
 # })
 
 test_that("missing obsevarsions are reported correctly", {
-  expect_length(grepl("-",states[[COW]]), 0)
-  expect_length(grepl("n/a", states[[COW]]), 0)
-  expect_length(grepl("N/A", states[[COW]]), 0)
+  expect_length(grepl(".", states[["COW"]]), 0)
+  expect_length(grepl("n/a", states[["COW"]]), 0)
+  expect_length(grepl("N/A", states[["COW"]]), 0)
 })
 
-# #Tests that missing observations are reported correctly.
-# test_that("missing observations are reported correctly", {
-#   expect_length(grepl("-", states[[COW]]), 0)
-#   expect_length(grepl("n/a", states[[COW]]), 0)
-#   expect_length(grepl("N/A", states[[COW]]), 0)
-# })
-
-
 test_that("dates are standardised", {
-  expect_col_is_date(states[[COW]], vars(Beg))
-  expect_col_is_date(states[[COW]], vars(End))
-  expect_length(grepl("/", COW), 0)
+  expect_col_is_date(states[["COW"]], vars(Beg))
+  expect_col_is_date(states[["COW"]], vars(End))
+  expect_length(grepl("/", states[["COW"]]), 0)
 })
 
 # More restrictive test that ensure dates are also in the correct format
@@ -60,8 +52,8 @@ test_that("dates are standardised", {
 
 # Tests that the labels are standardized 
 test_that("labels are standardised", {
-  expect_length(grepl("U.S.", states[[COW]]), 0)
-  expect_length(grepl("U.K.", states[[COW]]), 0)
-  expect_length(grepl("?", states[[COW]]), 0)
-  expect_length(grepl("NANA.", states[[COW]]), 0)
+  expect_length(grepl("U.S.", states[["COW"]]), 0)
+  expect_length(grepl("U.K.", states[["COW"]]), 0)
+  expect_length(grepl("?", states[["COW"]]), 0)
+  expect_length(grepl("NANA.", states[["COW"]]), 0)
 })
