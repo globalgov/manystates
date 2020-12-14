@@ -1,4 +1,4 @@
-# Test Template COW
+# Test COW Dataset
 
 #This template is used by the export_data() function of the qData package to render a test file in the qStates package.
 #The user should run these tests when using the export_data() function on a new raw dataset to ensure completeness and coherence in the database.
@@ -8,9 +8,9 @@
 library(pointblank)
 
 test_that("object is correct", {
-  expect_col_exists(COW, vars(endsWith("ID")))
-  expect_col_exists(COW, vars(Beg))
-  expect_col_exists(COW, vars(End))
+  expect_col_exists(states[[COW]], vars("ID"))
+  expect_col_exists(states[[COW]], vars(Beg))
+  expect_col_exists(states[[COW]], vars(End))
 })
 
 # # Uniformity tests (countries have a numerical COW_Nr, a unique string ID, a beginning and an end of tenure as well as a name.)
@@ -23,22 +23,22 @@ test_that("object is correct", {
 # })
 
 test_that("missing obsevarsions are reported correctly", {
-  expect_length(grepl("-", COW), 0)
-  expect_length(grepl("n/a", COW), 0)
-  expect_length(grepl("N/A", COW), 0)
+  expect_length(grepl("-",states[[COW]]), 0)
+  expect_length(grepl("n/a", states[[COW]]), 0)
+  expect_length(grepl("N/A", states[[COW]]), 0)
 })
 
 # #Tests that missing observations are reported correctly.
 # test_that("missing observations are reported correctly", {
 #   expect_length(grepl("-", states[[COW]]), 0)
-#   expect_length(grepl("n/a", states[COW]), 0)
-#   expect_length(grepl("N/A", states[COW]), 0)
+#   expect_length(grepl("n/a", states[[COW]]), 0)
+#   expect_length(grepl("N/A", states[[COW]]), 0)
 # })
 
 
 test_that("dates are standardised", {
-  expect_col_is_date(COW, vars(Beg))
-  expect_col_is_date(COW, vars(End))
+  expect_col_is_date(states[[COW]], vars(Beg))
+  expect_col_is_date(states[[COW]], vars(End))
   expect_length(grepl("/", COW), 0)
 })
 
@@ -60,8 +60,8 @@ test_that("dates are standardised", {
 
 # Tests that the labels are standardized 
 test_that("labels are standardised", {
-  expect_length(grepl("U.S.", COW), 0)
-  expect_length(grepl("U.K.", COW), 0)
-  expect_length(grepl("?", COW), 0)
-  expect_length(grepl("NANA.", COW), 0)
+  expect_length(grepl("U.S.", states[[COW]]), 0)
+  expect_length(grepl("U.K.", states[[COW]]), 0)
+  expect_length(grepl("?", states[[COW]]), 0)
+  expect_length(grepl("NANA.", states[[COW]]), 0)
 })

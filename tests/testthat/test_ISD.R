@@ -1,4 +1,4 @@
-# Test Template ISD
+# Test ISD Dataset
 
 #This template is used by the export_data() function of the qData package to render a test file in the qStates package.
 #The user should run these tests when using the export_data() function on a new raw dataset to ensure completeness and coherence in the database.
@@ -8,38 +8,38 @@
 library(pointblank)
 
 test_that("object is correct", {
-  expect_col_exists(ISD, vars(endsWith("ID")))
-  expect_col_exists(ISD, vars(Beg))
-  expect_col_exists(ISD, vars(End))
+  expect_col_exists(state[[ISD]], vars("ID"))
+  expect_col_exists(state[[ISD]], vars(Beg))
+  expect_col_exists(state[[ISD]], vars(End))
 })
 
-# # Uniformity tests (countries have a numerical ISD_Nr, a unique string ID, a beginning and an end of tenure as well as a name.)
+# # Uniformity tests (countries have a numerical state[[ISD]]_Nr, a unique string ID, a beginning and an end of tenure as well as a name.)
 # test_that("object is correct", {
-#   expect_col_exists(states[[ISD]], vars(ISD_Nr))
-#   expect_col_exists(states[[ISD]], vars(ID))
-#   expect_col_exists(states[[ISD]], vars(Beg))
-#   expect_col_exists(states[[ISD]], vars(End))
-#   expect_col_exists(states[[ISD]], vars(Label))
+#   expect_col_exists(state[[ISD]], vars(state[[ISD]]_Nr))
+#   expect_col_exists(state[[ISD]], vars(ID))
+#   expect_col_exists(state[[ISD]], vars(Beg))
+#   expect_col_exists(state[[ISD]], vars(End))
+#   expect_col_exists(state[[ISD]], vars(Label))
 # })
 
 test_that("missing obsevarsions are reported correctly", {
-  expect_length(grepl("-", ISD), 0)
-  expect_length(grepl("n/a", ISD), 0)
-  expect_length(grepl("N/A", ISD), 0)
+  expect_length(grepl("-", state[[ISD]]), 0)
+  expect_length(grepl("n/a", state[[ISD]]), 0)
+  expect_length(grepl("N/A", state[[ISD]]), 0)
 })
 
 # #Tests that missing observations are reported correctly.
 # test_that("missing observations are reported correctly", {
-#   expect_length(grepl("-", states[[ISD]]), 0)
-#   expect_length(grepl("n/a", states[ISD]), 0)
-#   expect_length(grepl("N/A", states[ISD]), 0)
+#   expect_length(grepl("-", state[[ISD]]), 0)
+#   expect_length(grepl("n/a", state[[ISD]]), 0)
+#   expect_length(grepl("N/A", state[[ISD]]), 0)
 # })
 
 
 test_that("dates are standardised", {
-  expect_col_is_date(ISD, vars(Beg))
-  expect_col_is_date(ISD, vars(End))
-  expect_length(grepl("/", ISD), 0)
+  expect_col_is_date(state[[ISD]], vars(Beg))
+  expect_col_is_date(state[[ISD]], vars(End))
+  expect_length(grepl("/", state[[ISD]]), 0)
 })
 
 # More restrictive test that ensure dates are also in the correct format
@@ -60,8 +60,8 @@ test_that("dates are standardised", {
 
 # Tests that the labels are standardized 
 test_that("labels are standardised", {
-  expect_length(grepl("U.S.", ISD), 0)
-  expect_length(grepl("U.K.", ISD), 0)
-  expect_length(grepl("?", ISD), 0)
-  expect_length(grepl("NANA.", ISD), 0)
+  expect_length(grepl("U.S.", state[[ISD]]), 0)
+  expect_length(grepl("U.K.", state[[ISD]]), 0)
+  expect_length(grepl("?", state[[ISD]]), 0)
+  expect_length(grepl("NANA.", state[[ISD]]), 0)
 })

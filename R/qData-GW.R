@@ -16,5 +16,5 @@
 #'   \item{End}{Decribe variable here}
 #'   \item{Label}{Name of the State}
 #' }
-#' @source \url{http://ksgleditsch.com/statelist.html}
+#' @source \url{http://ksgleditsch.com/statelist.html} 
 # "GW"
