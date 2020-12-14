@@ -8,38 +8,29 @@
 library(pointblank)
 
 test_that("object is correct", {
-  expect_col_exists(states[[states[[GW]]]], vars("ID"))
-  expect_col_exists(states[[states[[GW]]]], vars(Beg))
-  expect_col_exists(states[[states[[GW]]]], vars(End))
+  expect_col_exists(states[[states[["GW"]]]], vars(ID))
+  expect_col_exists(states[[states[["GW"]]]], vars(Beg))
+  expect_col_exists(states[[states[["GW"]]]], vars(End))
 })
 
-# # Uniformity tests (countries have a numerical states[[GW]]_Nr, a unique string ID, a beginning and an end of tenure as well as a name.)
+# # Uniformity tests (countries have a numerical, a unique string ID, a beginning and an end of tenure as well as a name.)
 # test_that("object is correct", {
-#   expect_col_exists(states[[states[[GW]]]], vars(states[[GW]]_Nr))
-#   expect_col_exists(states[[states[[GW]]]], vars(ID))
-#   expect_col_exists(states[[states[[GW]]]], vars(Beg))
-#   expect_col_exists(states[[states[[GW]]]], vars(End))
-#   expect_col_exists(states[[states[[GW]]]], vars(Label))
+#   expect_col_exists(states[["GW"]], vars(ID))
+#   expect_col_exists(states[["GW"]], vars(Beg))
+#   expect_col_exists(states[["GW"]], vars(End))
+#   expect_col_exists(states[["GW"]], vars(Label))
 # })
 
 test_that("missing obsevarsions are reported correctly", {
-  expect_length(grepl("-", states[[states[[GW]]]]), 0)
-  expect_length(grepl("n/a", states[[GW]]), 0)
-  expect_length(grepl("N/A", states[[GW]]), 0)
+  expect_length(grepl("-", states[["GW"]]), 0)
+  expect_length(grepl("n/a", states[["GW"]]), 0)
+  expect_length(grepl("N/A", states[["GW"]]), 0)
 })
 
-# #Tests that missing observations are reported correctly.
-# test_that("missing observations are reported correctly", {
-#   expect_length(grepl("-", states[[states[[GW]]]]), 0)
-#   expect_length(grepl("n/a", states[states[[GW]]]), 0)
-#   expect_length(grepl("N/A", states[states[[GW]]]), 0)
-# })
-
-
 test_that("dates are standardised", {
-  expect_col_is_date(states[[GW]], vars(Beg))
-  expect_col_is_date(states[[GW]], vars(End))
-  expect_length(grepl("/", states[[GW]]), 0)
+  expect_col_is_date(states[["GW"]], vars(Beg))
+  expect_col_is_date(states[["GW"]], vars(End))
+  expect_length(grepl("/", states[["GW"]]), 0)
 })
 
 # More restrictive test that ensure dates are also in the correct format
@@ -60,8 +51,8 @@ test_that("dates are standardised", {
 
 # Tests that the labels are standardized 
 test_that("labels are standardised", {
-  expect_length(grepl("U.S.", states[[GW]]), 0)
-  expect_length(grepl("U.K.", states[[GW]]), 0)
-  expect_length(grepl("?", states[[GW]]), 0)
-  expect_length(grepl("NANA.", states[[GW]]), 0)
+  expect_length(grepl("U.S.", states[["GW"]]), 0)
+  expect_length(grepl("U.K.", states[["GW"]]), 0)
+  expect_length(grepl("?", states[["GW"]]), 0)
+  expect_length(grepl("NANA.", states[["GW"]]), 0)
 })
