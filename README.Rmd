@@ -1,12 +1,15 @@
+---
+output: github_document
+---
 # qStates
 
-qStates is a hush-hush secret project (for now) by James. 
+`{qStates}` is a hush-hush secret project (for now) from [the PANARCHIC project](www.panarchic.ch). 
 Please watch this space. 
 
-Check out [qData](https://github.com/globalgov/qData) for more.
+Check out [`{qData}`](https://github.com/globalgov/qData) for more.
 
 ## Data included
 
 ```{r datasets}
-data(package = "qStates")
+data(package = "qStates", verbose = TRUE)
 ```
