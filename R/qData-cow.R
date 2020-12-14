@@ -13,4 +13,4 @@
 #'   \item{Label}{Primary COW State name}
 #' }
 #' @source \url{https://correlatesofwar.org/data-sets/state-system-membership}
-"COW"
+# "COW"

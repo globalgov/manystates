@@ -17,4 +17,4 @@
 #'   \item{Label}{Name of the State}
 #' }
 #' @source \url{http://ksgleditsch.com/statelist.html}
-"GW"
+# "GW"

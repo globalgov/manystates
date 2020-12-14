@@ -21,4 +21,4 @@
 #'   \item{New.State}{Whether or not the State appeared in COW or GW datasets before the date of beginning of the state tenure, dummy variable}
 #' }
 #' @source \url{https://www.tandfonline.com/doi/full/10.1080/03050629.2013.834259}
-"ISD"
+# "ISD"

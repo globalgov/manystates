@@ -2,7 +2,7 @@
 library(qData)
 library(tidyverse)
 cow <- readr::read_csv("data-raw/states/COW/states2016.csv")
-# qData::import_data("cow", 'states')
+# qData::import_data("COW", 'states')
   cow <- as_tibble(cow) %>%
   transmutate(statename = entitle(statenme)) %>%
   transmutate(Id = stateabb) %>%
