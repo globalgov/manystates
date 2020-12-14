@@ -18,7 +18,6 @@ Depends:
     R (>= 2.10),
     tibble
 Imports: 
-    qData,
     covr,
     desc,
     dplyr,
@@ -33,6 +32,8 @@ Imports:
     textclean,
     usethis,
     whisker
+Remotes:
+    globalgov/qData
 Suggests: 
     fs,
     librarian,
