@@ -12,7 +12,7 @@ GW <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
 # formats of the 'GW' object until the object created
 # below (in stage three) passes all the tests. 
 GW <- as_tibble(GW) %>%
-  rename(Finish = End) %>% # Renaming the end date column to avoid self reference in transmutate.(can't do it inside the transmutate since we also work on dates)
+  dplyr::rename(Finish = End) %>% # Renaming the end date column to avoid self reference in transmutate.(can't do it inside the transmutate since we also work on dates)
   transmutate(ID = `Cow ID`,
               Beg = standardise_dates(Start),
               End = standardise_dates(Finish), 
