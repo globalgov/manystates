@@ -22,10 +22,10 @@ test_that("object is correct", {
 #   expect_col_exists(states[["ISD"]], vars(Label))
 # })
 
-test_that("missing obsevarsions are reported correctly", {
-  expect_false(any(grepl("-", states[["ISD"]])))
-  expect_false(any(grepl("n/a", states[["ISD"]])))
-  expect_false(any(grepl("N/A", states[["ISD"]])))
+test_that("missing observations are reported correctly", {
+  expect_false(any(grepl("^.$", states[["ISD"]])))
+  expect_false(any(grepl("^n/a$", states[["ISD"]])))
+  expect_false(any(grepl("^N/A$", states[["ISD"]])))
 })
 
 test_that("dates are standardised", {
@@ -54,6 +54,6 @@ test_that("dates are standardised", {
 test_that("labels are standardised", {
   expect_false(any(grepl("U.S.", states[["ISD"]])))
   expect_false(any(grepl("U.K.", states[["ISD"]])))
-  expect_false(any(grepl("?", states[["ISD"]])))
+  expect_false(any(grepl("!", states[["ISD"]])))
   expect_false(any(grepl("NANA.", states[["ISD"]])))
 })

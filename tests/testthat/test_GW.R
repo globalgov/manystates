@@ -8,9 +8,9 @@
 library(pointblank)
 
 test_that("object is correct", {
-  expect_col_exists(states[[states[["GW"]]]], vars(ID))
-  expect_col_exists(states[[states[["GW"]]]], vars(Beg))
-  expect_col_exists(states[[states[["GW"]]]], vars(End))
+  expect_col_exists(states[["GW"]], vars(ID))
+  expect_col_exists(states[["GW"]], vars(Beg))
+  expect_col_exists(states[["GW"]], vars(End))
 })
 
 # # Uniformity tests (countries have a numerical, a unique string ID, a beginning and an end of tenure as well as a name.)
@@ -22,15 +22,15 @@ test_that("object is correct", {
 # })
 
 test_that("missing obsevarsions are reported correctly", {
-  expect_false(any(grepl("-", states[["GW"]])))
-  expect_false(any(grepl("n/a", states[["GW"]])))
-  expect_false(any(grepl("N/A", states[["GW"]])))
+  expect_false(any(grepl("^.$", states[["GW"]])))
+  expect_false(any(grepl("^n/a$", states[["GW"]])))
+  expect_false(any(grepl("^N/A$", states[["GW"]])))
 })
 
 test_that("dates are standardised", {
   expect_col_is_date(states[["GW"]], vars(Beg))
   expect_col_is_date(states[["GW"]], vars(End))
-  expect_false(any(grepl("/", states[["GW"]])))
+  expect_false(any(grepl("^/$", states[["GW"]])))
 })
 
 # More restrictive test that ensure dates are also in the correct format
@@ -53,6 +53,6 @@ test_that("dates are standardised", {
 test_that("labels are standardised", {
   expect_false(any(grepl("U.S.", states[["GW"]])))
   expect_false(any(grepl("U.K.", states[["GW"]])))
-  expect_false(any(grepl("?", states[["GW"]])))
+  expect_false(any(grepl("!", states[["GW"]])))
   expect_false(any(grepl("NANA.", states[["GW"]])))
 })

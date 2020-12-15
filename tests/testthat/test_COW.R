@@ -54,6 +54,6 @@ test_that("dates are standardised", {
 test_that("labels are standardised", {
   expect_false(any(grepl("U.S.", states[["COW"]])))
   expect_false(any(grepl("U.K.", states[["COW"]])))
-  expect_false(any(grepl("?", states[["COW"]])))
+  expect_false(any(grepl("!", states[["COW"]])))
   expect_false(any(grepl("NANA.", states[["COW"]])))
 })
