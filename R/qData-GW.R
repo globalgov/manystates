@@ -2,7 +2,7 @@
 #' Revised List of Independent States Since 1816” International Interactions 25:393-413. 
 #'
 #' This dataset contains a revised and updated version of Gleditsch and Ward (1999) list of independent states. 
-#' Please refer to the original article and the revised codebook (http://ksgleditsch.com/data/iisyst_casedesc.pdf) for a detailed 
+#' Please refer to the original article and the revised codebook for a detailed 
 #' discussion of the coding rules, sources, general criteria  and issues in assessing
 #' effective independence. The data contain some changes over the table in the Gleditsch and Ward (1999) article. 
 #' These are documented in the revised codebook. The additional (tentative) list of microstates and dates 
@@ -12,9 +12,10 @@
 #' \describe{
 #'   \item{COW_Nr}{Reference number for country according to COW project}
 #'   \item{ID}{Three letter country ID according to COW project}
-#'   \item{Beg}{Decribe variable here}
-#'   \item{End}{Decribe variable here}
-#'   \item{Label}{Name of the State}
+#'   \item{Beg}{Beginning	date	of	state	tenure}
+#'   \item{End}{End date of state tenure}
+#'   \item{Label}{Primary COW State name}
 #' }
 #' @source \url{http://ksgleditsch.com/statelist.html} 
+#' @source \url{http://ksgleditsch.com/data/iisyst_casedesc.pdf}
 # "GW"

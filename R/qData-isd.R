@@ -14,7 +14,7 @@
 #' \describe{
 #'   \item{COW_Nr}{Reference number for country according to COW project}
 #'   \item{ID}{Three letter country ID according to COW project}
-#'   \item{Beg}{Date of beggining of State tenure}
+#'   \item{Beg}{Date of beginning of State tenure}
 #'   \item{End}{Date of ending of State tenure}
 #'   \item{Label}{Name of the state}
 #'   \item{Micro}{Whether or not the State is considered a micro state, dummy variable}
