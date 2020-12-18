@@ -8,3 +8,5 @@
 ^data-raw/states/COW$
 ^data-raw/states/GW$
 ^data-raw/states/ISD$
+^\.github$
+^README\.Rmd$
