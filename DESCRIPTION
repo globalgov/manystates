@@ -31,7 +31,8 @@ Imports:
     stringr,
     textclean,
     usethis,
-    whisker
+    whisker,
+    qData
 Remotes:
     globalgov/qData
 Suggests: 
