@@ -1,0 +1,46 @@
+---
+output: github_document
+---
+# qStates <img src="qStates_hexlogo.png" align="right" width="220"/>
+
+<!-- badges: start -->
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/globalgov/qStates)
+![GitHub Release Date](https://img.shields.io/github/release-date/globalgov/qstates)
+![GitHub issues](https://img.shields.io/github/issues-raw/globalgov/qStates)
+<!-- [![HitCount](http://hits.dwyl.com/globalgov/qStates.svg)](http://hits.dwyl.com/globalgov/qStates) -->
+[![Codecov test coverage](https://codecov.io/gh/globalgov/qStates/branch/main/graph/badge.svg)](https://codecov.io/gh/globalgov/qStates?branch=main)
+<!-- ![GitHub All Releases](https://img.shields.io/github/downloads/jhollway/roctopus/total) -->
+<!-- badges: end -->
+
+`{qStates}` is a a data package for the `{qData}` ecosystem of packages. It is a data package about states actors across the globe. It encompasses several datasets with states' names and dates of beginning and ending (for some states), alongside other information. The package is geared towards global governance research, but can be used broadly for anyone interested in states actors across time. 
+
+For more about the [the PANARCHIC project](www.panarchic.ch). Please also check out [`{qData}`](https://github.com/globalgov) for more on the `{qStates}` and `{qData}` packages. 
+
+## Downloading and installing qStates
+
+The development version of the package `{qStates}` can be downloaded from GitHub. 
+
+```
+#install.package(remotes)
+remotes::install_github("globalgov/qStates")
+```
+
+## To check on qStates and other available qPackages for qData
+
+`{qData}` connects users to other packages in the ecosystem. The `get_packages()` function can be also used to discover `{qStates}` and other packages currently available in the ecosystem.
+
+```{r}
+ library(qData)
+ get_packages()
+```
+
+## Datasets included in the states database
+
+`{qStates}` allows to quickly check all the datasets included in the package's database. 
+
+```{r datasets}
+qStates::states
+```
+
+Please see the user vignette on [the website](https://globalgov.github.io/qData/) for more information about how to use both `qStates}` and `{qData}` for analysis. 

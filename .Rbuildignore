@@ -1,3 +1,12 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^LICENSE\.md$
+^data-raw$
+^data$
+^data/states$
+^data-raw/states$
+^data-raw/states/COW$
+^data-raw/states/GW$
+^data-raw/states/ISD$
+^\.github$
+^README\.Rmd$

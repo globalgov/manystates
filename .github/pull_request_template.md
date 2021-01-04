@@ -5,8 +5,17 @@ Please also include relevant motivation and context.
 List any dependencies that are required for this change,
 indicating whether this is a major (breaking), minor, or patch change.
 
-Fixes #(issue no.)
-Closes #(issue no.)
+Please also indicate if these are package changes, data changes, or both.  
+
+## Package changes
+
+* Fixes #(issue no.)
+* Closes #(issue no.)
+
+## Data changes
+
+* Fixes #(issue no.)
+* Closes #(issue no.)
 
 # Checklist:
 
