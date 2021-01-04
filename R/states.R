@@ -1,7 +1,6 @@
 #' Data on the entry and exit of sovereign states to the interstate system containing 
 #' the following datasets:
 #' 
-#' @import tibble	
 #' @format This dataset contains 243 observations and 5 variables:	
 #' \describe{	
 #'   \item{COW_Nr}{Numerical COW identifier}	
@@ -11,5 +10,3 @@
 #'   \item{Label}{Primary COW State name}	
 #' }	
 #' @source \url{https://correlatesofwar.org/data-sets/state-system-membership}
-#' @usage data(states)
-"states"
