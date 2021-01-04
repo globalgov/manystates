@@ -15,7 +15,7 @@ Description: qStates provide data on states in the international system across t
     The package combines and cross-references several existing datasets consistent with the qData package aims.
 License: CC BY 4.0
 Depends: 
-    R (>= 2.10),
+    R (>= 3.50),
     tibble
 Imports: 
     covr,
