@@ -1,6 +1,13 @@
 Package: qStates
 Title: States for qData
 Version: 0.0.1
+Description: qStates provide data on states in the international system across time. 
+    The package combines and cross-references several existing datasets consistent with the qData package aims.
+URL: https://github.com/globalgov/qStates
+BugReports: https://github.com/globalgov/qStates/issues
+Depends: 
+    R (>= 3.50),
+    tibble
 Authors@R: 
     c(person(given = "James",
              family = "Hollway",
@@ -11,12 +18,8 @@ Authors@R:
              family = "Sposito",
              role = "ctb",
              comment = "IHEID"))
-Description: qStates provide data on states in the international system across time. 
-    The package combines and cross-references several existing datasets consistent with the qData package aims.
+LazyData: true
 License: CC BY 4.0
-Depends: 
-    R (>= 3.50),
-    tibble
 Imports: 
     covr,
     desc,
@@ -40,6 +43,5 @@ Suggests:
     testthat,
     xfun
 Encoding: UTF-8
-LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
