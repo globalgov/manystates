@@ -19,7 +19,7 @@ This dataset contains 243 observations and 5 variables:
 \url{https://correlatesofwar.org/data-sets/state-system-membership}
 }
 \usage{
-states
+data(states)
 }
 \description{
 Data on the entry and exit of sovereign states to the interstate system containing

@@ -1,5 +1,5 @@
 
-# qStates <img src="qStates_hexlogo.png" align="right" width="220"/>
+# qStates <img src="inst/qStates_hexlogo.png" align="right" width="220"/>
 
 <!-- badges: start -->
 
