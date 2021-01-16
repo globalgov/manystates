@@ -11,8 +11,8 @@ Date](https://img.shields.io/github/release-date/globalgov/qstates)
 ![GitHub
 issues](https://img.shields.io/github/issues-raw/globalgov/qStates)
 <!-- [![HitCount](http://hits.dwyl.com/globalgov/qStates.svg)](http://hits.dwyl.com/globalgov/qStates) -->
-[![Codecov test
-coverage](https://codecov.io/gh/globalgov/qStates/branch/main/graph/badge.svg)](https://codecov.io/gh/globalgov/qStates?branch=main)
+<!-- [![Codecov test
+coverage](https://codecov.io/gh/globalgov/qStates/branch/main/graph/badge.svg)](https://codecov.io/gh/globalgov/qStates?branch=main) -->
 <!-- ![GitHub All Releases](https://img.shields.io/github/downloads/jhollway/roctopus/total) -->
 <!-- badges: end -->
 
