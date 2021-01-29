@@ -34,7 +34,7 @@ GW <- as_tibble(GW) %>%
 
 # Stage three: Connecting data
 # Next run the following line to make GW available within the qPackage.
-export_data(GW, database = "states")
+export_data(GW, database = "states", link="http://ksgleditsch.com/data-4.html")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence to certain standards.
 # You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows) to run these tests locally at any point.

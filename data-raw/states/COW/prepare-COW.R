@@ -12,15 +12,15 @@ COW <- readr::read_csv("data-raw/states/COW/states2016.csv")
 # formats of the 'COW' object until the object created
 # below (in stage three) passes all the tests. 
 COW <-as_tibble(COW) %>%
-  transmutate(COW_ID = stateabb,
+  transmutate(ID = stateabb,
          Beg = standardise_dates(styear, stmonth, stday),
          End = standardise_dates(endyear, endmonth, endday),
          Label = standardise_titles(statenme),
          COW_Nr = standardise_titles(as.character(ccode))) %>%
-  dplyr::select(COW_Nr, COW_ID, Beg, End, Label) %>% # Added COW_Nr to perform inner joins on datasets.
-  # dplyr::select(COW_ID, Beg, End, Label, everything()) %>%
-  dplyr::relocate(COW_Nr, COW_ID, Beg, End, Label) %>%
-  dplyr::arrange(Beg, COW_ID)
+  dplyr::select(COW_Nr, ID, Beg, End, Label) %>% # Added COW_Nr to perform inner joins on datasets.
+  # dplyr::select(ID, Beg, End, Label, everything()) %>%
+  dplyr::relocate(COW_Nr, ID, Beg, End, Label) %>%
+  dplyr::arrange(Beg, ID)
 # qData includes several functions that should help cleaning and standardizing your data.
 # Please see the vignettes or website for more details.
 
@@ -35,7 +35,7 @@ COW <-as_tibble(COW) %>%
 
 # Stage three: Connecting data
 # Next run the following line to make COW available within the qPackage.
-export_data(COW, database = "states")
+export_data(COW, database = "states", link = "https://correlatesofwar.org/data-sets/state-system-membership")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence to certain standards.
 # You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows) to run these tests locally at any point.
