@@ -1,3 +1,12 @@
+# qStates 0.0.2
+
+## Data
+
+- Closes #17 by rerunning the new `export_data()` function on the `states` database which adds new metadata(source link and source bibliography) as well as setting the bibliography at the correct database level instead of the dataset level.
+- Added .bib files in each `data-raw` folder with the original datasets to provide citation information.
+- Added link arguments to each `dataset-prepare` script.
+
+
 # qStates 0.0.1
 
 ## Package
