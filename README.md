@@ -118,4 +118,4 @@ qStates::states
 
 Please see the user vignette on [the
 website](https://globalgov.github.io/qData/) for more information about
-how to use both `qStates}` and `{qData}` for analysis.
+how to use both `{qStates}` and `{qData}` for analysis.
