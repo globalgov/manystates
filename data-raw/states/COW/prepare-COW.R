@@ -35,7 +35,7 @@ COW <-as_tibble(COW) %>%
 
 # Stage three: Connecting data
 # Next run the following line to make COW available within the qPackage.
-export_data(COW, database = "states", link = "https://correlatesofwar.org/data-sets/state-system-membership")
+export_data(COW, database = "states", URL = "https://correlatesofwar.org/data-sets/state-system-membership")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence to certain standards.
 # You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows) to run these tests locally at any point.

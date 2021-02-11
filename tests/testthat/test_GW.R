@@ -1,13 +1,14 @@
 # Test if  meets the q ecosystem requirements
 
-# Requires the following package
-library(pointblank)
-
-# Report missing values 
+# Report missing values
 test_that("missing observations are reported correctly", {
-  expect_false(any(grepl("^.$", states[["GW"]])))
+  expect_false(any(grepl("\\?", states[["GW"]])))
   expect_false(any(grepl("^n/a$", states[["GW"]])))
   expect_false(any(grepl("^N/A$", states[["GW"]])))
+  expect_false(any(grepl("^\\s$", states[["GW"]])))
+  expect_false(any(grepl("^\\.$", states[["GW"]])))
+  expect_false(any(grepl("N\\.A\\.$", states[["GW"]])))
+  expect_false(any(grepl("n\\.a\\.$", states[["GW"]])))
 })
 
 # Contains the required variables

@@ -43,7 +43,7 @@ ISD <- as_tibble(ISD) %>%
 
 # Stage three: Connecting data
 # Next run the following line to make ISD available within the qPackage.
-export_data(ISD, database = "states", link="http://www.ryan-griffiths.com/data")
+export_data(ISD, database = "states", URL="http://www.ryan-griffiths.com/data")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence to certain standards.
 # You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows) to run these tests locally at any point.
