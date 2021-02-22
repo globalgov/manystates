@@ -1,7 +1,7 @@
 ---
 output: github_document
 ---
-# qStates <img src="qStates_hexlogo.png" align="right" width="220"/>
+# qStates <img src="man/figures/qStates_hexlogo.png" align="right" width="220"/>
 
 <!-- badges: start -->
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
@@ -13,34 +13,61 @@ output: github_document
 <!-- ![GitHub All Releases](https://img.shields.io/github/downloads/jhollway/roctopus/total) -->
 <!-- badges: end -->
 
-`{qStates}` is a a data package for the `{qData}` ecosystem of packages. It is a data package about states actors across the globe. It encompasses several datasets with states' names and dates of beginning and ending (for some states), alongside other information. The package is geared towards global governance research, but can be used broadly for anyone interested in states actors across time. 
+`{qStates}` is a a data package for the `{qData}` ecosystem of packages. It is a data package about State actors across the globe. It encompasses several datasets with States' names and dates of beginning and ending (for some States), alongside other information. The package is geared towards global governance research, but can be used broadly for anyone interested in State actors across time. 
 
-For more about the [the PANARCHIC project](www.panarchic.ch). Please also check out [`{qData}`](https://github.com/globalgov) for more on the `{qStates}` and `{qData}` packages. 
+Please also check out [`{qData}`](https://github.com/globalgov) for more about the other packages in the `{qData}` environment. 
 
-## Downloading and installing qStates
+## How to install
 
-The development version of the package `{qStates}` can be downloaded from GitHub. 
+We've made it easier than ever to install and start analysing global governance data in R.
+Simply install the core package, [qData](https://github.com/globalgov/qData), as follows,
+and then you can discover, install and update various qPackages from the console.
 
-```
-#install.package(remotes)
-remotes::install_github("globalgov/qStates")
-```
-
-## To check on qStates and other available qPackages for qData
-
-`{qData}` connects users to other packages in the ecosystem. The `get_packages()` function can be also used to discover `{qStates}` and other packages currently available in the ecosystem.
-
-```{r}
- library(qData)
- get_packages()
+```{r install, eval = FALSE}
+# install.packages(remotes)
+remotes::install_github("globalgov/qData") # this installs our core package, the only one you need to do independently
+qData::get_packages() # this prints a list of the publicly available data packages currently available
+qData::get_packages("qStates") # this downloads and installs the named package
 ```
 
-## Datasets included in the states database
+## Data included
 
-`{qStates}` allows to quickly check all the datasets included in the package's database. 
+Once you have installed the package, you can see the different databases and datasets
+included in the package using the following function.
 
 ```{r datasets}
-qStates::states
+qData::report_data("qStates")
 ```
 
-Please see the user vignette on [the website](https://globalgov.github.io/qData/) for more information about how to use both `qStates}` and `{qData}` for analysis. 
+Working with ensembles of related data has many advantages for robust analysis.
+Just take a look at our vignettes [here](https://globalgov.github.io/qData/articles/user.html).
+
+While some qPackages can and do include novel data,
+much of what they offer involves standing on the shoulders of giants.
+qPackages endeavour to be as transparent as possible about where data comes from, 
+how it has been coded and/or relabelled, and who has done the work.
+As such, we make it easy to cite both the particular datasets you use
+by listing the official references in the function above,
+as well as the package providers for their work assembling the data
+using the function below.
+
+```{r cites}
+citation("qStates")
+```
+
+## Contributing
+
+[qData](https://github.com/globalgov/qData) also makes it easy to contribute in lots of different ways.
+
+If you have already developed a dataset salient to this package,
+please reach out by flagging this as an [issue](https://github.com/globalgov/qStates/issues) for us,
+or by forking, further developing the package yourself, and opening a [pull request](https://github.com/globalgov/qStates/pulls)
+so that your data can be used easily.
+
+If you have collected or developed other data that may not be best for this package,
+but could be useful within the wider ecosystem, 
+[qData](https://github.com/globalgov/qData) includes a number of functions that make it easy
+to create a new qPackage and populate with clean, consistent global governance data.
+
+If you have any other ideas about how this package or the qData ecosystem more broadly
+might better facilitate your empirical analysis, we'd be very happy to hear from you.
