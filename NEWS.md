@@ -2,8 +2,8 @@
 
 ## Package changes
 
-* Updated README to align it with other q Packages
-* Added a new package logo similar to other q Packages
+* Updated README to align it with other qPackages
+* Added a new package logo similar to other qPackages
 
 ## Data changes
 
