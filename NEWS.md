@@ -4,7 +4,7 @@
 
 * Updated README to align it with other qPackages
 * Added a new package logo similar to other qPackages
-* Added new pull request template consistent with {qData}
+* Added new pull request template consistent with `{qData}`
 
 ## Data
 
