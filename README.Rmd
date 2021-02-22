@@ -13,7 +13,7 @@ output: github_document
 <!-- ![GitHub All Releases](https://img.shields.io/github/downloads/jhollway/roctopus/total) -->
 <!-- badges: end -->
 
-`{qStates}` is a a data package for the `{qData}` ecosystem of packages. It is a data package about State actors across the globe. It encompasses several datasets with States' names and dates of beginning and ending (for some States), alongside other information. The package is geared towards global governance research, but can be used broadly for anyone interested in State actors across time. 
+`{qStates}` is a a data package for the `{qData}` ecosystem of packages. It is a data package about state actors across the globe. It encompasses several datasets with states' names and dates of beginning and ending (for some states), alongside other information. The package is geared towards global governance research, but can be used broadly for anyone interested in state actors across time. 
 
 Please also check out [`{qData}`](https://github.com/globalgov) for more about the other packages in the `{qData}` environment. 
 
@@ -57,7 +57,7 @@ citation("qStates")
 
 ## Contributing
 
-[qData](https://github.com/globalgov/qData) also makes it easy to contribute in lots of different ways.
+[qData](https://github.com/globalgov/qData/blob/main/.github/CONTRIBUTING.md) also makes it easy to contribute in lots of different ways.
 
 If you have already developed a dataset salient to this package,
 please reach out by flagging this as an [issue](https://github.com/globalgov/qStates/issues) for us,
