@@ -1,11 +1,12 @@
 # qStates 0.0.3
 
-## Package changes
+## Package
 
 * Updated README to align it with other qPackages
 * Added a new package logo similar to other qPackages
+* Added new pull request template consistent with {qData}
 
-## Data changes
+## Data
 
 * Re-exported package data to reflect new testing, templates and argument changes with `export_data()` function in {qData} 
 
