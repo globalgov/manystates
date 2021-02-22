@@ -8,7 +8,7 @@
 
 ## Data
 
-* Re-exported package data to reflect new testing, templates and argument changes with `export_data()` function in {qData} 
+* Re-exported package data to reflect new testing, templates and argument changes with `export_data()` function in `{qData}` 
 
 # qStates 0.0.2
 
