@@ -34,11 +34,7 @@ ISD <- as_tibble(ISD) %>%
 # Please see the vignettes or website for more details.
 
 # #Additional Identifiers and Unicode Country Flags by using the countrycode package (https://github.com/vincentarelbundock/countrycode)
-# library(countrycode)
-# ID <- data.frame(ISD$ID, UnicodeSymb = countrycode::countrycode(ISD$ID, 'cowc', 'unicode.symbol'), ISO3_ID = countrycode::countrycode(ISD$ID, 'cowc', 'iso3c'), EuroStat_code = countrycode::countrycode(ISD$ID, 'cowc', 'eurostat'), ECB_code = countrycode::countrycode(ISD$ID,'cowc', 'ecb'), IANA_TLD = countrycode::countrycode(ISD$ID, 'cowc', "cctld"), un_code = countrycode::countrycode(ISD$ID, 'cowc', 'un'),Continent = countrycode::countrycode(ISD$ID, 'cowc', 'continent'), EU = countrycode::countrycode(ISD$ID, 'cowc', 'eu28'), Currency = countrycode::countrycode(ISD$ID, 'cowc', 'iso4217c'))
-# ID  <- as_tibble(ID)
-# ISD <- dplyr::bind_cols(ISD, ID)
-# rm(ID)
+#code_modern_states(states$ISD$ID)
 # # Issue, historic countries (Denmark for example) that have a non continuous existence are coded with the same ISO-ID's for both occurrences of existence.This also prevents inner joins.
 
 # Stage three: Connecting data

@@ -23,10 +23,7 @@ GW <- as_tibble(GW) %>%
 
 # #Additional Identifiers and Unicode Country Flags by using the countrycode package (https://github.com/vincentarelbundock/countrycode)
 # library(countrycode)
-# ID <- data.frame(GW$ID, UnicodeSymb = countrycode::countrycode(GW$ID, 'cowc', 'unicode.symbol'), ISO3_ID = countrycode::countrycode(GW$ID, 'cowc', 'iso3c'), EuroStat_code = countrycode::countrycode(GW$ID, 'cowc', 'eurostat'), ECB_code = countrycode::countrycode(GW$ID,'cowc', 'ecb'), IANA_TLD = countrycode::countrycode(GW$ID, 'cowc', "cctld"), un_code = countrycode::countrycode(GW$ID, 'cowc', 'un'), Continent = countrycode::countrycode(GW$ID, 'cowc', 'continent'), EU = countrycode::countrycode(GW$ID, 'cowc', 'eu28'), Currency = countrycode::countrycode(GW$ID, 'cowc', 'iso4217c'))
-# ID  <- as_tibble(ID)
-# GW <- dplyr::bind_cols(GW, ID)
-# rm(ID)
+#code_modern_states(states$GW$ID)
 # # Issue, historic countries (Denmark for example) that have a non continuous existence are coded with the same ISO-ID's for both occurrences of existence.This also prevents inner joins.
 
 # qData includes several functions that should help cleaning and standardizing your data.
