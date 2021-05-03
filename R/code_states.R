@@ -6,7 +6,7 @@
 #' `countrycode` package to identify and return the parties mentioned
 #' in a character vector of agreement titles or texts.
 #' @return A character vector of parties, in English, separated by commas.
-#' @import tibble	
+#' @import tibble
 #' @examples
 #' \dontrun{
 #' code_states(states$ISD$Label)[1:3]
@@ -25,6 +25,11 @@ code_states <- function(v){
   out <- apply(coment, 1, function(x) paste(names(x[x==1]), collapse = "_"))
   out[out==""] <- NA
   out <- unname(out)
+  
+  # Some agreements are made between unions of countries and others,
+  # but are still considered bilateral. In these cases, abbreviations
+  # for unions will have 2 letters instead of 3.
+  
   out
 }
 

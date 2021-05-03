@@ -23,6 +23,6 @@ flags to the preprocessed dataset.
 }
 \examples{
 \dontrun{
-code_modern_states(states$ISD$ID)[1:3]
+code_modern_states(states$ISD$ID)
 }
 }
