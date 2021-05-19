@@ -1,0 +1,11 @@
+citHeader("To cite qStates in publications use:")
+
+citEntry(
+  entry    = "Manual",
+  title    = "qStates: States for qData",
+  author   = "James Hollway",
+  year     = "2021",
+  url      = "https://github.com/globalgov/qStates",
+  textVersion = paste("J. Hollway. qStates: States for qData. 2021."
+  )
+)
