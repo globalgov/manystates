@@ -3,9 +3,11 @@
 # This is a template for importing, cleaning, and exporting data
 # ready for the qPackage.
 library(qData)
+library(qCreate)
 
 # Stage one: Collecting data
 COW <- readr::read_csv("data-raw/states/COW/states2016.csv")
+COW <- link_metadata(COW)
 
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and

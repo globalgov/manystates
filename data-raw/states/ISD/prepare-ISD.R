@@ -3,10 +3,12 @@
 # This is a template for importing, cleaning, and exporting data
 # ready for the qPackage.
 library(qData)
+library(qCreate)
 library(tidyverse)
 
 # Stage one: Collecting data
 ISD <- read.csv("data-raw/states/ISD/ISD_Version1_Dissemination.csv")
+ISD <- link_metadata(ISD)
 
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and

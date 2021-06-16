@@ -3,9 +3,11 @@
 # This is a template for importing, cleaning, and exporting data
 # ready for the qPackage.
 library(qData)
+library(qCreate)
 
 # Stage one: Collecting data
 GW <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
+GW <- link_metadata(GW)
 
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
