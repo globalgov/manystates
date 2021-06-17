@@ -2,7 +2,6 @@
 
 # This is a template for importing, cleaning, and exporting data
 # ready for the qPackage.
-library(qData)
 library(qCreate)
 library(tidyverse)
 
@@ -24,8 +23,8 @@ ISD <- as_tibble(ISD) %>%
               Label = standardise_titles(as.character(State.Name)),
               COW_Nr = standardise_titles(as.character(COW.Nr.))) %>%
   # Standardising the dummie variables
-  dplyr::mutate_at(vars(Micro, New.State),  ~replace(. == "", 0, .)) %>% 
-  dplyr::mutate_at(vars(Micro, New.State), ~replace(. == "x", 1, .)) %>%  
+  dplyr::mutate(across(c(Micro, New.State),  ~ replace(., . == "", 0))) %>% 
+  dplyr::mutate(across(c(Micro, New.State), ~ replace(., . == "X", 1))) %>%  
   #Dropping certain unnecessary columns.
   dplyr::select(-X, -X.1, -X.2, -X.3, -X.4, -X.5,  -X.6, -X.7) %>% 
   # Arranging dataset

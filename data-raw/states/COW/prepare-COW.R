@@ -2,7 +2,6 @@
 
 # This is a template for importing, cleaning, and exporting data
 # ready for the qPackage.
-library(qData)
 library(qCreate)
 
 # Stage one: Collecting data
@@ -20,7 +19,6 @@ COW <-as_tibble(COW) %>%
          Label = standardise_titles(statenme),
          COW_Nr = standardise_titles(as.character(ccode))) %>%
   dplyr::select(COW_Nr, ID, Beg, End, Label) %>% # Added COW_Nr to perform inner joins on datasets.
-  # dplyr::select(ID, Beg, End, Label, everything()) %>%
   dplyr::relocate(COW_Nr, ID, Beg, End, Label) %>%
   dplyr::arrange(Beg, ID)
 # qData includes several functions that should help cleaning and standardizing your data.
