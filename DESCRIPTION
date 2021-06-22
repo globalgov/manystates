@@ -29,7 +29,7 @@ Authors@R:
              comment = c("IHEID", ORCID = "0000-0002-9678-2777")))
 LazyData: true
 License: CC BY 4.0
-Imports: 
+Imports:
     covr,
     desc,
     dplyr,
@@ -43,8 +43,6 @@ Imports:
     textclean,
     usethis,
     whisker
-Remotes:
-    globalgov/qData
 Suggests: 
     fs,
     librarian,
