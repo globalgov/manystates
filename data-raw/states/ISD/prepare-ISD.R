@@ -35,10 +35,6 @@ ISD <- as_tibble(ISD) %>%
 # qData includes several functions that should help cleaning and standardizing your data.
 # Please see the vignettes or website for more details.
 
-# #Additional Identifiers and Unicode Country Flags by using the countrycode package (https://github.com/vincentarelbundock/countrycode)
-#code_modern_states(states$ISD$ID)
-# # Issue, historic countries (Denmark for example) that have a non continuous existence are coded with the same ISO-ID's for both occurrences of existence.This also prevents inner joins.
-
 # Stage three: Connecting data
 # Next run the following line to make ISD available within the qPackage.
 export_data(ISD, database = "states", URL="http://www.ryan-griffiths.com/data")

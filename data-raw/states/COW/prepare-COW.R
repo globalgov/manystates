@@ -28,9 +28,6 @@ COW <-as_tibble(COW) %>%
 # Stage three: Connecting data
 # Next run the following line to make COW available within the qPackage.
 export_data(COW, database = "states", URL = "https://correlatesofwar.org/data-sets/state-system-membership")
-#Additional Identifiers and Unicode Country Flags by using the countrycode package (https://github.com/vincentarelbundock/countrycode)
-#code_modern_states(states$COW$ID)
-# Issue, historic countries (Denmark for example) that have a non continuous existence are coded with the same ISO-ID's for both occurrences of existence.This also prevents inner joins.
 
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence to certain standards.
