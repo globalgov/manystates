@@ -2,4 +2,9 @@
 
 export(code_modern_states)
 export(code_states)
+export(import_cshapes)
+export(import_distlist)
+export(import_distmatrix)
 import(tibble)
+importFrom(cshapes,cshp)
+importFrom(cshapes,distlist)
