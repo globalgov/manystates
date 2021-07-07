@@ -1,6 +1,6 @@
 Package: qStates
 Title: States for qData
-Version: 0.0.3
+Version: 0.0.4
 Description: qStates provide data on states in the international system across time. 
     The package combines and cross-references several existing datasets consistent with the qData package aims.
 URL: https://github.com/globalgov/qStates
