@@ -14,6 +14,8 @@ end of the dataset.}
 \item{type}{Specifies the type of distance list: "capdist" for capital
 distances, "centdist" for centroid distances, and "mindist" for minimum
 distances.}
+
+\item{...}{Arguments to be passed to \verb{[cshapes]}}
 }
 \value{
 A dataframe with the desired distance list between polygons,

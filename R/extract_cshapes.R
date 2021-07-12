@@ -53,6 +53,7 @@ import_cshapes <- function(date, ...){
 #' @param type Specifies the type of distance list: "capdist" for capital
 #' distances, "centdist" for centroid distances, and "mindist" for minimum
 #' distances.
+#' @param ... Arguments to be passed to `[cshapes]`
 #' @importFrom cshapes distlist
 #' @return A dataframe with the desired distance list between polygons,
 #' capitals, or polygon centroids in kilometers.
@@ -92,6 +93,7 @@ import_distlist <- function(date, type, ...){
 #' @param type Specifies the type of distance list: "capdist" for capital
 #' distances, "centdist" for centroid distances, and "mindist" for minimum
 #' distances.
+#' @param ... Arguments to be passed to `[cshapes]`
 #' @importFrom cshapes distlist
 #' @return A matrix with the desired distance list between polygons,
 #' capitals, or polygon centroids in kilometers.
