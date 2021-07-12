@@ -16,7 +16,11 @@
 #' }
 #' @export
 
-import_cshapes <- function(date, ...){
+import_cshapes <- function(date,...){
+  # Initializing variables to avoid an annoying Note when checking the package.
+  start <- end <- country_name <- cowcode <- capname <- caplong <- NULL
+  caplat <- b_def <- status <- owner <- fid <- COW_Nr <- Beg <- End <- NULL
+  Label <- NULL
   # Step 0: Set string dates to actual dates
   date <- as.Date(date)
   # Stage 1: Importing
@@ -31,7 +35,8 @@ import_cshapes <- function(date, ...){
                 CapitalLong = caplong,
                 CapitalLat = caplat,
                 WellDefinedBorders = b_def,
-                Status = dplyr::if_else(status == "independent", 1, 0), # All are independent states. 
+                Status = dplyr::if_else(status == "independent", 1, 0), 
+                # All are independent states. 
                 #Check where the colonies are.
                 Owner = owner
     ) %>%
@@ -63,14 +68,17 @@ import_cshapes <- function(date, ...){
 #' }
 #' @export
 
-import_distlist <- function(date, type, ...){
+import_distlist <- function(date, type,...){
+  #Initialize variables:
+  ccode1 <- ccode2 <- capdist <- FromLabel <- FromCode <- ToCode <- NULL
+  ToName <- distance <- distance <- NULL
   # Step 0: Change date in string format to date format
   date <- as.Date(date)
   # Step 1:
   dist <- cshapes::distlist(date, type, ..., useGW = FALSE)
   #Step 3: Process dist to make it qConsistent
   dist <- as.tibble(dist)%>%
-    transmutate(FromLabel = countrycode::countrycode(sourcevar = ccode1,
+    qData::transmutate(FromLabel = countrycode::countrycode(sourcevar = ccode1,
                                                   origin = "cown",
                                                   destination = "country.name"),
                 ToName = countrycode::countrycode(sourcevar = ccode2,
@@ -103,7 +111,7 @@ import_distlist <- function(date, type, ...){
 #' }
 #' @export
 
-import_distmatrix <- function(date, type, ...){
+import_distmatrix <- function(date, type,...){
   # Step 0: Change date in string format to date format
   date <- as.Date(date)
   # Step 1:
