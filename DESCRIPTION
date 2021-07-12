@@ -42,7 +42,8 @@ Imports:
     stringr,
     textclean,
     usethis,
-    whisker
+    whisker,
+    cshapes
 Suggests: 
     fs,
     librarian,
