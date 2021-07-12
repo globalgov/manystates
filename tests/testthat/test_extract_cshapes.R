@@ -1,5 +1,6 @@
+test <- import_cshapes(date = "1900-01-01")
+
 test_that("CShapes extraction returns qConsistent object", {
-  test <- import_cshapes(date = "1900-01-01")
   expect_false(any(grepl("\\?", test)))
   expect_false(any(grepl("^n/a$", test)))
   expect_false(any(grepl("^N/A$", test)))
@@ -11,7 +12,6 @@ test_that("CShapes extraction returns qConsistent object", {
 
 # Contains the required variables
 test_that("object has the correct variables", {
-  test <- import_cshapes(date = "1900-01-01")
   expect_col_exists(test, vars(COW_Nr))
   expect_col_exists(test, vars(Beg))
   expect_col_exists(test, vars(End))
@@ -20,7 +20,6 @@ test_that("object has the correct variables", {
 
 # Variables with dates are standardized
 test_that("dates are standardised", {
-  test <- import_cshapes(date = "1900-01-01")
   expect_col_is_date(test, vars(Beg))
   expect_col_is_date(test, vars(End))
   expect_false(any(grepl("/", test$Beg)))
@@ -29,7 +28,6 @@ test_that("dates are standardised", {
 
 # Labels are standardized
 test_that("labels are standardised", {
-  test <- import_cshapes(date = "1900-01-01")
   expect_false(any(grepl("U.S.", test)))
   expect_false(any(grepl("U.K.", test)))
   expect_false(any(grepl("!", test)))
