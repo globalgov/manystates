@@ -22,7 +22,7 @@ A matrix with the desired distance list between polygons,
 capitals, or polygon centroids in kilometers.
 }
 \description{
-\code{import_distlist()} imports a pre-computed minimum distance matrix
+\code{import_matrix()} imports a pre-computed minimum distance matrix
 from the \verb{[cShapes]} package. Minimum distances are computed in three ways:
 distances between capitals, distances between centroids of the polygons,
 minimum distances between the polygons in kilometers.
