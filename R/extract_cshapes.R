@@ -23,6 +23,13 @@ import_cshapes <- function(date,...){
   Label <- NULL
   # Step 0: Set string dates to actual dates
   date <- as.Date(date)
+  # Test for correct dates
+  `%within%` <- lubridate::`%within%` #Not very elegant but does the job
+  if(!(date %within% lubridate::interval(lubridate::ymd("1886-01-01"),
+                                       lubridate::ymd(Sys.Date())))){
+    stop("Please input a date in the following range: 1886-01-01 -
+         end of the dataset")
+  }
   # Stage 1: Importing
   cshapes <- cshapes::cshp(date, ..., useGW = FALSE) # Use COW_ID instead of GW
   # Stage two: Correcting data
@@ -37,7 +44,7 @@ import_cshapes <- function(date,...){
                 WellDefinedBorders = b_def,
                 Status = dplyr::if_else(status == "independent", 1, 0), 
                 # All are independent states. 
-                #Check where the colonies are.
+                # Check where the colonies are.
                 Owner = owner
     ) %>%
     dplyr::select(-(fid)) %>%
@@ -71,27 +78,64 @@ import_cshapes <- function(date,...){
 import_distlist <- function(date, type,...){
   #Initialize variables:
   ccode1 <- ccode2 <- capdist <- FromLabel <- FromCode <- ToCode <- NULL
-  ToName <- distance <- distance <- NULL
+  ToLabel <- distance <- distance <- centdist <- mindist <- NULL
   # Step 0: Change date in string format to date format
   date <- as.Date(date)
-  # Step 1:
+  # Check whether inputs are in range of permitted values for dates and type.
+  if(!(type %in% c("capdist", "mindist", "centdist"))){
+    stop("Please input a type among the following: centdist, capdist or
+         mindist")
+  }
+  `%within%` <- lubridate::`%within%` #Not very elegant but does the job
+  if(!(date %within% lubridate::interval(lubridate::ymd("1886-01-01"),
+                                       lubridate::ymd(Sys.Date())))){
+    stop("Please input a date in the following range: 1886-01-01 -
+         end of the dataset")
+  }
+  # Step 0.5 Disambiguate certain countrycode pairs such as 730 - Korea by
+  # creating a custom dictionary.
+  custom_match <- c(`730` = 'Korea')
+  # Step 1: Import data from cshapes
   dist <- cshapes::distlist(date, type, ..., useGW = FALSE)
   #Step 3: Process dist to make it qConsistent
-  dist <- as.tibble(dist)%>%
-    qData::transmutate(FromLabel = countrycode::countrycode(sourcevar = ccode1,
-                                                  origin = "cown",
-                                                  destination = "country.name"),
-                ToName = countrycode::countrycode(sourcevar = ccode2,
-                                                  origin = "cown",
-                                                  destination = "country.name"))%>%
-    dplyr::rename(FromCode = ccode1, ToCode = ccode2, distance = capdist)%>%
-    dplyr::relocate(FromLabel, FromCode, ToName, ToCode, distance)
+  if(type == "capdist"){
+    dist <- as_tibble(dist)%>%
+      dplyr::mutate(FromLabel = countrycode::countrycode(sourcevar = ccode1,
+                                                         origin = "cown",
+                                                         destination = "country.name", custom_match = custom_match),
+                    ToLabel = countrycode::countrycode(sourcevar = ccode2,
+                                                       origin = "cown",
+                                                       destination = "country.name", custom_match = custom_match))%>%
+      dplyr::rename(FromCode = ccode1, ToCode = ccode2, Distance = capdist)%>%
+      dplyr::relocate(FromLabel, FromCode, ToLabel, ToCode, distance)
+  } else if (type == "mindist"){
+    dist <- as_tibble(dist)%>%
+      dplyr::mutate(FromLabel = countrycode::countrycode(sourcevar = ccode1,
+                                                         origin = "cown",
+                                                         destination = "country.name", custom_match = custom_match),
+                    ToLabel = countrycode::countrycode(sourcevar = ccode2,
+                                                       origin = "cown",
+                                                       destination = "country.name", custom_match = custom_match))%>%
+      dplyr::rename(FromCode = ccode1, ToCode = ccode2, Distance = mindist)%>%
+      dplyr::relocate(FromLabel, FromCode, ToLabel, ToCode, distance)
+  } else {
+    dist <- as_tibble(dist)%>%
+      dplyr::mutate(FromLabel = countrycode::countrycode(sourcevar = ccode1,
+                                                         origin = "cown",
+                                                         destination = "country.name", custom_match = custom_match),
+                    ToLabel = countrycode::countrycode(sourcevar = ccode2,
+                                                       origin = "cown",
+                                                       destination = "country.name", custom_match = custom_match))%>%
+      dplyr::rename(FromCode = ccode1, ToCode = ccode2, Distance = centdist)%>%
+      dplyr::relocate(FromLabel, FromCode, ToLabel, ToCode, distance)
+  }
+  
   return(dist)
 }
 
 #' Imports and formats `[cshapes]` pre-computed distance matrices.
 #' 
-#' `import_distlist()` imports a pre-computed minimum distance matrix
+#' `import_matrix()` imports a pre-computed minimum distance matrix
 #' from the `[cShapes]` package. Minimum distances are computed in three ways:
 #' distances between capitals, distances between centroids of the polygons,
 #' minimum distances between the polygons in kilometers.
@@ -114,6 +158,17 @@ import_distlist <- function(date, type,...){
 import_distmatrix <- function(date, type,...){
   # Step 0: Change date in string format to date format
   date <- as.Date(date)
+  # Check whether inputs are in range of permitted values for dates and type.
+  if(!(type %in% c("capdist", "mindist", "centdist"))){
+    stop("Please input a type among the following: centdist, capdist or
+         mindist")
+  }
+  `%within%` <- lubridate::`%within%` #Not very elegant but does the job
+  if(!(date %within% lubridate::interval(lubridate::ymd("1886-01-01"),
+                                         lubridate::ymd(Sys.Date())))){
+    stop("Please input a date in the following range: 1886-01-01 -
+         end of the dataset")
+  }
   # Step 1:
   dist <- cshapes::distmatrix(date, type, ..., useGW = FALSE)
   #Step 3: No Processing required as this is a simple distance matrix.
