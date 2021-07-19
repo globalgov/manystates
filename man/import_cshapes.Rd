@@ -23,7 +23,5 @@ Imports CShapes 2.0 datasets and formats them to a qVerse
 consistent output.
 }
 \examples{
-\dontrun{
 import_cshapes(date = "1900-01-01")
-}
 }

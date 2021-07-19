@@ -28,7 +28,5 @@ distances between capitals, distances between centroids of the polygons,
 minimum distances between the polygons in kilometers.
 }
 \examples{
-\dontrun{
 import_distlist(date = "1900-01-01", type = "capdist")
-}
 }
