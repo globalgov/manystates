@@ -11,9 +11,7 @@
 #' @return A dataframe with the qVerse-consistently formatted `[cshapes]`
 #' dataset.
 #' @examples
-#' \dontrun{
 #' import_cshapes(date = "1900-01-01")
-#' }
 #' @export
 
 import_cshapes <- function(date,...){
@@ -70,9 +68,7 @@ import_cshapes <- function(date,...){
 #' @return A dataframe with the desired distance list between polygons,
 #' capitals, or polygon centroids in kilometers.
 #' @examples
-#' \dontrun{
 #' import_distlist(date = "1900-01-01", type = "capdist")
-#' }
 #' @export
 
 import_distlist <- function(date, type,...){
@@ -150,9 +146,7 @@ import_distlist <- function(date, type,...){
 #' @return A matrix with the desired distance list between polygons,
 #' capitals, or polygon centroids in kilometers.
 #' @examples
-#' \dontrun{
 #' import_distmatrix(date = "1900-01-01", type = "capdist")
-#' }
 #' @export
 
 import_distmatrix <- function(date, type,...){
