@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-pkgs <- c("WDI", "tidyverse", "qData", "qStates")
+pkgs <- c("WDI", "ggplot2", "dplyr", "countrycode", "qData", "qStates")
 lapply(pkgs, library, character.only = TRUE)
 ```
 
