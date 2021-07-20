@@ -36,7 +36,7 @@ Once you have installed the package, you can see the different databases and dat
 included in the package using the following function.
 
 ```{r datasets}
-qData::report_data("qStates")
+qData::data_contrast("qStates")
 ```
 
 Working with ensembles of related data has many advantages for robust analysis.
