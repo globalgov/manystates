@@ -21,8 +21,8 @@ test_that("object has the correct variables", {
 
 # Variables with dates are standardized
 test_that("dates are standardised", {
-  expect_col_is_date(states[["ISD"]], vars(Beg))
-  expect_col_is_date(states[["ISD"]], vars(End))
+  expect_true(messydates::is_messydate(states[["ISD"]][["Beg"]]))
+  expect_true(messydates::is_messydate(states[["ISD"]][["End"]]))
   expect_false(any(grepl("/", states[["ISD"]]$Beg)))
   expect_false(any(grepl("/", states[["ISD"]]$End)))
 })
