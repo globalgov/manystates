@@ -7,7 +7,6 @@ library(qData)
 
 # Stage one: Collecting data
 GW <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
-GW <- link_metadata(GW)
 
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
@@ -16,8 +15,8 @@ GW <- link_metadata(GW)
 GW <- as_tibble(GW) %>%
   dplyr::rename(Finish = End) %>% # Renaming the end date column to avoid self reference in transmutate.(can't do it inside the transmutate since we also work on dates)
   transmutate(ID = `Cow ID`,
-              Beg = standardise_dates(Start),
-              End = standardise_dates(Finish), 
+              Beg = messydates::as_messydate(Start),
+              End = messydates::as_messydate(Finish), 
               Label = standardise_titles(`Name of State`),
               COW_Nr = standardise_titles(`Cow Nr.`)) %>%
   dplyr::relocate(COW_Nr, ID, Beg, End, Label) %>%

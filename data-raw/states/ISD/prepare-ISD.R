@@ -8,7 +8,6 @@ library(dplyr)
 
 # Stage one: Collecting data
 ISD <- read.csv("data-raw/states/ISD/ISD_Version1_Dissemination.csv")
-ISD <- link_metadata(ISD)
 
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
@@ -19,8 +18,8 @@ ISD <- as_tibble(ISD) %>%
   dplyr::rename(Finish = End) %>% 
   # Renaming the end date column to avoid self reference in transmutate.
   transmutate(ID = `COW.ID`,
-              Beg = standardise_dates(Start),
-              End = standardise_dates(Finish),
+              Beg = messydates::as_messydate(Start),
+              End = messydates::as_messydate(Finish),
               Label = standardise_titles(as.character(State.Name)),
               COW_Nr = standardise_titles(as.character(COW.Nr.))) %>%
   # Standardising the dummie variables

@@ -7,16 +7,15 @@ library(qData)
 
 # Stage one: Collecting data
 COW <- readr::read_csv("data-raw/states/COW/states2016.csv")
-COW <- link_metadata(COW)
 
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
 # formats of the 'COW' object until the object created
-# below (in stage three) passes all the tests. 
+# below (in stage three) passes all the tests.
 COW <-as_tibble(COW) %>%
   transmutate(ID = stateabb,
-         Beg = standardise_dates(styear, stmonth, stday),
-         End = standardise_dates(endyear, endmonth, endday),
+         Beg = messydates::make_messydate(styear, stmonth, stday),
+         End = messydates::make_messydate(endyear, endmonth, endday),
          Label = standardise_titles(statenme),
          COW_Nr = standardise_titles(as.character(ccode))) %>%
   dplyr::select(COW_Nr, ID, Beg, End, Label) %>% # Added COW_Nr to perform inner joins on datasets.
