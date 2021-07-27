@@ -1,3 +1,17 @@
+# qStates 0.0.4
+
+## Package
+
+- Fixed #26 by correcting state name detection in the `code_states()` function
+- Fixed #30 by adapting qStates dataset preparation scripts to `{messydates}`
+- Fixed #31 by creating qStates website
+
+## Data
+
+- Closes #1 by adding the Polity5 and the Polity5d datasets
+- Closes #10  by integrating datasets on distances from CShapes
+  - Integrated a vignette to showcase one potential workflow to create historical maps.
+
 # qStates 0.0.3
 
 ## Package
