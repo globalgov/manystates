@@ -2,9 +2,6 @@
 
 # This is a template for importing, cleaning, and exporting data
 # ready for the qPackage.
-library(qCreate)
-library(qData)
-library(messydates)
 
 # Stage one: Collecting data
 
@@ -16,18 +13,16 @@ library(messydates)
 # Polity case data
 Polity5 <- readxl::read_excel("data-raw/regimes/Polity5/p5v2018.xls")
 
-# Deal with import warnings above-------------------------------------------
-
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
 # formats of the 'Polity5' object until the object created
 # below (in stage three) passes all the tests.
 
-Polity5 <- as_tibble(Polity5) %>%
-  transmutate(ID = ccode,
-              Beg = messydates::make_messydate(byear, bmonth, bday),
-              End = messydates::make_messydate(eyear, emonth, eday),
-              Label = standardise_titles(country)) %>%
+Polity5 <- tibble::as_tibble(Polity5) %>%
+  qData::transmutate(ID = ccode,
+              Beg = qCreate::standardise_dates(byear, bmonth, bday),
+              End = qCreate::standardise_dates(eyear, emonth, eday),
+              Label = qCreate::standardise_titles(country)) %>%
   dplyr::arrange(ID, Beg, End) %>%
   dplyr::select(-scode) %>%
   dplyr::relocate(ID, Beg, End, Label)
@@ -39,7 +34,8 @@ Polity5 <- as_tibble(Polity5) %>%
 # Stage three: Connecting data
 # Next run the following line to make Polity5 available
 # within the qPackage.
-export_data(Polity5, database = "regimes", URL = "http://www.systemicpeace.org/inscrdata.html")
+qCreate::export_data(Polity5, database = "regimes", 
+                     URL = "http://www.systemicpeace.org/inscrdata.html")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence
 # to certain standards.You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows)
