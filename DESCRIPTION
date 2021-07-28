@@ -34,7 +34,6 @@ Imports:
     covr,
     desc,
     dplyr,
-    english,
     lubridate,
     pkgdown,
     purrr,
@@ -47,9 +46,7 @@ Imports:
     cshapes,
     countrycode,
     qData,
-    qCreate,
-    messydates,
-    sf
+    qCreate
 Suggests: 
     fs,
     librarian,
@@ -59,13 +56,12 @@ Suggests:
     rmarkdown,
     knitr,
     ggplot2,
-    hrbrthemes
+    hrbrthemes,
+    sf
 Remotes:
-    globalgov/qStates,
-    globalgov/qEnviron,
-    globalgov/messydates,
     globalgov/qCreate,
-    globalgov/qData
+    globalgov/qData,
+    r-spatial/sf
 Encoding: UTF-8
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
