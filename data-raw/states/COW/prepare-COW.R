@@ -12,8 +12,8 @@ COW <- readr::read_csv("data-raw/states/COW/states2016.csv")
 # below (in stage three) passes all the tests.
 COW <-as_tibble(COW) %>%
   transmutate(ID = stateabb,
-         Beg = messydates::make_messydate(styear, stmonth, stday),
-         End = messydates::make_messydate(endyear, endmonth, endday),
+         Beg = qCreate::standardise_dates(styear, stmonth, stday),
+         End = qCreate::standardise_dates(endyear, endmonth, endday),
          Label = standardise_titles(statenme),
          COW_Nr = standardise_titles(as.character(ccode))) %>%
   dplyr::select(COW_Nr, ID, Beg, End, Label) %>%

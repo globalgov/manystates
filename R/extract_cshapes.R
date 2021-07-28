@@ -32,8 +32,8 @@ import_cshapes <- function(date,...){
   cshapes <- cshapes::cshp(date, ..., useGW = FALSE) # Use COW_ID instead of GW
   # Stage two: Correcting data
   cshapes <-as_tibble(cshapes) %>%
-    qData::transmutate(Beg = messydates::as_messydate(start),
-                End = messydates::as_messydate(end),
+    qData::transmutate(Beg = qCreate::standardise_dates(start),
+                End = qCreate::standardise_dates(end),
                 Label = qCreate::standardise_titles(country_name),
                 COW_Nr = qCreate::standardise_titles(as.character(cowcode)),
                 Capital = qCreate::standardise_titles(capname),
