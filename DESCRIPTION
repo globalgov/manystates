@@ -57,11 +57,10 @@ Suggests:
     knitr,
     ggplot2,
     hrbrthemes,
-    sf
+    sf (== 1.0.0)
 Remotes:
     globalgov/qCreate,
-    globalgov/qData,
-    r-spatial/sf
+    globalgov/qData
 Encoding: UTF-8
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
