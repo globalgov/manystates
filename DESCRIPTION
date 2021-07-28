@@ -48,7 +48,8 @@ Imports:
     countrycode,
     qData,
     qCreate,
-    messydates
+    messydates,
+    sf
 Suggests: 
     fs,
     librarian,
@@ -58,8 +59,7 @@ Suggests:
     rmarkdown,
     knitr,
     ggplot2,
-    hrbrthemes,
-    sf
+    hrbrthemes
 Remotes:
     globalgov/qStates,
     globalgov/qEnviron,
