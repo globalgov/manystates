@@ -57,7 +57,7 @@ Suggests:
     knitr,
     ggplot2,
     hrbrthemes,
-    sf (== 1.0.0)
+    sf
 Remotes:
     globalgov/qCreate,
     globalgov/qData
