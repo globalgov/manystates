@@ -83,4 +83,3 @@ test3 <- import_distmatrix(date = "1900-01-01", type = "capdist")
 test_that("Matrix has the correct format", {
   expect_true(is.matrix(test3))
 })
-

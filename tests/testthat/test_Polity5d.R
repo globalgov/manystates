@@ -49,6 +49,4 @@ test_that("Columns with dates are standardized", {
 #   expect_true(regimes[["Polity5d"]]$Beg[100] < regimes[["Polity5d"]]$Beg[120])
 #     }
 # })
-
 # Commented out this test since it makes more sense to order by polity.
-
