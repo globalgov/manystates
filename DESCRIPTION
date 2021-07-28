@@ -46,8 +46,7 @@ Imports:
     cshapes,
     countrycode,
     qData,
-    qCreate,
-    messydates
+    qCreate
 Suggests: 
     fs,
     librarian,
@@ -62,7 +61,6 @@ Suggests:
 Remotes:
     globalgov/qCreate,
     globalgov/qData,
-    globalgov/messydates,
     r-spatial/sf
 Encoding: UTF-8
 VignetteBuilder: knitr

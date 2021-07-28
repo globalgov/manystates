@@ -20,11 +20,19 @@ test_that("object has the correct variables", {
 })
 
 # Variables with dates are standardized
-test_that("dates are standardised", {
-  expect_true(messydates::is_messydate(test[["Beg"]]))
-  expect_true(messydates::is_messydate(test[["End"]]))
-  expect_false(any(grepl("/", test$Beg)))
-  expect_false(any(grepl("/", test$End)))
+test_that("Columns with dates are standardized", {
+  if (!is.null(test[["Beg"]])) {
+    expect_equal(class(test[["Beg"]]), "messydt")
+    expect_false(any(grepl("/", test[["Beg"]])))
+    expect_false(any(grepl("^[:alpha:]$",
+                           test[["Beg"]])))
+    expect_false(any(grepl("^[:digit:]{2}$",
+                           test[["Beg"]])))
+    expect_false(any(grepl("^[:digit:]{3}$",
+                           test[["Beg"]])))
+    expect_false(any(grepl("^[:digit:]{1}$",
+                           test[["Beg"]])))
+  }
 })
 
 # Labels are standardized
