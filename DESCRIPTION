@@ -31,7 +31,6 @@ Authors@R:
 LazyData: true
 License: CC BY 4.0
 Imports:
-    desc,
     dplyr,
     lubridate,
     pkgdown,
@@ -39,7 +38,6 @@ Imports:
     rlang,
     roxygen2,
     stringr,
-    textclean,
     usethis,
     whisker,
     cshapes,
@@ -48,7 +46,6 @@ Imports:
     qCreate
 Suggests: 
     fs,
-    librarian,
     testthat (>= 3.0.0),
     xfun,
     WDI,
