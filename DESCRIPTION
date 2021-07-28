@@ -62,7 +62,7 @@ Suggests:
 Remotes:
     globalgov/qCreate,
     globalgov/qData,
-    globalgov/messydates
+    globalgov/messydates,
     r-spatial/sf
 Encoding: UTF-8
 VignetteBuilder: knitr
