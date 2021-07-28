@@ -58,7 +58,8 @@ Suggests:
     rmarkdown,
     knitr,
     ggplot2,
-    hrbrthemes
+    hrbrthemes,
+    sf
 Remotes:
     globalgov/qStates,
     globalgov/qEnviron,
