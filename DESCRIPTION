@@ -31,7 +31,6 @@ Authors@R:
 LazyData: true
 License: CC BY 4.0
 Imports:
-    covr,
     desc,
     dplyr,
     lubridate,
