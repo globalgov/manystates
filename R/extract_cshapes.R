@@ -1,19 +1,32 @@
-#' Import and format `[cshapes]` datasets
+#' Extract CShapes data and matrix
 #' 
-#' Imports CShapes 2.0 datasets and formats them to a qVerse
-#' consistent output.
+#' Functions to import CShapes 2.0 datasets, distances and
+#' formats them to a qVerse consistent output from the `[cShapes]` package.
 #' @param date The date for which the distance list should be computed.
 #' This argument must be of type Date and must be in the range 1/1/1886 -
 #' end of the dataset.
-#' @param ... Arguments to be passed to `[cshapes]`
-#' functions. See the `[cshapes]` documentation for more details
+#' @param type Specifies the type of distance list: "capdist" for capital
+#' distances, "centdist" for centroid distances, and "mindist" for minimum
+#' distances.
+#' @param ... Arguments to be passed to `[cshapes]` functions.
+#' See the `[cshapes]` documentation for more details
+#' @name extract_cshapes
+NULL
+
+#' @name extract_cshapes
+#' @details Imports CShapes 2.0 datasets and formats them to a qVerse
+#' consistent output.
 #' @importFrom cshapes cshp
+#' @importFrom tibble as_tibble
+#' @importFrom qData transmutate
+#' @importFrom qCreate standardise_titles standardise_dates
+#' @import dplyr
+#' @import lubridate
 #' @return A dataframe with the qVerse-consistently formatted `[cshapes]`
 #' dataset.
 #' @examples
 #' import_cshapes(date = "1900-01-01")
 #' @export
-
 import_cshapes <- function(date, ...) {
   # Initializing variables to avoid an annoying Note when checking the package.
   start <- end <- country_name <- cowcode <- capname <- caplong <- NULL
@@ -51,20 +64,18 @@ import_cshapes <- function(date, ...) {
   return(cshapes)
 }
 
-#' Imports `[cshapes]` pre-computed distance matrices.
-#' 
-#' `import_distlist()` imports a pre-computed minimum distance dataframe
-#' from the `[cShapes]` package. Minimum distances are computed in three ways:
-#' distances between capitals, distances between centroids of the polygons,
+#' @name extract_cshapes
+#' @details Imports `[cshapes]` pre-computed minimum
+#' distance dataframe from the `[cShapes]` package.
+#' Minimum distances are computed in three ways:
+#' distances between capitals,
+#' distances between centroids of the polygons,
 #' minimum distances between the polygons in kilometers.
-#' @param date The date for which the distance list should be computed.
-#' This argument must be of type Date and must be in the range 1/1/1886 -
-#' end of the dataset.
-#' @param type Specifies the type of distance list: "capdist" for capital
-#' distances, "centdist" for centroid distances, and "mindist" for minimum
-#' distances.
-#' @param ... Arguments to be passed to `[cshapes]`
 #' @importFrom cshapes distlist
+#' @importFrom tibble as_tibble
+#' @importFrom countrycode countrycode
+#' @import dplyr
+#' @import lubridate 
 #' @return A dataframe with the desired distance list between polygons,
 #' capitals, or polygon centroids in kilometers.
 #' @examples
@@ -105,7 +116,7 @@ import_distlist <- function(date, type, ...) {
       dplyr::rename(FromCode = ccode1, ToCode = ccode2, Distance = capdist) %>%
       dplyr::relocate(FromLabel, FromCode, ToLabel, ToCode, distance)
   } else if (type == "mindist") {
-    dist <- as_tibble(dist) %>%
+    dist <- tibble::as_tibble(dist) %>%
       dplyr::mutate(FromLabel = countrycode::countrycode(sourcevar = ccode1,
                                                          origin = "cown",
                                                          destination = "country.name", custom_match = custom_match),
@@ -115,7 +126,7 @@ import_distlist <- function(date, type, ...) {
       dplyr::rename(FromCode = ccode1, ToCode = ccode2, Distance = mindist) %>%
       dplyr::relocate(FromLabel, FromCode, ToLabel, ToCode, distance)
   } else {
-    dist <- as_tibble(dist) %>%
+    dist <- tibble::as_tibble(dist) %>%
       dplyr::mutate(FromLabel = countrycode::countrycode(sourcevar = ccode1,
                                                          origin = "cown",
                                                          destination = "country.name", custom_match = custom_match),
@@ -128,26 +139,20 @@ import_distlist <- function(date, type, ...) {
   return(dist)
 }
 
-#' Imports and formats `[cshapes]` pre-computed distance matrices.
-#' 
-#' `import_matrix()` imports a pre-computed minimum distance matrix
-#' from the `[cShapes]` package. Minimum distances are computed in three ways:
-#' distances between capitals, distances between centroids of the polygons,
+#' @name extract_cshapes
+#' @details Imports and formats `[cshapes]` pre-computed minimum
+#' distance matrix from the `[cShapes]` package.
+#' Minimum distances are computed in three ways:
+#' distances between capitals,
+#' distances between centroids of the polygons,
 #' minimum distances between the polygons in kilometers.
-#' @param date The date for which the distance list should be computed.
-#' This argument must be of type Date and must be in the range 1/1/1886 -
-#' end of the dataset.
-#' @param type Specifies the type of distance list: "capdist" for capital
-#' distances, "centdist" for centroid distances, and "mindist" for minimum
-#' distances.
-#' @param ... Arguments to be passed to `[cshapes]`
-#' @importFrom cshapes distlist
+#' @importFrom cshapes distmatrix
+#' @import lubridate
 #' @return A matrix with the desired distance list between polygons,
 #' capitals, or polygon centroids in kilometers.
 #' @examples
 #' import_distmatrix(date = "1900-01-01", type = "capdist")
 #' @export
-
 import_distmatrix <- function(date, type, ...) {
   # Step 0: Change date in string format to date format
   date <- as.Date(date)
