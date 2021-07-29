@@ -14,8 +14,8 @@
 NULL
 
 #' @name extract_cshapes
-#' @details Imports CShapes 2.0 datasets and formats them to a qVerse
-#' consistent output.
+#' @details `import_cshapes()`imports CShapes 2.0 datasets
+#' and formats them to a qVerse consistent output.
 #' @importFrom cshapes cshp
 #' @importFrom tibble as_tibble
 #' @importFrom qData transmutate
@@ -25,7 +25,9 @@ NULL
 #' @return A dataframe with the qVerse-consistently formatted `[cshapes]`
 #' dataset.
 #' @examples
+#' \donttest{
 #' import_cshapes(date = "1900-01-01")
+#' }
 #' @export
 import_cshapes <- function(date, ...) {
   # Initializing variables to avoid an annoying Note when checking the package.
@@ -65,7 +67,7 @@ import_cshapes <- function(date, ...) {
 }
 
 #' @name extract_cshapes
-#' @details Imports `[cshapes]` pre-computed minimum
+#' @details `import_distlist()` imports pre-computed minimum
 #' distance dataframe from the `[cShapes]` package.
 #' Minimum distances are computed in three ways:
 #' distances between capitals,
@@ -79,9 +81,10 @@ import_cshapes <- function(date, ...) {
 #' @return A dataframe with the desired distance list between polygons,
 #' capitals, or polygon centroids in kilometers.
 #' @examples
+#' \donttest{
 #' import_distlist(date = "1900-01-01", type = "capdist")
+#' }
 #' @export
-
 import_distlist <- function(date, type, ...) {
   #Initialize variables:
   ccode1 <- ccode2 <- capdist <- FromLabel <- FromCode <- ToCode <- NULL
@@ -140,8 +143,8 @@ import_distlist <- function(date, type, ...) {
 }
 
 #' @name extract_cshapes
-#' @details Imports and formats `[cshapes]` pre-computed minimum
-#' distance matrix from the `[cShapes]` package.
+#' @details `import_distlist()` imports and formats pre-computed
+#' minimum distance matrix from the `[cShapes]` package.
 #' Minimum distances are computed in three ways:
 #' distances between capitals,
 #' distances between centroids of the polygons,
@@ -151,7 +154,9 @@ import_distlist <- function(date, type, ...) {
 #' @return A matrix with the desired distance list between polygons,
 #' capitals, or polygon centroids in kilometers.
 #' @examples
+#' \donttest{
 #' import_distmatrix(date = "1900-01-01", type = "capdist")
+#' }
 #' @export
 import_distmatrix <- function(date, type, ...) {
   # Step 0: Change date in string format to date format
