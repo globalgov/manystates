@@ -40,13 +40,3 @@ test_that("Columns with dates are standardized", {
                            regimes[["Polity5"]]$Beg)))
   }
 })
-
-# Dataset should be ordered according to the "Beg" column
-# if the column exists
-#   test_that("dataset is arranged by date variable", {
-#     if (!is.null(regimes[["Polity5"]]$Beg)) {
-#   expect_true(regimes[["Polity5"]]$Beg[50] < regimes[["Polity5"]]$Beg[75])
-#   expect_true(regimes[["Polity5"]]$Beg[100] < regimes[["Polity5"]]$Beg[120])
-#     }
-# })
-# Commented out this test since it makes more sense to order by polity.

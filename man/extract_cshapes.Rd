@@ -40,25 +40,31 @@ Functions to import CShapes 2.0 datasets, distances and
 formats them to a qVerse consistent output from the \verb{[cShapes]} package.
 }
 \details{
-Imports CShapes 2.0 datasets and formats them to a qVerse
-consistent output.
+\code{import_cshapes()}imports CShapes 2.0 datasets
+and formats them to a qVerse consistent output.
 
-Imports \verb{[cshapes]} pre-computed minimum
+\code{import_distlist()} imports pre-computed minimum
 distance dataframe from the \verb{[cShapes]} package.
 Minimum distances are computed in three ways:
 distances between capitals,
 distances between centroids of the polygons,
 minimum distances between the polygons in kilometers.
 
-Imports and formats \verb{[cshapes]} pre-computed minimum
-distance matrix from the \verb{[cShapes]} package.
+\code{import_distlist()} imports and formats pre-computed
+minimum distance matrix from the \verb{[cShapes]} package.
 Minimum distances are computed in three ways:
 distances between capitals,
 distances between centroids of the polygons,
 minimum distances between the polygons in kilometers.
 }
 \examples{
+\donttest{
 import_cshapes(date = "1900-01-01")
+}
+\donttest{
 import_distlist(date = "1900-01-01", type = "capdist")
+}
+\donttest{
 import_distmatrix(date = "1900-01-01", type = "capdist")
+}
 }

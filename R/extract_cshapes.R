@@ -1,5 +1,5 @@
 #' Extract CShapes data and matrix
-#' 
+#'
 #' Functions to import CShapes 2.0 datasets, distances and
 #' formats them to a qVerse consistent output from the `[cShapes]` package.
 #' @param date The date for which the distance list should be computed.
@@ -58,8 +58,7 @@ import_cshapes <- function(date, ...) {
                 Status = dplyr::if_else(status == "independent", 1, 0),
                 # All are independent states.
                 # Check where the colonies are.
-                Owner = owner
-    ) %>%
+                Owner = owner) %>%
     dplyr::select(-(fid)) %>%
     dplyr::relocate(COW_Nr, Beg, End, Label) %>%
     dplyr::arrange(Beg, COW_Nr)
@@ -77,7 +76,7 @@ import_cshapes <- function(date, ...) {
 #' @importFrom tibble as_tibble
 #' @importFrom countrycode countrycode
 #' @import dplyr
-#' @import lubridate 
+#' @import lubridate
 #' @return A dataframe with the desired distance list between polygons,
 #' capitals, or polygon centroids in kilometers.
 #' @examples
@@ -112,30 +111,36 @@ import_distlist <- function(date, type, ...) {
     dist <- tibble::as_tibble(dist) %>%
       dplyr::mutate(FromLabel = countrycode::countrycode(sourcevar = ccode1,
                                                          origin = "cown",
-                                                         destination = "country.name", custom_match = custom_match),
+                                                         destination = "country.name",
+                                                         custom_match = custom_match),
                     ToLabel = countrycode::countrycode(sourcevar = ccode2,
                                                        origin = "cown",
-                                                       destination = "country.name", custom_match = custom_match)) %>%
+                                                       destination = "country.name",
+                                                       custom_match = custom_match)) %>%
       dplyr::rename(FromCode = ccode1, ToCode = ccode2, Distance = capdist) %>%
       dplyr::relocate(FromLabel, FromCode, ToLabel, ToCode, distance)
   } else if (type == "mindist") {
     dist <- tibble::as_tibble(dist) %>%
       dplyr::mutate(FromLabel = countrycode::countrycode(sourcevar = ccode1,
                                                          origin = "cown",
-                                                         destination = "country.name", custom_match = custom_match),
+                                                         destination = "country.name",
+                                                         custom_match = custom_match),
                     ToLabel = countrycode::countrycode(sourcevar = ccode2,
                                                        origin = "cown",
-                                                       destination = "country.name", custom_match = custom_match)) %>%
+                                                       destination = "country.name",
+                                                       custom_match = custom_match)) %>%
       dplyr::rename(FromCode = ccode1, ToCode = ccode2, Distance = mindist) %>%
       dplyr::relocate(FromLabel, FromCode, ToLabel, ToCode, distance)
   } else {
     dist <- tibble::as_tibble(dist) %>%
       dplyr::mutate(FromLabel = countrycode::countrycode(sourcevar = ccode1,
                                                          origin = "cown",
-                                                         destination = "country.name", custom_match = custom_match),
+                                                         destination = "country.name",
+                                                         custom_match = custom_match),
                     ToLabel = countrycode::countrycode(sourcevar = ccode2,
                                                        origin = "cown",
-                                                       destination = "country.name", custom_match = custom_match)) %>%
+                                                       destination = "country.name",
+                                                       custom_match = custom_match)) %>%
       dplyr::rename(FromCode = ccode1, ToCode = ccode2, Distance = centdist) %>%
       dplyr::relocate(FromLabel, FromCode, ToLabel, ToCode, distance)
   }

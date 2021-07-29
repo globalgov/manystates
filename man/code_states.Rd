@@ -21,7 +21,6 @@ This function builds upon the \code{stat_actor} list and the
 in a character vector of agreement titles or texts.
 }
 \examples{
-\dontrun{
-code_states(states$ISD$Label)[1:3]
-}
+states <- c("Switzerland", "New Zealand", "Brazil")
+code_states(states)
 }

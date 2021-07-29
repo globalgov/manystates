@@ -12,9 +12,7 @@
 #' code_states(states)
 #' @export
 code_states <- function(v) {
-  # countryregex <- read.csv("data-raw/states/Stat_Actor/stat_regex.csv",
-  #                          stringsAsFactors = F) %>%
-  # as.data.frame()
+
   # Find country codes from the label column
   coment <- sapply(countryregex[, 3], function(x) grepl(x, v,
                                                        ignore.case = T,
