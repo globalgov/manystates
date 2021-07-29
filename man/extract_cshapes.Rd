@@ -36,8 +36,9 @@ A matrix with the desired distance list between polygons,
 capitals, or polygon centroids in kilometers.
 }
 \description{
-Functions to import CShapes 2.0 datasets, distances and
-formats them to a qVerse consistent output from the \verb{[cShapes]} package.
+Functions to import CShapes 2.0 datasets and distances from
+the \verb{[cShapes]} package and format them to a qVerse
+consistent output for creating maps.
 }
 \details{
 \code{import_cshapes()}imports CShapes 2.0 datasets

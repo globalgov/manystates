@@ -1,7 +1,8 @@
 #' Extract CShapes data and matrix
 #'
-#' Functions to import CShapes 2.0 datasets, distances and
-#' formats them to a qVerse consistent output from the `[cShapes]` package.
+#' Functions to import CShapes 2.0 datasets and distances from
+#' the `[cShapes]` package and format them to a qVerse
+#' consistent output for creating maps.
 #' @param date The date for which the distance list should be computed.
 #' This argument must be of type Date and must be in the range 1/1/1886 -
 #' end of the dataset.
