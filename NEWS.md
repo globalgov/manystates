@@ -5,6 +5,7 @@
 * Fixed #26 by updating list of states for `code_states()` function
 * Fixed #30 by transforming date columns in qStates datasets to `messydt` class
 * Closed #31 by creating qStates website
+* Added vignette for working with CShapes and maps
 
 ## Data
 
