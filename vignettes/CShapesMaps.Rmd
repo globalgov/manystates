@@ -18,35 +18,26 @@ pkgs <- c("WDI", "ggplot2", "dplyr", "countrycode", "qData", "qStates")
 lapply(pkgs, library, character.only = TRUE)
 ```
 
-Giving your readers a bird's eye view of your analysis can be a neat way to
-convey complex concepts and observations of the structure of the international
-governance system in a straightforward way. While not aiming at being a
-comprehensive guide to the
+Providing visualizations about of the structure of the international
+governance system at certain times is desirable, but not always straightforward.
+While not aiming at being a comprehensive guide to the
 [different ways of creating maps in R](https://geocompr.robinlovelace.net/),
-this articles aims at introducing the process of building maps in R with data
-from the excellent [`{cshapes}` package](https://cran.r-project.org/web/packages/cshapes/index.html)
-complemented by GDP data by the `{WDI}` package which retrieves data from the
-World Bank.
+this articles introduces the process of building maps in R with data
+from [`{cshapes}` package](https://cran.r-project.org/web/packages/cshapes/index.html)
+and GDP data from the World Bank.
 
 In the following example, we'll see how to build a heatmap showing GDP per
 capita in 1980.
 
 ## Step 1: Import the data from `{cshapes}` and the World Bank
 
-Below, we extract data from the `{WDI}` package of the
-[NY.GDP.PCAP.KD](https://data.worldbank.org/indicator/NY.GDP.PCAP.KD) indicator
-of the World Bank which yields information about the GDP per capita of countries
-in 2010 $. We then clean this data and then convert the ISO country code to
-the COW number we have in the `{cshapes}` dataset with the `{countrycode}`
-package.
-
-Furthermore, we leverage the `{cshapes}` package by importing a world map
-in a way that is consistent with the qVerse with our `import_cshapes()`
-function.
-
-Finally, we perform a `left_join()` between both dataframes to combine mapping
-data (especially the `geometry` variable which contains the shapes of countries)
-and data about GDP in 1980.
+First, we extract data from the `{WDI}` package of the
+[NY.GDP.PCAP.KD](https://data.worldbank.org/indicator/NY.GDP.PCAP.KD)
+indicator of the World Bank which yields information
+about the GDP per capita of countries in 2010 $.
+We then clean this data and then convert the ISO country code to
+the COW number we have in the `{cshapes}` dataset
+with the `{countrycode}` package.
 
 ```{r, echo=TRUE}
 # Extract GDP from World Bank for the period between 1980 and 1990
@@ -61,19 +52,33 @@ GDP <- dplyr::as_tibble(GDP)%>%
                                                        origin = "iso2c",
                                                        destination = "cown",
                                                        warn = FALSE)))
+```
 
+Second, we use the `{cshapes}` package by importing a world map
+in a way that is consistent with the qVerse with our `import_cshapes()`
+function.
+
+```{r, echo=TRUE}
 # Import map data with import_cshapes()
 mapdata <- qStates::import_cshapes(date = "1980-01-01")
+```
 
+Finally, we perform a `left_join()` between both dataframes to combine mapping
+data (especially the `geometry` variable which contains the shapes of countries)
+and data about GDP in 1980.
+
+```{r, echo=TRUE}
 # Left join on COW_Nr
 data <- dplyr::left_join(mapdata, GDP, by = "COW_Nr")
 ```
 
 ## Step 2: Create a heatmap
 
-Below, we leverage `{ggplot}` and its `geom_sf()` layer that takes a vector of
-polygons as an input (in this case the `geometry` variable of the combined
-dataframe) to create a map. We also use a neat theme from the `{hrbrthemes}`
+To plot the data, we leverage `{ggplot}` and its `geom_sf()`
+layer that takes a vector of polygons as an input
+(in this case the `geometry` variable of the combined
+dataframe) to create a map.
+We also use a neat theme from the `{hrbrthemes}`
 package and tweak it a little for a prettier output.
 
 ```{r, echo = TRUE}
@@ -92,6 +97,7 @@ heatmap <- ggplot2::ggplot(data = data$geometry) + # Main plot options
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.border = element_blank()) # Remove grids
+
 # Display the map
 heatmap
 ```
