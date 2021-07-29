@@ -17,26 +17,22 @@ test_that("a column indicating an ID source exists", {
 
 # Labels are standardized
 test_that("labels are standardised", {
-  if (!is.null(regimes[["Polity5d"]]$Label)) {
-    expect_false(any(grepl("U\\.S\\.", regimes[["Polity5"]])))
-    expect_false(any(grepl("U\\.K\\.", regimes[["Polity5"]])))
+  expect_false(any(grepl("U\\.S\\.", regimes[["Polity5"]])))
+  expect_false(any(grepl("U\\.K\\.", regimes[["Polity5"]])))
   expect_false(any(grepl("!", regimes[["Polity5d"]])))
   expect_false(any(grepl("NANA.", regimes[["Polity5d"]])))
-  }
 })
 
 # Dates are standardized
 test_that("Columns with dates are standardized", {
-  if (!is.null(regimes[["Polity5d"]]$Beg)) {
-    expect_equal(class(regimes[["Polity5d"]]$Beg), "messydt")
-    expect_false(any(grepl("/", regimes[["Polity5d"]]$Beg)))
-    expect_false(any(grepl("^[:alpha:]$",
-                           regimes[["Polity5d"]]$Beg)))
-    expect_false(any(grepl("^[:digit:]{2}$",
-                           regimes[["Polity5d"]]$Beg)))
-    expect_false(any(grepl("^[:digit:]{3}$",
-                           regimes[["Polity5d"]]$Beg)))
-    expect_false(any(grepl("^[:digit:]{1}$",
-                           regimes[["Polity5d"]]$Beg)))
-  }
+  expect_equal(class(regimes[["Polity5d"]]$Beg), "messydt")
+  expect_false(any(grepl("/", regimes[["Polity5d"]]$Beg)))
+  expect_false(any(grepl("^[:alpha:]$",
+                         regimes[["Polity5d"]]$Beg)))
+  expect_false(any(grepl("^[:digit:]{2}$",
+                         regimes[["Polity5d"]]$Beg)))
+  expect_false(any(grepl("^[:digit:]{3}$",
+                         regimes[["Polity5d"]]$Beg)))
+  expect_false(any(grepl("^[:digit:]{1}$",
+                         regimes[["Polity5d"]]$Beg)))
 })

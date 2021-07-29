@@ -21,18 +21,16 @@ test_that("object has the correct variables", {
 
 # Variables with dates are standardized
 test_that("Columns with dates are standardized", {
-  if (!is.null(states[["ISD"]]$Beg)) {
-    expect_equal(class(states[["ISD"]]$Beg), "messydt")
-    expect_false(any(grepl("/", states[["ISD"]]$Beg)))
-    expect_false(any(grepl("^[:alpha:]$",
-                           states[["ISD"]]$Beg)))
-    expect_false(any(grepl("^[:digit:]{2}$",
-                           states[["ISD"]]$Beg)))
-    expect_false(any(grepl("^[:digit:]{3}$",
-                           states[["ISD"]]$Beg)))
-    expect_false(any(grepl("^[:digit:]{1}$",
-                           states[["ISD"]]$Beg)))
-  }
+  expect_equal(class(states[["ISD"]]$Beg), "messydt")
+  expect_false(any(grepl("/", states[["ISD"]]$Beg)))
+  expect_false(any(grepl("^[:alpha:]$",
+                         states[["ISD"]]$Beg)))
+  expect_false(any(grepl("^[:digit:]{2}$",
+                         states[["ISD"]]$Beg)))
+  expect_false(any(grepl("^[:digit:]{3}$",
+                         states[["ISD"]]$Beg)))
+  expect_false(any(grepl("^[:digit:]{1}$",
+                         states[["ISD"]]$Beg)))
 })
 
 # Labels are standardized
