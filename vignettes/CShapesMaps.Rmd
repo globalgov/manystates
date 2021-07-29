@@ -52,7 +52,8 @@ and data about GDP in 1980.
 # Extract GDP from World Bank for the period between 1980 and 1990
 library(WDI)
 library(countrycode)
-library(tidyverse)
+library(dplyr)
+
 GDP <- WDI::WDI(indicator='NY.GDP.PCAP.KD', start=1980, end=1980)
 GDP <- dplyr::slice(GDP, 50:266)
 GDP <- dplyr::as_tibble(GDP)%>%
