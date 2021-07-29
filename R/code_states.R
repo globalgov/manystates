@@ -8,9 +8,8 @@
 #' @return A character vector of parties, in English, separated by commas.
 #' @import tibble
 #' @examples
-#' \dontrun{
-#' code_states(states$ISD$Label)[1:3]
-#' }
+#' states <- c("Switzerland", "New Zealand", "Brazil")
+#' code_states(states)
 #' @export
 code_states <- function(v) {
   # countryregex <- read.csv("data-raw/states/Stat_Actor/stat_regex.csv",
