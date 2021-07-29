@@ -10,10 +10,6 @@ date)](https://img.shields.io/github/v/release/globalgov/qStates)
 Date](https://img.shields.io/github/release-date/globalgov/qstates)
 ![GitHub
 issues](https://img.shields.io/github/issues-raw/globalgov/qStates)
-<!-- [![HitCount](http://hits.dwyl.com/globalgov/qStates.svg)](http://hits.dwyl.com/globalgov/qStates) -->
-[![Codecov test
-coverage](https://codecov.io/gh/globalgov/qStates/branch/main/graph/badge.svg)](https://codecov.io/gh/globalgov/qStates?branch=main)
-<!-- ![GitHub All Releases](https://img.shields.io/github/downloads/jhollway/roctopus/total) -->
 <!-- badges: end -->
 
 `{qStates}` is a a data package for the `{qData}` ecosystem of packages.
@@ -49,11 +45,19 @@ and datasets included in the package using the following function.
 qData::data_contrast("qStates")
 ```
 
+    ## regimes :
+    ##          Unique ID Missing Data  Rows Columns      Beg        End
+    ## Polity5        194       28.7 % 17574      32 1776-7-4   NA-NA-NA
+    ## Polity5d       193       4.84 %  1692      19 1776-7-4 9999-99-99
+    ##                                                  URL
+    ## Polity5  http://www.systemicpeace.org/inscrdata.html
+    ## Polity5d http://www.systemicpeace.org/inscrdata.html
+    ## 
     ## states :
     ##     Unique ID Missing Data Rows Columns        Beg        End
     ## GW        202          0 %  216       5 1816-01-01 2017-12-31
-    ## ISD       310          0 %  362       7 1816-01-01 2011-12-31
-    ## COW       217          0 %  243       5 1816-01-01 2016-12-31
+    ## ISD       310          0 %  362       7 01-01-1816 31-08-1883
+    ## COW       217          0 %  243       5   1816-1-1 2016-12-31
     ##                                                               URL
     ## GW                             http://ksgleditsch.com/data-4.html
     ## ISD                            http://www.ryan-griffiths.com/data

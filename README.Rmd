@@ -8,9 +8,6 @@ output: github_document
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/globalgov/qStates)
 ![GitHub Release Date](https://img.shields.io/github/release-date/globalgov/qstates)
 ![GitHub issues](https://img.shields.io/github/issues-raw/globalgov/qStates)
-<!-- [![HitCount](http://hits.dwyl.com/globalgov/qStates.svg)](http://hits.dwyl.com/globalgov/qStates) -->
-[![Codecov test coverage](https://codecov.io/gh/globalgov/qStates/branch/main/graph/badge.svg)](https://codecov.io/gh/globalgov/qStates?branch=main)
-<!-- ![GitHub All Releases](https://img.shields.io/github/downloads/jhollway/roctopus/total) -->
 <!-- badges: end -->
 
 `{qStates}` is a a data package for the `{qData}` ecosystem of packages. It is a data package about state actors across the globe. It encompasses several datasets with states' names and dates of beginning and ending (for some states), alongside other information. The package is geared towards global governance research, but can be used broadly for anyone interested in state actors across time. 
