@@ -8,7 +8,7 @@
 #' @return A character vector of parties, in English, separated by commas.
 #' @import tibble
 #' @examples
-#' states <- c("Switzerland", "New Zealand", "Brazil")
+#' states <- c("Two are from Switzerland", "One from New Zealand", "And one from Brazil")
 #' code_states(states)
 #' @export
 code_states <- function(v) {
