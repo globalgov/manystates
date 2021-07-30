@@ -13,10 +13,10 @@ GW <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
 GW <- tibble::as_tibble(GW) %>%
   dplyr::rename(Finish = End) %>%
   qData::transmutate(ID = `Cow ID`,
-              Beg = qCreate::standardise_dates(Start),
-              End = qCreate::standardise_dates(Finish), 
-              Label = qCreate::standardise_titles(`Name of State`),
-              COW_Nr = qCreate::standardise_titles(`Cow Nr.`)) %>%
+                     Beg = qCreate::standardise_dates(Start),
+                     End = qCreate::standardise_dates(Finish), 
+                     Label = qCreate::standardise_titles(`Name of State`),
+                     COW_Nr = qCreate::standardise_titles(`Cow Nr.`)) %>%
   dplyr::relocate(ID, Beg, End, COW_Nr, Label) %>%
   dplyr::arrange(Beg, ID)
 # We know that COW data for "old" states is set to 1816-01-01 by default.
