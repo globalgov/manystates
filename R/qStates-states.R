@@ -7,11 +7,11 @@
 #' functions.
 #'\describe{
 #' \item{GW: }{A dataset with 216 observations and the
-#' following 5 variables: COW_Nr, ID, Beg, End, Label.}
+#' following 5 variables: ID, Beg, End, COW_Nr, Label.}
 #' \item{ISD: }{A dataset with 362 observations and the
-#' following 7 variables: COW_Nr, ID, Beg, End, Label,
+#' following 7 variables: ID, Beg, End, COW_Nr, Label,
 #' Micro, New.State.}
 #' \item{COW: }{A dataset with 243 observations and the
-#' following 5 variables: COW_Nr, ID, Beg, End, Label.}
+#' following 5 variables: ID, Beg, End, COW_Nr, Label.}
 #' }
- "states"
+"states"
