@@ -10,7 +10,6 @@ ISD <- utils::read.csv("data-raw/states/ISD/ISD_Version1_Dissemination.csv")
 # In this stage you will want to correct the variable names and
 # formats of the 'ISD' object until the object created
 # below (in stage three) passes all the tests. 
-
 ISD <- tibble::as_tibble(ISD) %>%
   dplyr::rename(Finish = End) %>% 
   # Renaming the end date column to avoid self reference in transmutate.
@@ -35,6 +34,10 @@ ISD <- tibble::as_tibble(ISD) %>%
 ISD$Beg <- qCreate::standardise_dates(stringr::str_replace_all(ISD$Beg,
                                                                "1816-1-1|1816-01-1|1816-1-01|1816-01-01",
                                                                "..1816-01-01"))
+# We can do the same for End dates to signal uncertainty. 
+ISD$End <- qCreate::standardise_dates(stringr::str_replace_all(ISD$End,
+                                                               "2011-12-31",
+                                                               "2011-12-31.."))
 # qData and qCreate include several other
 # functions that should help cleaning and
 # standardizing your data.

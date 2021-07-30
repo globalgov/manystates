@@ -27,6 +27,10 @@ GW <- tibble::as_tibble(GW) %>%
 GW$Beg <- qCreate::standardise_dates(stringr::str_replace_all(GW$Beg,
                                                                "1816-1-1|1816-01-1|1816-1-01|1816-01-01",
                                                                "..1816-01-01"))
+# We can do the same for End dates to signal uncertainty. 
+GW$End <- qCreate::standardise_dates(stringr::str_replace_all(GW$End,
+                                                               "2017-12-31",
+                                                               "2017-12-31.."))
 # qData and qCreate include several other
 # functions that should help cleaning and
 # standardizing your data.

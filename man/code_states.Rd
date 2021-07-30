@@ -21,6 +21,6 @@ This function builds upon the \code{stat_actor} list and the
 in a character vector of agreement titles or texts.
 }
 \examples{
-states <- c("Switzerland", "New Zealand", "Brazil")
+states <- c("Two are from Switzerland", "One from New Zealand", "And one from Brazil")
 code_states(states)
 }
