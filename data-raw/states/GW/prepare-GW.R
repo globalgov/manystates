@@ -17,11 +17,19 @@ GW <- tibble::as_tibble(GW) %>%
               End = qCreate::standardise_dates(Finish), 
               Label = qCreate::standardise_titles(`Name of State`),
               COW_Nr = qCreate::standardise_titles(`Cow Nr.`)) %>%
-  dplyr::relocate(COW_Nr, ID, Beg, End, Label) %>%
+  dplyr::relocate(ID, Beg, End, COW_Nr, Label) %>%
   dplyr::arrange(Beg, ID)
-
-# qData includes several functions that should help cleaning and standardizing
-# your data.
+# We know that COW data for "old" states is set to 1816-01-01 by default.
+# This is a rather uncretain date, that is, the dataset considers them states
+# on 1st January 1816, but they may have been established (much) earlier.
+# Let's signal to this uncretainty using `standardise_dates()` is a wrapper
+# for the `{messydates}` package which is designed to deal with date uncretianty.
+GW$Beg <- qCreate::standardise_dates(stringr::str_replace_all(GW$Beg,
+                                                               "1816-1-1|1816-01-1|1816-1-01|1816-01-01",
+                                                               "..1816-01-01"))
+# qData and qCreate include several other
+# functions that should help cleaning and
+# standardizing your data.
 # Please see the vignettes or website for more details.
 
 # Stage three: Connecting data
