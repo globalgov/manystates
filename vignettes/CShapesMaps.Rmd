@@ -39,7 +39,7 @@ We then clean this data and then convert the ISO country code to
 the COW number we have in the `{cshapes}` dataset
 with the `{countrycode}` package.
 
-```{r, echo=TRUE}
+```{r data, echo=TRUE, warning=FALSE, message=FALSE}
 # Extract GDP from World Bank for the period between 1980 and 1990
 library(WDI)
 library(countrycode)
@@ -58,7 +58,7 @@ Second, we use the `{cshapes}` package by importing a world map
 in a way that is consistent with the qVerse with our `import_cshapes()`
 function.
 
-```{r, echo=TRUE}
+```{r cshapes, echo=TRUE, warning=FALSE, message=FALSE}
 # Import map data with import_cshapes()
 mapdata <- qStates::import_cshapes(date = "1980-01-01")
 ```
@@ -66,8 +66,10 @@ mapdata <- qStates::import_cshapes(date = "1980-01-01")
 Finally, we perform a `left_join()` between both dataframes to combine mapping
 data (especially the `geometry` variable which contains the shapes of countries)
 and data about GDP in 1980.
+Since this is a historical map, it takes the information about states and
+distances according what they were in 1980 (e.g. West and East Germany or USSR).
 
-```{r, echo=TRUE}
+```{r join, echo=TRUE, warning=FALSE, message=FALSE}
 # Left join on COW_Nr
 data <- dplyr::left_join(mapdata, GDP, by = "COW_Nr")
 ```
@@ -81,7 +83,7 @@ dataframe) to create a map.
 We also use a neat theme from the `{hrbrthemes}`
 package and tweak it a little for a prettier output.
 
-```{r, echo = TRUE}
+```{r plot, echo=TRUE, warning=FALSE, message=FALSE}
 library(ggplot2)
 library(hrbrthemes) # for a pretty map
 
