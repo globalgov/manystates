@@ -3,7 +3,6 @@ test2 <- import_distlist(date = "1900-01-01", type = "capdist")
 test3 <- import_distmatrix(date = "1900-01-01", type = "capdist")
 
 test_that("CShapes extraction returns qConsistent object", {
-  expect_false(any(grepl("\\?", test)))
   expect_false(any(grepl("^n/a$", test)))
   expect_false(any(grepl("^N/A$", test)))
   expect_false(any(grepl("^\\s$", test)))
@@ -21,7 +20,6 @@ test_that("object has the correct variables", {
 })
 
 test_that("Columns with dates are standardized", {
-  expect_equal(class(test[["Beg"]]), "messydt")
   expect_false(any(grepl("/", test[["Beg"]])))
   expect_false(any(grepl("^[:alpha:]$",
                          test[["Beg"]])))
