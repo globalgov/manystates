@@ -9,8 +9,7 @@
 
 ## Data
 
-* Closed #1 by adding the Polity5 dataset 
-* Added Polity5d dataset
+* Closed #1 by adding the Polity5 dataset
 * Integrated CShapes
   * Closed #10  by integrating datasets on distances from CShapes
   * Added `import_cshapes()` function to import CShapes data

@@ -26,7 +26,6 @@ Polity5 <- tibble::as_tibble(Polity5) %>%
   dplyr::arrange(ID, Beg, End) %>%
   dplyr::select(-scode) %>%
   dplyr::relocate(ID, Beg, End, Label)
-
 # qData includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.
