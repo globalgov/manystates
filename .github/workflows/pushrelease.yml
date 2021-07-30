@@ -58,7 +58,7 @@ jobs:
       - name: Install dependencies
         run: |
           remotes::install_deps(dependencies = TRUE)
-          remotes::install_github("globalgov/qStates")
+          remotes::install_github("globalgov/qData")
           remotes::install_cran("rcmdcheck")
         shell: Rscript {0}
 
@@ -165,8 +165,8 @@ jobs:
         run: Rscript -e 'install.packages(c("rmarkdown","remotes"))'
 
       # install packages needed
-      - name: install qStates
-        run: Rscript -e 'remotes::install_github("globalgov/qStates")'
+      - name: install qData
+        run: Rscript -e 'remotes::install_github("globalgov/qData")'
 
       # Render README.md using rmarkdown
       - name: render README
