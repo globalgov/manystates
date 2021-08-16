@@ -1,13 +1,14 @@
 Package: qStates
 Title: States for qData
-Version: 0.0.3
+Version: 0.0.4
+Date: 2021-07-28
 Description: qStates provide data on states in the international system across time. 
     The package combines and cross-references several existing datasets consistent with the qData package aims.
 URL: https://github.com/globalgov/qStates
 BugReports: https://github.com/globalgov/qStates/issues
 Depends: 
-    R (>= 3.50),
-    tibble, 
+    R (>= 3.5.0),
+    tibble,
     pointblank
 Authors@R: 
     c(person(given = "James",
@@ -29,27 +30,34 @@ Authors@R:
              comment = c("IHEID", ORCID = "0000-0002-9678-2777")))
 LazyData: true
 License: CC BY 4.0
-Imports: 
-    covr,
-    desc,
+Imports:
     dplyr,
-    english,
-    lubridate,
     pkgdown,
+    lubridate,
     purrr,
     rlang,
     roxygen2,
     stringr,
-    textclean,
     usethis,
-    whisker
-Remotes:
-    globalgov/qData
+    whisker,
+    cshapes,
+    countrycode,
+    qData,
+    qCreate
 Suggests: 
     fs,
-    librarian,
-    testthat,
-    xfun
+    testthat (>= 3.0.0),
+    xfun,
+    WDI,
+    rmarkdown,
+    knitr,
+    ggplot2,
+    hrbrthemes
+Remotes:
+    globalgov/qCreate,
+    globalgov/qData
 Encoding: UTF-8
+VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.1
+Config/testthat/edition: 3

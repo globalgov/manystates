@@ -20,11 +20,17 @@ test_that("object has the correct variables", {
 })
 
 # Variables with dates are standardized
-test_that("dates are standardised", {
-  expect_col_is_date(states[["GW"]], vars(Beg))
-  expect_col_is_date(states[["GW"]], vars(End))
+test_that("Columns with dates are standardized", {
+  expect_equal(class(states[["GW"]]$Beg), "messydt")
   expect_false(any(grepl("/", states[["GW"]]$Beg)))
-  expect_false(any(grepl("/", states[["GW"]]$End)))
+  expect_false(any(grepl("^[:alpha:]$",
+                        states[["GW"]]$Beg)))
+  expect_false(any(grepl("^[:digit:]{2}$",
+                         states[["GW"]]$Beg)))
+  expect_false(any(grepl("^[:digit:]{3}$",
+                         states[["GW"]]$Beg)))
+  expect_false(any(grepl("^[:digit:]{1}$",
+                         states[["GW"]]$Beg)))
 })
 
 # Labels are standardized

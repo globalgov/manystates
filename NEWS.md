@@ -1,3 +1,21 @@
+# qStates 0.0.4
+
+## Package
+
+* Fixed #26 by updating list of states for `code_states()` function
+* Fixed #30 by transforming date columns in qStates datasets to `messydt` class
+* Closed #31 by creating qStates website
+* Added vignette for working with `{CShapes}` and historical maps
+
+## Data
+
+* Closed #1 by adding the Polity5 dataset
+* Integrated `{CShapes}`
+  * Closed #10  by integrating datasets on distances from `{CShapes}`
+  * Added `import_cshapes()` function to import `{CShapes}` data
+  * Added `import_distlist()` function to import `{CShapes}` distances
+  * Added `import_distmatrix()` function to import `{CShapes}` distance matrixes
+
 # qStates 0.0.3
 
 ## Package

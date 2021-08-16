@@ -2,7 +2,6 @@
 
 # This is a template for importing, cleaning, and exporting data
 # ready for the qPackage.
-library(qData)
 
 # Stage one: Collecting data
 COW <- readr::read_csv("data-raw/states/COW/states2016.csv")
@@ -10,37 +9,44 @@ COW <- readr::read_csv("data-raw/states/COW/states2016.csv")
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
 # formats of the 'COW' object until the object created
-# below (in stage three) passes all the tests. 
-COW <-as_tibble(COW) %>%
-  transmutate(ID = stateabb,
-         Beg = standardise_dates(styear, stmonth, stday),
-         End = standardise_dates(endyear, endmonth, endday),
-         Label = standardise_titles(statenme),
-         COW_Nr = standardise_titles(as.character(ccode))) %>%
-  dplyr::select(COW_Nr, ID, Beg, End, Label) %>% # Added COW_Nr to perform inner joins on datasets.
-  # dplyr::select(ID, Beg, End, Label, everything()) %>%
-  dplyr::relocate(COW_Nr, ID, Beg, End, Label) %>%
+# below (in stage three) passes all the tests.
+COW <- tibble::as_tibble(COW) %>%
+  qData::transmutate(ID = stateabb,
+                     Beg = qCreate::standardise_dates(lubridate::as_date(paste(styear, stmonth, stday, sep = "-"))),
+                     End = qCreate::standardise_dates(lubridate::as_date(paste(endyear, endmonth, endday, sep = "-"))),
+                     Label = qCreate::standardise_titles(statenme),
+                     COW_Nr = qCreate::standardise_titles(as.character(ccode))) %>%
+  dplyr::select(COW_Nr, ID, Beg, End, Label) %>%
+  dplyr::relocate(ID, Beg, End, COW_Nr, Label) %>%
   dplyr::arrange(Beg, ID)
-# qData includes several functions that should help cleaning and standardizing your data.
+# We know that COW data for "old" states is set to 1816-01-01 by default.
+# This is a rather uncretain date, that is, the dataset considers them states
+# on 1st January 1816, but they may have been established (much) earlier.
+# Let's signal to this uncretainty using `standardise_dates()` is a wrapper
+# for the `{messydates}` package which is designed to deal with date uncretianty.
+COW$Beg <- qCreate::standardise_dates(stringr::str_replace_all(COW$Beg,
+                                                               "1816-1-1|1816-01-1|1816-1-01|1816-01-01",
+                                                               "..1816-01-01"))
+# We can do the same for End dates to signal uncertainty. 
+COW$End <- qCreate::standardise_dates(stringr::str_replace_all(COW$End,
+                                                               "2016-12-31",
+                                                               "2016-12-31.."))
+# qData and qCreate include several other
+# functions that should help cleaning and
+# standardizing your data.
 # Please see the vignettes or website for more details.
-
-
-# #Additional Identifiers and Unicode Country Flags by using the countrycode package (https://github.com/vincentarelbundock/countrycode)
-# library(countrycode)
-# ID <- data.frame(COW$COW_ID, UnicodeSymb = countrycode::countrycode(COW$COW_ID, 'cowc', 'unicode.symbol'), ISO3_ID = countrycode::countrycode(COW$COW_ID, 'cowc', 'iso3c'), EuroStat_code = countrycode::countrycode(COW$COW_ID, 'cowc', 'eurostat'), ECB_code = countrycode::countrycode(COW$COW_ID,'cowc', 'ecb'), IANA_TLD = countrycode::countrycode(COW$COW_ID, 'cowc', "cctld"), un_code = countrycode::countrycode(COW$COW_ID, 'cowc', 'un'), Continent = countrycode::countrycode(COW$ID, 'cowc', 'continent'), EU = countrycode::countrycode(COW$ID, 'cowc', 'eu28'), Currency = countrycode::countrycode(COW$ID, 'cowc', 'iso4217c'))
-# ID  <- as_tibble(ID)
-# COW <- dplyr::bind_cols(COW, ID)
-# rm(ID)
-# # Issue, historic countries (Denmark for example) that have a non continuous existence are coded with the same ISO-ID's for both occurrences of existence.This also prevents inner joins.
 
 # Stage three: Connecting data
 # Next run the following line to make COW available within the qPackage.
-export_data(COW, database = "states", URL = "https://correlatesofwar.org/data-sets/state-system-membership")
+qCreate::export_data(COW, database = "states",
+                     URL = "https://correlatesofwar.org/data-sets/state-system-membership")
+
 # This function also does two additional things.
-# First, it creates a set of tests for this object to ensure adherence to certain standards.
-# You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows) to run these tests locally at any point.
-# Any test failures should be pretty self-explanatory and may require you to return
-# to stage two and further clean, standardize, or wrangle your data into the expected format.
+# First, it creates a set of tests for this object to ensure adherence
+# to certain standards. You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows)
+# to run these tests locally at any point. Any test failures should be pretty
+# self-explanatory and may require you to return to stage two and further clean,
+# standardize, or wrangle your data into the expected format.
 # Second, it also creates a documentation file for you to fill in.
-# Please make sure that you cite any sources appropriately and fill in as much detail
-# about the variables etc as possible.
+# Please make sure that you cite any sources appropriately and fill in as
+# much detail about the variables etc as possible.

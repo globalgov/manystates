@@ -1,0 +1,44 @@
+url: https://globalgov.github.io/qStates/
+development:
+    mode: auto
+template:
+  params:
+    bootswatch: flatly
+authors:
+  James Hollway:
+    href: https://jameshollway.com
+navbar:
+  structure:
+    left:
+    - home
+    - reference
+    - articles
+    - news
+    right: github
+  components:
+    home:
+      icon: fa-home fa-lg
+      href: index.html
+    reference:
+      text: Reference
+      href: reference/index.html
+    articles:
+      text: Articles
+      menu:
+      - text: Creating historical maps
+        href: articles/CShapesMaps.html
+    news:
+      text: News
+      href: news/index.html
+reference:
+  - title: "Functions to code states"
+    desc: "These functions are here to assist in creating ID's for states:"
+    contents:
+    - code_modern_states
+    - code_states
+  - title: "Functions to import CShapes 2.0 data"
+    desc: "These functions are here to assist users in importing correctly formatted CShapes 2.0 data:"
+    contents:
+    - import_cshapes
+    - import_distlist
+    - import_distmatrix

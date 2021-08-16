@@ -2,7 +2,6 @@
 
 # This is a template for importing, cleaning, and exporting data
 # ready for the qPackage.
-library(qData)
 
 # Stage one: Collecting data
 GW <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
@@ -11,35 +10,43 @@ GW <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
 # In this stage you will want to correct the variable names and
 # formats of the 'GW' object until the object created
 # below (in stage three) passes all the tests. 
-GW <- as_tibble(GW) %>%
-  dplyr::rename(Finish = End) %>% # Renaming the end date column to avoid self reference in transmutate.(can't do it inside the transmutate since we also work on dates)
-  transmutate(ID = `Cow ID`,
-              Beg = standardise_dates(Start),
-              End = standardise_dates(Finish), 
-              Label = standardise_titles(`Name of State`),
-              COW_Nr = standardise_titles(`Cow Nr.`)) %>%
-  dplyr::relocate(COW_Nr, ID, Beg, End, Label) %>%
+GW <- tibble::as_tibble(GW) %>%
+  dplyr::rename(Finish = End) %>%
+  qData::transmutate(ID = `Cow ID`,
+                     Beg = qCreate::standardise_dates(Start),
+                     End = qCreate::standardise_dates(Finish), 
+                     Label = qCreate::standardise_titles(`Name of State`),
+                     COW_Nr = qCreate::standardise_titles(`Cow Nr.`)) %>%
+  dplyr::relocate(ID, Beg, End, COW_Nr, Label) %>%
   dplyr::arrange(Beg, ID)
-
-# #Additional Identifiers and Unicode Country Flags by using the countrycode package (https://github.com/vincentarelbundock/countrycode)
-# library(countrycode)
-# ID <- data.frame(GW$ID, UnicodeSymb = countrycode::countrycode(GW$ID, 'cowc', 'unicode.symbol'), ISO3_ID = countrycode::countrycode(GW$ID, 'cowc', 'iso3c'), EuroStat_code = countrycode::countrycode(GW$ID, 'cowc', 'eurostat'), ECB_code = countrycode::countrycode(GW$ID,'cowc', 'ecb'), IANA_TLD = countrycode::countrycode(GW$ID, 'cowc', "cctld"), un_code = countrycode::countrycode(GW$ID, 'cowc', 'un'), Continent = countrycode::countrycode(GW$ID, 'cowc', 'continent'), EU = countrycode::countrycode(GW$ID, 'cowc', 'eu28'), Currency = countrycode::countrycode(GW$ID, 'cowc', 'iso4217c'))
-# ID  <- as_tibble(ID)
-# GW <- dplyr::bind_cols(GW, ID)
-# rm(ID)
-# # Issue, historic countries (Denmark for example) that have a non continuous existence are coded with the same ISO-ID's for both occurrences of existence.This also prevents inner joins.
-
-# qData includes several functions that should help cleaning and standardizing your data.
+# We know that COW data for "old" states is set to 1816-01-01 by default.
+# This is a rather uncretain date, that is, the dataset considers them states
+# on 1st January 1816, but they may have been established (much) earlier.
+# Let's signal to this uncretainty using `standardise_dates()` is a wrapper
+# for the `{messydates}` package which is designed to deal with date uncretianty.
+GW$Beg <- qCreate::standardise_dates(stringr::str_replace_all(GW$Beg,
+                                                               "1816-1-1|1816-01-1|1816-1-01|1816-01-01",
+                                                               "..1816-01-01"))
+# We can do the same for End dates to signal uncertainty. 
+GW$End <- qCreate::standardise_dates(stringr::str_replace_all(GW$End,
+                                                               "2017-12-31",
+                                                               "2017-12-31.."))
+# qData and qCreate include several other
+# functions that should help cleaning and
+# standardizing your data.
 # Please see the vignettes or website for more details.
 
 # Stage three: Connecting data
 # Next run the following line to make GW available within the qPackage.
-export_data(GW, database = "states", URL="http://ksgleditsch.com/data-4.html")
+qCreate::export_data(GW, database = "states",
+                     URL="http://ksgleditsch.com/data-4.html")
+
 # This function also does two additional things.
-# First, it creates a set of tests for this object to ensure adherence to certain standards.
-# You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows) to run these tests locally at any point.
-# Any test failures should be pretty self-explanatory and may require you to return
-# to stage two and further clean, standardize, or wrangle your data into the expected format.
+# First, it creates a set of tests for this object to ensure adherence
+# to certain standards. You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows)
+# to run these tests locally at any point. Any test failures should be pretty
+# self-explanatory and may require you to return to stage two and further clean,
+# standardize, or wrangle your data into the expected format.
 # Second, it also creates a documentation file for you to fill in.
-# Please make sure that you cite any sources appropriately and fill in as much detail
-# about the variables etc as possible.
+# Please make sure that you cite any sources appropriately and fill in as
+# much detail about the variables etc as possible.

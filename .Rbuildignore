@@ -8,3 +8,8 @@
 ^data-raw/states/ISD$
 ^\.github$
 ^README\.Rmd$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^data-raw/regimes$
+^data-raw/regimes/Polity5$
