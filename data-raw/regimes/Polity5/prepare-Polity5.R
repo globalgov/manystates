@@ -17,7 +17,6 @@ Polity5 <- readxl::read_excel("data-raw/regimes/Polity5/p5v2018.xls")
 # In this stage you will want to correct the variable names and
 # formats of the 'Polity5' object until the object created
 # below (in stage three) passes all the tests.
-
 Polity5 <- tibble::as_tibble(Polity5) %>%
   qData::transmutate(ID = ccode,
               Beg = qCreate::standardise_dates(byear, bmonth, bday),
@@ -29,7 +28,8 @@ Polity5 <- tibble::as_tibble(Polity5) %>%
 # qData includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.
-
+# Replaces -66, -77, -88 in columns and rows for NAs for now.
+Polity5[Polity5=="-66" | Polity5=="-77"| Polity5=="-88"] <- NA
 # Stage three: Connecting data
 # Next run the following line to make Polity5 available
 # within the qPackage.
