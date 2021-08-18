@@ -60,7 +60,7 @@ import_cshapes <- function(date, ...) {
                 # All are independent states.
                 # Check where the colonies are.
                 Owner = owner) %>%
-    dplyr::select(-(fid)) %>%
+    dplyr::select(- (fid)) %>%
     dplyr::relocate(COW_Nr, Beg, End, Label) %>%
     dplyr::arrange(Beg, COW_Nr)
   return(cshapes)
@@ -110,38 +110,44 @@ import_distlist <- function(date, type, ...) {
   #Step 3: Process dist to make it qConsistent
   if (type == "capdist") {
     dist <- tibble::as_tibble(dist) %>%
-      dplyr::mutate(FromLabel = countrycode::countrycode(sourcevar = ccode1,
-                                                         origin = "cown",
-                                                         destination = "country.name",
-                                                         custom_match = custom_match),
-                    ToLabel = countrycode::countrycode(sourcevar = ccode2,
-                                                       origin = "cown",
-                                                       destination = "country.name",
-                                                       custom_match = custom_match)) %>%
+      dplyr::mutate(FromLabel =
+                      countrycode::countrycode(sourcevar = ccode1,
+                                               origin = "cown",
+                                               destination = "country.name",
+                                               custom_match = custom_match),
+                    ToLabel =
+                      countrycode::countrycode(sourcevar = ccode2,
+                                               origin = "cown",
+                                               destination = "country.name",
+                                               custom_match = custom_match)) %>%
       dplyr::rename(FromCode = ccode1, ToCode = ccode2, Distance = capdist) %>%
       dplyr::relocate(FromLabel, FromCode, ToLabel, ToCode, distance)
   } else if (type == "mindist") {
     dist <- tibble::as_tibble(dist) %>%
-      dplyr::mutate(FromLabel = countrycode::countrycode(sourcevar = ccode1,
-                                                         origin = "cown",
-                                                         destination = "country.name",
-                                                         custom_match = custom_match),
-                    ToLabel = countrycode::countrycode(sourcevar = ccode2,
-                                                       origin = "cown",
-                                                       destination = "country.name",
-                                                       custom_match = custom_match)) %>%
+      dplyr::mutate(FromLabel =
+                      countrycode::countrycode(sourcevar = ccode1,
+                                               origin = "cown",
+                                               destination = "country.name",
+                                               custom_match = custom_match),
+                    ToLabel =
+                      countrycode::countrycode(sourcevar = ccode2,
+                                               origin = "cown",
+                                               destination = "country.name",
+                                               custom_match = custom_match)) %>%
       dplyr::rename(FromCode = ccode1, ToCode = ccode2, Distance = mindist) %>%
       dplyr::relocate(FromLabel, FromCode, ToLabel, ToCode, distance)
   } else {
     dist <- tibble::as_tibble(dist) %>%
-      dplyr::mutate(FromLabel = countrycode::countrycode(sourcevar = ccode1,
-                                                         origin = "cown",
-                                                         destination = "country.name",
-                                                         custom_match = custom_match),
-                    ToLabel = countrycode::countrycode(sourcevar = ccode2,
-                                                       origin = "cown",
-                                                       destination = "country.name",
-                                                       custom_match = custom_match)) %>%
+      dplyr::mutate(FromLabel = 
+                      countrycode::countrycode(sourcevar = ccode1,
+                                               origin = "cown",
+                                               destination = "country.name",
+                                               custom_match = custom_match),
+                    ToLabel =
+                      countrycode::countrycode(sourcevar = ccode2,
+                                               origin = "cown",
+                                               destination = "country.name",
+                                               custom_match = custom_match)) %>%
       dplyr::rename(FromCode = ccode1, ToCode = ccode2, Distance = centdist) %>%
       dplyr::relocate(FromLabel, FromCode, ToLabel, ToCode, distance)
   }
