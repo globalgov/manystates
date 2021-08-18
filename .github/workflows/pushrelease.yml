@@ -154,27 +154,44 @@ jobs:
     name: Update README.md and push
     needs: [build, release]
     runs-on: macOS-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
+      # Query and install dependencies as well as rmarkdown package since its a new runner
+      - name: Query dependencies
+        run: |
+          install.packages('remotes')
+          saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
+          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
+        shell: Rscript {0}
 
-      # install packages needed
-      - name: install required packages
-        run: Rscript -e 'install.packages(c("rmarkdown","remotes"))'
+      - name: Cache R packages
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
+          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
 
-      # install packages needed
-      - name: install qData
-        run: Rscript -e 'remotes::install_github("globalgov/qData")'
+      - name: Install dependencies
+        run: |
+          remotes::install_deps(dependencies = TRUE)
+          install.packages("rmarkdown", type = "binary")
+        shell: Rscript {0}
+
+      - name: Install package
+        run: R CMD INSTALL .
 
       # Render README.md using rmarkdown
       - name: render README
         run: Rscript -e 'rmarkdown::render("README.Rmd", output_format = "md_document")'
-
+      # Add man/figures/README-* if plots are generated
       - name: commit rendered README
         run: |
-          git add README.md man/figures/README-*
+          git add README.md
           git commit -m "Re-build README.md" || echo "No changes to commit"
           git push origin master || echo "No changes to commit"
 
