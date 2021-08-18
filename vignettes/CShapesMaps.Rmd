@@ -12,7 +12,8 @@ vignette: >
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>"
+  comment = "#>",
+  fig.align = "center"
 )
 pkgs <- c("WDI", "ggplot2", "dplyr", "countrycode", "qData", "qStates")
 lapply(pkgs, library, character.only = TRUE)
@@ -45,9 +46,9 @@ library(WDI)
 library(countrycode)
 library(dplyr)
 
-GDP <- WDI::WDI(indicator='NY.GDP.PCAP.KD', start=1980, end=1980)
+GDP <- WDI::WDI(indicator = 'NY.GDP.PCAP.KD', start = 1980, end = 1980)
 GDP <- dplyr::slice(GDP, 50:266)
-GDP <- dplyr::as_tibble(GDP)%>%
+GDP <- dplyr::as_tibble(GDP) %>%
   qData::transmutate(COW_Nr = as.character(countrycode::countrycode(GDP$iso2c,
                                                        origin = "iso2c",
                                                        destination = "cown",
@@ -87,19 +88,16 @@ package and tweak it a little for a prettier output.
 library(ggplot2)
 library(hrbrthemes) # for a pretty map
 
-heatmap <- ggplot2::ggplot(data = data$geometry) + # Main plot options
+ggplot2::ggplot(data = data$geometry) + # Main plot options
   geom_sf(mapping = aes(fill = data$NY.GDP.PCAP.KD), lwd = 0.1) + # Map options
   scale_fill_viridis_c(option = "plasma", na.value = "grey80") + # Color options
-  labs(title="GDP per capita in 1980",
-       subtitle="Some fact about the GDP in 1980.",
-       caption= "Source: World Bank (retrieved 15/07/2021)",
+  labs(title = "GDP per capita in 1980",
+       subtitle = "Some fact about the GDP in 1980.",
+       caption = "Source: World Bank (retrieved 15/07/2021)",
        fill = "GDP per capita") + # Define labels
   hrbrthemes::theme_ipsum() + # Set a default theme
   theme(panel.background = element_rect(fill = "light blue"), # Make oceans blue
         panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         panel.border = element_blank()) # Remove grids
-
-# Display the map
-heatmap
 ```
