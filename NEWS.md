@@ -14,7 +14,7 @@
   * Closed #10  by integrating datasets on distances from `{CShapes}`
   * Added `import_cshapes()` function to import `{CShapes}` data
   * Added `import_distlist()` function to import `{CShapes}` distances
-  * Added `import_distmatrix()` function to import `{CShapes}` distance matrixes
+  * Added `import_distmatrix()` function to import `{CShapes}` distance matrices
 
 # qStates 0.0.3
 
