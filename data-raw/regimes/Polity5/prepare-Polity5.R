@@ -8,7 +8,8 @@
 #### Sidenote ####
 # Both Polity datasets have a slightly different structure. Polity5 is a
 # year-country dataset while Polity5d is a "polity case" dataset 
-# (e.g. one observation per regime change)
+# (e.g. one observation per regime change). We only integrate the Polity5
+# dataset in the present package.
 
 # Polity case data
 Polity5 <- readxl::read_excel("data-raw/regimes/Polity5/p5v2018.xls")
