@@ -13,3 +13,6 @@
 ^pkgdown$
 ^data-raw/regimes$
 ^data-raw/regimes/Polity5$
+^data-raw/leaders$
+^data-raw/leaders/ARCHIGOS$
+^.*\.RDataTmp
