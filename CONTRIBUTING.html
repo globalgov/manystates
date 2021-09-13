@@ -12,7 +12,7 @@
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/flatly/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/paper/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
@@ -38,6 +38,8 @@
 
 
 
+  <link href="extra.css" rel="stylesheet">
+  
 
 <meta property="og:title" content="Contributing" />
 
@@ -79,7 +81,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -151,7 +153,7 @@
 <p>Independent or assigned code contributions are most welcome. When writing new code, please follow <a href="https://style.tidyverse.org/index.html">tidyverse style guide</a> which is based on <a href="https://google.github.io/styleguide/Rguide.xml">standard R guidelines</a>. It can help to use packages such as <code>lintr</code> and <code>goodpractice</code> to ensure these are followed. The <code>styler</code> package fixes in a non-invasive way the code to adhere to the tidyverse formatting rules, and it also provides an RStudio Addins to help with this task. To run the <code>lintr</code> and <code>goodpractice</code> checks or use <code>styler</code> in a file run:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># basic lintr checking</span>
-<span class="fu">lintr</span><span class="fu">::</span><span class="fu">lint_package</span><span class="op">(</span>path <span class="op">=</span> <span class="st">"qStates/"</span><span class="op">)</span>
+<span class="fu">lintr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/lintr/man/lint_package.html">lint_package</a></span><span class="op">(</span>path <span class="op">=</span> <span class="st">"qStates/"</span><span class="op">)</span>
 
 <span class="co"># goodpractices checks. Exclude length 80</span>
 <span class="fu">goodpractice</span><span class="fu">::</span><span class="fu">gp</span><span class="op">(</span>path <span class="op">=</span> <span class="st">"jhollway/qStates/"</span>,
