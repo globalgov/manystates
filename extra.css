@@ -20,6 +20,10 @@ h3 {
   font-size: 17px;
 }
 
+p {
+  font-size: 14px;
+}
+
 .version {
   font-size: 50%;
 }
@@ -43,7 +47,12 @@ body{
 /*The code itself inline AND chunks*/
 code{
   font-family: 'Ubuntu Mono', monospace;
+  font-size: 14px;
   background-color: #f9f6fd;
+}
+
+pre code {
+  font-size: 13px;
 }
 
 /*Links in code and header*/
@@ -146,7 +155,7 @@ pre {
 /* Little arrow in the dropdown menu when active*/
 .navbar-default .navbar-nav > .dropdown > a .caret {
   color: #fffff;
-}
+}/* Little arrow in the dropdown menu when active and hovered over*/
 .navbar-default .navbar-nav > .dropdown > a:hover .caret,
 .navbar-default .navbar-nav > .dropdown > a:focus .caret {
   color: #011629;
@@ -173,10 +182,12 @@ pre {
 
 .navbar-default .navbar-nav>li>a{
   color: #36648B;
+  font-size: 14px;
 }
-
+/*qPackage name in the navbar*/
 .navbar-default .navbar-link{
   color: #36648B;
+  font-size: 30px;
 }
 
 div>a{
