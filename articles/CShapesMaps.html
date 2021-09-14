@@ -40,7 +40,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
+    <span class="fa fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -80,7 +80,7 @@
 
       
 
-      </header><script src="CShapesMaps_files/header-attrs-2.8/header-attrs.js"></script><div class="row">
+      </header><script src="CShapesMaps_files/header-attrs-2.10/header-attrs.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Building historical maps with CShapes</h1>
@@ -100,17 +100,17 @@
 <div id="step-1-import-the-data-from-cshapes-and-the-world-bank" class="section level2">
 <h2 class="hasAnchor">
 <a href="#step-1-import-the-data-from-cshapes-and-the-world-bank" class="anchor"></a>Step 1: Import the data from <code>{cshapes}</code> and the World Bank</h2>
-<p>First, we extract data from the <a href="https://vincentarelbundock.github.io/WDI/">WDI</a> package of the <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.KD">NY.GDP.PCAP.KD</a> indicator of the World Bank which yields information about the GDP per capita of countries in 2010 $. We then clean this data and then convert the ISO country code to the COW number we have in the <code>{cshapes}</code> dataset with the <a href="https://github.com/vincentarelbundock/countrycode">countrycode</a> package.</p>
+<p>First, we extract data from the <a href="https://vincentarelbundock.github.io/WDI/">WDI</a> package of the <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.KD">NY.GDP.PCAP.KD</a> indicator of the World Bank which yields information about the GDP per capita of countries in 2010 $. We then clean this data and then convert the ISO country code to the COW number we have in the <code>{cshapes}</code> dataset with the <a href="https://vincentarelbundock.github.io/countrycode/">countrycode</a> package.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Extract GDP from World Bank for the period between 1980 and 1990</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://vincentarelbundock.github.io/WDI/">WDI</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/vincentarelbundock/countrycode">countrycode</a></span><span class="op">)</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://vincentarelbundock.github.io/countrycode/">countrycode</a></span><span class="op">)</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org">dplyr</a></span><span class="op">)</span>
 
 <span class="va">GDP</span> <span class="op">&lt;-</span> <span class="fu">WDI</span><span class="fu">::</span><span class="fu"><a href="https://vincentarelbundock.github.io/WDI/reference/WDI.html">WDI</a></span><span class="op">(</span>indicator <span class="op">=</span> <span class="st">'NY.GDP.PCAP.KD'</span>, start <span class="op">=</span> <span class="fl">1980</span>, end <span class="op">=</span> <span class="fl">1980</span><span class="op">)</span>
 <span class="va">GDP</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice</a></span><span class="op">(</span><span class="va">GDP</span>, <span class="fl">50</span><span class="op">:</span><span class="fl">266</span><span class="op">)</span>
 <span class="va">GDP</span> <span class="op">&lt;-</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html">as_tibble</a></span><span class="op">(</span><span class="va">GDP</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">qData</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qData/man/transmutate.html">transmutate</a></span><span class="op">(</span>COW_Nr <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="fu">countrycode</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/countrycode/man/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">GDP</span><span class="op">$</span><span class="va">iso2c</span>,
+  <span class="fu">qData</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qData/man/transmutate.html">transmutate</a></span><span class="op">(</span>COW_Nr <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="fu">countrycode</span><span class="fu">::</span><span class="fu"><a href="https://vincentarelbundock.github.io/countrycode/reference/countrycode.html">countrycode</a></span><span class="op">(</span><span class="va">GDP</span><span class="op">$</span><span class="va">iso2c</span>,
                                                        origin <span class="op">=</span> <span class="st">"iso2c"</span>,
                                                        destination <span class="op">=</span> <span class="st">"cown"</span>,
                                                        warn <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></code></pre></div>
