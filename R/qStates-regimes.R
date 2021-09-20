@@ -1,4 +1,4 @@
-#' regimes database documentation
+#' Regimes database documentation
 #'
 #' @format The regimes database is a list that contains the
 #' following 1 datasets: Polity5.

@@ -3,7 +3,7 @@
 \docType{data}
 \name{leaders}
 \alias{leaders}
-\title{leaders database documentation}
+\title{Leaders database documentation}
 \format{
 The leaders database is a list that contains the
 following 1 datasets: ARCHIGOS.
@@ -19,6 +19,6 @@ functions.
 leaders
 }
 \description{
-leaders database documentation
+Leaders database documentation
 }
 \keyword{datasets}

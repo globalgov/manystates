@@ -1,4 +1,4 @@
-#' leaders database documentation
+#' Leaders database documentation
 #'
 #' @format The leaders database is a list that contains the
 #' following 1 datasets: ARCHIGOS.

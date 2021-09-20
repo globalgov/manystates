@@ -3,7 +3,7 @@
 \docType{data}
 \name{states}
 \alias{states}
-\title{states database documentation}
+\title{States database documentation}
 \format{
 The states database is a list that contains the
 following 3 datasets: GW, ISD, COW.
@@ -24,6 +24,6 @@ following 5 variables: ID, Beg, End, COW_Nr, Label.}
 states
 }
 \description{
-states database documentation
+States database documentation
 }
 \keyword{datasets}
