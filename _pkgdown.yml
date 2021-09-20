@@ -36,7 +36,7 @@ navbar:
       href: news/index.html
     github:
       icon: "fab fa-github fa-lg"
-      href: https://github.com/globalgov/qEnviron
+      href: https://github.com/globalgov/qStates
     packages:
       text: Other packages
       menu:
