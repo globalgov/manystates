@@ -10,9 +10,9 @@ output: github_document
 ![GitHub issues](https://img.shields.io/github/issues-raw/globalgov/qStates)
 <!-- badges: end -->
 
-`{qStates}` is a a data package for the `{qData}` ecosystem of packages. It is a data package about state actors across the globe. It encompasses several datasets with states' names and dates of beginning and ending (for some states), alongside other information. The package is geared towards global governance research, but can be used broadly for anyone interested in state actors across time. 
+`{qStates}` is a data package within the [qData](https://github.com/globalgov/qData) ecosystem of qPackages. It contains an ensemble of datasets currently available on states in the world, including information on states' beginning and, where applicable, end dates, regime characteristics, and state leaders. An important aim of `{qStates}` is to record and include states as far back in history as possible. The package is geared towards global governance research, but can also be used by anyone interested in state actors across time. 
 
-Please also check out [`{qData}`](https://github.com/globalgov) for more about the other packages in the `{qData}` environment. 
+Please also check out [`{qData}`](https://github.com/globalgov) for more about the other packages in the `{qData}` ecosystem. 
 
 ## How to install
 
@@ -29,8 +29,8 @@ qData::get_packages("qStates") # this downloads and installs the named package
 
 ## Data included
 
-Once you have installed the package, you can see the different databases and datasets
-included in the package using the following function.
+Once you have installed `{qData}`, you can see the different databases and datasets
+included in the {qStates} package using the following function.
 
 ```{r datasets}
 qData::data_contrast("qStates")
@@ -39,14 +39,18 @@ qData::data_contrast("qStates")
 Working with ensembles of related data has many advantages for robust analysis.
 Just take a look at our vignettes [here](https://globalgov.github.io/qData/articles/user.html).
 
+## qPackages
+
+The [qData](https://github.com/globalgov/qData) ecosystem is aimed at collecting, connecting and correcting network data across issue-domains of global governance.
+
 While some qPackages can and do include novel data,
 much of what they offer involves standing on the shoulders of giants.
 qPackages endeavour to be as transparent as possible about where data comes from, 
 how it has been coded and/or relabelled, and who has done the work.
-As such, we make it easy to cite both the particular datasets you use
-by listing the official references in the function above,
+As such, we make it easy to cite the datasets you use
+by listing the official references using the function above,
 as well as the package providers for their work assembling the data
-using the function below.
+by using the function below.
 
 ```{r cites}
 citation("qStates")
