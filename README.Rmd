@@ -10,9 +10,9 @@ output: github_document
 ![GitHub issues](https://img.shields.io/github/issues-raw/globalgov/qStates)
 <!-- badges: end -->
 
-`{qStates}` is a data package within the [qData](https://github.com/globalgov/qData) ecosystem of qPackages. It contains an ensemble of datasets currently available on states in the world, including information on states' beginning and, where applicable, end dates, regime characteristics, and state leaders. An important aim of `{qStates}` is to record and include states as far back in history as possible. The package is geared towards global governance research, but can also be used by anyone interested in state actors across time. 
+`{qStates}` is a data package within the [`{qData}` ecosystem](https://github.com/globalgov) of qPackages. It contains an ensemble of datasets currently available on states in the world, including information on states' beginning and, where applicable, end dates, regime characteristics, and state leaders. An important aim of `{qStates}` is to record and include states as far back in history as possible. The package is geared towards global governance research, but can also be used by anyone interested in state actors across time. 
 
-Please also check out [`{qData}`](https://github.com/globalgov) for more about the other packages in the `{qData}` ecosystem. 
+Please also check out [`{qData}`](https://github.com/globalgov/qData) for more information about the other packages and tools to handle data from the `{qData}` ecosystem. 
 
 ## How to install
 
@@ -30,7 +30,7 @@ qData::get_packages("qStates") # this downloads and installs the named package
 ## Data included
 
 Once you have installed `{qData}`, you can see the different databases and datasets
-included in the {qStates} package using the following function.
+included in the `{qStates}` package using the following function.
 
 ```{r datasets}
 qData::data_contrast("qStates")

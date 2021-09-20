@@ -12,15 +12,18 @@ Date](https://img.shields.io/github/release-date/globalgov/qstates)
 issues](https://img.shields.io/github/issues-raw/globalgov/qStates)
 <!-- badges: end -->
 
-`{qStates}` is a a data package for the `{qData}` ecosystem of packages.
-It is a data package about state actors across the globe. It encompasses
-several datasets with states’ names and dates of beginning and ending
-(for some states), alongside other information. The package is geared
-towards global governance research, but can be used broadly for anyone
-interested in state actors across time.
+`{qStates}` is a data package within the [`{qData}`
+ecosystem](https://github.com/globalgov) of qPackages. It contains an
+ensemble of datasets currently available on states in the world,
+including information on states’ beginning and, where applicable, end
+dates, regime characteristics, and state leaders. An important aim of
+`{qStates}` is to record and include states as far back in history as
+possible. The package is geared towards global governance research, but
+can also be used by anyone interested in state actors across time.
 
-Please also check out [`{qData}`](https://github.com/globalgov) for more
-about the other packages in the `{qData}` environment.
+Please also check out [`{qData}`](https://github.com/globalgov/qData)
+for more information about the other packages and tools to handle data
+from the `{qData}` ecosystem.
 
 ## How to install
 
@@ -38,26 +41,31 @@ qData::get_packages("qStates") # this downloads and installs the named package
 
 ## Data included
 
-Once you have installed the package, you can see the different databases
-and datasets included in the package using the following function.
+Once you have installed `{qData}`, you can see the different databases
+and datasets included in the `{qStates}` package using the following
+function.
 
 ``` r
 qData::data_contrast("qStates")
 ```
 
+    ## leaders :
+    ##          Unique ID Missing Data  Rows Columns        Beg        End
+    ## ARCHIGOS      3409      51.89 % 17686      30 1840-07-23 2015-12-31
+    ##                                           URL
+    ## ARCHIGOS http://ksgleditsch.com/archigos.html
+    ## 
     ## regimes :
-    ##          Unique ID Missing Data  Rows Columns      Beg        End
-    ## Polity5        194       28.7 % 17574      32 1776-7-4   NA-NA-NA
-    ## Polity5d       193       4.84 %  1692      19 1776-7-4 9999-99-99
-    ##                                                  URL
-    ## Polity5  http://www.systemicpeace.org/inscrdata.html
-    ## Polity5d http://www.systemicpeace.org/inscrdata.html
+    ##         Unique ID Missing Data  Rows Columns      Beg       End
+    ## Polity5       194       37.7 % 17574      33 1776-7-4 3013-2-21
+    ##                                                 URL
+    ## Polity5 http://www.systemicpeace.org/inscrdata.html
     ## 
     ## states :
-    ##     Unique ID Missing Data Rows Columns        Beg        End
-    ## GW        202          0 %  216       5 1816-01-01 2017-12-31
-    ## ISD       310          0 %  362       7 01-01-1816 31-08-1883
-    ## COW       217          0 %  243       5   1816-1-1 2016-12-31
+    ##     Unique ID Missing Data Rows Columns          Beg          End
+    ## GW        202          0 %  216       5 ..1816-01-01 2017-12-31..
+    ## ISD       310          0 %  362       7 ..1816-01-01 2011-12-31..
+    ## COW       217          0 %  243       5 ..1816-01-01 2016-12-31..
     ##                                                               URL
     ## GW                             http://ksgleditsch.com/data-4.html
     ## ISD                            http://www.ryan-griffiths.com/data
@@ -67,13 +75,19 @@ Working with ensembles of related data has many advantages for robust
 analysis. Just take a look at our vignettes
 [here](https://globalgov.github.io/qData/articles/user.html).
 
+## qPackages
+
+The [qData](https://github.com/globalgov/qData) ecosystem is aimed at
+collecting, connecting and correcting network data across issue-domains
+of global governance.
+
 While some qPackages can and do include novel data, much of what they
 offer involves standing on the shoulders of giants. qPackages endeavour
 to be as transparent as possible about where data comes from, how it has
 been coded and/or relabelled, and who has done the work. As such, we
-make it easy to cite both the particular datasets you use by listing the
-official references in the function above, as well as the package
-providers for their work assembling the data using the function below.
+make it easy to cite the datasets you use by listing the official
+references using the function above, as well as the package providers
+for their work assembling the data by using the function below.
 
 ``` r
 citation("qStates")
