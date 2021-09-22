@@ -16,3 +16,5 @@
 ^data-raw/leaders$
 ^data-raw/leaders/ARCHIGOS$
 ^.*\.RDataTmp
+^data-raw/genevar$
+^data-raw/genevar/ARCHIGOSgenevar$
