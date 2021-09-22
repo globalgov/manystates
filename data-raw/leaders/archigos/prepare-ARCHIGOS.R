@@ -7,10 +7,6 @@
 # ARCHIGOS <- readr::read_csv2("data-raw/leaders/ARCHIGOS/ARCHIGOS.csv")
 ARCHIGOS <- read.delim2("data-raw/leaders/ARCHIGOS/arch_annual.txt")
 
-# First up, correction of an import warning. Line 5622, birthdate was misttyped
-# Didier Burkhalter was born on the 17th of April 1960.
-ARCHIGOS[["borndate"]][[5622]] <- as.Date("1960-04-17")
-
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
 # formats of the 'ARCHIGOS' object until the object created
@@ -48,28 +44,35 @@ ARCHIGOS <- as_tibble(ARCHIGOS) %>%
     FtiesNameB = stringi::stri_trans_general(FtiesNameB, "latin-ascii"),
     FtiesNameC = stringi::stri_trans_general(FtiesNameC, "latin-ascii"),
   ) %>%
-  dplyr::mutate(Label = countrycode::countrycode(ccode,
-                                                 origin = "cown",
-                                                 destination = "cow.name"))
+  dplyr::mutate(Label =
+                  countrycode::countrycode(ccode,
+                                          origin = "cown",
+                                          destination = "cow.name",
+                                          custom_match =
+                                            c("260" = "German Federal Republic",
+                                              "340" = "Serbia",
+                                              "563" = "South African Republic",
+                                              "564" = "Orange Free State",
+                                              "711" = "Tibet",
+                                              "730" = "Korea",
+                                              "815" = "Vietnam")))
 
-# TODO: Fix a bunch of issues with countrycode matching 
-
-# Correction: Figueres Ferrer's son is not Calderón Fournier but
-# José María Figueres
-ARCHIGOS$FtiesNameA[c(2105, 2106, 2112:2117, 2133:2137)] <-
-  "Father of Figueres Olsen"
-ARCHIGOS$FtiesCodeA[c(2105, 2106, 2112:2117, 2133:2137)] <-
-  "81ec65ae-1e42-11e4-b4cd-db5882bf8def"
-# Correction: Self reference of family ties
-ARCHIGOS$FtiesNameB[c(2158:2162)] <- NA
-ARCHIGOS$FtiesCodeB[c(2158:2162)] <- NA
-# Correction: Missing fties Figueres Olsen
-ARCHIGOS$FtiesNameB[c(2163:2167)] <-
-  "Son of Figueres Ferrer"
-ARCHIGOS$FtiesCodeB[c(2163:2167)] <-
-  "81eb718b-1e42-11e4-b4cd-db5882bf8def"
-
-# TODO: Figure out a way of arranging stuff
+# Note for the custom matching dictionary:
+# 260; German Federal Republic, taken from COW.
+# 340; Serbia until 1915 and from 2006 onward
+# 563; Refers to the South African Republic
+# 564; Refers to the Orange Free State
+# 711; Refers to Tibet prior to 1951
+# 730; Refers to Korea prior to the Korean War
+# 815; Refers to imperial Vietnam prior to the French colonization
+# Ordering stuff for output:
+ARCHIGOS <- ARCHIGOS %>% 
+    dplyr::select(ID, LeadID, ccode, idacr, Label, leader, Beg, End, BornDate,
+                  DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
+                  prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry,
+                  num.exit, num.exitcode, num.posttenurefate, FtiesNameA,
+                  FtiesCodeA, FtiesNameB, FtiesCodeB, FtiesNameC, FtiesCodeC,
+                  ftcur)
 
 # qCreate includes several functions that should help cleaning
 # and standardising your data.

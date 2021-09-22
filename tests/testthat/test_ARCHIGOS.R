@@ -12,7 +12,7 @@ test_that("missing observations are reported correctly", {
 
 # Date columns should be in messydt class
 test_that("Columns are not in date, POSIXct or POSIXlt class", {
-  expect_false(lubridate::is.Date(leaders[["ARCHIGOS"]]))
-  expect_false(lubridate::is.POSIXct(leaders[["ARCHIGOS"]]))
-  expect_false(lubridate::is.POSIXlt(leaders[["ARCHIGOS"]]))
+  expect_false(any(lubridate::is.Date(leaders[["ARCHIGOS"]])))
+  expect_false(any(lubridate::is.POSIXct(leaders[["ARCHIGOS"]])))
+  expect_false(any(lubridate::is.POSIXlt(leaders[["ARCHIGOS"]])))
 })
