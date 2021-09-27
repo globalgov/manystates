@@ -31,8 +31,8 @@ ISD <- tibble::as_tibble(ISD) %>%
 # on 1st January 1816, but they may have been established (much) earlier.
 # Let's signal to this uncretainty using the `{messydates}` package,
 # which is designed to deal with date uncertainty.
-ISD <- ISD %>% dplyr::mutate(Beg = messydates::on_or_before(ISD, "Beg", "1816-01-01"),
-                             End = messydates::on_or_after(ISD, "End", "2011-12-31"))
+ISD <- ISD %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01-01", messydates::on_or_before(Beg), Beg)),
+                             End = messydates::as_messydate(ifelse(End >= "2011-12-31", messydates::on_or_after(End), End)))
 # qData and qCreate include several other
 # qData and qCreate include several other
 # functions that should help cleaning and
@@ -41,8 +41,7 @@ ISD <- ISD %>% dplyr::mutate(Beg = messydates::on_or_before(ISD, "Beg", "1816-01
 # Stage three: Connecting data
 # Next run the following line to make ISD available within the qPackage.
 qCreate::export_data(ISD, database = "states",
-                     URL="http://www.ryan-griffiths.com/data")
-
+                     URL = "http://www.ryan-griffiths.com/data")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence
 # to certain standards. You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows)
