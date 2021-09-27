@@ -24,9 +24,8 @@ COW <- tibble::as_tibble(COW) %>%
 # on 1st January 1816, but they may have been established (much) earlier.
 # Let's signal to this uncretainty using the `{messydates}` package,
 # which is designed to deal with date uncertainty
-COW <- COW %>% dplyr::mutate(Beg = messydates::on_or_before(COW, "Beg", "1816-01-01"))
-# We can do the same for End dates to signal uncertainty.
-COW$End <- messydates::on_or_after(COW, "End", "2016-12-31")
+COW <- COW %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01-01", messydates::on_or_before(Beg), Beg)),
+                             End = messydates::as_messydate(ifelse(End >= "2016-12-31", messydates::on_or_after(End), End)))
 # qData and qCreate include several other
 # functions that should help cleaning and
 # standardizing your data.

@@ -24,8 +24,9 @@ GW <- tibble::as_tibble(GW) %>%
 # on 1st January 1816, but they may have been established (much) earlier.
 # Let's signal to this uncretainty using the `{messydates}` package,
 # which is designed to deal with date uncertainty.
-GW <- GW %>% dplyr::mutate(Beg = messydates::on_or_before(GW, "Beg", "1816-01-01"),
-                           End = messydates::on_or_after(GW, "End", "2017-12-31"))
+
+GW <- GW %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01-01", messydates::on_or_before(Beg), Beg)),
+                           End = messydates::as_messydate(ifelse(End >= "2017-12-31", messydates::on_or_after(End), End)))
 # qData and qCreate include several other
 # qData and qCreate include several other
 # functions that should help cleaning and
@@ -35,7 +36,7 @@ GW <- GW %>% dplyr::mutate(Beg = messydates::on_or_before(GW, "Beg", "1816-01-01
 # Stage three: Connecting data
 # Next run the following line to make GW available within the qPackage.
 qCreate::export_data(GW, database = "states",
-                     URL="http://ksgleditsch.com/data-4.html")
+                     URL = "http://ksgleditsch.com/data-4.html")
 
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence
