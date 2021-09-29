@@ -14,7 +14,7 @@
   dplyr::rename("V-Party_ID" = "v2paid", "ID" = "country_id", "Abbrv" = "v2pashname",
                 "Geographic Region" = "e_regiongeo", "Geopolitical Region" = "e_regionpol") %>%
   dplyr::group_by(`V-Party_ID`) %>%
-  dplyr::mutate(beg = min(year),
+  dplyr::mutate(beg = min(year), #Year is observation year of the panel
                 end = max(year)) %>%
   qData::transmutate(Label = qCreate::standardise_titles(v2paenname), #name of party
                      Country = qCreate::standardise_titles(country_name), #name of country as used currently
@@ -24,9 +24,7 @@
                      Year = qCreate::standardise_dates(as.character(year))) %>%
   dplyr::select(-v2paorname, #original party name, primarily a repetition of v2paid
                 -pf_party_id, #refers to party ID used in predecessor dataset
-                -pf_url, #URL to party's webpage in predecessor dataset's website
-                -CHES_ID, #ID from another dataset, Chapel Hill Expert Survey (CHES)
-                -GPS_ID ) %>% #ID from another dataset, Global Party Survey (GPS)
+                -pf_url) %>% #URL to party's webpage in predecessor dataset's website
   dplyr::arrange(Country, `V-Party_ID`, Beg) %>%
   dplyr::relocate(`V-Party_ID`, Abbrv, Label, Country, Country_hist, ID, Beg, End, Year, )
 
