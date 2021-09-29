@@ -3,7 +3,7 @@
 # This is a template for importing, cleaning, and exporting data
 # ready for the qPackage.
 
-# Stage one: Collecting data
+# Stage one: Collecting data from actual Archigos dataset
 ARCHIGOSgenevar <- qStates::leaders$ARCHIGOS
 
 # Note: these corrections will go into a GNEVAR copy of the database
