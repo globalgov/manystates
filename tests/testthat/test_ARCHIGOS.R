@@ -19,15 +19,15 @@ test_that("Columns are not in date, POSIXct or POSIXlt class", {
 
 test_that("Columns with dates are standardized", {
   expect_equal(class(leaders[["ARCHIGOS"]]$Beg), "messydt")
-  expect_false(any(grepl("/", states[["ARCHIGOS"]]$Beg)))
+  expect_false(any(grepl("/", leaders[["ARCHIGOS"]]$Beg)))
   expect_false(any(grepl("^[:alpha:]$",
-                         states[["ARCHIGOS"]]$Beg)))
+                         leaders[["ARCHIGOS"]]$Beg)))
   expect_false(any(grepl("^[:digit:]{2}$",
-                         states[["ARCHIGOS"]]$Beg)))
+                         leaders[["ARCHIGOS"]]$Beg)))
   expect_false(any(grepl("^[:digit:]{3}$",
-                         states[["ARCHIGOS"]]$Beg)))
+                         leaders[["ARCHIGOS"]]$Beg)))
   expect_false(any(grepl("^[:digit:]{1}$",
-                         states[["ARCHIGOS"]]$Beg)))
+                         leaders[["ARCHIGOS"]]$Beg)))
 })
 
 # Contains the required variables
