@@ -12,7 +12,7 @@ please use the \code{data_source()}, \code{data_contrast()}, and \code{data_evol
 functions.
 \describe{
 \item{Polity5: }{A dataset with 17574 observations and the following
-33 variables: ID, year, Label, Beg, End, p5, cyear, flag, fragment, democ, autoc, polity, polity2, durable, xrreg, xrcomp, xropen, xconst, parreg, parcomp, exrec, exconst, polcomp, prior, eprec, interim, bprec, post, change, d5, sf, regtrans, speccat.}
+33 variables: ID, year, Label, p5, cyear, flag, fragment, democ, autoc, polity, polity2, durable, xrreg, xrcomp, xropen, xconst, parreg, parcomp, exrec, exconst, polcomp, prior, eprec, interim, bprec, post, change, d5, sf, regtrans, Beg, End, speccat.}
 }
 }
 \usage{

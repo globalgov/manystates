@@ -1,14 +1,11 @@
-#' Genevar database documentation
+#' genevar database documentation
 #'
 #' @format The genevar database is a list that contains the
-#' following 1 datasets: ARCHIGOSgenevar. This database contains similar
-#' datasets than the others but with our hand-coded modifications. These may
-#' include typos that we spotted during the import/cleaning and processing steps
-#' of the original data or other corrections. These modifications are kept
-#' separate in the Genevar database so as to stay true to the standardize
-#' without modifying process.
+#' following 1 datasets: ARCHIGOSgenevar.
+#' This database is a little special since it contains the hand coded
+#' alterations made by the qVerse team of the different datasets in the package.
 #' For more information and references to each of the datasets used,
-#' please use the `data_source()`, `data_contrast()`, and `data_evolution()`
+#' please use the `data_source()`, `data_contrast()`.
 #' functions.
 #'\describe{
 #' \item{ARCHIGOSgenevar: }{A dataset with 24 observations and the following
