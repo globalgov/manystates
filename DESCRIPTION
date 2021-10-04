@@ -47,7 +47,8 @@ Imports:
     cshapes,
     countrycode,
     qData,
-    qCreate
+    qCreate,
+    vdemdata
 Suggests: 
     fs,
     testthat (>= 3.0.0),
@@ -59,7 +60,8 @@ Suggests:
     hrbrthemes
 Remotes:
     globalgov/qCreate,
-    globalgov/qData
+    globalgov/qData,
+    vdeminstitute/vdemdata
 Encoding: UTF-8
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
