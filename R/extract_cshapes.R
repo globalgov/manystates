@@ -138,7 +138,7 @@ import_distlist <- function(date, type, ...) {
       dplyr::relocate(FromLabel, FromCode, ToLabel, ToCode, distance)
   } else {
     dist <- tibble::as_tibble(dist) %>%
-      dplyr::mutate(FromLabel = 
+      dplyr::mutate(FromLabel =
                       countrycode::countrycode(sourcevar = ccode1,
                                                origin = "cown",
                                                destination = "country.name",
