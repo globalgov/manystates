@@ -27,7 +27,7 @@ import_vdem <- function() {
   vdem <- vdemdata::vdem
   # Stage two: Correcting data
   vdem <- as_tibble(vdem) %>%
-    dplyr::rename("V-Dem_ID" = "country_id", "Abbrv" = "country_text_id") %>%
+    dplyr::rename("ID" = "country_id", "Abbrv" = "country_text_id") %>%
     dplyr::group_by(histname) %>%
     dplyr::mutate(beg = min(year),
                   end = max(year)) %>%
@@ -35,8 +35,8 @@ import_vdem <- function() {
     qData::transmutate(
       Beg = qCreate::standardise_dates(as.character(beg)),
       End = qCreate::standardise_dates(as.character(end)),
-      # Label = qCreate::standardise_titles(histname),
-      # Country = qCreate::standardise_titles(country_name),
+      Label = histname,
+      Country = country_name,
       Date = qCreate::standardise_dates(historical_date),
       Year = qCreate::standardise_dates(as.character(year))) %>%
     dplyr::select(-project, #variable indicates which V-Dem project coded that
@@ -49,13 +49,10 @@ import_vdem <- function() {
                   -codingstart_hist, -codingend_hist) %>% #removed because
                   # variable explains methodology relating to V-Dem
                   # coding time-periods.
-    dplyr::arrange(`V-Dem_ID`, Year) %>%
-    dplyr::relocate(`V-Dem_ID`, Abbrv, Beg, End, Year, Date)
+    dplyr::arrange(ID, Year) %>%
+    dplyr::relocate(ID, Abbrv, Label, Country, Beg, End, Year, Date)
   return(vdem)
 }
-
-# Note: We need to improve the performance of standardise_titles() for large
-# datasets for both vdem and vparty imports.
 
 #' @name extract_vdem
 #' @details `import_vparty()` imports the V-Party dataset and formats it to
@@ -74,18 +71,18 @@ import_vparty <- function() {
   vparty <- vdemdata::vparty
   # Step 2: Format it to a qConsistent format
   vparty <- as_tibble(vparty) %>%
-    dplyr::rename("V-Party_ID" = "v2paid",
+    dplyr::rename("VPartyID" = "v2paid",
                   "ID" = "country_id",
                   "Abbrv" = "v2pashname",
                   "Geographic Region" = "e_regiongeo",
                   "Geopolitical Region" = "e_regionpol") %>%
-    dplyr::group_by(`V-Party_ID`) %>%
+    dplyr::group_by(VPartyID) %>%
     dplyr::mutate(beg = min(year), #Year is observation year of the panel
                   end = max(year)) %>%
     qData::transmutate(
-      Label = v2paenname, # qCreate::standardise_titles(v2paenname),
-      Country = country_name, # qCreate::standardise_titles(country_name),
-      Country_hist = histname, # qCreate::standardise_titles(histname),
+      Label = v2paenname,
+      Country = country_name,
+      Country_hist = histname,
       Beg = qCreate::standardise_dates(as.character(beg)),
       End = qCreate::standardise_dates(as.character(end)),
       Year = qCreate::standardise_dates(as.character(year))) %>%
@@ -95,8 +92,8 @@ import_vparty <- function() {
                   #refers to party ID used in predecessor dataset
                   -pf_url) %>%
                   #URL to party's webpage in predecessor dataset's website
-    dplyr::arrange(Country, `V-Party_ID`, Beg) %>%
-    dplyr::relocate(`V-Party_ID`,Label, Abbrv, Country, Country_hist,
+    dplyr::arrange(Country, VPartyID, Beg) %>%
+    dplyr::relocate(VPartyID, Label, Abbrv, Country, Country_hist,
                     ID, Beg, End, Year, )
   # Step 3: return vparty
   return(vparty)
