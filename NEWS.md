@@ -1,3 +1,17 @@
+# qStates 0.0.5
+
+## Package
+
+* Fixes #38 by fixing a bug preventing `data_contrast("qStates")` from being run while `{qStates}` is also loaded in the environment.
+* Updated the CSS in the package to make it consistent with other packages in the qVerse
+
+## Data
+
+* Closes #29 by adding the ARCHIGOS database
+* Closes #23 by adding `import_vdem()` to automatically import and consistently format the V-Dem dataset
+* Closes #22 by adding `import_vparty()` to automatically import and consistently format the V-Party dataset
+* Closes #36 by completing the regex table for improved text matching
+
 # qStates 0.0.4
 
 ## Package
