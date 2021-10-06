@@ -89,7 +89,8 @@ li>a {
   background-color: #36648B;
 }
 .dropdown-menu>.active>a:hover{
-  background-color: #0B385E;
+  color: white;
+  background-color: #f3f3f3;
 }
 /* Little arrow in the dropdown menu*/
 a .caret{
@@ -154,7 +155,7 @@ pre {
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    color: #fffff;
+    color: #0B385E;
 }
 /* Little arrow in the dropdown menu when active*/
 .navbar-default .navbar-nav > .dropdown > a .caret {
@@ -166,14 +167,21 @@ pre {
 }
 
 .navbar-default .navbar-nav>.open>a,
-.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:hover
 .navbar-default .navbar-nav>.open>a:focus{
-  color: #fffff;
+  color: white;
 }
 
-.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu>li>a:hover{
+  color: #0B385E
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>.active>>li>a:hover{
+  color: white;
+}
+
 .navbar-default .navbar-nav .open .dropdown-menu{
-  color: #fffff;
+  color: #f3f3f3;
 }
 
 .nav-pills>li.active>a,
@@ -214,9 +222,6 @@ a:hover, a:focus {
   background-color: #F0760F;
   border-color: #F7BA87;
   color: white;
-}
-
-.panel-orange > .panel-heading{
   font-weight: bold;
   font-size: 150%;
   text-align: center;
@@ -225,9 +230,6 @@ a:hover, a:focus {
 .panel-info > .panel-heading {
   background-color: #6906FF;
   border-color: #ab74fc;
-}
-
-.panel-info > .panel-heading{
   font-weight: bold;
   font-size: 150%;
   text-align: center;
@@ -258,16 +260,13 @@ a:hover, a:focus {
 .panel-danger{
   background-color: #e84f3f;
   color: white;
+  min-height: 50px!important;
 }
 
 .panel-danger > .panel-body{
   color: white;
   font-size: 18px;
   text-align:center;
-}
-
-.panel-danger {
-  min-height: 50px!important;
 }
 
 .centerize{
