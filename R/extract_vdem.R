@@ -23,6 +23,11 @@ NULL
 #' }
 #' @export
 import_vdem <- function() {
+  # Initialising variables to avoid annoying note when running checks
+  histname <- beg <- end <- country_name <- historical_date <- NULL
+  project <- historical <- codingstart_contemp <- codingend_contemp <- NULL
+  codingstart_hist <- codingend_hist <- ID <- Year <- Abbrv <- Label <- NULL
+  Country <- Beg <- End <- NULL
   # Stage 1: Importing
   vdem <- vdemdata::vdem
   # Stage two: Correcting data
@@ -67,6 +72,10 @@ import_vdem <- function() {
 #' }
 #' @export
 import_vparty <- function() {
+  # Initialize the variables used to avoid an annoying note
+  VPartyID <- v2paenname <- country_name <- histname <- beg <- end <- NULL
+  v2paorname <- pf_party_id <- pf_url <- Country <- Beg <- End <- NULL
+  Label <- Abbrv <- Country_hist <- ID <- Year <- NULL
   # Step 1: Import the data from the vdemdata package
   vparty <- vdemdata::vparty
   # Step 2: Format it to a qConsistent format
