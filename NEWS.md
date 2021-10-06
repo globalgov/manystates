@@ -10,6 +10,7 @@
 * Closes #29 by adding the ARCHIGOS database
 * Closes #23 by adding `import_vdem()` to automatically import and consistently format the V-Dem dataset
 * Closes #22 by adding `import_vparty()` to automatically import and consistently format the V-Party dataset
+* Closes #37 by improving the way we deal with special categorical values (-66, -77, -88) in the Polity-V dataset
 * Closes #36 by completing the regex table for improved text matching
 
 # qStates 0.0.4
