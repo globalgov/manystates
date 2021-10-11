@@ -32,7 +32,7 @@ qData::get_packages("qStates") # this downloads and installs the named package
 Once you have installed `{qData}`, you can see the different databases and datasets
 included in the `{qStates}` package using the following function.
 
-```{r datasets}
+```{r datasets, eval = FALSE}
 qData::data_contrast("qStates")
 ```
 

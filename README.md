@@ -12,12 +12,12 @@ Date](https://img.shields.io/github/release-date/globalgov/qstates)
 issues](https://img.shields.io/github/issues-raw/globalgov/qStates)
 <!-- badges: end -->
 
-`{qStates}` is a data package within the [`{qData}`
+`qStates` is a data package within the [`{qData}`
 ecosystem](https://github.com/globalgov) of qPackages. It contains an
 ensemble of datasets currently available on states in the world,
 including information on states’ beginning and, where applicable, end
 dates, regime characteristics, and state leaders. An important aim of
-`{qStates}` is to record and include states as far back in history as
+`qStates` is to record and include states as far back in history as
 possible. The package is geared towards global governance research, but
 can also be used by anyone interested in state actors across time.
 
@@ -48,28 +48,6 @@ function.
 ``` r
 qData::data_contrast("qStates")
 ```
-
-    ## leaders :
-    ##          Unique ID Missing Data  Rows Columns        Beg        End
-    ## ARCHIGOS      3409      51.89 % 17686      30 1840-07-23 2015-12-31
-    ##                                           URL
-    ## ARCHIGOS http://ksgleditsch.com/archigos.html
-    ## 
-    ## regimes :
-    ##         Unique ID Missing Data  Rows Columns      Beg       End
-    ## Polity5       194       37.7 % 17574      33 1776-7-4 3013-2-21
-    ##                                                 URL
-    ## Polity5 http://www.systemicpeace.org/inscrdata.html
-    ## 
-    ## states :
-    ##     Unique ID Missing Data Rows Columns          Beg          End
-    ## GW        202          0 %  216       5 ..1816-01-01 2017-12-31..
-    ## ISD       310          0 %  362       7 ..1816-01-01 2011-12-31..
-    ## COW       217          0 %  243       5 ..1816-01-01 2016-12-31..
-    ##                                                               URL
-    ## GW                             http://ksgleditsch.com/data-4.html
-    ## ISD                            http://www.ryan-griffiths.com/data
-    ## COW https://correlatesofwar.org/data-sets/state-system-membership
 
 Working with ensembles of related data has many advantages for robust
 analysis. Just take a look at our vignettes
