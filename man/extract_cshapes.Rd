@@ -15,8 +15,7 @@ import_distmatrix(date, type, ...)
 }
 \arguments{
 \item{date}{The date for which the distance list should be computed.
-This argument must be of type Date and must be in the range 1/1/1886 -
-end of the dataset.}
+This argument must be a single date (ymd) from 1/1/1886 onwards.}
 
 \item{...}{Arguments to be passed to \verb{[cshapes]} functions.
 See the \verb{[cshapes]} documentation for more details}
@@ -26,8 +25,8 @@ distances, "centdist" for centroid distances, and "mindist" for minimum
 distances.}
 }
 \value{
-A dataframe with the qVerse-consistently formatted \verb{[cshapes]}
-dataset.
+A dataframe with the \verb{[cshapes]} dataset in a qVerse-consistent
+format.
 
 A dataframe with the desired distance list between polygons,
 capitals, or polygon centroids in kilometers.

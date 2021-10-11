@@ -19,18 +19,15 @@ GW <- tibble::as_tibble(GW) %>%
                      COW_Nr = qCreate::standardise_titles(`Cow Nr.`)) %>%
   dplyr::relocate(ID, Beg, End, COW_Nr, Label) %>%
   dplyr::arrange(Beg, ID)
-# We know that COW data for "old" states is set to 1816-01-01 by default.
+# We know that GW uses COW data for "old" states that is set to 1816-01-01 by default.
 # This is a rather uncretain date, that is, the dataset considers them states
 # on 1st January 1816, but they may have been established (much) earlier.
-# Let's signal to this uncretainty using `standardise_dates()` is a wrapper
-# for the `{messydates}` package which is designed to deal with date uncretianty.
-GW$Beg <- qCreate::standardise_dates(stringr::str_replace_all(GW$Beg,
-                                                               "1816-1-1|1816-01-1|1816-1-01|1816-01-01",
-                                                               "..1816-01-01"))
-# We can do the same for End dates to signal uncertainty. 
-GW$End <- qCreate::standardise_dates(stringr::str_replace_all(GW$End,
-                                                               "2017-12-31",
-                                                               "2017-12-31.."))
+# Let's signal to this uncretainty using the `{messydates}` package,
+# which is designed to deal with date uncertainty.
+
+GW <- GW %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01-01", messydates::on_or_before(Beg), Beg)),
+                           End = messydates::as_messydate(ifelse(End >= "2017-12-31", messydates::on_or_after(End), End)))
+# qData and qCreate include several other
 # qData and qCreate include several other
 # functions that should help cleaning and
 # standardizing your data.
@@ -39,7 +36,7 @@ GW$End <- qCreate::standardise_dates(stringr::str_replace_all(GW$End,
 # Stage three: Connecting data
 # Next run the following line to make GW available within the qPackage.
 qCreate::export_data(GW, database = "states",
-                     URL="http://ksgleditsch.com/data-4.html")
+                     URL = "http://ksgleditsch.com/data-4.html")
 
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence

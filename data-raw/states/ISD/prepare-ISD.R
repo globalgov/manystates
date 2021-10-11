@@ -26,18 +26,14 @@ ISD <- tibble::as_tibble(ISD) %>%
   # Arranging dataset
   dplyr::relocate(ID, Beg, End, COW_Nr, Label, Micro, New.State) %>%
   dplyr::arrange(Beg, ID)
-# We know that COW data for "old" states is set to 1816-01-01 by default.
+# We know that ISD uses COW data for "old" states that is set to 1816-01-01 by default.
 # This is a rather uncretain date, that is, the dataset considers them states
 # on 1st January 1816, but they may have been established (much) earlier.
-# Let's signal to this uncretainty using `standardise_dates()` is a wrapper
-# for the `{messydates}` package which is designed to deal with date uncretianty.
-ISD$Beg <- qCreate::standardise_dates(stringr::str_replace_all(ISD$Beg,
-                                                               "1816-1-1|1816-01-1|1816-1-01|1816-01-01",
-                                                               "..1816-01-01"))
-# We can do the same for End dates to signal uncertainty. 
-ISD$End <- qCreate::standardise_dates(stringr::str_replace_all(ISD$End,
-                                                               "2011-12-31",
-                                                               "2011-12-31.."))
+# Let's signal to this uncretainty using the `{messydates}` package,
+# which is designed to deal with date uncertainty.
+ISD <- ISD %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01-01", messydates::on_or_before(Beg), Beg)),
+                             End = messydates::as_messydate(ifelse(End >= "2011-12-31", messydates::on_or_after(End), End)))
+# qData and qCreate include several other
 # qData and qCreate include several other
 # functions that should help cleaning and
 # standardizing your data.
@@ -45,8 +41,7 @@ ISD$End <- qCreate::standardise_dates(stringr::str_replace_all(ISD$End,
 # Stage three: Connecting data
 # Next run the following line to make ISD available within the qPackage.
 qCreate::export_data(ISD, database = "states",
-                     URL="http://www.ryan-griffiths.com/data")
-
+                     URL = "http://www.ryan-griffiths.com/data")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence
 # to certain standards. You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows)

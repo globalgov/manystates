@@ -3,10 +3,12 @@ development:
     mode: auto
 template:
   params:
-    bootswatch: flatly
+    bootswatch: paper
 authors:
   James Hollway:
     href: https://jameshollway.com
+  Bernhard Bieri:
+    href: https://bernhardbieri.ch
 navbar:
   structure:
     left:
@@ -14,7 +16,9 @@ navbar:
     - reference
     - articles
     - news
-    right: github
+    right:
+    - packages
+    - github
   components:
     home:
       icon: fa-home fa-lg
@@ -30,11 +34,25 @@ navbar:
     news:
       text: News
       href: news/index.html
+    github:
+      icon: "fab fa-github fa-lg"
+      href: https://github.com/globalgov/qStates
+    packages:
+      text: Other packages
+      menu:
+        - text: qData
+          href: https://globalgov.github.io/qData/
+        - text: qCreate
+          href: https://globalgov.github.io/qCreate/
+        - text: qEnviron
+          href: https://globalgov.github.io/qEnviron/
+        - text: qTrade
+          href: https://globalgov.github.io/qTrade/
 reference:
   - title: "Functions to code states"
     desc: "These functions are here to assist in creating ID's for states:"
     contents:
-    - code_modern_states
+    # - code_modern_states Commented out in code
     - code_states
   - title: "Functions to import CShapes 2.0 data"
     desc: "These functions are here to assist users in importing correctly formatted CShapes 2.0 data:"
@@ -42,3 +60,9 @@ reference:
     - import_cshapes
     - import_distlist
     - import_distmatrix
+  - title: "States Data"
+    desc: "qStates contains the following databases on states or state related concepts"
+    contents:
+    - states
+    - leaders
+    - regimes

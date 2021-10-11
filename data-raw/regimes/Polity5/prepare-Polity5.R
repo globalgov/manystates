@@ -8,7 +8,8 @@
 #### Sidenote ####
 # Both Polity datasets have a slightly different structure. Polity5 is a
 # year-country dataset while Polity5d is a "polity case" dataset 
-# (e.g. one observation per regime change)
+# (e.g. one observation per regime change). We only integrate the Polity5
+# dataset in the present package.
 
 # Polity case data
 Polity5 <- readxl::read_excel("data-raw/regimes/Polity5/p5v2018.xls")
@@ -22,14 +23,35 @@ Polity5 <- tibble::as_tibble(Polity5) %>%
               Beg = qCreate::standardise_dates(byear, bmonth, bday),
               End = qCreate::standardise_dates(eyear, emonth, eday),
               Label = qCreate::standardise_titles(country)) %>%
-  dplyr::arrange(ID, Beg, End) %>%
+  dplyr::arrange(ID, year) %>%
   dplyr::select(-scode) %>%
-  dplyr::relocate(ID, Beg, End, Label)
+  dplyr::relocate(ID, year, Label)
 # qData includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.
-# Replaces -66, -77, -88 in columns and rows for NAs for now.
-Polity5[Polity5=="-66" | Polity5=="-77"| Polity5=="-88"] <- NA
+# Dealing with special codes in autoc, democ, polity and polity2 variables
+# Adds a dummy variable for polity interruptions, interregnum and transitions.
+Polity5 <- Polity5 %>%
+  # Create a new variable to hold special cases
+  dplyr::mutate(speccat = ifelse(democ == -66, -66,
+                          ifelse(democ == -77, -77,
+                          ifelse(democ == -88, -88, NA)))) %>%
+  # Set special cases to NA in original variables
+  dplyr::mutate(dplyr::across(c(democ, autoc, polity, polity2, xrreg,
+                                xrcomp, xropen, xconst, parreg, parcomp,
+                                exconst),
+                              ~na_if(., -66))) %>%
+  dplyr::mutate(dplyr::across(c(democ, autoc, polity, polity2, xrreg,
+                                xrcomp, xropen, xconst, parreg, parcomp,
+                                exconst),
+                              ~na_if(., -77))) %>%
+  dplyr::mutate(dplyr::across(c(democ, autoc, polity, polity2, xrreg,
+                                xrcomp, xropen, xconst, parreg, parcomp,
+                                exconst),
+                              ~na_if(., -88))) %>%
+  # Set messydates column NA-NA-NA to NA
+  dplyr::mutate(dplyr::across(c(Beg, End),
+                              ~na_if(., "NA-NA-NA")))
 # Stage three: Connecting data
 # Next run the following line to make Polity5 available
 # within the qPackage.
