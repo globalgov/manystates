@@ -149,12 +149,35 @@
       <small>Source: <a href='https://github.com/globalgov/qStates/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
-    <div id="qstates-004" class="section level1">
-<h1 class="page-header" data-toc-text="0.0.4">
-<a href="#qstates-004" class="anchor"></a>qStates 0.0.4</h1>
+    <div id="qstates-005" class="section level1">
+<h1 class="page-header" data-toc-text="0.0.5">
+<a href="#qstates-005" class="anchor"></a>qStates 0.0.5</h1>
 <div id="package" class="section level2">
 <h2 class="hasAnchor">
 <a href="#package" class="anchor"></a>Package</h2>
+<ul>
+<li>Fixed <a href='https://github.com/globalgov/qStates/issues/38'>#38</a> by fixing a bug preventing <code>data_contrast("qStates")</code> from being run while <a href="https://github.com/globalgov/qStates">qStates</a> is also loaded in the environment.</li>
+<li>Updated the CSS in the package to make it consistent with other packages in the dVerse</li>
+</ul>
+</div>
+<div id="data" class="section level2">
+<h2 class="hasAnchor">
+<a href="#data" class="anchor"></a>Data</h2>
+<ul>
+<li>Closed <a href='https://github.com/globalgov/qStates/issues/29'>#29</a> by adding the ARCHIGOS database</li>
+<li>Closed <a href='https://github.com/globalgov/qStates/issues/23'>#23</a> by adding <code><a href="../reference/extract_vdem.html">import_vdem()</a></code> to automatically import and consistently format the V-Dem dataset</li>
+<li>Closed <a href='https://github.com/globalgov/qStates/issues/22'>#22</a> by adding <code><a href="../reference/extract_vdem.html">import_vparty()</a></code> to automatically import and consistently format the V-Party dataset</li>
+<li>Closed <a href='https://github.com/globalgov/qStates/issues/37'>#37</a> by improving the way we deal with special categorical values (-66, -77, -88) in the Polity-V dataset</li>
+<li>Closed <a href='https://github.com/globalgov/qStates/issues/36'>#36</a> by completing the regex table for improved text matching</li>
+</ul>
+</div>
+</div>
+    <div id="qstates-004" class="section level1">
+<h1 class="page-header" data-toc-text="0.0.4">
+<a href="#qstates-004" class="anchor"></a>qStates 0.0.4</h1>
+<div id="package-1" class="section level2">
+<h2 class="hasAnchor">
+<a href="#package-1" class="anchor"></a>Package</h2>
 <ul>
 <li>Fixed <a href='https://github.com/globalgov/qStates/issues/26'>#26</a> by updating list of states for <code><a href="../reference/code_states.html">code_states()</a></code> function</li>
 <li>Fixed <a href='https://github.com/globalgov/qStates/issues/30'>#30</a> by transforming date columns in qStates datasets to <code>messydt</code> class</li>
@@ -162,9 +185,9 @@
 <li>Added vignette for working with <code>{CShapes}</code> and historical maps</li>
 </ul>
 </div>
-<div id="data" class="section level2">
+<div id="data-1" class="section level2">
 <h2 class="hasAnchor">
-<a href="#data" class="anchor"></a>Data</h2>
+<a href="#data-1" class="anchor"></a>Data</h2>
 <ul>
 <li>Closed <a href='https://github.com/globalgov/qStates/issues/1'>#1</a> by adding the Polity5 dataset</li>
 <li>Integrated <code>{CShapes}</code>
@@ -182,9 +205,9 @@
     <div id="qstates-003" class="section level1">
 <h1 class="page-header" data-toc-text="0.0.3">
 <a href="#qstates-003" class="anchor"></a>qStates 0.0.3</h1>
-<div id="package-1" class="section level2">
+<div id="package-2" class="section level2">
 <h2 class="hasAnchor">
-<a href="#package-1" class="anchor"></a>Package</h2>
+<a href="#package-2" class="anchor"></a>Package</h2>
 <ul>
 <li>Updated README to align it with other qPackages</li>
 <li>Added a new package logo similar to other qPackages</li>
@@ -192,9 +215,9 @@
 </li>
 </ul>
 </div>
-<div id="data-1" class="section level2">
+<div id="data-2" class="section level2">
 <h2 class="hasAnchor">
-<a href="#data-1" class="anchor"></a>Data</h2>
+<a href="#data-2" class="anchor"></a>Data</h2>
 <ul>
 <li>Re-exported package data to reflect new testing, templates and argument changes with <code>export_data()</code> function in <a href="https://github.com/globalgov/qData">qData</a>
 </li>
@@ -204,9 +227,9 @@
     <div id="qstates-002" class="section level1">
 <h1 class="page-header" data-toc-text="0.0.2">
 <a href="#qstates-002" class="anchor"></a>qStates 0.0.2</h1>
-<div id="data-2" class="section level2">
+<div id="data-3" class="section level2">
 <h2 class="hasAnchor">
-<a href="#data-2" class="anchor"></a>Data</h2>
+<a href="#data-3" class="anchor"></a>Data</h2>
 <ul>
 <li>Closes <a href='https://github.com/globalgov/qStates/issues/17'>#17</a> by rerunning the new <code>export_data()</code> function on the <code>states</code> database which adds new metadata(source link and source bibliography) as well as setting the bibliography at the correct database level instead of the dataset level.</li>
 <li>Added .bib files in each <code>data-raw</code> folder with the original datasets to provide citation information.</li>
@@ -217,9 +240,9 @@
     <div id="qstates-001" class="section level1">
 <h1 class="page-header" data-toc-text="0.0.1">
 <a href="#qstates-001" class="anchor"></a>qStates 0.0.1</h1>
-<div id="package-2" class="section level2">
+<div id="package-3" class="section level2">
 <h2 class="hasAnchor">
-<a href="#package-2" class="anchor"></a>Package</h2>
+<a href="#package-3" class="anchor"></a>Package</h2>
 <ul>
 <li>Created the package structure and files using <code>qData::setup_package()</code>
 </li>
@@ -229,9 +252,9 @@
 <li>Fixed <a href='https://github.com/globalgov/qStates/issues/15'>#15</a> by removing ^data$ from .RBuildignore</li>
 </ul>
 </div>
-<div id="data-3" class="section level2">
+<div id="data-4" class="section level2">
 <h2 class="hasAnchor">
-<a href="#data-3" class="anchor"></a>Data</h2>
+<a href="#data-4" class="anchor"></a>Data</h2>
 <ul>
 <li>Closed <a href='https://github.com/globalgov/qStates/issues/13'>#13</a> by using <code>qData::export_data()</code> and other functions from <a href="https://github.com/globalgov/qData">qData</a> to form the <code>states</code> database from:
 <ul>

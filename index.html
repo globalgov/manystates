@@ -110,7 +110,7 @@
 </h1></div>
 <!-- badges: start -->
 
-<p><a href="https://github.com/globalgov/qStates">qStates</a> is a data package within the <a href="https://github.com/globalgov"><code>{qData}</code> ecosystem</a> of qPackages. It contains an ensemble of datasets currently available on states in the world, including information on states’ beginning and, where applicable, end dates, regime characteristics, and state leaders. An important aim of <a href="https://github.com/globalgov/qStates">qStates</a> is to record and include states as far back in history as possible. The package is geared towards global governance research, but can also be used by anyone interested in state actors across time.</p>
+<p><code>qStates</code> is a data package within the <a href="https://github.com/globalgov"><code>{qData}</code> ecosystem</a> of qPackages. It contains an ensemble of datasets currently available on states in the world, including information on states’ beginning and, where applicable, end dates, regime characteristics, and state leaders. An important aim of <code>qStates</code> is to record and include states as far back in history as possible. The package is geared towards global governance research, but can also be used by anyone interested in state actors across time.</p>
 <p>Please also check out <a href="https://github.com/globalgov/qData"><code>{qData}</code></a> for more information about the other packages and tools to handle data from the <a href="https://github.com/globalgov/qData">qData</a> ecosystem.</p>
 <div id="how-to-install" class="section level2">
 <h2 class="hasAnchor">
@@ -128,27 +128,6 @@
 <p>Once you have installed <a href="https://github.com/globalgov/qData">qData</a>, you can see the different databases and datasets included in the <a href="https://github.com/globalgov/qStates">qStates</a> package using the following function.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">qData</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qData/man/report.html">data_contrast</a></span><span class="op">(</span><span class="st">"qStates"</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="do">## leaders :</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="do">##          Unique ID Missing Data  Rows Columns        Beg        End</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="do">## ARCHIGOS      3409      51.89 % 17686      30 1840-07-23 2015-12-31</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="do">##                                           URL</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="do">## ARCHIGOS http://ksgleditsch.com/archigos.html</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="do">## regimes :</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="do">##         Unique ID Missing Data  Rows Columns      Beg       End</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="do">## Polity5       194       37.7 % 17574      33 1776-7-4 3013-2-21</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="do">##                                                 URL</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="do">## Polity5 http://www.systemicpeace.org/inscrdata.html</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="do">## states :</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="do">##     Unique ID Missing Data Rows Columns          Beg          End</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="do">## GW        202          0 %  216       5 ..1816-01-01 2017-12-31..</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="do">## ISD       310          0 %  362       7 ..1816-01-01 2011-12-31..</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="do">## COW       217          0 %  243       5 ..1816-01-01 2016-12-31..</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="do">##                                                               URL</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="do">## GW                             http://ksgleditsch.com/data-4.html</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="do">## ISD                            http://www.ryan-griffiths.com/data</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="do">## COW https://correlatesofwar.org/data-sets/state-system-membership</span></span></code></pre></div>
 <p>Working with ensembles of related data has many advantages for robust analysis. Just take a look at our vignettes <a href="https://globalgov.github.io/qData/articles/user.html">here</a>.</p>
 </div>
 <div id="qpackages" class="section level2">
@@ -156,21 +135,21 @@
 <a href="#qpackages" class="anchor"></a>qPackages</h2>
 <p>The <a href="https://github.com/globalgov/qData">qData</a> ecosystem is aimed at collecting, connecting and correcting network data across issue-domains of global governance.</p>
 <p>While some qPackages can and do include novel data, much of what they offer involves standing on the shoulders of giants. qPackages endeavour to be as transparent as possible about where data comes from, how it has been coded and/or relabelled, and who has done the work. As such, we make it easy to cite the datasets you use by listing the official references using the function above, as well as the package providers for their work assembling the data by using the function below.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/citation.html">citation</a></span><span class="op">(</span><span class="st">"qStates"</span><span class="op">)</span></code></pre></div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="do">## To cite qStates in publications use:</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="do">##   J. Hollway. qStates: States for qData. 2021.</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="do">## A BibTeX entry for LaTeX users is</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="do">##   @Manual{,</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="do">##     title = {qStates: States for qData},</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="do">##     author = {James Hollway},</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="do">##     year = {2021},</span></span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="do">##     url = {https://github.com/globalgov/qStates},</span></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="do">##   }</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">## </span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="co">## To cite qStates in publications use:</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="co">## </span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co">##   J. Hollway. qStates: States for qData. 2021.</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="co">## </span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co">## A BibTeX entry for LaTeX users is</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="co">## </span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="co">##   @Manual{,</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="co">##     title = {qStates: States for qData},</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="co">##     author = {James Hollway},</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="co">##     year = {2021},</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a><span class="co">##     url = {https://github.com/globalgov/qStates},</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a><span class="co">##   }</span></span></code></pre></div>
 </div>
 <div id="contributing" class="section level2">
 <h2 class="hasAnchor">
