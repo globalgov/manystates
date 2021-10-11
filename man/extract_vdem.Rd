@@ -11,11 +11,9 @@ import_vdem()
 import_vparty()
 }
 \value{
-A dataframe with the qVerse-consistently formatted \verb{[vdem]}
-dataset.
+A dataframe of the\verb{[vdem]} dataset in a qVerse-consistent format.
 
-A dataframe with the qVerse-consistently formatted \verb{[vdem]}
-dataset.
+A dataframe of the\verb{[vparty]} dataset in a qVerse-consistent format.
 }
 \description{
 Functions to import the

@@ -3,8 +3,7 @@
 #' @format The states database is a list that contains the
 #' following 3 datasets: GW, ISD, COW.
 #' For more information and references to each of the datasets used,
-#' please use the `data_source()`, `data_contrast()`, and `data_evolution()`
-#' functions.
+#' please use the `data_source()`, `data_contrast()` functions.
 #'\describe{
 #' \item{GW: }{A dataset with 216 observations and the following
 #' 5 variables: ID, Beg, End, COW_Nr, Label.}
