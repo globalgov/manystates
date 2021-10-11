@@ -8,13 +8,13 @@ Please also indicate if these are package changes, data changes, or both.
 
 ## Package
 
-* Fixes #(issue no.)
-* Closes #(issue no.)
+* Fixed #(issue no.)
+* Closed #(issue no.)
 
 ## Data
 
-* Fixes #(issue no.)
-* Closes #(issue no.)
+* Fixed #(issue no.)
+* Closed #(issue no.)
 
 # Checklist:
 
