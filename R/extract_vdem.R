@@ -13,49 +13,47 @@ NULL
 #' and formats them to a qVerse consistent output.
 #' @importFrom tibble as_tibble
 #' @importFrom qData transmutate
-#' @importFrom qCreate standardise_titles standardise_dates
+#' @importFrom qCreate standardise_dates
+#' @importFrom rlang .data
 #' @import dplyr
-#' @return A dataframe with the qVerse-consistently formatted `[vdem]`
-#' dataset.
+#' @return A dataframe of the`[vdem]` dataset in a qVerse-consistent format.
 #' @examples
 #' \donttest{
 #' import_vdem()
 #' }
 #' @export
 import_vdem <- function() {
-  # Initialising variables to avoid annoying note when running checks
-  histname <- beg <- end <- country_name <- historical_date <- NULL
-  project <- historical <- codingstart_contemp <- codingend_contemp <- NULL
-  codingstart_hist <- codingend_hist <- ID <- Year <- Abbrv <- Label <- NULL
-  Country <- Beg <- End <- NULL
   # Stage 1: Importing
   vdem <- vdemdata::vdem
   # Stage two: Correcting data
   vdem <- as_tibble(vdem) %>%
     dplyr::rename("ID" = "country_id", "Abbrv" = "country_text_id") %>%
-    dplyr::group_by(histname) %>%
-    dplyr::mutate(beg = min(year),
-                  end = max(year)) %>%
+    dplyr::group_by(.data$histname) %>%
+    dplyr::mutate(beg = min(.data$year),
+                  end = max(.data$year)) %>%
     dplyr::ungroup() %>%
     qData::transmutate(
-      Beg = qCreate::standardise_dates(as.character(beg)),
-      End = qCreate::standardise_dates(as.character(end)),
-      Label = histname,
-      Country = country_name,
-      Date = qCreate::standardise_dates(historical_date),
-      Year = qCreate::standardise_dates(as.character(year))) %>%
-    dplyr::select(-project, #variable indicates which V-Dem project coded that
-                  # country-year: Contemporary V-Dem, Historical V-Dem, or both
-                  -historical, #variable indicates if the Historical V-Dem
+      Beg = qCreate::standardise_dates(as.character(.data$beg)),
+      End = qCreate::standardise_dates(as.character(.data$end)),
+      Label = .data$histname,
+      Country = .data$country_name,
+      Date = qCreate::standardise_dates(.data$historical_date),
+      Year = qCreate::standardise_dates(as.character(.data$year))) %>%
+    dplyr::select(-.data$project, #variable indicates which V-Dem project code
+                  # that country-year: Contemporary V-Dem, Historical V-Dem
+                  -.data$historical, #variable indicates if the Historical V-Dem
                   # project coded a country at any time
-                  -codingstart_contemp, -codingend_contemp, #removed because
+                  -.data$codingstart_contemp, -.data$codingend_contemp,
+                  # removed because
                   # variable explains methodology relating to V-Dem coding
                   # time-periods
-                  -codingstart_hist, -codingend_hist) %>% #removed because
+                  -.data$codingstart_hist, -.data$codingend_hist) %>%
+                  #removed because
                   # variable explains methodology relating to V-Dem
                   # coding time-periods.
-    dplyr::arrange(ID, Year) %>%
-    dplyr::relocate(ID, Abbrv, Label, Country, Beg, End, Year, Date)
+    dplyr::arrange(.data$ID, .data$Year) %>%
+    dplyr::relocate(.data$ID, .data$Abbrv, .data$Label, .data$Country,
+                    .data$Beg, .data$End, .data$Year, .data$Date)
   return(vdem)
 }
 
@@ -64,18 +62,15 @@ import_vdem <- function() {
 #' a qVerse consistent dataframe.
 #' @importFrom tibble as_tibble
 #' @import dplyr
-#' @return A dataframe with the qVerse-consistently formatted `[vdem]`
-#' dataset.
+#' @importFrom qCreate standardise_dates
+#' @importFrom rlang .data
+#' @return A dataframe of the`[vparty]` dataset in a qVerse-consistent format.
 #' @examples
 #' \donttest{
 #' import_vparty()
 #' }
 #' @export
 import_vparty <- function() {
-  # Initialize the variables used to avoid an annoying note
-  VPartyID <- v2paenname <- country_name <- histname <- beg <- end <- NULL
-  v2paorname <- pf_party_id <- pf_url <- Country <- Beg <- End <- NULL
-  Label <- Abbrv <- Country_hist <- ID <- Year <- NULL
   # Step 1: Import the data from the vdemdata package
   vparty <- vdemdata::vparty
   # Step 2: Format it to a qConsistent format
@@ -85,25 +80,26 @@ import_vparty <- function() {
                   "Abbrv" = "v2pashname",
                   "Geographic Region" = "e_regiongeo",
                   "Geopolitical Region" = "e_regionpol") %>%
-    dplyr::group_by(VPartyID) %>%
-    dplyr::mutate(beg = min(year), #Year is observation year of the panel
-                  end = max(year)) %>%
+    dplyr::group_by(.data$VPartyID) %>%
+    dplyr::mutate(beg = min(.data$year), #Year is observation year of the panel
+                  end = max(.data$year)) %>%
     qData::transmutate(
-      Label = v2paenname,
-      Country = country_name,
-      Country_hist = histname,
-      Beg = qCreate::standardise_dates(as.character(beg)),
-      End = qCreate::standardise_dates(as.character(end)),
-      Year = qCreate::standardise_dates(as.character(year))) %>%
-    dplyr::select(-v2paorname,
+      Label = .data$v2paenname,
+      Country = .data$country_name,
+      Country_hist = .data$histname,
+      Beg = qCreate::standardise_dates(as.character(.data$beg)),
+      End = qCreate::standardise_dates(as.character(.data$end)),
+      Year = qCreate::standardise_dates(as.character(.data$year))) %>%
+    dplyr::select(-.data$v2paorname,
                   #original party name, primarily a repetition of v2paid
-                  -pf_party_id,
+                  -.data$pf_party_id,
                   #refers to party ID used in predecessor dataset
-                  -pf_url) %>%
+                  -.data$pf_url) %>%
                   #URL to party's webpage in predecessor dataset's website
-    dplyr::arrange(Country, VPartyID, Beg) %>%
-    dplyr::relocate(VPartyID, Label, Abbrv, Country, Country_hist,
-                    ID, Beg, End, Year, )
+    dplyr::arrange(.data$Country, .data$VPartyID, .data$Beg) %>%
+    dplyr::relocate(.data$VPartyID, .data$Label, .data$Abbrv,
+                    .data$Country, .data$Country_hist,
+                    .data$ID, .data$Beg, .data$End, .data$Year, )
   # Step 3: return vparty
   return(vparty)
 }
