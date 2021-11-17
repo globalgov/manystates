@@ -14,10 +14,10 @@ ISD <- tibble::as_tibble(ISD) %>%
   dplyr::rename(Finish = End) %>% 
   # Renaming the end date column to avoid self reference in transmutate.
   qData::transmutate(ID = `COW.ID`,
-                     Beg = qCreate::standardise_dates(lubridate::dmy(Start)),
-                     End = qCreate::standardise_dates(lubridate::dmy(Finish)),
-                     Label = qCreate::standardise_titles(as.character(State.Name)),
-                     COW_Nr = qCreate::standardise_titles(as.character(COW.Nr.))) %>%
+                     Beg = manypkgs::standardise_dates(lubridate::dmy(Start)),
+                     End = manypkgs::standardise_dates(lubridate::dmy(Finish)),
+                     Label = manypkgs::standardise_titles(as.character(State.Name)),
+                     COW_Nr = manypkgs::standardise_titles(as.character(COW.Nr.))) %>%
   # Standardising the dummie variables
   dplyr::mutate(across(c(Micro, New.State),  ~ replace(., . == "", 0))) %>% 
   dplyr::mutate(across(c(Micro, New.State), ~ replace(., . == "X", 1))) %>%  
@@ -33,14 +33,14 @@ ISD <- tibble::as_tibble(ISD) %>%
 # which is designed to deal with date uncertainty.
 ISD <- ISD %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01-01", messydates::on_or_before(Beg), Beg)),
                              End = messydates::as_messydate(ifelse(End >= "2011-12-31", messydates::on_or_after(End), End)))
-# qData and qCreate include several other
-# qData and qCreate include several other
+# qData and manypkgs include several other
+# qData and manypkgs include several other
 # functions that should help cleaning and
 # standardizing your data.
 # Please see the vignettes or website for more details.
 # Stage three: Connecting data
 # Next run the following line to make ISD available within the qPackage.
-qCreate::export_data(ISD, database = "states",
+manypkgs::export_data(ISD, database = "states",
                      URL = "http://www.ryan-griffiths.com/data")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence

@@ -22,12 +22,12 @@ ARCHIGOS <- as_tibble(ARCHIGOS) %>%
                 ~dplyr::na_if(., "Missing: No Information Found"))) %>%
   qData::transmutate(ID = obsid,
                      LeadID = leadid,
-                     Beg = qCreate::standardise_dates(startdate),
-                     End = qCreate::standardise_dates(enddate),
-                     BornDate = qCreate::standardise_dates(borndate),
-                     DeathDate = qCreate::standardise_dates(deathdate),
-                     YearBorn = qCreate::standardise_dates(as.character(yrborn)),
-                     YearDied = qCreate::standardise_dates(as.character(yrdied)),
+                     Beg = manypkgs::standardise_dates(startdate),
+                     End = manypkgs::standardise_dates(enddate),
+                     BornDate = manypkgs::standardise_dates(borndate),
+                     DeathDate = manypkgs::standardise_dates(deathdate),
+                     YearBorn = manypkgs::standardise_dates(as.character(yrborn)),
+                     YearDied = manypkgs::standardise_dates(as.character(yrdied)),
                      Female = ifelse(gender == "F", 1, 0)) %>%
   # NB: Max family ties is 3 at the moment
   tidyr::separate(fties, into = c(paste0("Fties",LETTERS[1:3])),
@@ -74,14 +74,14 @@ ARCHIGOS <- ARCHIGOS %>%
                   FtiesCodeA, FtiesNameB, FtiesCodeB, FtiesNameC, FtiesCodeC,
                   ftcur)
 
-# qCreate includes several functions that should help cleaning
+# manypkgs includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.
 
 # Stage three: Connecting data
 # Next run the following line to make ARCHIGOS available
 # within the qPackage.
-qCreate::export_data(ARCHIGOS, database = "leaders",
+manypkgs::export_data(ARCHIGOS, database = "leaders",
                      URL = "http://ksgleditsch.com/archigos.html")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence

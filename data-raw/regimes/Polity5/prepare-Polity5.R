@@ -20,9 +20,9 @@ Polity5 <- readxl::read_excel("data-raw/regimes/Polity5/p5v2018.xls")
 # below (in stage three) passes all the tests.
 Polity5 <- tibble::as_tibble(Polity5) %>%
   qData::transmutate(ID = ccode,
-              Beg = qCreate::standardise_dates(byear, bmonth, bday),
-              End = qCreate::standardise_dates(eyear, emonth, eday),
-              Label = qCreate::standardise_titles(country)) %>%
+              Beg = manypkgs::standardise_dates(byear, bmonth, bday),
+              End = manypkgs::standardise_dates(eyear, emonth, eday),
+              Label = manypkgs::standardise_titles(country)) %>%
   dplyr::arrange(ID, year) %>%
   dplyr::select(-scode) %>%
   dplyr::relocate(ID, year, Label)
@@ -55,7 +55,7 @@ Polity5 <- Polity5 %>%
 # Stage three: Connecting data
 # Next run the following line to make Polity5 available
 # within the qPackage.
-qCreate::export_data(Polity5, database = "regimes", 
+manypkgs::export_data(Polity5, database = "regimes", 
                      URL = "http://www.systemicpeace.org/inscrdata.html")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence

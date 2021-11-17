@@ -59,7 +59,7 @@ jobs:
         run: |
           remotes::install_deps(dependencies = TRUE)
           remotes::install_github("globalgov/qData")
-          remotes::install_github("globalgov/qCreate")
+          remotes::install_github("globalgov/manypkgs")
           remotes::install_cran("rcmdcheck")
         shell: Rscript {0}
 

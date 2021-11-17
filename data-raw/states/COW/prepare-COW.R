@@ -12,10 +12,10 @@ COW <- readr::read_csv("data-raw/states/COW/states2016.csv")
 # below (in stage three) passes all the tests.
 COW <- tibble::as_tibble(COW) %>%
   qData::transmutate(ID = stateabb,
-                     Beg = qCreate::standardise_dates(lubridate::as_date(paste(styear, stmonth, stday, sep = "-"))),
-                     End = qCreate::standardise_dates(lubridate::as_date(paste(endyear, endmonth, endday, sep = "-"))),
-                     Label = qCreate::standardise_titles(statenme),
-                     COW_Nr = qCreate::standardise_titles(as.character(ccode))) %>%
+                     Beg = manypkgs::standardise_dates(lubridate::as_date(paste(styear, stmonth, stday, sep = "-"))),
+                     End = manypkgs::standardise_dates(lubridate::as_date(paste(endyear, endmonth, endday, sep = "-"))),
+                     Label = manypkgs::standardise_titles(statenme),
+                     COW_Nr = manypkgs::standardise_titles(as.character(ccode))) %>%
   dplyr::select(COW_Nr, ID, Beg, End, Label) %>%
   dplyr::relocate(ID, Beg, End, COW_Nr, Label) %>%
   dplyr::arrange(Beg, ID)
@@ -26,14 +26,14 @@ COW <- tibble::as_tibble(COW) %>%
 # which is designed to deal with date uncertainty
 COW <- COW %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01-01", messydates::on_or_before(Beg), Beg)),
                              End = messydates::as_messydate(ifelse(End >= "2016-12-31", messydates::on_or_after(End), End)))
-# qData and qCreate include several other
+# qData and manypkgs include several other
 # functions that should help cleaning and
 # standardizing your data.
 # Please see the vignettes or website for more details.
 
 # Stage three: Connecting data
 # Next run the following line to make COW available within the qPackage.
-qCreate::export_data(COW, database = "states",
+manypkgs::export_data(COW, database = "states",
                      URL = "https://correlatesofwar.org/data-sets/state-system-membership")
 
 # This function also does two additional things.

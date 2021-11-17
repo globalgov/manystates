@@ -13,7 +13,7 @@ NULL
 #' and formats them to a qVerse consistent output.
 #' @importFrom tibble as_tibble
 #' @importFrom qData transmutate
-#' @importFrom qCreate standardise_dates
+#' @importFrom manypkgs standardise_dates
 #' @importFrom rlang .data
 #' @import dplyr
 #' @return A dataframe of the`[vdem]` dataset in a qVerse-consistent format.
@@ -33,12 +33,12 @@ import_vdem <- function() {
                   end = max(.data$year)) %>%
     dplyr::ungroup() %>%
     qData::transmutate(
-      Beg = qCreate::standardise_dates(as.character(.data$beg)),
-      End = qCreate::standardise_dates(as.character(.data$end)),
+      Beg = manypkgs::standardise_dates(as.character(.data$beg)),
+      End = manypkgs::standardise_dates(as.character(.data$end)),
       Label = .data$histname,
       Country = .data$country_name,
-      Date = qCreate::standardise_dates(.data$historical_date),
-      Year = qCreate::standardise_dates(as.character(.data$year))) %>%
+      Date = manypkgs::standardise_dates(.data$historical_date),
+      Year = manypkgs::standardise_dates(as.character(.data$year))) %>%
     dplyr::select(-.data$project, #variable indicates which V-Dem project code
                   # that country-year: Contemporary V-Dem, Historical V-Dem
                   -.data$historical, #variable indicates if the Historical V-Dem
@@ -62,7 +62,7 @@ import_vdem <- function() {
 #' a qVerse consistent dataframe.
 #' @importFrom tibble as_tibble
 #' @import dplyr
-#' @importFrom qCreate standardise_dates
+#' @importFrom manypkgs standardise_dates
 #' @importFrom rlang .data
 #' @return A dataframe of the`[vparty]` dataset in a qVerse-consistent format.
 #' @examples
@@ -87,9 +87,9 @@ import_vparty <- function() {
       Label = .data$v2paenname,
       Country = .data$country_name,
       Country_hist = .data$histname,
-      Beg = qCreate::standardise_dates(as.character(.data$beg)),
-      End = qCreate::standardise_dates(as.character(.data$end)),
-      Year = qCreate::standardise_dates(as.character(.data$year))) %>%
+      Beg = manypkgs::standardise_dates(as.character(.data$beg)),
+      End = manypkgs::standardise_dates(as.character(.data$end)),
+      Year = manypkgs::standardise_dates(as.character(.data$year))) %>%
     dplyr::select(-.data$v2paorname,
                   #original party name, primarily a repetition of v2paid
                   -.data$pf_party_id,

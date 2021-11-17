@@ -9,7 +9,7 @@ ARCHIGOSgenevar <- qStates::leaders$ARCHIGOS
 # Note: these corrections will go into a GNEVAR copy of the database
 # First up, correction of an import warning. Line 5622, birthdate was misttyped
 # Didier Burkhalter was born on the 17th of April 1960.
-ARCHIGOSgenevar[["BornDate"]][[5622]] <- qCreate::standardise_dates("1960-04-17")
+ARCHIGOSgenevar[["BornDate"]][[5622]] <- manypkgs::standardise_dates("1960-04-17")
 # Correction: Figueres Ferrer's son is not Calderón Fournier but
 # José María Figueres
 ARCHIGOSgenevar$FtiesNameA[c(2105, 2106, 2112:2117, 2133:2137)] <-
@@ -33,14 +33,14 @@ ARCHIGOSgenevar <- ARCHIGOSgenevar %>%
                 ftcur) %>%
   dplyr::slice(c(5622, 2105, 2106, 2112:2117, 2133:2137, 2158:2162, 2163:2167))
 
-# qCreate includes several functions that should help cleaning
+# manypkgs includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.
 
 # Stage three: Connecting data
 # Next run the following line to make ARCHIGOSgenevar available
 # within the qPackage.
-qCreate::export_data(ARCHIGOSgenevar, database = "genevar",
+manypkgs::export_data(ARCHIGOSgenevar, database = "genevar",
                      URL = "http://ksgleditsch.com/archigos.html")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence
