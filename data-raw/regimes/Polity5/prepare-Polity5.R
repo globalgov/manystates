@@ -19,14 +19,14 @@ Polity5 <- readxl::read_excel("data-raw/regimes/Polity5/p5v2018.xls")
 # formats of the 'Polity5' object until the object created
 # below (in stage three) passes all the tests.
 Polity5 <- tibble::as_tibble(Polity5) %>%
-  qData::transmutate(ID = ccode,
+  manydata::transmutate(ID = ccode,
               Beg = manypkgs::standardise_dates(byear, bmonth, bday),
               End = manypkgs::standardise_dates(eyear, emonth, eday),
               Label = manypkgs::standardise_titles(country)) %>%
   dplyr::arrange(ID, year) %>%
   dplyr::select(-scode) %>%
   dplyr::relocate(ID, year, Label)
-# qData includes several functions that should help cleaning
+# manydata includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.
 # Dealing with special codes in autoc, democ, polity and polity2 variables

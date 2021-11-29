@@ -1,12 +1,12 @@
 # Contributing
 
-Contributions to `qStates`, whether in the form of issue identification, bug fixes, new code or documentation are encouraged and welcome:
+Contributions to `manystates`, whether in the form of issue identification, bug fixes, new code or documentation are encouraged and welcome:
 
 * [Submit an issue](#issues)
 * [Document existing code](#documentation)
 * [Fix a bug or implement new features](#adding-new-code)
 
-Please note that the `qStates` project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+Please note that the `manystates` project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
 By contributing to this project, you agree to abide by its terms.
 
 ## Issues
@@ -33,10 +33,10 @@ To run the `lintr` and `goodpractice` checks or use `styler` in a file run:
 
 ```r
 # basic lintr checking
-lintr::lint_package(path = "qStates/")
+lintr::lint_package(path = "manystates/")
 
 # goodpractices checks. Exclude length 80
-goodpractice::gp(path = "jhollway/qStates/",
+goodpractice::gp(path = "jhollway/manystates/",
    checks = all_checks()[-c(8)])
 
 # styler fix some of the styling issues
@@ -142,10 +142,10 @@ We follow several conventions for writing tests:
 
 - A unit test file should test one or more aspects of a single function. This makes it easier to identify the source of bugs, and prevents lower-level tests from failing when higher-level functions change.
 
-- The [naming convention](https://www.tidyverse.org/articles/2019/04/testthat-2-1-0/) for test files is: ``test-FILENAME_IN_R_DIRECTORY-FUNCTION_NAME.R``, i.e. test files are named after the file containing the original function in the [R](qStates/R) directory, pre-fixed with "test", and optionally post-fixed with the name of the function that is being tested.
+- The [naming convention](https://www.tidyverse.org/articles/2019/04/testthat-2-1-0/) for test files is: ``test-FILENAME_IN_R_DIRECTORY-FUNCTION_NAME.R``, i.e. test files are named after the file containing the original function in the [R](manystates/R) directory, pre-fixed with "test", and optionally post-fixed with the name of the function that is being tested.
 
 - If a test requires auxiliary functions from the package, e.g. to initialize a network with sample data, these belong in a helper file. There should be only one helper file for each `R` file, named ``helper-FILENAME_IN_R_DIRECTORY-FUNCTION_NAME.R``. Re-using existing test data is preferable to creating new data for every test.
 
 ## Versioning
-Note that the `qStates` package is version according to [semantic versioning](https://www.jvandemo.com/a-simple-guide-to-semantic-versioning/).
+Note that the `manystates` package is version according to [semantic versioning](https://www.jvandemo.com/a-simple-guide-to-semantic-versioning/).
 This means that versions follow the Major.Minor.Patch semantic format.

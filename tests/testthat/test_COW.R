@@ -1,4 +1,4 @@
-# Test if  meets the qVerse requirements
+# Test if  meets the manyverse requirements
 
 # Report missing values
 test_that("missing observations are reported correctly", {

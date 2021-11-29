@@ -20,7 +20,7 @@ ARCHIGOS <- as_tibble(ARCHIGOS) %>%
                 ~dplyr::na_if(., "(n_year)"))) %>%
   mutate(across(where(is.character),
                 ~dplyr::na_if(., "Missing: No Information Found"))) %>%
-  qData::transmutate(ID = obsid,
+  manydata::transmutate(ID = obsid,
                      LeadID = leadid,
                      Beg = manypkgs::standardise_dates(startdate),
                      End = manypkgs::standardise_dates(enddate),

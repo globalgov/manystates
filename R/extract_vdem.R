@@ -12,7 +12,7 @@ NULL
 #' @details `import_vdem()` imports VDem 11.1 dataset
 #' and formats them to a qVerse consistent output.
 #' @importFrom tibble as_tibble
-#' @importFrom qData transmutate
+#' @importFrom manydata transmutate
 #' @importFrom manypkgs standardise_dates
 #' @importFrom rlang .data
 #' @import dplyr
@@ -32,7 +32,7 @@ import_vdem <- function() {
     dplyr::mutate(beg = min(.data$year),
                   end = max(.data$year)) %>%
     dplyr::ungroup() %>%
-    qData::transmutate(
+    manydata::transmutate(
       Beg = manypkgs::standardise_dates(as.character(.data$beg)),
       End = manypkgs::standardise_dates(as.character(.data$end)),
       Label = .data$histname,
@@ -83,7 +83,7 @@ import_vparty <- function() {
     dplyr::group_by(.data$VPartyID) %>%
     dplyr::mutate(beg = min(.data$year), #Year is observation year of the panel
                   end = max(.data$year)) %>%
-    qData::transmutate(
+    manydata::transmutate(
       Label = .data$v2paenname,
       Country = .data$country_name,
       Country_hist = .data$histname,

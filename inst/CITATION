@@ -1,11 +1,11 @@
-citHeader("To cite qStates in publications use:")
+citHeader("To cite manystates in publications use:")
 
 citEntry(
   entry    = "Manual",
-  title    = "qStates: States for qData",
+  title    = "manystates: States for manydata",
   author   = "James Hollway",
   year     = "2021",
   url      = "https://github.com/globalgov/qStates",
-  textVersion = paste("J. Hollway. qStates: States for qData. 2021."
+  textVersion = paste("J. Hollway. manystates: States for manydata. 2021."
   )
 )

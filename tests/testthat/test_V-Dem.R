@@ -1,4 +1,4 @@
-# Test if V-Party meets the qVerse requirements
+# Test if V-Party meets the manyverse requirements
 
 # Import v-Party
 vdem <- import_vdem()

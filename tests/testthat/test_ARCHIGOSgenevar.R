@@ -1,4 +1,4 @@
-# Test if the dataset meets the qVerse requirements
+# Test if the dataset meets the manyverse requirements
 
 test_that("missing observations are reported correctly", {
   expect_false(any(grepl("^n/a$", genevar[["ARCHIGOSgenevar"]])))

@@ -13,7 +13,7 @@ ISD <- utils::read.csv("data-raw/states/ISD/ISD_Version1_Dissemination.csv")
 ISD <- tibble::as_tibble(ISD) %>%
   dplyr::rename(Finish = End) %>% 
   # Renaming the end date column to avoid self reference in transmutate.
-  qData::transmutate(ID = `COW.ID`,
+  manydata::transmutate(ID = `COW.ID`,
                      Beg = manypkgs::standardise_dates(lubridate::dmy(Start)),
                      End = manypkgs::standardise_dates(lubridate::dmy(Finish)),
                      Label = manypkgs::standardise_titles(as.character(State.Name)),
@@ -33,8 +33,8 @@ ISD <- tibble::as_tibble(ISD) %>%
 # which is designed to deal with date uncertainty.
 ISD <- ISD %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01-01", messydates::on_or_before(Beg), Beg)),
                              End = messydates::as_messydate(ifelse(End >= "2011-12-31", messydates::on_or_after(End), End)))
-# qData and manypkgs include several other
-# qData and manypkgs include several other
+# manydata and manypkgs include several other
+# manydata and manypkgs include several other
 # functions that should help cleaning and
 # standardizing your data.
 # Please see the vignettes or website for more details.

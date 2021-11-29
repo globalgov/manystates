@@ -1,11 +1,11 @@
-Package: qStates
-Title: States for qData
+Package: manystates
+Title: States for manydata
 Version: 0.0.5
 Date: 2021-10-11
-Description: qStates provide data on states in the international system across time. 
-    The package combines and cross-references several existing datasets consistent with the qData package aims.
-URL: https://github.com/globalgov/qStates
-BugReports: https://github.com/globalgov/qStates/issues
+Description: manystates provide data on states in the international system across time. 
+    The package combines and cross-references several existing datasets consistent with the manydata package aims.
+URL: https://github.com/globalgov/manystates
+BugReports: https://github.com/globalgov/manystates/issues
 Depends: 
     R (>= 3.5.0),
     tibble,
@@ -46,7 +46,7 @@ Imports:
     whisker,
     cshapes,
     countrycode,
-    qData,
+    manydata,
     manypkgs,
     vdemdata
 Suggests: 
@@ -60,7 +60,7 @@ Suggests:
     hrbrthemes
 Remotes:
     globalgov/manypkgs,
-    globalgov/qData,
+    globalgov/manydata,
     vdeminstitute/vdemdata
 Encoding: UTF-8
 VignetteBuilder: knitr

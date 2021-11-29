@@ -1,3 +1,5 @@
+# Test if import_cshapes() meets the manyverse requirements
+
 test <- import_cshapes(date = "1900-01-01")
 test2 <- import_distlist(date = "1900-01-01", type = "capdist")
 test3 <- import_distmatrix(date = "1900-01-01", type = "capdist")

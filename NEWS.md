@@ -1,9 +1,9 @@
-# qStates 0.0.5
+# manystates 0.0.5
 
 ## Package
 
-* Fixed #38 by fixing a bug preventing `data_contrast("qStates")` from being run while `{qStates}` is also loaded in the environment.
-* Updated the CSS in the package to make it consistent with other packages in the dVerse
+* Fixed #38 by fixing a bug preventing `data_contrast("manystates")` from being run while `{manystates}` is also loaded in the environment.
+* Updated the CSS in the package to make it consistent with other packages in the manyverse
 
 ## Data
 
@@ -13,13 +13,13 @@
 * Closed #37 by improving the way we deal with special categorical values (-66, -77, -88) in the Polity-V dataset
 * Closed #36 by completing the regex table for improved text matching
 
-# qStates 0.0.4
+# manystates 0.0.4
 
 ## Package
 
 * Fixed #26 by updating list of states for `code_states()` function
-* Fixed #30 by transforming date columns in qStates datasets to `messydt` class
-* Closed #31 by creating qStates website
+* Fixed #30 by transforming date columns in manystates datasets to `messydt` class
+* Closed #31 by creating manystates website
 * Added vignette for working with `{CShapes}` and historical maps
 
 ## Data
@@ -31,19 +31,19 @@
   * Added `import_distlist()` function to import `{CShapes}` distances
   * Added `import_distmatrix()` function to import `{CShapes}` distance matrices
 
-# qStates 0.0.3
+# manystates 0.0.3
 
 ## Package
 
 * Updated README to align it with other qPackages
 * Added a new package logo similar to other qPackages
-* Added new pull request template consistent with `{qData}`
+* Added new pull request template consistent with `{manydata}`
 
 ## Data
 
-* Re-exported package data to reflect new testing, templates and argument changes with `export_data()` function in `{qData}` 
+* Re-exported package data to reflect new testing, templates and argument changes with `export_data()` function in `{manydata}` 
 
-# qStates 0.0.2
+# manystates 0.0.2
 
 ## Data
 
@@ -52,11 +52,11 @@
 - Added link arguments to each `dataset-prepare` script.
 
 
-# qStates 0.0.1
+# manystates 0.0.1
 
 ## Package
 
-- Created the package structure and files using `qData::setup_package()`
+- Created the package structure and files using `manydata::setup_package()`
 - Closed #2 by adding and updating initial documentation as CONTRIBUTING, COC, LICENSE, issue and PR templates
 - Added a `NEWS.md` file to track changes to the package
 - Added a `README` document that outlines main characteristics of the data package
@@ -64,7 +64,7 @@
 
 ## Data
 
-- Closed #13 by using `qData::export_data()` and other functions from `{qData}` to form the `states` database from: 
+- Closed #13 by using `manydata::export_data()` and other functions from `{manydata}` to form the `states` database from: 
   - Added the Correlates of War (COW) dataset and preparations scripts, documentation
   - Closed #6 by adding the International Systems Dataset (ISD) dataset and preparations scripts
   - Closed #7 by adding the Gleditsch & Ward dataset (GW)  dataset and preparations scripts

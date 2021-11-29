@@ -18,7 +18,7 @@ NULL
 #' and formats them to a qVerse consistent output.
 #' @importFrom cshapes cshp
 #' @importFrom tibble as_tibble
-#' @importFrom qData transmutate
+#' @importFrom manydata transmutate
 #' @importFrom manypkgs standardise_titles standardise_dates
 #' @import dplyr
 #' @import lubridate
@@ -44,7 +44,7 @@ import_cshapes <- function(date, ...) {
   cshapes <- cshapes::cshp(date, ..., useGW = FALSE) # Use COW_ID instead of GW
   # Stage two: Correcting data
   cshapes <- tibble::as_tibble(cshapes) %>%
-    qData::transmutate(Beg = manypkgs::standardise_dates(.data$start),
+    manydata::transmutate(Beg = manypkgs::standardise_dates(.data$start),
                 End = manypkgs::standardise_dates(.data$end),
                 Label = manypkgs::standardise_titles(.data$country_name),
                 COW_Nr = manypkgs::standardise_titles(

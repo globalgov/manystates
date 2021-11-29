@@ -1,4 +1,4 @@
-# Test if  meets the q ecosystem requirements
+# Test if the data meets the manyverse requirements
 
 # Report missing values
 test_that("missing observations are reported correctly", {
