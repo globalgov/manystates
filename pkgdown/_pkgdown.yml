@@ -60,9 +60,15 @@ reference:
     - import_cshapes
     - import_distlist
     - import_distmatrix
+  - title: "Functions to import V-Dem and V-Party data"
+    desc: "These functions are here to assist users in importing correctly formatted VDEM and VParty data:"
+    contents:
+    - import_vdem
+    - import_vparty
   - title: "States Data"
     desc: "manystates contains the following databases on states or state related concepts"
     contents:
     - states
     - leaders
     - regimes
+    - genevar
