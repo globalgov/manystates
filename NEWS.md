@@ -1,3 +1,10 @@
+# manystates 0.0.6
+
+## Package
+
+* Fixed #43 by extending the regex pattern matching process of `code_states()`
+* Changed the package name from `{qStates}` to `{manystates}`
+
 # manystates 0.0.5
 
 ## Package
