@@ -27,7 +27,7 @@ import_vdem <- function() {
   vdem <- vdemdata::vdem
   # Stage two: Correcting data
   vdem <- as_tibble(vdem) %>%
-    dplyr::rename("ID" = "country_id", "Abbrv" = "country_text_id") %>%
+    dplyr::rename("VDem_ID" = "country_id", "Abbrv" = "country_text_id") %>%
     dplyr::group_by(.data$histname) %>%
     dplyr::mutate(beg = min(.data$year),
                   end = max(.data$year)) %>%
@@ -51,8 +51,8 @@ import_vdem <- function() {
                   #removed because
                   # variable explains methodology relating to V-Dem
                   # coding time-periods.
-    dplyr::arrange(.data$ID, .data$Year) %>%
-    dplyr::relocate(.data$ID, .data$Abbrv, .data$Label, .data$Country,
+    dplyr::arrange(.data$VDem_ID, .data$Year) %>%
+    dplyr::relocate(.data$VDem_ID, .data$Abbrv, .data$Label, .data$Country,
                     .data$Beg, .data$End, .data$Year, .data$Date)
   return(vdem)
 }
@@ -75,12 +75,12 @@ import_vparty <- function() {
   vparty <- vdemdata::vparty
   # Step 2: Format it to a qConsistent format
   vparty <- as_tibble(vparty) %>%
-    dplyr::rename("VPartyID" = "v2paid",
-                  "ID" = "country_id",
+    dplyr::rename("VParty_ID" = "v2paid",
+                  "Country_ID" = "country_id",
                   "Abbrv" = "v2pashname",
                   "Geographic Region" = "e_regiongeo",
                   "Geopolitical Region" = "e_regionpol") %>%
-    dplyr::group_by(.data$VPartyID) %>%
+    dplyr::group_by(.data$VParty_ID) %>%
     dplyr::mutate(beg = min(.data$year), #Year is observation year of the panel
                   end = max(.data$year)) %>%
     manydata::transmutate(
@@ -96,10 +96,10 @@ import_vparty <- function() {
                   #refers to party ID used in predecessor dataset
                   -.data$pf_url) %>%
                   #URL to party's webpage in predecessor dataset's website
-    dplyr::arrange(.data$Country, .data$VPartyID, .data$Beg) %>%
-    dplyr::relocate(.data$VPartyID, .data$Label, .data$Abbrv,
+    dplyr::arrange(.data$Country, .data$VParty_ID, .data$Beg) %>%
+    dplyr::relocate(.data$VParty_ID, .data$Label, .data$Abbrv,
                     .data$Country, .data$Country_hist,
-                    .data$ID, .data$Beg, .data$End, .data$Year, )
+                    .data$Country_ID, .data$Beg, .data$End, .data$Year, )
   # Step 3: return vparty
   return(vparty)
 }

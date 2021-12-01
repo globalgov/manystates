@@ -11,14 +11,14 @@ COW <- readr::read_csv("data-raw/states/COW/states2016.csv")
 # formats of the 'COW' object until the object created
 # below (in stage three) passes all the tests.
 COW <- tibble::as_tibble(COW) %>%
-  manydata::transmutate(ID = stateabb,
+  manydata::transmutate(COW_ID = stateabb,
                      Beg = manypkgs::standardise_dates(lubridate::as_date(paste(styear, stmonth, stday, sep = "-"))),
                      End = manypkgs::standardise_dates(lubridate::as_date(paste(endyear, endmonth, endday, sep = "-"))),
                      Label = manypkgs::standardise_titles(statenme),
                      COW_Nr = manypkgs::standardise_titles(as.character(ccode))) %>%
-  dplyr::select(COW_Nr, ID, Beg, End, Label) %>%
-  dplyr::relocate(ID, Beg, End, COW_Nr, Label) %>%
-  dplyr::arrange(Beg, ID)
+  dplyr::select(COW_ID, COW_Nr, Beg, End, Label) %>%
+  dplyr::relocate(COW_ID, Beg, End, COW_Nr, Label) %>%
+  dplyr::arrange(Beg, COW_ID)
 # We know that COW data for "old" states is set to 1816-01-01 by default.
 # This is a rather uncretain date, that is, the dataset considers them states
 # on 1st January 1816, but they may have been established (much) earlier.

@@ -4,7 +4,7 @@
 # ready for the qPackage.
 
 # Stage one: Collecting data from actual Archigos dataset
-ARCHIGOSgenevar <- qStates::leaders$ARCHIGOS
+ARCHIGOSgenevar <- manystates::leaders$ARCHIGOS
 
 # Note: these corrections will go into a GNEVAR copy of the database
 # First up, correction of an import warning. Line 5622, birthdate was misttyped
@@ -25,7 +25,7 @@ ARCHIGOS$FtiesNameB[c(2163:2167)] <-
 ARCHIGOSgenevar$FtiesCodeB[c(2163:2167)] <-
   "81eb718b-1e42-11e4-b4cd-db5882bf8def"
 ARCHIGOSgenevar <- ARCHIGOSgenevar %>% 
-  dplyr::select(ID, LeadID, ccode, idacr, Label, leader, Beg, End, BornDate,
+  dplyr::select(ARCHIGOS_ID, LeadID, ccode, idacr, Label, leader, Beg, End, BornDate,
                 DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
                 prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry,
                 num.exit, num.exitcode, num.posttenurefate, FtiesNameA,

@@ -12,15 +12,15 @@ ARCHIGOS <- read.delim2("data-raw/leaders/ARCHIGOS/arch_annual.txt")
 # formats of the 'ARCHIGOS' object until the object created
 # below (in stage three) passes all the tests.
 ARCHIGOS <- as_tibble(ARCHIGOS) %>%
-  mutate(across(where(is.character), ~dplyr::na_if(., "."))) %>%
-  mutate(across(where(is.character), ~dplyr::na_if(., "NA"))) %>%
-  mutate(across(where(is.character),
+  dplyr::mutate(across(where(is.character), ~dplyr::na_if(., "."))) %>%
+  dplyr::mutate(across(where(is.character), ~dplyr::na_if(., "NA"))) %>%
+  dplyr::mutate(across(where(is.character),
                 ~dplyr::na_if(., "(p_year)"))) %>%
-  mutate(across(where(is.character),
+  dplyr::mutate(across(where(is.character),
                 ~dplyr::na_if(., "(n_year)"))) %>%
-  mutate(across(where(is.character),
+  dplyr::mutate(across(where(is.character),
                 ~dplyr::na_if(., "Missing: No Information Found"))) %>%
-  manydata::transmutate(ID = obsid,
+  manydata::transmutate(ARCHIGOS_ID = obsid,
                      LeadID = leadid,
                      Beg = manypkgs::standardise_dates(startdate),
                      End = manypkgs::standardise_dates(enddate),
@@ -67,7 +67,7 @@ ARCHIGOS <- as_tibble(ARCHIGOS) %>%
 # 815; Refers to imperial Vietnam prior to the French colonization
 # Ordering stuff for output:
 ARCHIGOS <- ARCHIGOS %>% 
-    dplyr::select(ID, LeadID, ccode, idacr, Label, leader, Beg, End, BornDate,
+    dplyr::select(ARCHIGOS_ID, LeadID, ccode, idacr, Label, leader, Beg, End, BornDate,
                   DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
                   prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry,
                   num.exit, num.exitcode, num.posttenurefate, FtiesNameA,
