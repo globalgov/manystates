@@ -31,7 +31,7 @@ many universe of packages.
 We’ve made it easier than ever to install and start analysing global
 governance data in R. Simply install the core package,
 [manydata](https://github.com/globalgov/manydata), as follows, and then
-you can discover, install and update various many packages from the
+you can discover, install and update various `many packages` from the
 console.
 
 ``` r
@@ -61,8 +61,8 @@ The [many universe of packages](https://github.com/globalgov/manydata)
 is aimed at collecting, connecting and correcting network data across
 issue-domains of global governance.
 
-While some many packages can and do include novel data, much of what
-they offer involves standing on the shoulders of giants. many packages
+While some `many packages` can and do include novel data, much of what
+they offer involves standing on the shoulders of giants. `many packages`
 endeavour to be as transparent as possible about where data comes from,
 how it has been coded and/or relabelled, and who has done the work. As
 such, we make it easy to cite the datasets you use by listing the
@@ -101,10 +101,11 @@ request](https://github.com/globalgov/manystates/pulls) so that your
 data can be used easily.
 
 If you have collected or developed other data that may not be best for
-this package, but could be useful within the wider universe of many
-packages, [manypkgs](https://github.com/globalgov/manypkgs) includes a
-number of functions that make it easy to create a new many package and
-populate it with clean, consistent global governance data.
+this package, but could be useful within the wider universe of
+`many packages`, [manypkgs](https://github.com/globalgov/manypkgs)
+includes a number of functions that make it easy to create a new
+`many package` and populate it with clean, consistent global governance
+data.
 
 If you have any other ideas about how this package or the manydata
 universe more broadly might better facilitate your empirical analysis,
