@@ -39,7 +39,7 @@ manydata::data_contrast("manystates")
 Working with ensembles of related data has many advantages for robust analysis.
 Just take a look at our vignettes [here](https://globalgov.github.io/manydata/articles/user.html).
 
-## many packages
+## The many packages universe
 
 The [many universe of packages](https://github.com/globalgov/manydata) is aimed at collecting, connecting and correcting network data across issue-domains of global governance.
 

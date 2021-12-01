@@ -12,11 +12,11 @@ Date](https://img.shields.io/github/release-date/globalgov/manystates)
 issues](https://img.shields.io/github/issues-raw/globalgov/manystates)
 <!-- badges: end -->
 
-`manystates` is a data package within the [`{manydata}`
-ecosystem](https://github.com/globalgov) of qPackages. It contains an
-ensemble of datasets currently available on states in the world,
-including information on states’ beginning and, where applicable, end
-dates, regime characteristics, and state leaders. An important aim of
+`manystates` is a data package within the [many universe of
+packages](https://github.com/globalgov). It contains an ensemble of
+datasets currently available on states in the world, including
+information on states’ beginning and, where applicable, end dates,
+regime characteristics, and state leaders. An important aim of
 `manystates` is to record and include states as far back in history as
 possible. The package is geared towards global governance research, but
 can also be used by anyone interested in state actors across time.
@@ -24,14 +24,15 @@ can also be used by anyone interested in state actors across time.
 Please also check out
 [`{manydata}`](https://github.com/globalgov/manydata) for more
 information about the other packages and tools to handle data from the
-`{manydata}` ecosystem.
+many universe of packages.
 
 ## How to install
 
 We’ve made it easier than ever to install and start analysing global
 governance data in R. Simply install the core package,
 [manydata](https://github.com/globalgov/manydata), as follows, and then
-you can discover, install and update various qPackages from the console.
+you can discover, install and update various many packages from the
+console.
 
 ``` r
 # install.packages(remotes)
@@ -54,19 +55,20 @@ Working with ensembles of related data has many advantages for robust
 analysis. Just take a look at our vignettes
 [here](https://globalgov.github.io/manydata/articles/user.html).
 
-## qPackages
+## The many packages universe
 
-The [manydata](https://github.com/globalgov/manydata) ecosystem is aimed
-at collecting, connecting and correcting network data across
+The [many universe of packages](https://github.com/globalgov/manydata)
+is aimed at collecting, connecting and correcting network data across
 issue-domains of global governance.
 
-While some qPackages can and do include novel data, much of what they
-offer involves standing on the shoulders of giants. qPackages endeavour
-to be as transparent as possible about where data comes from, how it has
-been coded and/or relabelled, and who has done the work. As such, we
-make it easy to cite the datasets you use by listing the official
-references using the function above, as well as the package providers
-for their work assembling the data by using the function below.
+While some many packages can and do include novel data, much of what
+they offer involves standing on the shoulders of giants. many packages
+endeavour to be as transparent as possible about where data comes from,
+how it has been coded and/or relabelled, and who has done the work. As
+such, we make it easy to cite the datasets you use by listing the
+official references using the function above, as well as the package
+providers for their work assembling the data by using the function
+below.
 
 ``` r
 citation("manystates")
@@ -99,11 +101,11 @@ request](https://github.com/globalgov/manystates/pulls) so that your
 data can be used easily.
 
 If you have collected or developed other data that may not be best for
-this package, but could be useful within the wider ecosystem,
-[manydata](https://github.com/globalgov/manydata) includes a number of
-functions that make it easy to create a new qPackage and populate with
-clean, consistent global governance data.
+this package, but could be useful within the wider universe of many
+packages, [manypkgs](https://github.com/globalgov/manypkgs) includes a
+number of functions that make it easy to create a new many package and
+populate it with clean, consistent global governance data.
 
 If you have any other ideas about how this package or the manydata
-ecosystem more broadly might better facilitate your empirical analysis,
+universe more broadly might better facilitate your empirical analysis,
 we’d be very happy to hear from you.
