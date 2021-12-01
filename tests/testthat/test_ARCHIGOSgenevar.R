@@ -31,7 +31,7 @@ test_that("Columns with dates are standardized", {
 
 # Contains the required variables
 test_that("object has the correct variables", {
-  expect_col_exists(genevar[["ARCHIGOSgenevar"]], vars(ID))
+  expect_col_exists(genevar[["ARCHIGOSgenevar"]], vars(ARCHIGOS_ID))
   expect_col_exists(genevar[["ARCHIGOSgenevar"]], vars(Beg))
   expect_col_exists(genevar[["ARCHIGOSgenevar"]], vars(End))
   expect_col_exists(genevar[["ARCHIGOSgenevar"]], vars(Label))
@@ -39,7 +39,7 @@ test_that("object has the correct variables", {
 
 # Labels are standardized
 test_that("labels are standardised", {
-  expect_false(any(grepl("U.S.", genevar[["ARCHIGOSgenevar"]])))
+  expect_false(any(grepl("U\\.S\\.", genevar[["ARCHIGOSgenevar"]])))
   expect_false(any(grepl("U.K.", genevar[["ARCHIGOSgenevar"]])))
   expect_false(any(grepl("!", genevar[["ARCHIGOSgenevar"]])))
   expect_false(any(grepl("NANA.", genevar[["ARCHIGOSgenevar"]])))

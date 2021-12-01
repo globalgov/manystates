@@ -13,7 +13,7 @@ test_that("missing observations are reported correctly", {
 
 # Contains the required variables
 test_that("object has the correct variables", {
-  expect_col_exists(states[["GW"]], vars(ID))
+  expect_col_exists(states[["GW"]], vars(GW_ID))
   expect_col_exists(states[["GW"]], vars(Beg))
   expect_col_exists(states[["GW"]], vars(End))
   expect_col_exists(states[["GW"]], vars(Label))
@@ -35,7 +35,7 @@ test_that("Columns with dates are standardized", {
 
 # Labels are standardized
 test_that("labels are standardised", {
-  expect_false(any(grepl("U.S.", states[["GW"]])))
+  expect_false(any(grepl("U\\.S\\.", states[["GW"]])))
   expect_false(any(grepl("U.K.", states[["GW"]])))
   expect_false(any(grepl("!", states[["GW"]])))
   expect_false(any(grepl("NANA.", states[["GW"]])))
