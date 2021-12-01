@@ -36,7 +36,7 @@ To run the `lintr` and `goodpractice` checks or use `styler` in a file run:
 lintr::lint_package(path = "manystates/")
 
 # goodpractices checks. Exclude length 80
-goodpractice::gp(path = "jhollway/manystates/",
+goodpractice::gp(path = "globalgov/manystates/",
    checks = all_checks()[-c(8)])
 
 # styler fix some of the styling issues

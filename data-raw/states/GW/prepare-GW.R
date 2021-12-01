@@ -28,7 +28,6 @@ GW <- tibble::as_tibble(GW) %>%
 GW <- GW %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01-01", messydates::on_or_before(Beg), Beg)),
                            End = messydates::as_messydate(ifelse(End >= "2017-12-31", messydates::on_or_after(End), End)))
 # manydata and manypkgs include several other
-# manydata and manypkgs include several other
 # functions that should help cleaning and
 # standardizing your data.
 # Please see the vignettes or website for more details.

@@ -1,4 +1,4 @@
-# Test if V-Party meets the manyverse requirements
+# Test if V-Party meets the many universe requirements
 
 # Import v-Party
 vdem <- import_vdem()

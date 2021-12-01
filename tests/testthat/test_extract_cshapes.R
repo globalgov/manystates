@@ -1,4 +1,4 @@
-# Test if import_cshapes() meets the manyverse requirements
+# Test if import_cshapes() meets the many universe requirements
 
 test <- import_cshapes(date = "1900-01-01")
 test2 <- import_distlist(date = "1900-01-01", type = "capdist")

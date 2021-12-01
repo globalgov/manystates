@@ -1,4 +1,4 @@
-# Test if  meets the manyverse requirements
+# Test if the dataset meets the many universe requirements
 
 # Report missing values
 test_that("missing observations are reported correctly", {
