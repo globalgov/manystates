@@ -2,7 +2,7 @@
 % Please edit documentation in R/code_states.R
 \name{code_states}
 \alias{code_states}
-\title{Code parties}
+\title{Code states}
 \usage{
 code_states(v)
 }
