@@ -1,4 +1,4 @@
-url: https://globalgov.github.io/qStates/
+url: https://globalgov.github.io/manystates/
 development:
     mode: auto
 template:
@@ -36,18 +36,18 @@ navbar:
       href: news/index.html
     github:
       icon: "fab fa-github fa-lg"
-      href: https://github.com/globalgov/qStates
+      href: https://github.com/globalgov/manystates
     packages:
       text: Other packages
       menu:
-        - text: qData
-          href: https://globalgov.github.io/qData/
-        - text: qCreate
-          href: https://globalgov.github.io/qCreate/
-        - text: qEnviron
-          href: https://globalgov.github.io/qEnviron/
-        - text: qTrade
-          href: https://globalgov.github.io/qTrade/
+        - text: manydata
+          href: https://globalgov.github.io/manydata/
+        - text: manypkgs
+          href: https://globalgov.github.io/manypkgs/
+        - text: manyenviron
+          href: https://globalgov.github.io/manyenviron/
+        - text: manytrade
+          href: https://globalgov.github.io/manytrade/
 reference:
   - title: "Functions to code states"
     desc: "These functions are here to assist in creating ID's for states:"
@@ -60,9 +60,15 @@ reference:
     - import_cshapes
     - import_distlist
     - import_distmatrix
+  - title: "Functions to import V-Dem and V-Party data"
+    desc: "These functions are here to assist users in importing correctly formatted VDEM and VParty data:"
+    contents:
+    - import_vdem
+    - import_vparty
   - title: "States Data"
-    desc: "qStates contains the following databases on states or state related concepts"
+    desc: "manystates contains the following databases on states or state related concepts"
     contents:
     - states
     - leaders
     - regimes
+    - genevar

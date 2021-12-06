@@ -1,4 +1,4 @@
-#' Code parties
+#' Code states
 #'
 #' Retrieves countries from a character vector
 #' @param v A character vector

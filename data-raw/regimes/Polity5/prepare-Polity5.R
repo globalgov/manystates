@@ -19,14 +19,14 @@ Polity5 <- readxl::read_excel("data-raw/regimes/Polity5/p5v2018.xls")
 # formats of the 'Polity5' object until the object created
 # below (in stage three) passes all the tests.
 Polity5 <- tibble::as_tibble(Polity5) %>%
-  qData::transmutate(ID = ccode,
-              Beg = qCreate::standardise_dates(byear, bmonth, bday),
-              End = qCreate::standardise_dates(eyear, emonth, eday),
-              Label = qCreate::standardise_titles(country)) %>%
-  dplyr::arrange(ID, year) %>%
+  manydata::transmutate(Polity5_ID = ccode,
+              Beg = manypkgs::standardise_dates(byear, bmonth, bday),
+              End = manypkgs::standardise_dates(eyear, emonth, eday),
+              Label = manypkgs::standardise_titles(country)) %>%
+  dplyr::arrange(Polity5_ID, year) %>%
   dplyr::select(-scode) %>%
-  dplyr::relocate(ID, year, Label)
-# qData includes several functions that should help cleaning
+  dplyr::relocate(Polity5_ID, year, Label)
+# manydata includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.
 # Dealing with special codes in autoc, democ, polity and polity2 variables
@@ -40,22 +40,22 @@ Polity5 <- Polity5 %>%
   dplyr::mutate(dplyr::across(c(democ, autoc, polity, polity2, xrreg,
                                 xrcomp, xropen, xconst, parreg, parcomp,
                                 exconst),
-                              ~na_if(., -66))) %>%
+                              ~dplyr::na_if(., -66))) %>%
   dplyr::mutate(dplyr::across(c(democ, autoc, polity, polity2, xrreg,
                                 xrcomp, xropen, xconst, parreg, parcomp,
                                 exconst),
-                              ~na_if(., -77))) %>%
+                              ~dplyr::na_if(., -77))) %>%
   dplyr::mutate(dplyr::across(c(democ, autoc, polity, polity2, xrreg,
                                 xrcomp, xropen, xconst, parreg, parcomp,
                                 exconst),
-                              ~na_if(., -88))) %>%
+                              ~dplyr::na_if(., -88))) %>%
   # Set messydates column NA-NA-NA to NA
   dplyr::mutate(dplyr::across(c(Beg, End),
-                              ~na_if(., "NA-NA-NA")))
+                              ~dplyr::na_if(., "NA-NA-NA")))
 # Stage three: Connecting data
 # Next run the following line to make Polity5 available
 # within the qPackage.
-qCreate::export_data(Polity5, database = "regimes", 
+manypkgs::export_data(Polity5, database = "regimes", 
                      URL = "http://www.systemicpeace.org/inscrdata.html")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence

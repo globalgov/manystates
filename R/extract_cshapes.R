@@ -18,8 +18,8 @@ NULL
 #' and formats them to a qVerse consistent output.
 #' @importFrom cshapes cshp
 #' @importFrom tibble as_tibble
-#' @importFrom qData transmutate
-#' @importFrom qCreate standardise_titles standardise_dates
+#' @importFrom manydata transmutate
+#' @importFrom manypkgs standardise_titles standardise_dates
 #' @import dplyr
 #' @import lubridate
 #' @importFrom rlang .data
@@ -44,12 +44,12 @@ import_cshapes <- function(date, ...) {
   cshapes <- cshapes::cshp(date, ..., useGW = FALSE) # Use COW_ID instead of GW
   # Stage two: Correcting data
   cshapes <- tibble::as_tibble(cshapes) %>%
-    qData::transmutate(Beg = qCreate::standardise_dates(.data$start),
-                End = qCreate::standardise_dates(.data$end),
-                Label = qCreate::standardise_titles(.data$country_name),
-                COW_Nr = qCreate::standardise_titles(
+    manydata::transmutate(Beg = manypkgs::standardise_dates(.data$start),
+                End = manypkgs::standardise_dates(.data$end),
+                Label = manypkgs::standardise_titles(.data$country_name),
+                COW_Nr = manypkgs::standardise_titles(
                   as.character(.data$cowcode)),
-                Capital = qCreate::standardise_titles(.data$capname),
+                Capital = manypkgs::standardise_titles(.data$capname),
                 CapitalLong = .data$caplong,
                 CapitalLat = .data$caplat,
                 WellDefinedBorders = .data$b_def,

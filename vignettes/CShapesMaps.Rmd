@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.align = "center"
 )
-pkgs <- c("WDI", "ggplot2", "dplyr", "countrycode", "qData", "qStates")
+pkgs <- c("WDI", "ggplot2", "dplyr", "countrycode", "manydata", "manystates")
 lapply(pkgs, library, character.only = TRUE)
 ```
 
@@ -49,19 +49,19 @@ library(dplyr)
 GDP <- WDI::WDI(indicator = 'NY.GDP.PCAP.KD', start = 1980, end = 1980)
 GDP <- dplyr::slice(GDP, 50:266)
 GDP <- dplyr::as_tibble(GDP) %>%
-  qData::transmutate(COW_Nr = as.character(countrycode::countrycode(GDP$iso2c,
+  manydata::transmutate(COW_Nr = as.character(countrycode::countrycode(GDP$iso2c,
                                                        origin = "iso2c",
                                                        destination = "cown",
                                                        warn = FALSE)))
 ```
 
 Second, we use the `{cshapes}` package by importing a world map
-in a way that is consistent with the qVerse with our `import_cshapes()`
-function.
+in a way that is consistent with the many packages universe with the
+`import_cshapes()` function.
 
 ```{r cshapes, echo=TRUE, warning=FALSE, message=FALSE}
 # Import map data with import_cshapes()
-mapdata <- qStates::import_cshapes(date = "1980-01-01")
+mapdata <- manystates::import_cshapes(date = "1980-01-01")
 ```
 
 Finally, we perform a `left_join()` between both dataframes to combine mapping

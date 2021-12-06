@@ -12,13 +12,13 @@ GW <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
 # below (in stage three) passes all the tests. 
 GW <- tibble::as_tibble(GW) %>%
   dplyr::rename(Finish = End) %>%
-  qData::transmutate(ID = `Cow ID`,
-                     Beg = qCreate::standardise_dates(Start),
-                     End = qCreate::standardise_dates(Finish), 
-                     Label = qCreate::standardise_titles(`Name of State`),
-                     COW_Nr = qCreate::standardise_titles(`Cow Nr.`)) %>%
-  dplyr::relocate(ID, Beg, End, COW_Nr, Label) %>%
-  dplyr::arrange(Beg, ID)
+  manydata::transmutate(GW_ID = `Cow ID`,
+                     Beg = manypkgs::standardise_dates(Start),
+                     End = manypkgs::standardise_dates(Finish), 
+                     Label = manypkgs::standardise_titles(`Name of State`),
+                     COW_Nr = manypkgs::standardise_titles(`Cow Nr.`)) %>%
+  dplyr::relocate(GW_ID, Beg, End, COW_Nr, Label) %>%
+  dplyr::arrange(Beg, GW_ID)
 # We know that GW uses COW data for "old" states that is set to 1816-01-01 by default.
 # This is a rather uncretain date, that is, the dataset considers them states
 # on 1st January 1816, but they may have been established (much) earlier.
@@ -27,15 +27,14 @@ GW <- tibble::as_tibble(GW) %>%
 
 GW <- GW %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01-01", messydates::on_or_before(Beg), Beg)),
                            End = messydates::as_messydate(ifelse(End >= "2017-12-31", messydates::on_or_after(End), End)))
-# qData and qCreate include several other
-# qData and qCreate include several other
+# manydata and manypkgs include several other
 # functions that should help cleaning and
 # standardizing your data.
 # Please see the vignettes or website for more details.
 
 # Stage three: Connecting data
 # Next run the following line to make GW available within the qPackage.
-qCreate::export_data(GW, database = "states",
+manypkgs::export_data(GW, database = "states",
                      URL = "http://ksgleditsch.com/data-4.html")
 
 # This function also does two additional things.

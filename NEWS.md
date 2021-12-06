@@ -1,9 +1,16 @@
+# manystates 0.1.0
+
+## Package
+
+* Fixed #43 by extending the regex pattern matching process of `code_states()`
+* Changed the package name from `{qStates}` to `{manystates}`
+
 # qStates 0.0.5
 
 ## Package
 
 * Fixed #38 by fixing a bug preventing `data_contrast("qStates")` from being run while `{qStates}` is also loaded in the environment.
-* Updated the CSS in the package to make it consistent with other packages in the dVerse
+* Updated the CSS in the package to make it consistent with other packages in the qVerse
 
 ## Data
 

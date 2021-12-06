@@ -13,34 +13,33 @@ ISD <- utils::read.csv("data-raw/states/ISD/ISD_Version1_Dissemination.csv")
 ISD <- tibble::as_tibble(ISD) %>%
   dplyr::rename(Finish = End) %>% 
   # Renaming the end date column to avoid self reference in transmutate.
-  qData::transmutate(ID = `COW.ID`,
-                     Beg = qCreate::standardise_dates(lubridate::dmy(Start)),
-                     End = qCreate::standardise_dates(lubridate::dmy(Finish)),
-                     Label = qCreate::standardise_titles(as.character(State.Name)),
-                     COW_Nr = qCreate::standardise_titles(as.character(COW.Nr.))) %>%
+  manydata::transmutate(ISD_ID = `COW.ID`,
+                     Beg = manypkgs::standardise_dates(lubridate::dmy(Start)),
+                     End = manypkgs::standardise_dates(lubridate::dmy(Finish)),
+                     Label = manypkgs::standardise_titles(as.character(State.Name)),
+                     COW_Nr = manypkgs::standardise_titles(as.character(COW.Nr.))) %>%
   # Standardising the dummie variables
   dplyr::mutate(across(c(Micro, New.State),  ~ replace(., . == "", 0))) %>% 
   dplyr::mutate(across(c(Micro, New.State), ~ replace(., . == "X", 1))) %>%  
   #Dropping certain unnecessary columns.
   dplyr::select(-X, -X.1, -X.2, -X.3, -X.4, -X.5,  -X.6, -X.7) %>% 
   # Arranging dataset
-  dplyr::relocate(ID, Beg, End, COW_Nr, Label, Micro, New.State) %>%
-  dplyr::arrange(Beg, ID)
+  dplyr::relocate(ISD_ID, Beg, End, COW_Nr, Label, Micro, New.State) %>%
+  dplyr::arrange(Beg, ISD_ID)
 # We know that ISD uses COW data for "old" states that is set to 1816-01-01 by default.
-# This is a rather uncretain date, that is, the dataset considers them states
+# This is a rather uncertain date, that is, the dataset considers them states
 # on 1st January 1816, but they may have been established (much) earlier.
-# Let's signal to this uncretainty using the `{messydates}` package,
+# Let's signal to this uncertainty using the `{messydates}` package,
 # which is designed to deal with date uncertainty.
 ISD <- ISD %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01-01", messydates::on_or_before(Beg), Beg)),
                              End = messydates::as_messydate(ifelse(End >= "2011-12-31", messydates::on_or_after(End), End)))
-# qData and qCreate include several other
-# qData and qCreate include several other
+# manydata and manypkgs include several other
 # functions that should help cleaning and
 # standardizing your data.
 # Please see the vignettes or website for more details.
 # Stage three: Connecting data
 # Next run the following line to make ISD available within the qPackage.
-qCreate::export_data(ISD, database = "states",
+manypkgs::export_data(ISD, database = "states",
                      URL = "http://www.ryan-griffiths.com/data")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence

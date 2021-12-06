@@ -12,22 +12,22 @@ ARCHIGOS <- read.delim2("data-raw/leaders/ARCHIGOS/arch_annual.txt")
 # formats of the 'ARCHIGOS' object until the object created
 # below (in stage three) passes all the tests.
 ARCHIGOS <- as_tibble(ARCHIGOS) %>%
-  mutate(across(where(is.character), ~dplyr::na_if(., "."))) %>%
-  mutate(across(where(is.character), ~dplyr::na_if(., "NA"))) %>%
-  mutate(across(where(is.character),
+  dplyr::mutate(across(where(is.character), ~dplyr::na_if(., "."))) %>%
+  dplyr::mutate(across(where(is.character), ~dplyr::na_if(., "NA"))) %>%
+  dplyr::mutate(across(where(is.character),
                 ~dplyr::na_if(., "(p_year)"))) %>%
-  mutate(across(where(is.character),
+  dplyr::mutate(across(where(is.character),
                 ~dplyr::na_if(., "(n_year)"))) %>%
-  mutate(across(where(is.character),
+  dplyr::mutate(across(where(is.character),
                 ~dplyr::na_if(., "Missing: No Information Found"))) %>%
-  qData::transmutate(ID = obsid,
+  manydata::transmutate(ARCHIGOS_ID = obsid,
                      LeadID = leadid,
-                     Beg = qCreate::standardise_dates(startdate),
-                     End = qCreate::standardise_dates(enddate),
-                     BornDate = qCreate::standardise_dates(borndate),
-                     DeathDate = qCreate::standardise_dates(deathdate),
-                     YearBorn = qCreate::standardise_dates(as.character(yrborn)),
-                     YearDied = qCreate::standardise_dates(as.character(yrdied)),
+                     Beg = manypkgs::standardise_dates(startdate),
+                     End = manypkgs::standardise_dates(enddate),
+                     BornDate = manypkgs::standardise_dates(borndate),
+                     DeathDate = manypkgs::standardise_dates(deathdate),
+                     YearBorn = manypkgs::standardise_dates(as.character(yrborn)),
+                     YearDied = manypkgs::standardise_dates(as.character(yrdied)),
                      Female = ifelse(gender == "F", 1, 0)) %>%
   # NB: Max family ties is 3 at the moment
   tidyr::separate(fties, into = c(paste0("Fties",LETTERS[1:3])),
@@ -67,21 +67,21 @@ ARCHIGOS <- as_tibble(ARCHIGOS) %>%
 # 815; Refers to imperial Vietnam prior to the French colonization
 # Ordering stuff for output:
 ARCHIGOS <- ARCHIGOS %>% 
-    dplyr::select(ID, LeadID, ccode, idacr, Label, leader, Beg, End, BornDate,
+    dplyr::select(ARCHIGOS_ID, LeadID, ccode, idacr, Label, leader, Beg, End, BornDate,
                   DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
                   prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry,
                   num.exit, num.exitcode, num.posttenurefate, FtiesNameA,
                   FtiesCodeA, FtiesNameB, FtiesCodeB, FtiesNameC, FtiesCodeC,
                   ftcur)
 
-# qCreate includes several functions that should help cleaning
+# manypkgs includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.
 
 # Stage three: Connecting data
 # Next run the following line to make ARCHIGOS available
 # within the qPackage.
-qCreate::export_data(ARCHIGOS, database = "leaders",
+manypkgs::export_data(ARCHIGOS, database = "leaders",
                      URL = "http://ksgleditsch.com/archigos.html")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence

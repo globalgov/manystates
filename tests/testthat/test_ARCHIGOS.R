@@ -1,4 +1,4 @@
-# Test if  meets the qVerse requirements
+# Test if the dataset meets the many packages universe requirements
 
 # Report missing values
 test_that("missing observations are reported correctly", {
@@ -32,7 +32,7 @@ test_that("Columns with dates are standardized", {
 
 # Contains the required variables
 test_that("object has the correct variables", {
-  expect_col_exists(leaders[["ARCHIGOS"]], vars(ID))
+  expect_col_exists(leaders[["ARCHIGOS"]], vars(ARCHIGOS_ID))
   expect_col_exists(leaders[["ARCHIGOS"]], vars(Beg))
   expect_col_exists(leaders[["ARCHIGOS"]], vars(End))
   expect_col_exists(leaders[["ARCHIGOS"]], vars(Label))
@@ -40,7 +40,7 @@ test_that("object has the correct variables", {
 
 # Labels are standardized
 test_that("labels are standardised", {
-  expect_false(any(grepl("U.S.", leaders[["ARCHIGOS"]])))
+  expect_false(any(grepl("U\\.S\\.", leaders[["ARCHIGOS"]])))
   expect_false(any(grepl("U.K.", leaders[["ARCHIGOS"]])))
   expect_false(any(grepl("!", leaders[["ARCHIGOS"]])))
   expect_false(any(grepl("NANA.", leaders[["ARCHIGOS"]])))

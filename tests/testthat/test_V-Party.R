@@ -1,4 +1,4 @@
-# Test if V-Party meets the qVerse requirements
+# Test if V-Party meets the many packages universe requirements
 
 # Import v-Party
 vparty <- import_vparty()
@@ -35,7 +35,7 @@ test_that("Columns with dates are standardized", {
 
 # Contains the required variables
 test_that("object has the correct variables", {
-  expect_col_exists(vparty, vars(ID))
+  expect_col_exists(vparty, vars(VParty_ID))
   expect_col_exists(vparty, vars(Beg))
   expect_col_exists(vparty, vars(End))
   expect_col_exists(vparty, vars(Label))

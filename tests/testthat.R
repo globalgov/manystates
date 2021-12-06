@@ -1,4 +1,4 @@
 library(testthat)
-library(qStates)
+library(manystates)
 
-test_check("qStates")
+test_check("manystates")
