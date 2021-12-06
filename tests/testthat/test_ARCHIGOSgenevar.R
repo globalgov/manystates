@@ -1,4 +1,4 @@
-# Test if the dataset meets the many universe requirements
+# Test if the dataset meets the many packages universe requirements
 
 test_that("missing observations are reported correctly", {
   expect_false(any(grepl("^n/a$", genevar[["ARCHIGOSgenevar"]])))

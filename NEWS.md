@@ -10,7 +10,7 @@
 ## Package
 
 * Fixed #38 by fixing a bug preventing `data_contrast("qStates")` from being run while `{qStates}` is also loaded in the environment.
-* Updated the CSS in the package to make it consistent with other packages in the manyverse
+* Updated the CSS in the package to make it consistent with other packages in the qVerse
 
 ## Data
 

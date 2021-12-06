@@ -4,19 +4,20 @@
 #' [V-Dem](https://www.v-dem.net/en/data/data/v-dem-dataset-v111/) and the
 #' [V-Party](https://www.v-dem.net/en/data/data/v-party-dataset/) datasets
 #' from their [`{vdemdata}`](https://github.com/vdeminstitute/vdemdata)
-#' package in a qVerse consistent format.
+#' package in a many packages universe consistent format.
 #' @name extract_vdem
 NULL
 
 #' @name extract_vdem
 #' @details `import_vdem()` imports VDem 11.1 dataset
-#' and formats them to a qVerse consistent output.
+#' and formats them to a many packages universe consistent output.
 #' @importFrom tibble as_tibble
 #' @importFrom manydata transmutate
 #' @importFrom manypkgs standardise_dates
 #' @importFrom rlang .data
 #' @import dplyr
-#' @return A dataframe of the`[vdem]` dataset in a qVerse-consistent format.
+#' @return A dataframe of the`[vdem]` dataset in a many packages
+#' universe-consistent format.
 #' @examples
 #' \donttest{
 #' import_vdem()
@@ -59,12 +60,13 @@ import_vdem <- function() {
 
 #' @name extract_vdem
 #' @details `import_vparty()` imports the V-Party dataset and formats it to
-#' a qVerse consistent dataframe.
+#' a many packages universe consistent dataframe.
 #' @importFrom tibble as_tibble
 #' @import dplyr
 #' @importFrom manypkgs standardise_dates
 #' @importFrom rlang .data
-#' @return A dataframe of the`[vparty]` dataset in a qVerse-consistent format.
+#' @return A dataframe of the`[vparty]` dataset in a many packages universe
+#' consistent format.
 #' @examples
 #' \donttest{
 #' import_vparty()
@@ -73,7 +75,7 @@ import_vdem <- function() {
 import_vparty <- function() {
   # Step 1: Import the data from the vdemdata package
   vparty <- vdemdata::vparty
-  # Step 2: Format it to a qConsistent format
+  # Step 2: Format it to a many packages consistent format
   vparty <- as_tibble(vparty) %>%
     dplyr::rename("VParty_ID" = "v2paid",
                   "Country_ID" = "country_id",

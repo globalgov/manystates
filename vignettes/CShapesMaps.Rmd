@@ -56,8 +56,8 @@ GDP <- dplyr::as_tibble(GDP) %>%
 ```
 
 Second, we use the `{cshapes}` package by importing a world map
-in a way that is consistent with the manyverse with the `import_cshapes()`
-function.
+in a way that is consistent with the many packages universe with the
+`import_cshapes()` function.
 
 ```{r cshapes, echo=TRUE, warning=FALSE, message=FALSE}
 # Import map data with import_cshapes()

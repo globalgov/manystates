@@ -1,4 +1,4 @@
-# Test if V-Party meets the many universe requirements
+# Test if V-Party meets the many packages universe requirements
 
 # Import v-Party
 vparty <- import_vparty()
