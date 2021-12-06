@@ -5,22 +5,24 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>States for qData • qStates</title>
+<title>States for manydata • manystates</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/paper/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
 <script src="bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><link href="extra.css" rel="stylesheet">
-<meta property="og:title" content="States for qData">
-<meta property="og:description" content="qStates provide data on states in the international system across time. 
-    The package combines and cross-references several existing datasets consistent with the qData package aims.">
+<meta property="og:title" content="States for manydata">
+<meta property="og:description" content="manystates provide data on states in the international system across time. 
+    The package combines and cross-references several existing datasets consistent with the manydata package aims.">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -32,8 +34,8 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">qStates</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.5</span>
+        <a class="navbar-link" href="index.html">manystates</a>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
       </span>
     </div>
 
@@ -73,21 +75,21 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="https://globalgov.github.io/qData/">qData</a>
+      <a href="https://globalgov.github.io/manydata/" class="external-link">manydata</a>
     </li>
     <li>
-      <a href="https://globalgov.github.io/qCreate/">qCreate</a>
+      <a href="https://globalgov.github.io/manypkgs/" class="external-link">manypkgs</a>
     </li>
     <li>
-      <a href="https://globalgov.github.io/qEnviron/">qEnviron</a>
+      <a href="https://globalgov.github.io/manyenviron/" class="external-link">manyenviron</a>
     </li>
     <li>
-      <a href="https://globalgov.github.io/qTrade/">qTrade</a>
+      <a href="https://globalgov.github.io/manytrade/" class="external-link">manytrade</a>
     </li>
   </ul>
 </li>
 <li>
-  <a href="https://github.com/globalgov/qStates">
+  <a href="https://github.com/globalgov/manystates" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -104,120 +106,123 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="qstates-" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#qstates-" class="anchor"></a>qStates <img src="reference/figures/qStates_hexlogo.png" align="right" width="220">
+<div class="section level1">
+<div class="page-header"><h1 id="manystates-">manystates <img src="reference/figures/manystates_hexlogo.png" align="right" width="220"><a class="anchor" aria-label="anchor" href="#manystates-"></a>
 </h1></div>
 <!-- badges: start -->
 
-<p><code>qStates</code> is a data package within the <a href="https://github.com/globalgov"><code>{qData}</code> ecosystem</a> of qPackages. It contains an ensemble of datasets currently available on states in the world, including information on states’ beginning and, where applicable, end dates, regime characteristics, and state leaders. An important aim of <code>qStates</code> is to record and include states as far back in history as possible. The package is geared towards global governance research, but can also be used by anyone interested in state actors across time.</p>
-<p>Please also check out <a href="https://github.com/globalgov/qData"><code>{qData}</code></a> for more information about the other packages and tools to handle data from the <a href="https://github.com/globalgov/qData">qData</a> ecosystem.</p>
-<div id="how-to-install" class="section level2">
-<h2 class="hasAnchor">
-<a href="#how-to-install" class="anchor"></a>How to install</h2>
-<p>We’ve made it easier than ever to install and start analysing global governance data in R. Simply install the core package, <a href="https://github.com/globalgov/qData">qData</a>, as follows, and then you can discover, install and update various qPackages from the console.</p>
+<p><code>manystates</code> is a data package within the <a href="https://github.com/globalgov" class="external-link">many universe of packages</a>. It contains an ensemble of datasets currently available on states in the world, including information on states’ beginning and, where applicable, end dates, regime characteristics, and state leaders. An important aim of <code>manystates</code> is to record and include states as far back in history as possible. The package is geared towards global governance research, but can also be used by anyone interested in state actors across time.</p>
+<p>Please also check out <a href="https://github.com/globalgov/manydata" class="external-link"><code>{manydata}</code></a> for more information about the other packages and tools to handle data from the many universe of packages.</p>
+<div class="section level2">
+<h2 id="how-to-install">How to install<a class="anchor" aria-label="anchor" href="#how-to-install"></a>
+</h2>
+<p>We’ve made it easier than ever to install and start analysing global governance data in R. Simply install the core package, <a href="https://github.com/globalgov/manydata" class="external-link">manydata</a>, as follows, and then you can discover, install and update various <code>many packages</code> from the console.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages(remotes)</span>
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"globalgov/qData"</span><span class="op">)</span> <span class="co"># this installs our core package, the only one you need to do independently</span>
-<span class="fu">qData</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qData/man/get_packages.html">get_packages</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># this prints a list of the publicly available data packages currently available</span>
-<span class="fu">qData</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qData/man/get_packages.html">get_packages</a></span><span class="op">(</span><span class="st">"qStates"</span><span class="op">)</span> <span class="co"># this downloads and installs the named package</span></code></pre></div>
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"globalgov/manydata"</span><span class="op">)</span> <span class="co"># this installs our core package, the only one you need to do independently</span>
+<span class="fu">manydata</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/manydata/man/get_packages.html" class="external-link">get_packages</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># this prints a list of the publicly available data packages currently available</span>
+<span class="fu">manydata</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/manydata/man/get_packages.html" class="external-link">get_packages</a></span><span class="op">(</span><span class="st">"manystates"</span><span class="op">)</span> <span class="co"># this downloads and installs the named package</span></code></pre></div>
 </div>
-<div id="data-included" class="section level2">
-<h2 class="hasAnchor">
-<a href="#data-included" class="anchor"></a>Data included</h2>
-<p>Once you have installed <a href="https://github.com/globalgov/qData">qData</a>, you can see the different databases and datasets included in the <a href="https://github.com/globalgov/qStates">qStates</a> package using the following function.</p>
+<div class="section level2">
+<h2 id="data-included">Data included<a class="anchor" aria-label="anchor" href="#data-included"></a>
+</h2>
+<p>Once you have installed <a href="https://github.com/globalgov/manydata" class="external-link">manydata</a>, you can see the different databases and datasets included in the <a href="https://github.com/globalgov/manystates" class="external-link">manystates</a> package using the following function.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">qData</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/qData/man/report.html">data_contrast</a></span><span class="op">(</span><span class="st">"qStates"</span><span class="op">)</span></code></pre></div>
-<p>Working with ensembles of related data has many advantages for robust analysis. Just take a look at our vignettes <a href="https://globalgov.github.io/qData/articles/user.html">here</a>.</p>
+<code class="sourceCode R"><span class="fu">manydata</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/manydata/man/report.html" class="external-link">data_contrast</a></span><span class="op">(</span><span class="st">"manystates"</span><span class="op">)</span></code></pre></div>
+<p>Working with ensembles of related data has many advantages for robust analysis. Just take a look at our vignettes <a href="https://globalgov.github.io/manydata/articles/user.html" class="external-link">here</a>.</p>
 </div>
-<div id="qpackages" class="section level2">
-<h2 class="hasAnchor">
-<a href="#qpackages" class="anchor"></a>qPackages</h2>
-<p>The <a href="https://github.com/globalgov/qData">qData</a> ecosystem is aimed at collecting, connecting and correcting network data across issue-domains of global governance.</p>
-<p>While some qPackages can and do include novel data, much of what they offer involves standing on the shoulders of giants. qPackages endeavour to be as transparent as possible about where data comes from, how it has been coded and/or relabelled, and who has done the work. As such, we make it easy to cite the datasets you use by listing the official references using the function above, as well as the package providers for their work assembling the data by using the function below.</p>
+<div class="section level2">
+<h2 id="the-many-packages-universe">The many packages universe<a class="anchor" aria-label="anchor" href="#the-many-packages-universe"></a>
+</h2>
+<p>The <a href="https://github.com/globalgov/manydata" class="external-link">many universe of packages</a> is aimed at collecting, connecting and correcting network data across issue-domains of global governance.</p>
+<p>While some <code>many packages</code> can and do include novel data, much of what they offer involves standing on the shoulders of giants. <code>many packages</code> endeavour to be as transparent as possible about where data comes from, how it has been coded and/or relabelled, and who has done the work. As such, we make it easy to cite the datasets you use by listing the official references using the function above, as well as the package providers for their work assembling the data by using the function below.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/citation.html">citation</a></span><span class="op">(</span><span class="st">"qStates"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"manystates"</span><span class="op">)</span></code></pre></div>
 <div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">## </span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="co">## To cite qStates in publications use:</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="co">## To cite manystates in publications use:</span></span>
 <span id="cb4-3"><a href="#cb4-3"></a><span class="co">## </span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="co">##   J. Hollway. qStates: States for qData. 2021.</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co">##   J. Hollway. manystates: States for manydata. 2021.</span></span>
 <span id="cb4-5"><a href="#cb4-5"></a><span class="co">## </span></span>
 <span id="cb4-6"><a href="#cb4-6"></a><span class="co">## A BibTeX entry for LaTeX users is</span></span>
 <span id="cb4-7"><a href="#cb4-7"></a><span class="co">## </span></span>
 <span id="cb4-8"><a href="#cb4-8"></a><span class="co">##   @Manual{,</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="co">##     title = {qStates: States for qData},</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="co">##     title = {manystates: States for manydata},</span></span>
 <span id="cb4-10"><a href="#cb4-10"></a><span class="co">##     author = {James Hollway},</span></span>
 <span id="cb4-11"><a href="#cb4-11"></a><span class="co">##     year = {2021},</span></span>
 <span id="cb4-12"><a href="#cb4-12"></a><span class="co">##     url = {https://github.com/globalgov/qStates},</span></span>
 <span id="cb4-13"><a href="#cb4-13"></a><span class="co">##   }</span></span></code></pre></div>
 </div>
-<div id="contributing" class="section level2">
-<h2 class="hasAnchor">
-<a href="#contributing" class="anchor"></a>Contributing</h2>
-<p><a href="https://github.com/globalgov/qData/blob/main/.github/CONTRIBUTING.md">qData</a> also makes it easy to contribute in lots of different ways.</p>
-<p>If you have already developed a dataset salient to this package, please reach out by flagging this as an <a href="https://github.com/globalgov/qStates/issues">issue</a> for us, or by forking, further developing the package yourself, and opening a <a href="https://github.com/globalgov/qStates/pulls">pull request</a> so that your data can be used easily.</p>
-<p>If you have collected or developed other data that may not be best for this package, but could be useful within the wider ecosystem, <a href="https://github.com/globalgov/qData">qData</a> includes a number of functions that make it easy to create a new qPackage and populate with clean, consistent global governance data.</p>
-<p>If you have any other ideas about how this package or the qData ecosystem more broadly might better facilitate your empirical analysis, we’d be very happy to hear from you.</p>
+<div class="section level2">
+<h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
+</h2>
+<p><a href="https://github.com/globalgov/manydata/blob/main/.github/CONTRIBUTING.md" class="external-link">manydata</a> also makes it easy to contribute in lots of different ways.</p>
+<p>If you have already developed a dataset salient to this package, please reach out by flagging this as an <a href="https://github.com/globalgov/manystates/issues" class="external-link">issue</a> for us, or by forking, further developing the package yourself, and opening a <a href="https://github.com/globalgov/manystates/pulls" class="external-link">pull request</a> so that your data can be used easily.</p>
+<p>If you have collected or developed other data that may not be best for this package, but could be useful within the wider universe of <code>many packages</code>, <a href="https://github.com/globalgov/manypkgs" class="external-link">manypkgs</a> includes a number of functions that make it easy to create a new <code>many package</code> and populate it with clean, consistent global governance data.</p>
+<p>If you have any other ideas about how this package or the manydata universe more broadly might better facilitate your empirical analysis, we’d be very happy to hear from you.</p>
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/globalgov/qStates/">https://​github.com/​globalgov/​qStates/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/globalgov/qStates/issues">https://​github.com/​globalgov/​qStates/​issues</a>
-</li>
+<li><a href="https://github.com/globalgov/manystates/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/globalgov/manystates/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></small></li>
+<li><small><a href="https://creativecommons.org/licenses/by/4.0" class="external-link">CC BY 4.0</a></small></li>
 </ul>
 </div>
+
 <div class="community">
-<h2>Community</h2>
+<h2 data-toc-skip>Community</h2>
 <ul class="list-unstyled">
 <li><a href="CONTRIBUTING.html">Contributing guide</a></li>
 <li><a href="CODE_OF_CONDUCT.html">Code of conduct</a></li>
 </ul>
 </div>
+
 <div class="citation">
-<h2>Citation</h2>
+<h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li><a href="authors.html">Citing qStates</a></li>
-</ul>
-</div>
-<div class="developers">
-<h2>Developers</h2>
-<ul class="list-unstyled">
-<li>
-<a href="https://jameshollway.com">James Hollway</a> <br><small class="roles"> Maintainer, author, contributor </small> <a href="https://orcid.org/0000-0002-8361-9647" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> <br><small>(IHEID)</small>
-</li>
-<li><a href="authors.html">All authors...</a></li>
+<li><a href="authors.html#citation">Citing manystates</a></li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="developers">
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="lifecycle"></a></li>
+<li>
+<a href="https://jameshollway.com" class="external-link">James Hollway</a> <br><small class="roles"> Maintainer, author, contributor </small> <a href="https://orcid.org/0000-0002-8361-9647" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li><a href="authors.html">More about authors...</a></li>
 </ul>
 </div>
+
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://www.tidyverse.org/lifecycle/#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="lifecycle"></a></li>
+</ul>
 </div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by <a href="https://jameshollway.com">James Hollway</a>.</p>
+  <p></p>
+<p>Developed by <a href="https://jameshollway.com" class="external-link">James Hollway</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
       </footer>
@@ -225,6 +230,8 @@
 
   
 
+
+  
 
   </body>
 </html>
