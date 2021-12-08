@@ -2,8 +2,9 @@ url: https://globalgov.github.io/manystates/
 development:
     mode: auto
 template:
+  bootstrap: 5
   params:
-    bootswatch: paper
+    bootswatch: litera
 authors:
   James Hollway:
     href: https://jameshollway.com
@@ -18,6 +19,7 @@ navbar:
     - news
     right:
     - packages
+    - search
     - github
   components:
     home:
@@ -72,3 +74,10 @@ reference:
     - leaders
     - regimes
     - genevar
+footer:
+  structure:
+    left: panarchic
+    right: authors
+  components:
+    panarchic: Part of the [PANARCHIC project](https://panarchic.ch/).
+    
