@@ -76,8 +76,9 @@ reference:
     - genevar
 footer:
   structure:
-    left: panarchic
-    right: authors
+    left: devs
+    right: panarchic
   components:
+    devs: Developed by [James Hollway](https://jameshollway.com/).
     panarchic: Part of the [PANARCHIC project](https://panarchic.ch/).
     
