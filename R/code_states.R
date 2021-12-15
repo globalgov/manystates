@@ -15,9 +15,9 @@
 code_states <- function(v) {
 
   # Find country codes from the label column
-  coment <- sapply(countryregex[, 3], function(x) grepl(x, v,
-                                                       ignore.case = T,
-                                                       perl = T) * 1)
+  coment <- vapply(countryregex[, 3],
+                   function(x) grepl(x, v, ignore.case = T, perl = T) * 1,
+                   FUN.VALUE = double(length(v)))
   colnames(coment) <- countryregex[, 1]
   rownames(coment) <- v
   out <- apply(coment, 1, function(x) paste(names(x[x == 1]), collapse = "_"))
@@ -37,7 +37,7 @@ code_states <- function(v) {
 #' #' @details This function uses the `countrycode` package to identify and
 #' return
 #' various country specific information such as the internet domain and unicode
-#' #' flags to the preprocessed dataset.
+#' #' flags to the pre-processed dataset.
 #' #' @return A dataframe adding information to the pre-exported dataset.
 #' #' @importfrom tibble as_tibble
 #' #' @import countrycode
