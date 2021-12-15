@@ -60,8 +60,6 @@ jobs:
           remotes::install_deps(dependencies = TRUE)
           remotes::install_github("globalgov/manydata")
           remotes::install_cran("rcmdcheck")
-          remotes::install_cran("covr")
-          remotes::install_cran("lintr")
         shell: Rscript {0}
 
 #      - name:Document
@@ -94,9 +92,10 @@ jobs:
           name: ${{ matrix.config.asset_name }}
           path: build/
 
-      - name: Calculate code coverage
-        run: Rscript -e "covr::codecov()"
-       
-      - name: Lint
-        run: lintr::lint_package()
-        shell: Rscript {0}
+      # Note: Don't forget to install the packages above if uncommenting
+      # - name: Calculate code coverage
+      #   run: Rscript -e "covr::codecov()"
+      #  
+      # - name: Lint package
+      #   run: lintr::lint_package()
+      #   shell: Rscript {0}

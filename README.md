@@ -10,8 +10,8 @@ date)](https://img.shields.io/github/v/release/globalgov/manystates)
 Date](https://img.shields.io/github/release-date/globalgov/manystates)
 ![GitHub
 issues](https://img.shields.io/github/issues-raw/globalgov/manystates)
-[![Codecov
-badge](https://codecov.io/gh/globalgov/manystates/branch/main/graph/badge.svg)](https://codecov.io/gh/globalgov/manystates)
+[![Codecov test
+coverage](https://codecov.io/gh/globalgov/manystates/branch/main/graph/badge.svg)](https://app.codecov.io/gh/globalgov/manystates?branch=main)
 [![CodeFactor](https://www.codefactor.io/repository/github/globalgov/manystates/badge)](https://www.codefactor.io/repository/github/globalgov/manystates)
 <!-- badges: end -->
 
