@@ -1,6 +1,6 @@
 on:
   push:
-    branches: 
+    branches:
       - main
 
 name: Check and release
@@ -23,15 +23,15 @@ jobs:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
       RSPM: ${{ matrix.config.rspm }}
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-      
+
     steps:
       - uses: actions/checkout@v2
-        
+
       - uses: r-lib/actions/setup-r@master
         with:
           r-version: ${{ matrix.config.r }}
       - uses: r-lib/actions/setup-pandoc@master
-        
+
       - name: Query dependencies
         run: |
           install.packages('remotes')
@@ -61,7 +61,8 @@ jobs:
           remotes::install_github("globalgov/manydata")
           remotes::install_github("globalgov/manypkgs")
           remotes::install_cran("rcmdcheck")
-        shell: Rscript {0}
+          remotes::install_cran("covr")
+          shell: Rscript {0}
 
 #      - name: Document
 #        run: Rscript -e 'roxygen2::roxygenise()'
@@ -125,10 +126,10 @@ jobs:
           release_name: Release ${{ steps.newtag.outputs.tag }}
           draft: false
           prerelease: false
-          
+
       - name: Download binaries
         uses: actions/download-artifact@v2
-        
+
       - name: Display structure of downloaded files
         run: ls -R
 
@@ -141,12 +142,12 @@ jobs:
         run: ls -R
 
       - name: Upload binary
-        id: upload-binary 
+        id: upload-binary
         uses: actions/upload-release-asset@v1.0.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
           asset_path: manystates_AllOS.zip
           asset_name: manystates_AllOS.zip
           asset_content_type: application/zip
