@@ -57,7 +57,8 @@ Suggests:
     rmarkdown,
     knitr,
     ggplot2,
-    hrbrthemes
+    hrbrthemes,
+    covr
 Remotes:
     globalgov/manypkgs,
     globalgov/manydata,
