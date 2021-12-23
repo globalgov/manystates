@@ -9,3 +9,4 @@
 ^pkgdown$
 ^.*\.RDataTmp
 ^codecov\.yml$
+^data-raw/states$
