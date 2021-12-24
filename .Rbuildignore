@@ -10,3 +10,5 @@
 ^.*\.RDataTmp
 ^codecov\.yml$
 ^data-raw/states$
+^data-raw/economics$
+^data-raw/Economics$
