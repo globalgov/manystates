@@ -20,4 +20,99 @@ regimes
 \description{
 regimes database documentation
 }
+\details{
+\preformatted{## $Polity5
+## -- Data Summary ------------------------
+##                            Values
+## Name                       X[[i]]
+## Number of rows             17574 
+## Number of columns          33    
+## _______________________          
+## Column type frequency:           
+##   character                3     
+##   logical                  1     
+##   numeric                  29    
+## ________________________         
+## Group variables            None  
+## 
+## -- Variable type: character ----------------------------------------------------
+## # A tibble: 3 x 8
+##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
+## 1 Label                 0             1     3    24     0      195          0
+## 2 Beg                   0             1     4    10     0     1210          0
+## 3 End                   0             1     4    10     0     1126          0
+## 
+## -- Variable type: logical ------------------------------------------------------
+## # A tibble: 1 x 5
+##   skim_variable n_missing complete_rate  mean count
+## * <chr>             <int>         <dbl> <dbl> <chr>
+## 1 speccat           17574             0   NaN ": " 
+## 
+## -- Variable type: numeric ------------------------------------------------------
+## # A tibble: 29 x 10
+##    skim_variable n_missing complete_rate          mean           sd    p0
+##  * <chr>             <int>         <dbl>         <dbl>        <dbl> <dbl>
+##  1 Polity5_ID            0        1          404.          250.         2
+##  2 year                  0        1         1941.           60.3     1776
+##  3 p5                    0        1            0.311         0.463      0
+##  4 cyear                 0        1      4041651.      2495259.     21776
+##  5 flag                  0        1            0.00319       0.0621     0
+##  6 fragment          14128        0.196        0.229         0.711      0
+##  7 democ               809        0.954        3.50          3.86       0
+##  8 autoc               809        0.954        4.03          3.51       0
+##  9 polity              809        0.954       -0.522         7.10     -10
+## 10 polity2             268        0.985       -0.526         7.01     -10
+## 11 durable            1264        0.928       20.9          24.6        0
+## 12 xrreg               809        0.954        2.44          0.668      1
+## 13 xrcomp              809        0.954        1.57          1.04       0
+## 14 xropen              809        0.954        2.87          1.56       0
+## 15 xconst              809        0.954        3.80          2.39       1
+## 16 parreg              809        0.954        3.47          1.04       1
+## 17 parcomp             809        0.954        2.64          1.47       0
+## 18 exrec               183        0.990        0.821        17.7      -88
+## 19 exconst             809        0.954        3.80          2.39       1
+## 20 polcomp             126        0.993        1.25         17.8      -88
+## 21 prior             16195        0.0785      -1.14          9.23     -88
+## 22 eprec             16121        0.0827       1.10          5.16     -77
+## 23 interim           16284        0.0734     -61.5          33.5      -88
+## 24 bprec             16287        0.0732       1.42          1.18       1
+## 25 post              16302        0.0724      -1.42         11.2      -88
+## 26 change            15346        0.127       -5.20         46.3      -88
+## 27 d5                16277        0.0738       1             0          1
+## 28 sf                17276        0.0170       1             0          1
+## 29 regtrans          15334        0.127       -5.85         45.1      -88
+##         p25      p50      p75    p100
+##  *    <dbl>    <dbl>    <dbl>   <dbl>
+##  1     200      366      630      950
+##  2    1894     1960     1992     2020
+##  3       0        0        1        1
+##  4 2001907. 3661924. 6301986. 9502018
+##  5       0        0        0        2
+##  6       0        0        0        3
+##  7       0        1        7       10
+##  8       0        4        7       10
+##  9      -7       -3        7       10
+## 10      -7       -3        7       10
+## 11       4       13       29      170
+## 12       2        3        3        3
+## 13       1        1        3        3
+## 14       1        4        4        4
+## 15       1        3        7        7
+## 16       3        4        4        5
+## 17       1        3        4        5
+## 18       2        4        8        8
+## 19       1        3        7        7
+## 20       1        6        7       10
+## 21      -7       -3        5       99
+## 22       1        1        1        9
+## 23     -88      -77      -66        8
+## 24       1        1        1        9
+## 25      -7       -2        6       98
+## 26     -11        0        3       99
+## 27       1        1        1        1
+## 28       1        1        1        1
+## 29      -2        0        3       99
+}
+}
 \keyword{datasets}

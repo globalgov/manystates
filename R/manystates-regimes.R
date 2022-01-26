@@ -8,4 +8,9 @@
 #' \item{Polity5: }{A dataset with 17574 observations and the following
 #' 33 variables: Polity5_ID, year, Label, p5, cyear, flag, fragment, democ, autoc, polity, polity2, durable, xrreg, xrcomp, xropen, xconst, parreg, parcomp, exrec, exconst, polcomp, prior, eprec, interim, bprec, post, change, d5, sf, regtrans, Beg, End, speccat.}
 #' }
+#' 
+#' @details
+#' ``` {r, echo = FALSE, warning = FALSE}
+#' lapply(regimes, skimr::skim_without_charts)
+#' ```
  "regimes"

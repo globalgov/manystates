@@ -10,4 +10,9 @@
 #' \item{EconomicFreedomHist: }{A dataset with 458 observations and the following
 #' 5 variables: EconomicFreedom_ID, Year, Country, EFW, Rank.}
 #' }
+#' 
+#' #' @details
+#' ``` {r, echo = FALSE, warning = FALSE}
+#' lapply(economics, skimr::skim_without_charts)
+#' ```
  "economics"
