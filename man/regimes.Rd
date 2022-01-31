@@ -6,12 +6,25 @@
 \title{regimes database documentation}
 \format{
 The regimes database is a list that contains the
-following 1 datasets: Polity5.
+following 4 datasets: Polity5, FreedomHouse1, FreedomHouse2, FreedomHouse3.
 For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
 \describe{
 \item{Polity5: }{A dataset with 17574 observations and the following
-33 variables: Polity5_ID, year, Label, p5, cyear, flag, fragment, democ, autoc, polity, polity2, durable, xrreg, xrcomp, xropen, xconst, parreg, parcomp, exrec, exconst, polcomp, prior, eprec, interim, bprec, post, change, d5, sf, regtrans, Beg, End, speccat.}
+33 variables: Polity5_ID, year, Label, p5, cyear, flag, fragment, democ,
+autoc, polity, polity2, durable, xrreg, xrcomp, xropen, xconst, parreg,
+parcomp, exrec, exconst, polcomp, prior, eprec, interim, bprec, post, change,
+d5, sf, regtrans, Beg, End, speccat.}
+\item{FreedomHouse1: }{A dataset with 1885 observations and the following
+46 variables: ID, Year, Label, Region, Edition, Status, PR rating, CL rating,
+A1, A2, A3, A, B1, B2, B3, B4, B, C1, C2, C3, C, Add Q, Add A, PR, D1, D2,
+D3, D4, D, E1, E2, E3, E, F1, F2, F3, F4, F, G1, G2, G3, G4, G, CL, Total,
+Territory.}
+\item{FreedomHouse2: }{A dataset with 33264 observations and the following
+6 variables: ID, Year, Label, Status, Value, Territory.}
+\item{FreedomHouse3: }{A dataset with 3960 observations and the following
+21 variables: ID, Year, Label, Region, Edition, Status, PR Rating, CL Rating,
+A, B, C, Add Q, Add A, PR, D, E, F, G, CL, Total, Territory.}
 }
 }
 \usage{
@@ -113,6 +126,210 @@ regimes database documentation
 ## 27       1        1        1        1
 ## 28       1        1        1        1
 ## 29      -2        0        3       99
+## 
+## $FreedomHouse1
+## -- Data Summary ------------------------
+##                            Values
+## Name                       X[[i]]
+## Number of rows             1885  
+## Number of columns          46    
+## _______________________          
+## Column type frequency:           
+##   character                6     
+##   numeric                  40    
+## ________________________         
+## Group variables            None  
+## 
+## -- Variable type: character ----------------------------------------------------
+## # A tibble: 6 x 8
+##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
+## 1 ID                   40         0.979     3     7     0      200          0
+## 2 Year                  0         1         4     4     0        9          0
+## 3 Label                 0         1         4    30     0      211          0
+## 4 Region                0         1         3     8     0        6          0
+## 5 Edition               0         1         4     4     0        9          0
+## 6 Status                0         1         1     2     0        3          0
+## 
+## -- Variable type: numeric ------------------------------------------------------
+## # A tibble: 40 x 10
+##    skim_variable n_missing complete_rate    mean     sd    p0   p25   p50   p75
+##  * <chr>             <int>         <dbl>   <dbl>  <dbl> <dbl> <dbl> <dbl> <dbl>
+##  1 PR rating             0         1      3.56    2.20      1     1     3     6
+##  2 CL rating             0         1      3.45    1.93      1     2     3     5
+##  3 A1                    0         1      2.43    1.61      0     1     3     4
+##  4 A2                    0         1      2.53    1.52      0     1     3     4
+##  5 A3                    0         1      2.40    1.41      0     1     3     4
+##  6 A                     0         1      7.37    4.40      0     3     9    12
+##  7 B1                    0         1      2.61    1.40      0     1     3     4
+##  8 B2                    0         1      2.48    1.56      0     1     3     4
+##  9 B3                    0         1      2.26    1.43      0     1     2     4
+## 10 B4                    0         1      2.29    1.24      0     1     3     3
+## 11 B                     0         1      9.64    5.36      0     5    11    15
+## 12 C1                    0         1      2.27    1.51      0     1     3     4
+## 13 C2                    0         1      1.86    1.17      0     1     2     3
+## 14 C3                    0         1      1.97    1.29      0     1     2     3
+## 15 C                     0         1      6.11    3.72      0     3     6    10
+## 16 Add Q                 0         1      0.180   0.666     0     0     0     0
+## 17 Add A               838         0.555  0.0516  0.349     0     0     0     0
+## 18 PR                    0         1     23.0    13.4      -3    11    26    36
+## 19 D1                    0         1      2.14    1.28      0     1     2     3
+## 20 D2                    0         1      2.82    1.26      0     2     3     4
+## 21 D3                    0         1      2.75    1.27      0     2     3     4
+## 22 D4                    0         1      2.87    1.19      0     2     3     4
+## 23 D                     0         1     10.6     4.64      0     7    12    15
+## 24 E1                    0         1      2.41    1.45      0     1     3     4
+## 25 E2                    0         1      2.50    1.42      0     1     3     4
+## 26 E3                    0         1      2.39    1.26      0     1     2     3
+## 27 E                     0         1      7.30    3.95      0     4     8    11
+## 28 F1                    0         1      2.04    1.39      0     1     2     3
+## 29 F2                    0         1      1.98    1.33      0     1     2     3
+## 30 F3                    0         1      2.00    1.39      0     1     2     3
+## 31 F4                    0         1      1.86    1.10      0     1     2     3
+## 32 F                     0         1      7.88    4.94      0     4     7    12
+## 33 G1                    0         1      2.64    1.25      0     2     3     4
+## 34 G2                    0         1      2.37    1.10      0     2     2     3
+## 35 G3                    0         1      2.29    1.05      0     2     2     3
+## 36 G4                    0         1      2.01    1.06      0     1     2     3
+## 37 G                     0         1      9.31    4.14      0     6     9    13
+## 38 CL                    0         1     35.1    17.1       1    21    36    51
+## 39 Total                 0         1     58.0    30.2      -1    31    62    87
+## 40 Territory             0         1      0.0690  0.253     0     0     0     0
+##     p100
+##  * <dbl>
+##  1     7
+##  2     7
+##  3     4
+##  4     4
+##  5     4
+##  6    12
+##  7     4
+##  8     4
+##  9     4
+## 10     4
+## 11    16
+## 12     4
+## 13     4
+## 14     4
+## 15    12
+## 16     4
+## 17     3
+## 18    40
+## 19     4
+## 20     4
+## 21     4
+## 22     4
+## 23    16
+## 24     4
+## 25     4
+## 26     4
+## 27    12
+## 28     4
+## 29     4
+## 30     4
+## 31     4
+## 32    16
+## 33     4
+## 34     4
+## 35     4
+## 36     4
+## 37    16
+## 38    60
+## 39   100
+## 40     1
+## 
+## $FreedomHouse2
+## -- Data Summary ------------------------
+##                            Values
+## Name                       X[[i]]
+## Number of rows             33264 
+## Number of columns          6     
+## _______________________          
+## Column type frequency:           
+##   character                5     
+##   numeric                  1     
+## ________________________         
+## Group variables            None  
+## 
+## -- Variable type: character ----------------------------------------------------
+## # A tibble: 5 x 8
+##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
+## 1 ID                 1440         0.957     3     7     0      201          0
+## 2 Year                  0         1         4     4     0       48          0
+## 3 Label                 0         1         4    46     0      230          0
+## 4 Status                0         1         2     6     0        3          0
+## 5 Value              5877         0.823     1     2     0       10          0
+## 
+## -- Variable type: numeric ------------------------------------------------------
+## # A tibble: 1 x 10
+##   skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75
+## * <chr>             <int>         <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
+## 1 Territory             0             1 0.108 0.311     0     0     0     0
+##    p100
+## * <dbl>
+## 1     1
+## 
+## $FreedomHouse3
+## -- Data Summary ------------------------
+##                            Values
+## Name                       X[[i]]
+## Number of rows             3960  
+## Number of columns          21    
+## _______________________          
+## Column type frequency:           
+##   character                6     
+##   numeric                  15    
+## ________________________         
+## Group variables            None  
+## 
+## -- Variable type: character ----------------------------------------------------
+## # A tibble: 6 x 8
+##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
+## 1 ID                   87         0.978     3     7     0      202          0
+## 2 Year                  0         1         4     4     0       18          0
+## 3 Label                 0         1         4    46     0      222          0
+## 4 Region              621         0.843     3     8     0        6          0
+## 5 Edition             621         0.843     4     4     0       16          0
+## 6 Status              621         0.843     1     2     0        3          0
+## 
+## -- Variable type: numeric ------------------------------------------------------
+## # A tibble: 15 x 10
+##    skim_variable n_missing complete_rate    mean     sd    p0   p25   p50   p75
+##  * <chr>             <int>         <dbl>   <dbl>  <dbl> <dbl> <dbl> <dbl> <dbl>
+##  1 PR Rating             3         0.999  6.61    9.06     -2     2     4     6
+##  2 CL Rating             3         0.999  8.50   13.7       0     2     4     6
+##  3 A                   621         0.843  7.41    4.38      0     3     9    12
+##  4 B                   621         0.843  9.70    5.32      0     5    11    15
+##  5 C                   621         0.843  6.20    3.73      0     3     6    10
+##  6 Add Q               621         0.843  0.152   0.613     0     0     0     0
+##  7 Add A              1459         0.632  0.0656  0.422     0     0     0     0
+##  8 PR                  621         0.843 23.2    13.3      -3    11    26    36
+##  9 D                   621         0.843 10.8     4.57      0     7    12    15
+## 10 E                   621         0.843  7.45    3.90      0     4     8    11
+## 11 F                   621         0.843  8.06    4.91      0     4     8    13
+## 12 G                   621         0.843  9.38    4.11      0     6     9    13
+## 13 CL                  621         0.843 35.7    16.9       0    22    36    52
+## 14 Total                 3         0.999 59.0    29.8      -1    32    62    88
+## 15 Territory             0         1      0.0687  0.253     0     0     0     0
+##     p100
+##  * <dbl>
+##  1    44
+##  2    60
+##  3    12
+##  4    16
+##  5    12
+##  6     4
+##  7     4
+##  8    40
+##  9    16
+## 10    12
+## 11    16
+## 12    16
+## 13    60
+## 14   101
+## 15     1
 }
 }
 \keyword{datasets}
