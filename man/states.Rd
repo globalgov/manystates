@@ -39,7 +39,7 @@ states database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ----------------------------------------------------
+## -- Variable type: character -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## # A tibble: 5 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
 ## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
@@ -61,7 +61,7 @@ states database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ----------------------------------------------------
+## -- Variable type: character -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## # A tibble: 7 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
 ## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
@@ -85,7 +85,7 @@ states database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ----------------------------------------------------
+## -- Variable type: character -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## # A tibble: 5 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
 ## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
@@ -108,7 +108,7 @@ states database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ----------------------------------------------------
+## -- Variable type: character -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## # A tibble: 7 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
 ## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
@@ -120,28 +120,18 @@ states database documentation
 ## 6 GWsys                22        0.899      7     7     0      122          0
 ## 7 Notes                58        0.733     25   239     0      138          0
 ## 
-## -- Variable type: numeric ------------------------------------------------------
+## -- Variable type: numeric ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## # A tibble: 8 x 10
-##   skim_variable n_missing complete_rate    mean      sd    p0   p25   p50   p75
-## * <chr>             <int>         <dbl>   <dbl>   <dbl> <dbl> <dbl> <dbl> <dbl>
-## 1 ICOW_ID               0        1      460.    257.        2  271    435   670
-## 2 ColRuler             46        0.788  293.    172.        2  200    220   300
-## 3 IndFrom              39        0.820  289.    185.        2  200    220   345
-## 4 IndViol               0        1        0.424   0.495     0    0      0     1
-## 5 IndType               0        1        2.15    0.774     1    2      2     2
-## 6 SecFrom             179        0.175  313.    200.       41  141.   315   365
-## 7 SecViol             179        0.175    0.605   0.495     0    0      1     1
-## 8 Into                198        0.0876 361     175.      255  255    255   325
-##    p100
-## * <dbl>
-## 1   990
-## 2   920
-## 3   920
-## 4     1
-## 5     4
-## 6   820
-## 7     1
-## 8   816
+##   skim_variable n_missing complete_rate    mean      sd    p0   p25   p50   p75  p100
+## * <chr>             <int>         <dbl>   <dbl>   <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
+## 1 ICOW_ID               0        1      460.    257.        2  271    435   670   990
+## 2 ColRuler             46        0.788  293.    172.        2  200    220   300   920
+## 3 IndFrom              39        0.820  289.    185.        2  200    220   345   920
+## 4 IndViol               0        1        0.424   0.495     0    0      0     1     1
+## 5 IndType               0        1        2.15    0.774     1    2      2     2     4
+## 6 SecFrom             179        0.175  313.    200.       41  141.   315   365   820
+## 7 SecViol             179        0.175    0.605   0.495     0    0      1     1     1
+## 8 Into                198        0.0876 361     175.      255  255    255   325   816
 }
 }
 \keyword{datasets}
