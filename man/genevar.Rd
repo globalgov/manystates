@@ -14,93 +14,9 @@ please use the \code{data_source()} and \code{data_contrast()} functions.
 30 variables: ARCHIGOS_ID, LeadID, ccode, idacr, Label, leader, Beg, End, BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode, prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry, num.exit, num.exitcode, num.posttenurefate, FtiesNameA, FtiesCodeA, FtiesNameB, FtiesCodeB, FtiesNameC, FtiesCodeC, ftcur.}
 }
 
-#' @details\preformatted{## $ARCHIGOSgenevar
-## -- Data Summary ------------------------
-##                            Values
-## Name                       X[[i]]
-## Number of rows             24    
-## Number of columns          30    
-## _______________________          
-## Column type frequency:           
-##   character                27    
-##   numeric                  3     
-## ________________________         
-## Group variables            None  
-## 
-## -- Variable type: character ----------------------------------------------------
-## # A tibble: 27 x 8
-##    skim_variable      n_missing complete_rate   min   max empty n_unique
-##  * <chr>                  <int>         <dbl> <int> <int> <int>    <int>
-##  1 ARCHIGOS_ID                0        1          8    10     0        6
-##  2 LeadID                     0        1         36    36     0        4
-##  3 idacr                      0        1          3     3     0        2
-##  4 Label                      0        1         10    11     0        2
-##  5 leader                     0        1         14    17     0        4
-##  6 Beg                        0        1         10    10     0       24
-##  7 End                        0        1         10    10     0       24
-##  8 BornDate                  10        0.583     10    10     0        2
-##  9 DeathDate                 11        0.542     10    10     0        1
-## 10 YearBorn                   0        1          4     4     0        4
-## 11 YearDied                   0        1          4     4     0        2
-## 12 entry                     18        0.25       7     9     0        2
-## 13 exit                      18        0.25       7     7     0        1
-## 14 exitcode                  18        0.25       7     7     0        1
-## 15 prevtimesinoffice         18        0.25       1     1     0        3
-## 16 posttenurefate            18        0.25       2    37     0        2
-## 17 dbpedia.uri               11        0.542     53    53     0        1
-## 18 num.entry                 18        0.25       1     1     0        2
-## 19 num.exit                  23        0.0417     1     1     0        1
-## 20 num.exitcode              18        0.25       1     1     0        1
-## 21 num.posttenurefate        18        0.25       1     4     0        2
-## 22 FtiesNameA                 6        0.75      22    24     0        2
-## 23 FtiesCodeA                 6        0.75      36    36     0        2
-## 24 FtiesNameB                24        0         NA    NA     0        0
-## 25 FtiesCodeB                19        0.208     36    36     0        1
-## 26 FtiesNameC                24        0         NA    NA     0        0
-## 27 FtiesCodeC                24        0         NA    NA     0        0
-##    whitespace
-##  *      <int>
-##  1          0
-##  2          0
-##  3          0
-##  4          0
-##  5          0
-##  6          0
-##  7          0
-##  8          0
-##  9          0
-## 10          0
-## 11          0
-## 12          0
-## 13          0
-## 14          0
-## 15          0
-## 16          0
-## 17          0
-## 18          0
-## 19          0
-## 20          0
-## 21          0
-## 22          0
-## 23          0
-## 24          0
-## 25          0
-## 26          0
-## 27          0
-## 
-## -- Variable type: numeric ------------------------------------------------------
-## # A tibble: 3 x 10
-##   skim_variable n_missing complete_rate   mean     sd    p0   p25   p50   p75
-## * <chr>             <int>         <dbl>  <dbl>  <dbl> <dbl> <dbl> <dbl> <dbl>
-## 1 ccode                 0          1    99.5   26.7      94    94    94 94   
-## 2 Female                0          1     0      0         0     0     0  0   
-## 3 ftcur                 6          0.75  0.278  0.461     0     0     0  0.75
-##    p100
-## * <dbl>
-## 1   225
-## 2     0
-## 3     1
-}
+#' @details
+#``` {r, echo = FALSE, warning = FALSE}
+#lapply(genevar, skimr::skim_without_charts)\preformatted{}
 }
 \usage{
 genevar

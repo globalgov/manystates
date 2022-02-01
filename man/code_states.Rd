@@ -4,10 +4,14 @@
 \alias{code_states}
 \title{Code states}
 \usage{
-code_states(v)
+code_states(v, abbrev = FALSE)
 }
 \arguments{
 \item{v}{A character vector}
+
+\item{abbrev}{Do you want 3 letter country
+abbreviations to be returned?
+False by default.}
 }
 \value{
 A character vector of parties, in English, separated by commas.
@@ -24,4 +28,5 @@ in a character vector of agreement titles or texts.
 states <- c("Two are from Switzerland", "One from New Zealand",
 "And one from Brazil")
 code_states(states)
+code_states(states, abbrev = TRUE)
 }

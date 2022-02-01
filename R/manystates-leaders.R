@@ -10,7 +10,7 @@
 #' }
 #' 
 #' @details
-#' ``` {r, echo = FALSE, warning = FALSE}
-#' lapply(leaders, skimr::skim_without_charts)
+#' #``` {r, echo = FALSE, warning = FALSE}
+#' #lapply(leaders, skimr::skim_without_charts)
 #' ```
  "leaders"

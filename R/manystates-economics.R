@@ -12,7 +12,7 @@
 #' }
 #' 
 #' #' @details
-#' ``` {r, echo = FALSE, warning = FALSE}
-#' lapply(economics, skimr::skim_without_charts)
+#' #``` {r, echo = FALSE, warning = FALSE}
+#' #lapply(economics, skimr::skim_without_charts)
 #' ```
  "economics"
