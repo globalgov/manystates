@@ -48,7 +48,8 @@ Imports:
     countrycode,
     manydata,
     manypkgs,
-    vdemdata
+    vdemdata,
+    stringi
 Suggests: 
     fs,
     testthat (>= 3.0.0),
