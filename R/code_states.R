@@ -2,6 +2,9 @@
 #'
 #' Retrieves countries from a character vector
 #' @param v A character vector
+#' @param abbrev Do you want 3 letter country
+#' abbreviations to be returned?
+#' False by default.
 #' @details This function builds upon the `stat_actor` list and the
 #' `countrycode` package to identify and return the parties mentioned
 #' in a character vector of agreement titles or texts.
@@ -11,21 +14,32 @@
 #' states <- c("Two are from Switzerland", "One from New Zealand",
 #' "And one from Brazil")
 #' code_states(states)
+#' code_states(states, abbrev = TRUE)
 #' @export
-code_states <- function(v) {
-
-  # Find country codes from the label column
-  coment <- vapply(countryregex[, 3],
-                   function(x) grepl(x, v, ignore.case = T, perl = T) * 1,
-                   FUN.VALUE = double(length(v)))
-  colnames(coment) <- countryregex[, 1]
-  rownames(coment) <- v
-  out <- apply(coment, 1, function(x) paste(names(x[x == 1]), collapse = "_"))
-  out[out == ""] <- NA
-  out <- unname(out)
-  # Some agreements are made between unions of countries and others,
-  # but are still considered bilateral. In these cases, abbreviations
-  # for unions will have 2 letters instead of 3.
+code_states <- function(v, abbrev = FALSE) {
+  # Translates string to ASCII
+  v <- stringi::stri_trans_general(v, "Latin-ASCII")
+  if (abbrev == TRUE) {
+    # Find country labels from the label column
+    coment <- vapply(countryregex[, 3],
+                     function(x) grepl(x, v, ignore.case = T, perl = T) * 1,
+                     FUN.VALUE = double(length(v)))
+    colnames(coment) <- countryregex[, 2]
+    rownames(coment) <- v
+    out <- apply(coment, 1, function(x) paste(names(x[x == 1]), collapse = "_"))
+    out[out == ""] <- NA
+    out <- unname(out)
+  } else {
+    # Find country codes from the label column
+    coment <- vapply(countryregex[, 3],
+                     function(x) grepl(x, v, ignore.case = T, perl = T) * 1,
+                     FUN.VALUE = double(length(v)))
+    colnames(coment) <- countryregex[, 1]
+    rownames(coment) <- v
+    out <- apply(coment, 1, function(x) paste(names(x[x == 1]), collapse = "_"))
+    out[out == ""] <- NA
+    out <- unname(out)
+  }
   out
 }
 
