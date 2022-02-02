@@ -27,7 +27,9 @@ states
 states database documentation
 }
 \details{
-#``` {r, echo = FALSE, warning = FALSE}
-#lapply(states, skimr::skim_without_charts)\preformatted{}
+\subsection{NA}{
+
+NA
+}
 }
 \keyword{datasets}

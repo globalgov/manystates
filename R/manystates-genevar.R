@@ -10,7 +10,7 @@
 #' }
 #' 
 #' #' @details
-#' #``` {r, echo = FALSE, warning = FALSE}
-#' #lapply(genevar, skimr::skim_without_charts)
+#' ``` {r, echo = FALSE, warning = FALSE}
+#' lapply(genevar, skimr::skim_without_charts)
 #' ```
  "genevar"

@@ -34,7 +34,9 @@ regimes
 regimes database documentation
 }
 \details{
-#``` {r, echo = FALSE, warning = FALSE}
-#lapply(regimes, skimr::skim_without_charts)\preformatted{}
+\subsection{NA}{
+
+NA
+}
 }
 \keyword{datasets}

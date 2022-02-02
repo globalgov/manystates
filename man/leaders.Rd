@@ -21,7 +21,9 @@ leaders
 leaders database documentation
 }
 \details{
-#``` {r, echo = FALSE, warning = FALSE}
-#lapply(leaders, skimr::skim_without_charts)\preformatted{}
+\subsection{NA}{
+
+NA
+}
 }
 \keyword{datasets}

@@ -16,7 +16,7 @@
 #' }
 #' 
 #' @details
-#' #``` {r, echo = FALSE, warning = FALSE}
-#' #lapply(states, skimr::skim_without_charts)
+#' ``` {r, echo = FALSE, warning = FALSE}
+#' lapply(states, skimr::skim_without_charts)
 #' ```
  "states"

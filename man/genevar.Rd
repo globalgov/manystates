@@ -13,10 +13,10 @@ please use the \code{data_source()} and \code{data_contrast()} functions.
 \item{ARCHIGOSgenevar: }{A dataset with 24 observations and the following
 30 variables: ARCHIGOS_ID, LeadID, ccode, idacr, Label, leader, Beg, End, BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode, prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry, num.exit, num.exitcode, num.posttenurefate, FtiesNameA, FtiesCodeA, FtiesNameB, FtiesCodeB, FtiesNameC, FtiesCodeC, ftcur.}
 }
+\subsection{#' @detailsNA}{
 
-#' @details
-#``` {r, echo = FALSE, warning = FALSE}
-#lapply(genevar, skimr::skim_without_charts)\preformatted{}
+NA
+}
 }
 \usage{
 genevar
