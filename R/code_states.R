@@ -24,7 +24,7 @@ code_states <- function(v, abbrev = FALSE) {
     coment <- vapply(countryregex[, 3],
                      function(x) grepl(x, v, ignore.case = T, perl = T) * 1,
                      FUN.VALUE = double(length(v)))
-    colnames(coment) <- countryregex[, 2]
+    colnames(coment) <- countryregex[, 1]
     rownames(coment) <- v
     out <- apply(coment, 1, function(x) paste(names(x[x == 1]), collapse = "_"))
     out[out == ""] <- NA
@@ -34,7 +34,7 @@ code_states <- function(v, abbrev = FALSE) {
     coment <- vapply(countryregex[, 3],
                      function(x) grepl(x, v, ignore.case = T, perl = T) * 1,
                      FUN.VALUE = double(length(v)))
-    colnames(coment) <- countryregex[, 1]
+    colnames(coment) <- countryregex[, 2]
     rownames(coment) <- v
     out <- apply(coment, 1, function(x) paste(names(x[x == 1]), collapse = "_"))
     out[out == ""] <- NA

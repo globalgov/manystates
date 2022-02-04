@@ -25,7 +25,7 @@ data <- data.frame(title = c("Korea and Democratic People's Republic of Korea",
                              "Northern rhodesia"))
 
 test_that("states are given the correct label", {
- expect_equal(code_states(data$title), c("KOR_PRK", "GNQ", "GIN", "DEU", "DDR", "AUH_HUN", "AUT_HUN", "BGD", "PAK",
+ expect_equal(code_states(data$title, abbrev=TRUE), c("KOR_PRK", "GNQ", "GIN", "DEU", "DDR", "AUH_HUN", "AUT_HUN", "BGD", "PAK",
                                          "GBR_USA", "GBR_USA", "GBR_UGA", "ARE", "ARE", "GCL", "GCL",
                                          "EUE_USA", "EUE_USA", NA, "KEN", "BEL", "ZAF", "ZAF", "ZMB"))
 })
