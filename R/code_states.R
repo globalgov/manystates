@@ -20,7 +20,7 @@ code_states <- function(v, abbrev = FALSE) {
   # Translates string to ASCII
   v <- stringi::stri_trans_general(v, "Latin-ASCII")
   if (abbrev == TRUE) {
-    # Find country labels from the label column
+    # Find country codes from the statID column
     coment <- vapply(countryregex[, 3],
                      function(x) grepl(x, v, ignore.case = T, perl = T) * 1,
                      FUN.VALUE = double(length(v)))
@@ -30,14 +30,15 @@ code_states <- function(v, abbrev = FALSE) {
     out[out == ""] <- NA
     out <- unname(out)
   } else {
-    # Find country codes from the label column
+    # Find country labels from the label column
     coment <- vapply(countryregex[, 3],
                      function(x) grepl(x, v, ignore.case = T, perl = T) * 1,
                      FUN.VALUE = double(length(v)))
     colnames(coment) <- countryregex[, 2]
     rownames(coment) <- v
     out <- apply(coment, 1, function(x) paste(names(x[x == 1]), collapse = "_"))
-    out[out == ""] <- NA
+    ind <- which(rowSums(coment)==0)
+    out[out == ""] <- paste(rownames(coment)[ind])
     out <- unname(out)
   }
   out
