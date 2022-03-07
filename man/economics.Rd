@@ -15,9 +15,200 @@ please use the \code{data_source()} and \code{data_contrast()} functions.
 \item{EconomicFreedomHist: }{A dataset with 458 observations and the following
 5 variables: EconomicFreedom_ID, Year, Country, EFW, Rank.}
 }
-\subsection{#' @detailsNA}{
 
-NA
+#' @details\preformatted{#> $EconomicFreedom
+#> -- Data Summary ------------------------
+#>                            Values
+#> Name                       X[[i]]
+#> Number of rows             4290  
+#> Number of columns          74    
+#> _______________________          
+#> Column type frequency:           
+#>   character                7     
+#>   numeric                  67    
+#> ________________________         
+#> Group variables            None  
+#> 
+#> -- Variable type: character ------------------------------------------------------------------------------------------------------
+#> # A tibble: 7 x 8
+#>   skim_variable      n_missing complete_rate   min   max empty n_unique whitespace
+#> * <chr>                  <int>         <dbl> <int> <int> <int>    <int>      <int>
+#> 1 EconomicFreedom_ID         0         1         3     3     0      165          0
+#> 2 Year                       0         1         4     4     0       26          0
+#> 3 ISO_Code_2                 0         1         2     2     0      165          0
+#> 4 ISO_Code_3                 0         1         3     3     0      165          0
+#> 5 Countries                  0         1         4    24     0      165          0
+#> 6 1Di_data                1125         0.738     1     9     0      168          0
+#> 7 1Dii_data               1575         0.633     1    18     0      168          0
+#> 
+#> -- Variable type: numeric --------------------------------------------------------------------------------------------------------
+#> # A tibble: 67 x 10
+#>    skim_variable                                                 n_missing complete_rate   mean       sd      p0    p25    p50
+#>  * <chr>                                                             <int>         <dbl>  <dbl>    <dbl>   <dbl>  <dbl>  <dbl>
+#>  1 "Economic Freedom Summary Index"                                    718         0.833  6.61     1.15    2.48   5.88   6.75 
+#>  2 "Rank"                                                              718         0.833 70.6     42.1     1     35     69    
+#>  3 "Quartile"                                                          718         0.833  2.49     1.12    1      1      2    
+#>  4 "1A Government Consumption"                                         664         0.845  5.87     2.28    0      4.44   6.17 
+#>  5 "1A_data"                                                           664         0.845 20.2      8.32    1.68  14.4   19.0  
+#>  6 "1B  Transfers and subsidies"                                      1018         0.763  7.72     2.08    0      6.24   8.44 
+#>  7 "1B_data"                                                          1018         0.763  8.87     7.65    0      2.4    6.22 
+#>  8 "1C  Government investment"                                         686         0.840  6.83     3.40    0      4.68   8.07 
+#>  9 "1C_data"                                                           686         0.840 26.8     17.9   -14.6   15.5   21.8  
+#> 10 "1Di Top marginal income tax rate"                                 1122         0.738  6.72     2.73    0      5      7    
+#> 11 "1Dii Top marginal income and payroll tax rate"                    1571         0.634  5.18     2.71    0      3      5    
+#> 12 "1D  Top marginal tax rate"                                        1122         0.738  5.92     2.61    0      4      6    
+#> 13 "IE State Ownership of Assets"                                      234         0.945  6.47     1.77    0.125  5.41   6.92 
+#> 14 "1  Size of Government"                                             341         0.921  6.49     1.42    0.118  5.62   6.63 
+#> 15 "2A  Judicial independence"                                          78         0.982  5.48     1.60    1.52   4.25   5.36 
+#> 16 "2B  Impartial courts"                                              132         0.969  5.35     1.80    0.825  3.89   5.03 
+#> 17 "2C  Protection of property rights"                                 782         0.818  5.21     1.65    0      4.09   4.95 
+#> 18 "2D  Military interference in rule of law and politics"             654         0.848  6.52     2.74    0      4.17   6.67 
+#> 19 "2E Integrity of the legal system"                                  130         0.970  5.54     1.76    0.926  4.31   5.33 
+#> 20 "2F Legal enforcement of contracts"                                 587         0.863  4.71     1.70    0      3.62   4.73 
+#> 21 "2G Regulatory restrictions on the sale of real property"           814         0.810  7.02     2.08    0      6.00   7.51 
+#> 22 "2H Reliability of police"                                          974         0.773  5.43     1.98    0      3.94   5.29 
+#> 23 "Gender Legal Rights Adjustment"                                      6         0.999  0.804    0.201   0.235  0.706  0.882
+#> 24 "2  Legal System & Property Rights"                                 121         0.972  5.11     1.68    1.29   3.84   4.96 
+#> 25 "3A  Money growth"                                                  621         0.855  8.25     1.71    0      7.85   8.70 
+#> 26 "3A_data"                                                           621         0.855 13.6     96.1   -64.6    3.18   6.37 
+#> 27 "3B  Standard deviation of inflation"                               665         0.845  8.06     2.22    0      7.65   8.93 
+#> 28 "3B_data"                                                           665         0.845 59.3   1354.      0.119  1.4    2.69 
+#> 29 "3C  Inflation: Most recent year"                                   661         0.846  8.52     1.91    0      8.26   9.18 
+#> 30 "3C_data"                                                           661         0.846 47.4   1230.    -14.2    1.89   4.07 
+#> 31 "3D  Freedom to own foreign currency bank accounts"                 696         0.838  6.07     4.36    0      0     10    
+#> 32 "3  Sound Money"                                                    684         0.841  7.75     1.79    0      6.70   8.08 
+#> 33 "4Ai  Revenue from trade taxes (\% of trade sector)"                 948         0.779  7.84     2.32    0      6.99   8.86 
+#> 34 "4Ai_data"                                                          948         0.779  3.40     4.59    0      0.73   1.71 
+#> 35 "4Aii  Mean tariff rate"                                           1041         0.757  7.91     1.58    0      7.44   8.3  
+#> 36 "4Aii_data"                                                        1041         0.757 10.6      8.96    0      5.3    8.5  
+#> 37 "4Aiii  Standard deviation of tariff rates"                        1334         0.689  5.95     2.15    0      5.33   6.29 
+#> 38 "4Aiii_data"                                                       1334         0.689 11.4     14.5     0      6.99   9.27 
+#> 39 "4A  Tariffs"                                                       760         0.823  7.16     1.74    0      6.31   7.56 
+#> 40 "4Bi  Non-tariff trade barriers"                                   1641         0.617  5.84     1.26    0      4.99   5.73 
+#> 41 "4Bii  Compliance costs of importing and exporting"                1497         0.651  6.78     2.53    0      5.50   7.36 
+#> 42 "4B  Regulatory trade barriers"                                    1423         0.668  6.29     1.74    0      5.32   6.56 
+#> 43 "4C  Black market exchange rates"                                   692         0.839  9.17     2.41    0     10     10    
+#> 44 "4Di  Financial Openness"                                           484         0.887  5.18     3.75    0      1.66   4.16 
+#> 45 "4Dii  Capital controls"                                            690         0.839  3.49     3.05    0      0.769  3.08 
+#> 46 "4Diii Freedom of foreigners to visit"                             1990         0.536  5.41     3.52    0      1.55   6.42 
+#> 47 "4D  Controls of the movement of capital and people"                297         0.931  4.48     3.05    0      1.66   4.20 
+#> 48 "4  Freedom to trade internationally"                               763         0.822  6.79     1.73    0      5.83   6.99 
+#> 49 "5Ai  Ownership of banks"                                           913         0.787  6.85     3.27    0      5      8    
+#> 50 "5Aii Private sector credit"                                        654         0.848  7.98     2.36    0      7.24   8.67 
+#> 51 "5Aiii  Interest rate controls/negative real interest rates)"       938         0.781  8.75     2.21    0      9     10    
+#> 52 "5A  Credit market regulations"                                     697         0.838  7.77     2.05    0      6.86   8.25 
+#> 53 "5Bi  Hiring regulations and minimum wage"                         1393         0.675  6.33     2.75    0      4.4    6.67 
+#> 54 "5Bii  Hiring and firing regulations"                              1593         0.629  4.70     1.36    0      3.82   4.70 
+#> 55 "5Biii  Centralized collective bargaining"                         1457         0.660  6.40     1.41    0      5.55   6.65 
+#> 56 "5Biv  Hours Regulations"                                          1287         0.7    7.50     2.03    1.9    6      8    
+#> 57 "5Bv Mandated cost of worker dismissal"                            1488         0.653  6.19     3.05    0      4.13   7.04 
+#> 58 "5Bvi  Conscription"                                                728         0.830  6.14     4.33    0      1     10    
+#> 59 "5B  Labor market regulations"                                     1233         0.713  6.22     1.48    1.84   5.16   6.25 
+#> 60 "5Ci  Administrative requirements"                                 1730         0.597  3.94     1.32    0      3.01   3.83 
+#> 61 "5Cii  Regulatory Burden"                                          1576         0.633  5.35     2.31    0      3.78   5.41 
+#> 62 "5Ciii  Starting\\r\\na  business"                                   1383         0.678  8.50     1.50    0      7.97   9.02 
+#> 63 "5Civ  Impartial Public Administration"                             233         0.946  5.63     2.45    0      3.62   5.42 
+#> 64 "5Cv Licensing restrictions"                                       1921         0.552  7.56     1.87    0      6.78   7.99 
+#> 65 "5Cvi Tax compliance"                                              1412         0.671  6.71     2.20    0      6.08   7.20 
+#> 66 "5C  Business regulations"                                         1354         0.684  6.34     1.31    1.98   5.50   6.40 
+#> 67 "5  Regulation"                                                     695         0.838  6.65     1.26    1.00   5.90   6.79 
+#>        p75     p100
+#>  *   <dbl>    <dbl>
+#>  1   7.5       9.09
+#>  2 104       165   
+#>  3   3         4   
+#>  4   7.54     13.0 
+#>  5  24.9      66.6 
+#>  6   9.48     10   
+#>  7  14.3      37.2 
+#>  8   9.86     10   
+#>  9  33.6     472.  
+#> 10   9        10   
+#> 11   7        10   
+#> 12   8        10   
+#> 13   7.75     10   
+#> 14   7.50      9.51
+#> 15   6.62      8.85
+#> 16   6.67      9.81
+#> 17   6.16      9.44
+#> 18   8.33     10   
+#> 19   6.78      9.86
+#> 20   5.87      9   
+#> 21   8.54      9.98
+#> 22   6.95      9.69
+#> 23   0.941     1   
+#> 24   6.18      9.26
+#> 25   9.29     10.0 
+#> 26  10.7    2290   
+#> 27   9.44      9.95
+#> 28   5.87  55163.  
+#> 29   9.60     10   
+#> 30   8.65  65374.  
+#> 31  10        10   
+#> 32   9.30      9.92
+#> 33   9.51     10   
+#> 34   4.51     77.1 
+#> 35   8.94     10   
+#> 36  12.8     105   
+#> 37   7.2      10   
+#> 38  11.7     426.  
+#> 39   8.30     10   
+#> 40   6.58      9.69
+#> 41   8.76     10   
+#> 42   7.56      9.83
+#> 43  10        10   
+#> 44  10        10   
+#> 45   6.15     10   
+#> 46   8.52     10   
+#> 47   7.27     10   
+#> 48   8.14     10   
+#> 49  10        10   
+#> 50   9.68     10   
+#> 51  10        10   
+#> 52   9.32     10   
+#> 53   8.9      10   
+#> 54   5.56      8.82
+#> 55   7.44      9.5 
+#> 56  10        10   
+#> 57   8.42     10   
+#> 58  10        10   
+#> 59   7.37      9.72
+#> 60   4.65      8.54
+#> 61   7        10   
+#> 62   9.58      9.98
+#> 63   7.60     10   
+#> 64   8.94     10   
+#> 65   8.20      9.93
+#> 66   7.23      9.46
+#> 67   7.55      9.43
+#> 
+#> $EconomicFreedomHist
+#> -- Data Summary ------------------------
+#>                            Values
+#> Name                       X[[i]]
+#> Number of rows             458   
+#> Number of columns          5     
+#> _______________________          
+#> Column type frequency:           
+#>   character                3     
+#>   numeric                  2     
+#> ________________________         
+#> Group variables            None  
+#> 
+#> -- Variable type: character ------------------------------------------------------------------------------------------------------
+#> # A tibble: 3 x 8
+#>   skim_variable      n_missing complete_rate   min   max empty n_unique whitespace
+#> * <chr>                  <int>         <dbl> <int> <int> <int>    <int>      <int>
+#> 1 EconomicFreedom_ID         0             1     3     6     0      117          0
+#> 2 Year                       0             1     4     4     0        4          0
+#> 3 Country                    0             1     4    17     0      118          0
+#> 
+#> -- Variable type: numeric --------------------------------------------------------------------------------------------------------
+#> # A tibble: 2 x 10
+#>   skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75   p100
+#> * <chr>             <int>         <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>  <dbl>
+#> 1 EFW                   0             1  5.21  1.24  2.94  4.10  5.27  6.17   7.85
+#> 2 Rank                  0             1 57.8  33.1   1    29    58    86    118
 }
 }
 \usage{
