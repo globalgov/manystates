@@ -12,7 +12,6 @@ NULL
 #' @details `import_vdem()` imports VDem 11.1 dataset
 #' and formats them to a many packages universe consistent output.
 #' @importFrom tibble as_tibble
-#' @importFrom manydata transmutate
 #' @importFrom manypkgs standardise_dates
 #' @importFrom rlang .data
 #' @import dplyr
@@ -33,7 +32,7 @@ import_vdem <- function() {
     dplyr::mutate(beg = min(.data$year),
                   end = max(.data$year)) %>%
     dplyr::ungroup() %>%
-    manydata::transmutate(
+    dplyr::mutate(
       Beg = manypkgs::standardise_dates(as.character(.data$beg)),
       End = manypkgs::standardise_dates(as.character(.data$end)),
       Label = .data$histname,
@@ -48,10 +47,12 @@ import_vdem <- function() {
                   # removed because
                   # variable explains methodology relating to V-Dem coding
                   # time-periods
-                  -.data$codingstart_hist, -.data$codingend_hist) %>%
+                  -.data$codingstart_hist, -.data$codingend_hist,
                   #removed because
                   # variable explains methodology relating to V-Dem
                   # coding time-periods.
+                  -.data$beg, .data$end, .data$histname, .data$country_name,
+                  .data$historical_date, .data$year) %>%
     dplyr::arrange(.data$VDem_ID, .data$Year) %>%
     dplyr::relocate(.data$VDem_ID, .data$Abbrv, .data$Label, .data$Country,
                     .data$Beg, .data$End, .data$Year, .data$Date)
@@ -85,7 +86,7 @@ import_vparty <- function() {
     dplyr::group_by(.data$VParty_ID) %>%
     dplyr::mutate(beg = min(.data$year), #Year is observation year of the panel
                   end = max(.data$year)) %>%
-    manydata::transmutate(
+    dplyr::mutate(
       Label = .data$v2paenname,
       Country = .data$country_name,
       Country_hist = .data$histname,
@@ -96,8 +97,10 @@ import_vparty <- function() {
                   #original party name, primarily a repetition of v2paid
                   -.data$pf_party_id,
                   #refers to party ID used in predecessor dataset
-                  -.data$pf_url) %>%
+                  -.data$pf_url,
                   #URL to party's webpage in predecessor dataset's website
+                  .data$v2paenname, .data$country_name, .data$histname,
+                  .data$beg, .data$end, .data$year) %>%
     dplyr::arrange(.data$Country, .data$VParty_ID, .data$Beg) %>%
     dplyr::relocate(.data$VParty_ID, .data$Label, .data$Abbrv,
                     .data$Country, .data$Country_hist,

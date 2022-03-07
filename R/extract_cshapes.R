@@ -18,7 +18,6 @@ NULL
 #' and formats them to a qVerse consistent output.
 #' @importFrom cshapes cshp
 #' @importFrom tibble as_tibble
-#' @importFrom manydata transmutate
 #' @importFrom manypkgs standardise_titles standardise_dates
 #' @import dplyr
 #' @import lubridate
@@ -34,9 +33,8 @@ import_cshapes <- function(date, ...) {
   # Step 0: Set string dates to actual dates
   date <- as.Date(date)
   # Test for correct dates
-  `%within%` <- lubridate::`%within%` #Not very elegant but does the job
-  if (!(date %within% lubridate::interval(lubridate::ymd("1886-01-01"),
-                                       lubridate::ymd(Sys.Date())))) {
+  if (!(as.numeric(format(date, format = "%Y")) >= 1886 & 
+        as.numeric(format(date, format = "%Y")) <= 2021)) {
     stop("Please input a date in the following range: 1886-01-01 -
          end of the dataset")
   }
@@ -44,7 +42,7 @@ import_cshapes <- function(date, ...) {
   cshapes <- cshapes::cshp(date, ..., useGW = FALSE) # Use COW_ID instead of GW
   # Stage two: Correcting data
   cshapes <- tibble::as_tibble(cshapes) %>%
-    manydata::transmutate(Beg = manypkgs::standardise_dates(.data$start),
+    dplyr::mutate(Beg = manypkgs::standardise_dates(.data$start),
                 End = manypkgs::standardise_dates(.data$end),
                 Label = manypkgs::standardise_titles(.data$country_name),
                 COW_Nr = manypkgs::standardise_titles(
@@ -57,7 +55,10 @@ import_cshapes <- function(date, ...) {
                 # All are independent states.
                 # Check where the colonies are.
                 Owner = .data$owner) %>%
-    dplyr::select(- (.data$fid)) %>%
+    dplyr::select(-(.data$start), -(.data$end), -(.data$country_name),
+                  -(.data$cowcode), -(.data$capname), -(.data$caplong),
+                  -(.data$caplat), -(.data$b_def), -(.data$status),
+                  -(.data$owner), -(.data$fid)) %>%
     dplyr::relocate(.data$COW_Nr, .data$Beg, .data$End, .data$Label) %>%
     dplyr::arrange(.data$Beg, .data$COW_Nr)
   return(cshapes)

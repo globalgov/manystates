@@ -46,11 +46,10 @@ Imports:
     whisker,
     cshapes,
     countrycode,
-    manydata,
-    manypkgs,
     vdemdata,
     stringi,
-    skimr
+    skimr,
+    manypkgs
 Suggests: 
     fs,
     testthat (>= 3.0.0),
@@ -62,9 +61,8 @@ Suggests:
     hrbrthemes,
     covr
 Remotes:
-    globalgov/manypkgs,
-    globalgov/manydata,
-    vdeminstitute/vdemdata
+    vdeminstitute/vdemdata,
+    globalgov/manypkgs
 Encoding: UTF-8
 VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
