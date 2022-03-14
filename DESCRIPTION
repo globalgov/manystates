@@ -44,9 +44,7 @@ Imports:
     stringr,
     usethis,
     whisker,
-    cshapes,
     countrycode,
-    vdemdata,
     stringi,
     skimr,
     manypkgs
@@ -59,7 +57,9 @@ Suggests:
     knitr,
     ggplot2,
     hrbrthemes,
-    covr
+    covr,
+    cshapes,
+    vdemdata
 Remotes:
     vdeminstitute/vdemdata,
     globalgov/manypkgs

@@ -16,7 +16,6 @@ NULL
 #' @name extract_cshapes
 #' @details `import_cshapes()`imports CShapes 2.0 datasets
 #' and formats them to a qVerse consistent output.
-#' @importFrom cshapes cshp
 #' @importFrom tibble as_tibble
 #' @importFrom manypkgs standardise_titles standardise_dates
 #' @import dplyr
@@ -30,7 +29,14 @@ NULL
 #' }
 #' @export
 import_cshapes <- function(date, ...) {
-  # Step 0: Set string dates to actual dates
+  # Step 0: Check that package is installed:
+  if (!requireNamespace("cshapes", quietly = TRUE)) {
+    stop(
+      "Package \"cshapes\" must be installed to use this function.",
+      call. = FALSE
+    )
+  }
+  # Step 0.5: Set string dates to actual dates
   date <- as.Date(date)
   # Test for correct dates
   if (!(as.numeric(format(date, format = "%Y")) >= 1886 & 
@@ -71,7 +77,6 @@ import_cshapes <- function(date, ...) {
 #' distances between capitals,
 #' distances between centroids of the polygons,
 #' minimum distances between the polygons in kilometers.
-#' @importFrom cshapes distlist
 #' @importFrom tibble as_tibble
 #' @importFrom countrycode countrycode
 #' @import dplyr
@@ -85,7 +90,14 @@ import_cshapes <- function(date, ...) {
 #' }
 #' @export
 import_distlist <- function(date, type, ...) {
-  # Step 0: Change date in string format to date format
+  # Step 0: Check that package is installed:
+  if (!requireNamespace("cshapes", quietly = TRUE)) {
+    stop(
+      "Package \"cshapes\" must be installed to use this function.",
+      call. = FALSE
+    )
+  }
+  # Step 0.5: Change date in string format to date format
   date <- as.Date(date)
   # Check whether inputs are in range of permitted values for dates and type.
   if (!(type %in% c("capdist", "mindist", "centdist"))) {
@@ -103,7 +115,7 @@ import_distlist <- function(date, type, ...) {
   custom_match <- c(`730` = "Korea")
   # Step 1: Import data from cshapes
   dist <- cshapes::distlist(date, type, ..., useGW = FALSE)
-  #Step 3: Process dist to make it qConsistent
+  # Step 3: Process dist to make it qConsistent
   if (type == "capdist") {
     dist <- tibble::as_tibble(dist) %>%
       dplyr::mutate(FromLabel =
@@ -163,7 +175,6 @@ import_distlist <- function(date, type, ...) {
 #' distances between capitals,
 #' distances between centroids of the polygons,
 #' minimum distances between the polygons in kilometers.
-#' @importFrom cshapes distmatrix
 #' @import lubridate
 #' @return A matrix with the desired distance list between polygons,
 #' capitals, or polygon centroids in kilometers.
@@ -173,7 +184,14 @@ import_distlist <- function(date, type, ...) {
 #' }
 #' @export
 import_distmatrix <- function(date, type, ...) {
-  # Step 0: Change date in string format to date format
+  # Step 0: Check that package is installed:
+  if (!requireNamespace("cshapes", quietly = TRUE)) {
+    stop(
+      "Package \"cshapes\" must be installed to use this function.",
+      call. = FALSE
+    )
+  }
+  # Step 0.5: Change date in string format to date format
   date <- as.Date(date)
   # Check whether inputs are in range of permitted values for dates and type.
   if (!(type %in% c("capdist", "mindist", "centdist"))) {

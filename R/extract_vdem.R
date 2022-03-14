@@ -23,6 +23,13 @@ NULL
 #' }
 #' @export
 import_vdem <- function() {
+  # Step 0: Check that package is installed:
+  if (!requireNamespace("vdemdata", quietly = TRUE)) {
+    stop(
+      "Package \"vdemdata\" must be installed to use this function.",
+      call. = FALSE
+    )
+  }
   # Stage 1: Importing
   vdem <- vdemdata::vdem
   # Stage two: Correcting data
@@ -74,6 +81,13 @@ import_vdem <- function() {
 #' }
 #' @export
 import_vparty <- function() {
+  # Step 0: Check that package is installed:
+  if (!requireNamespace("vdemdata", quietly = TRUE)) {
+    stop(
+      "Package \"vdemdata\" must be installed to use this function.",
+      call. = FALSE
+    )
+  }
   # Step 1: Import the data from the vdemdata package
   vparty <- vdemdata::vparty
   # Step 2: Format it to a many packages consistent format
