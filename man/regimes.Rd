@@ -11,20 +11,13 @@ For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
 \describe{
 \item{Polity5: }{A dataset with 17574 observations and the following
-33 variables: Polity5_ID, year, Label, p5, cyear, flag, fragment, democ,
-autoc, polity, polity2, durable, xrreg, xrcomp, xropen, xconst, parreg,
-parcomp, exrec, exconst, polcomp, prior, eprec, interim, bprec, post, change,
-d5, sf, regtrans, Beg, End, speccat.}
+37 variables: p5, cyear, ccode, scode, country, year, flag, fragment, democ, autoc, polity, polity2, durable, xrreg, xrcomp, xropen, xconst, parreg, parcomp, exrec, exconst, polcomp, prior, emonth, eday, eyear, eprec, interim, bmonth, bday, byear, bprec, post, change, d5, sf, regtrans.}
 \item{FreedomHouse1: }{A dataset with 1885 observations and the following
-46 variables: ID, Year, Label, Region, Edition, Status, PR rating, CL rating,
-A1, A2, A3, A, B1, B2, B3, B4, B, C1, C2, C3, C, Add Q, Add A, PR, D1, D2,
-D3, D4, D, E1, E2, E3, E, F1, F2, F3, F4, F, G1, G2, G3, G4, G, CL, Total,
-Territory.}
+46 variables: ID, Year, Label, Region, Edition, Status, PR rating, CL rating, A1, A2, A3, A, B1, B2, B3, B4, B, C1, C2, C3, C, Add Q, Add A, PR, D1, D2, D3, D4, D, E1, E2, E3, E, F1, F2, F3, F4, F, G1, G2, G3, G4, G, CL, Total, Territory.}
 \item{FreedomHouse2: }{A dataset with 33264 observations and the following
 6 variables: ID, Year, Label, Status, Value, Territory.}
 \item{FreedomHouse3: }{A dataset with 3960 observations and the following
-21 variables: ID, Year, Label, Region, Edition, Status, PR Rating, CL Rating,
-A, B, C, Add Q, Add A, PR, D, E, F, G, CL, Total, Territory.}
+21 variables: ID, Year, Label, Region, Edition, Status, PR Rating, CL Rating, A, B, C, Add Q, Add A, PR, D, E, F, G, CL, Total, Territory.}
 }
 }
 \usage{
@@ -39,93 +32,60 @@ regimes database documentation
 ##                            Values
 ## Name                       X[[i]]
 ## Number of rows             17574 
-## Number of columns          33    
+## Number of columns          37    
 ## _______________________          
 ## Column type frequency:           
-##   character                3     
-##   logical                  1     
-##   numeric                  29    
+##   character                2     
+##   numeric                  35    
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character -----------------------------------------------------------------
-## # A tibble: 3 x 8
+## -- Variable type: character ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## # A tibble: 2 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
 ## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
-## 1 Label                 0             1     3    24     0      195          0
-## 2 Beg                   0             1     4    10     0     1210          0
-## 3 End                   0             1     4    10     0     1126          0
+## 1 scode                 0             1     3     3     0      194          0
+## 2 country               0             1     3    24     0      195          0
 ## 
-## -- Variable type: logical -------------------------------------------------------------------
-## # A tibble: 1 x 5
-##   skim_variable n_missing complete_rate  mean count
-## * <chr>             <int>         <dbl> <dbl> <chr>
-## 1 speccat           17574             0   NaN ": " 
-## 
-## -- Variable type: numeric -------------------------------------------------------------------
-## # A tibble: 29 x 10
-##    skim_variable n_missing complete_rate          mean           sd    p0      p25      p50
-##  * <chr>             <int>         <dbl>         <dbl>        <dbl> <dbl>    <dbl>    <dbl>
-##  1 Polity5_ID            0        1          404.          250.         2     200      366 
-##  2 year                  0        1         1941.           60.3     1776    1894     1960 
-##  3 p5                    0        1            0.311         0.463      0       0        0 
-##  4 cyear                 0        1      4041651.      2495259.     21776 2001907. 3661924.
-##  5 flag                  0        1            0.00319       0.0621     0       0        0 
-##  6 fragment          14128        0.196        0.229         0.711      0       0        0 
-##  7 democ               809        0.954        3.50          3.86       0       0        1 
-##  8 autoc               809        0.954        4.03          3.51       0       0        4 
-##  9 polity              809        0.954       -0.522         7.10     -10      -7       -3 
-## 10 polity2             268        0.985       -0.526         7.01     -10      -7       -3 
-## 11 durable            1264        0.928       20.9          24.6        0       4       13 
-## 12 xrreg               809        0.954        2.44          0.668      1       2        3 
-## 13 xrcomp              809        0.954        1.57          1.04       0       1        1 
-## 14 xropen              809        0.954        2.87          1.56       0       1        4 
-## 15 xconst              809        0.954        3.80          2.39       1       1        3 
-## 16 parreg              809        0.954        3.47          1.04       1       3        4 
-## 17 parcomp             809        0.954        2.64          1.47       0       1        3 
-## 18 exrec               183        0.990        0.821        17.7      -88       2        4 
-## 19 exconst             809        0.954        3.80          2.39       1       1        3 
-## 20 polcomp             126        0.993        1.25         17.8      -88       1        6 
-## 21 prior             16195        0.0785      -1.14          9.23     -88      -7       -3 
-## 22 eprec             16121        0.0827       1.10          5.16     -77       1        1 
-## 23 interim           16284        0.0734     -61.5          33.5      -88     -88      -77 
-## 24 bprec             16287        0.0732       1.42          1.18       1       1        1 
-## 25 post              16302        0.0724      -1.42         11.2      -88      -7       -2 
-## 26 change            15346        0.127       -5.20         46.3      -88     -11        0 
-## 27 d5                16277        0.0738       1             0          1       1        1 
-## 28 sf                17276        0.0170       1             0          1       1        1 
-## 29 regtrans          15334        0.127       -5.85         45.1      -88      -2        0 
-##         p75    p100
-##  *    <dbl>   <dbl>
-##  1     630      950
-##  2    1992     2020
-##  3       1        1
-##  4 6301986. 9502018
-##  5       0        2
-##  6       0        3
-##  7       7       10
-##  8       7       10
-##  9       7       10
-## 10       7       10
-## 11      29      170
-## 12       3        3
-## 13       3        3
-## 14       4        4
-## 15       7        7
-## 16       4        5
-## 17       4        5
-## 18       8        8
-## 19       7        7
-## 20       7       10
-## 21       5       99
-## 22       1        9
-## 23     -66        8
-## 24       1        9
-## 25       6       98
-## 26       3       99
-## 27       1        1
-## 28       1        1
-## 29       3       99
+## -- Variable type: numeric ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## # A tibble: 35 x 10
+##    skim_variable n_missing complete_rate          mean           sd    p0      p25      p50      p75    p100
+##  * <chr>             <int>         <dbl>         <dbl>        <dbl> <dbl>    <dbl>    <dbl>    <dbl>   <dbl>
+##  1 p5                    0        1            0.311         0.463      0       0        0        1        1
+##  2 cyear                 0        1      4041651.      2495259.     21776 2001907. 3661924. 6301986. 9502018
+##  3 ccode                 0        1          404.          250.         2     200      366      630      950
+##  4 year                  0        1         1941.           60.3     1776    1894     1960     1992     2020
+##  5 flag                  0        1            0.00319       0.0621     0       0        0        0        2
+##  6 fragment          14128        0.196        0.229         0.711      0       0        0        0        3
+##  7 democ                 0        1           -0.235        17.5      -88       0        1        7       10
+##  8 autoc                 0        1            0.263        17.6      -88       0        4        7       10
+##  9 polity                0        1           -4.08         17.7      -88      -7       -3        6       10
+## 10 polity2             263        0.985       -0.546         7.11     -88      -7       -3        7       10
+## 11 durable            1264        0.928       20.9          24.6        0       4       13       29      170
+## 12 xrreg                 0        1           -1.25         16.9      -88       2        3        3        3
+## 13 xrcomp                0        1           -2.08         16.8      -88       1        1        3        3
+## 14 xropen                0        1           -0.835        17.1      -88       1        4        4        4
+## 15 xconst                0        1            0.0463       17.4      -88       1        3        7        7
+## 16 parreg                0        1           -0.264        17.2      -88       3        4        4        5
+## 17 parcomp               0        1           -1.06         17.0      -88       1        3        4        5
+## 18 exrec               183        0.990        0.821        17.7      -88       2        4        8        8
+## 19 exconst               0        1            0.0464       17.4      -88       1        3        7        7
+## 20 polcomp             126        0.993        1.25         17.8      -88       1        6        7       10
+## 21 prior             16195        0.0785      -1.14          9.23     -88      -7       -3        5       99
+## 22 emonth            16124        0.0825       6.72          3.43       1       4        6       10       12
+## 23 eday              16124        0.0825      16.7           9.20       1       9       16       25       31
+## 24 eyear             16124        0.0825    1956.           59.0     1776    1930     1972     1993     3013
+## 25 eprec             16121        0.0827       1.10          5.16     -77       1        1        1        9
+## 26 interim           16284        0.0734     -61.5          33.5      -88     -88      -77      -66        8
+## 27 bmonth            16286        0.0733       6.63          3.39       1       4        7       10       12
+## 28 bday              16286        0.0733      13.9           9.54       1       5       14       22       31
+## 29 byear             16286        0.0733    1951.           57.2     1776    1926.    1969     1993     2020
+## 30 bprec             16287        0.0732       1.42          1.18       1       1        1        1        9
+## 31 post              16302        0.0724      -1.42         11.2      -88      -7       -2        6       98
+## 32 change            15346        0.127       -5.20         46.3      -88     -11        0        3       99
+## 33 d5                16277        0.0738       1             0          1       1        1        1        1
+## 34 sf                17276        0.0170       1             0          1       1        1        1        1
+## 35 regtrans          15334        0.127       -5.85         45.1      -88      -2        0        3       99
 ## 
 ## $FreedomHouse1
 ## -- Data Summary ------------------------
@@ -140,7 +100,7 @@ regimes database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character -----------------------------------------------------------------
+## -- Variable type: character ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## # A tibble: 6 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
 ## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
@@ -151,7 +111,7 @@ regimes database documentation
 ## 5 Edition               0         1         4     4     0        9          0
 ## 6 Status                0         1         1     2     0        3          0
 ## 
-## -- Variable type: numeric -------------------------------------------------------------------
+## -- Variable type: numeric ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## # A tibble: 40 x 10
 ##    skim_variable n_missing complete_rate    mean     sd    p0   p25   p50   p75  p100
 ##  * <chr>             <int>         <dbl>   <dbl>  <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
@@ -209,7 +169,7 @@ regimes database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character -----------------------------------------------------------------
+## -- Variable type: character ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## # A tibble: 5 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
 ## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
@@ -219,7 +179,7 @@ regimes database documentation
 ## 4 Status                0         1         2     6     0        3          0
 ## 5 Value              5877         0.823     1     2     0       10          0
 ## 
-## -- Variable type: numeric -------------------------------------------------------------------
+## -- Variable type: numeric ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## # A tibble: 1 x 10
 ##   skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100
 ## * <chr>             <int>         <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
@@ -238,7 +198,7 @@ regimes database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character -----------------------------------------------------------------
+## -- Variable type: character ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## # A tibble: 6 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
 ## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
@@ -249,7 +209,7 @@ regimes database documentation
 ## 5 Edition             621         0.843     4     4     0       16          0
 ## 6 Status              621         0.843     1     2     0        3          0
 ## 
-## -- Variable type: numeric -------------------------------------------------------------------
+## -- Variable type: numeric ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## # A tibble: 15 x 10
 ##    skim_variable n_missing complete_rate    mean     sd    p0   p25   p50   p75  p100
 ##  * <chr>             <int>         <dbl>   <dbl>  <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>

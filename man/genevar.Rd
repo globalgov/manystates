@@ -10,15 +10,22 @@ following 1 datasets: ARCHIGOSgenevar.
 For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
 \describe{
-\item{ARCHIGOSgenevar: }{A dataset with 24 observations and the following
+\item{ARCHIGOSgenevar: }{A dataset with 17686 observations and the following
 30 variables: ARCHIGOS_ID, LeadID, ccode, idacr, Label, leader, Beg, End, BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode, prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry, num.exit, num.exitcode, num.posttenurefate, FtiesNameA, FtiesCodeA, FtiesNameB, FtiesCodeB, FtiesNameC, FtiesCodeC, ftcur.}
 }
-
-#' @details\preformatted{## $ARCHIGOSgenevar
+}
+\usage{
+genevar
+}
+\description{
+genevar database documentation
+}
+\details{
+\preformatted{## $ARCHIGOSgenevar
 ## -- Data Summary ------------------------
 ##                            Values
 ## Name                       X[[i]]
-## Number of rows             24    
+## Number of rows             17686 
 ## Number of columns          30    
 ## _______________________          
 ## Column type frequency:           
@@ -27,51 +34,45 @@ please use the \code{data_source()} and \code{data_contrast()} functions.
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character -----------------------------------------------------------------
+## -- Variable type: character ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## # A tibble: 27 x 8
 ##    skim_variable      n_missing complete_rate   min   max empty n_unique whitespace
 ##  * <chr>                  <int>         <dbl> <int> <int> <int>    <int>      <int>
-##  1 ARCHIGOS_ID                0        1          8    10     0        6          0
-##  2 LeadID                     0        1         36    36     0        4          0
-##  3 idacr                      0        1          3     3     0        2          0
-##  4 Label                      0        1         10    11     0        2          0
-##  5 leader                     0        1         14    17     0        4          0
-##  6 Beg                        0        1         10    10     0       24          0
-##  7 End                        0        1         10    10     0       24          0
-##  8 BornDate                  10        0.583     10    10     0        2          0
-##  9 DeathDate                 11        0.542     10    10     0        1          0
-## 10 YearBorn                   0        1          4     4     0        4          0
-## 11 YearDied                   0        1          4     4     0        2          0
-## 12 entry                     18        0.25       7     9     0        2          0
-## 13 exit                      18        0.25       7     7     0        1          0
-## 14 exitcode                  18        0.25       7     7     0        1          0
-## 15 prevtimesinoffice         18        0.25       1     1     0        3          0
-## 16 posttenurefate            18        0.25       2    37     0        2          0
-## 17 dbpedia.uri               11        0.542     53    53     0        1          0
-## 18 num.entry                 18        0.25       1     1     0        2          0
-## 19 num.exit                  23        0.0417     1     1     0        1          0
-## 20 num.exitcode              18        0.25       1     1     0        1          0
-## 21 num.posttenurefate        18        0.25       1     4     0        2          0
-## 22 FtiesNameA                 6        0.75      22    24     0        2          0
-## 23 FtiesCodeA                 6        0.75      36    36     0        2          0
-## 24 FtiesNameB                24        0         NA    NA     0        0          0
-## 25 FtiesCodeB                19        0.208     36    36     0        1          0
-## 26 FtiesNameC                24        0         NA    NA     0        0          0
-## 27 FtiesCodeC                24        0         NA    NA     0        0          0
+##  1 ARCHIGOS_ID                0      1            8    10     0     3409          0
+##  2 LeadID                     0      1           36    36     0     2802          0
+##  3 idacr                      0      1            3     3     0      189          0
+##  4 Label                      0      1            4    32     0      187          0
+##  5 leader                     0      1            3    41     0     2757          0
+##  6 Beg                        0      1           10    10     0     3279          0
+##  7 End                        0      1           10    10     0     3155          0
+##  8 BornDate                5179      0.707       10    10     0     1656          0
+##  9 DeathDate              11762      0.335       10    10     0      659          0
+## 10 YearBorn                   0      1            4     4     0      175          0
+## 11 YearDied                   0      1            4     4     0      143          0
+## 12 entry                  14277      0.193        7    18     0        4          0
+## 13 exit                   14277      0.193        7    25     0        8          0
+## 14 exitcode               14277      0.193        7    59     0       15          0
+## 15 prevtimesinoffice      14277      0.193        1     1     0        7          0
+## 16 posttenurefate         14324      0.190        2    57     0        8          0
+## 17 dbpedia.uri             8552      0.516       32    72     0     1158          0
+## 18 num.entry              14277      0.193        1     4     0        4          0
+## 19 num.exit               16902      0.0443       1     4     0        7          0
+## 20 num.exitcode           14277      0.193        1     4     0       15          0
+## 21 num.posttenurefate     14277      0.193        1     4     0        9          0
+## 22 FtiesNameA             15814      0.106       11    43     0      201          0
+## 23 FtiesCodeA             15814      0.106       36    36     0      196          0
+## 24 FtiesNameB             17642      0.00249     15    38     0        6          0
+## 25 FtiesCodeB             17637      0.00277     36    36     0        6          0
+## 26 FtiesNameC             17674      0.000679    29    29     0        1          0
+## 27 FtiesCodeC             17674      0.000679    36    36     0        1          0
 ## 
-## -- Variable type: numeric -------------------------------------------------------------------
+## -- Variable type: numeric ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## # A tibble: 3 x 10
-##   skim_variable n_missing complete_rate   mean     sd    p0   p25   p50   p75  p100
-## * <chr>             <int>         <dbl>  <dbl>  <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
-## 1 ccode                 0          1    99.5   26.7      94    94    94 94      225
-## 2 Female                0          1     0      0         0     0     0  0        0
-## 3 ftcur                 6          0.75  0.278  0.461     0     0     0  0.75     1
+##   skim_variable n_missing complete_rate     mean      sd    p0   p25   p50   p75  p100
+## * <chr>             <int>         <dbl>    <dbl>   <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
+## 1 ccode                 0        1      413.     254.        2   200   375   645   950
+## 2 Female                0        1        0.0183   0.134     0     0     0     0     1
+## 3 ftcur             16031        0.0936   0.389    0.488     0     0     0     1     1
 }
-}
-\usage{
-genevar
-}
-\description{
-genevar database documentation
 }
 \keyword{datasets}

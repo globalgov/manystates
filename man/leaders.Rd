@@ -11,7 +11,7 @@ For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
 \describe{
 \item{ARCHIGOS: }{A dataset with 17686 observations and the following
-30 variables: ARCHIGOS_ID, LeadID, ccode, idacr, Label, leader, Beg, End, BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode, prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry, num.exit, num.exitcode, num.posttenurefate, FtiesNameA, FtiesCodeA, FtiesNameB, FtiesCodeB, FtiesNameC, FtiesCodeC, ftcur.}
+24 variables: obsid, leadid, ccode, idacr, leader, startdate, enddate, entry, exit, exitcode, prevtimesinoffice, posttenurefate, gender, yrborn, yrdied, borndate, deathdate, dbpedia.uri, num.entry, num.exit, num.exitcode, num.posttenurefate, fties, ftcur.}
 }
 }
 \usage{
@@ -26,53 +26,47 @@ leaders database documentation
 ##                            Values
 ## Name                       X[[i]]
 ## Number of rows             17686 
-## Number of columns          30    
+## Number of columns          24    
 ## _______________________          
 ## Column type frequency:           
-##   character                27    
-##   numeric                  3     
+##   character                20    
+##   numeric                  4     
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character -----------------------------------------------------------------
-## # A tibble: 27 x 8
+## -- Variable type: character ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## # A tibble: 20 x 8
 ##    skim_variable      n_missing complete_rate   min   max empty n_unique whitespace
 ##  * <chr>                  <int>         <dbl> <int> <int> <int>    <int>      <int>
-##  1 ARCHIGOS_ID                0      1            8    10     0     3409          0
-##  2 LeadID                     0      1           36    36     0     2802          0
-##  3 idacr                      0      1            3     3     0      189          0
-##  4 Label                      0      1            4    32     0      187          0
-##  5 leader                     0      1            3    41     0     2757          0
-##  6 Beg                        0      1           10    10     0     3279          0
-##  7 End                        0      1           10    10     0     3155          0
-##  8 BornDate                5179      0.707       10    12     0     1656          0
-##  9 DeathDate              11762      0.335       10    10     0      659          0
-## 10 YearBorn                   0      1            4     4     0      175          0
-## 11 YearDied                   0      1            4     4     0      143          0
-## 12 entry                  14277      0.193        7    18     0        4          0
-## 13 exit                   14277      0.193        7    25     0        8          0
-## 14 exitcode               14277      0.193        7    59     0       15          0
-## 15 prevtimesinoffice      14277      0.193        1     1     0        7          0
-## 16 posttenurefate         14324      0.190        2    57     0        8          0
-## 17 dbpedia.uri             8552      0.516       32    72     0     1158          0
-## 18 num.entry              14277      0.193        1     4     0        4          0
-## 19 num.exit               16902      0.0443       1     4     0        7          0
-## 20 num.exitcode           14277      0.193        1     4     0       15          0
-## 21 num.posttenurefate     14277      0.193        1     4     0        9          0
-## 22 FtiesNameA             15814      0.106       11    43     0      200          0
-## 23 FtiesCodeA             15814      0.106       36    36     0      195          0
-## 24 FtiesNameB             17637      0.00277     15    38     0        7          0
-## 25 FtiesCodeB             17637      0.00277     36    36     0        6          0
-## 26 FtiesNameC             17674      0.000679    29    29     0        1          0
-## 27 FtiesCodeC             17674      0.000679    36    36     0        1          0
+##  1 obsid                      0         1         8    10     0     3409          0
+##  2 leadid                     0         1        36    36     0     2802          0
+##  3 idacr                      0         1         3     3     0      189          0
+##  4 leader                     0         1         3    41     0     2757          0
+##  5 startdate                  0         1        10    10     0     3279          0
+##  6 enddate                    0         1        10    11     0     3155          0
+##  7 entry                      0         1         7    18     0        5          0
+##  8 exit                       0         1         7    25     0        9          0
+##  9 exitcode                   0         1         1    59     0       16          0
+## 10 prevtimesinoffice          0         1         1     1     0        8          0
+## 11 posttenurefate             0         1         1    57     0       10          0
+## 12 gender                     0         1         1     1     0        2          0
+## 13 borndate                5179         0.707    10    12     0     1656          0
+## 14 deathdate              11762         0.335    10    10     0      659          0
+## 15 dbpedia.uri             8552         0.516    32    72     0     1158          0
+## 16 num.entry                  0         1         1     4     0        5          0
+## 17 num.exit                   0         1         1     4     0        8          0
+## 18 num.exitcode               0         1         1     4     0       16          0
+## 19 num.posttenurefate         0         1         1     4     0       10          0
+## 20 fties                  15814         0.106    48   190     0      200          0
 ## 
-## -- Variable type: numeric -------------------------------------------------------------------
-## # A tibble: 3 x 10
-##   skim_variable n_missing complete_rate     mean      sd    p0   p25   p50   p75  p100
-## * <chr>             <int>         <dbl>    <dbl>   <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
-## 1 ccode                 0        1      413.     254.        2   200   375   645   950
-## 2 Female                0        1        0.0183   0.134     0     0     0     0     1
-## 3 ftcur             16031        0.0936   0.389    0.488     0     0     0     1     1
+## -- Variable type: numeric ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## # A tibble: 4 x 10
+##   skim_variable n_missing complete_rate     mean       sd    p0   p25   p50   p75  p100
+## * <chr>             <int>         <dbl>    <dbl>    <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
+## 1 ccode                 0        1       413.     254.        2   200   375   645   950
+## 2 yrborn                0        1      1894.     172.     -999  1874  1912  1937  1983
+## 3 yrdied                0        1      1040.    1291.     -999  -777  1925  1975  2015
+## 4 ftcur             16031        0.0936    0.389    0.488     0     0     0     1     1
 }
 }
 \keyword{datasets}

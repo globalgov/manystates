@@ -11,13 +11,13 @@ For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
 \describe{
 \item{GW: }{A dataset with 216 observations and the following
-5 variables: GW_ID, Beg, End, COW_Nr, Label.}
+5 variables: COW_ID, Beg, End, COW_Nr, Label.}
 \item{ISD: }{A dataset with 362 observations and the following
-7 variables: ISD_ID, Beg, End, COW_Nr, Label, Micro, New.State.}
+7 variables: COW_ID, Beg, End, COW_Nr, Label, Micro, New.State.}
 \item{COW: }{A dataset with 243 observations and the following
 5 variables: COW_ID, Beg, End, COW_Nr, Label.}
 \item{ICOW: }{A dataset with 217 observations and the following
-15 variables: ICOW_ID, Label, ColRuler, IndFrom, IndDate, IndViol, IndType, SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
+15 variables: COW_ID, Label, ColRuler, IndFrom, IndDate, IndViol, IndType, SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
 }
 }
 \usage{
@@ -39,11 +39,11 @@ states database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character -----------------------------------------------------------------
+## -- Variable type: character ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## # A tibble: 5 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
 ## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
-## 1 GW_ID                 0             1     3     3     0      202          0
+## 1 COW_ID                0             1     3     3     0      202          0
 ## 2 Beg                   0             1    10    12     0      153          0
 ## 3 End                   0             1    10    12     0       30          0
 ## 4 COW_Nr                0             1     1     3     0      202          0
@@ -61,11 +61,11 @@ states database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character -----------------------------------------------------------------
+## -- Variable type: character ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## # A tibble: 7 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
 ## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
-## 1 ISD_ID                0             1     3     3     0      310          0
+## 1 COW_ID                0             1     3     3     0      310          0
 ## 2 Beg                   0             1    10    12     0      201          0
 ## 3 End                   0             1    10    12     0      134          0
 ## 4 COW_Nr                0             1     1     4     0      315          0
@@ -85,7 +85,7 @@ states database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character -----------------------------------------------------------------
+## -- Variable type: character ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## # A tibble: 5 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
 ## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
@@ -108,23 +108,23 @@ states database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character -----------------------------------------------------------------
+## -- Variable type: character ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## # A tibble: 7 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
 ## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
 ## 1 Label                 0        1          4    36     0      217          0
-## 2 IndDate               0        1          3     7     0      175          0
+## 2 IndDate               0        1          6     8     0      175          0
 ## 3 SecDate             179        0.175      7     7     0       31          0
 ## 4 IntoDate            198        0.0876     7     7     0       11          0
 ## 5 COWsys                0        1          7     7     0      142          0
 ## 6 GWsys                22        0.899      7     7     0      122          0
 ## 7 Notes                58        0.733     25   239     0      138          0
 ## 
-## -- Variable type: numeric -------------------------------------------------------------------
+## -- Variable type: numeric ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## # A tibble: 8 x 10
 ##   skim_variable n_missing complete_rate    mean      sd    p0   p25   p50   p75  p100
 ## * <chr>             <int>         <dbl>   <dbl>   <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
-## 1 ICOW_ID               0        1      460.    257.        2  271    435   670   990
+## 1 COW_ID                0        1      460.    257.        2  271    435   670   990
 ## 2 ColRuler             46        0.788  293.    172.        2  200    220   300   920
 ## 3 IndFrom              39        0.820  289.    185.        2  200    220   345   920
 ## 4 IndViol               0        1        0.424   0.495     0    0      0     1     1
