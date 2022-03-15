@@ -13,7 +13,7 @@ test_that("missing observations are reported correctly", {
 
 # Contains the required variables
 test_that("object has the correct variables", {
-  expect_col_exists(states[["ISD"]], vars(ISD_ID))
+  expect_col_exists(states[["ISD"]], vars(COW_ID))
   expect_col_exists(states[["ISD"]], vars(Beg))
   expect_col_exists(states[["ISD"]], vars(End))
   expect_col_exists(states[["ISD"]], vars(Label))

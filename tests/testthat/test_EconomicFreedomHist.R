@@ -13,7 +13,7 @@ test_that("missing observations are reported correctly", {
 
 # Contains the main variables
 test_that("object has the correct variables", {
-  expect_col_exists(economics[["EconomicFreedomHist"]], vars(EconomicFreedom_ID))
+  expect_col_exists(economics[["EconomicFreedomHist"]], vars(COW_ID))
   expect_col_exists(economics[["EconomicFreedomHist"]], vars(Year))
   expect_col_exists(economics[["EconomicFreedomHist"]], vars(Country))
 })

@@ -31,7 +31,7 @@ test_that("Columns with dates are standardized", {
 
 # Contains the required variables
 test_that("object has the correct variables", {
-  expect_col_exists(regimes[["Polity5"]], vars(Polity5_ID))
+  expect_col_exists(regimes[["Polity5"]], vars(COW_ID))
   expect_col_exists(regimes[["Polity5"]], vars(Beg))
   expect_col_exists(regimes[["Polity5"]], vars(End))
   expect_col_exists(regimes[["Polity5"]], vars(Label))

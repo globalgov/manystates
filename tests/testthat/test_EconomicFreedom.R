@@ -13,7 +13,7 @@ test_that("missing observations are reported correctly", {
 
 # Contains the main variables
 test_that("object has the correct variables", {
-  expect_col_exists(economics[["EconomicFreedom"]], vars(EconomicFreedom_ID))
+  expect_col_exists(economics[["EconomicFreedom"]], vars(COW_ID))
   expect_col_exists(economics[["EconomicFreedom"]], vars(Year))
   expect_col_exists(economics[["EconomicFreedom"]], vars(Countries))
 })
@@ -39,3 +39,4 @@ test_that("labels are standardised", {
   expect_false(any(grepl("!", economics[["EconomicFreedom"]])))
   expect_false(any(grepl("NANA.", economics[["EconomicFreedom"]])))
 })
+
