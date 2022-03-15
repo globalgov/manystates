@@ -19,7 +19,9 @@ Polity5 <- readxl::read_excel("data-raw/regimes/Polity5/p5v2018.xls")
 # formats of the 'Polity5' object until the object created
 # below (in stage three) passes all the tests.
 Polity5 <- tibble::as_tibble(Polity5) %>%
-  manydata::transmutate(Polity5_ID = ccode,
+  dplyr::mutate(COW_ID = manystates::code_states
+                (country, abbrev = TRUE)) %>%
+  manydata::transmutate(
               Beg = manypkgs::standardise_dates(byear, bmonth, bday),
               End = manypkgs::standardise_dates(eyear, emonth, eday),
               Label = manypkgs::standardise_titles(country)) %>%

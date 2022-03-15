@@ -31,14 +31,14 @@ EconomicFreedom <- dplyr::as_tibble(EconomicFreedom) %>%
                 `4Ai_data` = data...40,
                 `4Aii_data` = data...42,
                 `4Aiii_data` = data...44) %>%
-  dplyr::mutate(EconomicFreedom_ID =
+  dplyr::mutate(COW_ID =
                   countrycode::countrycode(ISO_Code_3, "iso3c", "cowc",
                                            custom_match =
                                              c("HKG" = "HKG",
                                                "SRB" = "YUG")),
                 Year = manypkgs::standardise_dates(as.character(Year))) %>%
-  dplyr::arrange(EconomicFreedom_ID, Year) %>%
-  dplyr::select(EconomicFreedom_ID, Year, dplyr::everything())
+  dplyr::arrange(COW_ID, Year) %>%
+  dplyr::select(COW_ID, Year, dplyr::everything())
 
 # manypkgs includes several functions that should help cleaning
 # and standardising your data.

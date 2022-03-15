@@ -13,7 +13,7 @@ ISD <- utils::read.csv("data-raw/states/ISD/ISD_Version1_Dissemination.csv")
 ISD <- tibble::as_tibble(ISD) %>%
   dplyr::rename(Finish = End) %>% 
   # Renaming the end date column to avoid self reference in transmutate.
-  manydata::transmutate(ISD_ID = `COW.ID`,
+  manydata::transmutate(COW_ID = `COW.ID`,
                      Beg = manypkgs::standardise_dates(lubridate::dmy(Start)),
                      End = manypkgs::standardise_dates(lubridate::dmy(Finish)),
                      Label = manypkgs::standardise_titles(as.character(State.Name)),
@@ -24,8 +24,8 @@ ISD <- tibble::as_tibble(ISD) %>%
   #Dropping certain unnecessary columns.
   dplyr::select(-X, -X.1, -X.2, -X.3, -X.4, -X.5,  -X.6, -X.7) %>% 
   # Arranging dataset
-  dplyr::relocate(ISD_ID, Beg, End, COW_Nr, Label, Micro, New.State) %>%
-  dplyr::arrange(Beg, ISD_ID)
+  dplyr::relocate(COW_ID, Beg, End, COW_Nr, Label, Micro, New.State) %>%
+  dplyr::arrange(Beg, COW_ID)
 # We know that ISD uses COW data for "old" states that is set to 1816-01-01 by default.
 # This is a rather uncertain date, that is, the dataset considers them states
 # on 1st January 1816, but they may have been established (much) earlier.

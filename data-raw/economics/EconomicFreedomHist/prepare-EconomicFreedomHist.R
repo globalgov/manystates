@@ -14,9 +14,9 @@ EconomicFreedomHist <- readxl::read_excel(path, sheet = 3)
 # Historical Economic Freedom Dataset: ----
 EconomicFreedomHist <- dplyr::as_tibble(EconomicFreedomHist) %>%
   dplyr::mutate(Year = manypkgs::standardise_dates(as.character(Year)),
-                EconomicFreedom_ID = manystates::code_states(Country)) %>%
-  dplyr::arrange(EconomicFreedom_ID, Year) %>%
-  dplyr::select(EconomicFreedom_ID, Year, dplyr::everything())
+                COW_ID = manystates::code_states(Country)) %>%
+  dplyr::arrange(COW_ID, Year) %>%
+  dplyr::select(COW_ID, Year, dplyr::everything())
 # manypkgs includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.

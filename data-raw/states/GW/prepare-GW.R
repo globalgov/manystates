@@ -12,13 +12,13 @@ GW <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
 # below (in stage three) passes all the tests. 
 GW <- tibble::as_tibble(GW) %>%
   dplyr::rename(Finish = End) %>%
-  manydata::transmutate(GW_ID = `Cow ID`,
+  manydata::transmutate(COW_ID = `Cow ID`,
                      Beg = manypkgs::standardise_dates(Start),
                      End = manypkgs::standardise_dates(Finish), 
                      Label = manypkgs::standardise_titles(`Name of State`),
                      COW_Nr = manypkgs::standardise_titles(`Cow Nr.`)) %>%
-  dplyr::relocate(GW_ID, Beg, End, COW_Nr, Label) %>%
-  dplyr::arrange(Beg, GW_ID)
+  dplyr::relocate(COW_ID, Beg, End, COW_Nr, Label) %>%
+  dplyr::arrange(Beg, COW_ID)
 # We know that GW uses COW data for "old" states that is set to 1816-01-01 by default.
 # This is a rather uncretain date, that is, the dataset considers them states
 # on 1st January 1816, but they may have been established (much) earlier.
