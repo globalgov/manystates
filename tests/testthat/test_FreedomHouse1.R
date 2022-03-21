@@ -32,7 +32,9 @@ test_that("Columns with dates are standardized", {
 
 # Contains the required variables
 test_that("object has the correct variables", {
+  expect_col_exists(regimes[["FreedomHouse1"]], vars(COW_ID))
   expect_col_exists(regimes[["FreedomHouse1"]], vars(ID))
+  expect_true(is.character(regimes[["FreedomHouse1"]][["ID"]]))
   expect_col_exists(regimes[["FreedomHouse1"]], vars(Year))
   expect_col_exists(regimes[["FreedomHouse1"]], vars(Label))
 })
