@@ -18,11 +18,12 @@ FreedomHouse1 <- readxl::read_excel("data-raw/regimes/FreedomHouse1/All_data_FIW
 FreedomHouse1 <- dplyr::rename(FreedomHouse1, Label = `Country/Territory`) %>%
   manydata::transmutate(Territory = ifelse(`C/T` == "t", 1, 0)) %>%
   dplyr::mutate(
-    ID = manystates::code_states(Label),
+    COW_ID = manystates::code_states(Label, abbrev = TRUE),
     Year = manypkgs::standardise_dates(as.character(Edition - 1)),
-    Edition = manypkgs::standardise_dates(as.character(Edition))
+    Edition = manypkgs::standardise_dates(as.character(Edition)),
+    ID = paste0(COW_ID, "-", as.character(Year))
   ) %>%
-  dplyr::relocate(ID, Year, Label)
+  dplyr::relocate(ID, COW_ID, Year, Label)
 
 
 # manypkgs includes several functions that should help cleaning

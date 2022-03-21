@@ -63,7 +63,7 @@ FreedomHouse2.1$Status_1972[161] <- "F"
 FreedomHouse2 <- rbind(FreedomHouse2.1, FreedomHouse2.2) %>%
   dplyr::mutate(
     Country = manypkgs::standardise_titles(Country),
-    ID = manystates::code_states(Country)
+    COW_ID = manystates::code_states(Country, abbrev = TRUE)
   ) %>%
   dplyr::rename(Label = Country)
 FreedomHouse2$Territory <- c(
@@ -78,8 +78,9 @@ FreedomHouse2 <- tidyr::pivot_longer(FreedomHouse2,
 ) %>%
   dplyr::rename(Indicator = name, Value = value) %>%
   tidyr::separate(Indicator, into = c("Status", "Year"), sep = "_") %>%
-  dplyr::mutate(Year = manypkgs::standardise_dates(Year)) %>%
-  dplyr::relocate(ID, Year, Label, Status, Value, Territory)
+  dplyr::mutate(Year = manypkgs::standardise_dates(Year),
+                ID = paste0(COW_ID, "-", as.character(Year))) %>%
+  dplyr::relocate(ID, COW_ID, Year, Label, Status, Value, Territory)
 
 # manypkgs includes several functions that should help cleaning
 # and standardising your data.

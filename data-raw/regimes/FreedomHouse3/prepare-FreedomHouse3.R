@@ -18,11 +18,12 @@ FreedomHouse3.1 <- FreedomHouse3.1[, 1:19]
 FreedomHouse3.1 <- dplyr::rename(FreedomHouse3.1, Label = `Country/Territory`) %>%
   manydata::transmutate(Territory = ifelse(`C/T?` == "t", 1, 0)) %>%
   dplyr::mutate(
-    ID = manystates::code_states(Label),
+    COW_ID = manystates::code_states(Label, abbrev = T),
     Year = as.character(Edition - 1),
-    Edition = as.character(Edition)
+    Edition = as.character(Edition),
+    ID = paste0(COW_ID, "-", Year)
   ) %>%
-  dplyr::relocate(ID, Year, Label)
+  dplyr::relocate(ID, COW_ID, Year, Label)
 # Data from 2003-2006
 FreedomHouse3.2 <- readxl::read_excel("data-raw/regimes/FreedomHouse3/Aggregate_Category_and_Subcategory_Scores_FIW_2003-2021.xlsx",
   sheet = 3,
@@ -33,8 +34,8 @@ FreedomHouse3.2 <- dplyr::rename(FreedomHouse3.2,
   Label = `Country/Territory`
 ) %>%
   manydata::transmutate(Territory = ifelse(`C/T?` == "t", 1, 0)) %>%
-  dplyr::mutate(ID = manystates::code_states(Label)) %>%
-  tidyr::pivot_longer(cols = !c(Territory, ID, Label)) %>%
+  dplyr::mutate(COW_ID = manystates::code_states(Label, abbrev = T)) %>%
+  tidyr::pivot_longer(cols = !c(Territory, COW_ID, Label)) %>%
   dplyr::mutate(
     Year = ifelse(grepl("03", name), "2003",
       ifelse(grepl("04", name), "2004",
@@ -45,9 +46,10 @@ FreedomHouse3.2 <- dplyr::rename(FreedomHouse3.2,
       ifelse(grepl("CL", name), "CL Rating",
         "Total"
       )
-    )
+    ),
+    ID = paste0(COW_ID, "-", Year)
   ) %>%
-  dplyr::select(ID, Year, Label, Rating, Territory, value) %>%
+  dplyr::select(ID, COW_ID, Year, Label, Rating, Territory, value) %>%
   pivot_wider(
     names_from = Rating,
     values_from = value
