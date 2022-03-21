@@ -103,8 +103,8 @@ ICOW <- dplyr::as_tibble(ICOW) %>%
               IntoDate = manypkgs::standardise_dates(IntoDate),
               COWsys = manypkgs::standardise_dates(COWsys),
               GWsys = manypkgs::standardise_dates(GWsys)) %>%
-  manydata::transmutate(Label = manypkgs::standardise_titles(Name),
-                        COW_ID = State) %>%
+  manydata::transmutate(Label = manypkgs::standardise_titles(Name)) %>%
+  dplyr::select(-State) %>%
   dplyr::arrange(COW_ID)
 # Reorder columns
 ICOW <- ICOW[, colnames]
@@ -131,3 +131,8 @@ ICOW <- ICOW[, colnames]
 # run `manypkgs::add_bib(states, ICOW)`.
 manypkgs::export_data(ICOW, database = "states",
                       URL = "http://www.paulhensel.org/icowcol.html")
+
+list <- list()
+for (i in seq(1, length(manystates::states))) {
+  list[[i]] <- class(manystates::states[[i]][["COW_ID"]])
+}
