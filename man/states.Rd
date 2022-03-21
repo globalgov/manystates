@@ -39,7 +39,7 @@ states database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## -- Variable type: character ----------------------------------------------------
 ## # A tibble: 5 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
 ## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
@@ -61,7 +61,7 @@ states database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## -- Variable type: character ----------------------------------------------------
 ## # A tibble: 7 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
 ## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
@@ -85,7 +85,7 @@ states database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## -- Variable type: character ----------------------------------------------------
 ## # A tibble: 5 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
 ## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
@@ -103,35 +103,44 @@ states database documentation
 ## Number of columns          15    
 ## _______________________          
 ## Column type frequency:           
-##   character                7     
-##   numeric                  8     
+##   character                8     
+##   numeric                  7     
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## # A tibble: 7 x 8
+## -- Variable type: character ----------------------------------------------------
+## # A tibble: 8 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
 ## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
-## 1 Label                 0        1          4    36     0      217          0
-## 2 IndDate               0        1          6     8     0      175          0
-## 3 SecDate             179        0.175      7     7     0       31          0
-## 4 IntoDate            198        0.0876     7     7     0       11          0
-## 5 COWsys                0        1          7     7     0      142          0
-## 6 GWsys                22        0.899      7     7     0      122          0
-## 7 Notes                58        0.733     25   239     0      138          0
+## 1 COW_ID                0        1          3     3     0      217          0
+## 2 Label                 0        1          4    36     0      217          0
+## 3 IndDate               0        1          6     8     0      175          0
+## 4 SecDate             179        0.175      7     7     0       31          0
+## 5 IntoDate            198        0.0876     7     7     0       11          0
+## 6 COWsys                0        1          7     7     0      142          0
+## 7 GWsys                22        0.899      7     7     0      122          0
+## 8 Notes                58        0.733     25   239     0      138          0
 ## 
-## -- Variable type: numeric ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## # A tibble: 8 x 10
-##   skim_variable n_missing complete_rate    mean      sd    p0   p25   p50   p75  p100
-## * <chr>             <int>         <dbl>   <dbl>   <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
-## 1 COW_ID                0        1      460.    257.        2  271    435   670   990
-## 2 ColRuler             46        0.788  293.    172.        2  200    220   300   920
-## 3 IndFrom              39        0.820  289.    185.        2  200    220   345   920
-## 4 IndViol               0        1        0.424   0.495     0    0      0     1     1
-## 5 IndType               0        1        2.15    0.774     1    2      2     2     4
-## 6 SecFrom             179        0.175  313.    200.       41  141.   315   365   820
-## 7 SecViol             179        0.175    0.605   0.495     0    0      1     1     1
-## 8 Into                198        0.0876 361     175.      255  255    255   325   816
+## -- Variable type: numeric ------------------------------------------------------
+## # A tibble: 7 x 10
+##   skim_variable n_missing complete_rate    mean      sd    p0   p25   p50   p75
+## * <chr>             <int>         <dbl>   <dbl>   <dbl> <dbl> <dbl> <dbl> <dbl>
+## 1 ColRuler             46        0.788  293.    172.        2  200    220   300
+## 2 IndFrom              39        0.820  289.    185.        2  200    220   345
+## 3 IndViol               0        1        0.424   0.495     0    0      0     1
+## 4 IndType               0        1        2.15    0.774     1    2      2     2
+## 5 SecFrom             179        0.175  313.    200.       41  141.   315   365
+## 6 SecViol             179        0.175    0.605   0.495     0    0      1     1
+## 7 Into                198        0.0876 361     175.      255  255    255   325
+##    p100
+## * <dbl>
+## 1   920
+## 2   920
+## 3     1
+## 4     4
+## 5   820
+## 6     1
+## 7   816
 }
 }
 \keyword{datasets}
