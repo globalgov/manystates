@@ -25,9 +25,9 @@ Polity5 <- tibble::as_tibble(Polity5) %>%
               Beg = manypkgs::standardise_dates(byear, bmonth, bday),
               End = manypkgs::standardise_dates(eyear, emonth, eday),
               Label = manypkgs::standardise_titles(country)) %>%
-  dplyr::arrange(Polity5_ID, year) %>%
+  dplyr::arrange(COW_ID, year) %>%
   dplyr::select(-scode) %>%
-  dplyr::relocate(Polity5_ID, year, Label)
+  dplyr::relocate(COW_ID, year, Label)
 # manydata includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.
