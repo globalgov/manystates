@@ -24,13 +24,16 @@ ARCHIGOS$FtiesNameB[c(2163:2167)] <-
   "Son of Figueres Ferrer"
 ARCHIGOSgenevar$FtiesCodeB[c(2163:2167)] <-
   "81eb718b-1e42-11e4-b4cd-db5882bf8def"
-ARCHIGOSgenevar <- ARCHIGOSgenevar %>% 
-  dplyr::select(ARCHIGOS_ID, LeadID, ccode, idacr, Label, leader, Beg, End, BornDate,
-                DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
-                prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry,
-                num.exit, num.exitcode, num.posttenurefate, FtiesNameA,
-                FtiesCodeA, FtiesNameB, FtiesCodeB, FtiesNameC, FtiesCodeC,
-                ftcur) %>%
+ARCHIGOSgenevar <- ARCHIGOSgenevar %>%
+  dplyr::select(
+    ARCHIGOS_ID, COW_ID, LeadID, idacr, Label, leader, Beg, End,
+    BornDate,
+    DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
+    prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry,
+    num.exit, num.exitcode, num.posttenurefate, FtiesNameA,
+    FtiesCodeA, FtiesNameB, FtiesCodeB, FtiesNameC, FtiesCodeC,
+    ftcur
+  ) %>%
   dplyr::slice(c(5622, 2105, 2106, 2112:2117, 2133:2137, 2158:2162, 2163:2167))
 
 # manypkgs includes several functions that should help cleaning

@@ -32,6 +32,7 @@ test_that("Columns with dates are standardized", {
 # Contains the required variables
 test_that("object has the correct variables", {
   expect_col_exists(genevar[["ARCHIGOSgenevar"]], vars(ARCHIGOS_ID))
+  expect_col_exists(genevar[["ARCHIGOSgenevar"]], vars(COW_ID))
   expect_col_exists(genevar[["ARCHIGOSgenevar"]], vars(Beg))
   expect_col_exists(genevar[["ARCHIGOSgenevar"]], vars(End))
   expect_col_exists(genevar[["ARCHIGOSgenevar"]], vars(Label))

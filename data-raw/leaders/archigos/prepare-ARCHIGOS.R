@@ -55,7 +55,19 @@ ARCHIGOS <- as_tibble(ARCHIGOS) %>%
                                               "564" = "Orange Free State",
                                               "711" = "Tibet",
                                               "730" = "Korea",
-                                              "815" = "Vietnam")))
+                                              "815" = "Vietnam"))) %>%
+  dplyr::mutate(COW_ID =
+                  countrycode::countrycode(ccode,
+                                           origin = "cown",
+                                           destination = "cowc",
+                                           custom_match =
+                                             c("260" = "GFR",
+                                               "340" = "SRB",
+                                               "563" = "SAR",
+                                               "564" = "OFS",
+                                               "711" = "TBT",
+                                               "730" = "KOR",
+                                               "815" = "VIE")))
 
 # Note for the custom matching dictionary:
 # 260; German Federal Republic, taken from COW.
@@ -67,7 +79,7 @@ ARCHIGOS <- as_tibble(ARCHIGOS) %>%
 # 815; Refers to imperial Vietnam prior to the French colonization
 # Ordering stuff for output:
 ARCHIGOS <- ARCHIGOS %>% 
-    dplyr::select(ARCHIGOS_ID, LeadID, ccode, idacr, Label, leader, Beg, End, BornDate,
+    dplyr::select(ARCHIGOS_ID, LeadID, COW_ID, idacr, Label, leader, Beg, End, BornDate,
                   DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
                   prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry,
                   num.exit, num.exitcode, num.posttenurefate, FtiesNameA,
