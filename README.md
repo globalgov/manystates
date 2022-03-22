@@ -1,5 +1,5 @@
 
-# manystates <img src="man/figures/manystates_hexlogo.png" align="right"/>
+# manystates <img src="man/figures/manystates_hexlogo.png" align="right" width="220"/>
 
 <!-- badges: start -->
 
