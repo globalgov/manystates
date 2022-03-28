@@ -14,7 +14,7 @@ test_that("CShapes extraction returns qConsistent object", {
 })
 
 test_that("object has the correct variables", {
-  expect_col_exists(test, vars(COW_Nr))
+  expect_col_exists(test, vars(COW_ID))
   expect_col_exists(test, vars(Beg))
   expect_col_exists(test, vars(End))
   expect_col_exists(test, vars(Label))

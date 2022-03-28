@@ -51,8 +51,8 @@ import_cshapes <- function(date, ...) {
     dplyr::mutate(Beg = manypkgs::standardise_dates(.data$start),
                 End = manypkgs::standardise_dates(.data$end),
                 Label = manypkgs::standardise_titles(.data$country_name),
-                COW_Nr = manypkgs::standardise_titles(
-                  as.character(.data$cowcode)),
+                COW_ID = manystates::code_states(
+                  as.character(.data$country_name), abbrev = T),
                 Capital = manypkgs::standardise_titles(.data$capname),
                 CapitalLong = .data$caplong,
                 CapitalLat = .data$caplat,
@@ -65,8 +65,8 @@ import_cshapes <- function(date, ...) {
                   -(.data$cowcode), -(.data$capname), -(.data$caplong),
                   -(.data$caplat), -(.data$b_def), -(.data$status),
                   -(.data$owner), -(.data$fid)) %>%
-    dplyr::relocate(.data$COW_Nr, .data$Beg, .data$End, .data$Label) %>%
-    dplyr::arrange(.data$Beg, .data$COW_Nr)
+    dplyr::relocate(.data$COW_ID, .data$Beg, .data$End, .data$Label) %>%
+    dplyr::arrange(.data$Beg, .data$COW_ID)
   return(cshapes)
 }
 
@@ -130,6 +130,8 @@ import_distlist <- function(date, type, ...) {
                                                custom_match = custom_match)) %>%
       dplyr::rename(FromCode = .data$ccode1, ToCode = .data$ccode2,
                     Distance = .data$capdist) %>%
+      dplyr::mutate(FromCode = manystates::code_states(FromLabel, abbrev = T),
+                    ToCode = manystates::code_states(ToLabel, abbrev = T)) %>%
       dplyr::relocate(.data$FromLabel, .data$FromCode, .data$ToLabel,
                       .data$ToCode, .data$Distance)
   } else if (type == "mindist") {
@@ -146,6 +148,8 @@ import_distlist <- function(date, type, ...) {
                                                custom_match = custom_match)) %>%
       dplyr::rename(FromCode = .data$ccode1, ToCode = .data$ccode2,
                     Distance = .data$mindist) %>%
+      dplyr::mutate(FromCode = manystates::code_states(FromLabel, abbrev = T),
+                    ToCode = manystates::code_states(ToLabel, abbrev = T)) %>%
       dplyr::relocate(.data$FromLabel, .data$FromCode, .data$ToLabel,
                       .data$ToCode, .data$Distance)
   } else {
@@ -162,6 +166,8 @@ import_distlist <- function(date, type, ...) {
                                                custom_match = custom_match)) %>%
       dplyr::rename(FromCode = .data$ccode1, ToCode = .data$ccode2,
                     Distance = .data$centdist) %>%
+      dplyr::mutate(FromCode = manystates::code_states(FromLabel, abbrev = T),
+                    ToCode = manystates::code_states(ToLabel, abbrev = T)) %>%
       dplyr::relocate(.data$FromLabel, .data$FromCode, .data$ToLabel,
                       .data$ToCode, .data$Distance)
   }
@@ -206,6 +212,6 @@ import_distmatrix <- function(date, type, ...) {
   }
   # Step 1:
   dist <- cshapes::distmatrix(date, type, ..., useGW = FALSE)
-  #Step 3: No Processing required as this is a simple distance matrix.
+  # Step 2: No Processing required as this is a simple distance matrix.
   return(dist)
 }
