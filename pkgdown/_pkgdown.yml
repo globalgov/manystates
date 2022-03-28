@@ -33,6 +33,8 @@ navbar:
       menu:
       - text: Creating historical maps
         href: articles/CShapesMaps.html
+      - text: code_states() regex table
+        href: articles/codestates_table.html
     news:
       text: News
       href: news/index.html
