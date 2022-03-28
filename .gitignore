@@ -39,3 +39,4 @@ vignettes/*.pdf
 .Renviron
 data-raw/Other/*
 docs
+inst/doc
