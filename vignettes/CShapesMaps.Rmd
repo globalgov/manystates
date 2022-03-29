@@ -49,9 +49,9 @@ library(dplyr)
 GDP <- WDI::WDI(indicator = 'NY.GDP.PCAP.KD', start = 1980, end = 1980)
 GDP <- dplyr::slice(GDP, 50:266)
 GDP <- dplyr::as_tibble(GDP) %>%
-  dplyr::mutate(COW_Nr = as.character(countrycode::countrycode(GDP$iso2c,
+  dplyr::mutate(COW_ID = as.character(countrycode::countrycode(GDP$iso2c,
                                                        origin = "iso2c",
-                                                       destination = "cown",
+                                                       destination = "cowc",
                                                        warn = FALSE)))
 ```
 
@@ -72,7 +72,7 @@ distances according what they were in 1980 (e.g. West and East Germany or USSR).
 
 ```{r join, echo=TRUE, warning=FALSE, message=FALSE}
 # Left join on COW_Nr
-data <- dplyr::left_join(mapdata, GDP, by = "COW_Nr")
+data <- dplyr::left_join(mapdata, GDP, by = "COW_ID")
 ```
 
 ## Step 2: Create a heatmap
