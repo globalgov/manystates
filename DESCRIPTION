@@ -59,7 +59,10 @@ Suggests:
     hrbrthemes,
     covr,
     cshapes,
-    vdemdata
+    vdemdata,
+    migraph,
+    ggplot2,
+    ggraph
 Remotes:
     vdeminstitute/vdemdata,
     globalgov/manypkgs
