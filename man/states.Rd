@@ -28,7 +28,7 @@ states database documentation
 }
 \details{
 \preformatted{## $GW
-## -- Data Summary ------------------------
+## ── Data Summary ────────────────────────
 ##                            Values
 ## Name                       X[[i]]
 ## Number of rows             216   
@@ -39,10 +39,8 @@ states database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ----------------------------------------------------
-## # A tibble: 5 x 8
+## ── Variable type: character ─────────────────────────────────────────────────────────────────────────────────────────────────
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
 ## 1 COW_ID                0             1     3     3     0      202          0
 ## 2 Beg                   0             1    10    12     0      153          0
 ## 3 End                   0             1    10    12     0       30          0
@@ -50,7 +48,7 @@ states database documentation
 ## 5 Label                 0             1     4    39     0      203          0
 ## 
 ## $ISD
-## -- Data Summary ------------------------
+## ── Data Summary ────────────────────────
 ##                            Values
 ## Name                       X[[i]]
 ## Number of rows             362   
@@ -61,10 +59,8 @@ states database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ----------------------------------------------------
-## # A tibble: 7 x 8
+## ── Variable type: character ─────────────────────────────────────────────────────────────────────────────────────────────────
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
 ## 1 COW_ID                0             1     3     3     0      310          0
 ## 2 Beg                   0             1    10    12     0      201          0
 ## 3 End                   0             1    10    12     0      134          0
@@ -74,7 +70,7 @@ states database documentation
 ## 7 New.State             0             1     1     1     0        2          0
 ## 
 ## $COW
-## -- Data Summary ------------------------
+## ── Data Summary ────────────────────────
 ##                            Values
 ## Name                       X[[i]]
 ## Number of rows             243   
@@ -85,10 +81,8 @@ states database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ----------------------------------------------------
-## # A tibble: 5 x 8
+## ── Variable type: character ─────────────────────────────────────────────────────────────────────────────────────────────────
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
 ## 1 COW_ID                0             1     3     3     0      217          0
 ## 2 Beg                   0             1    10    12     0      191          0
 ## 3 End                   0             1    10    12     0       39          0
@@ -96,7 +90,7 @@ states database documentation
 ## 5 Label                 0             1     4    32     0      217          0
 ## 
 ## $ICOW
-## -- Data Summary ------------------------
+## ── Data Summary ────────────────────────
 ##                            Values
 ## Name                       X[[i]]
 ## Number of rows             217   
@@ -108,10 +102,8 @@ states database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ----------------------------------------------------
-## # A tibble: 8 x 8
+## ── Variable type: character ─────────────────────────────────────────────────────────────────────────────────────────────────
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
 ## 1 COW_ID                0        1          3     3     0      217          0
 ## 2 Label                 0        1          4    36     0      217          0
 ## 3 IndDate               0        1          6     8     0      175          0
@@ -121,26 +113,15 @@ states database documentation
 ## 7 GWsys                22        0.899      7     7     0      122          0
 ## 8 Notes                58        0.733     25   239     0      138          0
 ## 
-## -- Variable type: numeric ------------------------------------------------------
-## # A tibble: 7 x 10
-##   skim_variable n_missing complete_rate    mean      sd    p0   p25   p50   p75
-## * <chr>             <int>         <dbl>   <dbl>   <dbl> <dbl> <dbl> <dbl> <dbl>
-## 1 ColRuler             46        0.788  293.    172.        2  200    220   300
-## 2 IndFrom              39        0.820  289.    185.        2  200    220   345
-## 3 IndViol               0        1        0.424   0.495     0    0      0     1
-## 4 IndType               0        1        2.15    0.774     1    2      2     2
-## 5 SecFrom             179        0.175  313.    200.       41  141.   315   365
-## 6 SecViol             179        0.175    0.605   0.495     0    0      1     1
-## 7 Into                198        0.0876 361     175.      255  255    255   325
-##    p100
-## * <dbl>
-## 1   920
-## 2   920
-## 3     1
-## 4     4
-## 5   820
-## 6     1
-## 7   816
+## ── Variable type: numeric ───────────────────────────────────────────────────────────────────────────────────────────────────
+##   skim_variable n_missing complete_rate    mean      sd    p0   p25   p50   p75  p100
+## 1 ColRuler             46        0.788  293.    172.        2  200    220   300   920
+## 2 IndFrom              39        0.820  289.    185.        2  200    220   345   920
+## 3 IndViol               0        1        0.424   0.495     0    0      0     1     1
+## 4 IndType               0        1        2.15    0.774     1    2      2     2     4
+## 5 SecFrom             179        0.175  313.    200.       41  141.   315   365   820
+## 6 SecViol             179        0.175    0.605   0.495     0    0      1     1     1
+## 7 Into                198        0.0876 361     175.      255  255    255   325   816
 }
 }
 \keyword{datasets}

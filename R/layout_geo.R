@@ -2,7 +2,6 @@
 #'
 #' Creates a plot of the a unimodal geographical network. Requires the following
 #' packages `{migraph}`, `{ggraph}`, and `{ggplot2}` to be installed.
-#'
 #' @param object Unimodal geographical network. Needs to contain ISO3c country
 #' IDs.
 #' @param date String date at which the network snapshot was taken e.g.
@@ -10,14 +9,12 @@
 #' be between 1886 and 2021.
 #' @param theme Theme you would like to use to plot the graph. Available themes
 #' are "light", "dark", and "earth".
-#'
 #' @return A map of a country level geographical network.
-#'
 #' @examples
+#' \dontrun{
 #' # Load the unimodal network of environmental agreements signed in 2010
 #' # Made from {manyenviron} using data from ECOLEX.
 #' membership <- migraph:::membership
-#'
 #' # Plot the network at the specified date
 #' # Light theme
 #' network_map(membership, date = "2010-01-01", theme = "light") +
@@ -34,8 +31,8 @@
 #'   labs(title = "International Environmental Treaties 2010",
 #'        subtitle = "Ecolex data",
 #'        caption = "Created with love by {migraph}")
+#'}
 #' @export
-
 network_map <- function(object,
                         date,
                         theme = "light") {

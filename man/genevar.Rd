@@ -26,7 +26,7 @@ genevar database documentation
 }
 \details{
 \preformatted{## $ARCHIGOSgenevar
-## -- Data Summary ------------------------
+## ── Data Summary ────────────────────────
 ##                            Values
 ## Name                       X[[i]]
 ## Number of rows             24    
@@ -38,79 +38,41 @@ genevar database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ----------------------------------------------------
-## # A tibble: 28 x 8
-##    skim_variable      n_missing complete_rate   min   max empty n_unique
-##  * <chr>                  <int>         <dbl> <int> <int> <int>    <int>
-##  1 ARCHIGOS_ID                0        1          8    10     0        6
-##  2 COW_ID                     0        1          3     3     0        2
-##  3 LeadID                     0        1         36    36     0        4
-##  4 idacr                      0        1          3     3     0        2
-##  5 Label                      0        1         10    11     0        2
-##  6 leader                     0        1         14    17     0        4
-##  7 Beg                        0        1         10    10     0       24
-##  8 End                        0        1         10    10     0       24
-##  9 BornDate                  10        0.583     10    10     0        2
-## 10 DeathDate                 11        0.542     10    10     0        1
-## 11 YearBorn                   0        1          4     4     0        4
-## 12 YearDied                   0        1          4     5     0        2
-## 13 entry                     18        0.25       7     9     0        2
-## 14 exit                      18        0.25       7     7     0        1
-## 15 exitcode                  18        0.25       7     7     0        1
-## 16 prevtimesinoffice         18        0.25       1     1     0        3
-## 17 posttenurefate            18        0.25       2    37     0        2
-## 18 dbpedia.uri               11        0.542     53    53     0        1
-## 19 num.entry                 18        0.25       1     1     0        2
-## 20 num.exit                  23        0.0417     1     1     0        1
-## 21 num.exitcode              18        0.25       1     1     0        1
-## 22 num.posttenurefate        18        0.25       1     4     0        2
-## 23 FtiesNameA                 6        0.75      22    24     0        2
-## 24 FtiesCodeA                 6        0.75      36    36     0        2
-## 25 FtiesNameB                24        0         NA    NA     0        0
-## 26 FtiesCodeB                19        0.208     36    36     0        1
-## 27 FtiesNameC                24        0         NA    NA     0        0
-## 28 FtiesCodeC                24        0         NA    NA     0        0
-##    whitespace
-##  *      <int>
-##  1          0
-##  2          0
-##  3          0
-##  4          0
-##  5          0
-##  6          0
-##  7          0
-##  8          0
-##  9          0
-## 10          0
-## 11          0
-## 12          0
-## 13          0
-## 14          0
-## 15          0
-## 16          0
-## 17          0
-## 18          0
-## 19          0
-## 20          0
-## 21          0
-## 22          0
-## 23          0
-## 24          0
-## 25          0
-## 26          0
-## 27          0
-## 28          0
+## ── Variable type: character ─────────────────────────────────────────────────────────────────────────────────────────────────
+##    skim_variable      n_missing complete_rate   min   max empty n_unique whitespace
+##  1 ARCHIGOS_ID                0        1          8    10     0        6          0
+##  2 COW_ID                     0        1          3     3     0        2          0
+##  3 LeadID                     0        1         36    36     0        4          0
+##  4 idacr                      0        1          3     3     0        2          0
+##  5 Label                      0        1         10    11     0        2          0
+##  6 leader                     0        1         14    17     0        4          0
+##  7 Beg                        0        1         10    10     0       24          0
+##  8 End                        0        1         10    10     0       24          0
+##  9 BornDate                  10        0.583     10    10     0        2          0
+## 10 DeathDate                 11        0.542     10    10     0        1          0
+## 11 YearBorn                   0        1          4     4     0        4          0
+## 12 YearDied                   0        1          4     5     0        2          0
+## 13 entry                     18        0.25       7     9     0        2          0
+## 14 exit                      18        0.25       7     7     0        1          0
+## 15 exitcode                  18        0.25       7     7     0        1          0
+## 16 prevtimesinoffice         18        0.25       1     1     0        3          0
+## 17 posttenurefate            18        0.25       2    37     0        2          0
+## 18 dbpedia.uri               11        0.542     53    53     0        1          0
+## 19 num.entry                 18        0.25       1     1     0        2          0
+## 20 num.exit                  23        0.0417     1     1     0        1          0
+## 21 num.exitcode              18        0.25       1     1     0        1          0
+## 22 num.posttenurefate        18        0.25       1     4     0        2          0
+## 23 FtiesNameA                 6        0.75      22    24     0        2          0
+## 24 FtiesCodeA                 6        0.75      36    36     0        2          0
+## 25 FtiesNameB                24        0         NA    NA     0        0          0
+## 26 FtiesCodeB                19        0.208     36    36     0        1          0
+## 27 FtiesNameC                24        0         NA    NA     0        0          0
+## 28 FtiesCodeC                24        0         NA    NA     0        0          0
 ## 
-## -- Variable type: numeric ------------------------------------------------------
-## # A tibble: 2 x 10
-##   skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75
-## * <chr>             <int>         <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
-## 1 Female                0          1    0     0         0     0     0  0   
-## 2 ftcur                 6          0.75 0.278 0.461     0     0     0  0.75
-##    p100
-## * <dbl>
-## 1     0
-## 2     1
+## ── Variable type: numeric ───────────────────────────────────────────────────────────────────────────────────────────────────
+##   skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100
+## 1 Female                0          1    0     0         0     0     0  0        0
+## 2 ftcur                 6          0.75 0.278 0.461     0     0     0  0.75     1
 }
 }
 \keyword{datasets}
