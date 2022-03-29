@@ -1,6 +1,7 @@
 #' Plot geographical networks
 #'
-#' Creates a plot of the a unimodal geographical network.
+#' Creates a plot of the a unimodal geographical network. Requires the following
+#' packages `{migraph}`, `{ggraph}`, and `{ggplot2}` to be installed.
 #'
 #' @param object Unimodal geographical network. Needs to contain ISO3c country
 #' IDs.
@@ -38,10 +39,17 @@
 network_map <- function(object,
                         date,
                         theme = "light") {
+  if (!requireNamespace(c("migraph", "ggplot2", "ggraph"), quietly = TRUE)) {
+    stop(
+      "Packages \"migraph\", \"ggraph\", and \"ggplot2\" must be installed
+      to use this function.",
+      call. = FALSE
+    )
+  }
   ID <- weight <- NULL
   # Checks for correct input
-  if (!is_graph(object)) stop("Not a valid graph object.")
-  if (is_multiplex(object)) stop("Graph should be unimodal. Use project_cols() to convert it.")
+  if (!migraph::is_graph(object)) stop("Not a valid graph object.")
+  if (migraph::is_multiplex(object)) stop("Graph should be unimodal. Use project_cols() to convert it.")
   if (!is.character(date)) as.character(date)
   if (!(theme %in% c("dark", "earth", "light"))) {
     stop("Specify a theme: light, dark, earth")
@@ -60,17 +68,17 @@ network_map <- function(object,
     countrycolor <- "#596673"
   }
   # Step 1: Import the historical shapefile data
-  cshapes <- import_cshapes(date)
+  cshapes <- manystates::import_cshapes(date)
   # Step 2: create edges with from/to lat/long
   edges <- igraph::as_data_frame(object) %>%
     dplyr::inner_join(cshapes,
-      by = c("from" = "ID")
+      by = c("from" = "COW_ID")
     ) %>%
-    dplyr::rename(x = .data$caplong, y = .data$caplat) %>%
+    dplyr::rename(x = .data$CapitalLong, y = .data$CapitalLat) %>%
     dplyr::inner_join(cshapes,
-      by = c("to" = "ID")
+      by = c("to" = "COW_ID")
     ) %>%
-    dplyr::rename(xend = .data$caplong, yend = .data$caplat)
+    dplyr::rename(xend = .data$CapitalLong, yend = .data$CapitalLat)
   # Step 3: Create plotted network from computed edges
   g <- migraph::as_tidygraph(edges)
   # Step 4: Get the country shapes from the edges dataframe
@@ -82,12 +90,12 @@ network_map <- function(object,
   # Could include different projections for continents etc
   # Step 6: Generate the point coordinates for capitals
   cshapes_pos <- cshapes %>%
-    dplyr::filter(ID %in% migraph::node_names(g)) %>%
-    dplyr::rename(x = .data$caplong, y = .data$caplat)
+    dplyr::filter(COW_ID %in% migraph::node_names(g)) %>%
+    dplyr::rename(x = .data$CapitalLong, y = .data$CapitalLat)
   # Reorder things according to nodes in plotted network g
   cshapes_pos <- cshapes_pos[match(
     migraph::node_names(g),
-    cshapes_pos$ID
+    cshapes_pos$COW_ID
   ), ]
   # Generate the layout
   lay <- ggraph::create_layout(g, layout = cshapes_pos)
@@ -97,7 +105,7 @@ network_map <- function(object,
   # Step 7: Plot things
   ggraph::ggraph(lay) + country_shapes +
     ggraph::geom_edge_arc(
-      data = edges, aes(edge_width = weight),
+      data = edges, ggplot2::aes(edge_width = weight),
       strength = 0.33,
       alpha = 0.25
     ) +
@@ -110,41 +118,11 @@ network_map <- function(object,
       fill = "white", color = "black",
       stroke = 0.5
     ) +
-    ggraph::geom_node_text(aes(label = node_names(g)),
+    ggraph::geom_node_text(ggplot2::aes(label = migraph::node_names(g)),
       repel = TRUE, size = 3,
       color = "white", fontface = "bold"
     ) +
     maptheme
-}
-
-
-# Helper function to import historical map data from {cshapes}:
-
-import_cshapes <- function(date, ...) {
-  # Step 0: Set string dates to actual dates
-  date <- as.Date(date)
-  # Step 0.5: Test for correct dates
-  if (!(as.numeric(format(date, format = "%Y")) >= 1886 &
-    as.numeric(format(date, format = "%Y")) <= 2021)) {
-    stop("Please input a date in the following range: 1886-01-01 -
-         end of the dataset")
-  }
-  # Extract data from the {cshapes} package
-  cshapes <- cshapes::cshp(date, ..., useGW = FALSE) # Use COW_ID instead of GW
-  # Switch to iso3c with custom matching for ambiguous COW codes
-  custom_match <- c(
-    `730` = "KOR", # Korea
-    `345` = "YUG", # Yugoslavia
-    `347` = "UNK"
-  ) # Kosovo
-  cshapes$ID <- countrycode::countrycode(cshapes$cowcode,
-    "cown",
-    "iso3c",
-    custom_match = custom_match
-  )
-  # Select only relevant columns for map layout
-  cshapes <- dplyr::select(cshapes, .data$ID, .data$caplong, .data$caplat)
-  cshapes
 }
 
 # Helper function providing the network map function with a few map themes.
