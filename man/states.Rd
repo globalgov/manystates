@@ -28,93 +28,127 @@ states database documentation
 }
 \details{
 \preformatted{## $GW
-## ── Data Summary ────────────────────────
+## -- Data Summary ------------------------
 ##                            Values
 ## Name                       X[[i]]
 ## Number of rows             216   
 ## Number of columns          5     
 ## _______________________          
 ## Column type frequency:           
-##   character                5     
+##   character                3     
+##   messydt                  2     
 ## ________________________         
 ## Group variables            None  
 ## 
-## ── Variable type: character ─────────────────────────────────────────────────────────────────────────────────────────────────
+## -- Variable type: character ------------------------------------------------------------------------------------------
+## # A tibble: 3 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
 ## 1 COW_ID                0             1     3     3     0      202          0
-## 2 Beg                   0             1    10    12     0      153          0
-## 3 End                   0             1    10    12     0       30          0
-## 4 COW_Nr                0             1     1     3     0      202          0
-## 5 Label                 0             1     4    39     0      203          0
+## 2 COW_Nr                0             1     1     3     0      202          0
+## 3 Label                 0             1     4    39     0      203          0
+## 
+## -- Variable type: messydt --------------------------------------------------------------------------------------------
+## # A tibble: 2 x 5
+##   skim_variable n_missing complete_rate n_empty n_unique
+## * <chr>             <int>         <dbl>   <int>    <int>
+## 1 Beg                   0             1       0      153
+## 2 End                   0             1       0       30
 ## 
 ## $ISD
-## ── Data Summary ────────────────────────
+## -- Data Summary ------------------------
 ##                            Values
 ## Name                       X[[i]]
 ## Number of rows             362   
 ## Number of columns          7     
 ## _______________________          
 ## Column type frequency:           
-##   character                7     
+##   character                5     
+##   messydt                  2     
 ## ________________________         
 ## Group variables            None  
 ## 
-## ── Variable type: character ─────────────────────────────────────────────────────────────────────────────────────────────────
+## -- Variable type: character ------------------------------------------------------------------------------------------
+## # A tibble: 5 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
 ## 1 COW_ID                0             1     3     3     0      310          0
-## 2 Beg                   0             1    10    12     0      201          0
-## 3 End                   0             1    10    12     0      134          0
-## 4 COW_Nr                0             1     1     4     0      315          0
-## 5 Label                 0             1     3    35     0      319          0
-## 6 Micro                 0             1     1     1     0        2          0
-## 7 New.State             0             1     1     1     0        2          0
+## 2 COW_Nr                0             1     1     4     0      315          0
+## 3 Label                 0             1     3    35     0      319          0
+## 4 Micro                 0             1     1     1     0        2          0
+## 5 New.State             0             1     1     1     0        2          0
+## 
+## -- Variable type: messydt --------------------------------------------------------------------------------------------
+## # A tibble: 2 x 5
+##   skim_variable n_missing complete_rate n_empty n_unique
+## * <chr>             <int>         <dbl>   <int>    <int>
+## 1 Beg                   0             1       0      201
+## 2 End                   0             1       0      134
 ## 
 ## $COW
-## ── Data Summary ────────────────────────
+## -- Data Summary ------------------------
 ##                            Values
 ## Name                       X[[i]]
 ## Number of rows             243   
 ## Number of columns          5     
 ## _______________________          
 ## Column type frequency:           
-##   character                5     
+##   character                3     
+##   messydt                  2     
 ## ________________________         
 ## Group variables            None  
 ## 
-## ── Variable type: character ─────────────────────────────────────────────────────────────────────────────────────────────────
+## -- Variable type: character ------------------------------------------------------------------------------------------
+## # A tibble: 3 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
+## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
 ## 1 COW_ID                0             1     3     3     0      217          0
-## 2 Beg                   0             1    10    12     0      191          0
-## 3 End                   0             1    10    12     0       39          0
-## 4 COW_Nr                0             1     1     3     0      217          0
-## 5 Label                 0             1     4    32     0      217          0
+## 2 COW_Nr                0             1     1     3     0      217          0
+## 3 Label                 0             1     4    32     0      217          0
+## 
+## -- Variable type: messydt --------------------------------------------------------------------------------------------
+## # A tibble: 2 x 5
+##   skim_variable n_missing complete_rate n_empty n_unique
+## * <chr>             <int>         <dbl>   <int>    <int>
+## 1 Beg                   0             1       0      191
+## 2 End                   0             1       0       39
 ## 
 ## $ICOW
-## ── Data Summary ────────────────────────
+## -- Data Summary ------------------------
 ##                            Values
 ## Name                       X[[i]]
 ## Number of rows             217   
 ## Number of columns          15    
 ## _______________________          
 ## Column type frequency:           
-##   character                8     
+##   character                3     
+##   messydt                  5     
 ##   numeric                  7     
 ## ________________________         
 ## Group variables            None  
 ## 
-## ── Variable type: character ─────────────────────────────────────────────────────────────────────────────────────────────────
+## -- Variable type: character ------------------------------------------------------------------------------------------
+## # A tibble: 3 x 8
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-## 1 COW_ID                0        1          3     3     0      217          0
-## 2 Label                 0        1          4    36     0      217          0
-## 3 IndDate               0        1          6     8     0      175          0
-## 4 SecDate             179        0.175      7     7     0       31          0
-## 5 IntoDate            198        0.0876     7     7     0       11          0
-## 6 COWsys                0        1          7     7     0      142          0
-## 7 GWsys                22        0.899      7     7     0      122          0
-## 8 Notes                58        0.733     25   239     0      138          0
+## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
+## 1 COW_ID                0         1         3     3     0      217          0
+## 2 Label                 0         1         4    36     0      217          0
+## 3 Notes                58         0.733    25   239     0      138          0
 ## 
-## ── Variable type: numeric ───────────────────────────────────────────────────────────────────────────────────────────────────
+## -- Variable type: messydt --------------------------------------------------------------------------------------------
+## # A tibble: 5 x 5
+##   skim_variable n_missing complete_rate n_empty n_unique
+## * <chr>             <int>         <dbl>   <int>    <int>
+## 1 IndDate               0        1            0      175
+## 2 SecDate             179        0.175        0       31
+## 3 IntoDate            198        0.0876       0       11
+## 4 COWsys                0        1            0      142
+## 5 GWsys                22        0.899        0      122
+## 
+## -- Variable type: numeric --------------------------------------------------------------------------------------------
+## # A tibble: 7 x 10
 ##   skim_variable n_missing complete_rate    mean      sd    p0   p25   p50   p75  p100
+## * <chr>             <int>         <dbl>   <dbl>   <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
 ## 1 ColRuler             46        0.788  293.    172.        2  200    220   300   920
 ## 2 IndFrom              39        0.820  289.    185.        2  200    220   345   920
 ## 3 IndViol               0        1        0.424   0.495     0    0      0     1     1
