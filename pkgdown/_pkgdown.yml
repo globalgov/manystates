@@ -69,6 +69,10 @@ reference:
     contents:
     - import_vdem
     - import_vparty
+  - title: "Vizualisation functions"
+    desc: "These functions allow users to vizualize network data of the many package universe:"
+    contents:
+    - network_map
   - title: "States Data"
     desc: "manystates contains the following databases on states or state related concepts"
     contents:
@@ -76,6 +80,7 @@ reference:
     - leaders
     - regimes
     - genevar
+    - economics
 footer:
   structure:
     left: devs
