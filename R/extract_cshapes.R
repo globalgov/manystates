@@ -130,8 +130,10 @@ import_distlist <- function(date, type, ...) {
                                                custom_match = custom_match)) %>%
       dplyr::rename(FromCode = .data$ccode1, ToCode = .data$ccode2,
                     Distance = .data$capdist) %>%
-      dplyr::mutate(FromCode = manystates::code_states(FromLabel, abbrev = T),
-                    ToCode = manystates::code_states(ToLabel, abbrev = T)) %>%
+      dplyr::mutate(FromCode = manystates::code_states(.data$FromLabel,
+                                                       abbrev = T),
+                    ToCode = manystates::code_states(.data$ToLabel,
+                                                     abbrev = T)) %>%
       dplyr::relocate(.data$FromLabel, .data$FromCode, .data$ToLabel,
                       .data$ToCode, .data$Distance)
   } else if (type == "mindist") {
@@ -148,8 +150,10 @@ import_distlist <- function(date, type, ...) {
                                                custom_match = custom_match)) %>%
       dplyr::rename(FromCode = .data$ccode1, ToCode = .data$ccode2,
                     Distance = .data$mindist) %>%
-      dplyr::mutate(FromCode = manystates::code_states(FromLabel, abbrev = T),
-                    ToCode = manystates::code_states(ToLabel, abbrev = T)) %>%
+      dplyr::mutate(FromCode = manystates::code_states(.data$FromLabel,
+                                                       abbrev = T),
+                    ToCode = manystates::code_states(.data$ToLabel,
+                                                     abbrev = T)) %>%
       dplyr::relocate(.data$FromLabel, .data$FromCode, .data$ToLabel,
                       .data$ToCode, .data$Distance)
   } else {
@@ -166,8 +170,10 @@ import_distlist <- function(date, type, ...) {
                                                custom_match = custom_match)) %>%
       dplyr::rename(FromCode = .data$ccode1, ToCode = .data$ccode2,
                     Distance = .data$centdist) %>%
-      dplyr::mutate(FromCode = manystates::code_states(FromLabel, abbrev = T),
-                    ToCode = manystates::code_states(ToLabel, abbrev = T)) %>%
+      dplyr::mutate(FromCode = manystates::code_states(.data$FromLabel,
+                                                       abbrev = T),
+                    ToCode = manystates::code_states(.data$ToLabel,
+                                                     abbrev = T)) %>%
       dplyr::relocate(.data$FromLabel, .data$FromCode, .data$ToLabel,
                       .data$ToCode, .data$Distance)
   }
