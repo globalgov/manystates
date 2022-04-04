@@ -11,27 +11,25 @@
 #' are "light", "dark", and "earth".
 #' @return A map of a country level geographical network.
 #' @examples
-#' \dontrun{
 #' # Load the unimodal network of environmental agreements signed in 2010
 #' # Made from {manyenviron} using data from ECOLEX.
 #' membership <- migraph:::membership
 #' # Plot the network at the specified date
 #' # Light theme
 #' network_map(membership, date = "2010-01-01", theme = "light") +
-#'   labs(title = "International Environmental Treaties 2010",
-#'        subtitle = "Ecolex data",
-#'        caption = "Created with love by {migraph}")
+#'   ggplot2::labs(title = "International Environmental Treaties 2010",
+#'                  subtitle = "Ecolex data",
+#'                  caption = "Created with love by {migraph}")
 #' # Dark theme
 #' network_map(membership, date = "2010-01-01", theme = "dark") +
-#'   labs(title = "International Environmental Treaties 2010",
-#'        subtitle = "Ecolex data",
-#'        caption = "Created with love by {migraph}")
+#'   ggplot2::labs(title = "International Environmental Treaties 2010",
+#'                  subtitle = "Ecolex data",
+#'                  caption = "Created with love by {migraph}")
 #' # Earth theme
 #' network_map(membership, date = "2010-01-01", theme = "earth") +
-#'   labs(title = "International Environmental Treaties 2010",
-#'        subtitle = "Ecolex data",
-#'        caption = "Created with love by {migraph}")
-#'}
+#'   ggplot2::labs(title = "International Environmental Treaties 2010",
+#'                  subtitle = "Ecolex data",
+#'                  caption = "Created with love by {migraph}")
 #' @export
 network_map <- function(object,
                         date,
@@ -67,7 +65,7 @@ network_map <- function(object,
   # Step 1: Import the historical shapefile data
   cshapes <- manystates::import_cshapes(date)
   # Step 2: create edges with from/to lat/long
-  edges <- igraph::as_data_frame(object) %>%
+  edges <- migraph::as_data_frame(object) %>%
     dplyr::inner_join(cshapes,
       by = c("from" = "COW_ID")
     ) %>%
@@ -87,12 +85,12 @@ network_map <- function(object,
   # Could include different projections for continents etc
   # Step 6: Generate the point coordinates for capitals
   cshapes_pos <- cshapes %>%
-    dplyr::filter(COW_ID %in% migraph::node_names(g)) %>%
+    dplyr::filter(.data$COW_ID %in% migraph::node_names(g)) %>%
     dplyr::rename(x = .data$CapitalLong, y = .data$CapitalLat)
   # Reorder things according to nodes in plotted network g
   cshapes_pos <- cshapes_pos[match(
     migraph::node_names(g),
-    cshapes_pos$COW_ID
+    cshapes_pos[["COW_ID"]]
   ), ]
   # Generate the layout
   lay <- ggraph::create_layout(g, layout = cshapes_pos)
