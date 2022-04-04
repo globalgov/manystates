@@ -25,25 +25,23 @@ Creates a plot of the a unimodal geographical network. Requires the following
 packages \code{{migraph}}, \code{{ggraph}}, and \code{{ggplot2}} to be installed.
 }
 \examples{
-\dontrun{
 # Load the unimodal network of environmental agreements signed in 2010
 # Made from {manyenviron} using data from ECOLEX.
 membership <- migraph:::membership
 # Plot the network at the specified date
 # Light theme
 network_map(membership, date = "2010-01-01", theme = "light") +
-  labs(title = "International Environmental Treaties 2010",
-       subtitle = "Ecolex data",
-       caption = "Created with love by {migraph}")
+  ggplot2::labs(title = "International Environmental Treaties 2010",
+                 subtitle = "Ecolex data",
+                 caption = "Created with love by {migraph}")
 # Dark theme
 network_map(membership, date = "2010-01-01", theme = "dark") +
-  labs(title = "International Environmental Treaties 2010",
-       subtitle = "Ecolex data",
-       caption = "Created with love by {migraph}")
+  ggplot2::labs(title = "International Environmental Treaties 2010",
+                 subtitle = "Ecolex data",
+                 caption = "Created with love by {migraph}")
 # Earth theme
 network_map(membership, date = "2010-01-01", theme = "earth") +
-  labs(title = "International Environmental Treaties 2010",
-       subtitle = "Ecolex data",
-       caption = "Created with love by {migraph}")
-}
+  ggplot2::labs(title = "International Environmental Treaties 2010",
+                 subtitle = "Ecolex data",
+                 caption = "Created with love by {migraph}")
 }
