@@ -65,7 +65,7 @@ network_map <- function(object,
   # Step 1: Import the historical shapefile data
   cshapes <- manystates::import_cshapes(date)
   # Step 2: create edges with from/to lat/long
-  edges <- migraph::as_data_frame(object) %>%
+  edges <- migraph::as_edgelist(object) %>%
     dplyr::inner_join(cshapes,
       by = c("from" = "COW_ID")
     ) %>%
