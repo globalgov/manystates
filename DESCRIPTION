@@ -7,9 +7,7 @@ Description: manystates provide data on states in the international system acros
 URL: https://github.com/globalgov/manystates
 BugReports: https://github.com/globalgov/manystates/issues
 Depends: 
-    R (>= 3.5.0),
-    tibble,
-    pointblank
+    R (>= 3.5.0)
 Authors@R: 
     c(person(given = "James",
              family = "Hollway",
@@ -47,7 +45,9 @@ Imports:
     countrycode,
     stringi,
     skimr,
-    manypkgs
+    manypkgs,
+    pointblank,
+    tibble
 Suggests: 
     fs,
     testthat (>= 3.0.0),
