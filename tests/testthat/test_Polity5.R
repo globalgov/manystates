@@ -31,12 +31,17 @@ test_that("Columns with dates are standardized", {
 
 # Contains the required variables
 test_that("object has the correct variables", {
-  expect_col_exists(regimes[["Polity5"]], vars(ID))
+  pointblank::expect_col_exists(regimes[["Polity5"]],
+                                pointblank::vars(ID))
   expect_true(is.character(regimes[["Polity5"]][["ID"]]))
-  expect_col_exists(regimes[["Polity5"]], vars(COW_ID))
-  expect_col_exists(regimes[["Polity5"]], vars(Beg))
-  expect_col_exists(regimes[["Polity5"]], vars(End))
-  expect_col_exists(regimes[["Polity5"]], vars(Label))
+  pointblank::expect_col_exists(regimes[["Polity5"]],
+                                pointblank::vars(COW_ID))
+  pointblank::expect_col_exists(regimes[["Polity5"]],
+                                pointblank::vars(Beg))
+  pointblank::expect_col_exists(regimes[["Polity5"]],
+                                pointblank::vars(End))
+  pointblank::expect_col_exists(regimes[["Polity5"]],
+                                pointblank::vars(Label))
 })
 
 # Labels are standardized

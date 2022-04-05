@@ -32,11 +32,15 @@ test_that("Columns with dates are standardized", {
 
 # Contains the required variables
 test_that("object has the correct variables", {
-  expect_col_exists(regimes[["FreedomHouse2"]], vars(COW_ID))
-  expect_col_exists(regimes[["FreedomHouse2"]], vars(ID))
+  pointblank::expect_col_exists(regimes[["FreedomHouse2"]],
+                                pointblank::vars(COW_ID))
+  pointblank::expect_col_exists(regimes[["FreedomHouse2"]],
+                                pointblank::vars(ID))
   expect_true(is.character(regimes[["FreedomHouse2"]][["ID"]]))
-  expect_col_exists(regimes[["FreedomHouse2"]], vars(Year))
-  expect_col_exists(regimes[["FreedomHouse2"]], vars(Label))
+  pointblank::expect_col_exists(regimes[["FreedomHouse2"]],
+                                pointblank::vars(Year))
+  pointblank::expect_col_exists(regimes[["FreedomHouse2"]],
+                                pointblank::vars(Label))
 })
 
 # Labels are standardized

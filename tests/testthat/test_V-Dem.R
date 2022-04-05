@@ -35,8 +35,12 @@ test_that("Columns with dates are standardized", {
 
 # Contains the required variables
 test_that("object has the correct variables", {
-  expect_col_exists(vdem, vars(VDem_ID))
-  expect_col_exists(vdem, vars(Beg))
-  expect_col_exists(vdem, vars(End))
-  expect_col_exists(vdem, vars(Label))
+  pointblank::expect_col_exists(vdem,
+                                pointblank::vars(VDem_ID))
+  pointblank::expect_col_exists(vdem,
+                                pointblank::vars(Beg))
+  pointblank::expect_col_exists(vdem,
+                                pointblank::vars(End))
+  pointblank::expect_col_exists(vdem,
+                                pointblank::vars(Label))
 })

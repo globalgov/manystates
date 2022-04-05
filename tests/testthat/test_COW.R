@@ -13,10 +13,14 @@ test_that("missing observations are reported correctly", {
 
 # Contains the required variables
 test_that("object has the correct variables", {
-  expect_col_exists(states[["COW"]], vars(COW_ID))
-  expect_col_exists(states[["COW"]], vars(Beg))
-  expect_col_exists(states[["COW"]], vars(End))
-  expect_col_exists(states[["COW"]], vars(Label))
+  pointblank::expect_col_exists(states[["COW"]],
+                                pointblank::vars(COW_ID))
+  pointblank::expect_col_exists(states[["COW"]],
+                                pointblank::vars(Beg))
+  pointblank::expect_col_exists(states[["COW"]],
+                                pointblank::vars(End))
+  pointblank::expect_col_exists(states[["COW"]],
+                                pointblank::vars(Label))
 })
 
 # Variables with dates are standardized
