@@ -39,58 +39,34 @@ leaders database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ----------------------------------------------------
+## -- Variable type: character ---------------------------------------------------------------------------------
 ## # A tibble: 22 x 8
-##    skim_variable      n_missing complete_rate   min   max empty n_unique
-##  * <chr>                  <int>         <dbl> <int> <int> <int>    <int>
-##  1 ARCHIGOS_ID                0      1            8    10     0     3409
-##  2 LeadID                     0      1           36    36     0     2802
-##  3 COW_ID                     0      1            3     3     0      188
-##  4 idacr                      0      1            3     3     0      189
-##  5 Label                      0      1            4    32     0      187
-##  6 leader                     0      1            3    41     0     2757
-##  7 entry                  14277      0.193        7    18     0        4
-##  8 exit                   14277      0.193        7    25     0        8
-##  9 exitcode               14277      0.193        7    59     0       15
-## 10 prevtimesinoffice      14277      0.193        1     1     0        7
-## 11 posttenurefate         14324      0.190        2    57     0        8
-## 12 dbpedia.uri             8552      0.516       32    72     0     1158
-## 13 num.entry              14277      0.193        1     4     0        4
-## 14 num.exit               16902      0.0443       1     4     0        7
-## 15 num.exitcode           14277      0.193        1     4     0       15
-## 16 num.posttenurefate     14277      0.193        1     4     0        9
-## 17 FtiesNameA             15814      0.106       11    43     0      200
-## 18 FtiesCodeA             15814      0.106       36    36     0      195
-## 19 FtiesNameB             17637      0.00277     15    38     0        7
-## 20 FtiesCodeB             17637      0.00277     36    36     0        6
-## 21 FtiesNameC             17674      0.000679    29    29     0        1
-## 22 FtiesCodeC             17674      0.000679    36    36     0        1
-##    whitespace
-##  *      <int>
-##  1          0
-##  2          0
-##  3          0
-##  4          0
-##  5          0
-##  6          0
-##  7          0
-##  8          0
-##  9          0
-## 10          0
-## 11          0
-## 12          0
-## 13          0
-## 14          0
-## 15          0
-## 16          0
-## 17          0
-## 18          0
-## 19          0
-## 20          0
-## 21          0
-## 22          0
+##    skim_variable      n_missing complete_rate   min   max empty n_unique whitespace
+##  * <chr>                  <int>         <dbl> <int> <int> <int>    <int>      <int>
+##  1 ARCHIGOS_ID                0      1            8    10     0     3409          0
+##  2 LeadID                     0      1           36    36     0     2802          0
+##  3 COW_ID                     0      1            3     3     0      188          0
+##  4 idacr                      0      1            3     3     0      189          0
+##  5 Label                      0      1            4    32     0      187          0
+##  6 leader                     0      1            3    41     0     2757          0
+##  7 entry                  14277      0.193        7    18     0        4          0
+##  8 exit                   14277      0.193        7    25     0        8          0
+##  9 exitcode               14277      0.193        7    59     0       15          0
+## 10 prevtimesinoffice      14277      0.193        1     1     0        7          0
+## 11 posttenurefate         14324      0.190        2    57     0        8          0
+## 12 dbpedia.uri             8552      0.516       32    72     0     1158          0
+## 13 num.entry              14277      0.193        1     4     0        4          0
+## 14 num.exit               16902      0.0443       1     4     0        7          0
+## 15 num.exitcode           14277      0.193        1     4     0       15          0
+## 16 num.posttenurefate     14277      0.193        1     4     0        9          0
+## 17 FtiesNameA             15814      0.106       11    43     0      200          0
+## 18 FtiesCodeA             15814      0.106       36    36     0      195          0
+## 19 FtiesNameB             17637      0.00277     15    38     0        7          0
+## 20 FtiesCodeB             17637      0.00277     36    36     0        6          0
+## 21 FtiesNameC             17674      0.000679    29    29     0        1          0
+## 22 FtiesCodeC             17674      0.000679    36    36     0        1          0
 ## 
-## -- Variable type: messydt ------------------------------------------------------
+## -- Variable type: messydt -----------------------------------------------------------------------------------
 ## # A tibble: 6 x 5
 ##   skim_variable n_missing complete_rate n_empty n_unique
 ## * <chr>             <int>         <dbl>   <int>    <int>
@@ -101,16 +77,12 @@ leaders database documentation
 ## 5 YearBorn              0         1           0      175
 ## 6 YearDied              0         1           0      143
 ## 
-## -- Variable type: numeric ------------------------------------------------------
+## -- Variable type: numeric -----------------------------------------------------------------------------------
 ## # A tibble: 2 x 10
-##   skim_variable n_missing complete_rate   mean    sd    p0   p25   p50   p75
-## * <chr>             <int>         <dbl>  <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
-## 1 Female                0        1      0.0183 0.134     0     0     0     0
-## 2 ftcur             16031        0.0936 0.389  0.488     0     0     0     1
-##    p100
-## * <dbl>
-## 1     1
-## 2     1
+##   skim_variable n_missing complete_rate   mean    sd    p0   p25   p50   p75  p100
+## * <chr>             <int>         <dbl>  <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
+## 1 Female                0        1      0.0183 0.134     0     0     0     0     1
+## 2 ftcur             16031        0.0936 0.389  0.488     0     0     0     1     1
 }
 }
 \keyword{datasets}
