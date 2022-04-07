@@ -35,7 +35,7 @@ regimes database documentation
 }
 \details{
 \preformatted{## $Polity5
-## -- Data Summary ------------------------
+## ── Data Summary ────────────────────────
 ##                            Values
 ## Name                       X[[i]]
 ## Number of rows             17574 
@@ -48,25 +48,19 @@ regimes database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ---------------------------------------------------------------------------------
-## # A tibble: 3 x 8
+## ── Variable type: character ─────────────────────────────────────────────────────────────────────────────────────────────────
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
 ## 1 ID                    0             1     8    12     0    17451          0
 ## 2 COW_ID                0             1     3     7     0      183          0
 ## 3 Label                 0             1     3    24     0      195          0
 ## 
-## -- Variable type: messydt -----------------------------------------------------------------------------------
-## # A tibble: 2 x 5
+## ── Variable type: messydt ───────────────────────────────────────────────────────────────────────────────────────────────────
 ##   skim_variable n_missing complete_rate n_empty n_unique
-## * <chr>             <int>         <dbl>   <int>    <int>
 ## 1 Beg                   0             1       0     1210
 ## 2 End                   0             1       0     1126
 ## 
-## -- Variable type: numeric -----------------------------------------------------------------------------------
-## # A tibble: 30 x 10
+## ── Variable type: numeric ───────────────────────────────────────────────────────────────────────────────────────────────────
 ##    skim_variable n_missing complete_rate          mean           sd    p0      p25      p50      p75    p100
-##  * <chr>             <int>         <dbl>         <dbl>        <dbl> <dbl>    <dbl>    <dbl>    <dbl>   <dbl>
 ##  1 Year                  0        1         1941.           60.3     1776    1894     1960     1992     2020
 ##  2 p5                    0        1            0.311         0.463      0       0        0        1        1
 ##  3 cyear                 0        1      4041651.      2495259.     21776 2001907. 3661924. 6301986. 9502018
@@ -99,7 +93,7 @@ regimes database documentation
 ## 30 speccat           16765        0.0460     -77.7           9.23     -88     -88      -77      -66      -66
 ## 
 ## $FreedomHouse1
-## -- Data Summary ------------------------
+## ── Data Summary ────────────────────────
 ##                            Values
 ## Name                       X[[i]]
 ## Number of rows             1885  
@@ -112,27 +106,21 @@ regimes database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ---------------------------------------------------------------------------------
-## # A tibble: 5 x 8
+## ── Variable type: character ─────────────────────────────────────────────────────────────────────────────────────────────────
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
 ## 1 ID                    0         1         7    12     0     1809          0
 ## 2 COW_ID               40         0.979     3     7     0      200          0
 ## 3 Label                 0         1         4    30     0      211          0
 ## 4 Region                0         1         3     8     0        6          0
 ## 5 Status                0         1         1     2     0        3          0
 ## 
-## -- Variable type: messydt -----------------------------------------------------------------------------------
-## # A tibble: 2 x 5
+## ── Variable type: messydt ───────────────────────────────────────────────────────────────────────────────────────────────────
 ##   skim_variable n_missing complete_rate n_empty n_unique
-## * <chr>             <int>         <dbl>   <int>    <int>
 ## 1 Year                  0             1       0        9
 ## 2 Edition               0             1       0        9
 ## 
-## -- Variable type: numeric -----------------------------------------------------------------------------------
-## # A tibble: 40 x 10
+## ── Variable type: numeric ───────────────────────────────────────────────────────────────────────────────────────────────────
 ##    skim_variable n_missing complete_rate    mean     sd    p0   p25   p50   p75  p100
-##  * <chr>             <int>         <dbl>   <dbl>  <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
 ##  1 PR rating             0         1      3.56    2.20      1     1     3     6     7
 ##  2 CL rating             0         1      3.45    1.93      1     2     3     5     7
 ##  3 A1                    0         1      2.43    1.61      0     1     3     4     4
@@ -175,7 +163,7 @@ regimes database documentation
 ## 40 Territory             0         1      0.0690  0.253     0     0     0     0     1
 ## 
 ## $FreedomHouse2
-## -- Data Summary ------------------------
+## ── Data Summary ────────────────────────
 ##                            Values
 ## Name                       X[[i]]
 ## Number of rows             33264 
@@ -188,30 +176,24 @@ regimes database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ---------------------------------------------------------------------------------
-## # A tibble: 5 x 8
+## ── Variable type: character ─────────────────────────────────────────────────────────────────────────────────────────────────
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
 ## 1 ID                    0         1         7    12     0     9696          0
 ## 2 COW_ID             1440         0.957     3     7     0      201          0
 ## 3 Label                 0         1         4    46     0      230          0
 ## 4 Status                0         1         2     6     0        3          0
 ## 5 Value              5877         0.823     1     2     0       10          0
 ## 
-## -- Variable type: messydt -----------------------------------------------------------------------------------
-## # A tibble: 1 x 5
+## ── Variable type: messydt ───────────────────────────────────────────────────────────────────────────────────────────────────
 ##   skim_variable n_missing complete_rate n_empty n_unique
-## * <chr>             <int>         <dbl>   <int>    <int>
 ## 1 Year                  0             1       0       48
 ## 
-## -- Variable type: numeric -----------------------------------------------------------------------------------
-## # A tibble: 1 x 10
+## ── Variable type: numeric ───────────────────────────────────────────────────────────────────────────────────────────────────
 ##   skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100
-## * <chr>             <int>         <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
 ## 1 Territory             0             1 0.108 0.311     0     0     0     0     1
 ## 
 ## $FreedomHouse3
-## -- Data Summary ------------------------
+## ── Data Summary ────────────────────────
 ##                            Values
 ## Name                       X[[i]]
 ## Number of rows             3960  
@@ -224,27 +206,21 @@ regimes database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ---------------------------------------------------------------------------------
-## # A tibble: 5 x 8
+## ── Variable type: character ─────────────────────────────────────────────────────────────────────────────────────────────────
 ##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-## * <chr>             <int>         <dbl> <int> <int> <int>    <int>      <int>
 ## 1 ID                    0         1         7    12     0     3605          0
 ## 2 COW_ID               87         0.978     3     7     0      202          0
 ## 3 Label                 0         1         4    46     0      222          0
 ## 4 Region              621         0.843     3     8     0        6          0
 ## 5 Status              621         0.843     1     2     0        3          0
 ## 
-## -- Variable type: messydt -----------------------------------------------------------------------------------
-## # A tibble: 2 x 5
+## ── Variable type: messydt ───────────────────────────────────────────────────────────────────────────────────────────────────
 ##   skim_variable n_missing complete_rate n_empty n_unique
-## * <chr>             <int>         <dbl>   <int>    <int>
 ## 1 Year                  0         1           0       18
 ## 2 Edition             621         0.843       0       16
 ## 
-## -- Variable type: numeric -----------------------------------------------------------------------------------
-## # A tibble: 15 x 10
+## ── Variable type: numeric ───────────────────────────────────────────────────────────────────────────────────────────────────
 ##    skim_variable n_missing complete_rate    mean     sd    p0   p25   p50   p75  p100
-##  * <chr>             <int>         <dbl>   <dbl>  <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
 ##  1 PR Rating             3         0.999  6.61    9.06     -2     2     4     6    44
 ##  2 CL Rating             3         0.999  8.50   13.7       0     2     4     6    60
 ##  3 A                   621         0.843  7.41    4.38      0     3     9    12    12

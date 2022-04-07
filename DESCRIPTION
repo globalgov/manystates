@@ -33,6 +33,7 @@ Authors@R:
 LazyData: true
 License: CC BY 4.0
 Imports:
+    manydata,
     dplyr,
     pkgdown,
     lubridate,

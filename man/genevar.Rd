@@ -26,7 +26,7 @@ genevar database documentation
 }
 \details{
 \preformatted{## $ARCHIGOSgenevar
-## -- Data Summary ------------------------
+## ── Data Summary ────────────────────────
 ##                            Values
 ## Name                       X[[i]]
 ## Number of rows             24    
@@ -39,10 +39,8 @@ genevar database documentation
 ## ________________________         
 ## Group variables            None  
 ## 
-## -- Variable type: character ---------------------------------------------------------------------------------
-## # A tibble: 22 x 8
+## ── Variable type: character ─────────────────────────────────────────────────────────────────────────────────────────────────
 ##    skim_variable      n_missing complete_rate   min   max empty n_unique whitespace
-##  * <chr>                  <int>         <dbl> <int> <int> <int>    <int>      <int>
 ##  1 ARCHIGOS_ID                0        1          8    10     0        6          0
 ##  2 COW_ID                     0        1          3     3     0        2          0
 ##  3 LeadID                     0        1         36    36     0        4          0
@@ -66,10 +64,8 @@ genevar database documentation
 ## 21 FtiesNameC                24        0         NA    NA     0        0          0
 ## 22 FtiesCodeC                24        0         NA    NA     0        0          0
 ## 
-## -- Variable type: messydt -----------------------------------------------------------------------------------
-## # A tibble: 6 x 5
+## ── Variable type: messydt ───────────────────────────────────────────────────────────────────────────────────────────────────
 ##   skim_variable n_missing complete_rate n_empty n_unique
-## * <chr>             <int>         <dbl>   <int>    <int>
 ## 1 Beg                   0         1           0       24
 ## 2 End                   0         1           0       24
 ## 3 BornDate             10         0.583       0        2
@@ -77,10 +73,8 @@ genevar database documentation
 ## 5 YearBorn              0         1           0        4
 ## 6 YearDied              0         1           0        2
 ## 
-## -- Variable type: numeric -----------------------------------------------------------------------------------
-## # A tibble: 2 x 10
+## ── Variable type: numeric ───────────────────────────────────────────────────────────────────────────────────────────────────
 ##   skim_variable n_missing complete_rate  mean    sd    p0   p25   p50   p75  p100
-## * <chr>             <int>         <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
 ## 1 Female                0          1    0     0         0     0     0  0        0
 ## 2 ftcur                 6          0.75 0.278 0.461     0     0     0  0.75     1
 }
