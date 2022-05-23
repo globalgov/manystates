@@ -21,7 +21,7 @@ test_that("Columns are not in date, POSIXct or POSIXlt class", {
 })
 
 test_that("Columns with dates are standardized", {
-  expect_equal(class(vdem$Beg), "messydt")
+  expect_equal(class(vdem$Beg), "mdate")
   expect_false(any(grepl("/", vdem$Beg)))
   expect_false(any(grepl("^[:alpha:]$",
                          vdem$Beg)))
