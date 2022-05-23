@@ -57,8 +57,8 @@ FreedomHouse3.2 <- dplyr::rename(FreedomHouse3.2,
 
 FreedomHouse3 <- dplyr::bind_rows(FreedomHouse3.1, FreedomHouse3.2) %>%
   dplyr::mutate(
-    Year = manypkgs::standardise_dates(Year),
-    Edition = manypkgs::standardise_dates(Edition)
+    Year = messydates::make_messydate(Year),
+    Edition = messydates::make_messydate(Edition)
   )
 
 # manypkgs includes several functions that should help cleaning

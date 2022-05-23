@@ -13,8 +13,8 @@ GW <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
 GW <- tibble::as_tibble(GW) %>%
   dplyr::rename(Finish = End) %>%
   manydata::transmutate(COW_ID = `Cow ID`,
-                     Beg = manypkgs::standardise_dates(Start),
-                     End = manypkgs::standardise_dates(Finish), 
+                     Beg = messydates::make_messydate(Start),
+                     End = messydates::make_messydate(Finish), 
                      Label = manypkgs::standardise_titles(`Name of State`),
                      COW_Nr = manypkgs::standardise_titles(`Cow Nr.`)) %>%
   dplyr::relocate(COW_ID, Beg, End, COW_Nr, Label) %>%

@@ -98,11 +98,11 @@ ICOW <- dplyr::as_tibble(ICOW) %>%
                                                      "-",
                                                      substr(as.character(GWsys), 4, 5)),
                                               GWsys)))) %>%
-  dplyr::mutate(IndDate = manypkgs::standardise_dates(IndDate),
-              SecDate = manypkgs::standardise_dates(SecDate),
-              IntoDate = manypkgs::standardise_dates(IntoDate),
-              COWsys = manypkgs::standardise_dates(COWsys),
-              GWsys = manypkgs::standardise_dates(GWsys)) %>%
+  dplyr::mutate(IndDate = messydates::make_messydate(IndDate),
+              SecDate = messydates::make_messydate(SecDate),
+              IntoDate = messydates::make_messydate(IntoDate),
+              COWsys = messydates::make_messydate(COWsys),
+              GWsys = messydates::make_messydate(GWsys)) %>%
   manydata::transmutate(Label = manypkgs::standardise_titles(Name)) %>%
   dplyr::select(-State) %>%
   dplyr::arrange(COW_ID)
@@ -131,8 +131,3 @@ ICOW <- ICOW[, colnames]
 # run `manypkgs::add_bib(states, ICOW)`.
 manypkgs::export_data(ICOW, database = "states",
                       URL = "http://www.paulhensel.org/icowcol.html")
-
-list <- list()
-for (i in seq(1, length(manystates::states))) {
-  list[[i]] <- class(manystates::states[[i]][["COW_ID"]])
-}
