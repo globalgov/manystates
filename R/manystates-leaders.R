@@ -6,11 +6,7 @@
 #' please use the `data_source()` and `data_contrast()` functions.
 #'\describe{
 #' \item{ARCHIGOS: }{A dataset with 17686 observations and the following
-#' 30 variables: ARCHIGOS_ID, LeadID, COW_ID, idacr, Label, leader, Beg, End,
-#' BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
-#' prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry, num.exit, 
-#' num.exitcode, num.posttenurefate, FtiesNameA, FtiesCodeA, FtiesNameB,
-#' FtiesCodeB, FtiesNameC, FtiesCodeC, ftcur.}
+#' 30 variables: ARCHIGOS_ID, LeadID, COW_ID, idacr, Label, leader, Beg, End, BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode, prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry, num.exit, num.exitcode, num.posttenurefate, FtiesNameA, FtiesCodeA, FtiesNameB, FtiesCodeB, FtiesNameC, FtiesCodeC, ftcur.}
 #' }
 
 #'

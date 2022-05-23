@@ -48,8 +48,8 @@ import_cshapes <- function(date, ...) {
   cshapes <- cshapes::cshp(date, ..., useGW = FALSE) # Use COW_ID instead of GW
   # Stage two: Correcting data
   cshapes <- tibble::as_tibble(cshapes) %>%
-    dplyr::mutate(Beg = manypkgs::standardise_dates(.data$start),
-                End = manypkgs::standardise_dates(.data$end),
+    dplyr::mutate(Beg = messydates::make_messydate(.data$start),
+                End = messydates::make_messydate(.data$end),
                 Label = manypkgs::standardise_titles(.data$country_name),
                 COW_ID = manystates::code_states(
                   as.character(.data$country_name), abbrev = T),
