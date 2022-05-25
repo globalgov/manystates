@@ -35,21 +35,17 @@ states database documentation
 ## Number of columns          5     
 ## _______________________          
 ## Column type frequency:           
-##   character                3     
-##   messydt                  2     
+##   character                5     
 ## ________________________         
 ## Group variables            None  
 ## 
-## ── Variable type: character ─────────────────────────────────────────────────────────────────────────────────────────────────
-##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-## 1 COW_ID                0             1     3     3     0      202          0
-## 2 COW_Nr                0             1     1     3     0      202          0
-## 3 Label                 0             1     4    39     0      203          0
-## 
-## ── Variable type: messydt ───────────────────────────────────────────────────────────────────────────────────────────────────
-##   skim_variable n_missing complete_rate n_empty n_unique
-## 1 Beg                   0             1       0      153
-## 2 End                   0             1       0       30
+## ── Variable type: character ────────────────────────────────────────────────────
+##   skim_variable n_missing complete_rate min max empty n_unique whitespace
+## 1 COW_ID                0             1   3   3     0      202          0
+## 2 Beg                   0             1  10  12     0      153          0
+## 3 End                   0             1  10  12     0       30          0
+## 4 COW_Nr                0             1   1   3     0      202          0
+## 5 Label                 0             1   4  39     0      203          0
 ## 
 ## $ISD
 ## ── Data Summary ────────────────────────
@@ -59,23 +55,19 @@ states database documentation
 ## Number of columns          7     
 ## _______________________          
 ## Column type frequency:           
-##   character                5     
-##   messydt                  2     
+##   character                7     
 ## ________________________         
 ## Group variables            None  
 ## 
-## ── Variable type: character ─────────────────────────────────────────────────────────────────────────────────────────────────
-##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-## 1 COW_ID                0             1     3     3     0      310          0
-## 2 COW_Nr                0             1     1     4     0      315          0
-## 3 Label                 0             1     3    35     0      319          0
-## 4 Micro                 0             1     1     1     0        2          0
-## 5 New.State             0             1     1     1     0        2          0
-## 
-## ── Variable type: messydt ───────────────────────────────────────────────────────────────────────────────────────────────────
-##   skim_variable n_missing complete_rate n_empty n_unique
-## 1 Beg                   0             1       0      201
-## 2 End                   0             1       0      134
+## ── Variable type: character ────────────────────────────────────────────────────
+##   skim_variable n_missing complete_rate min max empty n_unique whitespace
+## 1 COW_ID                0             1   3   3     0      310          0
+## 2 Beg                   0             1  10  12     0      201          0
+## 3 End                   0             1  10  12     0      134          0
+## 4 COW_Nr                0             1   1   4     0      315          0
+## 5 Label                 0             1   3  35     0      319          0
+## 6 Micro                 0             1   1   1     0        2          0
+## 7 New.State             0             1   1   1     0        2          0
 ## 
 ## $COW
 ## ── Data Summary ────────────────────────
@@ -85,21 +77,17 @@ states database documentation
 ## Number of columns          5     
 ## _______________________          
 ## Column type frequency:           
-##   character                3     
-##   messydt                  2     
+##   character                5     
 ## ________________________         
 ## Group variables            None  
 ## 
-## ── Variable type: character ─────────────────────────────────────────────────────────────────────────────────────────────────
-##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-## 1 COW_ID                0             1     3     3     0      217          0
-## 2 COW_Nr                0             1     1     3     0      217          0
-## 3 Label                 0             1     4    32     0      217          0
-## 
-## ── Variable type: messydt ───────────────────────────────────────────────────────────────────────────────────────────────────
-##   skim_variable n_missing complete_rate n_empty n_unique
-## 1 Beg                   0             1       0      191
-## 2 End                   0             1       0       39
+## ── Variable type: character ────────────────────────────────────────────────────
+##   skim_variable n_missing complete_rate min max empty n_unique whitespace
+## 1 COW_ID                0             1   3   3     0      217          0
+## 2 Beg                   0             1  10  12     0      191          0
+## 3 End                   0             1  10  12     0       39          0
+## 4 COW_Nr                0             1   1   3     0      217          0
+## 5 Label                 0             1   4  32     0      217          0
 ## 
 ## $ICOW
 ## ── Data Summary ────────────────────────
@@ -109,35 +97,31 @@ states database documentation
 ## Number of columns          15    
 ## _______________________          
 ## Column type frequency:           
-##   character                3     
-##   messydt                  5     
+##   character                8     
 ##   numeric                  7     
 ## ________________________         
 ## Group variables            None  
 ## 
-## ── Variable type: character ─────────────────────────────────────────────────────────────────────────────────────────────────
-##   skim_variable n_missing complete_rate   min   max empty n_unique whitespace
-## 1 COW_ID                0         1         3     3     0      217          0
-## 2 Label                 0         1         4    36     0      217          0
-## 3 Notes                58         0.733    25   239     0      138          0
+## ── Variable type: character ────────────────────────────────────────────────────
+##   skim_variable n_missing complete_rate min max empty n_unique whitespace
+## 1 COW_ID                0        1        3   3     0      217          0
+## 2 Label                 0        1        4  36     0      217          0
+## 3 IndDate               0        1        6   8     0      175          0
+## 4 SecDate             179        0.175    7   7     0       31          0
+## 5 IntoDate            198        0.0876   7   7     0       11          0
+## 6 COWsys                0        1        7   7     0      142          0
+## 7 GWsys                22        0.899    7   7     0      122          0
+## 8 Notes                58        0.733   25 239     0      138          0
 ## 
-## ── Variable type: messydt ───────────────────────────────────────────────────────────────────────────────────────────────────
-##   skim_variable n_missing complete_rate n_empty n_unique
-## 1 IndDate               0        1            0      175
-## 2 SecDate             179        0.175        0       31
-## 3 IntoDate            198        0.0876       0       11
-## 4 COWsys                0        1            0      142
-## 5 GWsys                22        0.899        0      122
-## 
-## ── Variable type: numeric ───────────────────────────────────────────────────────────────────────────────────────────────────
-##   skim_variable n_missing complete_rate    mean      sd    p0   p25   p50   p75  p100
-## 1 ColRuler             46        0.788  293.    172.        2  200    220   300   920
-## 2 IndFrom              39        0.820  289.    185.        2  200    220   345   920
-## 3 IndViol               0        1        0.424   0.495     0    0      0     1     1
-## 4 IndType               0        1        2.15    0.774     1    2      2     2     4
-## 5 SecFrom             179        0.175  313.    200.       41  141.   315   365   820
-## 6 SecViol             179        0.175    0.605   0.495     0    0      1     1     1
-## 7 Into                198        0.0876 361     175.      255  255    255   325   816
+## ── Variable type: numeric ──────────────────────────────────────────────────────
+##   skim_variable n_missing complete_rate    mean      sd  p0  p25 p50 p75 p100
+## 1 ColRuler             46        0.788  293.    172.      2 200  220 300  920
+## 2 IndFrom              39        0.820  289.    185.      2 200  220 345  920
+## 3 IndViol               0        1        0.424   0.495   0   0    0   1    1
+## 4 IndType               0        1        2.15    0.774   1   2    2   2    4
+## 5 SecFrom             179        0.175  313.    200.     41 141. 315 365  820
+## 6 SecViol             179        0.175    0.605   0.495   0   0    1   1    1
+## 7 Into                198        0.0876 361     175.    255 255  255 325  816
 }
 }
 \keyword{datasets}
