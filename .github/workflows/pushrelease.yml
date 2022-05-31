@@ -10,6 +10,7 @@ jobs:
   build:
     name: Build for ${{ matrix.config.os }}
     runs-on: ${{ matrix.config.os }}
+    if: "!contains(github.event.head_commit.message, '[skip-ci]')"
     strategy:
       fail-fast: false
       matrix:
@@ -17,7 +18,6 @@ jobs:
           - {os: macOS-latest, r: 'release', artifact_name: '*.tar.gz', asset_name: macOS}
           - {os: windows-latest, r: 'release', artifact_name: '*.zip', asset_name: winOS}
           - {os: ubuntu-20.04, r: 'release', rspm: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest", artifact_name: '*.tar.gz', asset_name: linuxOS}
-         # - {os: ubuntu-20.04, r: 'devel', rspm: "https://packagemanager.rstudio.com/cran/__linux__/focal/latest"}
 
     env:
       R_REMOTES_NO_ERRORS_FROM_WARNINGS: true
@@ -58,14 +58,8 @@ jobs:
       - name: Install dependencies
         run: |
           remotes::install_deps(dependencies = TRUE)
-          remotes::install_github("globalgov/manydata")
-          remotes::install_github("globalgov/manypkgs")
           remotes::install_cran("rcmdcheck")
-          remotes::install_cran("covr")
-          shell: Rscript {0}
-
-#      - name: Document
-#        run: Rscript -e 'roxygen2::roxygenise()'
+        shell: Rscript {0}
 
       - name: Check
         env:
@@ -87,20 +81,20 @@ jobs:
           dir.create("build")
           file.copy(binary, "build")
         shell: Rscript {0}
-    
+
       - name: Save binary artifact
         uses: actions/upload-artifact@v1
         with:
           name: ${{ matrix.config.asset_name }}
           path: build/
-          
- #     - name: Calculate code coverage
- #       run: Rscript -e "covr::codecov()"
+
+      - name: Calculate code coverage
+        run: Rscript -e "covr::codecov()"
 
   release:
     name: Bump version and release
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - name: Checkout one
         uses: actions/checkout@master
@@ -133,59 +127,61 @@ jobs:
       - name: Display structure of downloaded files
         run: ls -R
 
-      - name: Zip up
-        uses: montudor/action-zip@v0.1.0
-        with:
-          args: zip -qq -r manystates_AllOS.zip . -i ./macOS/* ./winOS/* ./linuxOS/*
+      - name: Rename Mac release
+        run: mv ./macOS/*.tgz manydata_macOS.tgz
 
-      - name: Display structure of downloaded files again
-        run: ls -R
-
-      - name: Upload binary
-        id: upload-binary
+      - name: Upload Mac binary
+        id: upload-mac
         uses: actions/upload-release-asset@v1.0.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
-          asset_path: manystates_AllOS.zip
-          asset_name: manystates_AllOS.zip
+          asset_path: manydata_macOS.tgz
+          asset_name: manydata_macOS.tgz
           asset_content_type: application/zip
-          
+
+      - name: Rename Linux release
+        run: mv ./linuxOS/*.tar.gz manydata_linuxOS.tar.gz
+
+      - name: Upload Linux binary
+        id: upload-lin
+        uses: actions/upload-release-asset@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+          asset_path: manydata_linuxOS.tar.gz
+          asset_name: manydata_linuxOS.tar.gz
+          asset_content_type: application/zip
+
+      - name: Rename Windows release
+        run: mv ./winOS/*.zip manydata_winOS.zip
+
+      - name: Upload Windows binary
+        id: upload-win
+        uses: actions/upload-release-asset@v1.0.2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+          asset_path: manydata_winOS.zip
+          asset_name: manydata_winOS.zip
+          asset_content_type: application/zip
+
   render:
     name: Update README.md and push
     needs: build
     runs-on: macOS-latest
-    env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       - uses: r-lib/actions/setup-r@v1
       - uses: r-lib/actions/setup-pandoc@v1
-      # Query and install dependencies as well as rmarkdown package since its a new runner
-      - name: Query dependencies
-        run: |
-          install.packages('remotes')
-          saveRDS(remotes::dev_package_deps(dependencies = TRUE), ".github/depends.Rds", version = 2)
-          writeLines(sprintf("R-%i.%i", getRversion()$major, getRversion()$minor), ".github/R-version")
-        shell: Rscript {0}
 
-      - name: Cache R packages
-        uses: actions/cache@v2
-        with:
-          path: ${{ env.R_LIBS_USER }}
-          key: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-${{ hashFiles('.github/depends.Rds') }}
-          restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
-
-      - name: Install dependencies
-        run: |
-          remotes::install_deps(dependencies = TRUE)
-          install.packages("rmarkdown", type = "binary")
-        shell: Rscript {0}
-
-      - name: Install package
-        run: R CMD INSTALL .
+      # install packages needed
+      - name: install required packages
+        run: Rscript -e 'install.packages("rmarkdown")'
 
       # Render README.md using rmarkdown
       - name: render README
@@ -199,7 +195,7 @@ jobs:
 
   pkgdown:
     name: Build and deploy website
-    needs: [render, release]
+    needs: render
     runs-on: macOS-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
