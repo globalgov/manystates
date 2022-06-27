@@ -23,7 +23,7 @@ test_that("object has the correct variables", {
 
 # Variables with dates are standardized
 test_that("Columns with dates are standardized", {
-  expect_equal(class(economics[["EconomicFreedomHist"]]$Year), "messydt")
+  expect_equal(class(economics[["EconomicFreedomHist"]]$Year), "mdate")
   expect_false(any(grepl("/", economics[["EconomicFreedomHist"]]$Year)))
   expect_false(any(grepl("^[:alpha:]$",
                          economics[["EconomicFreedomHist"]]$Year)))

@@ -9,7 +9,7 @@ test_that("missing observations are reported correctly", {
   expect_false(any(grepl("n\\.a\\.$", genevar[["ARCHIGOSgenevar"]])))
 })
 
-# Date columns should be in messydt class
+# Date columns should be in mdate class
 test_that("Columns are not in date, POSIXct or POSIXlt class", {
   expect_false(any(lubridate::is.Date(genevar[["ARCHIGOSgenevar"]])))
   expect_false(any(lubridate::is.POSIXct(genevar[["ARCHIGOSgenevar"]])))
@@ -17,7 +17,7 @@ test_that("Columns are not in date, POSIXct or POSIXlt class", {
 })
 
 test_that("Columns with dates are standardized", {
-  expect_equal(class(genevar[["ARCHIGOSgenevar"]]$Beg), "messydt")
+  expect_equal(class(genevar[["ARCHIGOSgenevar"]]$Beg), "mdate")
   expect_false(any(grepl("/", genevar[["ARCHIGOSgenevar"]]$Beg)))
   expect_false(any(grepl("^[:alpha:]$",
                          genevar[["ARCHIGOSgenevar"]]$Beg)))

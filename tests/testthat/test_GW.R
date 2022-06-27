@@ -25,7 +25,7 @@ test_that("object has the correct variables", {
 
 # Variables with dates are standardized
 test_that("Columns with dates are standardized", {
-  expect_equal(class(states[["GW"]]$Beg), "messydt")
+  expect_equal(class(states[["GW"]]$Beg), "mdate")
   expect_false(any(grepl("/", states[["GW"]]$Beg)))
   expect_false(any(grepl("^[:alpha:]$",
                         states[["GW"]]$Beg)))

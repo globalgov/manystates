@@ -31,10 +31,10 @@ test_that("object has the correct variables", {
 
 # Variables with dates are standardized
 test_that("Columns with dates are standardized", {
-  expect_equal(class(states[["ICOW"]]$IndDate), "messydt")
-  expect_equal(class(states[["ICOW"]]$SecDate), "messydt")
-  expect_equal(class(states[["ICOW"]]$COWsys), "messydt")
-  expect_equal(class(states[["ICOW"]]$GWsys), "messydt")
+  expect_equal(class(states[["ICOW"]]$IndDate), "mdate")
+  expect_equal(class(states[["ICOW"]]$SecDate), "mdate")
+  expect_equal(class(states[["ICOW"]]$COWsys), "mdate")
+  expect_equal(class(states[["ICOW"]]$GWsys), "mdate")
   expect_false(any(grepl("/", states[["ICOW"]]$IndDate)))
   expect_false(any(grepl("^[:alpha:]$",
                          states[["ICOW"]]$IndDate)))
