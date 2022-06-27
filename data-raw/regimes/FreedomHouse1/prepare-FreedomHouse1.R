@@ -19,8 +19,8 @@ FreedomHouse1 <- dplyr::rename(FreedomHouse1, Label = `Country/Territory`) %>%
   manydata::transmutate(Territory = ifelse(`C/T` == "t", 1, 0)) %>%
   dplyr::mutate(
     COW_ID = manystates::code_states(Label, abbrev = TRUE),
-    Year = messydates::make_messydate(as.character(Edition - 1)),
-    Edition = messydates::make_messydate(as.character(Edition)),
+    Year = messydates::as_messydate(as.character(Edition - 1)),
+    Edition = messydates::as_messydate(as.character(Edition)),
     ID = paste0(COW_ID, "-", as.character(Year))
   ) %>%
   dplyr::relocate(ID, COW_ID, Year, Label)

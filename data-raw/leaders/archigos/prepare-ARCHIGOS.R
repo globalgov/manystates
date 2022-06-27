@@ -22,12 +22,12 @@ ARCHIGOS <- as_tibble(ARCHIGOS) %>%
                 ~dplyr::na_if(., "Missing: No Information Found"))) %>%
   manydata::transmutate(ARCHIGOS_ID = obsid,
                      LeadID = leadid,
-                     Beg = messydates::make_messydate(startdate),
-                     End = messydates::make_messydate(enddate),
-                     BornDate = messydates::make_messydate(borndate),
-                     DeathDate = messydates::make_messydate(deathdate),
-                     YearBorn = messydates::make_messydate(as.character(yrborn)),
-                     YearDied = messydates::make_messydate(as.character(yrdied)),
+                     Beg = messydates::as_messydate(startdate),
+                     End = messydates::as_messydate(enddate),
+                     BornDate = messydates::as_messydate(borndate),
+                     DeathDate = messydates::as_messydate(deathdate),
+                     YearBorn = messydates::as_messydate(as.character(yrborn)),
+                     YearDied = messydates::as_messydate(as.character(yrdied)),
                      Female = ifelse(gender == "F", 1, 0)) %>%
   # NB: Max family ties is 3 at the moment
   tidyr::separate(fties, into = c(paste0("Fties",LETTERS[1:3])),

@@ -9,7 +9,7 @@ ARCHIGOSgenevar <- manystates::leaders$ARCHIGOS
 # Note: these corrections will go into a GNEVAR copy of the database
 # First up, correction of an import warning. Line 5622, birthdate was misttyped
 # Didier Burkhalter was born on the 17th of April 1960.
-ARCHIGOSgenevar[["BornDate"]][[5622]] <- messydates::make_messydate("1960-04-17")
+ARCHIGOSgenevar[["BornDate"]][[5622]] <- messydates::as_messydate("1960-04-17")
 # Correction: Figueres Ferrer's son is not Calderón Fournier but
 # José María Figueres
 ARCHIGOSgenevar$FtiesNameA[c(2105, 2106, 2112:2117, 2133:2137)] <-

@@ -78,7 +78,7 @@ FreedomHouse2 <- tidyr::pivot_longer(FreedomHouse2,
 ) %>%
   dplyr::rename(Indicator = name, Value = value) %>%
   tidyr::separate(Indicator, into = c("Status", "Year"), sep = "_") %>%
-  dplyr::mutate(Year = messydates::make_messydate(Year),
+  dplyr::mutate(Year = messydates::as_messydate(Year),
                 ID = paste0(COW_ID, "-", as.character(Year))) %>%
   dplyr::relocate(ID, COW_ID, Year, Label, Status, Value, Territory)
 

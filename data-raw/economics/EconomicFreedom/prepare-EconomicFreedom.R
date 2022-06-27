@@ -36,7 +36,7 @@ EconomicFreedom <- dplyr::as_tibble(EconomicFreedom) %>%
                                            custom_match =
                                              c("HKG" = "HKG",
                                                "SRB" = "YUG")),
-                Year = messydates::make_messydate(as.character(Year))) %>%
+                Year = messydates::as_messydate(as.character(Year))) %>%
   dplyr::arrange(COW_ID, Year) %>%
   dplyr::select(COW_ID, Year, dplyr::everything())
 

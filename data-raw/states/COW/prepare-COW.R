@@ -12,8 +12,8 @@ COW <- readr::read_csv("data-raw/states/COW/states2016.csv")
 # below (in stage three) passes all the tests.
 COW <- tibble::as_tibble(COW) %>%
   manydata::transmutate(COW_ID = stateabb,
-                     Beg = messydates::make_messydate(lubridate::as_date(paste(styear, stmonth, stday, sep = "-"))),
-                     End = messydates::make_messydate(lubridate::as_date(paste(endyear, endmonth, endday, sep = "-"))),
+                     Beg = messydates::as_messydate(lubridate::as_date(paste(styear, stmonth, stday, sep = "-"))),
+                     End = messydates::as_messydate(lubridate::as_date(paste(endyear, endmonth, endday, sep = "-"))),
                      Label = manypkgs::standardise_titles(statenme),
                      COW_Nr = manypkgs::standardise_titles(as.character(ccode))) %>%
   dplyr::select(COW_ID, COW_Nr, Beg, End, Label) %>%

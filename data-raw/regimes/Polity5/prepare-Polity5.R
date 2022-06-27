@@ -22,8 +22,8 @@ Polity5 <- tibble::as_tibble(Polity5) %>%
   dplyr::mutate(COW_ID = manystates::code_states
                 (country, abbrev = TRUE)) %>%
   manydata::transmutate(
-              Beg = messydates::make_messydate(byear, bmonth, bday),
-              End = messydates::make_messydate(eyear, emonth, eday),
+              Beg = messydates::as_messydate(byear, bmonth, bday),
+              End = messydates::as_messydate(eyear, emonth, eday),
               Label = manypkgs::standardise_titles(country)) %>%
   dplyr::rename(Year = year) %>%
   dplyr::mutate(ID = paste0(COW_ID, "-", Year)) %>%

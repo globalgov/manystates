@@ -98,11 +98,11 @@ ICOW <- dplyr::as_tibble(ICOW) %>%
                                                      "-",
                                                      substr(as.character(GWsys), 4, 5)),
                                               GWsys)))) %>%
-  dplyr::mutate(IndDate = messydates::make_messydate(IndDate),
-              SecDate = messydates::make_messydate(SecDate),
-              IntoDate = messydates::make_messydate(IntoDate),
-              COWsys = messydates::make_messydate(COWsys),
-              GWsys = messydates::make_messydate(GWsys)) %>%
+  dplyr::mutate(IndDate = messydates::as_messydate(IndDate),
+              SecDate = messydates::as_messydate(SecDate),
+              IntoDate = messydates::as_messydate(IntoDate),
+              COWsys = messydates::as_messydate(COWsys),
+              GWsys = messydates::as_messydate(GWsys)) %>%
   manydata::transmutate(Label = manypkgs::standardise_titles(Name)) %>%
   dplyr::select(-State) %>%
   dplyr::arrange(COW_ID)

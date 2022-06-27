@@ -14,8 +14,8 @@ ISD <- tibble::as_tibble(ISD) %>%
   dplyr::rename(Finish = End) %>% 
   # Renaming the end date column to avoid self reference in transmutate.
   manydata::transmutate(COW_ID = `COW.ID`,
-                     Beg = messydates::make_messydate(lubridate::dmy(Start)),
-                     End = messydates::make_messydate(lubridate::dmy(Finish)),
+                     Beg = messydates::as_messydate(lubridate::dmy(Start)),
+                     End = messydates::as_messydate(lubridate::dmy(Finish)),
                      Label = manypkgs::standardise_titles(as.character(State.Name)),
                      COW_Nr = manypkgs::standardise_titles(as.character(COW.Nr.))) %>%
   # Standardising the dummie variables
