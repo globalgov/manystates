@@ -1,30 +1,30 @@
-# ARCHIGOSgenevar Preparation Script
+# GNEVAR_ARCHIGOS Preparation Script
 
 # This is a template for importing, cleaning, and exporting data
-# ready for the qPackage.
+# ready for the many packages universe.
 
 # Stage one: Collecting data from actual Archigos dataset
-ARCHIGOSgenevar <- manystates::leaders$ARCHIGOS
+GNEVAR_ARCHIGOS <- manystates::leaders$ARCHIGOS
 
 # Note: these corrections will go into a GNEVAR copy of the database
 # First up, correction of an import warning. Line 5622, birthdate was misttyped
 # Didier Burkhalter was born on the 17th of April 1960.
-ARCHIGOSgenevar[["BornDate"]][[5622]] <- messydates::as_messydate("1960-04-17")
+GNEVAR_ARCHIGOS[["BornDate"]][[5622]] <- messydates::as_messydate("1960-04-17")
 # Correction: Figueres Ferrer's son is not Calderón Fournier but
 # José María Figueres
-ARCHIGOSgenevar$FtiesNameA[c(2105, 2106, 2112:2117, 2133:2137)] <-
+GNEVAR_ARCHIGOS$FtiesNameA[c(2105, 2106, 2112:2117, 2133:2137)] <-
   "Father of Figueres Olsen"
-ARCHIGOSgenevar$FtiesCodeA[c(2105, 2106, 2112:2117, 2133:2137)] <-
+GNEVAR_ARCHIGOS$FtiesCodeA[c(2105, 2106, 2112:2117, 2133:2137)] <-
   "81ec65ae-1e42-11e4-b4cd-db5882bf8def"
 # Correction: Self reference of family ties
-ARCHIGOSgenevar$FtiesNameB[c(2158:2162)] <- NA
-ARCHIGOSgenevar$FtiesCodeB[c(2158:2162)] <- NA
+GNEVAR_ARCHIGOS$FtiesNameB[c(2158:2162)] <- NA
+GNEVAR_ARCHIGOS$FtiesCodeB[c(2158:2162)] <- NA
 # Correction: Missing fties Figueres Olsen
-ARCHIGOS$FtiesNameB[c(2163:2167)] <-
+GNEVAR_ARCHIGOS$FtiesNameB[c(2163:2167)] <-
   "Son of Figueres Ferrer"
-ARCHIGOSgenevar$FtiesCodeB[c(2163:2167)] <-
+GNEVAR_ARCHIGOS$FtiesCodeB[c(2163:2167)] <-
   "81eb718b-1e42-11e4-b4cd-db5882bf8def"
-ARCHIGOSgenevar <- ARCHIGOSgenevar %>%
+GNEVAR_ARCHIGOS <- GNEVAR_ARCHIGOS %>%
   dplyr::select(
     ARCHIGOS_ID, COW_ID, LeadID, idacr, Label, leader, Beg, End,
     BornDate,
@@ -41,9 +41,9 @@ ARCHIGOSgenevar <- ARCHIGOSgenevar %>%
 # Please see the vignettes or website for more details.
 
 # Stage three: Connecting data
-# Next run the following line to make ARCHIGOSgenevar available
-# within the qPackage.
-manypkgs::export_data(ARCHIGOSgenevar, database = "genevar",
+# Next run the following line to make GNEVAR_ARCHIGOS available
+# within the package.
+manypkgs::export_data(GNEVAR_ARCHIGOS, database = "leaders",
                      URL = "http://ksgleditsch.com/archigos.html")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence
