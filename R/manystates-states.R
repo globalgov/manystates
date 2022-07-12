@@ -1,7 +1,7 @@
 #' states database documentation
 #'
 #' @format The states database is a list that contains the
-#' following 4 datasets: GW, ISD, COW, ICOW.
+#' following 5 datasets: GW, ISD, COW, ICOW, GNEVAR_STATES.
 #' For more information and references to each of the datasets used,
 #' please use the `data_source()` and `data_contrast()` functions.
 #'\describe{
@@ -12,12 +12,14 @@
 #' \item{COW: }{A dataset with 243 observations and the following
 #' 5 variables: COW_ID, Beg, End, COW_Nr, Label.}
 #' \item{ICOW: }{A dataset with 217 observations and the following
-#' 15 variables: COW_ID, Label, ColRuler, IndFrom, IndDate, IndViol, IndType, SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
+#' 15 variables: COW_ID, Label, ColRuler, IndFrom, IndDate, IndViol, IndType,
+#' SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
+#' \item{GNEVAR_STATES: }{A dataset with 436 observations and the following
+#' 4 variables: stateID, Capital, Latitude, Longitude.}
 #' }
-
 #'
 #' @details
 #' ``` {r, echo = FALSE, warning = FALSE}
-#' lapply(states, skimr::skim_without_charts)
+#' lapply(states, messydates::mreport)
 #' ```
 "states"
