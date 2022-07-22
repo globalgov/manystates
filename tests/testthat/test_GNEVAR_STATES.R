@@ -21,22 +21,22 @@ test_that("Columns are not in date, POSIXct or POSIXlt class", {
 # Contains the required variables
 test_that("object has the correct variables", {
   pointblank::expect_col_exists(states[["GNEVAR_STATES"]],
-                                pointblank::vars(ID))
-  # pointblank::expect_col_exists(states[["GNEVAR_STATES"]],
-  #                               pointblank::vars(Beg))
-  # pointblank::expect_col_exists(states[["GNEVAR_STATES"]],
-  #                               pointblank::vars(End))
-  # pointblank::expect_col_exists(states[["GNEVAR_STATES"]],
-  #                               pointblank::vars(Label))
+                                pointblank::vars(stateID))
+  pointblank::expect_col_exists(states[["GNEVAR_STATES"]],
+                                pointblank::vars(Beg))
+  pointblank::expect_col_exists(states[["GNEVAR_STATES"]],
+                                pointblank::vars(End))
+  pointblank::expect_col_exists(states[["GNEVAR_STATES"]],
+                                pointblank::vars(Label))
 })
 
 # Variables with dates are standardized
-# test_that("dates are standardised", {
-#   expect_equal(class(states[["GNEVAR_STATES"]]$Beg), "mdate")
-#   expect_equal(class(states[["GNEVAR_STATES"]]$End), "mdate")
-#   expect_false(any(grepl("/", states[["GNEVAR_STATES"]]$Beg)))
-#   expect_false(any(grepl("/", states[["GNEVAR_STATES"]]$End)))
-# })
+test_that("dates are standardised", {
+  expect_s3_class(states[["GNEVAR_STATES"]]$Beg, "mdate")
+  expect_s3_class(states[["GNEVAR_STATES"]]$End, "mdate")
+  expect_false(any(grepl("/", states[["GNEVAR_STATES"]]$Beg)))
+  expect_false(any(grepl("/", states[["GNEVAR_STATES"]]$End)))
+})
 
 # Labels are standardized
 test_that("labels are standardised", {

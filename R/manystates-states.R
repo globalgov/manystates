@@ -12,10 +12,10 @@
 #' \item{COW: }{A dataset with 243 observations and the following
 #' 5 variables: COW_ID, Beg, End, COW_Nr, Label.}
 #' \item{ICOW: }{A dataset with 217 observations and the following
-#' 15 variables: COW_ID, Label, ColRuler, IndFrom, IndDate, IndViol, IndType,
-#' SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
-#' \item{GNEVAR_STATES: }{A dataset with 436 observations and the following
-#' 4 variables: stateID, Capital, Latitude, Longitude.}
+#' 15 variables: COW_ID, Label, ColRuler, IndFrom, IndDate, IndViol,
+#' IndType, SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
+#' \item{GNEVAR_STATES: }{A dataset with 707 observations and the following
+#' 9 variables: stateID, Label, Capital, Beg, End, Latitude, Longitude, Area, Region.}
 #' }
 #'
 #' @details

@@ -1,0 +1,118 @@
+StatID,Label,Start,End,Capital
+ACH,Aceh,1816-01-01,1874-01-30,Banda Aceh
+ASA,Assam,1816-01-01,1817-04-30,Dispur
+ASI,Asir,1818-01-01,1872-04-30,Abha
+ASI,Asir,1914-01-01,1926-12-31,Abha
+AST,Ashanti,1816-01-01,1896-02-01,Kumasi
+AZA,Azande,1816-01-01,1895-12-31,Yambio
+BHP,Bhopal,1816-01-01,1817-12-01,Bhopal
+BHT,Bharatpur,1816-01-01,1828-01-18,Bharatpur
+BIK,Bikaner,1816-01-01,1818-05-09,Bikaner
+BNJ,Benjermassin,1816-01-01,1860-12-31,Banjarmasin
+BPR,Bahawalpur,1816-01-01,1838-01-18,Bahawalpur
+BRE,Bremen,1816-01-01,1871-01-17,Bremen
+BUK,Bukhara,1816-01-01,1868-06-30,Bukhara
+BUR,Urundi,1675-01-01,1890-05-14,Gitega
+CAY,Cayor,1816-01-01,1859-12-31,Mboul
+CHM,Chamba,1816-01-01,1846-03-09,Chamba
+CUT,Cutch,1816-01-01,1816-01-15,Bhuj
+DEU,German Federal Republic,1949-05-23,1990-10-02,Bonn
+DFR,Darfur,1816-01-01,1874-09-30,Al Fasher
+DIR,Dir,1816-01-01,1896-12-31,Dir
+DJA,Fouta Djallon,1816-01-01,1896-12-31,Timbo
+DRV,Annam,1816-01-01,1883-08-31,Hue
+ETS,Eastern Turkistan,1874-01-01,1877-12-31,Kashgar
+FNJ,Funj,1816-01-01,1821-06-30,Sennar
+FTO,Fouta Toro,1816-01-01,1888-12-31,Silla
+DDR,German Democratic Republic,1954-03-25,1990-10-02,Berlin
+GWA,Gwalior,1816-01-01,1818-02-28,Lashkar
+HAW,Hawaii,1816-01-01,1898-07-06,Lahaina
+HBG,Hamburg,1816-01-01,1867-07-01,Hamburg
+HEJ,Hejaz,1916-10-01,1926-01-08,Mecca
+INO,Indore,1816-01-01,1818-12-31,Maheshwar
+IPH,Perak,1528-01-01,1874-01-20,Ipoh
+IRL,Ireland,1922-12-06,9999-12-31,Dublin
+JMK,Jimma-Kakka,1830-01-01,1885-12-31,Jimma
+JOD,Jodhpur,1816-01-01,1818-06-06,Jodhpur
+JOH,Johore,1816-01-01,1885-12-31,Johor Bahru
+JPR,Jaipur,1816-01-01,1818-04-25,Jaipur
+KAF,Kaffa,1816-01-01,1897-09-11,Jimma
+KAS,Kasanje,1816-01-01,1911-12-31,Kasanje
+KAT,Kathiri Sultanate,1816-01-01,1888-12-31,Say'un
+KED,Kedah,1816-01-01,1821-12-31,Alor Star
+KEL,Kelantan,1760-01-01,1843-12-31,Wakaf Bharu
+KEL,Kelantan,1844-01-01,1909-03-10,Kota Bharu
+KHI,Khaipur,1816-01-01,1838-12-25,Khairpur City
+KHV,Khiva,1816-01-01,1873-08-12,Khiva
+KLT,Kalat,1816-01-01,1876-12-31,Kalat
+KNB,Kanem-Bornu,1816-01-01,1893-12-31,Dikoa
+KOK,Kokand,1816-01-01,1865-05-30,Kokand
+KON,Kongo Kingdom,1816-01-01,1888-12-31,Sao Salvador
+KOT,Kotah,1816-01-01,1818-12-31,Kotah
+KPT,Kapurthala,1816-01-01,1826-12-31,Kapurthala
+KRG,Karangasem (Bali and Lombok),1816-01-01,1894-01-11,Amlapura
+KTA,Kaarta,1816-01-01,1854-12-31,Guémou
+KUB,Kuba,1816-01-01,1910-12-31,Mushenge
+KZB,Kazembe,1740-01-01,1890-12-31,Kazembe
+LIM,Enarya (Limmu),1816-01-01,1849-12-31,Saqqa
+LIP,Lippe,1816-01-01,1867-07-01,Detmold
+LUB,Luba,1816-01-01,1889-12-31,Kabongo
+LUN,Lunda Empire,1816-01-01,1889-12-31,Musumba
+MAS,Massina,1820-01-01,1862-12-31,Hamdullahi
+MDK,Mandinka Empire (Wassulu),1878-01-01,1898-09-29,Kankan
+MIN,Minangkabau,1816-01-01,1837-12-31,Batusangkar
+MNE,Montenegro,1852-03-13,1918-12-01,Cetinje
+MNE,Montenegro,2006-06-03,9999-12-31,Podgorica
+MOS,Yatenga (Mossi),1816-01-01,1895-09-30,Ouagadougou
+MPR,Manipur,1816-01-01,1891-04-27,Imphal
+NAG,Nagpur,1816-01-01,1818-12-31,Nagpur
+NAS,Nassau,1816-01-01,1866-12-31,Wiesbaden
+OLD,Oldenburg,1816-01-01,1867-07-01,Oldenbourg
+OVB,Ovimbundu,1816-01-01,1903-12-31,Kuito
+OYO,Oyo,1816-01-01,1835-12-31,Oyo
+PAH,Pahang,1816-01-01,1874-12-31,Pekan
+PAL,Palembang,1659-01-01,1823-12-31,Palembang
+PER,Peru,1821-07-28,1836-10-27,Lima
+PER,Peru-Bolivia,1836-10-28,1839-08-25,Tacna
+PER,Peru,1839-08-26,9999-12-31,Lima
+PES,Peshwa,1816-01-01,1817-12-31,Pune
+PLW,Palau,1994-10-01,9999-12-31,Ngerulmud
+PUN,Punjab,1816-01-01,1846-12-31,Lahore
+QUA,Qu'aiti Sultanate,1816-01-01,1888-12-31,Al Mukalla
+SAL,Saloum,1494-01-01,1887-12-31,Kahone
+SAW,Sawantvadi,1816-01-01,1838-12-31,Kudal
+SEG,Segou,1816-01-01,1861-03-10,Segou
+SEL,Selangor,1816-01-01,1875-10-30,Klang
+SHO,Shoa,1865-06-30,1889-03-10,Ankober
+SIA,Siak,1816-01-01,1858-12-31,Siak Sri Indrapura
+SID,Sind,1816-01-01,1839-12-31,Thatta
+SIK,Sikkim,1816-01-01,1890-03-17,Tumlong
+SIR,Sirohi,1816-01-01,1823-09-11,Sirohi
+SOK,Sokoto,1816-01-01,1903-03-30,Sokoto
+SUL,Sulu,1816-01-01,1851-04-19,Maimbung
+SWA,Swat,1849-01-01,1896-12-31,Saidu Sharif
+SXA,Saxe-Atenburg,1816-01-01,1867-07-01,Altenburg
+SXG,Saxe-Coburg-Gotha,1816-01-01,1867-07-01,Coburg
+SXM,Saxe-Meiningen-Hidburghausen,1816-01-01,1867-07-01,Meiningen
+SXW,Saxe-Wiemar-Eisenach,1816-01-01,1867-07-01,Weimar
+TBT,Tibet,1913-01-01,1950-10-01,Lhassa
+TER,Terengganu,1816-01-01,1862-12-31,Kuala Terengganu
+TEX,Texas,1836-03-02,1837-06-04,Colombia
+TEX,Texas,1837-06-05,1839-01-13,Houston
+TEX,Texas,1839-01-14,1846-02-19,Austin
+TOK,Tokolor,1848-01-01,1893-12-31,Segou
+UPR,Mewar,1326-01-01,1568-02-23,Chittorgarh
+UPR,Mewar,1568-02-24,1818-01-13,Udaipur
+WAD,Wadai,1816-01-01,1890-12-31,Ouara
+WAD,Wadai,1891-01-01,1911-12-31,Abeche
+YAR,Yemen Arab Republic,1918-11-11,1990-05-21,Sana'a
+YEK,Yeke Kingdom,1880-01-01,1891-12-20,Bunkeya
+YPR,Yemen People’s Republic,1967-11-30,1990-05-21,Aden
+YUG,Yugoslavia,1878-07-13,1941-04-20,Belgrade
+YUG,Yugoslavia,1944-10-20,9999-12-31,Belgrade
+EAZ,Zanzibar,1816-01-01,1890-07-01,Stone Town
+EAZ,Zanzibar,1963-12-19,1964-04-26,Zanzibar City
+ZIN,Zinder (Damagaram),1851-01-01,1889-07-30,Zinder
+ZUL,Zululand,1817-01-01,1828-12-31,Bulawayo
+ZUL,Zululand,1829-01-01,1840-01-28,Makhosini
+ZUL,Zululand,1840-01-29,1879-07-04,Ulundi
