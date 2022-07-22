@@ -1,5 +1,0 @@
-Japan (https://www.mofa.go.jp/policy/treaty/index.html)
-United States (https://www.loc.gov/collections/united-states-treaties-and-other-international-agreements/)
-Russia (https://en.economy.gov.ru/material/departments/d11/)
-Zimbabwe (https://www.tradezimbabwe.com/)
-China (http://fta.mofcom.gov.cn/topic/chinaasean.shtml)
