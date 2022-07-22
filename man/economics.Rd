@@ -23,7 +23,7 @@ economics
 economics database documentation
 }
 \details{
-\preformatted{## $EconomicFreedom
+\if{html}{\out{<div class="sourceCode">}}\preformatted{## $EconomicFreedom
 ## ── Data Summary ────────────────────────
 ##                            Values
 ## Name                       X[[i]]
@@ -210,6 +210,6 @@ economics database documentation
 ##     p100
 ## 1   7.85
 ## 2 118
-}
+}\if{html}{\out{</div>}}
 }
 \keyword{datasets}

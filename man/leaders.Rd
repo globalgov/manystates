@@ -6,12 +6,22 @@
 \title{leaders database documentation}
 \format{
 The leaders database is a list that contains the
-following 1 datasets: ARCHIGOS.
+following 2 datasets: ARCHIGOS, GNEVAR_ARCHIGOS.
 For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
 \describe{
 \item{ARCHIGOS: }{A dataset with 17686 observations and the following
-30 variables: ARCHIGOS_ID, LeadID, COW_ID, idacr, Label, leader, Beg, End, BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode, prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry, num.exit, num.exitcode, num.posttenurefate, FtiesNameA, FtiesCodeA, FtiesNameB, FtiesCodeB, FtiesNameC, FtiesCodeC, ftcur.}
+30 variables: ARCHIGOS_ID, LeadID, COW_ID, idacr, Label, leader, Beg, End,
+BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
+prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry, num.exit,
+num.exitcode, num.posttenurefate, FtiesNameA, FtiesCodeA, FtiesNameB,
+FtiesCodeB, FtiesNameC, FtiesCodeC, ftcur.}
+\item{GNEVAR_ARCHIGOS: }{A dataset with 24 observations and the following
+30 variables: ARCHIGOS_ID, COW_ID, LeadID, idacr, Label, leader, Beg, End,
+BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
+prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry, num.exit,
+num.exitcode, num.posttenurefate, FtiesNameA, FtiesCodeA, FtiesNameB,
+FtiesCodeB, FtiesNameC, FtiesCodeC, ftcur.}
 }
 }
 \usage{
@@ -21,54 +31,78 @@ leaders
 leaders database documentation
 }
 \details{
-\preformatted{## $ARCHIGOS
-## ── Data Summary ────────────────────────
-##                            Values
-## Name                       X[[i]]
-## Number of rows             17686 
-## Number of columns          30    
-## _______________________          
-## Column type frequency:           
-##   character                28    
-##   numeric                  2     
-## ________________________         
-## Group variables            None  
+\if{html}{\out{<div class="sourceCode">}}\preformatted{## $ARCHIGOS
+## -------------------------------------------------------------------------------
+## |   Column Name    |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+## -------------------------------------------------------------------------------
+## |   ARCHIGOS_ID    |  character  |           17686|     0     |       0       |
+## |      LeadID      |  character  |           17686|     0     |       0       |
+## |      COW_ID      |  character  |           17686|     0     |       0       |
+## |      idacr       |  character  |           17686|     0     |       0       |
+## |      Label       |  character  |           17686|     0     |       0       |
+## |      leader      |  character  |           17686|     0     |       0       |
+## |       Beg        |    mdate    |           17686|     0     |       0       |
+## |       End        |    mdate    |           17686|     0     |       0       |
+## |     BornDate     |    mdate    |           17686|   5179    |     29.28     |
+## |    DeathDate     |    mdate    |           17686|   11762   |     66.5      |
+## |     YearBorn     |    mdate    |           17686|     0     |       0       |
+## |     YearDied     |    mdate    |           17686|     0     |       0       |
+## |      Female      |   numeric   |           17686|     0     |       0       |
+## |      entry       |  character  |           17686|   14277   |     80.72     |
+## |       exit       |  character  |           17686|   14277   |     80.72     |
+## |     exitcode     |  character  |           17686|   14277   |     80.72     |
+## |prevtimesinoffice |  character  |           17686|   14277   |     80.72     |
+## |  posttenurefate  |  character  |           17686|   14324   |     80.99     |
+## |   dbpedia.uri    |  character  |           17686|   8552    |     48.35     |
+## |    num.entry     |  character  |           17686|   14277   |     80.72     |
+## |     num.exit     |  character  |           17686|   16902   |     95.57     |
+## |   num.exitcode   |  character  |           17686|   14277   |     80.72     |
+## |num.posttenurefate|  character  |           17686|   14277   |     80.72     |
+## |    FtiesNameA    |  character  |           17686|   15814   |     89.42     |
+## |    FtiesCodeA    |  character  |           17686|   15814   |     89.42     |
+## |    FtiesNameB    |  character  |           17686|   17637   |     99.72     |
+## |    FtiesCodeB    |  character  |           17686|   17637   |     99.72     |
+## |    FtiesNameC    |  character  |           17686|   17674   |     99.93     |
+## |    FtiesCodeC    |  character  |           17686|   17674   |     99.93     |
+## |      ftcur       |   integer   |           17686|   16031   |     90.64     |
+## -------------------------------------------------------------------------------
 ## 
-## ── Variable type: character ────────────────────────────────────────────────────
-##    skim_variable      n_missing complete_rate min max empty n_unique whitespace
-##  1 ARCHIGOS_ID                0      1          8  10     0     3409          0
-##  2 LeadID                     0      1         36  36     0     2802          0
-##  3 COW_ID                     0      1          3   3     0      188          0
-##  4 idacr                      0      1          3   3     0      189          0
-##  5 Label                      0      1          4  32     0      187          0
-##  6 leader                     0      1          3  41     0     2757          0
-##  7 Beg                        0      1         10  10     0     3279          0
-##  8 End                        0      1         10  10     0     3155          0
-##  9 BornDate                5179      0.707     10  12     0     1656          0
-## 10 DeathDate              11762      0.335     10  10     0      659          0
-## 11 YearBorn                   0      1          4   5     0      175          0
-## 12 YearDied                   0      1          4   5     0      143          0
-## 13 entry                  14277      0.193      7  18     0        4          0
-## 14 exit                   14277      0.193      7  25     0        8          0
-## 15 exitcode               14277      0.193      7  59     0       15          0
-## 16 prevtimesinoffice      14277      0.193      1   1     0        7          0
-## 17 posttenurefate         14324      0.190      2  57     0        8          0
-## 18 dbpedia.uri             8552      0.516     32  72     0     1158          0
-## 19 num.entry              14277      0.193      1   4     0        4          0
-## 20 num.exit               16902      0.0443     1   4     0        7          0
-## 21 num.exitcode           14277      0.193      1   4     0       15          0
-## 22 num.posttenurefate     14277      0.193      1   4     0        9          0
-## 23 FtiesNameA             15814      0.106     11  43     0      200          0
-## 24 FtiesCodeA             15814      0.106     36  36     0      195          0
-## 25 FtiesNameB             17637      0.00277   15  38     0        7          0
-## 26 FtiesCodeB             17637      0.00277   36  36     0        6          0
-## 27 FtiesNameC             17674      0.000679  29  29     0        1          0
-## 28 FtiesCodeC             17674      0.000679  36  36     0        1          0
 ## 
-## ── Variable type: numeric ──────────────────────────────────────────────────────
-##   skim_variable n_missing complete_rate   mean    sd p0 p25 p50 p75 p100
-## 1 Female                0        1      0.0183 0.134  0   0   0   0    1
-## 2 ftcur             16031        0.0936 0.389  0.488  0   0   0   1    1
-}
+## $GNEVAR_ARCHIGOS
+## -------------------------------------------------------------------------------
+## |   Column Name    |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+## -------------------------------------------------------------------------------
+## |   ARCHIGOS_ID    |  character  |              24|     0     |       0       |
+## |      COW_ID      |  character  |              24|     0     |       0       |
+## |      LeadID      |  character  |              24|     0     |       0       |
+## |      idacr       |  character  |              24|     0     |       0       |
+## |      Label       |  character  |              24|     0     |       0       |
+## |      leader      |  character  |              24|     0     |       0       |
+## |       Beg        |    mdate    |              24|     0     |       0       |
+## |       End        |    mdate    |              24|     0     |       0       |
+## |     BornDate     |    mdate    |              24|    10     |     41.67     |
+## |    DeathDate     |    mdate    |              24|    11     |     45.83     |
+## |     YearBorn     |    mdate    |              24|     0     |       0       |
+## |     YearDied     |    mdate    |              24|     0     |       0       |
+## |      Female      |   numeric   |              24|     0     |       0       |
+## |      entry       |  character  |              24|    18     |      75       |
+## |       exit       |  character  |              24|    18     |      75       |
+## |     exitcode     |  character  |              24|    18     |      75       |
+## |prevtimesinoffice |  character  |              24|    18     |      75       |
+## |  posttenurefate  |  character  |              24|    18     |      75       |
+## |   dbpedia.uri    |  character  |              24|    11     |     45.83     |
+## |    num.entry     |  character  |              24|    18     |      75       |
+## |     num.exit     |  character  |              24|    23     |     95.83     |
+## |   num.exitcode   |  character  |              24|    18     |      75       |
+## |num.posttenurefate|  character  |              24|    18     |      75       |
+## |    FtiesNameA    |  character  |              24|     6     |      25       |
+## |    FtiesCodeA    |  character  |              24|     6     |      25       |
+## |    FtiesNameB    |  character  |              24|    24     |      100      |
+## |    FtiesCodeB    |  character  |              24|    19     |     79.17     |
+## |    FtiesNameC    |  character  |              24|    24     |      100      |
+## |    FtiesCodeC    |  character  |              24|    24     |      100      |
+## |      ftcur       |   integer   |              24|     6     |      25       |
+## -------------------------------------------------------------------------------
+}\if{html}{\out{</div>}}
 }
 \keyword{datasets}

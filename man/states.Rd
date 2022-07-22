@@ -6,7 +6,7 @@
 \title{states database documentation}
 \format{
 The states database is a list that contains the
-following 4 datasets: GW, ISD, COW, ICOW.
+following 5 datasets: GW, ISD, COW, ICOW, GNEVAR_STATES.
 For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
 \describe{
@@ -17,7 +17,10 @@ please use the \code{data_source()} and \code{data_contrast()} functions.
 \item{COW: }{A dataset with 243 observations and the following
 5 variables: COW_ID, Beg, End, COW_Nr, Label.}
 \item{ICOW: }{A dataset with 217 observations and the following
-15 variables: COW_ID, Label, ColRuler, IndFrom, IndDate, IndViol, IndType, SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
+15 variables: COW_ID, Label, ColRuler, IndFrom, IndDate, IndViol,
+IndType, SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
+\item{GNEVAR_STATES: }{A dataset with 707 observations and the following
+9 variables: stateID, Label, Capital, Beg, End, Latitude, Longitude, Area, Region.}
 }
 }
 \usage{
@@ -27,101 +30,80 @@ states
 states database documentation
 }
 \details{
-\preformatted{## $GW
-## ── Data Summary ────────────────────────
-##                            Values
-## Name                       X[[i]]
-## Number of rows             216   
-## Number of columns          5     
-## _______________________          
-## Column type frequency:           
-##   character                5     
-## ________________________         
-## Group variables            None  
+\if{html}{\out{<div class="sourceCode">}}\preformatted{## $GW
+## ----------------------------------------------------------------------------
+## |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+## ----------------------------------------------------------------------------
+## |    COW_ID     |  character  |             216|     0     |       0       |
+## |      Beg      |    mdate    |             216|     0     |       0       |
+## |      End      |    mdate    |             216|     0     |       0       |
+## |    COW_Nr     |  character  |             216|     0     |       0       |
+## |     Label     |  character  |             216|     0     |       0       |
+## ----------------------------------------------------------------------------
 ## 
-## ── Variable type: character ────────────────────────────────────────────────────
-##   skim_variable n_missing complete_rate min max empty n_unique whitespace
-## 1 COW_ID                0             1   3   3     0      202          0
-## 2 Beg                   0             1  10  12     0      153          0
-## 3 End                   0             1  10  12     0       30          0
-## 4 COW_Nr                0             1   1   3     0      202          0
-## 5 Label                 0             1   4  39     0      203          0
 ## 
 ## $ISD
-## ── Data Summary ────────────────────────
-##                            Values
-## Name                       X[[i]]
-## Number of rows             362   
-## Number of columns          7     
-## _______________________          
-## Column type frequency:           
-##   character                7     
-## ________________________         
-## Group variables            None  
+## ----------------------------------------------------------------------------
+## |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+## ----------------------------------------------------------------------------
+## |    COW_ID     |  character  |             362|     0     |       0       |
+## |      Beg      |    mdate    |             362|     0     |       0       |
+## |      End      |    mdate    |             362|     0     |       0       |
+## |    COW_Nr     |  character  |             362|     0     |       0       |
+## |     Label     |  character  |             362|     0     |       0       |
+## |     Micro     |  character  |             362|     0     |       0       |
+## |   New.State   |  character  |             362|     0     |       0       |
+## ----------------------------------------------------------------------------
 ## 
-## ── Variable type: character ────────────────────────────────────────────────────
-##   skim_variable n_missing complete_rate min max empty n_unique whitespace
-## 1 COW_ID                0             1   3   3     0      310          0
-## 2 Beg                   0             1  10  12     0      201          0
-## 3 End                   0             1  10  12     0      134          0
-## 4 COW_Nr                0             1   1   4     0      315          0
-## 5 Label                 0             1   3  35     0      319          0
-## 6 Micro                 0             1   1   1     0        2          0
-## 7 New.State             0             1   1   1     0        2          0
 ## 
 ## $COW
-## ── Data Summary ────────────────────────
-##                            Values
-## Name                       X[[i]]
-## Number of rows             243   
-## Number of columns          5     
-## _______________________          
-## Column type frequency:           
-##   character                5     
-## ________________________         
-## Group variables            None  
+## ----------------------------------------------------------------------------
+## |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+## ----------------------------------------------------------------------------
+## |    COW_ID     |  character  |             243|     0     |       0       |
+## |      Beg      |    mdate    |             243|     0     |       0       |
+## |      End      |    mdate    |             243|     0     |       0       |
+## |    COW_Nr     |  character  |             243|     0     |       0       |
+## |     Label     |  character  |             243|     0     |       0       |
+## ----------------------------------------------------------------------------
 ## 
-## ── Variable type: character ────────────────────────────────────────────────────
-##   skim_variable n_missing complete_rate min max empty n_unique whitespace
-## 1 COW_ID                0             1   3   3     0      217          0
-## 2 Beg                   0             1  10  12     0      191          0
-## 3 End                   0             1  10  12     0       39          0
-## 4 COW_Nr                0             1   1   3     0      217          0
-## 5 Label                 0             1   4  32     0      217          0
 ## 
 ## $ICOW
-## ── Data Summary ────────────────────────
-##                            Values
-## Name                       X[[i]]
-## Number of rows             217   
-## Number of columns          15    
-## _______________________          
-## Column type frequency:           
-##   character                8     
-##   numeric                  7     
-## ________________________         
-## Group variables            None  
+## ----------------------------------------------------------------------------
+## |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+## ----------------------------------------------------------------------------
+## |    COW_ID     |  character  |             217|     0     |       0       |
+## |     Label     |  character  |             217|     0     |       0       |
+## |   ColRuler    |   numeric   |             217|    46     |     21.2      |
+## |    IndFrom    |   numeric   |             217|    39     |     17.97     |
+## |    IndDate    |    mdate    |             217|     0     |       0       |
+## |    IndViol    |   numeric   |             217|     0     |       0       |
+## |    IndType    |   numeric   |             217|     0     |       0       |
+## |    SecFrom    |   numeric   |             217|    179    |     82.49     |
+## |    SecDate    |    mdate    |             217|    179    |     82.49     |
+## |    SecViol    |   numeric   |             217|    179    |     82.49     |
+## |     Into      |   numeric   |             217|    198    |     91.24     |
+## |   IntoDate    |    mdate    |             217|    198    |     91.24     |
+## |    COWsys     |    mdate    |             217|     0     |       0       |
+## |     GWsys     |    mdate    |             217|    22     |     10.14     |
+## |     Notes     |  character  |             217|    58     |     26.73     |
+## ----------------------------------------------------------------------------
 ## 
-## ── Variable type: character ────────────────────────────────────────────────────
-##   skim_variable n_missing complete_rate min max empty n_unique whitespace
-## 1 COW_ID                0        1        3   3     0      217          0
-## 2 Label                 0        1        4  36     0      217          0
-## 3 IndDate               0        1        6   8     0      175          0
-## 4 SecDate             179        0.175    7   7     0       31          0
-## 5 IntoDate            198        0.0876   7   7     0       11          0
-## 6 COWsys                0        1        7   7     0      142          0
-## 7 GWsys                22        0.899    7   7     0      122          0
-## 8 Notes                58        0.733   25 239     0      138          0
 ## 
-## ── Variable type: numeric ──────────────────────────────────────────────────────
-##   skim_variable n_missing complete_rate    mean      sd  p0  p25 p50 p75 p100
-## 1 ColRuler             46        0.788  293.    172.      2 200  220 300  920
-## 2 IndFrom              39        0.820  289.    185.      2 200  220 345  920
-## 3 IndViol               0        1        0.424   0.495   0   0    0   1    1
-## 4 IndType               0        1        2.15    0.774   1   2    2   2    4
-## 5 SecFrom             179        0.175  313.    200.     41 141. 315 365  820
-## 6 SecViol             179        0.175    0.605   0.495   0   0    1   1    1
-## 7 Into                198        0.0876 361     175.    255 255  255 325  816
-}
+## $GNEVAR_STATES
+## ----------------------------------------------------------------------------
+## |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+## ----------------------------------------------------------------------------
+## |    stateID    |  character  |             707|     0     |       0       |
+## |     Label     |  character  |             707|    271    |     38.33     |
+## |    Capital    |  character  |             707|    96     |     13.58     |
+## |      Beg      |    mdate    |             707|    385    |     54.46     |
+## |      End      |    mdate    |             707|    385    |     54.46     |
+## |   Latitude    |   numeric   |             707|    210    |     29.7      |
+## |   Longitude   |   numeric   |             707|    210    |     29.7      |
+## |     Area      |  character  |             707|    575    |     81.33     |
+## |    Region     |  character  |             707|    575    |     81.33     |
+## ----------------------------------------------------------------------------
+}\if{html}{\out{</div>}}
 }
 \keyword{datasets}
