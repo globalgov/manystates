@@ -40,7 +40,6 @@ jobs:
             any::rcmdcheck
             any::lintr
             any::spelling
-            any::covr
           needs: check
 
       - uses: r-lib/actions/check-r-package@v2
@@ -63,17 +62,9 @@ jobs:
           name: ${{ matrix.config.asset_name }}
           path: build/
 
-      - name: Calculate code coverage
-        run: Rscript -e "covr::codecov()"
-
       - name: Lint
         run: lintr::lint_package()
         shell: Rscript {0}
-
-      # - name: Goodpractice # check if available on CRAN again in the future
-      #   run: |
-      #     goodpractice::gp()
-      #   shell: Rscript {0}
 
       - name: Spell check
         run: spelling::spell_check_package()
