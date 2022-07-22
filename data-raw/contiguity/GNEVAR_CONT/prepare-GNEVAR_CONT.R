@@ -1,4 +1,4 @@
-# REGIONS Preparation Script
+# GNEVAR_CONT Preparation Script
 
 # This is a template for importing, cleaning, and exporting data
 # ready for many packages universe.
@@ -8,7 +8,7 @@ GNEVAR_CONT <- readr::read_csv("data-raw/contiguity/REGIONS/FAO and Region Membe
 
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
-# formats of the 'REGIONS' object until the object created
+# formats of the 'GNEVAR_CONT' object until the object created
 # below (in stage three) passes all the tests.
 # We recommend that you avoid using one letter variable names to keep
 # away from issues with ambiguous names down the road.
