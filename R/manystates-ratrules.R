@@ -8,7 +8,6 @@
 #' \item{RATRULES: }{A dataset with 215 observations and the following
 #' 5 variables: stateID, Label, RatProcedure, ConstitutionalDesc, url.}
 #' }
-
 #'
 #' @details
 #' ``` {r, echo = FALSE, warning = FALSE}

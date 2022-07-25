@@ -15,7 +15,8 @@
 #' 15 variables: COW_ID, Label, ColRuler, IndFrom, IndDate, IndViol,
 #' IndType, SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
 #' \item{GNEVAR_STATES: }{A dataset with 707 observations and the following
-#' 9 variables: stateID, Label, Capital, Beg, End, Latitude, Longitude, Area, Region.}
+#' 9 variables: stateID, Label, Capital, Beg, End, Latitude, Longitude,
+#' Area, Region.}
 #' }
 #'
 #' @details

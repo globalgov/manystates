@@ -24,6 +24,6 @@
 #'
 #' @details
 #' ``` {r, echo = FALSE, warning = FALSE}
-#' lapply(regimes, skimr::skim_without_charts)
+#' lapply(regimes, messydates::mreport)
 #' ```
 "regimes"
