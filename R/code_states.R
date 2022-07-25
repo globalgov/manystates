@@ -37,7 +37,7 @@ code_states <- function(v, abbrev = FALSE) {
     colnames(coment) <- countryregex[, 2]
     rownames(coment) <- v
     out <- apply(coment, 1, function(x) paste(names(x[x == 1]), collapse = "_"))
-    ind <- which(rowSums(coment)==0)
+    ind <- which(rowSums(coment) == 0)
     out[out == ""] <- paste(rownames(coment)[ind])
     out <- unname(out)
   }

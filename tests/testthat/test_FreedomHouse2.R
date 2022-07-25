@@ -1,5 +1,5 @@
 # Test if  meets the many packages universe requirements
-# 
+
 # Report missing values
 test_that("missing observations are reported correctly", {
   expect_false(any(grepl("^n/a$", regimes[["FreedomHouse2"]])))

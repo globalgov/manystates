@@ -42,4 +42,3 @@ test_that("labels are standardised", {
   expect_false(any(grepl("!", economics[["EconomicFreedom"]])))
   expect_false(any(grepl("NANA.", economics[["EconomicFreedom"]])))
 })
-
