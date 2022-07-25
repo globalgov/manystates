@@ -11,7 +11,35 @@ For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
 \describe{
 \item{EconomicFreedom: }{A dataset with 4290 observations and the following
-74 variables: COW_ID, Year, ISO_Code_2, ISO_Code_3, Countries, Economic Freedom Summary Index, Rank, Quartile, 1A Government Consumption, 1A_data, 1B  Transfers and subsidies, 1B_data, 1C  Government investment, 1C_data, 1Di Top marginal income tax rate, 1Di_data, 1Dii Top marginal income and payroll tax rate, 1Dii_data, 1D  Top marginal tax rate, IE State Ownership of Assets, 1  Size of Government, 2A  Judicial independence, 2B  Impartial courts, 2C  Protection of property rights, 2D  Military interference in rule of law and politics, 2E Integrity of the legal system, 2F Legal enforcement of contracts, 2G Regulatory restrictions on the sale of real property, 2H Reliability of police, Gender Legal Rights Adjustment, 2  Legal System & Property Rights, 3A  Money growth, 3A_data, 3B  Standard deviation of inflation, 3B_data, 3C  Inflation: Most recent year, 3C_data, 3D  Freedom to own foreign currency bank accounts, 3  Sound Money, 4Ai  Revenue from trade taxes (\% of trade sector), 4Ai_data, 4Aii  Mean tariff rate, 4Aii_data, 4Aiii  Standard deviation of tariff rates, 4Aiii_data, 4A  Tariffs, 4Bi  Non-tariff trade barriers, 4Bii  Compliance costs of importing and exporting, 4B  Regulatory trade barriers, 4C  Black market exchange rates, 4Di  Financial Openness, 4Dii  Capital controls, 4Diii Freedom of foreigners to visit, 4D  Controls of the movement of capital and people, 4  Freedom to trade internationally, 5Ai  Ownership of banks, 5Aii Private sector credit, 5Aiii  Interest rate controls/negative real interest rates), 5A  Credit market regulations, 5Bi  Hiring regulations and minimum wage, 5Bii  Hiring and firing regulations, 5Biii  Centralized collective bargaining, 5Biv  Hours Regulations, 5Bv Mandated cost of worker dismissal, 5Bvi  Conscription, 5B  Labor market regulations, 5Ci  Administrative requirements, 5Cii  Regulatory Burden, 5Ciii  Starting a  business, 5Civ  Impartial Public Administration, 5Cv Licensing restrictions, 5Cvi Tax compliance, 5C  Business regulations, 5  Regulation.}
+74 variables: COW_ID, Year, ISO_Code_2, ISO_Code_3, Countries,
+Economic Freedom Summary Index, Rank, Quartile, 1A Government Consumption,
+1A_data, 1B  Transfers and subsidies, 1B_data, 1C  Government investment,
+1C_data, 1Di Top marginal income tax rate, 1Di_data,
+1Dii Top marginal income and payroll tax rate, 1Dii_data,
+1D  Top marginal tax rate, IE State Ownership of Assets,
+1  Size of Government, 2A  Judicial independence, 2B  Impartial courts,
+2C  Protection of property rights, 2D  Military interference in rule of law and politics,
+2E Integrity of the legal system, 2F Legal enforcement of contracts,
+2G Regulatory restrictions on the sale of real property, 2H Reliability of police,
+Gender Legal Rights Adjustment, 2  Legal System & Property Rights,
+3A  Money growth, 3A_data, 3B  Standard deviation of inflation, 3B_data,
+3C  Inflation: Most recent year, 3C_data, 3D  Freedom to own foreign currency bank accounts,
+3  Sound Money, 4Ai  Revenue from trade taxes (\% of trade sector),
+4Ai_data, 4Aii  Mean tariff rate, 4Aii_data, 4Aiii  Standard deviation of tariff rates,
+4Aiii_data, 4A  Tariffs, 4Bi  Non-tariff trade barriers,
+4Bii  Compliance costs of importing and exporting,
+4B  Regulatory trade barriers, 4C  Black market exchange rates, 4Di  Financial Openness,
+4Dii  Capital controls, 4Diii Freedom of foreigners to visit,
+4D  Controls of the movement of capital and people,
+4  Freedom to trade internationally, 5Ai  Ownership of banks,
+5Aii Private sector credit, 5Aiii  Interest rate controls/negative real interest rates),
+5A  Credit market regulations, 5Bi  Hiring regulations and minimum wage,
+5Bii  Hiring and firing regulations, 5Biii  Centralized collective bargaining,
+5Biv  Hours Regulations, 5Bv Mandated cost of worker dismissal, 5Bvi  Conscription,
+5B  Labor market regulations, 5Ci  Administrative requirements, 5Cii  Regulatory Burden,
+5Ciii  Starting a  business, 5Civ  Impartial Public Administration,
+5Cv Licensing restrictions, 5Cvi Tax compliance, 5C  Business regulations,
+5  Regulation.}
 \item{EconomicFreedomHist: }{A dataset with 458 observations and the following
 5 variables: COW_ID, Year, Country, EFW, Rank.}
 }
@@ -24,192 +52,97 @@ economics database documentation
 }
 \details{
 \if{html}{\out{<div class="sourceCode">}}\preformatted{## $EconomicFreedom
-## ── Data Summary ────────────────────────
-##                            Values
-## Name                       X[[i]]
-## Number of rows             4290  
-## Number of columns          74    
-## _______________________          
-## Column type frequency:           
-##   character                7     
-##   numeric                  67    
-## ________________________         
-## Group variables            None  
+## ------------------------------------------------------------------------------------------------------------------------
+## |                        Column Name                        |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+## ------------------------------------------------------------------------------------------------------------------------
+## |                          COW_ID                           |  character  |            4290|     0     |       0       |
+## |                           Year                            |    mdate    |            4290|     0     |       0       |
+## |                        ISO_Code_2                         |  character  |            4290|     0     |       0       |
+## |                        ISO_Code_3                         |  character  |            4290|     0     |       0       |
+## |                         Countries                         |  character  |            4290|     0     |       0       |
+## |              Economic Freedom Summary Index               |   numeric   |            4290|    718    |     16.74     |
+## |                           Rank                            |   numeric   |            4290|    718    |     16.74     |
+## |                         Quartile                          |   numeric   |            4290|    718    |     16.74     |
+## |                 1A Government Consumption                 |   numeric   |            4290|    664    |     15.48     |
+## |                          1A_data                          |   numeric   |            4290|    664    |     15.48     |
+## |                1B  Transfers and subsidies                |   numeric   |            4290|   1018    |     23.73     |
+## |                          1B_data                          |   numeric   |            4290|   1018    |     23.73     |
+## |                 1C  Government investment                 |   numeric   |            4290|    686    |     15.99     |
+## |                          1C_data                          |   numeric   |            4290|    686    |     15.99     |
+## |             1Di Top marginal income tax rate              |   numeric   |            4290|   1122    |     26.15     |
+## |                         1Di_data                          |  character  |            4290|   1125    |     26.22     |
+## |       1Dii Top marginal income and payroll tax rate       |   numeric   |            4290|   1571    |     36.62     |
+## |                         1Dii_data                         |  character  |            4290|   1575    |     36.71     |
+## |                 1D  Top marginal tax rate                 |   numeric   |            4290|   1122    |     26.15     |
+## |               IE State Ownership of Assets                |   numeric   |            4290|    234    |     5.45      |
+## |                   1  Size of Government                   |   numeric   |            4290|    341    |     7.95      |
+## |                 2A  Judicial independence                 |   numeric   |            4290|    78     |     1.82      |
+## |                   2B  Impartial courts                    |   numeric   |            4290|    132    |     3.08      |
+## |             2C  Protection of property rights             |   numeric   |            4290|    782    |     18.23     |
+## |   2D  Military interference in rule of law and politics   |   numeric   |            4290|    654    |     15.24     |
+## |             2E Integrity of the legal system              |   numeric   |            4290|    130    |     3.03      |
+## |             2F Legal enforcement of contracts             |   numeric   |            4290|    587    |     13.68     |
+## |  2G Regulatory restrictions on the sale of real property  |   numeric   |            4290|    814    |     18.97     |
+## |                 2H Reliability of police                  |   numeric   |            4290|    974    |     22.7      |
+## |              Gender Legal Rights Adjustment               |   numeric   |            4290|     6     |     0.14      |
+## |             2  Legal System & Property Rights             |   numeric   |            4290|    121    |     2.82      |
+## |                     3A  Money growth                      |   numeric   |            4290|    621    |     14.48     |
+## |                          3A_data                          |   numeric   |            4290|    621    |     14.48     |
+## |            3B  Standard deviation of inflation            |   numeric   |            4290|    665    |     15.5      |
+## |                          3B_data                          |   numeric   |            4290|    665    |     15.5      |
+## |              3C  Inflation: Most recent year              |   numeric   |            4290|    661    |     15.41     |
+## |                          3C_data                          |   numeric   |            4290|    661    |     15.41     |
+## |     3D  Freedom to own foreign currency bank accounts     |   numeric   |            4290|    696    |     16.22     |
+## |                      3  Sound Money                       |   numeric   |            4290|    684    |     15.94     |
+## |     4Ai  Revenue from trade taxes (\% of trade sector)     |   numeric   |            4290|    948    |     22.1      |
+## |                         4Ai_data                          |   numeric   |            4290|    948    |     22.1      |
+## |                  4Aii  Mean tariff rate                   |   numeric   |            4290|   1041    |     24.27     |
+## |                         4Aii_data                         |   numeric   |            4290|   1041    |     24.27     |
+## |         4Aiii  Standard deviation of tariff rates         |   numeric   |            4290|   1334    |     31.1      |
+## |                        4Aiii_data                         |   numeric   |            4290|   1334    |     31.1      |
+## |                        4A  Tariffs                        |   numeric   |            4290|    760    |     17.72     |
+## |              4Bi  Non-tariff trade barriers               |   numeric   |            4290|   1641    |     38.25     |
+## |     4Bii  Compliance costs of importing and exporting     |   numeric   |            4290|   1497    |     34.9      |
+## |               4B  Regulatory trade barriers               |   numeric   |            4290|   1423    |     33.17     |
+## |              4C  Black market exchange rates              |   numeric   |            4290|    692    |     16.13     |
+## |                  4Di  Financial Openness                  |   numeric   |            4290|    484    |     11.28     |
+## |                  4Dii  Capital controls                   |   numeric   |            4290|    690    |     16.08     |
+## |           4Diii Freedom of foreigners to visit            |   numeric   |            4290|   1990    |     46.39     |
+## |    4D  Controls of the movement of capital and people     |   numeric   |            4290|    297    |     6.92      |
+## |            4  Freedom to trade internationally            |   numeric   |            4290|    763    |     17.79     |
+## |                  5Ai  Ownership of banks                  |   numeric   |            4290|    913    |     21.28     |
+## |                5Aii Private sector credit                 |   numeric   |            4290|    654    |     15.24     |
+## |5Aiii  Interest rate controls/negative real interest rates)|   numeric   |            4290|    938    |     21.86     |
+## |               5A  Credit market regulations               |   numeric   |            4290|    697    |     16.25     |
+## |         5Bi  Hiring regulations and minimum wage          |   numeric   |            4290|   1393    |     32.47     |
+## |            5Bii  Hiring and firing regulations            |   numeric   |            4290|   1593    |     37.13     |
+## |         5Biii  Centralized collective bargaining          |   numeric   |            4290|   1457    |     33.96     |
+## |                  5Biv  Hours Regulations                  |   numeric   |            4290|   1287    |      30       |
+## |           5Bv Mandated cost of worker dismissal           |   numeric   |            4290|   1488    |     34.69     |
+## |                    5Bvi  Conscription                     |   numeric   |            4290|    728    |     16.97     |
+## |               5B  Labor market regulations                |   numeric   |            4290|   1233    |     28.74     |
+## |             5Ci  Administrative requirements              |   numeric   |            4290|   1730    |     40.33     |
+## |                  5Cii  Regulatory Burden                  |   numeric   |            4290|   1576    |     36.74     |
+## |              5Ciii  Starting
+## a  business               |   numeric   |            4290|   1383    |     32.24     |
+## |           5Civ  Impartial Public Administration           |   numeric   |            4290|    233    |     5.43      |
+## |                5Cv Licensing restrictions                 |   numeric   |            4290|   1921    |     44.78     |
+## |                    5Cvi Tax compliance                    |   numeric   |            4290|   1412    |     32.91     |
+## |                 5C  Business regulations                  |   numeric   |            4290|   1354    |     31.56     |
+## |                       5  Regulation                       |   numeric   |            4290|    695    |     16.2      |
+## ------------------------------------------------------------------------------------------------------------------------
 ## 
-## ── Variable type: character ────────────────────────────────────────────────────
-##   skim_variable n_missing complete_rate min max empty n_unique whitespace
-## 1 COW_ID                0         1       3   3     0      165          0
-## 2 Year                  0         1       4   4     0       26          0
-## 3 ISO_Code_2            0         1       2   2     0      165          0
-## 4 ISO_Code_3            0         1       3   3     0      165          0
-## 5 Countries             0         1       4  24     0      165          0
-## 6 1Di_data           1125         0.738   1   9     0      168          0
-## 7 1Dii_data          1575         0.633   1  18     0      168          0
-## 
-## ── Variable type: numeric ──────────────────────────────────────────────────────
-##    skim_variable                                                 n_missing
-##  1 "Economic Freedom Summary Index"                                    718
-##  2 "Rank"                                                              718
-##  3 "Quartile"                                                          718
-##  4 "1A Government Consumption"                                         664
-##  5 "1A_data"                                                           664
-##  6 "1B  Transfers and subsidies"                                      1018
-##  7 "1B_data"                                                          1018
-##  8 "1C  Government investment"                                         686
-##  9 "1C_data"                                                           686
-## 10 "1Di Top marginal income tax rate"                                 1122
-## 11 "1Dii Top marginal income and payroll tax rate"                    1571
-## 12 "1D  Top marginal tax rate"                                        1122
-## 13 "IE State Ownership of Assets"                                      234
-## 14 "1  Size of Government"                                             341
-## 15 "2A  Judicial independence"                                          78
-## 16 "2B  Impartial courts"                                              132
-## 17 "2C  Protection of property rights"                                 782
-## 18 "2D  Military interference in rule of law and politics"             654
-## 19 "2E Integrity of the legal system"                                  130
-## 20 "2F Legal enforcement of contracts"                                 587
-## 21 "2G Regulatory restrictions on the sale of real property"           814
-## 22 "2H Reliability of police"                                          974
-## 23 "Gender Legal Rights Adjustment"                                      6
-## 24 "2  Legal System & Property Rights"                                 121
-## 25 "3A  Money growth"                                                  621
-## 26 "3A_data"                                                           621
-## 27 "3B  Standard deviation of inflation"                               665
-## 28 "3B_data"                                                           665
-## 29 "3C  Inflation: Most recent year"                                   661
-## 30 "3C_data"                                                           661
-## 31 "3D  Freedom to own foreign currency bank accounts"                 696
-## 32 "3  Sound Money"                                                    684
-## 33 "4Ai  Revenue from trade taxes (\% of trade sector)"                 948
-## 34 "4Ai_data"                                                          948
-## 35 "4Aii  Mean tariff rate"                                           1041
-## 36 "4Aii_data"                                                        1041
-## 37 "4Aiii  Standard deviation of tariff rates"                        1334
-## 38 "4Aiii_data"                                                       1334
-## 39 "4A  Tariffs"                                                       760
-## 40 "4Bi  Non-tariff trade barriers"                                   1641
-## 41 "4Bii  Compliance costs of importing and exporting"                1497
-## 42 "4B  Regulatory trade barriers"                                    1423
-## 43 "4C  Black market exchange rates"                                   692
-## 44 "4Di  Financial Openness"                                           484
-## 45 "4Dii  Capital controls"                                            690
-## 46 "4Diii Freedom of foreigners to visit"                             1990
-## 47 "4D  Controls of the movement of capital and people"                297
-## 48 "4  Freedom to trade internationally"                               763
-## 49 "5Ai  Ownership of banks"                                           913
-## 50 "5Aii Private sector credit"                                        654
-## 51 "5Aiii  Interest rate controls/negative real interest rates)"       938
-## 52 "5A  Credit market regulations"                                     697
-## 53 "5Bi  Hiring regulations and minimum wage"                         1393
-## 54 "5Bii  Hiring and firing regulations"                              1593
-## 55 "5Biii  Centralized collective bargaining"                         1457
-## 56 "5Biv  Hours Regulations"                                          1287
-## 57 "5Bv Mandated cost of worker dismissal"                            1488
-## 58 "5Bvi  Conscription"                                                728
-## 59 "5B  Labor market regulations"                                     1233
-## 60 "5Ci  Administrative requirements"                                 1730
-## 61 "5Cii  Regulatory Burden"                                          1576
-## 62 "5Ciii  Starting\\r\\na  business"                                   1383
-## 63 "5Civ  Impartial Public Administration"                             233
-## 64 "5Cv Licensing restrictions"                                       1921
-## 65 "5Cvi Tax compliance"                                              1412
-## 66 "5C  Business regulations"                                         1354
-## 67 "5  Regulation"                                                     695
-##    complete_rate   mean       sd      p0    p25    p50     p75     p100
-##  1         0.833  6.61     1.15    2.48   5.88   6.75    7.5       9.09
-##  2         0.833 70.6     42.1     1     35     69     104       165   
-##  3         0.833  2.49     1.12    1      1      2       3         4   
-##  4         0.845  5.87     2.28    0      4.44   6.17    7.54     13.0 
-##  5         0.845 20.2      8.32    1.68  14.4   19.0    24.9      66.6 
-##  6         0.763  7.72     2.08    0      6.24   8.44    9.48     10   
-##  7         0.763  8.87     7.65    0      2.4    6.22   14.3      37.2 
-##  8         0.840  6.83     3.40    0      4.68   8.07    9.86     10   
-##  9         0.840 26.8     17.9   -14.6   15.5   21.8    33.6     472.  
-## 10         0.738  6.72     2.73    0      5      7       9        10   
-## 11         0.634  5.18     2.71    0      3      5       7        10   
-## 12         0.738  5.92     2.61    0      4      6       8        10   
-## 13         0.945  6.47     1.77    0.125  5.41   6.92    7.75     10   
-## 14         0.921  6.49     1.42    0.118  5.62   6.63    7.50      9.51
-## 15         0.982  5.48     1.60    1.52   4.25   5.36    6.62      8.85
-## 16         0.969  5.35     1.80    0.825  3.89   5.03    6.67      9.81
-## 17         0.818  5.21     1.65    0      4.09   4.95    6.16      9.44
-## 18         0.848  6.52     2.74    0      4.17   6.67    8.33     10   
-## 19         0.970  5.54     1.76    0.926  4.31   5.33    6.78      9.86
-## 20         0.863  4.71     1.70    0      3.62   4.73    5.87      9   
-## 21         0.810  7.02     2.08    0      6.00   7.51    8.54      9.98
-## 22         0.773  5.43     1.98    0      3.94   5.29    6.95      9.69
-## 23         0.999  0.804    0.201   0.235  0.706  0.882   0.941     1   
-## 24         0.972  5.11     1.68    1.29   3.84   4.96    6.18      9.26
-## 25         0.855  8.25     1.71    0      7.85   8.70    9.29     10.0 
-## 26         0.855 13.6     96.1   -64.6    3.18   6.37   10.7    2290   
-## 27         0.845  8.06     2.22    0      7.65   8.93    9.44      9.95
-## 28         0.845 59.3   1354.      0.119  1.4    2.69    5.87  55163.  
-## 29         0.846  8.52     1.91    0      8.26   9.18    9.60     10   
-## 30         0.846 47.4   1230.    -14.2    1.89   4.07    8.65  65374.  
-## 31         0.838  6.07     4.36    0      0     10      10        10   
-## 32         0.841  7.75     1.79    0      6.70   8.08    9.30      9.92
-## 33         0.779  7.84     2.32    0      6.99   8.86    9.51     10   
-## 34         0.779  3.40     4.59    0      0.73   1.71    4.51     77.1 
-## 35         0.757  7.91     1.58    0      7.44   8.3     8.94     10   
-## 36         0.757 10.6      8.96    0      5.3    8.5    12.8     105   
-## 37         0.689  5.95     2.15    0      5.33   6.29    7.2      10   
-## 38         0.689 11.4     14.5     0      6.99   9.27   11.7     426.  
-## 39         0.823  7.16     1.74    0      6.31   7.56    8.30     10   
-## 40         0.617  5.84     1.26    0      4.99   5.73    6.58      9.69
-## 41         0.651  6.78     2.53    0      5.50   7.36    8.76     10   
-## 42         0.668  6.29     1.74    0      5.32   6.56    7.56      9.83
-## 43         0.839  9.17     2.41    0     10     10      10        10   
-## 44         0.887  5.18     3.75    0      1.66   4.16   10        10   
-## 45         0.839  3.49     3.05    0      0.769  3.08    6.15     10   
-## 46         0.536  5.41     3.52    0      1.55   6.42    8.52     10   
-## 47         0.931  4.48     3.05    0      1.66   4.20    7.27     10   
-## 48         0.822  6.79     1.73    0      5.83   6.99    8.14     10   
-## 49         0.787  6.85     3.27    0      5      8      10        10   
-## 50         0.848  7.98     2.36    0      7.24   8.67    9.68     10   
-## 51         0.781  8.75     2.21    0      9     10      10        10   
-## 52         0.838  7.77     2.05    0      6.86   8.25    9.32     10   
-## 53         0.675  6.33     2.75    0      4.4    6.67    8.9      10   
-## 54         0.629  4.70     1.36    0      3.82   4.70    5.56      8.82
-## 55         0.660  6.40     1.41    0      5.55   6.65    7.44      9.5 
-## 56         0.7    7.50     2.03    1.9    6      8      10        10   
-## 57         0.653  6.19     3.05    0      4.13   7.04    8.42     10   
-## 58         0.830  6.14     4.33    0      1     10      10        10   
-## 59         0.713  6.22     1.48    1.84   5.16   6.25    7.37      9.72
-## 60         0.597  3.94     1.32    0      3.01   3.83    4.65      8.54
-## 61         0.633  5.35     2.31    0      3.78   5.41    7        10   
-## 62         0.678  8.50     1.50    0      7.97   9.02    9.58      9.98
-## 63         0.946  5.63     2.45    0      3.62   5.42    7.60     10   
-## 64         0.552  7.56     1.87    0      6.78   7.99    8.94     10   
-## 65         0.671  6.71     2.20    0      6.08   7.20    8.20      9.93
-## 66         0.684  6.34     1.31    1.98   5.50   6.40    7.23      9.46
-## 67         0.838  6.65     1.26    1.00   5.90   6.79    7.55      9.43
 ## 
 ## $EconomicFreedomHist
-## ── Data Summary ────────────────────────
-##                            Values
-## Name                       X[[i]]
-## Number of rows             458   
-## Number of columns          5     
-## _______________________          
-## Column type frequency:           
-##   character                3     
-##   numeric                  2     
-## ________________________         
-## Group variables            None  
-## 
-## ── Variable type: character ────────────────────────────────────────────────────
-##   skim_variable n_missing complete_rate min max empty n_unique whitespace
-## 1 COW_ID                0             1   4  32     0      117          0
-## 2 Year                  0             1   4   4     0        4          0
-## 3 Country               0             1   4  17     0      118          0
-## 
-## ── Variable type: numeric ──────────────────────────────────────────────────────
-##   skim_variable n_missing complete_rate  mean    sd   p0   p25   p50   p75
-## 1 EFW                   0             1  5.21  1.24 2.94  4.10  5.27  6.17
-## 2 Rank                  0             1 57.8  33.1  1    29    58    86   
-##     p100
-## 1   7.85
-## 2 118
+## ----------------------------------------------------------------------------
+## |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+## ----------------------------------------------------------------------------
+## |    COW_ID     |  character  |             458|     0     |       0       |
+## |     Year      |    mdate    |             458|     0     |       0       |
+## |    Country    |  character  |             458|     0     |       0       |
+## |      EFW      |   numeric   |             458|     0     |       0       |
+## |     Rank      |   numeric   |             458|     0     |       0       |
+## ----------------------------------------------------------------------------
 }\if{html}{\out{</div>}}
 }
 \keyword{datasets}
