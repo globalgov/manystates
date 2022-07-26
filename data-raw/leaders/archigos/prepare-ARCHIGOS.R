@@ -1,10 +1,9 @@
 # ARCHIGOS Preparation Script
 
 # This is a template for importing, cleaning, and exporting data
-# ready for the qPackage.
+# ready for the many packages universe.
 
 # Stage one: Collecting data
-# ARCHIGOS <- readr::read_csv2("data-raw/leaders/ARCHIGOS/ARCHIGOS.csv")
 ARCHIGOS <- read.delim2("data-raw/leaders/archigos/arch_annual.txt")
 
 # Stage two: Correcting data
@@ -20,8 +19,8 @@ ARCHIGOS <- as_tibble(ARCHIGOS) %>%
                 ~dplyr::na_if(., "(n_year)"))) %>%
   dplyr::mutate(across(where(is.character),
                 ~dplyr::na_if(., "Missing: No Information Found"))) %>%
-  manydata::transmutate(ARCHIGOS_ID = obsid,
-                     LeadID = leadid,
+  manydata::transmutate(archigosID = obsid,
+                     leaderID = leadid,
                      Beg = messydates::as_messydate(startdate),
                      End = messydates::as_messydate(enddate),
                      BornDate = messydates::as_messydate(borndate),
@@ -56,7 +55,7 @@ ARCHIGOS <- as_tibble(ARCHIGOS) %>%
                                               "711" = "Tibet",
                                               "730" = "Korea",
                                               "815" = "Vietnam"))) %>%
-  dplyr::mutate(COW_ID =
+  dplyr::mutate(cowID =
                   countrycode::countrycode(ccode,
                                            origin = "cown",
                                            destination = "cowc",
@@ -77,9 +76,9 @@ ARCHIGOS <- as_tibble(ARCHIGOS) %>%
 # 711; Refers to Tibet prior to 1951
 # 730; Refers to Korea prior to the Korean War
 # 815; Refers to imperial Vietnam prior to the French colonization
-# Ordering stuff for output:
+# Ordering variables for output:
 ARCHIGOS <- ARCHIGOS %>% 
-    dplyr::select(ARCHIGOS_ID, LeadID, COW_ID, idacr, Label, leader, Beg, End, BornDate,
+    dplyr::select(archigosID, leaderID, cowID, idacr, Label, leader, Beg, End, BornDate,
                   DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
                   prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry,
                   num.exit, num.exitcode, num.posttenurefate, FtiesNameA,
@@ -94,7 +93,7 @@ ARCHIGOS <- ARCHIGOS %>%
 # Next run the following line to make ARCHIGOS available
 # within the qPackage.
 manypkgs::export_data(ARCHIGOS, database = "leaders",
-                     URL = "http://ksgleditsch.com/archigos.html")
+                      URL = "http://ksgleditsch.com/archigos.html")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence
 # to certain standards.You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows)
