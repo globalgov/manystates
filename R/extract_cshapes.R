@@ -1,13 +1,14 @@
 #' Extract CShapes data and matrix
 #'
 #' Functions to import CShapes 2.0 datasets and distances from
-#' the `[cShapes]` package and format them to a qVerse
-#' consistent output for creating maps.
+#' the `[cShapes]` package and format them to be consistent with the
+#' many packages universe for creating maps.
 #' @param date The date for which the distance list should be computed.
 #' This argument must be a single date (ymd) from 1/1/1886 onwards.
-#' @param type Specifies the type of distance list: "capdist" for capital
-#' distances, "centdist" for centroid distances, and "mindist" for minimum
-#' distances.
+#' @param type Specifies the type of distance list:
+#' "capdist" for capital distances,
+#' "centdist" for centroid distances,
+#' and "mindist" for minimum distances.
 #' @param ... Arguments to be passed to `[cshapes]` functions.
 #' See the `[cshapes]` documentation for more details
 #' @name extract_cshapes
@@ -15,14 +16,14 @@ NULL
 
 #' @name extract_cshapes
 #' @details `import_cshapes()`imports CShapes 2.0 datasets
-#' and formats them to a qVerse consistent output.
+#' and formats them to be consistent with the many packages universe.
 #' @importFrom tibble as_tibble
 #' @importFrom manypkgs standardise_titles standardise_dates
 #' @import dplyr
 #' @import lubridate
 #' @importFrom rlang .data
-#' @return A dataframe with the `[cshapes]` dataset in a qVerse-consistent
-#' format.
+#' @return A dataframe with the `[cshapes]` dataset in a format consistent
+#' with the many packages universe.
 #' @examples
 #' \donttest{
 #' import_cshapes(date = "1900-01-01")
@@ -32,7 +33,7 @@ import_cshapes <- function(date, ...) {
   # Step 0: Check that package is installed:
   if (!requireNamespace("cshapes", quietly = TRUE)) {
     stop(
-      "Package \"cshapes\" must be installed to use this function.",
+      "Package \"cshapes\" must be installed from CRAN to use this function.",
       call. = FALSE
     )
   }
@@ -93,7 +94,7 @@ import_distlist <- function(date, type, ...) {
   # Step 0: Check that package is installed:
   if (!requireNamespace("cshapes", quietly = TRUE)) {
     stop(
-      "Package \"cshapes\" must be installed to use this function.",
+      "Package \"cshapes\" must be installed from CRAN to use this function.",
       call. = FALSE
     )
   }
@@ -115,7 +116,7 @@ import_distlist <- function(date, type, ...) {
   custom_match <- c(`730` = "Korea")
   # Step 1: Import data from cshapes
   dist <- cshapes::distlist(date, type, ..., useGW = FALSE)
-  # Step 3: Process dist to make it qConsistent
+  # Step 3: Process dist to make it consistent with the many packages universe
   if (type == "capdist") {
     dist <- tibble::as_tibble(dist) %>%
       dplyr::mutate(FromLabel =
@@ -199,7 +200,7 @@ import_distmatrix <- function(date, type, ...) {
   # Step 0: Check that package is installed:
   if (!requireNamespace("cshapes", quietly = TRUE)) {
     stop(
-      "Package \"cshapes\" must be installed to use this function.",
+      "Package \"cshapes\" must be installed from CRAN to use this function.",
       call. = FALSE
     )
   }

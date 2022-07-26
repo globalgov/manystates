@@ -3,14 +3,14 @@
 #' Functions to import the
 #' [V-Dem](https://www.v-dem.net/en/data/data/v-dem-dataset-v111/) and the
 #' [V-Party](https://www.v-dem.net/en/data/data/v-party-dataset/) datasets
-#' from their [`{vdemdata}`](https://github.com/vdeminstitute/vdemdata)
+#' from the [`{vdemdata}`](https://github.com/vdeminstitute/vdemdata)
 #' package in a many packages universe consistent format.
 #' @name extract_vdem
 NULL
 
 #' @name extract_vdem
 #' @details `import_vdem()` imports VDem 11.1 dataset
-#' and formats them to a many packages universe consistent output.
+#' and formats it to be consistent with the many packages universe.
 #' @importFrom tibble as_tibble
 #' @importFrom manypkgs standardise_dates
 #' @importFrom rlang .data
@@ -26,7 +26,9 @@ import_vdem <- function() {
   # Step 0: Check that package is installed:
   if (!requireNamespace("vdemdata", quietly = TRUE)) {
     stop(
-      "Package \"vdemdata\" must be installed to use this function.",
+      "Package \"vdemdata\" must be installed to use this function.
+      The package can be installed from GitHub:
+      devtools::install_github(\"vdeminstitute/vdemdata\")",
       call. = FALSE
     )
   }
@@ -67,14 +69,14 @@ import_vdem <- function() {
 }
 
 #' @name extract_vdem
-#' @details `import_vparty()` imports the V-Party dataset and formats it to
-#' a many packages universe consistent dataframe.
+#' @details `import_vparty()` imports the V-Party dataset and
+#' formats it to be consistent with the many packages universe.
 #' @importFrom tibble as_tibble
 #' @import dplyr
 #' @importFrom manypkgs standardise_dates
 #' @importFrom rlang .data
-#' @return A dataframe of the`[vparty]` dataset in a many packages universe
-#' consistent format.
+#' @return A dataframe of the`[vparty]` dataset consistent with the
+#' many packages universe.
 #' @examples
 #' \donttest{
 #' import_vparty()
@@ -84,7 +86,9 @@ import_vparty <- function() {
   # Step 0: Check that package is installed:
   if (!requireNamespace("vdemdata", quietly = TRUE)) {
     stop(
-      "Package \"vdemdata\" must be installed to use this function.",
+      "Package \"vdemdata\" must be installed to use this function.
+      The package can be installed from GitHub:
+      devtools::install_github(\"vdeminstitute/vdemdata\")",
       call. = FALSE
     )
   }
