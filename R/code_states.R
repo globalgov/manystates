@@ -17,6 +17,9 @@
 #' code_states(states, abbrev = TRUE)
 #' @export
 code_states <- function(v, abbrev = FALSE) {
+  if (missing(v)) {
+    return(countryregex)
+  }
   # Translates string to ASCII
   v <- stringi::stri_trans_general(v, "Latin-ASCII")
   if (abbrev == TRUE) {
