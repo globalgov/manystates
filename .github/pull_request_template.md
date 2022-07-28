@@ -27,8 +27,6 @@ Please also indicate if these are package changes, data changes, or both.
   - [ ] Package builds on Mac
   - [ ] Package builds on Windows
   - [ ] Package builds on Linux
-  - [ ] CodeCov check: Package improves or maintains good test coverage
-  - [ ] CodeFactor check: Package improves or maintains good style
 - [ ] Documentation
   - [ ] Any new or modified functions or data have roxygen style documentation in their .R scripts
   - [ ] Any longer functions are commented inline so that it is easier to debug in the future
