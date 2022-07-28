@@ -20,13 +20,14 @@ This argument must be a single date (ymd) from 1/1/1886 onwards.}
 \item{...}{Arguments to be passed to \verb{[cshapes]} functions.
 See the \verb{[cshapes]} documentation for more details}
 
-\item{type}{Specifies the type of distance list: "capdist" for capital
-distances, "centdist" for centroid distances, and "mindist" for minimum
-distances.}
+\item{type}{Specifies the type of distance list:
+"capdist" for capital distances,
+"centdist" for centroid distances,
+and "mindist" for minimum distances.}
 }
 \value{
-A dataframe with the \verb{[cshapes]} dataset in a qVerse-consistent
-format.
+A dataframe with the \verb{[cshapes]} dataset in a format consistent
+with the many packages universe.
 
 A dataframe with the desired distance list between polygons,
 capitals, or polygon centroids in kilometers.
@@ -36,12 +37,12 @@ capitals, or polygon centroids in kilometers.
 }
 \description{
 Functions to import CShapes 2.0 datasets and distances from
-the \verb{[cShapes]} package and format them to a qVerse
-consistent output for creating maps.
+the \verb{[cShapes]} package and format them to be consistent with the
+many packages universe for creating maps.
 }
 \details{
 \code{import_cshapes()}imports CShapes 2.0 datasets
-and formats them to a qVerse consistent output.
+and formats them to be consistent with the many packages universe.
 
 \code{import_distlist()} imports pre-computed minimum
 distance dataframe from the \verb{[cShapes]} package.

@@ -11,13 +11,13 @@ For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
 \describe{
 \item{ARCHIGOS: }{A dataset with 17686 observations and the following
-30 variables: ARCHIGOS_ID, LeadID, COW_ID, idacr, Label, leader, Beg, End,
+30 variables: archigosID, leaderID, cowID, idacr, Label, leader, Beg, End,
 BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
 prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry, num.exit,
 num.exitcode, num.posttenurefate, FtiesNameA, FtiesCodeA, FtiesNameB,
 FtiesCodeB, FtiesNameC, FtiesCodeC, ftcur.}
 \item{GNEVAR_ARCHIGOS: }{A dataset with 24 observations and the following
-30 variables: ARCHIGOS_ID, COW_ID, LeadID, idacr, Label, leader, Beg, End,
+30 variables: archigosID, cowID, leaderID, idacr, Label, leader, Beg, End,
 BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
 prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry, num.exit,
 num.exitcode, num.posttenurefate, FtiesNameA, FtiesCodeA, FtiesNameB,
@@ -35,9 +35,9 @@ leaders database documentation
 ## -------------------------------------------------------------------------------
 ## |   Column Name    |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 ## -------------------------------------------------------------------------------
-## |   ARCHIGOS_ID    |  character  |           17686|     0     |       0       |
-## |      LeadID      |  character  |           17686|     0     |       0       |
-## |      COW_ID      |  character  |           17686|     0     |       0       |
+## |    archigosID    |  character  |           17686|     0     |       0       |
+## |     leaderID     |  character  |           17686|     0     |       0       |
+## |      cowID       |  character  |           17686|     0     |       0       |
 ## |      idacr       |  character  |           17686|     0     |       0       |
 ## |      Label       |  character  |           17686|     0     |       0       |
 ## |      leader      |  character  |           17686|     0     |       0       |
@@ -72,9 +72,9 @@ leaders database documentation
 ## -------------------------------------------------------------------------------
 ## |   Column Name    |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 ## -------------------------------------------------------------------------------
-## |   ARCHIGOS_ID    |  character  |              24|     0     |       0       |
-## |      COW_ID      |  character  |              24|     0     |       0       |
-## |      LeadID      |  character  |              24|     0     |       0       |
+## |    archigosID    |  character  |              24|     0     |       0       |
+## |      cowID       |  character  |              24|     0     |       0       |
+## |     leaderID     |  character  |              24|     0     |       0       |
 ## |      idacr       |  character  |              24|     0     |       0       |
 ## |      Label       |  character  |              24|     0     |       0       |
 ## |      leader      |  character  |              24|     0     |       0       |
