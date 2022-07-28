@@ -12,16 +12,19 @@ ICOW_COL <- readr::read_csv("data-raw/states/ICOW_COL/ICOW_COL.csv")
 # below (in stage three) passes all the tests.
 # We recommend that you avoid using one letter variable names to keep
 # away from issues with ambiguous names down the road.
-ICOW_COL <- as_tibble(ICOW_COL) %>%
+ICOW_COL <- tibble::as_tibble(ICOW_COL) %>%
   manydata::transmutate(cowNR = State,
-                        Origin_COW_ID = From,
+                        cowID_Origin = From,
                         IndepType = Type,
                         Label = manypkgs::standardise_titles(Name),
-                        Beg = messydates::as_messydate(lubridate::ym(Indep)),
-                        Beg_COW = messydates::as_messydate(lubridate::ymd(COWsys)),
-                        Beg_GW = messydates::as_messydate(lubridate::ymd(GWsys)),
+                        Beg = messydates::as_messydate(as.character(Indep), resequence = "ym"),
+                        Beg_COW = messydates::as_messydate(as.character(COWsys), resequence = "ymd"),
+                        Beg_GW = messydates::as_messydate(as.character(GWsys), resequence = "ymd"),
                         Beg_Polity2 = messydates::make_messydate(IndepP2)) %>%
-  dplyr::select(COW_ID, Label, Beg, Origin_COW_ID, IndepType, Beg_COW, Beg_GW, Beg_Polity2) %>%
+  dplyr::mutate(cowID = countrycode::countrycode(cowNR, origin = "cown", destination = "cowc")) %>%
+  dplyr::mutate(Beg_Polity2 = gsub("-0009", NA, Beg_Polity2),
+                Beg_GW = gsub("-0009", NA, Beg_GW)) %>%
+  dplyr::select(cowID, cowNR, Label, Beg,cowID_Origin, IndepType, Beg_COW, Beg_GW, Beg_Polity2) %>%
   dplyr::arrange(Beg)
 # manypkgs includes several functions that should help cleaning
 # and standardising your data such as `standardise_titles()`.
