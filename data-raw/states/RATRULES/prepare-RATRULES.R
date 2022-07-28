@@ -4,8 +4,8 @@
 # ready for many packages universe.
 
 # Stage one: Collecting data
-RATRULES <- readr::read_csv("data-raw/ratrules/RATRULES/BSrat.csv")
-RATRULES2 <- readr::read_csv("data-raw/ratrules/RATRULES/extra_ratifs.csv")
+RATRULES <- readr::read_csv("data-raw/states/RATRULES/BSrat.csv")
+RATRULES2 <- readr::read_csv("data-raw/states/RATRULES/extra_ratifs.csv")
 
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
@@ -46,6 +46,6 @@ RATRULES <- as_tibble(RATRULES) %>%
 # Therefore, please make sure that you have permission to use the dataset
 # that you're including in the package.
 # To add a template of .bib file to the package,
-# please run `manypkgs::add_bib("ratrules", "RATRULES")`.
-manypkgs::export_data(RATRULES, database = "ratrules",
+# please run `manypkgs::add_bib("states", "RATRULES")`.
+manypkgs::export_data(RATRULES, database = "states",
                       URL = "NA")

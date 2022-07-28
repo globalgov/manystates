@@ -6,7 +6,7 @@
 \title{states database documentation}
 \format{
 The states database is a list that contains the
-following 5 datasets: GW, ISD, COW, ICOW, GNEVAR_STATES.
+following 7 datasets: GW, ISD, COW, ICOW, GNEVAR_STATES, ICOW_COL, RATRULES.
 For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
 \describe{
@@ -17,11 +17,16 @@ please use the \code{data_source()} and \code{data_contrast()} functions.
 \item{COW: }{A dataset with 243 observations and the following
 5 variables: COW_ID, Beg, End, COW_Nr, Label.}
 \item{ICOW: }{A dataset with 217 observations and the following
-15 variables: COW_ID, Label, ColRuler, IndFrom, IndDate, IndViol,
-IndType, SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
+15 variables: COW_ID, Label, ColRuler, IndFrom, IndDate, IndViol, IndType,
+SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
 \item{GNEVAR_STATES: }{A dataset with 707 observations and the following
 9 variables: stateID, Label, Capital, Beg, End, Latitude, Longitude,
 Area, Region.}
+\item{ICOW_COL: }{A dataset with 221 observations and the following
+8 variables: COW_ID, Label, Beg, Origin_COW_ID, IndepType, Beg_COW,
+Beg_GW, Beg_Polity2.}
+\item{RATRULES: }{A dataset with 215 observations and the following
+5 variables: stateID, Label, RatProcedure, ConstitutionalDesc, url.}
 }
 }
 \usage{
@@ -105,6 +110,33 @@ states database documentation
 ## |     Area      |  character  |             707|    575    |     81.33     |
 ## |    Region     |  character  |             707|    575    |     81.33     |
 ## ----------------------------------------------------------------------------
+## 
+## 
+## $ICOW_COL
+## ----------------------------------------------------------------------------
+## |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+## ----------------------------------------------------------------------------
+## |    COW_ID     |   numeric   |             221|     0     |       0       |
+## |     Label     |  character  |             221|     0     |       0       |
+## |      Beg      |    mdate    |             221|    13     |     5.88      |
+## | Origin_COW_ID |   numeric   |             221|     0     |       0       |
+## |   IndepType   |   numeric   |             221|     0     |       0       |
+## |    Beg_COW    |    mdate    |             221|     0     |       0       |
+## |    Beg_GW     |    mdate    |             221|    23     |     10.41     |
+## |  Beg_Polity2  |    mdate    |             221|     0     |       0       |
+## ----------------------------------------------------------------------------
+## 
+## 
+## $RATRULES
+## -------------------------------------------------------------------------------
+## |   Column Name    |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+## -------------------------------------------------------------------------------
+## |     stateID      |  character  |             215|     0     |       0       |
+## |      Label       |  character  |             215|     0     |       0       |
+## |   RatProcedure   |   numeric   |             215|    15     |     6.98      |
+## |ConstitutionalDesc|  character  |             215|    192    |     89.3      |
+## |       url        |  character  |             215|    185    |     86.05     |
+## -------------------------------------------------------------------------------
 }\if{html}{\out{</div>}}
 }
 \keyword{datasets}

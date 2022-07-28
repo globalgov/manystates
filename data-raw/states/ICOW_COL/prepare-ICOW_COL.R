@@ -4,7 +4,7 @@
 # ready for many packages universe.
 
 # Stage one: Collecting data
-ICOW_COL <- readr::read_csv("data-raw/colrels/ICOW_COL/ICOW_COL.csv")
+ICOW_COL <- readr::read_csv("data-raw/states/ICOW_COL/ICOW_COL.csv")
 
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
@@ -13,7 +13,7 @@ ICOW_COL <- readr::read_csv("data-raw/colrels/ICOW_COL/ICOW_COL.csv")
 # We recommend that you avoid using one letter variable names to keep
 # away from issues with ambiguous names down the road.
 ICOW_COL <- as_tibble(ICOW_COL) %>%
-  manydata::transmutate(COW_ID = State,
+  manydata::transmutate(cowNR = State,
                         Origin_COW_ID = From,
                         IndepType = Type,
                         Label = manypkgs::standardise_titles(Name),
@@ -43,6 +43,6 @@ ICOW_COL <- as_tibble(ICOW_COL) %>%
 # Therefore, please make sure that you have permission to use the dataset
 # that you're including in the package.
 # To add a template of .bib file to the package,
-# please run `manypkgs::add_bib("colrels", "ICOW_COL")`.
-manypkgs::export_data(ICOW_COL, database = "colrels",
+# please run `manypkgs::add_bib("states", "ICOW_COL")`.
+manypkgs::export_data(ICOW_COL, database = "states",
                       URL = "https://doi.org/10.7910/DVN/5EMETG")

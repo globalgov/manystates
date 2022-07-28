@@ -1,7 +1,7 @@
 #' states database documentation
 #'
 #' @format The states database is a list that contains the
-#' following 5 datasets: GW, ISD, COW, ICOW, GNEVAR_STATES.
+#' following 7 datasets: GW, ISD, COW, ICOW, GNEVAR_STATES, ICOW_COL, RATRULES.
 #' For more information and references to each of the datasets used,
 #' please use the `data_source()` and `data_contrast()` functions.
 #'\describe{
@@ -12,11 +12,16 @@
 #' \item{COW: }{A dataset with 243 observations and the following
 #' 5 variables: COW_ID, Beg, End, COW_Nr, Label.}
 #' \item{ICOW: }{A dataset with 217 observations and the following
-#' 15 variables: COW_ID, Label, ColRuler, IndFrom, IndDate, IndViol,
-#' IndType, SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
+#' 15 variables: COW_ID, Label, ColRuler, IndFrom, IndDate, IndViol, IndType,
+#' SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
 #' \item{GNEVAR_STATES: }{A dataset with 707 observations and the following
 #' 9 variables: stateID, Label, Capital, Beg, End, Latitude, Longitude,
 #' Area, Region.}
+#' \item{ICOW_COL: }{A dataset with 221 observations and the following
+#' 8 variables: COW_ID, Label, Beg, Origin_COW_ID, IndepType, Beg_COW,
+#' Beg_GW, Beg_Polity2.}
+#' \item{RATRULES: }{A dataset with 215 observations and the following
+#' 5 variables: stateID, Label, RatProcedure, ConstitutionalDesc, url.}
 #' }
 #'
 #' @details
