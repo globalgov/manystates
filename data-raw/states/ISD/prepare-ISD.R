@@ -1,7 +1,7 @@
 # ISD Preparation Script
 
 # This is a template for importing, cleaning, and exporting data
-# ready for the qPackage.
+# ready for the many packages universe
 
 # Stage one: Collecting data
 ISD <- utils::read.csv("data-raw/states/ISD/ISD_Version1_Dissemination.csv")
@@ -13,19 +13,20 @@ ISD <- utils::read.csv("data-raw/states/ISD/ISD_Version1_Dissemination.csv")
 ISD <- tibble::as_tibble(ISD) %>%
   dplyr::rename(Finish = End) %>% 
   # Renaming the end date column to avoid self reference in transmutate.
-  manydata::transmutate(COW_ID = `COW.ID`,
-                     Beg = messydates::as_messydate(lubridate::dmy(Start)),
-                     End = messydates::as_messydate(lubridate::dmy(Finish)),
+  manydata::transmutate(cowID = `COW.ID`,
+                     Beg = messydates::as_messydate(Start, resequence = "dmy"),
+                     End = messydates::as_messydate(Finish, resequence = "dmy"),
                      Label = manypkgs::standardise_titles(as.character(State.Name)),
-                     COW_Nr = manypkgs::standardise_titles(as.character(COW.Nr.))) %>%
+                     cowNr = manypkgs::standardise_titles(as.character(COW.Nr.))) %>%
   # Standardising the dummie variables
-  dplyr::mutate(across(c(Micro, New.State),  ~ replace(., . == "", 0))) %>% 
-  dplyr::mutate(across(c(Micro, New.State), ~ replace(., . == "X", 1))) %>%  
+  dplyr::mutate(across(c(Micro, NewState),  ~ replace(., . == "", 0))) %>% 
+  dplyr::mutate(across(c(Micro, NewState), ~ replace(., . == "X", 1))) %>%  
   #Dropping certain unnecessary columns.
   dplyr::select(-X, -X.1, -X.2, -X.3, -X.4, -X.5,  -X.6, -X.7) %>% 
   # Arranging dataset
-  dplyr::relocate(COW_ID, Beg, End, COW_Nr, Label, Micro, New.State) %>%
-  dplyr::arrange(Beg, COW_ID)
+  dplyr::relocate(cowID, Beg, End, cowNR, Label, Micro, NewState) %>%
+  dplyr::arrange(Beg, cowID)
+
 # We know that ISD uses COW data for "old" states that is set to 1816-01-01 by default.
 # This is a rather uncertain date, that is, the dataset considers them states
 # on 1st January 1816, but they may have been established (much) earlier.

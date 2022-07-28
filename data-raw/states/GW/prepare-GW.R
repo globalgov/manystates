@@ -1,7 +1,7 @@
 # GW Preparation Script
 
 # This is a template for importing, cleaning, and exporting data
-# ready for the qPackage.
+# ready for the many packages universe.
 
 # Stage one: Collecting data
 GW <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
@@ -11,14 +11,13 @@ GW <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
 # formats of the 'GW' object until the object created
 # below (in stage three) passes all the tests. 
 GW <- tibble::as_tibble(GW) %>%
-  dplyr::rename(Finish = End) %>%
   manydata::transmutate(COW_ID = `Cow ID`,
                      Beg = messydates::as_messydate(Start),
                      End = messydates::as_messydate(Finish), 
                      Label = manypkgs::standardise_titles(`Name of State`),
                      COW_Nr = manypkgs::standardise_titles(`Cow Nr.`)) %>%
-  dplyr::relocate(COW_ID, Beg, End, COW_Nr, Label) %>%
-  dplyr::arrange(Beg, COW_ID)
+  dplyr::select(cowID, Beg, End, cowNR, Label) %>%
+  dplyr::arrange(Beg, cowID)
 # We know that GW uses COW data for "old" states that is set to 1816-01-01 by default.
 # This is a rather uncretain date, that is, the dataset considers them states
 # on 1st January 1816, but they may have been established (much) earlier.

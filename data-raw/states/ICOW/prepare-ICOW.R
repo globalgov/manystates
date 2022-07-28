@@ -11,14 +11,14 @@ ICOW <- readr::read_csv("data-raw/states/ICOW/coldata110.csv")
 # formats of the 'ICOW' object until the object created
 # below (in stage three) passes all the tests.
 colnames <- colnames(ICOW)
-colnames[[1]] <- "COW_ID"
+colnames[[1]] <- "cowID"
 colnames[[2]] <- "Label"
 cust_match <- c("260" = "GFR",
                 "730" = "KOR")
 ICOW <- dplyr::as_tibble(ICOW) %>%
   dplyr::na_if(-9) %>%
   dplyr::na_if(-90) %>%
-  dplyr::mutate(COW_ID = countrycode::countrycode(State,
+  dplyr::mutate(cowID = countrycode::countrycode(State,
                                                   "cown",
                                                   "cowc",
                                                   custom_match = cust_match)) %>%
@@ -105,7 +105,7 @@ ICOW <- dplyr::as_tibble(ICOW) %>%
               GWsys = messydates::as_messydate(GWsys)) %>%
   manydata::transmutate(Label = manypkgs::standardise_titles(Name)) %>%
   dplyr::select(-State) %>%
-  dplyr::arrange(COW_ID)
+  dplyr::arrange(cowID)
 # Reorder columns
 ICOW <- ICOW[, colnames]
 # manypkgs includes several functions that should help cleaning
