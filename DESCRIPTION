@@ -35,35 +35,24 @@ License: CC BY 4.0
 Imports:
     manydata,
     dplyr,
-    pkgdown,
-    lubridate,
-    purrr,
     rlang,
-    roxygen2,
-    stringr,
-    usethis,
-    whisker,
     countrycode,
-    stringi,
-    skimr,
     manypkgs,
-    pointblank,
     tibble,
-    messydates
-Suggests: 
-    fs,
+    lubridate
+Suggests:
+    pointblank,
+    messydates,
+    stringi,
     testthat (>= 3.0.0),
-    xfun,
-    WDI,
-    rmarkdown,
     knitr,
-    ggplot2,
+    WDI,
     hrbrthemes,
-    covr,
     cshapes,
     vdemdata,
     migraph,
-    ggraph
+    ggraph,
+    ggplot2
 Remotes:
     vdeminstitute/vdemdata,
     globalgov/manypkgs
