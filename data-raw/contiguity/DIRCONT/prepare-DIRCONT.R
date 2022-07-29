@@ -12,22 +12,22 @@ DIRCONT <- readr::read_csv("data-raw/contiguity/DIRCONT/contdir.csv")
 # below (in stage three) passes all the tests.
 # We recommend that you avoid using one letter variable names to keep
 # away from issues with ambiguous names down the road.
+# manypkgs includes several functions that should help cleaning
+# and standardising your data such as `standardise_titles()`
+# and `standardise_texts()`.
+# Please see the vignettes or website for more details.
 DIRCONT <- as_tibble(DIRCONT) %>%
   dplyr::rename(dyadID = dyad, stateID1 = statelno, stateID2 = statehno,
                 ContiguityType = conttype) %>%
-  manydata::transmutate(Beg = messydates::as_messydate(lubridate::ym(begin)),
-                        End = messydates::as_messydate(lubridate::ym(end)),
-                        # dates originally in YYYYMM format, as_messydate converts it to YYYY-MM-DD format, assuming the first of the month for each date
+  manydata::transmutate(Beg = messydates::as_messydate(as.character(begin),
+                                                       resequence = "ym"),
+                        End = messydates::as_messydate(as.character(end),
+                                                       resequence = "ym"),
                         Label1 = manypkgs::standardize_titles(statelab),
                         Label2 = manypkgs::standardize_titles(statehab)) %>%
   dplyr::select(-c(notes, version)) %>%
   dplyr::relocate(dyadID, ContiguityType, Beg, End, stateID1, Label1, stateID2, Label2) %>%
   dplyr::arrange(Beg)
-  
-# manypkgs includes several functions that should help cleaning
-# and standardising your data such as `standardise_titles()`
-# and `standardise_texts()`.
-# Please see the vignettes or website for more details.
 
 # Stage three: Connecting data
 # Next run the following line to make DIRCONT available
@@ -47,4 +47,4 @@ DIRCONT <- as_tibble(DIRCONT) %>%
 # To add a template of .bib file to the package,
 # please run `manypkgs::add_bib("contiguity", "DIRCONT")`.
 manypkgs::export_data(DIRCONT, database = "contiguity",
-                     URL = "https://correlatesofwar.org/data-sets/direct-contiguity")
+                      URL = "https://correlatesofwar.org/data-sets/direct-contiguity")
