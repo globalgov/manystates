@@ -91,7 +91,7 @@ ARCHIGOS <- ARCHIGOS %>%
 
 # Stage three: Connecting data
 # Next run the following line to make ARCHIGOS available
-# within the qPackage.
+# within the many package.
 manypkgs::export_data(ARCHIGOS, database = "leaders",
                       URL = "http://ksgleditsch.com/archigos.html")
 # This function also does two additional things.

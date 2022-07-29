@@ -43,7 +43,7 @@ GNEVAR_ARCHIGOS <- GNEVAR_ARCHIGOS %>%
 
 # Stage three: Connecting data
 # Next run the following line to make GNEVAR_ARCHIGOS available
-# within the package.
+# within the many package.
 manypkgs::export_data(GNEVAR_ARCHIGOS, database = "leaders",
                      URL = "http://ksgleditsch.com/archigos.html")
 # This function also does two additional things.
