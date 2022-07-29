@@ -2,7 +2,7 @@
 
 # Report missing values
 test_that("missing observations are reported correctly", {
-  expect_false(any(grepl("\\?", states[["RATRULES"]])))
+  expect_false(any(grepl("^\\?$", states[["RATRULES"]])))
   expect_false(any(grepl("^n/a$", states[["RATRULES"]])))
   expect_false(any(grepl("^N/A$", states[["RATRULES"]])))
   expect_false(any(grepl("^\\s$", states[["RATRULES"]])))
@@ -21,7 +21,7 @@ test_that("Columns are not in date, POSIXct or POSIXlt class", {
 # Contains the required variables
 test_that("object has the correct variables", {
   pointblank::expect_col_exists(states[["RATRULES"]],
-                                pointblank::vars(ID))
+                                pointblank::vars(stateID))
   pointblank::expect_col_exists(states[["RATRULES"]],
                                 pointblank::vars(Label))
 })

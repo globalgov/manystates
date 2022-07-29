@@ -2,7 +2,7 @@
 
 # Report missing values
 test_that("missing observations are reported correctly", {
-  expect_false(any(grepl("\\?", states[["ICOW"]])))
+  expect_false(any(grepl("^\\?$", states[["ICOW"]])))
   expect_false(any(grepl("^n/a$", states[["ICOW"]])))
   expect_false(any(grepl("^N/A$", states[["ICOW"]])))
   expect_false(any(grepl("^\\s$", states[["ICOW"]])))
@@ -21,21 +21,25 @@ test_that("Columns are not in date, POSIXct or POSIXlt class", {
 # Contains the required variables
 test_that("object has the correct variables", {
   pointblank::expect_col_exists(states[["ICOW"]],
-                                pointblank::vars(ID))
-  pointblank::expect_col_exists(states[["ICOW"]],
-                                pointblank::vars(Beg))
-  pointblank::expect_col_exists(states[["ICOW"]],
-                                pointblank::vars(End))
-  pointblank::expect_col_exists(states[["ICOW"]],
                                 pointblank::vars(Label))
+  pointblank::expect_col_exists(states[["ICOW"]],
+                                pointblank::vars(cowID))
+  pointblank::expect_col_exists(states[["ICOW"]],
+                                pointblank::vars(IndDate))
+  pointblank::expect_col_exists(states[["ICOW"]],
+                                pointblank::vars(SecDate))
+  pointblank::expect_col_exists(states[["ICOW"]],
+                                pointblank::vars(IntoDate))
 })
 
 # Variables with dates are standardized
 test_that("dates are standardised", {
-  expect_s3_class(states[["ICOW"]]$Beg, "mdate")
-  expect_s3_class(states[["ICOW"]]$End, "mdate")
-  expect_false(any(grepl("/", states[["ICOW"]]$Beg)))
-  expect_false(any(grepl("/", states[["ICOW"]]$End)))
+  expect_s3_class(states[["ICOW"]]$IndDate, "mdate")
+  expect_s3_class(states[["ICOW"]]$SecDate, "mdate")
+  expect_s3_class(states[["ICOW"]]$IntoDate, "mdate")
+  expect_false(any(grepl("/", states[["ICOW"]]$IndDate)))
+  expect_false(any(grepl("/", states[["ICOW"]]$SecDate)))
+  expect_false(any(grepl("/", states[["ICOW"]]$IntoDate)))
 })
 
 # Labels are standardized
