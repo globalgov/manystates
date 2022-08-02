@@ -19,17 +19,17 @@ Polity5 <- readxl::read_excel("data-raw/regimes/Polity5/p5v2018.xls")
 # formats of the 'Polity5' object until the object created
 # below (in stage three) passes all the tests.
 Polity5 <- tibble::as_tibble(Polity5) %>%
-  dplyr::mutate(COW_ID = manystates::code_states
-                (country, abbrev = TRUE)) %>%
+  dplyr::mutate(cowID = manystates::code_states(country, abbrev = TRUE)) %>%
   manydata::transmutate(
-              Beg = messydates::as_messydate(byear, bmonth, bday),
-              End = messydates::as_messydate(eyear, emonth, eday),
+              Beg = messydates::make_messydate(byear, bmonth, bday),
+              End = messydates::make_messydate(eyear, emonth, eday),
+              Year = messydates::as_messydate(as.character(year)),
               Label = manypkgs::standardise_titles(country)) %>%
-  dplyr::rename(Year = year) %>%
-  dplyr::mutate(ID = paste0(COW_ID, "-", Year)) %>%
-  dplyr::arrange(COW_ID, Year) %>%
+  dplyr::mutate(ID = paste0(cowID, "-", Year)) %>%
+  dplyr::arrange(cowID, Year) %>%
   dplyr::select(-scode) %>%
-  dplyr::relocate(ID, COW_ID, Year, Label)
+  dplyr::relocate(ID, cowID, Year, Label)
+
 # manydata includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.
@@ -58,7 +58,7 @@ Polity5 <- Polity5 %>%
                               ~dplyr::na_if(., "NA-NA-NA")))
 # Stage three: Connecting data
 # Next run the following line to make Polity5 available
-# within the qPackage.
+# within the many package.
 manypkgs::export_data(Polity5, database = "regimes", 
                      URL = "http://www.systemicpeace.org/inscrdata.html")
 # This function also does two additional things.
