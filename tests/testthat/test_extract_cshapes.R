@@ -17,7 +17,7 @@ test_that("CShapes extraction returns many-package consistent object", {
 
 test_that("object has the correct variables", {
   pointblank::expect_col_exists(test,
-                                pointblank::vars(COW_ID))
+                                pointblank::vars(cowID))
   pointblank::expect_col_exists(test,
                                 pointblank::vars(Beg))
   pointblank::expect_col_exists(test,

@@ -2,12 +2,12 @@
 
 # This script imports, cleans and corrects the FreedomHouse dataset before
 # including it in the regimes database.
-# 
+
 # Note that the Freedom House dataset is comprised of three distinct Excel
 # files that are each imported and cleaned in turn. Navigate to the
 # corresponding file in the data raw folder for more details.
 
-# Freedom House 1: Modern 2013-2021 ----
+# Freedom House 1: Edition 2013-2021 ----
 # Stage one: Collecting data
 FreedomHouse1 <- readxl::read_excel("data-raw/regimes/FreedomHouse/All_data_FIW_2013-2021.xlsx",
                                     sheet = 2,
@@ -19,30 +19,32 @@ FreedomHouse1 <- dplyr::rename(FreedomHouse1, Label = `Country/Territory`) %>%
   dplyr::mutate(
     cowID = manystates::code_states(Label, abbrev = TRUE),
     Year = messydates::as_messydate(as.character(Edition - 1)),
+    #Year in which the data was collected is one year prior to the edition year
     Edition = messydates::as_messydate(as.character(Edition)),
     ID = paste0(cowID, "-", as.character(Year))
   ) %>%
   dplyr::relocate(ID, cowID, Year, Label)
 
-# Freedom House 3: Aggregated category and subcategory scores 2003-2021 ----
+# Freedom House 3: Aggregated category and subcategory scores edition 2003-2021 ----
 # Stage one: Collecting data
-# Data from 2006-2021
+# Data from edition 2006-2021
 FreedomHouse3.1 <- readxl::read_excel("data-raw/regimes/FreedomHouse/Aggregate_Category_and_Subcategory_Scores_FIW_2003-2021.xlsx",
                                       sheet = 2,
                                       na = c("-", "N/A")
 )
 FreedomHouse3.1 <- FreedomHouse3.1[, 1:19]
-FreedomHouse3.1 <- dplyr::rename(FreedomHouse3.1, Label = `Country/Territory`) %>%
+FreedomHouse3.1 <- dplyr::rename(FreedomHouse3.1,
+                                 Label = `Country/Territory`) %>%
   manydata::transmutate(Territory = ifelse(`C/T?` == "t", 1, 0)) %>%
   dplyr::mutate(
-    cowID = manystates::code_states(Label, abbrev = T),
+    cowID = manystates::code_states(Label, abbrev = TRUE),
     Year = as.character(Edition - 1),
     Edition = as.character(Edition),
     ID = paste0(cowID, "-", Year)
   ) %>%
   dplyr::rename(`PR rating` = `PR Rating`, `CL rating` = `CL Rating`) %>%
   dplyr::relocate(ID, cowID, Year, Label)
-# Data from 2002-2005
+# Data from edition 2003-2005
 FreedomHouse3.2 <- readxl::read_excel("data-raw/regimes/FreedomHouse/Aggregate_Category_and_Subcategory_Scores_FIW_2003-2021.xlsx",
                                       sheet = 3,
                                       na = c("N/A", "-")
@@ -52,7 +54,7 @@ FreedomHouse3.2 <- dplyr::rename(FreedomHouse3.2,
                                  Label = `Country/Territory`
 ) %>%
   manydata::transmutate(Territory = ifelse(`C/T?` == "t", 1, 0)) %>%
-  dplyr::mutate(cowID = manystates::code_states(Label, abbrev = T)) %>%
+  dplyr::mutate(cowID = manystates::code_states(Label, abbrev = TRUE)) %>%
   tidyr::pivot_longer(cols = !c(Territory, cowID, Label)) %>%
   dplyr::mutate(
     Year = ifelse(grepl("03", name), "2002",
@@ -84,7 +86,7 @@ FreedomHouse <- dplyr::full_join(FreedomHouse1, FreedomHouse3,
                                         "PR", "D", "E", "F", "G", "CL",
                                         "Total", "Territory"))
 
-# Freedom House 2: Status of Countries and Territories 1972-2001 ----
+# Freedom House 2: Status of Countries and Territories 1973-2002 ----
 # Stage one: Collecting data
 # Freedom House 2.1: Countries
 FreedomHouse2.1 <- readxl::read_excel("data-raw/regimes/FreedomHouse/Country_and_Territory_Ratings_and_Statuses_FIW1973-2021.xlsx",

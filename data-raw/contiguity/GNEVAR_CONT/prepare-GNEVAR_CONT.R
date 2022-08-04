@@ -14,14 +14,15 @@ GNEVAR_CONT <- readr::read_csv("data-raw/contiguity/REGIONS/FAO and Region Membe
 # away from issues with ambiguous names down the road.
 GNEVAR_CONT <- as_tibble(GNEVAR_CONT) %>%
   dplyr::filter(ID != "ISO3") %>%
-  # filtering removes the rows repeating the variable names (do not contain observations)
-  dplyr::rename(stateID = ID, EntityType = CATEGORY, FAOmembership = FAO_MEMBERS,
-                Group = IS_IN_GROUP, url = URI) %>%
+  # filtering removes the rows that contain repetitions of variable names only
+  dplyr::rename(stateID = ID, EntityType = CATEGORY,
+                FAOmembership = FAO_MEMBERS, Group = IS_IN_GROUP, url = URI) %>%
   manydata::transmutate(Label = manypkgs::standardise_titles(LISTNAME_EN),
                         Contiguity = manypkgs::standardise_titles(HAS_BORDER_WITH),
                         Beg = messydates::as_messydate(VALID_SINCE),
                         End = messydates::as_messydate(VALID_UNTIL)) %>%
-  dplyr::select(stateID, Label, Beg, End, Contiguity, EntityType, FAOmembership, Group, url) %>%
+  dplyr::select(stateID, Label, Beg, End, Contiguity, EntityType, FAOmembership,
+                Group, url) %>%
   dplyr::arrange(Beg, stateID)
 
 # manypkgs includes several functions that should help cleaning

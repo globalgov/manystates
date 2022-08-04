@@ -26,7 +26,7 @@ data <- data.frame(title = c("Korea and Democratic People's Republic of Korea",
 
 test_that("states are given the correct abbreviation", {
  expect_equal(code_states(data$title, abbrev = TRUE), c("KOR_PRK", "GNQ",
-                                                        "GIN","DEU", "DDR",
+                                                        "GIN", "DEU", "DDR",
                                                       "AUH_HUN", "AUT_HUN",
                                                       "BGD", "PAK",
                                                       "GBR_USA", "GBR_USA",
@@ -40,7 +40,7 @@ test_that("states are given the correct abbreviation", {
 })
 
 test_that("states are given the correct label", {
-  expect_equal(code_states(data$title, abbrev = F), c(
+  expect_equal(code_states(data$title, abbrev = FALSE), c(
     "Republic of Korea_Democratic People's Republic of Korea",
     "Equatorial Guinea", "Guinea", "Germany (Prussia)",
     "German Democratic Republic",

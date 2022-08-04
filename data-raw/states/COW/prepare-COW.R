@@ -32,7 +32,7 @@ COW <- COW %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-
 # Please see the vignettes or website for more details.
 
 # Stage three: Connecting data
-# Next run the following line to make COW available within the qPackage.
+# Next run the following line to make COW available within the many package.
 manypkgs::export_data(COW, database = "states",
                      URL = "https://correlatesofwar.org/data-sets/state-system-membership")
 

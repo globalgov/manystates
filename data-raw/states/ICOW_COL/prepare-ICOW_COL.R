@@ -17,15 +17,21 @@ ICOW_COL <- tibble::as_tibble(ICOW_COL) %>%
                         cowID_Origin = From,
                         IndepType = Type,
                         Label = manypkgs::standardise_titles(Name),
-                        Beg = messydates::as_messydate(as.character(Indep), resequence = "ym"),
-                        Beg_COW = messydates::as_messydate(as.character(COWsys), resequence = "ymd"),
-                        Beg_GW = messydates::as_messydate(as.character(GWsys), resequence = "ymd"),
+                        Beg = messydates::as_messydate(as.character(Indep),
+                                                       resequence = "ym"),
+                        Beg_COW = messydates::as_messydate(as.character(COWsys),
+                                                           resequence = "ymd"),
+                        Beg_GW = messydates::as_messydate(as.character(GWsys),
+                                                          resequence = "ymd"),
                         Beg_Polity2 = messydates::make_messydate(IndepP2)) %>%
-  dplyr::mutate(cowID = countrycode::countrycode(cowNR, origin = "cown", destination = "cowc")) %>%
+  dplyr::mutate(cowID = countrycode::countrycode(cowNR, origin = "cown",
+                                                 destination = "cowc")) %>%
   dplyr::mutate(Beg_Polity2 = gsub("-0009", NA, Beg_Polity2),
                 Beg_GW = gsub("-0009", NA, Beg_GW)) %>%
-  dplyr::select(cowID, cowNR, Label, Beg,cowID_Origin, IndepType, Beg_COW, Beg_GW, Beg_Polity2) %>%
+  dplyr::select(cowID, cowNR, Label, Beg, cowID_Origin, IndepType, Beg_COW,
+                Beg_GW, Beg_Polity2) %>%
   dplyr::arrange(Beg)
+
 # manypkgs includes several functions that should help cleaning
 # and standardising your data such as `standardise_titles()`.
 # Please see the vignettes or website for more details.

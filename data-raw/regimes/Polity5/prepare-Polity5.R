@@ -1,15 +1,16 @@
 # Polity5 Preparation Script
 
 # This is a template for importing, cleaning, and exporting data
-# ready for the qPackage.
+# ready for the many packages universe.
 
 # Stage one: Collecting data
 
 #### Sidenote ####
-# Both Polity datasets have a slightly different structure. Polity5 is a
-# year-country dataset while Polity5d is a "polity case" dataset 
-# (e.g. one observation per regime change). We only integrate the Polity5
-# dataset in the present package.
+# Both Polity datasets have a slightly different structure.
+# Polity5 is a year-country dataset
+# while Polity5d is a "polity case" dataset
+# (e.g. one observation per regime change).
+# We only integrate the Polity5 dataset in the present package.
 
 # Polity case data
 Polity5 <- readxl::read_excel("data-raw/regimes/Polity5/p5v2018.xls")
@@ -33,7 +34,8 @@ Polity5 <- tibble::as_tibble(Polity5) %>%
 # manydata includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.
-# Dealing with special codes in autoc, democ, polity and polity2 variables
+
+# Dealing with special codes in autoc, democ, polity and polity2 variables.
 # Adds a dummy variable for polity interruptions, interregnum and transitions.
 Polity5 <- Polity5 %>%
   # Create a new variable to hold special cases

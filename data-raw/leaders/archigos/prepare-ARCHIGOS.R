@@ -29,14 +29,14 @@ ARCHIGOS <- as_tibble(ARCHIGOS) %>%
                      YearDied = messydates::as_messydate(as.character(yrdied)),
                      Female = ifelse(gender == "F", 1, 0)) %>%
   # NB: Max family ties is 3 at the moment
-  tidyr::separate(fties, into = c(paste0("Fties",LETTERS[1:3])),
-                  ";", remove = T) %>%
+  tidyr::separate(fties, into = c(paste0("Fties", LETTERS[1:3])),
+                  ";", remove = TRUE) %>%
   tidyr::separate(FtiesA, into = c("FtiesNameA", "FtiesCodeA"),
-                  "%", remove = T) %>%
+                  "%", remove = TRUE) %>%
   tidyr::separate(FtiesB, into = c("FtiesNameB", "FtiesCodeB"),
-                  "%", remove = T) %>%
+                  "%", remove = TRUE) %>%
   tidyr::separate(FtiesC, into = c("FtiesNameC", "FtiesCodeC"),
-                  "%", remove = T) %>%
+                  "%", remove = TRUE) %>%
   dplyr::mutate(
     leader = stringi::stri_trans_general(leader, "latin-ascii"),
     FtiesNameA = stringi::stri_trans_general(FtiesNameA, "latin-ascii"),
@@ -77,13 +77,13 @@ ARCHIGOS <- as_tibble(ARCHIGOS) %>%
 # 730; Refers to Korea prior to the Korean War
 # 815; Refers to imperial Vietnam prior to the French colonization
 # Ordering variables for output:
-ARCHIGOS <- ARCHIGOS %>% 
-    dplyr::select(archigosID, leaderID, cowID, idacr, Label, leader, Beg, End, BornDate,
-                  DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
-                  prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry,
-                  num.exit, num.exitcode, num.posttenurefate, FtiesNameA,
-                  FtiesCodeA, FtiesNameB, FtiesCodeB, FtiesNameC, FtiesCodeC,
-                  ftcur)
+ARCHIGOS <- ARCHIGOS %>%
+    dplyr::select(archigosID, leaderID, cowID, idacr, Label, leader, Beg, End,
+                  BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit,
+                  exitcode, prevtimesinoffice, posttenurefate, dbpedia.uri,
+                  num.entry, num.exit, num.exitcode, num.posttenurefate,
+                  FtiesNameA, FtiesCodeA, FtiesNameB, FtiesCodeB, FtiesNameC,
+                  FtiesCodeC, ftcur)
 
 # manypkgs includes several functions that should help cleaning
 # and standardising your data.

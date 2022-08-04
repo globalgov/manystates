@@ -16,7 +16,8 @@ RATRULES2 <- readr::read_csv("data-raw/states/RATRULES/extra_ratifs.csv")
 RATRULES <- dplyr::full_join(RATRULES, RATRULES2, by = c("StatID", "Rat"))
 RATRULES <- as_tibble(RATRULES) %>%
   dplyr::rename(stateID = StatID, RatProcedure = Rat,
-                ConstitutionalDesc = `Constitutional Description`, url = Source) %>%
+                ConstitutionalDesc = `Constitutional Description`,
+                url = Source) %>%
   dplyr::mutate(Label = ifelse(is.na(Label),
                                countrycode::countrycode(stateID,
                                                         origin = "iso3c",

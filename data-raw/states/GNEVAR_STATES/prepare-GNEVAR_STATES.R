@@ -55,8 +55,11 @@ regions <- regions %>%
 GNEVAR_STATES <- GNEVAR_STATES %>%
   dplyr::full_join(beg, by = "stateID") %>%
   dplyr::full_join(nap, by = c("stateID", "Label", "Beg", "End")) %>%
-  dplyr::full_join(capitals, by = c("stateID", "Label", "Capital", "Beg", "End")) %>%
-  dplyr::full_join(regions, by = c("stateID", "Label", "Capital", "Latitude", "Longitude"))
+  dplyr::full_join(capitals,
+                   by = c("stateID", "Label", "Capital", "Beg", "End")) %>%
+  dplyr::full_join(regions,
+                   by = c("stateID", "Label", "Capital",
+                          "Latitude", "Longitude"))
 
 # remove complete duplicates
 GNEVAR_STATES <- subset(GNEVAR_STATES,
@@ -64,7 +67,8 @@ GNEVAR_STATES <- subset(GNEVAR_STATES,
 
 # reorder variables and arrange chronologically
 GNEVAR_STATES <- GNEVAR_STATES %>%
-  dplyr::relocate(stateID, Label, Capital, Beg, End, Latitude, Longitude, Area, Region) %>%
+  dplyr::relocate(stateID, Label, Capital, Beg, End, Latitude, Longitude,
+                  Area, Region) %>%
   dplyr::arrange(Beg)
 
 # manypkgs includes several functions that should help cleaning

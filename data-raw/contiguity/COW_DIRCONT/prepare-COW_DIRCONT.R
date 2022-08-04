@@ -26,7 +26,8 @@ COW_DIRCONT <- as_tibble(COW_DIRCONT) %>%
                         Label1 = manypkgs::standardize_titles(statelab),
                         Label2 = manypkgs::standardize_titles(statehab)) %>%
   dplyr::select(-c(notes, version)) %>%
-  dplyr::relocate(dyadID, ContiguityType, Beg, End, stateID1, Label1, stateID2, Label2) %>%
+  dplyr::relocate(dyadID, ContiguityType, Beg, End, stateID1, Label1,
+                  stateID2, Label2) %>%
   dplyr::arrange(Beg)
 
 # Stage three: Connecting data
