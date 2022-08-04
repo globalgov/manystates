@@ -11,7 +11,7 @@ test_that("missing observations are reported correctly", {
   expect_false(any(grepl("n\\.a\\.$", states[["ICOW"]])))
 })
 
-# Date columns should be in messydt class
+# Date columns should be in mdate class
 test_that("Columns are not in date, POSIXct or POSIXlt class", {
   expect_false(any(lubridate::is.Date(states[["ICOW"]])))
   expect_false(any(lubridate::is.POSIXct(states[["ICOW"]])))
