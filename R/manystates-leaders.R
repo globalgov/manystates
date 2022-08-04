@@ -2,6 +2,11 @@
 #'
 #' @format The leaders database is a list that contains the
 #' following 2 datasets: ARCHIGOS, GNEVAR_ARCHIGOS.
+#' GNEVAR_* datasets are handcoded original data or
+#' corrections to existing datasets where coding errors were found.
+#' In the latter case, the suffix will reference the original dataset.
+#' In the leaders database, GNEVAR_ARCHIGOS contains corrections to
+#' birth dates and familial ties of states' leaders.
 #' For more information and references to each of the datasets used,
 #' please use the `data_source()` and `data_contrast()` functions.
 #'\describe{

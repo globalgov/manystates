@@ -2,6 +2,13 @@
 #'
 #' @format The states database is a list that contains the
 #' following 7 datasets: GW, ISD, COW, ICOW, GNEVAR_STATES, ICOW_COL, RATRULES.
+#' GNEVAR_* datasets are handcoded original data or
+#' corrections to existing datasets where coding errors were found.
+#' In the latter case, the suffix will reference the original dataset.
+#' In the states database, GNEVAR_STATES contains handcoded data on the
+#' latitude and longitude of state capitals 
+#' as well as the area and region that they belong to,
+#' extending the data currently available in existing datasets.
 #' For more information and references to each of the datasets used,
 #' please use the `data_source()` and `data_contrast()` functions.
 #'\describe{
