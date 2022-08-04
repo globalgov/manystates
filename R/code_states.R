@@ -8,6 +8,8 @@
 #' @details This function builds upon the `stat_actor` list and the
 #' `countrycode` package to identify and return the parties mentioned
 #' in a character vector of agreement titles or texts.
+#' If the function is ran without an argument (i.e. `code_states()`),
+#' a complete list of states' names and abbreviations is returned.
 #' @return A character vector of parties, in English, separated by commas.
 #' @import tibble
 #' @examples
@@ -18,33 +20,38 @@
 #' @export
 code_states <- function(v, abbrev = FALSE) {
   if (missing(v)) {
-    return(countryregex)
+    message("List of states' names and abbreviations")
+    out <- as.data.frame(countryregex)
+    out$Regex[56] <- paste(substr(out$Regex[56], 0, 100), "...")
+    out <- knitr::kable(out, "simple")
+    out
+  } else{
+    # Translates string to ASCII
+    v <- stringi::stri_trans_general(v, "Latin-ASCII")
+    if (abbrev == TRUE) {
+      # Find country codes from the statID column
+      coment <- vapply(countryregex[, 3],
+                       function(x) grepl(x, v, ignore.case = T, perl = T) * 1,
+                       FUN.VALUE = double(length(v)))
+      colnames(coment) <- countryregex[, 1]
+      rownames(coment) <- v
+      out <- apply(coment, 1, function(x) paste(names(x[x == 1]), collapse = "_"))
+      out[out == ""] <- NA
+      out <- unname(out)
+    } else {
+      # Find country labels from the label column
+      coment <- vapply(countryregex[, 3],
+                       function(x) grepl(x, v, ignore.case = T, perl = T) * 1,
+                       FUN.VALUE = double(length(v)))
+      colnames(coment) <- countryregex[, 2]
+      rownames(coment) <- v
+      out <- apply(coment, 1, function(x) paste(names(x[x == 1]), collapse = "_"))
+      ind <- which(rowSums(coment) == 0)
+      out[out == ""] <- paste(rownames(coment)[ind])
+      out <- unname(out)
+    }
+    out
   }
-  # Translates string to ASCII
-  v <- stringi::stri_trans_general(v, "Latin-ASCII")
-  if (abbrev == TRUE) {
-    # Find country codes from the statID column
-    coment <- vapply(countryregex[, 3],
-                     function(x) grepl(x, v, ignore.case = T, perl = T) * 1,
-                     FUN.VALUE = double(length(v)))
-    colnames(coment) <- countryregex[, 1]
-    rownames(coment) <- v
-    out <- apply(coment, 1, function(x) paste(names(x[x == 1]), collapse = "_"))
-    out[out == ""] <- NA
-    out <- unname(out)
-  } else {
-    # Find country labels from the label column
-    coment <- vapply(countryregex[, 3],
-                     function(x) grepl(x, v, ignore.case = T, perl = T) * 1,
-                     FUN.VALUE = double(length(v)))
-    colnames(coment) <- countryregex[, 2]
-    rownames(coment) <- v
-    out <- apply(coment, 1, function(x) paste(names(x[x == 1]), collapse = "_"))
-    ind <- which(rowSums(coment) == 0)
-    out[out == ""] <- paste(rownames(coment)[ind])
-    out <- unname(out)
-  }
-  out
 }
 
 #' #' Code country specific indicators
