@@ -2,7 +2,6 @@
 
 # Report missing values
 test_that("missing observations are reported correctly", {
-  expect_false(any(grepl("\\?", economics[["EconomicFreedomHist"]])))
   expect_false(any(grepl("^n/a$", economics[["EconomicFreedomHist"]])))
   expect_false(any(grepl("^N/A$", economics[["EconomicFreedomHist"]])))
   expect_false(any(grepl("^\\s$", economics[["EconomicFreedomHist"]])))
@@ -11,34 +10,9 @@ test_that("missing observations are reported correctly", {
   expect_false(any(grepl("n\\.a\\.$", economics[["EconomicFreedomHist"]])))
 })
 
-# Contains the main variables
-test_that("object has the correct variables", {
-  pointblank::expect_col_exists(economics[["EconomicFreedomHist"]],
-                                pointblank::vars(COW_ID))
-  pointblank::expect_col_exists(economics[["EconomicFreedomHist"]],
-                                pointblank::vars(Year))
-  pointblank::expect_col_exists(economics[["EconomicFreedomHist"]],
-                                pointblank::vars(Country))
-})
-
-# Variables with dates are standardized
-test_that("Columns with dates are standardized", {
-  expect_equal(class(economics[["EconomicFreedomHist"]]$Year), "mdate")
-  expect_false(any(grepl("/", economics[["EconomicFreedomHist"]]$Year)))
-  expect_false(any(grepl("^[:alpha:]$",
-                         economics[["EconomicFreedomHist"]]$Year)))
-  expect_false(any(grepl("^[:digit:]{2}$",
-                         economics[["EconomicFreedomHist"]]$Year)))
-  expect_false(any(grepl("^[:digit:]{3}$",
-                         economics[["EconomicFreedomHist"]]$Year)))
-  expect_false(any(grepl("^[:digit:]{1}$",
-                         economics[["EconomicFreedomHist"]]$Year)))
-})
-
-# Labels are standardized
-test_that("labels are standardised", {
-  expect_false(any(grepl("U\\.S\\.", economics[["EconomicFreedomHist"]])))
-  expect_false(any(grepl("U.K.", economics[["EconomicFreedomHist"]])))
-  expect_false(any(grepl("!", economics[["EconomicFreedomHist"]])))
-  expect_false(any(grepl("NANA.", economics[["EconomicFreedomHist"]])))
+# Date columns should be in mdate class
+test_that("Columns are not in date, POSIXct or POSIXlt class", {
+  expect_false(any(lubridate::is.Date(economics[["EconomicFreedomHist"]])))
+  expect_false(any(lubridate::is.POSIXct(economics[["EconomicFreedomHist"]])))
+  expect_false(any(lubridate::is.POSIXlt(economics[["EconomicFreedomHist"]])))
 })

@@ -14,9 +14,9 @@ EconomicFreedomHist <- readxl::read_excel(path, sheet = 3)
 # Historical Economic Freedom Dataset: ----
 EconomicFreedomHist <- dplyr::as_tibble(EconomicFreedomHist) %>%
   dplyr::mutate(Year = messydates::as_messydate(as.character(Year)),
-                COW_ID = manystates::code_states(Country)) %>%
-  dplyr::arrange(COW_ID, Year) %>%
-  dplyr::select(COW_ID, Year, dplyr::everything())
+                cowID = manystates::code_states(Country)) %>%
+  dplyr::arrange(cowID, Year) %>%
+  dplyr::relocate(cowID, Year)
 # manypkgs includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.
@@ -37,7 +37,7 @@ EconomicFreedomHist <- dplyr::as_tibble(EconomicFreedomHist) %>%
 # Therefore, please make sure that you have permission to use the dataset
 # that you're including in the package.
 # To add a template of .bib file to package,
-# run `manypkgs::add_bib(Economics, EconomicFreedomHist)`.
+# run `manypkgs::add_bib("economics", "EconomicFreedomHist")`.
 # Economic Freedom Historical
 manypkgs::export_data(EconomicFreedomHist, database = "economics",
                       URL = "https://www.fraserinstitute.org/economic-freedom")

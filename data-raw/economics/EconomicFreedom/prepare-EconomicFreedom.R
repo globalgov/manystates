@@ -31,14 +31,15 @@ EconomicFreedom <- dplyr::as_tibble(EconomicFreedom) %>%
                 `4Ai_data` = data...40,
                 `4Aii_data` = data...42,
                 `4Aiii_data` = data...44) %>%
-  dplyr::mutate(COW_ID =
+  dplyr::mutate(cowID =
                   countrycode::countrycode(ISO_Code_3, "iso3c", "cowc",
                                            custom_match =
                                              c("HKG" = "HKG",
                                                "SRB" = "YUG")),
                 Year = messydates::as_messydate(as.character(Year))) %>%
-  dplyr::arrange(COW_ID, Year) %>%
-  dplyr::select(COW_ID, Year, dplyr::everything())
+  dplyr::arrange(cowID, Year) %>%
+  dplyr::relocate(cowID, Year) %>%
+  dplyr::select(-c(ISO_Code_2, ISO_Code_3)) # obtainable from COW codes
 
 # manypkgs includes several functions that should help cleaning
 # and standardising your data.
@@ -60,7 +61,7 @@ EconomicFreedom <- dplyr::as_tibble(EconomicFreedom) %>%
 # Therefore, please make sure that you have permission to use the dataset
 # that you're including in the package.
 # To add a template of .bib file to package,
-# run `manypkgs::add_bib(economics, EconomicFreedom)`.
+# run `manypkgs::add_bib("economics", "EconomicFreedom")`.
 
 # Economic Freedom
 manypkgs::export_data(EconomicFreedom, database = "economics",
