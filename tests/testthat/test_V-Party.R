@@ -21,7 +21,7 @@ test_that("Columns are not in date, POSIXct or POSIXlt class", {
 })
 
 test_that("Columns with dates are standardized", {
-  expect_equal(class(vparty$Beg), "mdate")
+  expect_s3_class(vparty$Beg, "mdate")
   expect_false(any(grepl("/", vparty$Beg)))
   expect_false(any(grepl("^[:alpha:]$",
                          vparty$Beg)))
