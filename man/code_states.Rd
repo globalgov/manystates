@@ -23,6 +23,8 @@ Retrieves countries from a character vector
 This function builds upon the \code{stat_actor} list and the
 \code{countrycode} package to identify and return the parties mentioned
 in a character vector of agreement titles or texts.
+If the function is ran without an argument (i.e. \code{code_states()}),
+a complete list of states' names and abbreviations is returned.
 }
 \examples{
 states <- c("Two are from Switzerland", "One from New Zealand",

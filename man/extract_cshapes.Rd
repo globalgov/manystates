@@ -51,7 +51,7 @@ distances between capitals,
 distances between centroids of the polygons,
 minimum distances between the polygons in kilometers.
 
-\code{import_distlist()} imports and formats pre-computed
+\code{import_distmatrix()} imports and formats pre-computed
 minimum distance matrix from the \verb{[cShapes]} package.
 Minimum distances are computed in three ways:
 distances between capitals,

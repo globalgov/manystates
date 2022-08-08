@@ -6,25 +6,20 @@
 \title{regimes database documentation}
 \format{
 The regimes database is a list that contains the
-following 4 datasets: Polity5, FreedomHouse1, FreedomHouse2, FreedomHouse3.
+following 2 datasets: FreedomHouse, Polity5.
 For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
 \describe{
-\item{Polity5: }{A dataset with 17574 observations and the following
-35 variables: ID, COW_ID, Year, Label, p5, cyear, ccode, flag, fragment,
-democ, autoc, polity, polity2, durable, xrreg, xrcomp, xropen, xconst,
-parreg, parcomp, exrec, exconst, polcomp, prior, eprec, interim, bprec,
-post, change, d5, sf, regtrans, Beg, End, speccat.}
-\item{FreedomHouse1: }{A dataset with 1885 observations and the following
-47 variables: ID, COW_ID, Year, Label, Region, Edition, Status, PR rating,
+\item{FreedomHouse: }{A dataset with 10680 observations and the following
+47 variables: ID, cowID, Year, Label, Region, Edition, Status, PR rating,
 CL rating, A1, A2, A3, A, B1, B2, B3, B4, B, C1, C2, C3, C, Add Q, Add A,
-PR, D1, D2, D3, D4, D, E1, E2, E3, E, F1, F2, F3, F4, F, G1, G2, G3, G4, G,
-CL, Total, Territory.}
-\item{FreedomHouse2: }{A dataset with 33264 observations and the following
-7 variables: ID, COW_ID, Year, Label, Status, Value, Territory.}
-\item{FreedomHouse3: }{A dataset with 3960 observations and the following
-22 variables: ID, COW_ID, Year, Label, Region, Edition, Status, PR Rating,
-CL Rating, A, B, C, Add Q, Add A, PR, D, E, F, G, CL, Total, Territory.}
+PR, D1, D2, D3, D4, D, E1, E2, E3, E, F1, F2, F3, F4, F, G1, G2, G3, G4,
+G, CL, Total, Territory.}
+\item{Polity5: }{A dataset with 17574 observations and the following
+35 variables: ID, cowID, Year, Label, p5, cyear, ccode, flag, fragment,
+democ, autoc, polity, polity2, durable, xrreg, xrcomp, xropen, xconst,
+parreg, parcomp, exrec, exconst, polcomp, prior, eprec, interim, bprec, post,
+change, d5, sf, regtrans, Beg, End, speccat.}
 }
 }
 \usage{
@@ -34,143 +29,100 @@ regimes
 regimes database documentation
 }
 \details{
-\if{html}{\out{<div class="sourceCode">}}\preformatted{#> $Polity5
-#> ----------------------------------------------------------------------------
-#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
-#> ----------------------------------------------------------------------------
-#> |      ID       |  character  |           17574|     0     |       0       |
-#> |    COW_ID     |  character  |           17574|     0     |       0       |
-#> |     Year      |   numeric   |           17574|     0     |       0       |
-#> |     Label     |  character  |           17574|     0     |       0       |
-#> |      p5       |   numeric   |           17574|     0     |       0       |
-#> |     cyear     |   numeric   |           17574|     0     |       0       |
-#> |     ccode     |   numeric   |           17574|     0     |       0       |
-#> |     flag      |   numeric   |           17574|     0     |       0       |
-#> |   fragment    |   numeric   |           17574|   14128   |     80.39     |
-#> |     democ     |   numeric   |           17574|    809    |      4.6      |
-#> |     autoc     |   numeric   |           17574|    809    |      4.6      |
-#> |    polity     |   numeric   |           17574|    809    |      4.6      |
-#> |    polity2    |   numeric   |           17574|    268    |     1.52      |
-#> |    durable    |   numeric   |           17574|   1264    |     7.19      |
-#> |     xrreg     |   numeric   |           17574|    809    |      4.6      |
-#> |    xrcomp     |   numeric   |           17574|    809    |      4.6      |
-#> |    xropen     |   numeric   |           17574|    809    |      4.6      |
-#> |    xconst     |   numeric   |           17574|    809    |      4.6      |
-#> |    parreg     |   numeric   |           17574|    809    |      4.6      |
-#> |    parcomp    |   numeric   |           17574|    809    |      4.6      |
-#> |     exrec     |   numeric   |           17574|    183    |     1.04      |
-#> |    exconst    |   numeric   |           17574|    809    |      4.6      |
-#> |    polcomp    |   numeric   |           17574|    126    |     0.72      |
-#> |     prior     |   numeric   |           17574|   16195   |     92.15     |
-#> |     eprec     |   numeric   |           17574|   16121   |     91.73     |
-#> |    interim    |   numeric   |           17574|   16284   |     92.66     |
-#> |     bprec     |   numeric   |           17574|   16287   |     92.68     |
-#> |     post      |   numeric   |           17574|   16302   |     92.76     |
-#> |    change     |   numeric   |           17574|   15346   |     87.32     |
-#> |      d5       |   numeric   |           17574|   16277   |     92.62     |
-#> |      sf       |   numeric   |           17574|   17276   |     98.3      |
-#> |   regtrans    |   numeric   |           17574|   15334   |     87.25     |
-#> |      Beg      |    mdate    |           17574|     0     |       0       |
-#> |      End      |    mdate    |           17574|     0     |       0       |
-#> |    speccat    |   numeric   |           17574|   16765   |     95.4      |
-#> ----------------------------------------------------------------------------
-#> 
-#> 
-#> $FreedomHouse1
-#> ----------------------------------------------------------------------------
-#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
-#> ----------------------------------------------------------------------------
-#> |      ID       |  character  |            1885|     0     |       0       |
-#> |    COW_ID     |  character  |            1885|    40     |     2.12      |
-#> |     Year      |    mdate    |            1885|     0     |       0       |
-#> |     Label     |  character  |            1885|     0     |       0       |
-#> |    Region     |  character  |            1885|     0     |       0       |
-#> |    Edition    |    mdate    |            1885|     0     |       0       |
-#> |    Status     |  character  |            1885|     0     |       0       |
-#> |   PR rating   |   numeric   |            1885|     0     |       0       |
-#> |   CL rating   |   numeric   |            1885|     0     |       0       |
-#> |      A1       |   numeric   |            1885|     0     |       0       |
-#> |      A2       |   numeric   |            1885|     0     |       0       |
-#> |      A3       |   numeric   |            1885|     0     |       0       |
-#> |       A       |   numeric   |            1885|     0     |       0       |
-#> |      B1       |   numeric   |            1885|     0     |       0       |
-#> |      B2       |   numeric   |            1885|     0     |       0       |
-#> |      B3       |   numeric   |            1885|     0     |       0       |
-#> |      B4       |   numeric   |            1885|     0     |       0       |
-#> |       B       |   numeric   |            1885|     0     |       0       |
-#> |      C1       |   numeric   |            1885|     0     |       0       |
-#> |      C2       |   numeric   |            1885|     0     |       0       |
-#> |      C3       |   numeric   |            1885|     0     |       0       |
-#> |       C       |   numeric   |            1885|     0     |       0       |
-#> |     Add Q     |   numeric   |            1885|     0     |       0       |
-#> |     Add A     |   numeric   |            1885|    838    |     44.46     |
-#> |      PR       |   numeric   |            1885|     0     |       0       |
-#> |      D1       |   numeric   |            1885|     0     |       0       |
-#> |      D2       |   numeric   |            1885|     0     |       0       |
-#> |      D3       |   numeric   |            1885|     0     |       0       |
-#> |      D4       |   numeric   |            1885|     0     |       0       |
-#> |       D       |   numeric   |            1885|     0     |       0       |
-#> |      E1       |   numeric   |            1885|     0     |       0       |
-#> |      E2       |   numeric   |            1885|     0     |       0       |
-#> |      E3       |   numeric   |            1885|     0     |       0       |
-#> |       E       |   numeric   |            1885|     0     |       0       |
-#> |      F1       |   numeric   |            1885|     0     |       0       |
-#> |      F2       |   numeric   |            1885|     0     |       0       |
-#> |      F3       |   numeric   |            1885|     0     |       0       |
-#> |      F4       |   numeric   |            1885|     0     |       0       |
-#> |       F       |   numeric   |            1885|     0     |       0       |
-#> |      G1       |   numeric   |            1885|     0     |       0       |
-#> |      G2       |   numeric   |            1885|     0     |       0       |
-#> |      G3       |   numeric   |            1885|     0     |       0       |
-#> |      G4       |   numeric   |            1885|     0     |       0       |
-#> |       G       |   numeric   |            1885|     0     |       0       |
-#> |      CL       |   numeric   |            1885|     0     |       0       |
-#> |     Total     |   numeric   |            1885|     0     |       0       |
-#> |   Territory   |   numeric   |            1885|     0     |       0       |
-#> ----------------------------------------------------------------------------
-#> 
-#> 
-#> $FreedomHouse2
-#> ----------------------------------------------------------------------------
-#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
-#> ----------------------------------------------------------------------------
-#> |      ID       |  character  |           33264|     0     |       0       |
-#> |    COW_ID     |  character  |           33264|   1440    |     4.33      |
-#> |     Year      |    mdate    |           33264|     0     |       0       |
-#> |     Label     |  character  |           33264|     0     |       0       |
-#> |    Status     |  character  |           33264|     0     |       0       |
-#> |     Value     |  character  |           33264|   5877    |     17.67     |
-#> |   Territory   |   numeric   |           33264|     0     |       0       |
-#> ----------------------------------------------------------------------------
-#> 
-#> 
-#> $FreedomHouse3
-#> ----------------------------------------------------------------------------
-#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
-#> ----------------------------------------------------------------------------
-#> |      ID       |  character  |            3960|     0     |       0       |
-#> |    COW_ID     |  character  |            3960|    87     |      2.2      |
-#> |     Year      |    mdate    |            3960|     0     |       0       |
-#> |     Label     |  character  |            3960|     0     |       0       |
-#> |    Region     |  character  |            3960|    621    |     15.68     |
-#> |    Edition    |    mdate    |            3960|    621    |     15.68     |
-#> |    Status     |  character  |            3960|    621    |     15.68     |
-#> |   PR Rating   |   numeric   |            3960|     3     |     0.08      |
-#> |   CL Rating   |   numeric   |            3960|     3     |     0.08      |
-#> |       A       |   numeric   |            3960|    621    |     15.68     |
-#> |       B       |   numeric   |            3960|    621    |     15.68     |
-#> |       C       |   numeric   |            3960|    621    |     15.68     |
-#> |     Add Q     |   numeric   |            3960|    621    |     15.68     |
-#> |     Add A     |   numeric   |            3960|   1459    |     36.84     |
-#> |      PR       |   numeric   |            3960|    621    |     15.68     |
-#> |       D       |   numeric   |            3960|    621    |     15.68     |
-#> |       E       |   numeric   |            3960|    621    |     15.68     |
-#> |       F       |   numeric   |            3960|    621    |     15.68     |
-#> |       G       |   numeric   |            3960|    621    |     15.68     |
-#> |      CL       |   numeric   |            3960|    621    |     15.68     |
-#> |     Total     |   numeric   |            3960|     3     |     0.08      |
-#> |   Territory   |   numeric   |            3960|     0     |       0       |
-#> ----------------------------------------------------------------------------
+\if{html}{\out{<div class="sourceCode">}}\preformatted{## $FreedomHouse
+## ----------------------------------------------------------------------------
+## |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+## ----------------------------------------------------------------------------
+## |      ID       |  character  |           10680|     0     |       0       |
+## |     cowID     |  character  |           10680|    377    |     3.53      |
+## |     Year      |    mdate    |           10680|     0     |       0       |
+## |     Label     |  character  |           10680|     0     |       0       |
+## |    Region     |  character  |           10680|   7320    |     68.54     |
+## |    Edition    |    mdate    |           10680|   7320    |     68.54     |
+## |    Status     |  character  |           10680|   2157    |     20.2      |
+## |   PR rating   |   numeric   |           10680|   1539    |     14.41     |
+## |   CL rating   |   numeric   |           10680|   1539    |     14.41     |
+## |      A1       |   numeric   |           10680|   8795    |     82.35     |
+## |      A2       |   numeric   |           10680|   8795    |     82.35     |
+## |      A3       |   numeric   |           10680|   8795    |     82.35     |
+## |       A       |   numeric   |           10680|   7320    |     68.54     |
+## |      B1       |   numeric   |           10680|   8795    |     82.35     |
+## |      B2       |   numeric   |           10680|   8795    |     82.35     |
+## |      B3       |   numeric   |           10680|   8795    |     82.35     |
+## |      B4       |   numeric   |           10680|   8795    |     82.35     |
+## |       B       |   numeric   |           10680|   7320    |     68.54     |
+## |      C1       |   numeric   |           10680|   8795    |     82.35     |
+## |      C2       |   numeric   |           10680|   8795    |     82.35     |
+## |      C3       |   numeric   |           10680|   8795    |     82.35     |
+## |       C       |   numeric   |           10680|   7320    |     68.54     |
+## |     Add Q     |   numeric   |           10680|   7320    |     68.54     |
+## |     Add A     |   numeric   |           10680|   8164    |     76.44     |
+## |      PR       |   numeric   |           10680|   7320    |     68.54     |
+## |      D1       |   numeric   |           10680|   8795    |     82.35     |
+## |      D2       |   numeric   |           10680|   8795    |     82.35     |
+## |      D3       |   numeric   |           10680|   8795    |     82.35     |
+## |      D4       |   numeric   |           10680|   8795    |     82.35     |
+## |       D       |   numeric   |           10680|   7320    |     68.54     |
+## |      E1       |   numeric   |           10680|   8795    |     82.35     |
+## |      E2       |   numeric   |           10680|   8795    |     82.35     |
+## |      E3       |   numeric   |           10680|   8795    |     82.35     |
+## |       E       |   numeric   |           10680|   7320    |     68.54     |
+## |      F1       |   numeric   |           10680|   8795    |     82.35     |
+## |      F2       |   numeric   |           10680|   8795    |     82.35     |
+## |      F3       |   numeric   |           10680|   8795    |     82.35     |
+## |      F4       |   numeric   |           10680|   8795    |     82.35     |
+## |       F       |   numeric   |           10680|   7320    |     68.54     |
+## |      G1       |   numeric   |           10680|   8795    |     82.35     |
+## |      G2       |   numeric   |           10680|   8795    |     82.35     |
+## |      G3       |   numeric   |           10680|   8795    |     82.35     |
+## |      G4       |   numeric   |           10680|   8795    |     82.35     |
+## |       G       |   numeric   |           10680|   7320    |     68.54     |
+## |      CL       |   numeric   |           10680|   7320    |     68.54     |
+## |     Total     |   numeric   |           10680|   6702    |     62.75     |
+## |   Territory   |   numeric   |           10680|     0     |       0       |
+## ----------------------------------------------------------------------------
+## 
+## 
+## $Polity5
+## ----------------------------------------------------------------------------
+## |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+## ----------------------------------------------------------------------------
+## |      ID       |  character  |           17574|     0     |       0       |
+## |     cowID     |  character  |           17574|     0     |       0       |
+## |     Year      |    mdate    |           17574|     0     |       0       |
+## |     Label     |  character  |           17574|     0     |       0       |
+## |      p5       |   numeric   |           17574|     0     |       0       |
+## |     cyear     |   numeric   |           17574|     0     |       0       |
+## |     ccode     |   numeric   |           17574|     0     |       0       |
+## |     flag      |   numeric   |           17574|     0     |       0       |
+## |   fragment    |   numeric   |           17574|   14128   |     80.39     |
+## |     democ     |   numeric   |           17574|    809    |      4.6      |
+## |     autoc     |   numeric   |           17574|    809    |      4.6      |
+## |    polity     |   numeric   |           17574|    809    |      4.6      |
+## |    polity2    |   numeric   |           17574|    268    |     1.52      |
+## |    durable    |   numeric   |           17574|   1264    |     7.19      |
+## |     xrreg     |   numeric   |           17574|    809    |      4.6      |
+## |    xrcomp     |   numeric   |           17574|    809    |      4.6      |
+## |    xropen     |   numeric   |           17574|    809    |      4.6      |
+## |    xconst     |   numeric   |           17574|    809    |      4.6      |
+## |    parreg     |   numeric   |           17574|    809    |      4.6      |
+## |    parcomp    |   numeric   |           17574|    809    |      4.6      |
+## |     exrec     |   numeric   |           17574|    183    |     1.04      |
+## |    exconst    |   numeric   |           17574|    809    |      4.6      |
+## |    polcomp    |   numeric   |           17574|    126    |     0.72      |
+## |     prior     |   numeric   |           17574|   16195   |     92.15     |
+## |     eprec     |   numeric   |           17574|   16121   |     91.73     |
+## |    interim    |   numeric   |           17574|   16284   |     92.66     |
+## |     bprec     |   numeric   |           17574|   16287   |     92.68     |
+## |     post      |   numeric   |           17574|   16302   |     92.76     |
+## |    change     |   numeric   |           17574|   15346   |     87.32     |
+## |      d5       |   numeric   |           17574|   16277   |     92.62     |
+## |      sf       |   numeric   |           17574|   17276   |     98.3      |
+## |   regtrans    |   numeric   |           17574|   15334   |     87.25     |
+## |      Beg      |    mdate    |           17574|     0     |       0       |
+## |      End      |    mdate    |           17574|     0     |       0       |
+## |    speccat    |   numeric   |           17574|   16765   |     95.4      |
+## ----------------------------------------------------------------------------
 }\if{html}{\out{</div>}}
 }
 \keyword{datasets}
