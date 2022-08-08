@@ -21,6 +21,7 @@ NULL
 #' @importFrom manypkgs standardise_titles standardise_dates
 #' @import dplyr
 #' @import lubridate
+#' @importFrom cshapes cshp
 #' @importFrom rlang .data
 #' @return A dataframe with the `[cshapes]` dataset in a format consistent
 #' with the many packages universe.
@@ -30,14 +31,7 @@ NULL
 #' }
 #' @export
 import_cshapes <- function(date, ...) {
-  # Step 0: Check that package is installed:
-  if (!requireNamespace("cshapes", quietly = TRUE)) {
-    stop(
-      "Package \"cshapes\" must be installed from CRAN to use this function.",
-      call. = FALSE
-    )
-  }
-  # Step 0.5: Set string dates to actual dates
+  # Step 1: Set string dates to actual dates
   date <- as.Date(date)
   # Test for correct dates
   if (!(as.numeric(format(date, format = "%Y")) >= 1886 & 
@@ -45,9 +39,9 @@ import_cshapes <- function(date, ...) {
     stop("Please input a date in the following range: 1886-01-01 -
          end of the dataset")
   }
-  # Stage 1: Importing
+  # Step 2: Importing
   cshapes <- cshapes::cshp(date, ..., useGW = FALSE) # Use cowID instead of GW
-  # Stage two: Correcting data
+  # Step 3: Correcting data
   cshapes <- tibble::as_tibble(cshapes) %>%
     dplyr::mutate(Beg = messydates::make_messydate(.data$start),
                 End = messydates::make_messydate(.data$end),
@@ -66,8 +60,8 @@ import_cshapes <- function(date, ...) {
                   -(.data$cowcode), -(.data$capname), -(.data$caplong),
                   -(.data$caplat), -(.data$b_def), -(.data$status),
                   -(.data$owner), -(.data$fid)) %>%
-    dplyr::relocate(.data$COW_ID, .data$Beg, .data$End, .data$Label) %>%
-    dplyr::arrange(.data$Beg, .data$COW_ID)
+    dplyr::relocate(.data$cowID, .data$Beg, .data$End, .data$Label) %>%
+    dplyr::arrange(.data$Beg, .data$cowID)
   return(cshapes)
 }
 
@@ -82,6 +76,7 @@ import_cshapes <- function(date, ...) {
 #' @importFrom countrycode countrycode
 #' @import dplyr
 #' @import lubridate
+#' @importFrom cshapes distlist
 #' @importFrom rlang .data
 #' @return A dataframe with the desired distance list between polygons,
 #' capitals, or polygon centroids in kilometers.
@@ -91,14 +86,7 @@ import_cshapes <- function(date, ...) {
 #' }
 #' @export
 import_distlist <- function(date, type, ...) {
-  # Step 0: Check that package is installed:
-  if (!requireNamespace("cshapes", quietly = TRUE)) {
-    stop(
-      "Package \"cshapes\" must be installed from CRAN to use this function.",
-      call. = FALSE
-    )
-  }
-  # Step 0.5: Change date in string format to date format
+  # Step 1: Change date in string format to date format
   date <- as.Date(date)
   # Check whether inputs are in range of permitted values for dates and type.
   if (!(type %in% c("capdist", "mindist", "centdist"))) {
@@ -111,12 +99,12 @@ import_distlist <- function(date, type, ...) {
     stop("Please input a date in the following range: 1886-01-01 -
          end of the dataset")
   }
-  # Step 0.5 Disambiguate certain countrycode pairs such as 730 - Korea by
+  # Step 2: Disambiguate certain countrycode pairs such as 730 - Korea by
   # creating a custom dictionary.
   custom_match <- c(`730` = "Korea")
-  # Step 1: Import data from cshapes
+  # Step 3: Import data from cshapes
   dist <- cshapes::distlist(date, type, ..., useGW = FALSE)
-  # Step 3: Process dist to make it consistent with the many packages universe
+  # Step 4: Process dist to make it consistent with the many packages universe
   if (type == "capdist") {
     dist <- tibble::as_tibble(dist) %>%
       dplyr::mutate(FromLabel =
@@ -182,13 +170,14 @@ import_distlist <- function(date, type, ...) {
 }
 
 #' @name extract_cshapes
-#' @details `import_distlist()` imports and formats pre-computed
+#' @details `import_distmatrix()` imports and formats pre-computed
 #' minimum distance matrix from the `[cShapes]` package.
 #' Minimum distances are computed in three ways:
 #' distances between capitals,
 #' distances between centroids of the polygons,
 #' minimum distances between the polygons in kilometers.
 #' @import lubridate
+#' @importFrom cshapes distmatrix
 #' @return A matrix with the desired distance list between polygons,
 #' capitals, or polygon centroids in kilometers.
 #' @examples
@@ -197,14 +186,7 @@ import_distlist <- function(date, type, ...) {
 #' }
 #' @export
 import_distmatrix <- function(date, type, ...) {
-  # Step 0: Check that package is installed:
-  if (!requireNamespace("cshapes", quietly = TRUE)) {
-    stop(
-      "Package \"cshapes\" must be installed from CRAN to use this function.",
-      call. = FALSE
-    )
-  }
-  # Step 0.5: Change date in string format to date format
+  # Step 1: Change date in string format to date format
   date <- as.Date(date)
   # Check whether inputs are in range of permitted values for dates and type.
   if (!(type %in% c("capdist", "mindist", "centdist"))) {
@@ -217,8 +199,8 @@ import_distmatrix <- function(date, type, ...) {
     stop("Please input a date in the following range: 1886-01-01 -
          end of the dataset")
   }
-  # Step 1:
+  # Step 2:
   dist <- cshapes::distmatrix(date, type, ..., useGW = FALSE)
-  # Step 2: No Processing required as this is a simple distance matrix.
+  # Step 3: No Processing required as this is a simple distance matrix.
   return(dist)
 }

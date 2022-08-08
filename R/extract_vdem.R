@@ -15,6 +15,7 @@ NULL
 #' @importFrom manypkgs standardise_dates
 #' @importFrom rlang .data
 #' @import dplyr
+#' @import vdemdata
 #' @return A dataframe of the`[vdem]` dataset in a many packages
 #' universe-consistent format.
 #' @examples
@@ -23,18 +24,9 @@ NULL
 #' }
 #' @export
 import_vdem <- function() {
-  # Step 0: Check that package is installed:
-  if (!requireNamespace("vdemdata", quietly = TRUE)) {
-    stop(
-      "Package \"vdemdata\" must be installed to use this function.
-      The package can be installed from GitHub:
-      devtools::install_github(\"vdeminstitute/vdemdata\")",
-      call. = FALSE
-    )
-  }
   # Stage 1: Importing
   vdem <- vdemdata::vdem
-  # Stage two: Correcting data
+  # Stage 2: Correcting data
   vdem <- as_tibble(vdem) %>%
     dplyr::rename("VDem_ID" = "country_id", "Abbrv" = "country_text_id") %>%
     dplyr::group_by(.data$histname) %>%
@@ -72,9 +64,10 @@ import_vdem <- function() {
 #' @details `import_vparty()` imports the V-Party dataset and
 #' formats it to be consistent with the many packages universe.
 #' @importFrom tibble as_tibble
-#' @import dplyr
 #' @importFrom manypkgs standardise_dates
 #' @importFrom rlang .data
+#' @import dplyr
+#' @import vdemdata
 #' @return A dataframe of the`[vparty]` dataset consistent with the
 #' many packages universe.
 #' @examples
@@ -83,15 +76,6 @@ import_vdem <- function() {
 #' }
 #' @export
 import_vparty <- function() {
-  # Step 0: Check that package is installed:
-  if (!requireNamespace("vdemdata", quietly = TRUE)) {
-    stop(
-      "Package \"vdemdata\" must be installed to use this function.
-      The package can be installed from GitHub:
-      devtools::install_github(\"vdeminstitute/vdemdata\")",
-      call. = FALSE
-    )
-  }
   # Step 1: Import the data from the vdemdata package
   vparty <- vdemdata::vparty
   # Step 2: Format it to a many packages consistent format
