@@ -1,14 +1,11 @@
 Package: manystates
 Title: States for manydata
 Version: 0.1.1
-Date: 2022-07-25
+Date: 2022-08-08
 Description: manystates provide data on states in the international system across time. 
     The package combines and cross-references several existing datasets consistent with the manydata package aims.
 URL: https://github.com/globalgov/manystates
 BugReports: https://github.com/globalgov/manystates/issues
-Depends: 
-    R (>= 3.5.0),
-    manydata
 Authors@R: 
     c(person(given = "James",
              family = "Hollway",
@@ -33,13 +30,18 @@ Authors@R:
              comment = c("IHEID", ORCID = "0000-0002-6234-9764")))
 LazyData: true
 License: CC BY 4.0
+Depends: 
+    R (>= 3.5.0),
+    manydata
 Imports:
     dplyr,
     rlang,
     countrycode,
     manypkgs,
     tibble,
-    lubridate
+    lubridate,
+    cshapes,
+    vdemdata
 Suggests:
     pointblank,
     messydates,
@@ -48,10 +50,6 @@ Suggests:
     knitr,
     WDI,
     hrbrthemes,
-    cshapes,
-    vdemdata,
-    migraph,
-    ggraph,
     ggplot2
 Remotes:
     vdeminstitute/vdemdata,
