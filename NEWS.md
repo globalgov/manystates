@@ -1,4 +1,4 @@
-# manystates 0.1.1
+# manystates 0.2.0
 
 ## Package
 
@@ -7,6 +7,7 @@
 * Updated workflow files to include package caching.
 * Added `network_map()` function which plots geographical networks from `{migraph}` package.
 * Re-rendered documentation using `messydates::mreport()`.
+* Added `{cshapes}` and `{vdemdata}` dependencies
 
 ## Data
 
