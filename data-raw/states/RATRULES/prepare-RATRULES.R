@@ -5,7 +5,6 @@
 
 # Stage one: Collecting data
 RATRULES <- readr::read_csv("data-raw/states/RATRULES/BSrat.csv")
-RATRULES2 <- readr::read_csv("data-raw/states/RATRULES/extra_ratifs.csv")
 
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
@@ -13,18 +12,13 @@ RATRULES2 <- readr::read_csv("data-raw/states/RATRULES/extra_ratifs.csv")
 # below (in stage three) passes all the tests.
 # We recommend that you avoid using one letter variable names to keep
 # away from issues with ambiguous names down the road.
-RATRULES <- dplyr::full_join(RATRULES, RATRULES2, by = c("StatID", "Rat"))
 RATRULES <- as_tibble(RATRULES) %>%
-  dplyr::rename(stateID = StatID, RatProcedure = Rat,
-                ConstitutionalDesc = `Constitutional Description`,
-                url = Source) %>%
-  dplyr::mutate(Label = ifelse(is.na(Label),
-                               countrycode::countrycode(stateID,
-                                                        origin = "iso3c",
-                                                        destination = "country.name"),
-                               Label)) %>%
+  dplyr::rename(stateID = StatID, RatProcedure = Rat) %>%
+  dplyr::mutate(Label = countrycode::countrycode(stateID,
+                                                 origin = "iso3c",
+                                                 destination = "country.name")) %>%
   dplyr::mutate(Label = manypkgs::standardize_titles(Label)) %>%
-  dplyr::select(stateID, Label, RatProcedure, ConstitutionalDesc, url)
+  dplyr::select(stateID, Label, RatProcedure)
 
 # manypkgs includes several functions that should help cleaning
 # and standardising your data such as `standardise_titles()`
