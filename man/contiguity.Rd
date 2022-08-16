@@ -30,50 +30,50 @@ contiguity
 contiguity database documentation
 }
 \details{
-\if{html}{\out{<div class="sourceCode">}}\preformatted{#> $DIRCONT
-#> ----------------------------------------------------------------------------
-#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
-#> ----------------------------------------------------------------------------
-#> |    dyadID     |   numeric   |             847|     0     |       0       |
-#> |ContiguityType |   numeric   |             847|     0     |       0       |
-#> |      Beg      |    mdate    |             847|     0     |       0       |
-#> |      End      |    mdate    |             847|     0     |       0       |
-#> |   stateID1    |   numeric   |             847|     0     |       0       |
-#> |    Label1     |  character  |             847|     0     |       0       |
-#> |   stateID2    |   numeric   |             847|     0     |       0       |
-#> |    Label2     |  character  |             847|     0     |       0       |
-#> ----------------------------------------------------------------------------
-#> 
-#> 
-#> $GNEVAR_CONT
-#> ----------------------------------------------------------------------------
-#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
-#> ----------------------------------------------------------------------------
-#> |    stateID    |  character  |             192|     0     |       0       |
-#> |     Label     |  character  |             192|     0     |       0       |
-#> |      Beg      |    mdate    |             192|     0     |       0       |
-#> |      End      |    mdate    |             192|     0     |       0       |
-#> |  Contiguity   |  character  |             192|    41     |     21.35     |
-#> |  EntityType   |  character  |             192|     0     |       0       |
-#> | FAOmembership |  character  |             192|     0     |       0       |
-#> |     Group     |  character  |             192|     0     |       0       |
-#> |      url      |  character  |             192|     0     |       0       |
-#> ----------------------------------------------------------------------------
-#> 
-#> 
-#> $COW_DIRCONT
-#> ----------------------------------------------------------------------------
-#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
-#> ----------------------------------------------------------------------------
-#> |    dyadID     |   numeric   |             847|     0     |       0       |
-#> |ContiguityType |   numeric   |             847|     0     |       0       |
-#> |      Beg      |    mdate    |             847|     0     |       0       |
-#> |      End      |    mdate    |             847|     0     |       0       |
-#> |   stateID1    |   numeric   |             847|     0     |       0       |
-#> |    Label1     |  character  |             847|     0     |       0       |
-#> |   stateID2    |   numeric   |             847|     0     |       0       |
-#> |    Label2     |  character  |             847|     0     |       0       |
-#> ----------------------------------------------------------------------------
+\if{html}{\out{<div class="sourceCode">}}\preformatted{## $DIRCONT
+## ----------------------------------------------------------------------------
+## |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+## ----------------------------------------------------------------------------
+## |    dyadID     |   numeric   |             847|     0     |       0       |
+## |ContiguityType |   numeric   |             847|     0     |       0       |
+## |      Beg      |    mdate    |             847|     0     |       0       |
+## |      End      |    mdate    |             847|     0     |       0       |
+## |   stateID1    |   numeric   |             847|     0     |       0       |
+## |    Label1     |  character  |             847|     0     |       0       |
+## |   stateID2    |   numeric   |             847|     0     |       0       |
+## |    Label2     |  character  |             847|     0     |       0       |
+## ----------------------------------------------------------------------------
+## 
+## 
+## $GNEVAR_CONT
+## ----------------------------------------------------------------------------
+## |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+## ----------------------------------------------------------------------------
+## |    stateID    |  character  |             192|     0     |       0       |
+## |     Label     |  character  |             192|     0     |       0       |
+## |      Beg      |    mdate    |             192|     0     |       0       |
+## |      End      |    mdate    |             192|     0     |       0       |
+## |  Contiguity   |  character  |             192|    41     |     21.35     |
+## |  EntityType   |  character  |             192|     0     |       0       |
+## | FAOmembership |  character  |             192|     0     |       0       |
+## |     Group     |  character  |             192|     0     |       0       |
+## |      url      |  character  |             192|     0     |       0       |
+## ----------------------------------------------------------------------------
+## 
+## 
+## $COW_DIRCONT
+## ----------------------------------------------------------------------------
+## |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+## ----------------------------------------------------------------------------
+## |    dyadID     |   numeric   |             847|     0     |       0       |
+## |ContiguityType |   numeric   |             847|     0     |       0       |
+## |      Beg      |    mdate    |             847|     0     |       0       |
+## |      End      |    mdate    |             847|     0     |       0       |
+## |   stateID1    |   numeric   |             847|     0     |       0       |
+## |    Label1     |  character  |             847|     0     |       0       |
+## |   stateID2    |   numeric   |             847|     0     |       0       |
+## |    Label2     |  character  |             847|     0     |       0       |
+## ----------------------------------------------------------------------------
 }\if{html}{\out{</div>}}
 }
 \keyword{datasets}
