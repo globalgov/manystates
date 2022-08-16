@@ -2,10 +2,8 @@
 
 ## Package
 
-* Closed #47 by adding vignette for `code_states()`.
-   * Updated regex for `code_states()` to more accurately match and translate states' names.
+* Updated regex for `code_states()` to more accurately match and translate states' names.
 * Updated workflow files to include package caching.
-* Added `network_map()` function which plots geographical networks from `{migraph}` package.
 * Re-rendered documentation using `messydates::mreport()`.
 * Added `{cshapes}` and `{vdemdata}` dependencies
 
