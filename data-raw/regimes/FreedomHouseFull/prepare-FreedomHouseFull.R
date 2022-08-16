@@ -1,8 +1,8 @@
-# FHfull Preparation Script
+# FreedomHouseFull Preparation Script
 
-# This script imports, cleans and corrects the FHfull dataset before
+# This script imports, cleans and corrects the FreedomHouseFull dataset before
 # including it in the regimes database.
-# The FHfull dataset contains the full Freedom House scores and statuses
+# The FreedomHouseFull dataset contains the full Freedom House scores and statuses
 # for countries and territories from the 2013-2021 edition.
 
 # Note that the Freedom House data comprises of three distinct Excel files.
@@ -13,13 +13,13 @@
 
 # Freedom House 1: Edition 2013-2021 ----
 # Stage one: Collecting data
-FHfull <- readxl::read_excel("data-raw/regimes/FHfull/All_data_FIW_2013-2021.xlsx",
-                             sheet = 2,
-                             skip = 1,
-                             na = c("-", "N/A"))
+FreedomHouseFull <- readxl::read_excel("data-raw/regimes/FreedomHouseFull/All_data_FIW_2013-2021.xlsx",
+                                       sheet = 2,
+                                       skip = 1,
+                                       na = c("-", "N/A"))
 
 # Stage two: Correcting data
-FHfull <- dplyr::rename(FHfull, Label = `Country/Territory`) %>%
+FreedomHouseFull <- dplyr::rename(FreedomHouseFull, Label = `Country/Territory`) %>%
   manydata::transmutate(Territory = ifelse(`C/T` == "t", 1, 0)) %>%
   dplyr::mutate(
     cowID = manystates::code_states(Label, abbrev = TRUE),
@@ -29,7 +29,6 @@ FHfull <- dplyr::rename(FHfull, Label = `Country/Territory`) %>%
     ID = paste0(cowID, "-", as.character(Year))
   ) %>%
   dplyr::relocate(ID, cowID, Year, Label)
-
 
 # manypkgs includes several functions that should help cleaning
 # and standardising your data.
@@ -52,7 +51,6 @@ FHfull <- dplyr::rename(FHfull, Label = `Country/Territory`) %>%
 # that you're including in the package.
 # To add a template of .bib file to package,
 # run `manypkgs::add_bib("regimes", "FreedomHouse")`.
-
-# Export FreedomHouse
-manypkgs::export_data(FHfull, database = "regimes",
+# Export FreedomHouseFull
+manypkgs::export_data(FreedomHouseFull, database = "regimes",
                       URL = "https://freedomhouse.org/report/freedom-world")
