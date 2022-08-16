@@ -1,5 +1,6 @@
 #' contiguity database documentation
 #'
+#' @import manydata
 #' @format The contiguity database is a list that contains the
 #' following 2 datasets: COW_DIRCONT, GNEVAR_CONT.
 #' GNEVAR_* datasets are handcoded original data or

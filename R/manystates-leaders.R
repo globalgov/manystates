@@ -1,5 +1,6 @@
 #' leaders database documentation
 #'
+#' @import manydata
 #' @format The leaders database is a list that contains the
 #' following 2 datasets: ARCHIGOS, GNEVAR_ARCHIGOS.
 #' GNEVAR_* datasets are handcoded original data or

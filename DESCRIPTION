@@ -1,7 +1,7 @@
 Package: manystates
 Title: States for manydata
 Version: 0.2.0
-Date: 2022-08-11
+Date: 2022-08-16
 Description: manystates provide data on states in the international system across time. 
     The package combines and cross-references several existing datasets consistent with the manydata package aims.
 URL: https://github.com/globalgov/manystates

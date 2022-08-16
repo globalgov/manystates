@@ -1,5 +1,6 @@
 #' regimes database documentation
 #'
+#' @import manydata
 #' @format The regimes database is a list that contains the
 #' following 4 datasets: Polity5, FHaggregate, FHstatus, FHfull.
 #' FHaggregate, FHstatus, and FHfull datasets are all part of

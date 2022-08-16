@@ -1,5 +1,6 @@
 #' states database documentation
 #'
+#' @import manydata
 #' @format The states database is a list that contains the
 #' following 7 datasets: GW, ISD, COW, ICOW, GNEVAR_STATES, ICOW_COL, RATRULES.
 #' For more information and references to each of the datasets used,
