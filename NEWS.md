@@ -1,4 +1,4 @@
-# manystates 0.2.0
+# manystates 0.1.0
 
 ## Package
 
@@ -19,7 +19,7 @@
   * Closed #51 by adding contiguity and regions data from FAO and ICOW in `contiguity` database.
 * Changed class for date variables (`Beg` and `End`) from `messydt` to `mdate` using `messydates::as_messydate()` in preparation scripts across databases.
 
-# manystates 0.1.0
+# manystates 0.0.6
 
 ## Package
 
