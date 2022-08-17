@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">manystates</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -32,7 +32,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -45,7 +45,7 @@
   <a href="../news/index.html">News</a>
 </li>
       </ul><ul class="nav navbar-nav navbar-right"><li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Other packages
      
     <span class="caret"></span>
@@ -88,30 +88,43 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">code_states</span><span class="op">(</span><span class="va">v</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">code_states</span><span class="op">(</span><span class="va">v</span>, abbrev <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>v</dt>
 <dd><p>A character vector</p></dd>
+
+
+<dt>abbrev</dt>
+<dd><p>Do you want 3 letter country
+abbreviations to be returned?
+False by default.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>A character vector of parties, in English, separated by commas.</p>
+    
+
+<p>A character vector of parties, in English, separated by commas.</p>
     </div>
     <div id="details">
     <h2>Details</h2>
     <p>This function builds upon the <code>stat_actor</code> list and the
 <code>countrycode</code> package to identify and return the parties mentioned
-in a character vector of agreement titles or texts.</p>
+in a character vector of agreement titles or texts.
+If the function is ran without an argument (i.e. <code>code_states()</code>),
+a complete list of states' names and abbreviations is returned.</p>
     </div>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">states</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Two are from Switzerland"</span>, <span class="st">"One from New Zealand"</span>,</span>
-<span class="r-in"><span class="st">"And one from Brazil"</span><span class="op">)</span></span>
-<span class="r-in"><span class="fu">code_states</span><span class="op">(</span><span class="va">states</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">states</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Two are from Switzerland"</span>, <span class="st">"One from New Zealand"</span>,</span></span>
+<span class="r-in"><span><span class="st">"And one from Brazil"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">code_states</span><span class="op">(</span><span class="va">states</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Switzerland" "New Zealand" "Brazil"     </span>
+<span class="r-in"><span><span class="fu">code_states</span><span class="op">(</span><span class="va">states</span>, abbrev <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CHE" "NZL" "BRA"</span>
 </code></pre></div>
     </div>
@@ -123,11 +136,11 @@ in a character vector of agreement titles or texts.</p>
 
 
       <footer><div class="copyright">
-  <p></p><p>Developed by <a href="https://jameshollway.com" class="external-link">James Hollway</a>.</p>
+  <p></p><p>Developed by <a href="https://jameshollway.com/" class="external-link">James Hollway</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+  <p></p><p>Part of the <a href="https://panarchic.ch/" class="external-link">PANARCHIC project</a>.</p>
 </div>
 
       </footer></div>

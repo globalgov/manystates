@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">manystates</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -51,7 +51,7 @@
   <a href="reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -68,7 +68,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Other packages
      
     <span class="caret"></span>
@@ -110,34 +110,33 @@
 <div class="page-header"><h1 id="manystates-">manystates <img src="reference/figures/manystates_hexlogo.png" align="right" width="220"><a class="anchor" aria-label="anchor" href="#manystates-"></a>
 </h1></div>
 <!-- badges: start -->
-
 <p><code>manystates</code> is a data package within the <a href="https://github.com/globalgov" class="external-link">many universe of packages</a>. It contains an ensemble of datasets currently available on states in the world, including information on states’ beginning and, where applicable, end dates, regime characteristics, and state leaders. An important aim of <code>manystates</code> is to record and include states as far back in history as possible. The package is geared towards global governance research, but can also be used by anyone interested in state actors across time.</p>
 <p>Please also check out <a href="https://github.com/globalgov/manydata" class="external-link"><code>{manydata}</code></a> for more information about the other packages and tools to handle data from the many universe of packages.</p>
 <div class="section level2">
 <h2 id="how-to-install">How to install<a class="anchor" aria-label="anchor" href="#how-to-install"></a>
 </h2>
-<p>We’ve made it easier than ever to install and start analysing global governance data in R. Simply install the core package, <a href="https://github.com/globalgov/manydata" class="external-link">manydata</a>, as follows, and then you can discover, install and update various <code>many packages</code> from the console.</p>
+<p>We’ve made it easier than ever to install and start analysing global governance data in R. Simply install the core package, <a href="https://github.com/globalgov/manydata" class="external-link">manydata</a>, as follows, and then you can discover, install and update various ‘many packages’ from the console.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co"># install.packages(remotes)</span>
-<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"globalgov/manydata"</span><span class="op">)</span> <span class="co"># this installs our core package, the only one you need to do independently</span>
-<span class="fu">manydata</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/manydata/man/get_packages.html" class="external-link">get_packages</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># this prints a list of the publicly available data packages currently available</span>
-<span class="fu">manydata</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/manydata/man/get_packages.html" class="external-link">get_packages</a></span><span class="op">(</span><span class="st">"manystates"</span><span class="op">)</span> <span class="co"># this downloads and installs the named package</span></code></pre></div>
+<code class="sourceCode R"><span><span class="co"># install.packages(remotes)</span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"globalgov/manydata"</span><span class="op">)</span> <span class="co"># this installs our core package, the only one you need to do independently</span></span>
+<span><span class="fu">manydata</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/manydata/man/get_packages.html" class="external-link">get_packages</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># this prints a list of the publicly available data packages currently available</span></span>
+<span><span class="fu">manydata</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/manydata/man/get_packages.html" class="external-link">get_packages</a></span><span class="op">(</span><span class="st">"manystates"</span><span class="op">)</span> <span class="co"># this downloads and installs the named package</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="data-included">Data included<a class="anchor" aria-label="anchor" href="#data-included"></a>
 </h2>
 <p>Once you have installed <a href="https://github.com/globalgov/manydata" class="external-link">manydata</a>, you can see the different databases and datasets included in the <a href="https://github.com/globalgov/manystates" class="external-link">manystates</a> package using the following function.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">manydata</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/manydata/man/report.html" class="external-link">data_contrast</a></span><span class="op">(</span><span class="st">"manystates"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">manydata</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/manydata/man/report.html" class="external-link">data_contrast</a></span><span class="op">(</span><span class="st">"manystates"</span><span class="op">)</span></span></code></pre></div>
 <p>Working with ensembles of related data has many advantages for robust analysis. Just take a look at our vignettes <a href="https://globalgov.github.io/manydata/articles/user.html" class="external-link">here</a>.</p>
 </div>
 <div class="section level2">
 <h2 id="the-many-packages-universe">The many packages universe<a class="anchor" aria-label="anchor" href="#the-many-packages-universe"></a>
 </h2>
 <p>The <a href="https://github.com/globalgov/manydata" class="external-link">many universe of packages</a> is aimed at collecting, connecting and correcting network data across issue-domains of global governance.</p>
-<p>While some <code>many packages</code> can and do include novel data, much of what they offer involves standing on the shoulders of giants. <code>many packages</code> endeavour to be as transparent as possible about where data comes from, how it has been coded and/or relabelled, and who has done the work. As such, we make it easy to cite the datasets you use by listing the official references using the function above, as well as the package providers for their work assembling the data by using the function below.</p>
+<p>While some ‘many packages’ can and do include novel data, much of what they offer involves standing on the shoulders of giants. ‘many packages’ endeavour to be as transparent as possible about where data comes from, how it has been coded and/or relabelled, and who has done the work. As such, we make it easy to cite the datasets you use by listing the official references using the function above, as well as the package providers for their work assembling the data by using the function below.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"manystates"</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"manystates"</span><span class="op">)</span></span></code></pre></div>
 <div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">## </span></span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="co">## To cite manystates in publications use:</span></span>
 <span id="cb4-3"><a href="#cb4-3"></a><span class="co">## </span></span>
@@ -158,7 +157,7 @@
 <p><a href="https://github.com/globalgov/manydata/blob/main/.github/CONTRIBUTING.md" class="external-link">manydata</a> also makes it easy to contribute in lots of different ways.</p>
 <p>If you have already developed a dataset salient to this package, please reach out by flagging this as an <a href="https://github.com/globalgov/manystates/issues" class="external-link">issue</a> for us, or by forking, further developing the package yourself, and opening a <a href="https://github.com/globalgov/manystates/pulls" class="external-link">pull request</a> so that your data can be used easily.</p>
 <p>If you have collected or developed other data that may not be best for this package, but could be useful within the wider universe of <code>many packages</code>, <a href="https://github.com/globalgov/manypkgs" class="external-link">manypkgs</a> includes a number of functions that make it easy to create a new <code>many package</code> and populate it with clean, consistent global governance data.</p>
-<p>If you have any other ideas about how this package or the manydata universe more broadly might better facilitate your empirical analysis, we’d be very happy to hear from you.</p>
+<p>If you have any other ideas about how this package or the manydata packages universe more broadly might better facilitate your empirical analysis, we’d be very happy to hear from you.</p>
 </div>
 </div>
   </div>
@@ -204,12 +203,7 @@
 </ul>
 </div>
 
-<div class="dev-status">
-<h2 data-toc-skip>Dev status</h2>
-<ul class="list-unstyled">
-<li><a href="https://www.tidyverse.org/lifecycle/#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="lifecycle"></a></li>
-</ul>
-</div>
+
 
   </div>
 </div>
@@ -217,12 +211,12 @@
 
       <footer><div class="copyright">
   <p></p>
-<p>Developed by <a href="https://jameshollway.com" class="external-link">James Hollway</a>.</p>
+<p>Developed by <a href="https://jameshollway.com/" class="external-link">James Hollway</a>.</p>
 </div>
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+<p>Part of the <a href="https://panarchic.ch/" class="external-link">PANARCHIC project</a>.</p>
 </div>
 
       </footer>

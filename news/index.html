@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">manystates</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -32,7 +32,7 @@
   <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Articles
      
     <span class="caret"></span>
@@ -45,7 +45,7 @@
   <a href="../news/index.html">News</a>
 </li>
       </ul><ul class="nav navbar-nav navbar-right"><li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     Other packages
      
     <span class="caret"></span>
@@ -83,6 +83,28 @@
     </div>
 
     <div class="section level2">
+<h2 class="page-header" data-toc-text="0.2.0" id="manystates-020">manystates 0.2.0<a class="anchor" aria-label="anchor" href="#manystates-020"></a></h2>
+<div class="section level3">
+<h3 id="package-0-2-0">Package<a class="anchor" aria-label="anchor" href="#package-0-2-0"></a></h3>
+<ul><li>Updated regex for <code><a href="../reference/code_states.html">code_states()</a></code> to more accurately match and translate states’ names.</li>
+<li>Updated workflow files to include package caching.</li>
+<li>Re-rendered documentation using <code><a href="https://rdrr.io/pkg/messydates/man/mreport.html" class="external-link">messydates::mreport()</a></code>.</li>
+<li>Added <code>{cshapes}</code> and <code>{vdemdata}</code> dependencies</li>
+</ul></div>
+<div class="section level3">
+<h3 id="data-0-2-0">Data<a class="anchor" aria-label="anchor" href="#data-0-2-0"></a></h3>
+<ul><li>Added data across databases<ul><li>Closed <a href="https://github.com/globalgov/manystates/issues/9" class="external-link">#9</a> by adding ICOW datasets to <code>states</code> database.</li>
+<li>Closed <a href="https://github.com/globalgov/manystates/issues/24" class="external-link">#24</a> by adding Economic Freedom datasets to <code>economics</code> database.</li>
+<li>Closed <a href="https://github.com/globalgov/manystates/issues/25" class="external-link">#25</a> by adding Freedom House data to <code>regimes</code> database.</li>
+<li>Closed <a href="https://github.com/globalgov/manystates/issues/48" class="external-link">#48</a> by adding data on states’ ratification rules to <code>ratrules</code> database.</li>
+<li>Closed <a href="https://github.com/globalgov/manystates/issues/49" class="external-link">#49</a> by adding Colonial Relations data from ICOW dataset to <code>colsrels</code> database.</li>
+<li>Closed <a href="https://github.com/globalgov/manystates/issues/50" class="external-link">#50</a> by adding self-coded data on the latitude and longitude of state capitals as <code>GNEVAR_STATES</code> dataset in <code>states</code> database.</li>
+<li>Closed <a href="https://github.com/globalgov/manystates/issues/51" class="external-link">#51</a> by adding contiguity and regions data from FAO and ICOW in <code>contiguity</code> database.</li>
+</ul></li>
+<li>Changed class for date variables (<code>Beg</code> and <code>End</code>) from <code>messydt</code> to <code>mdate</code> using <code><a href="https://rdrr.io/pkg/messydates/man/messydate.html" class="external-link">messydates::as_messydate()</a></code> in preparation scripts across databases.</li>
+</ul></div>
+</div>
+    <div class="section level2">
 <h2 class="page-header" data-toc-text="0.1.0" id="manystates-010">manystates 0.1.0<a class="anchor" aria-label="anchor" href="#manystates-010"></a></h2>
 <div class="section level3">
 <h3 id="package-0-1-0">Package<a class="anchor" aria-label="anchor" href="#package-0-1-0"></a></h3>
@@ -102,11 +124,11 @@
 
 
       <footer><div class="copyright">
-  <p></p><p>Developed by <a href="https://jameshollway.com" class="external-link">James Hollway</a>.</p>
+  <p></p><p>Developed by <a href="https://jameshollway.com/" class="external-link">James Hollway</a>.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
+  <p></p><p>Part of the <a href="https://panarchic.ch/" class="external-link">PANARCHIC project</a>.</p>
 </div>
 
       </footer></div>
