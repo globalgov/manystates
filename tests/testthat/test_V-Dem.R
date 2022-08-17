@@ -13,7 +13,7 @@ test_that("missing observations are reported correctly", {
   expect_false(any(grepl("n\\.a\\.$", vdem[sample(nrow(vdem), 1000), ])))
 })
 
-# Date columns should be in messydt class
+# Date columns should be in mdate class
 test_that("Columns are not in date, POSIXct or POSIXlt class", {
   expect_false(any(lubridate::is.Date(vdem)))
   expect_false(any(lubridate::is.POSIXct(vdem)))
@@ -21,7 +21,7 @@ test_that("Columns are not in date, POSIXct or POSIXlt class", {
 })
 
 test_that("Columns with dates are standardized", {
-  expect_equal(class(vdem$Beg), "messydt")
+  expect_s3_class(vdem$Beg, "mdate")
   expect_false(any(grepl("/", vdem$Beg)))
   expect_false(any(grepl("^[:alpha:]$",
                          vdem$Beg)))
@@ -35,8 +35,12 @@ test_that("Columns with dates are standardized", {
 
 # Contains the required variables
 test_that("object has the correct variables", {
-  expect_col_exists(vdem, vars(VDem_ID))
-  expect_col_exists(vdem, vars(Beg))
-  expect_col_exists(vdem, vars(End))
-  expect_col_exists(vdem, vars(Label))
+  pointblank::expect_col_exists(vdem,
+                                pointblank::vars(VDem_ID))
+  pointblank::expect_col_exists(vdem,
+                                pointblank::vars(Beg))
+  pointblank::expect_col_exists(vdem,
+                                pointblank::vars(End))
+  pointblank::expect_col_exists(vdem,
+                                pointblank::vars(Label))
 })

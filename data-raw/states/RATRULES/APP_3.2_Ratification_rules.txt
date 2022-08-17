@@ -1,0 +1,1623 @@
+﻿                                                      Appendix 3.2 Ratification Rules
+
+The variable on ratification is based on descriptions in national constitutions for how a treaty is formally ratified. The ratification scale is conceptualized as the institutional “hurdle” that must be overcome in order to get a treaty ratified. This scale refers to the breadth of political support necessary for ratification. The broader the political support necessary for ratification, the higher the hurdle and the higher the ratification score. Note that we code procedures as outlined in the national constitution or basic law. No effort is made to code informal or unofficial procedures for treaty ratification.
+
+The following scale is used for coding ratification procedures:
+
+1  = individual chief executive or cabinet decision
+
+1.5 = rule or tradition of informing legislative body of signed treaties
+
+2   = majority consent of one legislative body
+
+3   = super-majority in one body or majority in two separate legislative bodies
+
+4   = national plebiscite
+
+The following table summarizes the coding:
+
+          Afgan  1     Djibouti  2        Lebanon  2          Sao T&P 2 
+        Albania  2     Dominica  1        Lesotho  1     Saudi Arabia 1 
+        Algeria  1      Ecuador  2        Liberia  2          Senegal 1 
+         Angola  2        Egypt 1.5         Libya  1       Seychelles 2 
+Antigua&Barbuda  1  El Salvador  2  Liechtenstein  2     Sierra Leone 2 
+      Argentina  3    Eq Guinea  1      Lithuania  2        Singapore 1 
+        Armenia  1      Eritrea  2     Luxembourg  2       Slovak Rep 2 
+      Australia 1.5     Estonia  2      Macedonia  2         Slovenia 1 
+        Austria  3     Ethiopia  2     Madagasgar  1          Somolia 2 
+     Azerbaijan  2         Fiji  1         Malawi 1.5    South Africa 1 
+        Bahamas  1      Finland  2       Malaysia  2            Spain 3 
+        Bahrain  1       France  2       Maldives  1        Sri Lanka 1 
+     Bangladesh  2        Gabon  2           Mali  1  St. Kitts&Nevis 1 
+        Barbados  1         Gambia  2        Malta 
+         Belarus  2        Georgia  2  Marshall Is 
+         Belgium  3        Germany  3   Mauritania 
+          Belize  1          Ghana  2    Mauritius 
+           Benin  1         Greece  2       Mexico 
+          Bhutan  2        Grenada  1   Micronesia 
+         Bolivia  2      Guatemala  1      Moldova 
+Bosnia and Herz.  3         Guinea  2     Mongolia 
+        Botswana 1.5 Guinea-Bissau  2      Morocco 
+          Brazil  3         Guyana  1   Mozambique 
+        Bulgaria  2          Haiti  3      Namibia 
+    Burkina Faso  1       Honduras  2        Nepal 
+         Burundi  1      Hong Kong  1  Netherlands 
+        Cambodia  2        Hungary  2  New Zealand 
+        Cameroon  2        Iceland 1.5   Nicaragua 
+          Canada 1.5         India  1        Niger 
+      Cape Verde  2      Indonesia  2      Nigeria 
+  Central Af Rep  2           Iraq  1       Norway 
+            Chad  2        Ireland  2         Oman 
+           Chile  3         Israel  2     Pakistan 
+           China 1.5         Italy  2       Panama 
+        Colombia 2.5       Jamaica  1     Papua NG 
+       Comoro Is  2          Japan  2     Paraguay 
+           Congo  2         Jordan  2         Peru 
+      Costa Rica  2     Kazakhstan  3  Philippines 
+         Croatia  2          Kenya  1       Poland 
+            Cuba  1          Korea  2     Portugal 
+          Cyprus  2         Kuwait  2        Qatar 
+       Czech Rep  3     Kyrgyz Rep  2      Romania 
+         Denmark  3           Laos  2       Russia 
+         Dom Rep  3         Latvia  2       Rwanda 
+1       St. Lucia   1 
+2     St. Vincent   1 
+2           Sudan   2 
+1         Surinam   2 
+2       Swaziland   1 
+2          Sweden   2 
+2     Switzerland   3 
+2           Syria   2 
+1      Tajikistan   3 
+2        Tanzania   1 
+2        Thailand   1 
+2            Togo   1 
+3           Tonga   1 
+1.5   Trin&Tobago   1 
+2         Tunisia   1 
+1          Turkey   2 
+3    Turkmenistan   1 
+1.5   U Arab Emir   1 
+1          Uganda   2 
+1              UK 1.5 
+2         Ukraine   2 
+1.5       Uruguay   2 
+2              US   3 
+1.5    Uzbekistan   2 
+3         Vanuatu   1 
+3       Venezuela   2 
+2        Viet Nam   2 
+1           Yemen   2 
+2      Yugoslavia   3 
+2   Zaire (Congo)   2 
+1.5        Zambia   1 
+         Zimbabwe   1 
+The following i table describes relevant and related constitutional provisions, and indicates sources.                               
+                                                                                                                                     
+Country:        Constitutional Description:                           Source:                                           Rating:      
+Afgan           1964 Constitution described Afghanistan as a          Agreement on Provisional Arrangements in          1            
+                constitutional monarchy led by the King. The          Afghanistan Pending the Re-establishment of                    
+                Shura (Parliament) and the Loya Jirgah (Great         Permanent Govt. Institutions. King: Title One,                 
+                Council) are the legislative bodies. Treaty           Arts. 1-5; Shura: Title Four, Arts. 41-77; Loya                
+                ratification procedures not explicitly assigned.      Jirgah: Title Five, Arts. 78-84. Constitutions of              
+                Modifications to 1964 Constitution per Agreement      the Countries of the World, Gisbert H. Flanz,                  
+                on Provisional Arrangements in Afghanistan            Oceana Publications, Inc., Dobbs Ferry, NY,                    
+                pending the Re-Establishment of Permanent             March 2002.                                                    
+                Government Institutions. No official text of Afghan                                                                  
+                Constitution at present. The Shura (Parliament) has                                                                  
+                been abrogated. The Loya Jirgah (The Great                                                                           
+                Council) is intact as the Emergency Loya Jirgah                                                                      
+                consisting of nominated individuals as                                                                               
+                representatives. Traditionally, the Loya Jirgah                                                                      
+                consisted of the members of the now abrogated                                                                        
+                Parliment and the Chairmen of the Provisional                                                                        
+                Councils. It does not have treaty ratification powers                                                                
+                explictly given anywhere in interim text.                                                                            
+Albania         1991: Interim Constitution: Treaties signed by        Albanian Constitution, 1991. Part A, Art. 16(5),  2            
+                President, who can also ratify or denounce any        Art. 23, Part B: Art. 28(10). http://www.uni-     (4 possible) 
+                treaties not examined by the People's Assembly.       wuerzburg.de/law/al00000_.html                                 
+                People's Assembly, legislative arm, ratifies and                                                                     
+                denounces treaties. Treaties are ratified by a                                                                       
+                majority vote. At least 1/3 of all members must be                                                                   
+                present to vote.                                                                                                     
+                1998: The President and the Council of Ministers      People's Assembly: Part III, Chp. Ill, Art. 78;                
+        may sign international agreements. The People's        President: Part IV, Art. 92; International                       
+        Assembly ratifies or denounces international treaties  Agreements: Part VII, Chp. I, Arts. 121, 123.                    
+        and agreements by majority vote. The Assembly can      http://www.ipIs.org/services/kusht/contents.ht                   
+        decide to put ratification to a referendum.            ml                                                               
+Algeria 1996: Consitutional reform approved resulting in       Constitution of Algeria, 1996. Legislature: Title    1           
+        prioritization of executive power over legislative     II, Chp. II, Art. 132; President: Title II, Chap. I,             
+        power. The Legislature has been transformed from       Arts. 77 (8) and (9). Constitutions of the                       
+        a unicameral to a bicameral body consisting of the     Countries of the World, Gisbert H. Flanz,                        
+        National People's Assembly (NPA) and the Council       Oceana Publications, Inc., Dobbs Ferry, NY,                      
+        of the Nation. However, the Constitution gives         March 2002.                                                      
+        treaty making and treaty ratification power solely to                                                                   
+        the President. Law made by the legislature is                                                                           
+        subordinate to all treaties ratified by the President.                                                                  
+        The President may submit any matter of national                                                                         
+        importance to a national referendum if s/he so                                                                          
+        choses.                                                                                                                 
+Angola  1980: Revisions made to the Constitutional Law of      Constitutional Law of the People's Republic of       From 1980:  
+        the People's Republic of Angola (11.11.75) by the      Angola. People's Assembly: Part III, Chp. II,        2-3         
+        Central Committee of the MPLA-Worker's Party           Arts. 37-38,43; President: Part III, Chp. IV, Art    From 1992:  
+        (8.11.80). The Council of Ministers (Government)       53(j); Council of Ministers: Part III, Chp. V, Art.  2 with      
+        may "celebrate" and submit treaties to the People's    58(g). E209                                          possibility 
+        Assembly (legislature) for ratification. The People                                                         of 4        
+        Assembly, described as the supreme organ of state                                                                       
+        power, is solely given treaty ratification powers.                                                                      
+        However, the President is granted the power to                                                                          
+        revoke any government act, law or legal instrument                                                                      
+        that violates the Constitution or in against the                                                                        
+        national interest. It would seem this applies to                                                                        
+        treaties. Treaties pass by simple majority vote of the                                                                  
+          People's Assembly provided at least 1/2 of members     President: Chp. Ill, Sec. 1, Art. 66(w), Art. 73.   
+          are present. If a treaty alters the Constitution, it   National Assembly: Chp. II, At. 88(k), Art. 97.     
+          requires a 2/3 vote.                                   Government: Chp. IV, Art. 110(c).                   
+          1992: Treaties may be ratified by the National         http://www.ansola.ors/referenc/constitution/co      
+          Assembly (legislative body) with a simple majority     nstit.htm                                           
+          vote. The National Assembly is competent to                                                                
+          approve treaties wthin its absolute legislative power                                                      
+          as well on peace, Angola's participation in                                                                
+          international organizations, the rectification of                                                          
+          borders, friendship, defense, military matters and                                                         
+          any others submitted to it by the Government. The                                                          
+          President may sign treaties and approve treaties                                                           
+          ratified by the National Assembly. The President                                                           
+          may submit treaties dealing with the organization of                                                       
+          public bdepartment and the functioning of                                                                  
+          institutions to a national referendum. The                                                                 
+          Government may approve international agreements                                                            
+          that do not fall under the authority of the National                                                       
+          Assembly or which have not been submitted to the                                                           
+          National Assembly.                                                                                         
+Antigua&  Before 1976, Antigua & Barbuda were dependencies       Governor-General: Chp. Ill; Parliament: Chp. IV,  1 
+Barbuda   of the UK. In 1976, they became Associated States      Pt. II, Arts. 47,51,52.                             
+          of the UK. As in the UK case, ratification is an       http://www.georgetown.edU/pdba/Constitutions/A      
+          executive act rather than a legislative act. Caribbean ntigua/ab81 .html+E 183                             
+          nations typically do not accept the “Ponsonby rule”    Winston Anderson, “Treatymaking in Caribbean        
+          (see United Kingdom) and tend to have less             Law and Practice: The Question of Parliamentary     
+          parliamentary input than does the UK.                  Participation.”                                     
+Argentina 1994: The bicameral Congress has treaty ratification   Constitution of the Argentine Nation 1994.        3 
+          and denouncement power. For treaties that grant        Congress: Title I, Section I, Art. 44, Title I,     
+          jurisdiction or competence to an international         Section I, Chp. Ill, Arts. 64, 75(22 -24);          
+        organization, they must be approved by an absolute    President: Title I, Section II, Chp. Ill, Art. 99(11).   
+        majority vote of the totality of both houses of       Constitutions of the Countries of the World,             
+        Congress (Deputies of the Nation and Senators of      Gisbert H. Flanz, Oceana Publications, Inc.,             
+        the Provinces). The Constitution lists a number of    Dobbs Ferry, NY, March 2002.                             
+        treaties by name that carry the same weight of law as                                                          
+        does the Constitution. The President has treaty                                                                
+        signing power only.                                                                                            
+Armenia 1995: The unicameral National Assembly has the        Constitution of the Republic of Armenia.               1 
+        power to ratify or denounce those treaties that are   President: Chp. Ill, Art. 55(7); National                
+        prescribed by law as being under their jurisdiction.  Assembly: Chp. IV, Arts. 63, 81(2).                      
+        The President signs treaties approved by the          Constitutions of the Countries of the World,             
+        National Assembly and can ratify intergovernmental    Gisbert H. Flanz, Oceana Publications, Inc.,             
+        treaties.                                             Dobbs Ferry, NY, March 2002.                             
+                                                              [Commentary by Gisbert Franz says the executive          
+                                                              tends to be dominant, depsite separation of              
+                                                              powers in text. ]                                        
+Aruba   No information                                        http://www.aruba.com/pages/govemm.htm                    
+        The Kingdom of the Netherlands is a hereditary                                                                 
+        constitutional monarchy. The system of Government                                                              
+        in Aruba is based on Western democratic principles                                                             
+        and the structure of the Aruban government is now                                                              
+        as follows:                                                                                                    
+        The Governor is appointed by the Queen of the                                                                  
+        Kingdom for a term of six years and acts as the                                                                
+        sovereign's representative on the island.                                                                      
+        The Legislature consists of a 21-member parliament,                                                            
+        elected by popular vote for a four-year term of                                                                
+          office.                                                                                                     
+          The Council of Ministers, presided over by the                                                              
+          Prime Minister, forms the executive power.                                                                  
+          Legal jurisdiction lies with a Common Court of                                                              
+          Justice of Aruba and the Antilles Netherlands and a                                                         
+          Supreme Court of Justice in Netherlands.                                                                    
+Australia The power to enter into treaties is an executive        http://www.dfat.gov.au/treaties/making/making2. 1-2 
+          power within Section 61 of the Australian               html                                                
+          Constitution and accordingly, is the formal                                                                 
+          responsibility of the Executive rather than the                                                             
+          Parliament. Decisions about the negotiation of                                                              
+          multilateral conventions, including determination of                                                        
+          objectives, negotiating positions, the parameters                                                           
+          within which the Australian delegation can operate,                                                         
+          and the final decision as to whether to sign and ratify                                                     
+          are taken at Ministerial level, and in many cases, by                                                       
+          Cabinet. Although the Constitution does not confer                                                          
+          on the Parliament any formal role in treaty making,                                                         
+          all treaties (except those the Government decided                                                           
+          are urgent or sensitive) are tabled in both Houses of                                                       
+          Parliament for at least 15 sitting days prior to                                                            
+          binding treaty action being taken. A treaty is                                                              
+          generally tabled after it has been signed for                                                               
+          Australia, but before any treaty action is taken which                                                      
+          would bind Australia under international law. Such                                                          
+          action would include entering into a new treaty,                                                            
+          negotiating an amendment to an existing treaty or                                                           
+          withdrawing from a treaty.                                                                                  
+Austria
+
+1983: The President of the Federation may conclude treaties. Those treaties which do not come under the authority of the House of Representatives may be directly implemented by the President. Political treaties or treaties that modify or complement existing laws must be approved by a 2/3 vote of the House of Representatives where at least 1/3 of all members are present to vote. Any measure that would revise the Constitution requires the above measure in addition to a national referendum for total changes to the constitution and a partial change requires a referendum only if 1/3 of the Representatives and Senators request. The Senate must not object to the passage of the treaty through the House. The President signs all laws passed by the House.
+
+2000: Individual states, or Lander, can conclude treaties within their competence as long as the Federal Council has approved to the negotiations. Additionally, the treaties must be approved by the Federal Council. Consent is assumed if the Federal Chancellor does not notify the Landner of his disapproval within 8 weeks of his notification of the conclusion of a treaty. Political State treaties which amend or supplement the law cannot be concluded by Lander, but only by the National Council (district representation) and require the consent of the Federal Council (representation in seats by proprtion of population in district). The National Council submits treaty approval to the Federal Council______
+
+House and Senate: Chp. II, Part A, Arts. 24, 31;    3 with      
+Chp. II, Part B, Art. 37; Chp. II, Part C, Art. 38; possibility 
+Chp. II, Part E, Arts. 44, Art. 50. President: Chp. of 4        
+Ill, Part A, Title 1, Art. 65. http://www.uni-                  
+wuerzburg.de: 80/law/ au00000_.html# A044_                      
+does not have the 23 amendments before 1995 ---                 
+joining EU                                                      
+The Federal Constituional Law. Lander: Chp. I,                  
+Arts.9, 16(1-2); National Council: Chp. II, Title               
+A, Art. 26; Federal Council: Chp. II, Title B, Art.             
+34. Constitutional Changes: Chp. II, Title D, Art.              
+42, 44, 45. Treaties: Chp. II, Title D, Art.                    
+50(1,3).                                                        
+           which must deliver an objection within 8 weeks of                                                          
+           submission. Treaties that amend or supplement the                                                          
+           Constitution must pass the National Council with the                                                       
+           presence of at least 1/2 of the members and a 2/3                                                          
+           vote. A total or partial revision of the Constitution                                                      
+           must be demanded by 1/3 of the members of the                                                              
+           National Council or Federal Council and when                                                               
+           finally agreed upon, is subjected to a national                                                            
+           referendum to be decided by a simple majority.                                                             
+Azerbaijan 1995: treaties proposed by President, general rules     Constitution of Azerbaijan, Constitutions of the 2 
+           and ratification determined by the Milli Mejlis by      Countries of the World, Gisbert Flanz, Oceana      
+           simple majority                                         Publications, Inc., Dobbs Ferry, NY, September     
+                                                                   1996.                                              
+Bahamas    1973: Ratification not mentioned in text. As in the     The Bahamas Constitution, 1973.                  1 
+           UK case, ratification is an executive act rather than a http://www.seoreetown.edu/Ddba/Constitiition       
+           legislative act. Caribbean nations typically do not     s/Bahamas/bah73.html                               
+           accept the “Ponsonby rule” (see United Kingdom)         Winston Anderson, “Treatymaking in Caribbean       
+           and tend to have less parliamentary input than does     Law and Practice: The Question of Parliamentary    
+           the UK.                                                 Participation.”                                    
+Bahrain    1973: As a constitutional monarchy, the Amir (head      Amir: Chp. I, Arts. 33, 35 (a),(b),(d), 37;      1 
+           of state) has the sole authority to ratify and          Assembly: Chp. II, Art. 42; Pt. V., Art. 104(a).   
+           promulgate laws. The Amir may conclude treaties         http://www.uni-                                    
+           and then submit them to the Assembly (legislature)      wuerzburg.de/law/baOOOOO_.html                     
+           with a statement. It appears that most treaties are                                                        
+           self-executing upon submission to the Assembly.                                                            
+           Not clear if those treaties require a vote from the                                                        
+           Assembly. Not explicitly required. Treaties that                                                           
+           involve matter of peace or alliance, or affect the                                                         
+           rights of citizens or the territory of the state require                                                            
+           the passing of a law. Any laws changing the                                                                         
+           constitution require a 2/3 vote of the Assembly and                                                                 
+           the approval of the Amir.                                                                                           
+           2001: Proposed National Charter. Does not appear         Proposed National Charter of Bahrain, 2001.                
+           to make any changes to treaty ratification               http://www.georgetown.edu/pdba/Constitution                
+           procedures.                                              s/Barbados/barbados66.html                                 
+Bangladesh 1972: constitution adopted, international treaties       Constitution of Bangladesh. Art75, 145A          2         
+           submitted to President, then Parliament vote 31 out      Constitutions of the Countries of the World,               
+           of 300 members (like other laws).                        Gisbert H. Flanz, Oceana Publications, Inc.,               
+                                                                    Dobbs Ferry, NY, February 1999+E384.                       
+Barbados   Treaty ratification procedures not laid out in                                                            1         
+           Constitution. Executive power transferred from           Parliament: Chp. V, 49.1; Governor-General:                
+           Queen to Governor-General. As in the UK case,            Chp. IV; Executive power: Chp VI., 63.1.                   
+           ratification is an executive act rather than a           http://www.georgetown.edU/pdba/Constitutions/B             
+           legislative act. Caribbean nations typically do not      arbados/barbados66 .html                                   
+           accept the “Ponsonby rule” (see United Kingdom)          Winston Anderson, “Treatymaking in Caribbean               
+           and tend to have less parliamentary input than does      Law and Practice: The Question of Parliamentary            
+           the UK.                                                  Participation.”                                            
+Belarus    1994: The Supreme Council (legislature) has the          1994 Constitution of Belarus. National           2 (with 4 
+           authority to ratify international treaties. The          Referendum: Chp. 2, Arts. 73, 74; Supreme        possible) 
+           President has the authority to sign international        Council: Sec. IV, Chp. 3, Art. 79, 83, 84(1)(3);           
+           treaties. President can veto laws/treaties passed by     President: Chp. 4, Art. 100(16)(20).                       
+           Supreme Council, but the veto can be overcome by a       http://www.uni-                                            
+           2/3 vote of the Supreme Council. Any issue of            wuerzburg.de/law/bo00000_.html                             
+           importance can be submitted to a local or national                                                                  
+           referendum on the demand of at least 70 deputies of                                                                 
+           the Supreme Council or on the recommendation of                                                                     
+           the President and a vote of at least 450,000 citizens.                                                              
+Belgium 1996: The King signs and concludes treaties.           International Relations: Title IV, Arts. 167-168; 3 
+        Treaties do not come into force until they are         King: Title III, Art. 38; Federal Chambers: Arts.   
+        approved by both houses of the legislature. The        53, 54, 77(6).                                      
+        Chambers must be informed of any treaty                http://www.findlaw.com/01topics/06constitutio       
+        negotiations that revise the European Community        nal/03forconst/index.html                           
+        treaties. Each of the Communities or Regions of the                                                        
+        Federation can conclude treaties that are within their                                                     
+        scope, but the treaties require the approval of their                                                      
+        respective Councils.                                                                                       
+Belize  1981, 1988: Constitution does not specify.                                                               1 
+        As in the UK case, ratification is an executive act    httD://www.2eorgetown.edu/pdba/Constitutions/B      
+        rather than a legislative act. Caribbean nations       elize/belize81 .html                                
+        typically do not accept the “Ponsonby rule” (see       Winston Anderson, “Treatymaking in Caribbean        
+        United Kingdom) and tend to have less                  Law and Practice: The Question of Parliamentary     
+        parliamentary input than does the UK.                  Participation.”                                     
+Benin   1990: President                                        The Constitution of the Republic of Benin,        1 
+                                                               Constitutions of the Countries of the World,        
+                                                               Gisbert H.Flanz, Oceana Publications, Inc.,         
+                                                               Dobbs Ferry, NY, October 1993+E6+E47308.            
+Bhutan  1953: Monarchy and Assembly.                           The Constitution of the National Assembly of      2 
+                                                               Bhutan, 1953, Constitutions of the Countries of     
+                                                               the World, Gisbert H. Flanz, Oceana                 
+                                                               Publications, Inc., Dobbs Ferry, NY, June 1989.     
+Bolivia 1995 Constitution. Negotiated by the president, all    The Constitution of Bolivia, Art.59 (12), Article 2 
+        treaties are contingent upon ratification by Congress. 96(2).                                              
+        There are no details as to what type of vote.          Constitutions of the Countries of the World,        
+                                                               Gisbert H. Flanz, Oceana Publications, Inc.,        
+                                                               Dobbs Ferry, NY, May 1999.                          
+                                                               http://www.georgetown.edU/pdba/Constitutions/B      
+                                                                 olivia/ consboliv 1615 .html                          
+Bosnia and 1995: President, with Consent of Parliamentary        Consitution of Bosnia and Herzegovina.            3   
+Herz.      Assembly (2 houses, need a majority of those          Constitutions of the Countries of the World,          
+           present and voting, and atleast one third of those    Gisbert H. Flanz, Oceana Publications, Inc.,          
+           from each Entity(B, H))                               Dobbs Ferry, NY, March 2000.                          
+Botswana   1966, 1983: No specific mention.                      Constitution of Botswana. Constitutions of the    1-2 
+           The National Assembly is consulted before the         Countries of the World, Gisbert H. Flanz, Oceana      
+           President can sanction international treaties and     Publications, Inc., Dobbs Ferry, NY, April 1989       
+           agreements.                                           http://www.botswanaembassy.or.jp/gene_info/bo         
+                                                                 dy3_2.html                                            
+Brazil     1988 Constitution: Brazil is a federal union. The     National Congress: Title IV, Chp. 1, Sec. 1, Art. 3   
+           president has the authority to conclude international 49; Sec. 2, Art. 60, 61, 66. President: Title IV,     
+           treaties, conventions and acts ad referendum of the   Chp. II, Sec. II, Art. 84(viii).                      
+           National Congress. The National Congress is           http://www.georgetown.edu/pdba/Constitution           
+           comprised by the Chamber of Deputies and the          s/Brazil/english98.htmI                               
+           Chamber of Senators, and it has the authority to                                                            
+           decide conclusively (ratify?) international                                                                 
+           agreements that result in charges or commitments                                                            
+           against the national property. In order to amend the                                                        
+           Constitution, 1/3 of the members of both houses of                                                          
+           the National Congress, the President, and 1/2 of the                                                        
+           Legislative Assemblies of the Federation units must                                                         
+           pass by a majority vote.                                                                                    
+           1998: Reforms make no changes to treaty                                                                     
+           ratification procedures.                                                                                    
+Bulgaria   1991: The president may conclude international        1991 Bulgarian Constitution. International        2   
+           treaties. As provided for by law, the Council of      Agreements: Chp. I, Art. 5; National Assembly:        
+             Ministers may also conclude, confirm or denounce       Chp. Ill, Arts. 62, 81, 85; President: Chp. IV,      
+             international treaties. The National Assembly          Arts. 92, 98, 101; Council of Ministers: Chp. V,     
+             (legislature) has the authority to ratify or denounce  Art. 106. http://www.uni-                            
+             international treaties dealing with the following      wuerzburg.de/law/bu00000_.html                       
+             issues: political or military issues, participation in                                                      
+             international organizations, correcting the national                                                        
+             borders, outlays from the treasury, participation in                                                        
+             international arbitration or legal proceedings, human                                                       
+             rights, affecting law or requiring new legislation, or                                                      
+             expressly requiring ratification. Legislation passes                                                        
+             the National Assembly by a majority vote of                                                                 
+             members of National Assembly. The president may                                                             
+             veto legislation passed by the National Assembly,                                                           
+             but this veto can be overcome by a majority vote of                                                         
+             the National Assembly.                                                                                      
+Burkina Faso 1991:The President of Faso ratifies.                   Title XIII, Art 148. Constitution of Burkina Faso. 1 
+                                                                    Constitutions of the Countries of the World,         
+                                                                    Gisbert H. Flanz, Oceana Publications, Inc.,         
+                                                                    Dobbs Ferry, NY, August 1998.                        
+Burma                                                                                                                    
+Burundi      1998: President.                                       Republic of Burundi: Consitutional Act of          1 
+                                                                    Transition. Constitutions of the Countries of the    
+                                                                    World, Gisbert H. Flanz, Oceana Publications,        
+                                                                    Inc., Dobbs Ferry, NY, May 1999.                     
+Cambodia     1993 Constitution. Cambodia is a constitutional        1993 Cambodian Constitution. King: Chp. I, Art.    2 
+             monarch. The King can enter into international         1. Chp. II, Arts. 7, 8, 26; National Assembly:       
+             treaties or conventions. The King can also ratify or   Chp. VII, Arts. 90, 93; Constitutional Council:      
+             denounce international treaties after receiving the    Chp. X, Arts. 117, 121, 123; Constitutional          
+             approval of the National Assembly (legislature).       Changes: Chp. XII, Art. 132.                         
+           The Assembly can approve or deny treaties by a          http://www.findlaw.com/01topics/06constitutio            
+           simple majority vote. The Constitutional Council        nal/03forconst/index.html                                
+           reviews all proposed legislation for constitutionality.                                                          
+           Its decisions are final. Would appear to apply to                                                                
+           international treaties as well. Changes to the                                                                   
+           constitution may be made on the initiative of the                                                                
+           King, the Prime Minister, or the President of the                                                                
+           Assembly when supported by at least 1/4 of                                                                       
+           Assembly members. To pass, a constitutional                                                                      
+           change requires a 2/3 vote of the Assembly.                                                                      
+Cameroon   1996: President. Except treaties falling within the     Law No. 96-06 of 18 January 1996 to amend the     1 or 2 
+           competence of the Legislative Power (dealing with       Constitution, Part VI (43). Constitutions of the         
+           rights, guarantees and obligations of citizens, status  Countries of the World, Gisbert H. Flanz, Oceana         
+           of persons and property ownership, political,           Publications, Inc., Dobbs Ferry, NY, June 1997.          
+           administrative, and judicial organization, financial                                                             
+           and patrimonial matters, programming objectives of                                                               
+           economic and social action, education) must be                                                                   
+           ratified by Parliament.                                                                                          
+Canada     1999: no mention; see UK below                          The Constitution Acts: 1967 to                    1-2    
+                                                                   1982.Constitutions of the Countries of the World,        
+                                                                   Gisbert H. Flanz, Oceana Publications, Inc.,             
+                                                                   Dobbs Ferry, NY,                                         
+Cape Verde 1992: President ratifies international treaties after   The Constitution of the Republic of Cape Verde,   2      
+           valid approval. The National Assembly approves          Art 148(a), Art 190(a, b). Constitutions of the          
+           international treaties under their absolute authority,  Countries of the World, Gisbert H. Flanz, Oceana         
+           those regarding international organizations,            Publications, Inc., Dobbs Ferry, NY, May 1994.           
+           friendship, peace, defense, and military matters.                                                                
+Central    1994: President ratifies after the authorization of     Constitution of the Central African Republic,     2      
+African Rep Parliament. No cession, exchange, or addition of       Title III, Art. 21, Title V,E1174 Art. 66.                    
+            territory is valid without a referendum of the people. Constitutions of the Countries of the World,                  
+                                                                   Gisbert H. Flanz, Oceana Publications, Inc.,                  
+                                                                   Dobbs Ferry, NY, November 1995.                               
+Chad        1996: President ratifies after the authorization of    The Constitution of the Republic of Chad.           2         
+            Parliament on peace, defense, commercial treaties      Constitutions of the Countries of the World,                  
+            and those dealing with use of territory and resources, Gisbert H. Flanz, Oceana Publications, Inc.,                  
+            international organization, State finances, the well¬  Dobbs Ferry, NY, December 1997.                               
+            being of persons. No cession, exchange, or addition                                                                  
+            of territory is valid without a referendum of the                                                                    
+            people.                                                                                                              
+Chile       1990: President ratifies with approval of Congress.    Chp. IV, Art. 32(17); Chp. V, Art. 50(1);           2 or 3?   
+            Discussions can be done in secret. Congress            Transitory provisions, 18th (D).                    1973-88:1 
+            (bicameral) has exclusive authority to approve or      Political Constitution of the Republic of Chile,              
+            reject international treaties submitted by the         Art 17, 50. Constitutions of the Countries of the             
+            President of the Republic prior to ratification        World, Gisbert H. Flanz, Oceana Publications,                 
+            thereof. The approval of a treaty shall be subject to  Inc., Dobbs Ferry, NY, October 1991.                          
+            the procedures prescribed by a law. Transitory         http://oncampus.richmond.edU/~jjones//confinder               
+            provisions: during the Junta, the Junta had power of   /Chile.htm                                                    
+            approving treaties prior to ratification.                                                                            
+China       1982 Constitution. The Standing Committee of the       1982 Constitution of the People's Republic of       1-2       
+            National People's Congress (NPC) (legislature) has     China. NPC: Chp. Ill, Sec. I, Arts. 57, 58, 62, 64,           
+            the authority to conclude and ratify treaties. It also 67(1), (14); President: Chp. Ill, Sec. II, Art. 81;           
+            has the right to interpret and enforce the             State Council: Chp. Ill, Sec. Ill, Art. 89(9).                
+            Constitution. Proposed changes to the Constitution     http://www.europeaninternet.com/china/consti                  
+            must be raised through either the Standing             t/chconst.php3                                                
+            Committee or 1/5 of the deputies of the NPC. A                                                                       
+            majority vote of the NPC will sustain such a change.                                                                 
+            The president may ratify or abrogate international                                                                   
+          treaties in pursuance of the Standing Committee's                                                             
+          instructions. The State Council (a sort of executive                                                          
+          cabinet) may conclude (but not ratify) treaties.                                                              
+          1993 amendments: no changes to treaty ratification.                                                           
+Colombia  1991 Constitution, with 2001 reforms. The              Political Constitution of Colombia 1991, Updated  2-3  
+          president, as the head of the government and state, is with the 2001 Reforms. Presidential Powers: Title      
+          charged with “convening and ratifying peace            VII, Chapter 1, Article 189 (6). Congressional         
+          treaties,” which then must be approved immediately     Powers: Articles 150-152.                              
+          by the Congress. In order for a bill to become a law,  Constitutions of the World, Robert Maddex,             
+          it must be passed by an absolute majority in           Congressional Quarterly Inc., Washington D.C.,         
+          congress, and any bill involving international         1995                                                   
+          relations must originate in the upper house.           http://www.georgetown.edU/pdba/Constitutions/C         
+                                                                 olombia/col91 .html                                    
+Comoro Is 1992: Ratified by virtue of a law.                     Constitution of the Federal Islamic Republic of   2    
+                                                                 Comoros. Art. 17. Constitutions of the Countries       
+                                                                 of the World, Gisbert H. Flanz, Oceana                 
+                                                                 Publications, Inc., Dobbs Ferry, NY, March             
+                                                                 1998.                                                  
+Congo     1992: The president promulgates all laws or sends      1992 Congo Constitution. President: Title IV,     2-3? 
+          objectionable laws back to the Parliament for          Arts. 78, 79, 87; Parliament: Title VI, Arts. 93,      
+          reconsideration. The President can submit any issue    104(1). Constitutional Amendment: Title VII,           
+          of national importance to a national referendum.       Art. 115; Constitutional Council: Title X, Arts.       
+          Parliament (National Assembly and Senate) has the      130, 142, 146, 150. http://www.uni-                    
+          authority to approve (ratify?) international treaties. wuerzburg.de/law/cf00000_.html                         
+          The Constitutional Council rules on whether                                                                   
+          international treaties violate the constitution before                                                        
+          they are ratified. Both the Government and the                                                                
+          Parliament have the right to initiate changes to the                                                          
+          Constitution.                                                                                                 
+Costa Rica 1949 Constitution. Gives the President and the          1949 Costa Rican Constitution. Treaties: Title I,    2           
+           Cabinet Minister joint power to enter into treaties     Art. 7; Legislative Assembly: Title IX, Chp. I,                  
+           and to enforce treaties approved by the Legislative     Art. 117, Chp. II, Art. 121(4), Chp. Ill, Arts. 125-             
+           Assembly. The Legislative Assembly (unicameral)         127; Executive: Chp. II, Art. 140(10).                           
+           has the authority to ratify or denounce treaties with a http://www.costaricalaw.com/legalnet/constitut                   
+           majority vote. Treaties that confer or transfer power   ional_law/constitenglish.html                                    
+           to international organizations or a legal community                                                                      
+           require a 2/3 vote of the entire Assembly. If the                                                                        
+           treaty changes the territorial integrity or political                                                                    
+           organization of Costa Rica, it requires a 2/3 majority                                                                   
+           vote of at least 3/4 of all Assembly members.                                                                            
+           Attendance of at least 2/3 of the Assembly members                                                                       
+           is required for the Assembly to be in session.                                                                           
+           Additionally, the President has the power to veto or                                                                     
+           amend any law. His or her veto or amendments can                                                                         
+           be overcome with a 2/3 vote.                                                                                             
+Croatia    2001: The Croatian Sabor ratifies international         Chp. VII, Part I, Art. 133 (1-2); Art. 134.          1 or 2 or 3 
+           agreements amending laws, of a military or political    The Constitution of the Republic of Croatia, Art                 
+           nature, and those entailing financial commitment.       139. Constitutions of the Countries of the World,                
+           Those agreements not subject to approval by the         Gisbert H. Flanz, Oceana Publications, Inc.,                     
+           Croation Sabor are executed by the President or the     Dobbs Ferry, NY, June 2001.                                      
+           Government. International agreements concluded          http://www.uni-                                                  
+           and ratified in accordance with the Constitution and    wuerzburg.de/law/hr00000_.html#P001_                             
+           made public are part of the Republic's internal legal                                                                    
+           order and are in terms of legal effect above law.                                                                        
+           Their provisions may be changed or repealed only                                                                         
+           under conditions and in the way specified in them,                                                                       
+           or in accordance with the general rules of                                                                               
+           international law.                                                                                                       
+Cuba       1976 Constitution with 1992 Reforms. With the           Constitutions of the World, Robert Maddex,           1           
+         1976 Constitution, the position of Prime Minister     Congressional Quarterly Inc., Washington D.C.,         
+         was replaced by the position of President, who is     1995.                                                  
+         also the head of the Communist Party. Control of all  1976 Constitution:                                     
+         policy decisions is in the hands of the President,    http ://www. georgetown.edu/pdba/ Constitutions/C      
+         which has always been held by Fidel Castro. The       uba/ cuba1992.html                                     
+         Council of State and Cabinet is responsible for       2002 Reforms:                                          
+         “ratifying and denouncing international treaties,”    http://www.georgetown.edU/pdba/Constitutions/C         
+         although the exact method of ratification in practice uba/ref02.html                                         
+         is unclear.                                                                                                  
+         Constitutional Reform of 2002. The Reform to the                                                             
+         Constitution, by the President of the National                                                               
+         Assembly of Popular Power, states “Economic,                                                                 
+         diplomatic, and political relations with other states                                                        
+         will no longer be negotiated under agression, threat,                                                        
+         or coersion from a foreign power:”                                                                           
+Cyprus   1960 Constitution. Former British colony. 1963        1960 Constitution. Executive (Pres., VP, Council     2 
+         Rebellion made some changes, but no apparent          of Ministers): Pt. 3, Arts. 36(c)(ii), 48(d)and (f),   
+         changes to treaty ratification. The Council of        50(l)(a), 50(l)(a)(ii), 51(l)and (3); House of         
+         Ministers concludes and signs treaties. Treaties are  Representatives: Pt. 4, Arts. 77(1), 78(1) and (2).    
+         submitted with a letter of transmission by the        Treaties: Pt. 12, Art. 169(2) and (3).                 
+         President or VP to the House of Representatives for   http://www.pio.gov.cy/cygov/constitution/index         
+         ratification. A quorum in the House requires at least .htm+E1403                                             
+         1/3 of the members to be present. Treaties appear to                                                         
+         be ratified by simple majority vote unless the impose                                                        
+         duties or taxes. In those cases, a majority of both                                                          
+         the Greek and Turkish Communities in the House                                                               
+         must pass by simple majority respectively.                                                                   
+Czech    1993 Czech Republic Constitution. The President       1993 Czech Republic Constitution. Human              3 
+Republic can sign and "ratify" international treaties and      Rights: Chp. I, Art. 10; Parliament: Chp. II, Arts.    
+         agreements or delegate that duty to the Government    15, 39(1) and (4), 49(1) and (2), 50. President:       
+        or any particular government official. Parliament      Chp. Ill, Pt. I, Art. 63(l)(b). http://www.uni-     
+        (Chamber of Deputies and Chamber of Senators) is       wuerzburg.de/law/ez00000_.html                      
+        charged with enacting treaties through law (sort of                                                        
+        quasi-ratification?). Treaties are passed in same                                                          
+        manner as all other draft laws requiring a 3/5                                                             
+        majority vote of both chambers of Parliament when                                                          
+        1/3 of members are present and voting. Constitution                                                        
+        specifically says that all previously agreed to                                                            
+        international human rights treaties and agreements                                                         
+        that have been ratified are still in effect and are                                                        
+        binding. All human rights treaties, political and                                                          
+        economic agreements, and treaties concerning                                                               
+        fundamental freedoms require passage by                                                                    
+        Parliament.                                                                                                
+Denmark 1992 Danish Constitution. The King cannot enter        1992 Danish Constitution. The King: Pt. II, III 3-4 
+        into international agreements affecting Danish         Sec. 19(1), 20; Parliament: Pt. IV, Sec. 42;        
+        territory without the approval of Parliament.          Constitutional Amendments: Pt. X, Sec. 88.          
+        Parliament can petition the President to submit any                                                        
+        issue to a referendum if 1/3 of the members make                                                           
+        the petition within three weeks of the bill's passage.                                                     
+        Constitutional amendments within 6 months of                                                               
+        passing Parliament will be submitted to the nation's                                                       
+        Electors for direct vote. Need majority of voters,                                                         
+        40% of Electors, and Royal assent to pass. Any                                                             
+        powers under the Constitution can only be delegated                                                        
+        to international authorities when a majority of 5/6 of                                                     
+        the Parliament approve. If this majority is not                                                            
+        obtained, whereas the majority required for the                                                            
+        passing of ordinary Bills is obtained, and if the                                                          
+        Government maintains it, the Bill shall be submitted                                                       
+        to the Electorate for approval or rejection in                                                             
+          accordance with the rules for Referenda laid down in                                                       
+          Section 42.                                                                                                
+Djibouti  1992: Ratified by virtue of a law.                   Constitution of the Republic of Djibouti, Art 63. 2   
+                                                               Constitutions of the Countries of the World,          
+                                                               Gisbert H. Flanz, Oceana Publications, Inc.,          
+                                                               Dobbs Ferry, NY, August 1993.                         
+Dominican 1994: Congress, absolute majority vote of more than  Constitution of the Dominican Republic, Section   3   
+Republic  one-half of the members of each chamber.             V, Art. 37(14). Constitutions of the Countries of     
+                                                               the World, Gisbert H. Flanz, Oceana                   
+                                                               Publications, Inc., Dobbs Ferry, NY, September        
+                                                               1996.                                                 
+Dominica  1991: No mention. As in the UK case, ratification is Constitution of the Commonwealth of Dominica.     1   
+          an executive act rather than a legislative act.      Constitutions of the Countries of the World,          
+          Caribbean nations typically do not accept the        Gisbert H. Flanz, Oceana Publications, Inc.,          
+          “Ponsonby rule” (see United Kingdom) and tend to     Dobbs Ferry, NY, March 1997                           
+          have less parliamentary input than does the UK.      Winston Anderson, “Treatymaking in Caribbean          
+                                                               Law and Practice: The Question of Parliamentary       
+                                                               Participation.”.                                      
+Ecuador   1998: One debate and a conforming vote of the        The Constitution of the Republic of Ecuador. Art  2   
+          majority of the National Congress' members.          162. Constitutions of the Countries of the World,     
+                                                               Gisbert H. Flanz, Oceana Publications, Inc.,          
+                                                               Dobbs Ferry, NY, June 1999.                           
+Egypt     1971, amended 1980: The President of Republic                                                          1-2 
+          shall conclude treaties and communicate them to the  Art. 151, 195                                         
+          People's Assembly (Shoura), accompanied with a       httD://www.shoura.eov.ee/ioursdiction of the sh       
+          suitable clarification. They shall have the force of oura assem.htm                                        
+          law after their conclusion, ratification and         http://www.sis.gov.eg/egyptinf/politics/parlment/     
+            publication according to the established procedure    html/constit.htm                                      
+            (not very specific in the constitution). The People's                                                       
+            Assembly is to be consulted on peace and alliance                                                           
+            treaties, and all treaties affecting modifications in                                                       
+            the state's territories or those relating to its                                                            
+            sovereignty rights.                                                                                         
+El Salvador 1983 Constitution, updated with 2000 reforms.         Political Constitution of the Republic of El        2 
+            Negotiated by the head of state, ratified by the      Salvador 1983, including reforms introduced by        
+            Legislative Assembly, but does not state by what      DL N°56. Article 131 (7).                             
+            type of vote.                                         http://www.georgetown.edU/pdba/Constitutions/E        
+                                                                  lSal/ElSal83.html                                     
+Equatorial  1991: President.                                      Fundamental Law of Equatorial Guinea. Art           1 
+Guinea                                                            39(j). Constitutions of the Countries of the World,   
+                                                                  Gisbert H. Flanz, Oceana Publications, Inc.,          
+                                                                  Dobbs Ferry, NY, February 1994.                       
+Eritrea     1997: Ratified by virtue of a law in the National     The Constitution of Eritrea. Art 32(4), 33, 34,     2 
+            Assembly: Majority vote of those present and voting   36. Constitutions of the Countries of the World,      
+            (atleast 50% of the members) plus signature of        Gisbert H. Flanz, Oceana Publications, Inc.,          
+            President.                                            Dobbs Ferry, NY, August 1999.                         
+Estonia     1992 Constitution. The President can enter into       1992 Constitution. The Parliament: Chp. IV,         2 
+            international agreements and signs letters of         Arts. 65, 73. President: Chp. V, Art. 78(1), (6);     
+            ratification. The Government submits international    Government: Chp. VI, Arts. 87(4), 106;                
+            agreements for ratification to the State Assembly,    International Affairs: Chp. IX, Arts. 121-123.        
+            which actually ratifies any international agreements  http://www.findlaw.com/12international/count          
+            which change Estonia's borders, require ratification  ries/ee.html                                          
+            specifically, require financial or military                                                                 
+            commitments, or commits Estonia to joining any                                                              
+            international organizations. Agreements which                                                               
+            change Estonia's borders require a 2/3 vote of the                                                          
+         State Assembly. All others appear only to require a                                                      
+         simple majority vote. Ratification CANNOT be                                                             
+         done via popular election.                                                                               
+Ethiopia 1994 Constitution. The Prime Minister has the        1994 Constitution. Power of State Structure:      2 
+         power to direct Ethiopian foreign policy. The        Chp. 5, Arts. 50,51(8); House of People's           
+         legislature consists of the House of the Federation  Representatives: Chp. 6, Pt. I, Art. 55 (12), 59;   
+         and the House of the People's Representatives. The   House of Federation: Chp. 6, Pt. II, Art. 62;       
+         latter ratifies international agreements and the     President: Chp. 7; Prime Minister: Chp. 8, Art.     
+         former has the right to decide on constitutional     77(6). http://www.uni-                              
+         issues. Apparently, simply majority votes carry.     wuerzburg.de/law/et00000_.html                      
+Fiji     1998: No mention.                                    The Constitution of the Republic of the Fiji      1 
+                                                              Islands. Constitutions of the Countries of the      
+                                                              World, Gisbert H. Flanz, Oceana Publications,       
+                                                              Inc., Dobbs Ferry, NY, December 1998.               
+                                                              http://www.uni-wuerzburg.de/law/fj00000_.html       
+Finland  1999.The President directs foreign policy and        1999 Finnish Constitution. Parliament: Chp. 3,    2 
+         relations. However, the Government is in charge of   Sec. 24; Parliamentary Powers: Chp. 4, Secs. 41,    
+         all European Union decisions unless Parliament       53; Legislation: Chp. 6, Sec. 73. International     
+         must approve. Parliament must approve all treaties   Relations: Chp. 8, Secs. 93-95.                     
+         of international agreements of a legislative nature. http://www.findlaw.com/12international/count        
+         Treaties are brought into force through              ries/et.html                                        
+         parliamentary passing of an Act. If the Constitution                                                     
+         is changed or territory of nation, Parliament must                                                       
+         pass with a 2/3 vote.                                                                                    
+France   1958 Constitution with Amendments through 2000.      1958 Constitution with Amendments through         2 
+         President can negotiate treaties and ratify certain  2000. International Treaties: Title VI, Arts. 52-   
+         treaties. Parliament ratifies treaties dealing with  54; Constitutional Amendment: Title XVI, Art.       
+         peace, commercial obligations. State finances, the   89. http://www.assemblee-                           
+        status of persons, cession or addition or territory     nationale.fr/english/8ab.asp                            
+        (with the approval of the peoples affected). If the                                                             
+        Constitutional Council rules that a treaty conflicts                                                            
+        with the Constitution, a constitutional amendment                                                               
+        would be necessary, requiring a 3/5 vote of                                                                     
+        Parliament or simple majority and passage of a                                                                  
+        referendum.                                                                                                     
+Gabon   1991: President ratifies after the vote of a law of     The Constitution of the Republic of Gabon. Art       2  
+        authorization by the Parliament. Peace treaties,        113, 114. Constitutions of the Countries of the         
+        commercial treaties, treaties relative to international World, Gisbert H. Flanz, Oceana Publications,           
+        organizations, treaties dealing with finance, and       Inc., Dobbs Ferry, NY, May 1998.                        
+        those dealing with the state of persons are ratified by                                                         
+        virtue of a law.                                                                                                
+Gambia  1996: National Assembly may establish procedures        The Constitution of The Gambia. Art 79(3).           2? 
+        by resolution.                                          Constitutions of the Countries of the World,            
+                                                                Gisbert H. Flanz, Oceana Publications, Inc.,            
+                                                                Dobbs Ferry, NY, September 1997.                        
+Georgia 2001: Parliament, by a majority of the entire body.     The Constitution of Georgia. Art 65.                 2  
+                                                                Constitutions of the Countries of the World,            
+                                                                Gisbert H. Flanz, Oceana Publications, Inc.,            
+                                                                Dobbs Ferry, NY, May 2002.                              
+Germany 1949 Constitution as amended through 1990. Before       1949 Constitution as amended in 1990. Foreign        3  
+        any treaties can be concluded the Laender               Relations: Pt. II, Art. 32; Bundestag: Pt. Ill, Art.    
+        (legislature) must be consulted. The Laender can        42; Bundesrat: Pt. IV, Art. 52; President: Pt. V,       
+        conclude (ratify?) treaties. The President can also     Arts. 58, 59; Federal Government: Pt. VI; Leg.          
+        conclude treaties but all treaties relating to the      Powers of Fed. Govt.: Pt. VII, Arts. 70-72, 77, 79.     
+        political relations of the Federation or to federal     http://wiretap.area.eom/ftp.items/Gov/World/g           
+        legislation require the approval of the competent       ermany.con                                              
+        legislative bodies. Administrative agreements are                                                               
+        mutatis mutandis. The Laender and the Federation                                                                
+        (federal government) both have legislative powers.                                                             
+        The areas of their competence are decided by law                                                               
+        and there are areas where they have concurrent                                                                 
+        legislative powers. Both houses of the Laender pass                                                            
+        legislation by a majority vote. For the lower house                                                            
+        (Bundestag) to overcome a rejection of legislation                                                             
+        they've passed by the upper house (Bundesrat), a 2/3                                                           
+        vote is required. Peace treaties are enacted by a                                                              
+        supplement to the Basic Law requiring a 2/3 vote of                                                            
+        both houses of the Laender.                                                                                    
+Ghana   1993: Ratification by Act of Parliament or vote of     The Constitution of the Republic of Ghana. Art        2 
+        more than one-half members of Parliament.              75(2). Constitutions of the Countries of the            
+                                                               World, Gisbert H. Flanz, Oceana Publications,           
+                                                               Inc., Dobbs Ferry, NY, December 1998.                   
+Greece  1975: Constitutional powers may, by treaty, be         1975 Constitution. Pt. Ill, Sec. I, Art. 28, Sec. II, 2 
+        vested in international organizations by a 2/3 vote of Chp. II, Arts. 35-36, Sec. Ill, Art. 67.                
+        Parliament. The President may conclude treaties of     http://www.hri.org/MFA/syntagma/artcll20.ht             
+        peace, alliance, economic participation, and           ml#A82                                                  
+        participation in international organizations.                                                                  
+        Conventions dealing with trade, tax, economic                                                                  
+        cooperation, participation in international                                                                    
+        organizations, and all conventions concerning                                                                  
+        concessions which need statutory passage require                                                               
+        Parliament's ratification. Not much more said about                                                            
+        treaties in Constitution.                                                                                      
+Grenada 1974: No mention. As in the UK case, ratification is   The Grenada Constitution Order 1973.                  1 
+        an executive act rather than a legislative act.        Constitutions of the Countries of the World,            
+        Caribbean nations typically do not accept the          Gisbert H. Flanz, Oceana Publications, Inc.,            
+          “Ponsonby rule” (see United Kingdom) and tend to         Dobbs Ferry, NY, September 1997.                               
+          have less parliamentary input than does the UK.          Winston Anderson, “Treatymaking in Caribbean                   
+                                                                   Law and Practice: The Question of Parliamentary                
+                                                                   Participation.”                                                
+Guatemala 1985: Treaties must be approved by Congress before       Constitution of the Republic of Guatemala. Art     1 or 2 or 3 
+          their ratification when they affect existing laws, the   171(1), 172. Constitutions of the Countries of the             
+          power of the nation, economic or political union of      World, Gisbert H. Flanz, Oceana Publications,                  
+          Central America, or obligate the State financially in    Inc., Dobbs Ferry, NY, January 1997.                           
+          excess of 1% of the Budget of Ordinary Revenues,                                                                        
+          or constitutes a pledge to international arbitration. If                                                                
+          the treaty refers to passage of armed forces through                                                                    
+          national territory or affects the security of the State,                                                                
+          then approval must consist of two-thirds of                                                                             
+          Congress.                                                                                                               
+Guinea    1990: Ratified by law.                                   Fundamental Law of the Second Republic of          2           
+                                                                   Guinea. Art. 77. Constitutions of the Countries of             
+                                                                   the World, Gisbert H. Flanz, Oceana                            
+                                                                   Publications, Inc., Dobbs Ferry, NY, August                    
+                                                                   1993.                                                          
+Guinea-   1991: Council of State (organ that executes the          The Constitution of the Republic of Guinea-        1           
+Bissau    decisions of the National Popular Assembly).             Bissau. Art. 64(l)(j). Constitutions of the                    
+                                                                   Countries of the World, Gisbert H. Flanz, Oceana               
+                                                                   Publications, Inc., Dobbs Ferry, NY, November                  
+                                                                   1994.                                                          
+Guyana    1970: No mention. As in the UK case, ratification is     Constitution of the Co-operative Republic of       1           
+          an executive act rather than a legislative act.          Guyana. Constitutions of the Countries of the                  
+          Caribbean nations typically do not accept the            World, Gisbert H. Flanz, Oceana Publications,                  
+          “Ponsonby rule” (see United Kingdom) and tend to         Inc., Dobbs Ferry, NY, June 1997.                              
+          have less parliamentary input than does the UK.        Winston Anderson, “Treatymaking in Caribbean         
+                                                                 Law and Practice: The Question of Parliamentary      
+                                                                 Participation.”                                      
+                                                                 http://ie.search.msn.com/en-                         
+                                                                 us/srchasst/srchasst.htm                             
+Haiti     1987: The two branches of the National Assembly        Art. 98(3); Arts. 139 and 140; Art. 276 (1-2).     3 
+          have the power to approve or reject international      http ://www.georgetown.edu/pdba/Constitutions/H      
+          treaties and conventions. The President of the         aiti/haitil 987.html                                 
+          Republic negotiates and signs all international                                                             
+          treaties, conventions and agreements and submit                                                             
+          them to the National Assembly for ratification.                                                             
+          The National Assembly may not ratify any                                                                    
+          international treaty, convention or agreement                                                               
+          containing clauses contrary to the Constitution.                                                            
+          International treaties, conventions and agreements                                                          
+          are ratified in the form of a decree. Once                                                                  
+          international treaties or agreements are approved and                                                       
+          ratified in the manner stipulated by the Constitution,                                                      
+          they become part of the legislation of the country                                                          
+          and abrogate any laws in conflict with them.                                                                
+Honduras  1982: Ratified by Executive Power in matters of its    Constitution of the Republic of Honduras. Art 16,  2 
+          exclusive competence. All other treaties must be       20, 21. Constitutions of the Countries of the        
+          approved by the National Congress. Treaties            World, Gisbert H. Flanz, Oceana Publications,        
+          dealing with the national territory must be approved   Inc., Dobbs Ferry, NY, March 1997.                   
+          by a vote of not less than three-fourths of the total                                                       
+          members of the National Congress.                                                                           
+Hong Kong 1997 HK turned over to PRC as Special                  HK Basic Law. Basics: Chp. II, Arts. 12-13, 17-    1 
+          Administrative Region and Basic Law implemented.       18; Chief Executive: Chp. IV, Sec. 1, Arts. 48-49,   
+        No clear language on ratification. PRC in charge of    56, 62(c); External Affairs: Chp. VIII, Arts. 150-     
+        foreign affairs for Hong Kong SAR. All treaties and    153; Amending Basic Law: Chp. VIII, Arts. 158-         
+        international agreements in effect before turnover to  159.                                                   
+        PRC still in effect. HK Chief Executive and            http://www.constitution.org/cons/hongkong.txt          
+        Government can engage in external affairs and                                                                 
+        conclude international relations and agreements on                                                            
+        economics, trade, finance, monetary issues,                                                                   
+        shipping, commerce, tourism, culture, sports, etc.                                                            
+        Can participate with the Central PRC Government in                                                            
+        diplomatic relations. Laws passed by the SAR                                                                  
+        Legislative Council must be reported to PRC                                                                   
+        Standing Committee of the National People's                                                                   
+        Congress, which can invalidate the law if they think                                                          
+        it conflicts with Basic Law.                                                                                  
+Hungary Need to find the date on this constitution.            Constitution 19??. Parliament: Chp. II, Arts.      2   
+        Parliament ratifies treaties. President concludes      19(2)(f), 24, 26; President: Chp. Ill, Arts. 30/A;     
+        international agreements and gets prior approval to    Government: Chp. VII, Art. 35(j).                      
+        conclude from Parliament when necessary. The           http://wiretap.area.eom/ftp.items/Gov/World/h          
+        Government also may conclude international             ungary.con                                             
+        agreements. Appears that a simply majority of at                                                              
+        least 1/2 the members of Parliament will suffice to                                                           
+        pass unless the treaty acts to amend the Constitution.                                                        
+        In that case, needs 2/3 vote.                                                                                 
+Iceland 1944 Constitution amended 1955, 1984, 1991, 1995.      1944 Constitution amended. Chp. I, Art. 2;         1-2 
+        The President and the Althingi (legislature) have      President: Chp. II, Arts. 18-19, 21, 26; Althingi:     
+        joint legislative power. The President has the power   Chp. Ill, Art. 53.                                     
+        to conclude treaties unless the treaty deals with      http://www.mfa.is/embassy/Lang.nsf/Files/Con           
+        renouncement, servitude, change in Icelandic           stitution/Sfile/ C onstitution.doc                     
+        territory or state structure. In those cases, need                                                            
+        Althingi approval. Not clear if Althingi votes to                                                             
+          ratify all treaties or if President can do on own with                                                      
+          countersignature of Minister. Althingi needs 1/2 of                                                         
+          members to vote.                                                                                            
+          [NB: 1944 Constitution updated in 1955 to rewrite                                                           
+          to include human rights elements from international                                                         
+          agreements adopted. ]                                                                                       
+India     1998: does not mention treaty ratification             http://www.uni-wuerzburg.de/law/in00000 .html      1 
+          specifically. From a 1951 Calcutta High Court          Quote from Winston Anderson, “Treatymaking in        
+          decision (Union of India v. Jain): “Making a treaty is Caribbean Law and Practice: The Question of          
+          an executive act and not a legislative act... .The     Parliamentary Participation.” Pp. 96-97.             
+          President makes a treaty in exercise of his executive                                                       
+          power and no court of law in India can question its                                                         
+          validity.”                                                                                                  
+Indonesia 1945 Indonesian Constitution. Very little said about   1945 Constitution. Chapter II: Rakvat; Chapter     2 
+          treaty ratification. Basically, President can conclude III: Executive.                                      
+          international treaties with the consent of the Dewan   http://asnic.utexas.edu/asnic/countries/indonesia/   
+          Perwakilan Rakyat (House of Representatives).          ConstIndonesia.html                                  
+          Dewan approves laws with a simple majority vote                                                             
+          and the signature of the President. If treaty acts to                                                       
+          amend the Constitution, it would require a 2/3 vote                                                         
+          of at least 2/3 of the members of the Majelis                                                               
+          Permersyawaratan Rakyat (Upper House).                                                                      
+Iran                                                                                                                  
+Iraq      1990 Interim Constitution. Structure is a president    1990 Interim Constitution. Chp. IV, Sec. I, Arts.  1 
+          with executive power, the Revolutionary Command        37, 43, 44: Revolutionary Command Council;           
+          Council which appears to be an upper body of           Chap. IV, Sec. II, Arts. 51-53: National Council.    
+          legislature, and National Council, the lower body.     http://www.uni-                                      
+          Revolutionary Command Council ratifies treaties ---    wuerzburg.de/law/iz00000_.html                       
+          not clear by what margin.                                                                                   
+Ireland     1996: All international agreements must be             International Relations: Art. 29; Parliament: Art.    2 
+            approved by the Dail Eirann (the House) of the         15.                                                     
+            National Parliament by majority vote.                  http://www.maths.tcd.ie/local/JUNK/Constituti           
+                                                                   on/Articlesl5-27.html                                   
+Israel      1964. The President signs all treaties and             Basic Law, The President of the State, 1964,          2 
+            international agreements ratified by the Knesset       Section 11(5).                                          
+            (Parliament), apparently by majority vote.             httD://www.israel.ors/mfa/so.asD?MFAH00h5               
+                                                                   0                                                       
+                                                                   http://www.uni-wuerzburg.de/law/is_indx.html            
+Italy       2001. Parliament ratifies treaties on political        Parliament: Part II, Sec. I, Arts. 75, 80; President: 2 
+            matters, issues of judicial competence or arbitration, Ttitle II, Art. 89.                                     
+            finance, or changes in territory or laws by majority   http://www.uni-wuerzburg.de/law/itOOOOO_.html           
+            vote of majority of members. Referendum on                                                                     
+            international treaties or agreements is forbidden by                                                           
+            the constitution.                                                                                              
+Ivory Coast                                                                                                                
+Jamaica     1962: No mention. As in the UK case, ratification is   The Jamaica (Constitution) Order in Council           1 
+            an executive act rather than a legislative act.        1962. Constitutions of the Countries of the World,      
+            Caribbean nations typically do not accept the          Gisbert H. Flanz, Oceana Publications, Inc.,            
+            “Ponsonby rule” (see United Kingdom) and tend to       Dobbs Ferry, NY, February 1999.                         
+            have less parliamentary input than does the UK.        Winston Anderson, “Treatymaking in Caribbean            
+                                                                   Law and Practice: The Question of Parliamentary         
+                                                                   Participation.”                                         
+Japan       1946. The Emperor, with the advice and approval of                                                           2 
+            the Cabinet, shall promulgate treaties. The Cabinet    1946 Constitution. Emperor: Chp. I, Art. VII;           
+            concludes treaties, but shall obtain prior or,         Diet: Chp. IV, Art. 61; Cabinet: Chp. V Art.            
+            depending on circumstances, subsequent approval of     78(3); Amendments: Chp. IX.                             
+            the Diet. The Diet (two houses) passes legislation     http://wiretap.area.com/ftp.items/Gov/World/japa        
+            by a majority vote. When the House of Councilors       n.con                                                   
+           makes a decision different from that of the House of     http://www.uni-                                      
+           Representatives, and when no agreement can be            wuerzburg. de/law/j aOOOOO.html# A060_               
+           reached even through a joint committee of both                                                                
+           Houses, or in the case of failure by the House of                                                             
+           Councilors to take final action within thirty days, the                                                       
+           decision of the House of Representatives shall be the                                                         
+           decision of the Diet. One third of members must be                                                            
+           present for quorum. Amendments to Constitution                                                                
+           require 2/3 vote.                                                                                             
+Jordan     1984: King ratifies, except treaties that involve        The Constitution of the Hashemite Kingdom of       2 
+           financial commitments of the Treasury or that affect     Jordon. Art. 33. Constitutions of the Countries of   
+           the general or personal rights of Jordanians must be     the World, Gisbert H. Flanz, Oceana                  
+           sanctioned by the National Assembly.                     Publications, Inc., Dobbs Ferry, NY, November        
+                                                                    1984.                                                
+Kazakhstan 1993 Kazakhastan Constitution. The president can         1993 Kazakhstan Constitution. Sec. I, Art. 4;      3 
+           sign international treaties and the final ratification   President: Sec. Ill, Art. 44(11); Parliament: Sec.   
+           instruments. However, international treaties must        IV, Arts. 50, 53(3)(10), 54(7), 61(4);               
+           pass a review by the Constitutional Council. If the      Constitutional Council: Sec. V, Arts. 72(13), 73,    
+           Council does not approve, the treaty may not be          74(1).                                               
+           ratified. If the Council does approve, the treaty has    http://www.president.kz/main/mainframe.asp?          
+           to be ratified by Parliament in a simple majority vote   lng=en                                               
+           of both houses (Senate and Majilis). Presidential                                                             
+           objections to Constitutional Council or Parliament                                                            
+           decisions can be overridden with 2/3 vote of either                                                           
+           body respectively.                                                                                            
+Kenya      1992. No mention of international treaties that I can    1992 Constitution. Parliament: Chp. II, Part I,    1 
+           find. Kenya follows the approach of the UK,              Art. 41(11), Part 2, Arts. 46(3),(5)(b), 47(2).      
+           whereby ratification of treaties is an executive act, in http ://oncamnus.richmond.edu/~i i ones//confin      
+         a dualist system of law (domestic legislation is      der/Kenva.htm                                           
+         required to give treaties domestic effects).          http://www.kenyaconstitution.org/docs/07d017.ht         
+                                                               m                                                       
+Kiribati Date unclear. No mention of treaty ratification.      http://www.vanuatu.usp.ac.fi/paclawmat/Kiribati         
+                                                               _legislatiorLKiribati_Constitution.html                 
+Korea    1948 Constitution amended through 1987. Treaties      1948 Constitution. Chp. I, Art. 6; National           2 
+         have the force of law in South Korea. The President   Assembly: Chp. Ill, Arts. 49, 53, 60; Executive:        
+         may conclude and ratify treaties. However, the        Chp. IV, Arts. 72-3.                                    
+         National Assembly also has the power of ratification  http://www.ccourt.go.kr/english/et.html                 
+         over treaties on a broad range of enumerated topics.                                                          
+         Bills pass National Assembly by a simple majority                                                             
+         vote of a majority of the members. The President                                                              
+         may override a passed bill, but the National                                                                  
+         Assembly can push the bill ahead with a 2/3 vote.                                                             
+Kuwait   1962. The National Assembly ratifies treaties. Those  The Constitution of the State of Kuwait. Art 70.      2 
+         treaties concerning territory, natural resources,     E3241 Constitutions of the Countries of the             
+         sovereign or citizen rights, commerce, navigation,    World, Gisbert H. Flanz, Oceana Publications,           
+         residence, expenditure in addition to the budget, and Inc., Dobbs Ferry, NY, March 1991.                      
+         those amending the laws of Kuwait come into force                                                             
+         only when made by a law.                                                                                      
+Kyrgyz   1993 Constitution. The President signs treaties and   Chp. I, Art. 12(3); President: Sec. II, Chp. Ill (2), 2 
+Republic passed ratification instruments. The Jogorku          (3); Jogorku Kenesh: Sec. I, Arts. 58(9), 59, 62,       
+         Kenesh (Parliament) ratifies treaties. Two-thirds of  65(4).                                                  
+         members must be present to vote and takes a           http://www.kyrgyzstan.Org/Law/constitution.h            
+         majority vote to pass. Changes to the Constitution    tm                                                      
+         require a 2/3 votes.                                                                                          
+Laos     1991: National Assembly.                              Constitution of the Lao People's Democratic           2 
+                                                               Republic. Art. 40. Constitutions of the Countries       
+                                                               of the World, Gisbert H. Flanz, Oceana                  
+                                                                 Publications, Inc., Dobbs Ferry, NY, January          
+                                                                 1992.                                                 
+Latvia  1922, as amended 1998: The President shall               Arts. 24, 41,68, and 73.                            2 
+        implement the decisions of the (unicameral)              http://www.uni-wuerzburg.de/law/lgOOt .html           
+        Parliament concerning the ratification of                                                                      
+        international agreements. All international                                                                    
+        agreements which settle matters that may be decided                                                            
+        by the legislative process shall require ratification by                                                       
+        the Parliament. The Parliament shall make decisions                                                            
+        by an absolute majority of votes of the members                                                                
+        present at the sitting, except in cases specifically set                                                       
+        out in the Constitution. Peace treaties may not be                                                             
+        submitted to national referendum                                                                               
+Lebanon 1926 Constitution as amended through 1947. The           1926 Constitution as amended through 1947.          2 
+        President negotiates and ratifies treaties. He then      Legislature: Chp. I, Art. 16, Chp. II, Art. 34;       
+        brings the treaties to the unicameral Chamber of         Executive: Chp. IY, Art. 52, Title 11(b).             
+        Deputies. Treaties concerning trade or finance, or       http://leb.net/bcome/leb/constitution.html            
+        which cannot be denounced at the end of the year                                                               
+        cannot be approved without the consent of the                                                                  
+        Chamber. The Chamber passes resolutions with a                                                                 
+        majority of vote of a majority of the members.                                                                 
+        Changes to the Constitution require a 2/3 vote.                                                                
+Lesotho 1993: No mention. Lesotho follows the approach of        The Constitution of Lesotho. Constitutions of the   1 
+        the UK, whereby ratification of treaties is an           Countries of the World, Gisbert H. Flanz, Oceana      
+        executive act, in a dualist system of law (domestic      Publications, Inc., Dobbs Ferry, NY, September        
+        legislation is required to give treaties domestic        1999.                                                 
+        effects).                                                http://www.lesotho.gov.ls/constitute/gconstitute.li   
+                                                                 tm                                                    
+Liberia 1980: Legislature                                        Constitution of the Republic of Liberia. Art 34(f). 2 
+                                                                       Constitutions of the Countries of the World,                  
+                                                                       Gisbert H. Flanz, Oceana Publications, Inc.,                  
+                                                                       Dobbs Ferry, NY, September 1985.                              
+Libya         1969 constitution (by proclamation): The                 Art. 18,23; 34.                                   1           
+              Revolutionary Command Council constitutes the            http://www.uni-wuerzburg.de/law/lyOOOOO_.html                 
+              supreme authority in the Libyan Arab Republic. It                                                                      
+              will exercise the powers attached to national                                                                          
+              sovereignty, promulgate laws and decrees, decide in                                                                    
+              the name of the people the general policy of the                                                                       
+              State, and make all decisions it deems necessary for                                                                   
+              the protection of the Revolution and the regime. The                                                                   
+              Revolutionary Command Council shall declare war,                                                                       
+              conclude and ratify treaties and agreements, unless it                                                                 
+              authorizes the Council of Ministers to do so. Note:                                                                    
+              References to the King and Parliament in the 1951                                                                      
+              constitution shall be regarded as references to the                                                                    
+              Revolutionary Command Council.                                                                                         
+Liechtenstein 1981: The Price ratifies, except needs the approval      The Constitution of the Principality of           2           
+              of the Diet (legislature) for treaties dealing with      Liechtenstein. Art 8. Constitutions of the                    
+              territory, national property, sovereignty and citizen    Countries of the World, Gisbert H. Flanz, Oceana              
+              rights.                                                  Publications, Inc., Dobbs Ferry, NY, June 2000.               
+Lithuania     1992: The President signs treaties. The Parliament       1992 Constitution. Chp. I, Art. 9(1); Parliament: 2 or 3 or 4 
+              may ratify or denounce treaties with a majority vote     Chp. V, Art. 67(16), 69(2-4); President: Chp. VI,             
+              or, if the treaty alters the Constitution, by a 3/5 vote Art. 84(2); Foreign Policy and National Defense:              
+              of all members. Any issue of national importance         Chp. 13, Art. 138. http://www.uni-                            
+              can be subjected to a national referendum.               wuerzburg.de/law/lh00000_.html                                
+Luxembourg    1989: Treaties must be sanctioned by law and             The Constitution of the Grand Duchy of            2           
+              published. Needs absolute majority of members of         Luxembourg. Art 37, 62. Constitutions of the                  
+           the Chamber of Deputies (legislature). Measures are   Countries of the World, Gisbert H. Flanz, Oceana       
+           rejected if there is a tie.                           Publications, Inc., Dobbs Ferry, NY, March             
+                                                                 2002.                                                  
+Macedonia  1991 Constitution. The President or the Government    1991 Constitution. Assembly: Chp. Ill, Pt. I,      2   
+           may conclude international treaties. The unicameral   Arts. 68-69, 74-75; President: Chp. Ill, Pt. II;       
+           Assembly (legislature) ratifies or denounces treaties Government: Chp. Ill, Pt. IV.; International           
+           by a majority vote or a majority of the members and   Relations: Chp. Ill, Pt. VI, Art. 119.                 
+           by no less than 1/3 of the members. Constitutional    http://wiretap.area.com/ftp.items/Gov/World/mac        
+           changes require a 2/3 vote and a national             edonia.con                                             
+           referendum. The President must sign all passed                                                               
+           laws. If he declines, Assembly can override this by                                                          
+           a 2/3 vote.                                                                                                  
+Madagasgar 1998: President.                                      The Constitution of the Republic of Madagascar.    1   
+                                                                 Art 56. Constitutions of the Countries of the          
+                                                                 World, Gisbert H. Flanz, Oceana Publications,          
+                                                                 Inc., Dobbs Ferry, NY, March 1999.                     
+Malawi     1994: President negotiates, signs, enters into and    Chp. VIII, Art. 89(f) and Art. 96(1 )(f); Chp.     1-2 
+           accedes to international agreements or delegates      XXII, Art. 211(1) [transitional arrangements].         
+           such power to ministers, ambassadors and high         Constitution of the Republic of Malawi. Art 89(f).     
+           commissioners. The members of the cabinet assist      Constitutions of the Countries of the World,           
+           the President in determining what international       Gisbert H. Flanz, Oceana Publications, Inc.,           
+           agreements are to be concluded or acceded to and to   Dobbs Ferry, NY, March 2000.                           
+           inform Parliament thereon. Any international          http://www.sas.upenn.edu/Affican_Studies/Gover         
+           agreement ratified by an Act of Parliament shall      n_Political/mlwi_const.html                            
+           form part of the law of the Republic if so provided                                                          
+           for in the Act of Parliament ratifying the agreement.                                                        
+Malaysia   (Undated): Parliament may make laws pertaining to     Art. 71                                            2   
+           external affairs, including treaties, agreements and  Ninth Schedule, List I.                                
+           conventions, but this does not explicitly address     http://www.eur.nl/frg/iacl/armenia/constitu/consti     
+            treaty ratification.                                   t/malaysia/malays-e.htm                               
+Maldives    Amended 1968 Constitution. President signs             Amended 1968 Constitution. President: Chp. Ill,     1 
+            bilateral and multilateral agreements. He later        Art. 42(f); Executive - Cabinet: Chp. IV, Art. 60;    
+            ratifies them on the recommendation of his Cabinet     Legislature - People's Majlis: Chp. V(l), Art. 73-    
+            ministers. Does not seem that the legislature has any  74, 79; Legislature --- Special Majlis: Chp. VI(2),   
+            role --- at least not in the text of the Constitution. Art. 101; General Provisions: Chp. XIV, Art. 147.     
+                                                                   http://www.presidencymaldives.gov.mv/downl            
+                                                                   oad/constitution.pdf                                  
+Mali        1992: President ratifies, but peace treaties, those    Concerning Promulgation of the Constitution. Art    1 
+            dealing with commerce, international organizations,    114, 115. Constitutions of the Countries of the       
+            State finances, status of persons, cession and         World, Gisbert H. Flanz, Oceana Publications,         
+            territory must be approved by law.                     Inc., Dobbs Ferry, NY, May 1997.                      
+Malta       1964 Constitution as amended in 2001. Ratification     1964 Constitution as amended to 2001.               1 
+            not mentioned at all.                                  President: Chp. V; Parliament: Chp. VI;               
+                                                                   Executive: Chp. VII.                                  
+                                                                   http://www.gov.mt/frame.asp?l=2&url=http://j          
+                                                                   ustice.gov.mt                                         
+Marshall Is 1989: The Cabinet shall be responsible for             Art. V.l(3)d; Art. V.l(4)                           2 
+            conducting the foreign affairs of the Marshall         http://www.vanuatu.usp.ac.lj/paclawmat/Marshall       
+            Islands. Treaties must be ratified by the approval of  _Islands_legislation/Consolidation_1988/Marshal       
+            the Nitijela (lower house of parliament), signified by ls_Constitution.html                                  
+            resolution. [NB: No treaty or other international      Constitution of the Republic of the Marshall          
+            agreement which is finally accepted by, or on behalf   Islands. Constitutions of the Countries of the        
+            of the Marshall Islands on or after the effective date World, Gisbert H. Flanz, Oceana Publications,         
+            of this Constitution shall of itself have the force of Inc., Dobbs Ferry, NY, December 1996.                 
+            law in the Marshall Islands.]                                                                                
+Mauritania  1991: Generally, the President of the Republic signs   Title I Art. 36; Title V Art. 78(1).                2 
+           and ratifies treaties. However, peace treaties, union   http://www.uni-                                                
+           treaties, commerce treaties, treaties or accords        wuerzburg.de/law/mr00000_.html#1000_                           
+           concerning an international organization, treaties                                                                     
+           which require the finances of the State, treaties                                                                      
+           which modify provisions of a legislative nature,                                                                       
+           treaties concerning the status of persons, and treaties                                                                
+           concerning the borders of the State may only he                                                                        
+           ratified by a law.                                                                                                     
+Mauritius  2000: No mention.                                       Constitution of Mauritius. Constitutions of the    1           
+                                                                   Countries of the World, Gisbert H. Flanz, Oceana               
+                                                                   Publications, Inc., Dobbs Ferry, NY, September                 
+                                                                   2001.                                                          
+                                                                   http://www.intnet.mu/iels/gov mau.htm                          
+Mexico     1917, as amended: The Senate has exclusive powers       Art. 76(1); 85(X).                                 2           
+           to approve the treaties and diplomatic conventions      http://www.ilstu.edu/class/hist263/docs/1917cons               
+           made by the President of the Republic with foreign      t.html                                                         
+           powers.                                                                                                                
+Micronesia 1990: Congress                                          Constitution of the Federated States of            2           
+                                                                   Micronesia. Art IX, Sec.2(b). Constitutions of the             
+                                                                   Countries of the World, Gisbert H. Flanz, Oceana               
+                                                                   Publications, Inc., Dobbs Ferry, NY, November                  
+                                                                   1996.                                                          
+Moldova    1994: President concludes and signs international       1994 Constitution. Parliament: Chp. Ill, Arts. 60, 2 or 3 or 4 
+           agreements and submits to Parliament. Parliament        66(g), 74-75; President: Chp. V, Art. 86;                      
+           then ratifies or denounces treaties by simple           Constitutional Revisions: Title YI, Art. 143.                  
+           majority vote, or 2/3 vote if alters the constitution.  http://confinder.richmond.edU/moldova3.htm#C4                  
+           If treaty deals with an urgent national issue, appears                                                                 
+           could be submitted for national referendum.                                                                            
+Mongolia   1992: President or Government concludes                1992 Constitution. Chp. I, Art. 10; Parliament:    2           
+           international treaties. The Parliament ratifies or     Chp. Ill, Pt. I, Arts. 25(15-16); 27; President:               
+           denounces treaties with a simple majority vote of a    Chp. Ill, Pt. II, Art 33(4); Government: Chp. Ill,             
+           majority of the members. Government implements         Pt. Ill, Art. 38(9); Constitutional Amendment:                 
+           treaties. Constitutional changes require a national    Chp. VI, Art. 68. http://www.uni-                              
+           referendum and 2/3 vote of Parliament.                 wuerzburg.de/law/mg00000_.html                                 
+Morocco    1996: The King shall sign and ratify treaties.         Art. 31; Chapter 12, Arts. 103-106.                1 or 2 or 4 
+           However, treaties committing State finances shall      http://www.mincom.gov.ma/english/generalities/s                
+           not be ratified without having been approved under     tatest/constitution.htm                                        
+           the law (bicameral parliament, bills passed by                                                                        
+           absolute majority of the House). Treaties likely to                                                                   
+           affect the constitutional provisions shall be approved                                                                
+           in accordance with the procedures prescribed for the                                                                  
+           modification of the Constitution (initiated either by                                                                 
+           the King or 2/3 of one house of parliament, then to                                                                   
+           be submitted to national referendum).                                                                                 
+Mozambique 1990: Assembly of the Republic.                        Constitution of the Republic of Mozambique. Art    2           
+                                                                  135(k). Constitutions of the Countries of the                  
+                                                                  World, Gisbert H. Flanz, Oceana Publications,                  
+                                                                  Inc., Dobbs Ferry, NY, December 1992.                          
+Namibia    1990: National Assembly                                Constitution of the Republic of Namibia. Art       2           
+                                                                  63(2)(e). Constitutions of the Countries of the                
+                                                                  World, Gisbert H. Flanz, Oceana Publications,                  
+                                                                  Inc., Dobbs Ferry, NY, February 2000.                          
+Nepal      1990: Treaties approved by a simple majority of the    Constitution of the Kingdom of Nepal 2047          2 or 3      
+           House of Representatives UNLESS they deal with         (1990). Art 126(2). Constitutions of the Countries             
+           peace and friendship, defense and strategic alliance,  of the World, Gisbert H. Flanz, Oceana                         
+           territorial boundaries, or natural resources. If they  Publications, Inc., Dobbs Ferry, NY, June 1994.                
+            deal with any of these, then there must be a two-                                                                  
+            thirds majority in both Houses of Parliament.                                                                      
+Netherlands 1989 Constitution. The Council of State, which is            1992 Constitution. King: Chp. 2, Sec. I;          3   
+            headed by the King, shall submit treaties to                 Parliament: Chp. 3, Sec. 2, Art 62; Council of        
+            Parliament for approval. The Parliament (two                 State: Chp. 4, Art. 73(1); Legislative and            
+            chambers) approves by a simple majority vote of              Administrative: Sec. 2, Art. 91; Constitutional       
+            over half of the members. If treaty changes the              Revisions: Chp. 8, Art. 137. http://www.uni-          
+            constitution, 2/3 vote required.                             wuerzburg.de/law/nl00000_.html                        
+New Zealand Ratification procedures not contained in a                   http://www.mft.govt.nz/support/legal/treatyregist 1-2 
+            constitution. By common law, the power to take               er.html                                               
+            binding treaty action (that is, ratification, accession,                                                           
+            acceptance, approval, withdrawal or denunciation or,                                                               
+            in the case of bilateral treaties, signature) rests with                                                           
+            the Executive. Within this context, Cabinet has                                                                    
+            decided that certain international treaties (essentially                                                           
+            multilateral treaties and major bilateral treaties of                                                              
+            particular significance) will be presented to the                                                                  
+            House of Representatives for select committee                                                                      
+            consideration, before the executive takes binding                                                                  
+            treaty action. The parliamentary treaty examination                                                                
+            process, introduced in 1997 and made permanent in                                                                  
+            2000, requires all multilateral treaties and major                                                                 
+            bilateral treaties of particular significance to be                                                                
+            presented to the House before binding treaty action                                                                
+            is taken. NB: The Government will not take binding                                                                 
+            treaty action until the treaty is implemented (if necessary)                                                       
+            in New Zealand’s domestic law.                                                                                     
+Nicaragua   1987 Constitution with 1995 Reforms. President is            1987 Nicaraguan Constitution, with 1995           2   
+            responsible for negotiating and formalizing treaties,        Reforms. Article 138 (12) and 150 (8).                
+         which are ratified by the legislature with a simple    http://www.georgetown.edU/pdba/Constitutions/N            
+         majority. To become law, a bill must be sanctioned     ica/nica.html                                             
+         by the president, but a presidential veto can be       Constitutions of the World, Robert Maddex,                
+         overridden by “one-half plus one of the total law      Congressional Quarterly Inc., Washington D.C.,            
+         makers.”                                               1995.                                                     
+Niger    1966: President of the Republic. If treaties deal with The Constitution of the Republic of Niger. Art     1 or 2 
+         defense, peace or international organizations which    118, 119. Constitutions of the Countries of the           
+         modify State laws or include financial engagements,    World, Gisbert H. Flanz, Oceana Publications,             
+         then they must be ratified by law.                     Inc., Dobbs Ferry, NY, August 1997.                       
+Nigeria  1999: No treaty between the Federation and any         Chp. 1.12.1-3; Part I, Exclusive Legislative List, 3      
+         other country shall have the force of law to the       item 31.                                                  
+         extent to which any such treaty has been enacted       http://www.nigeria-                                       
+         into law by the National Assembly. Such a law shall    law.org/ConstitutionOfTheFederalRepublicOfNig             
+         not be enacted unless it is ratified by a majority of  eria.htm#Powers_of_F ederal_Republic_of_N igeri           
+         all the Houses of Assembly in the Federation.          a                                                         
+Norway   Consent of Parliament is needed only for issues of     http://www.parliament.the-stationery-              1-2    
+         "special importance".                                  office.co.uk/pa/cml99798/cmselect/cmdfence/46             
+                                                                9iii/df0310.htm                                           
+Oman     1996: The Sultan (Head of State).                      The Basic Statute of the State. Art 42.            1      
+                                                                Constitutions of the Countries of the World,              
+                                                                Gisbert H. Flanz, Oceana Publications, Inc.,              
+                                                                Dobbs Ferry, NY, June 1997.                               
+Pakistan 1999: As far as I can tell, treaty ratification and    http://pakistani.org/pakistan/constitution/        1      
+         foreign affairs not mentioned at all.                                                                            
+Panama   1972 Constitution with 1978, 1983 and 1994             Political Constitution of Panama, with 1994        2      
+         Reforms. President “directs foreign relations along    Reforms. Duties of the President: Article 170 and         
+         with participation and countersignatures of the        Congress: Article 153.                                    
+         respective ministers.” The Legislative Assembly         http://www.georgetown.edU/pdba/Constitutions/P        
+         ratifies treaties by a majority vote.                   anama/panamal 994.html                                
+                                                                 Constitutions of the World, Robert Maddex,            
+                                                                 Congressional Quarterly Inc., Washington D.C.,        
+                                                                 1995.                                                 
+Papua NG 1975: The consent of Papua New Guinea to be             Part VI, Art. 117(2-8).                           1-2 
+         bound as a party to a treaty may be given only by the   http://www.vanuatu.usp.ac.fi/Paclawmat/PNG_le         
+         Head of State, acting with, and in accordance with,     gislation/ Constitution.htm                           
+         the advice of the National Executive Council; or by                                                           
+         a Minister authorized either generally or specifically                                                        
+         for the purpose by the Head of State. The consent of                                                          
+         Papua New Guinea to be bound as a party to a treaty                                                           
+         shall not be given unless a treaty document relating                                                          
+         to the treaty has been presented to the Parliament for                                                        
+         at least ten sitting days. Within that time, parliament                                                       
+         may disapprove a treaty by an absolute majority                                                               
+         vote. In that case the government can re-present the                                                          
+         treaty to the Parliament. Parliament can waive its                                                            
+         right to review a treaty, and review can be avoided if                                                        
+         both the Speaker (acting on behalf of the Parliament)                                                         
+         and the Prime Minister agree that is in the national                                                          
+         interest.                                                                                                     
+         No treaty forms part of the municipal law of Papua                                                            
+         New Guinea unless it is given the status of                                                                   
+         municipal law by or under a Constitutional Law or                                                             
+         an Act of the Parliament. Legislative approval or                                                             
+         ratification of a treaty alone does not give it the                                                           
+         status of municipal law.                                                                                      
+Paraguay 1992: Approved by a law of Congress.                    Constitution of the Republic of Paraguay. Art     2   
+                                                                 141. Constitutions of the Countries of the World,     
+                                                                     Gisbert H. Flanz, Oceana Publications, Inc.,                       
+                                                                     Dobbs Ferry, NY, April 1993.                                       
+Peru        1993 Constitution, with 2000 reforms. Treaties must      Political Constitution of Peru, with reforms           1-2         
+            be approved by Congress before being ratified by         Introduced by Law 27365, 2002. Article 56 and                      
+            the President when concerning Human Rights, the          57                                                                 
+            sovereignty of the state, national defense, and          http://www.georgetown.edU/pdba/Constitutions/P                     
+            financial obligations of the state. For all other        eru/per93.html                                                     
+            matters, except when doing so would change the           Constitutions of the World, Robert Maddex,                         
+            constitution, the president may ratify international     Congressional Quarterly Inc., Washington D.C.,                     
+            treaties.                                                1995.                                                              
+Philippines 1987: adopts the generally accepted principles of                                                               3           
+            international law as part of the law of the land. No     Art. II, section 2; Art. VII, section 21.                          
+            treaty or international agreement shall be valid and     http://www.chanrobles.com/philsupremelawl.htm                      
+            effective unless concurred in by at least two-thirds     #1987%20Constitution%20of%20the%20Republi                          
+            of all the Members of the Senate.                        c%20of%20the%20Philippines                                         
+Poland      Treaty ratification requires consent granted by          Treaty Ratification: Art. 89(1),(2), 90, 125.          1 or 3 or 4 
+            statute if the treaty concerns: peace, alliance,         House of Deputies and Senate: Chp. IV;                             
+            political or military treaties; the rights, freedoms, or President: Chp. V; Council of Ministers: Chp. VI.                  
+            obligations of citizens; membership in international     http://www.uni-                                                    
+            organizations; financial responsibilities; requires a    wuerzburg.de/law/pl00000_.html#A125_                               
+            statute to be enacted. The Council of Ministers must                                                                        
+            notify the Parliament of its intent to ratify or                                                                            
+            denounce treaties which don't require a statute to                                                                          
+            take effect. Treaties are passed by a 2/3 vote of at                                                                        
+            least half of the Deputies and Senators of                                                                                  
+            Parliament. A national referendum on treaties is                                                                            
+            possible.                                                                                                                   
+Portugal    1997: The president signs international agreements       International Relations/Law: Pt. I, Sec. I, Arts.      2 or 4      
+            and the Assembly approves them with an absolute          77-8; President: Pt. Ill, Sec. II, Chp. II, Arts. 134-             
+            majority vote. The president also signs the              35; Referendum: Pt. IV, Sec. I, Art. 115.5;                        
+        Assembly resolution giving approval or denying the       Assembly: Pt. Ill, Sec. III. Chp. II, Arts. 161(i),   
+        international agreement. International agreements        168.                                                  
+        may be submitted to referendum unless they deal          http://www.parlamento.pt/leis/constituicao ing        
+        with peace or territorial borders.                       les/IND_CRP_ING.htm                                   
+Qatar   1970: Ruler (Head of the State) must ratify and then     The Provisional Constitution for Qatar. Art 23(3).  1 
+        publish.                                                 Constitutions of the Countries of the World,          
+                                                                 Gisbert H. Flanz, Oceana Publications, Inc.,          
+                                                                 Dobbs Ferry, NY, July 1973.                           
+Romania 1991 Constitution. The President concludes               Parliament: Title IV, Arts. 7, 15; President, Title 2 
+        international treaties. The Parliament --- Assembly      IV, Chp. II, Art. 6, Art. 91. Art. 20(2) gives        
+        of Deputies and the Senate --- ratify or denounce        supremacy to international human rights law.          
+        international treaties within 60 days. Simple            http://wiretap.area.com/ftp.items/Gov/World/rom       
+        majority vote is all that is required, apparently.       ania.con                                              
+        Where inconsistencies exist between the covenants        http://www.uni-                                       
+        and treaties on fundamental human rights Romania         wuerzburg.de/law/ro00000_.html#C001_                  
+        is a party to and internal laws, the international                                                             
+        regulations shall take precedence.                                                                             
+Russia  1993 Russian Federation Constitution. The                President: Pt. I, Chp. IV, Arts. 84(c), 86(c);      2 
+        president signs instruments of treaty ratification. It   Federal Assembly: Pt. I, Chp. IV, Arts. 95,           
+        is not specifically listed as the duty of the Parliament 103(3), 105; Constitutional Amendment: Pt. I, Art     
+        to ratify treaties, but seems implied because            Art 86; Chp. 9, Art. 136.                             
+        President only has right to sign ratification            Supremacy of treaties: Part I, Art. 15(4)             
+        instruments. The Assembly passes resolutions by          http ://www.uni-                                      
+        majority vote unless it amends the Constitution. In      wuerzburg.de/law/rsOOOOO_.html                        
+        that instance, it needs a 2/3 vote of both houses.       http://www. 1 upinfo.com/country-guide-               
+        State Duma (lower house) and Federation Council          study/russia/russial 51 .html                         
+        (upper house) must approve treaties.                                                                           
+             International treaties of the Russian Federation are a                                                           
+             component part of its legal system. If an                                                                        
+             international treaty of the Russian Federation                                                                   
+             stipulates other rules than those stipulated by the                                                              
+             law, the rules of the international treaty apply.                                                                
+Rwanda       1991: The President of the Republic shall negotiate,   Art. 44.                                           1-2    
+             conclude, and ratify all international treaties,       http://www.uni-wuerzburg.de/law/rw00000_.html             
+             conventions, and agreements, whether of public or      Constitution of the Republic of Rwanda.                   
+             private law, and send them to the National Assembly    Constitutions of the Countries of the World,              
+             as soon as allowed by the State's interest and         Gisbert H. Flanz, Oceana Publications, Inc.,              
+             security. However, peace treaties, alliance treaties,  Dobbs Ferry, NY, August 1993.                             
+             treaties that may bring modifications to the national                                                            
+             territorial borders or affect sovereignty rights,                                                                
+             treaties concerning the Republic's relations with one                                                            
+             or several other States, as well as treaties involving                                                           
+             financial implications not anticipated in the budget,                                                            
+             shall be enforceable only following approval by law.                                                             
+San Marino                                                                                                                    
+Sao T&P      1990: National Assembly                                Constitution of the Democratic Republic of Sao     2      
+                                                                    Tome and Principe. Art 86(j). Constitutions of the        
+                                                                    Countries of the World, Gisbert H. Flanz, Oceana          
+                                                                    Publications, Inc., Dobbs Ferry, NY, May 1993.            
+Saudi Arabia 1993 Constitution. The King approves and amends        The Basic System (of Government) and the           1      
+             all international treaties.                            Provencial System, The System of the Majlis al-           
+                                                                    Shoura. Art.70. Constitutions of the Countries of         
+                                                                    the World, Gisbert H. Flanz, Oceana                       
+                                                                    Publications, Inc., Dobbs Ferry, NY, May 1995.            
+                                                                    Chp. 6, Art. 70. http://www.uni-                          
+                                                                    wuerzburg.de/law/sa00000 .html                            
+Senegal      2001: President ratifies. Except peace treaties,       Constitution of the Republic of Senegal. Art.      1 or 2 
+             commercial treaties, those dealing with international 95,96. Constitutions of the Countries of the           
+             organizations, State finances, status of persons,     World, Gisbert H. Flanz, Oceana Publications,          
+             territory and those modifying law must be ratified by Inc., Dobbs Ferry, NY, December 2001.                  
+             virtue of law.                                                                                               
+Seychelles   1996: Ratified by law OR a majority vote of the       Constitution of the Republic of Seychelles. Art      2 
+             National Assembly.                                    64(4). Constitutions of the Countries of the           
+                                                                   World, Gisbert H. Flanz, Oceana Publications,          
+                                                                   Inc., Dobbs Ferry, NY, December 1996.                  
+Sierra Leone 1991: Ratified by law OR a majority vote of the       Constitution of Sierra Leon, 1991. Art 40(4)(h).     2 
+             Parliament.                                           Constitutions of the Countries of the World,           
+                                                                   Gisbert H. Flanz, Oceana Publications, Inc.,           
+                                                                   Dobbs Ferry, NY, February 1998.                        
+Singapore    1995 Constitution. No mention of treaty ratification. 1995 Constitution. Constitutional Amendment:         1 
+             Resolutions pass Parliament by simple majority vote   Pt. II, Art. 5(2). Legislature: Pt. VI, Arts. 56-57.   
+             of members present and voting. Quorum is 1/4 of       http://www.uni-                                        
+             members. Amendments to the Constitution require a     wuerzburg.de/law/sn00000_.html                         
+             2/3 vote.                                                                                                    
+Slovak       1991 Constitution. The president outwardly            National Council: Chp. V, Arts. 85, 86(e);           2 
+Republic     concludes and ratifies treaties. The National         Referendum: Pt. II; Executive: Chp. VI, Art. 102.      
+             Council (apparently unicameral) concludes treaties    http://wiretap.area.eom/ftp.items/Gov/World/s          
+             by majority vote of at least 1/2 deputies. Any law    lovakia.con                                            
+             changing the Constitution requires a 3/5 vote of the                                                         
+             deputies. Referendums can be called for any matter                                                           
+             of constitutional law or to confirm alliances with                                                           
+             states.                                                                                                      
+Slovenia     1991 Constitution amended through 2000. The only      National Council: Pt. IV, Sec. A, Arts. 86, 90;      1 
+             mention of treaty ratification is that the President President: Sec. C, Art. 107; Constitutional             
+             can "publish adherence to international agreements." Amendments: Pt. IX, Art. 169. http://www.uni-           
+             Ratification not expressly mentioned. Resolutions    wuerzburg.de/law/si00000_.html                          
+             pass National Council by majority vote of present                                                            
+             deputies. Constitutional amendments require a 2/3                                                            
+             vote of all deputies. Referendums may be called on                                                           
+             any issue which is the subject of state regulation.                                                          
+Soloman      1978: No mention.                                    http://www.vanuatu.usp.ac.lj/paclawmat/Solomo           
+Islands                                                           n Islands legislation/Solomons Constitution.htm         
+                                                                  1                                                       
+                                                                  The Constitution of Solomon Islands.                    
+                                                                  Constitutions of the Countries of the World,            
+                                                                  Gisbert H. Flanz, Oceana Publications, Inc.,            
+                                                                  Dobbs Ferry, NY, September 1996.                        
+Somolia      1980: People's Assembly                              The Constitution of the Somali Democratic        2      
+                                                                  Republic. Art.67(5). Constitutions of the               
+                                                                  Countries of the World, Gisbert H. Flanz, Oceana        
+                                                                  Publications, Inc., Dobbs Ferry, NY, November           
+                                                                  1981.                                                   
+South Africa 1997 Constitution. International agreements are      Parliament: Chp. IV, Sec. 53, 65, 74; President: 1 or 3 
+             negotiated and signed by the executive. If they are  Chp. V; International Law: Chp. XIY, Sec. 231.          
+             self-executing, they are instantly binding. If they  http ://www.uni-                                        
+             require national legislation, Parliament must pass a wuerzburg.de/law/sfOOOOO_.html                          
+             law to ratify and enact the treaty. Constitutional                                                           
+             amendments require either the approval of 75% of                                                             
+             the National Assembly and 6 provinces of the                                                                 
+             National Council of Provinces or 2/3 of the National                                                         
+          Assembly and 6 provinces. Acts pass the National                                                              
+          Council with the agreement of at least 5 provinces                                                            
+          and pass the National Assembly by a majority of at                                                            
+          least 1/3 of the deputies of the national assembly.                                                           
+Spain     1978 Constitution as amended to 1992. The Crown        Crown: Title II, Arts. 63-64; Parliament: Title III, 3 
+          signs treaties after they've been approved by the      Chp. I, Arts. 74, 79; International Treaties: Chp.     
+          Parliament. Parliament, both houses, passes bills by   Ill, Art. 94; Constitutional Amendment: Title X,       
+          majority vote of a majority of members.                Art. 167.                                              
+          International treaties need the consent of the Senate  http://www.uni-                                        
+          on political, military, territorial, finance issues or wuerzburg.de/law/sp00000_.html                         
+          changes in domestic law. Constitutional                                                                       
+          amendments require 3/5 vote of each house.                                                                    
+Sri Lanka 2000 Constitution. No explicit mention of treaty       2000 Sri Lanka Constitution. Executive: Chp.         1 
+          ratification. Parliament passes bills by a majority    VII, Arts. 55-61; Parliament: Chp. X, Arts. 85-86;     
+          vote of present members, which must number at          Constitutional Amendment: Chp. XI, Art. 94(5);         
+          least 20. Constitutional amendments require a 2/3      Referendum: Chp. XII, Arts. 97-98.                     
+          vote of all the members of Parliament. 2/3 of all of   http://www.priu.gov.lk/Cons/Constitution.html          
+          the members of Parliament can vote to hold a                                                                  
+          national referendum or the President can submit any                                                           
+          matter of national importance to a national                                                                   
+          referendum.                                                                                                   
+St. Lucia 1978: No mention. As in the UK case, ratification is   httpV/www.georgetown.edu/pdba/Constitutions/L        1 
+          an executive act rather than a legislative act.        ucia/Luc78.html                                        
+          Caribbean nations typically do not accept the          The Constitution of Saint Lucia. Constitutions of      
+          “Ponsonby rule” (see United Kingdom) and tend to       the Countries of the World, Gisbert H. Flanz,          
+          have less parliamentary input than does the UK.        Oceana Publications, Inc., Dobbs Ferry, NY,            
+                                                                 October 1979.                                          
+                                                                 Winston Anderson, “Treatymaking in Caribbean           
+                                                                   Law and Practice: The Question of Parliamentary     
+                                                                   Participation.”                                     
+St. Vincent 1979: No mention. As in the UK case, ratification is   http://www.georgetown.edU/pdba/Constitutions/V    1 
+            an executive act rather than a legislative act.        incent/stvincent79.html                             
+            Caribbean nations typically do not accept the          The Constitution of Saint Vincent and the           
+            “Ponsonby rule” (see United Kingdom) and tend to       Grenadines. Constitutions of the Countries of the   
+            have less parliamentary input than does the UK.        World, Gisbert H. Flanz, Oceana Publications,       
+                                                                   Inc., Dobbs Ferry, NY, December 1979.               
+                                                                   Winston Anderson, “Treatymaking in Caribbean        
+                                                                   Law and Practice: The Question of Parliamentary     
+                                                                   Participation.”                                     
+St.Kitts    1982: No mention. As in the UK case, ratification is   http://www.georgetown.edU/pdba/Constitutions/K    1 
+& Nevis     an executive act rather than a legislative act.        itts/stkitts-nevis.html                             
+            Caribbean nations typically do not accept the          The Constitution of Saint Christopher and Nevis.    
+            “Ponsonby rule” (see United Kingdom) and tend to       Constitutions of the Countries of the World,        
+            have less parliamentary input than does the UK.        Gisbert H. Flanz, Oceana Publications, Inc.,        
+                                                                   Dobbs Ferry, NY, April 1984.                        
+                                                                   Winston Anderson, “Treatymaking in Caribbean        
+                                                                   Law and Practice: The Question of Parliamentary     
+                                                                   Participation.”                                     
+Sudan       1998: National Assembly approves treaties and          The Constitution of the Republic of the Sudan.    2 
+            international agreements. The Council of Ministers     Art. 49; Art 73(l)(d). Constitutions of the         
+            initiates legislation approving international treaties Countries of the World, Gisbert H. Flanz, Oceana    
+            and agreements.                                        Publications, Inc., Dobbs Ferry, NY, March          
+                                                                   1999.                                               
+                                                                   http://www.sudanembassyus.org/constitution/frin     
+                                                                   dex.html                                            
+Surinam     1987: President ratifies. Needs explicit (passing of  Constitution of the Republic of Suriname. Art      2      
+            law) or implicit (no objection) approval of the       72(a), 103, 104. Constitutions of the Countries of        
+            National Assembly.                                    the World, Gisbert H. Flanz, Oceana                       
+                                                                  Publications, Inc., Dobbs Ferry, NY, November             
+                                                                  1991.                                                     
+Swaziland   1968: No mention.                                     Swaziland Independence Order 1968.                 1      
+                                                                  Constitutions of the Countries of the World,              
+                                                                  Gisbert H. Flanz, Oceana Publications, Inc.,              
+                                                                  Dobbs Ferry, NY, May 1991.                                
+Sweden      1975 Constitution, amended through 1989. The          1975 Constitution as amended through 1989.         1 or 2 
+            Government may enter into international treaties.     Parliament: Chp. 3, Arts. 1(2), 5. Laws: Chp. 8,          
+            However, treaties that change Swedish law, are        Arts. 4, 15(3); Relations with other states: Chp.         
+            binding or are of major importance require the        10, Arts. 1, 5. http://www.uni-                           
+            approval of Parliament. The Government can ratify     wuerzburg.de/law/sw00000_.html                            
+            international treaties without Parliament's approval                                                            
+            if it is in the interest of the realm and it gets the                                                           
+            consent of the Foreign Affairs Advisory Council.                                                                
+            Parliament passes bills by a simple majority vote of                                                            
+            the present members. It is unicameral. Parliament                                                               
+            may also pass a law which states that changes to any                                                            
+            international treaty approved by the realm become                                                               
+            instantly applied in Sweden.                                                                                    
+Switzerland 1999 Constitution (replacing 1874 Constitution).      Foreign Relations: Chp. 2, Sec. 1, Art. 56;        3 or 4 
+            The Government signs international treaties and       Referendum: Title 4, Chp. 2, Arts. 138-142;               
+            submits treaties that require domestic legislation to Parliament: Title 5, Chp. 2, Sec. 2, Arts. 159,           
+            the bicameral Parliament for approval. Parliament     166; Federal Government: Title 5, Chp. 3, Sec. 2,         
+            approves treaties by a majority vote of a majority of Art. 184. http://www.uni-                                 
+            its members in both houses. Many instances in         wuerzburg.de/law/sz00000_.html                            
+           which issues may be decided by referenda, including                                                              
+           international treaties which may also be submitted to                                                            
+           referenda. Optional referenda when unifiying Swiss                                                               
+           law with multilateral law and entry into international                                                           
+           organizations also.                                                                                              
+Syria      1973: The Government concludes international                                                                   2 
+           treaties. The President ratifies and abolishes           The Constitution of the Syrian Arab Republic of         
+           "internal treaties." The bicameral Parliament            March 13, 1973. Art 71(5). Constitutions of the         
+           (People's Assembly) approves or denies                   Countries of the World, Gisbert H. Flanz, Oceana        
+           international treaties concerning war, peace,            Publications, Inc., Dobbs Ferry, NY, March              
+           alliance, sovereignty, finance or which require new      1991.                                                   
+           legislation. The Constitutional Court reviews laws       1973 Constitution. Legislature: Chp. 2, Pt. I,          
+           for constitutionality. However, the Court has no         Arts. 50, 71(5); Executive: Pt. 2, Sec. I, Arts. 104,   
+           right to review laws passed by national referenda.       112; Cabinet: Pt. 2, Sec. 2, Art. 127(7);               
+           Constitutional amendments require presidential           Constitutional Court: Chp. 3, Pt. 2, Arts, 145-46;      
+           approval and the approval of at least 2/3 of             Constitutional Amendment: Chp. 3, Pt. 3, Art.           
+           Parliament. No mention of what constitutes a             149. http://www.uni-                                    
+           majority in Parliament.                                  wuerzburg.de/law/sy00000_.html                          
+Tajikistan 1994 Constitution. The president signs international     .1994 Constitution. Supreme Assembly: Chp. 3,         3 
+           treaties. The legislature, the Supreme Assembly          Arts. 49(18), 61; President: Chp. 4, Art. 69(14);       
+           (Majilis-e Olis), ratifies treaties. Bills pass by a 2/3 Constitutional Amendment: Chp. 10, Art. 98.             
+           vote of all the deputies of the Assembly.                http://www.2eocities.com/Paris/9305/constituti          
+           Constitutional amendments requires the vote of 2/3       on.index.html                                           
+           of the deputies.                                         The Constitution of the Republic of Tajikstan. Art      
+                                                                    49(18). Constitutions of the Countries of the           
+                                                                    World, Gisbert H. Flanz, Oceana Publications,           
+                                                                    Inc., Dobbs Ferry, NY, February 2000                    
+Tanzania   1977 Constitution. Treaty ratification not               President: Sec. II, Chp. II, Pt. I; Parliament: Sec.  1 
+           mentioned. National Assembly approves bills and          Ill, Chp. Ill, Pt. I, Arts. 97-98; House of             
+         president signs. If the bill changes the constitution,  Representatives: Sec. Ill, Chp. Ill, Pt. III.           
+         it requires a 2/3 vote of the National Assembly.        http://www.tanzania.go.tz/constitutionf.html            
+Thailand 1997: The King can conclude peace treaties or           1997 Constitution. King: Chp. II; National       1?     
+         treaties that require changes in national territory or  Assembly: Chp VI, Secs. 94, 155, 193, 214, 224;         
+         which require domestic legislation to enact. The        Constitutional Amendment: Chp. XII, Sec. 313.           
+         bicameral National Assembly requires at least a         http://www.uni-                                         
+         majority of members to be present to vote.              wuerzburg.de/law/thOOOOO_.html                          
+         Although not mentioned, assume majority vote                                                                    
+         carries a bill to passage. Constitutional amendments                                                            
+         require a vote of at least half of the total members of                                                         
+         both houses.                                                                                                    
+Togo     1992: President ratifies, except peace treaties,        Constitution of the Fourth Republic of Togo. Art 1 or 2 
+         commercial treaties, those relating to international    137,138. Constitutions of the Countries of the          
+         organizations, State finances, legislative provisions,  World, Gisbert H. Flanz, Oceana Publications,           
+         status of individuals and territory cannot be ratified  Inc., Dobbs Ferry, NY, February 1994.                   
+         except by a law.                                                                                                
+Tonga    1988: King (as long as it is in accordance with the     Constitution of Tonga. Art 39. Constitutions of  1 or 2 
+         laws). King cannot alter the customs duties without     the Countries of the World, Gisbert H. Flanz,           
+         consent of the Legislative Assembly.                    Oceana Publications, Inc., Dobbs Ferry, NY,             
+                                                                 November 1993.                                          
+Trinidad 1976: No mention. As in the UK case, ratification       Constitution of the Republic of Trinidad and     1      
+&Tobago  is an executive act rather than a legislative act.      Tobago. Constitutions of the Countries of the           
+         Caribbean nations typically do not accept the           World, Gisbert H. Flanz, Oceana Publications,           
+         “Ponsonby rule” (see United Kingdom) and tend to        Inc., Dobbs Ferry, NY, M+E6146arch 2000.                
+         have less parliamentary input than does the UK.         http://www.georaetown.edu/Ddba/Constitutions/T          
+                                                                 rinidad/trinidad7 6 .html                               
+                                                             Winston Anderson, “Treatymaking in Caribbean               
+                                                             Law and Practice: The Question of Parliamentary            
+                                                             Participation.”                                            
+Tunisia 1959 Constitution as amended to 1988. Treaties that  1959 Constitution as amended through 1988.          1 or 4 
+        move Tunisia closer to Arab unity can only be        Treaties: Chp. I, Art. 2; Legislative Power: Chp.          
+        enacted by national referendum. Treaties do not      II, Arts. 28(13), 32-33; Executive: Chp. Ill, Arts.        
+        become law until ratified. The President ratifies    47-48; Constitutional Amendment: Chp IX, Art.              
+        treaties; no parliamentary role is mentioned. The    73. http://www.uni-                                        
+        President can submit treaties to national referenda. wuerzburg.de/law/tsOOOOO_.html                             
+        Bills pass the National Parliament by an absolute                                                               
+        majority. Constitutional amendments require at 2/3                                                              
+        vote of Parliament.                                                                                             
+Turkey  1982: The President ratifies and promulgates         Chp. I (II) (D)(90); Chp. II (I)(D) (104)(b)        1 or 2 
+        international treaties. The ratification of treaties http://www.mfa.gov.tr/grupc/ca/cag/Part3.htm               
+        concluded with foreign states and international                                                                 
+        organizations on behalf of the Republic of Turkey,                                                              
+        shall be subject to adoption by the Turkish Grand                                                               
+        National Assembly by a law approving the                                                                        
+        ratification. Agreements regulating economic,                                                                   
+        commercial and technical relations, and covering a                                                              
+        period of no more than one year, may be put into                                                                
+        effect through promulgation, provided they do not                                                               
+        entail any financial commitment by the State, and                                                               
+        provided they do not infringe upon the status of                                                                
+        individuals or upon the property rights of Turkish                                                              
+        citizens abroad. In such cases, these agreements                                                                
+        must be brought to the knowledge of the Turkish                                                                 
+        Grand National Assembly within two months of                                                                    
+        their promulgation. International agreements duly                                                               
+            put into effect carry the force of law. No appeal to                                                               
+            the Constitutional Court can be made with regard to                                                                
+            these agreements, on the ground that they are                                                                      
+            unconstitutional.                                                                                                  
+Turkmenista 1992: The People's Council (Parliament “plus”)                                                              1 or 2 
+n           ratifies and denounces treaties concerning                Constitution of Turkmenistan, Chp. II Art. 48;           
+            intergovernmental unions and other formations; The        Chp. Ill Art 50(5); Art. 54. Constitutions of the        
+            President of Turkmenistan is the head of state and of     Countries of the World, Gisbert H. Flanz, Oceana         
+            the executive power, is the highest official of           Publications, Inc., Dobbs Ferry, NY, July 1994.          
+            Turkmenistan, and acts as a guarantor of                  http://www.ecostan.org/laws/turkm/turkmenistan           
+            international agreements.                                 con.html                                                 
+United Arab                                                                                                             1      
+Emirates                                                                                                                       
+Uganda      1995: The President or a person authorized by the         The Constitution of the Republic of Uganda, Art   2      
+            President Execution may make treaties, conventions,       123(1-2). Constitutions of the Countries of the          
+            agreements, or other arrangements between Uganda          World, Gisbert H. Flanz, Oceana Publications,            
+            and any other country or between Uganda and any           Inc., Dobbs Ferry, NY, March 1996.                       
+            international organization or body, in respect of any     But see:                                                 
+            matter. Parliament shall make laws to govern              httn ://www. mvuganda. co .ug/categories/govemme         
+            ratification of treaties, conventions, agreements or      nt/constitution/chanter three.htm                        
+            other arrangements.                                       http://www.govemment.go.ug/constitution/index.           
+                                                                      php                                                      
+UK          The role played by the UK Parliament in the               httn://www.parliament.the-stationerv-             1-2    
+            ratification of treaties is not constitutionally defined, office.co.uk/pa/cml99798/cmselect/cmdfence/46            
+            but derives from custom and convention. Parliament        9iii/df0310.htm                                          
+            has no formal input into treaty-making, which is the                                                               
+            prerogative of the executive acting on behalf of the                                                               
+            Crown. An undertaking given by the then Under-                                                                     
+        Secretary of State for Foreign Affairs in 1924 led to                                                   
+        the eponymous 'Ponsonby Rule' which has                                                                 
+        "gradually hardened into constitutional practice,                                                       
+        observed in principle by all Governments". The rule                                                     
+        is described in Erskine May as follows:                                                                 
+        When a treaty requires ratification, accession,                                                         
+        acceptance or approval, the Government does not                                                         
+        usually proceed with this until a period of twenty-one                                                  
+        days has elapsed from the date on which the text of                                                     
+        such a treaty was laid before Parliament by Her                                                         
+        Majesty's command, a practice which allows                                                              
+        Parliament the opportunity to consider commitments                                                      
+        which the Government is proposing to enter.                                                             
+        Hardly any treaties laid under the ’Ponsonby Rule’                                                      
+        are debated on the floor of the House; whether or not                                                   
+        a treaty is debated is a matter for the Government                                                      
+        and its business managers, although it is conceivable                                                   
+        that the Opposition or a backbencher could secure a                                                     
+        debate.                                                                                                 
+Ukraine 1996: International treaties that are in force, agreed Art. 9; Art. 85(2); Art 106(3).                2 
+        to be binding by the Verkhovna Rada of Ukraine,        http://www.rada.kiev.ua/const/conengl.htm        
+        are part of the national legislation of Ukraine.                                                        
+        Verkhovna Rada of Ukraine grants consent to the                                                         
+        binding character of international treaties of Ukraine                                                  
+        within the term established by law, and can                                                             
+        denounce international treaties of Ukraine. The                                                         
+        President conducts negotiations and concludes                                                           
+        international treaties of Ukraine.                                                                      
+Uruguay 1967 Constitution, with reforms until 1996.            1967 Constitution, with reforms until 1996.    2 
+        President ratifies treaties approved by the absolute   Presidential Powers: Article 168 (20). General   
+        majority of the General Assembly.                      Assembly Article 85(7).                          
+                                                                  http://www.georgetown.edU/pdba/Constitutions/U             
+                                                                  ruguay/uruguay96.html                                      
+US         1789 Constitution. The President makes treaties        Article II, Sec. 2, Clause 2.                       3      
+           with the advice and consent of 2/3 of the U.S.         http ://www.house .gov/ Constitution/ Constitution.        
+           Senate.                                                html                                                       
+Uzbekistan 1992 The (unicameral) Parliament has exclusive                                                             2      
+           jurisdiction over ratifying and denouncing                                                                        
+           international treaties and agreements. The President   Chp. XVIII, Art. 78(21); Chp. XIX, Art. 92(4)              
+           of the Republic conducts negotiations and signs        http://www.ecostan.org/laws/uzb/uzbekistancon_             
+           treaties and agreements, and ensures compliance        eng.html                                                   
+           with the treaties and agreements concluded by, and     http://dir.yahoo.com/Regional/Countries/Uzbekist           
+           the obligations assumed by, the republic.              an/ Go vemment/Law/                                        
+Vanuatu    1988: Treaties negotiated by the Government shall      Chp. IV, Art. 26(a-e)                               1 or 2 
+           be presented to Parliament for ratification when they  The Constitution of the Republic of Vanuatu. Art           
+           concern international organizations, peace or trade;   26. Constitutions of the Countries of the World,           
+           commit the expenditure of public funds; affect the     Gisbert H. Flanz, Oceana Publications, Inc.,               
+           status of people; require amendment of the laws of     Dobbs Ferry, NY, February 1998.                            
+           the Republic of Vanuatu; or provide for the transfer,  http://www.vanuatu.usp.ac.fj/paclawmat/Vanuatu             
+           exchange or annexing of territory.                     _legislation/English/1988_Consolidation/V anuatu           
+                                                                  Constitution.html                                          
+Venezuela  1961: The President directs the foreign affairs of the Title IV, Chp. I, Art. 128; Title V. Chp. II, Art.  1 or 2 
+           Republic and makes and ratifies treaties.              150(1); Title V, Chp. V, Art. 176; Title VI, Chp.          
+           International treaties must be approved by a special   II, Art. 190(5).                                           
+           law in order to be valid, unless they concern the      http://www.embavenez-                                      
+           execution or consummation of pre-existing              us.org/politica/constitu.html                              
+           obligations of the Republic, the application of                                                                   
+           principles expressly recognized by it, the execution                                                              
+           of ordinary acts in international relations, or the                                                               
+           exercise of powers which the law expressly confers                                                                
+           on the National Executive. The Senate initiates                                                                
+           discussion of bills relating to treaties and                                                                   
+           international agreements. The time period for the                                                              
+           promulgation of a law approving an international                                                               
+           treaty, convention, or agreement is left to the                                                                
+           discretion of the National Executive, in conformity                                                            
+           with international usage and the convenience of the                                                            
+           Republic.                                                                                                      
+Viet Nam   1992: The National Assembly has the obligation and      Chp. VI, Art. 84(13); Chp. VII, Art. 103(10).       2  
+           power to decide fundamental policies in external        http://www.vietnamembassy-usa.org/learn/gov-           
+           relations; to ratify or annul international agreements  constitution7.php3                                     
+           that have been signed or participated in on the                                                                
+           proposal of the country's President. The president                                                             
+           negotiates and signs international agreements;                                                                 
+           approves or joins international agreements, except in                                                          
+           cases where a decision by the National Assembly is                                                             
+           necessary.                                                                                                     
+Yemen AR   1994: House of Representatives (Legislative Power)      The Constitution of the Republic of Yemen. Part     2  
+                                                                   III, Chp. I, Art 91. Constitutions of the Countries    
+                                                                   of the World, Gisbert H. Flanz, Oceana                 
+                                                                   Publications, Inc., Dobbs Ferry, NY, March             
+                                                                   1995.                                                  
+                                                                   http://www.al-bab.com/yemen/gov/con94.htm              
+Yugoslavia 1992 Constitution. The president promulgates            Federal Assembly: Sec. V, Title I, Arts. 78(4), 90; 3? 
+           treaties. The Federal Assembly (bicameral) has          President: Sec. V, Title II, Art. 96(2);               
+           authority ratify treaties, as well as to decide matters Constitutional Amendment: Sec. IX.                     
+           that change the constitution, territory of the nation,  http ://www.uni-                                       
+           issues of war and peace by majority vote of both        wuerzburg.de/Iaw/srOOOOO_.html                         
+           houses. Changes to the constitution require a 2/3                                                              
+           vote of each chamber.                                                                                          
+Zaire    1992: President ratifies, but needs authorization of   Constitution of the Republic of Congo. Art 172.    2 
+(Congo)  Parliament on peace treaties, defense treaties,        Constitutions of the Countries of the World,         
+         commercial treaties, treaties relative to natural      Gisbert H. Flanz, Oceana Publications, Inc.,         
+         resources, international organizations, State          Dobbs Ferry, NY, December 1993.                      
+         finances, status of persons, territory, and those                                                           
+         modifying legislative provisions.                                                                           
+Zambia   1991 Constitution: The Executive negotiates and        Executive: Pt. IV, Art. 44(d); Legislature: Pt. V, 1 
+         signs treaties. It is not mentioned whether or not the Arts. 79, 84.                                        
+         Federal Assembly approves treaties once executive      http://zamlii.zamnet.zm/const/1996/const91.ht        
+         signs. The unicameral National Assembly approves       m#partiv                                             
+         bills by simple majority vote of at least 1/3 of the                                                        
+         members. Amendments of the Constitution requires                                                            
+         a 2/3 vote of all the members of the National                                                               
+         Assembly. Changes to Pt. Ill (fundamental rights                                                            
+         and freedoms of citizens) require a vote of at least a                                                      
+         majority of people.                                                                                         
+Zimbabwe 1996 Constitution. The President enters into           Executive: Chp. IV, Arts. 31 (2)(b), 31H(4)(b);    1 
+         international treaties. Not expressly stated that      Parliament: Chp. V, Pt. Ill, Arts. 40B, 51-52,54,    
+         Parliament then approves treaties. All bills going     56.                                                  
+         through Parliament must pass review of                 http://oncampus.richmond.cdu/~jjones//confin         
+         Parliamentary Legal Committee. Bills pass the          der/Zimbabwe.htm#Part%201%20-%20Pres                 
+         unicameral Parliament by simple majority of at least                                                        
+         25 members of the Parliament. To change the                                                                 
+         constitution or override a presidential veto, a 2/3                                                         
+         vote of Parliament is necessary.                                                                            

@@ -1,11 +1,10 @@
 # ARCHIGOS Preparation Script
 
 # This is a template for importing, cleaning, and exporting data
-# ready for the qPackage.
+# ready for the many packages universe.
 
 # Stage one: Collecting data
-# ARCHIGOS <- readr::read_csv2("data-raw/leaders/ARCHIGOS/ARCHIGOS.csv")
-ARCHIGOS <- read.delim2("data-raw/leaders/ARCHIGOS/arch_annual.txt")
+ARCHIGOS <- read.delim2("data-raw/leaders/archigos/arch_annual.txt")
 
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
@@ -20,24 +19,24 @@ ARCHIGOS <- as_tibble(ARCHIGOS) %>%
                 ~dplyr::na_if(., "(n_year)"))) %>%
   dplyr::mutate(across(where(is.character),
                 ~dplyr::na_if(., "Missing: No Information Found"))) %>%
-  manydata::transmutate(ARCHIGOS_ID = obsid,
-                     LeadID = leadid,
-                     Beg = manypkgs::standardise_dates(startdate),
-                     End = manypkgs::standardise_dates(enddate),
-                     BornDate = manypkgs::standardise_dates(borndate),
-                     DeathDate = manypkgs::standardise_dates(deathdate),
-                     YearBorn = manypkgs::standardise_dates(as.character(yrborn)),
-                     YearDied = manypkgs::standardise_dates(as.character(yrdied)),
+  manydata::transmutate(archigosID = obsid,
+                     leaderID = leadid,
+                     Beg = messydates::as_messydate(startdate),
+                     End = messydates::as_messydate(enddate),
+                     BornDate = messydates::as_messydate(borndate),
+                     DeathDate = messydates::as_messydate(deathdate),
+                     YearBorn = messydates::as_messydate(as.character(yrborn)),
+                     YearDied = messydates::as_messydate(as.character(yrdied)),
                      Female = ifelse(gender == "F", 1, 0)) %>%
   # NB: Max family ties is 3 at the moment
-  tidyr::separate(fties, into = c(paste0("Fties",LETTERS[1:3])),
-                  ";", remove = T) %>%
+  tidyr::separate(fties, into = c(paste0("Fties", LETTERS[1:3])),
+                  ";", remove = TRUE) %>%
   tidyr::separate(FtiesA, into = c("FtiesNameA", "FtiesCodeA"),
-                  "%", remove = T) %>%
+                  "%", remove = TRUE) %>%
   tidyr::separate(FtiesB, into = c("FtiesNameB", "FtiesCodeB"),
-                  "%", remove = T) %>%
+                  "%", remove = TRUE) %>%
   tidyr::separate(FtiesC, into = c("FtiesNameC", "FtiesCodeC"),
-                  "%", remove = T) %>%
+                  "%", remove = TRUE) %>%
   dplyr::mutate(
     leader = stringi::stri_trans_general(leader, "latin-ascii"),
     FtiesNameA = stringi::stri_trans_general(FtiesNameA, "latin-ascii"),
@@ -55,7 +54,19 @@ ARCHIGOS <- as_tibble(ARCHIGOS) %>%
                                               "564" = "Orange Free State",
                                               "711" = "Tibet",
                                               "730" = "Korea",
-                                              "815" = "Vietnam")))
+                                              "815" = "Vietnam"))) %>%
+  dplyr::mutate(cowID =
+                  countrycode::countrycode(ccode,
+                                           origin = "cown",
+                                           destination = "cowc",
+                                           custom_match =
+                                             c("260" = "GFR",
+                                               "340" = "SRB",
+                                               "563" = "SAR",
+                                               "564" = "OFS",
+                                               "711" = "TBT",
+                                               "730" = "KOR",
+                                               "815" = "VIE")))
 
 # Note for the custom matching dictionary:
 # 260; German Federal Republic, taken from COW.
@@ -65,14 +76,14 @@ ARCHIGOS <- as_tibble(ARCHIGOS) %>%
 # 711; Refers to Tibet prior to 1951
 # 730; Refers to Korea prior to the Korean War
 # 815; Refers to imperial Vietnam prior to the French colonization
-# Ordering stuff for output:
-ARCHIGOS <- ARCHIGOS %>% 
-    dplyr::select(ARCHIGOS_ID, LeadID, ccode, idacr, Label, leader, Beg, End, BornDate,
-                  DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
-                  prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry,
-                  num.exit, num.exitcode, num.posttenurefate, FtiesNameA,
-                  FtiesCodeA, FtiesNameB, FtiesCodeB, FtiesNameC, FtiesCodeC,
-                  ftcur)
+# Ordering variables for output:
+ARCHIGOS <- ARCHIGOS %>%
+    dplyr::select(archigosID, leaderID, cowID, idacr, Label, leader, Beg, End,
+                  BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit,
+                  exitcode, prevtimesinoffice, posttenurefate, dbpedia.uri,
+                  num.entry, num.exit, num.exitcode, num.posttenurefate,
+                  FtiesNameA, FtiesCodeA, FtiesNameB, FtiesCodeB, FtiesNameC,
+                  FtiesCodeC, ftcur)
 
 # manypkgs includes several functions that should help cleaning
 # and standardising your data.
@@ -80,9 +91,9 @@ ARCHIGOS <- ARCHIGOS %>%
 
 # Stage three: Connecting data
 # Next run the following line to make ARCHIGOS available
-# within the qPackage.
+# within the many package.
 manypkgs::export_data(ARCHIGOS, database = "leaders",
-                     URL = "http://ksgleditsch.com/archigos.html")
+                      URL = "http://ksgleditsch.com/archigos.html")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence
 # to certain standards.You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows)

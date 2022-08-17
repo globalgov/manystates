@@ -1,7 +1,7 @@
 # ISD Preparation Script
 
 # This is a template for importing, cleaning, and exporting data
-# ready for the qPackage.
+# ready for the many packages universe
 
 # Stage one: Collecting data
 ISD <- utils::read.csv("data-raw/states/ISD/ISD_Version1_Dissemination.csv")
@@ -9,36 +9,41 @@ ISD <- utils::read.csv("data-raw/states/ISD/ISD_Version1_Dissemination.csv")
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
 # formats of the 'ISD' object until the object created
-# below (in stage three) passes all the tests. 
+# below (in stage three) passes all the tests.
 ISD <- tibble::as_tibble(ISD) %>%
-  dplyr::rename(Finish = End) %>% 
+  dplyr::rename(Finish = End) %>%
   # Renaming the end date column to avoid self reference in transmutate.
-  manydata::transmutate(ISD_ID = `COW.ID`,
-                     Beg = manypkgs::standardise_dates(lubridate::dmy(Start)),
-                     End = manypkgs::standardise_dates(lubridate::dmy(Finish)),
+  manydata::transmutate(cowID = `COW.ID`,
+                     Beg = messydates::as_messydate(Start,
+                                                    resequence = "dmy"),
+                     End = messydates::as_messydate(Finish,
+                                                    resequence = "dmy"),
                      Label = manypkgs::standardise_titles(as.character(State.Name)),
-                     COW_Nr = manypkgs::standardise_titles(as.character(COW.Nr.))) %>%
-  # Standardising the dummie variables
-  dplyr::mutate(across(c(Micro, New.State),  ~ replace(., . == "", 0))) %>% 
-  dplyr::mutate(across(c(Micro, New.State), ~ replace(., . == "X", 1))) %>%  
-  #Dropping certain unnecessary columns.
-  dplyr::select(-X, -X.1, -X.2, -X.3, -X.4, -X.5,  -X.6, -X.7) %>% 
+                     cowNr = manypkgs::standardise_titles(as.character(COW.Nr.))) %>%
+  # Standardising the dummy variables
+  dplyr::mutate(across(c(Micro, NewState),  ~ replace(., . == "", 0))) %>%
+  dplyr::mutate(across(c(Micro, NewState), ~ replace(., . == "X", 1))) %>%  
+  #Dropping unnecessary columns.
+  dplyr::select(-X, -X.1, -X.2, -X.3, -X.4, -X.5,  -X.6, -X.7) %>%
   # Arranging dataset
-  dplyr::relocate(ISD_ID, Beg, End, COW_Nr, Label, Micro, New.State) %>%
-  dplyr::arrange(Beg, ISD_ID)
-# We know that ISD uses COW data for "old" states that is set to 1816-01-01 by default.
-# This is a rather uncertain date, that is, the dataset considers them states
-# on 1st January 1816, but they may have been established (much) earlier.
-# Let's signal to this uncertainty using the `{messydates}` package,
+  dplyr::relocate(cowID, Beg, End, cowNR, Label, Micro, NewState) %>%
+  dplyr::arrange(Beg, cowID)
+
+# Like COW, ISD sets "old" states as beginning on 1816-01-01 by default.
+# This is an approximate and uncertain date,
+# since these states may have been established (much) earlier.
+# We can annotate the date to account for this uncertainty
+# using the `{messydates}` package,
 # which is designed to deal with date uncertainty.
 ISD <- ISD %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01-01", messydates::on_or_before(Beg), Beg)),
                              End = messydates::as_messydate(ifelse(End >= "2011-12-31", messydates::on_or_after(End), End)))
+
 # manydata and manypkgs include several other
 # functions that should help cleaning and
 # standardizing your data.
 # Please see the vignettes or website for more details.
 # Stage three: Connecting data
-# Next run the following line to make ISD available within the qPackage.
+# Next run the following line to make ISD available within the package.
 manypkgs::export_data(ISD, database = "states",
                      URL = "http://www.ryan-griffiths.com/data")
 # This function also does two additional things.

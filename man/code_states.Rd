@@ -4,10 +4,14 @@
 \alias{code_states}
 \title{Code states}
 \usage{
-code_states(v)
+code_states(v, abbrev = FALSE)
 }
 \arguments{
 \item{v}{A character vector}
+
+\item{abbrev}{Do you want 3 letter country
+abbreviations to be returned?
+False by default.}
 }
 \value{
 A character vector of parties, in English, separated by commas.
@@ -19,9 +23,12 @@ Retrieves countries from a character vector
 This function builds upon the \code{stat_actor} list and the
 \code{countrycode} package to identify and return the parties mentioned
 in a character vector of agreement titles or texts.
+If the function is ran without an argument (i.e. \code{code_states()}),
+a complete list of states' names and abbreviations is returned.
 }
 \examples{
 states <- c("Two are from Switzerland", "One from New Zealand",
 "And one from Brazil")
 code_states(states)
+code_states(states, abbrev = TRUE)
 }

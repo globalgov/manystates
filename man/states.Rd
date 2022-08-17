@@ -6,16 +6,27 @@
 \title{states database documentation}
 \format{
 The states database is a list that contains the
-following 3 datasets: GW, ISD, COW.
+following 7 datasets: GW, ISD, COW, ICOW, GNEVAR_STATES, ICOW_COL, RATRULES.
 For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
 \describe{
 \item{GW: }{A dataset with 216 observations and the following
-5 variables: GW_ID, Beg, End, COW_Nr, Label.}
+5 variables: cowID, Beg, End, cowNR, Label.}
 \item{ISD: }{A dataset with 362 observations and the following
-7 variables: ISD_ID, Beg, End, COW_Nr, Label, Micro, New.State.}
+7 variables: cowID, Beg, End, cowNR, Label, Micro, NewState.}
 \item{COW: }{A dataset with 243 observations and the following
-5 variables: COW_ID, Beg, End, COW_Nr, Label.}
+5 variables: cowID, Beg, End, cowNR, Label.}
+\item{ICOW: }{A dataset with 217 observations and the following
+15 variables: cowID, Label, ColRuler, IndFrom, IndDate, IndViol, IndType,
+SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
+\item{GNEVAR_STATES: }{A dataset with 722 observations and the following
+12 variables: stateID, Label, Capital, Beg, End, Latitude, Longitude, Area,
+Region, RatProcedure, Constitutional Description, Source.}
+\item{ICOW_COL: }{A dataset with 221 observations and the following
+9 variables: cowID, cowNR, Label, Beg, cowID_Origin, IndepType, Beg_COW,
+Beg_GW, Beg_Polity2.}
+\item{RATRULES: }{A dataset with 177 observations and the following
+3 variables: stateID, Label, RatProcedure.}
 }
 }
 \usage{
@@ -23,5 +34,111 @@ states
 }
 \description{
 states database documentation
+}
+\details{
+\if{html}{\out{<div class="sourceCode">}}\preformatted{#> $GW
+#> ----------------------------------------------------------------------------
+#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+#> ----------------------------------------------------------------------------
+#> |     cowID     |  character  |             216|     0     |       0       |
+#> |      Beg      |    mdate    |             216|     0     |       0       |
+#> |      End      |    mdate    |             216|     0     |       0       |
+#> |     cowNR     |  character  |             216|     0     |       0       |
+#> |     Label     |  character  |             216|     0     |       0       |
+#> ----------------------------------------------------------------------------
+#> 
+#> 
+#> $ISD
+#> ----------------------------------------------------------------------------
+#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+#> ----------------------------------------------------------------------------
+#> |     cowID     |  character  |             362|     0     |       0       |
+#> |      Beg      |    mdate    |             362|     0     |       0       |
+#> |      End      |    mdate    |             362|     0     |       0       |
+#> |     cowNR     |  character  |             362|     0     |       0       |
+#> |     Label     |  character  |             362|     0     |       0       |
+#> |     Micro     |  character  |             362|     0     |       0       |
+#> |   NewState    |  character  |             362|     0     |       0       |
+#> ----------------------------------------------------------------------------
+#> 
+#> 
+#> $COW
+#> ----------------------------------------------------------------------------
+#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+#> ----------------------------------------------------------------------------
+#> |     cowID     |  character  |             243|     0     |       0       |
+#> |      Beg      |    mdate    |             243|     0     |       0       |
+#> |      End      |    mdate    |             243|     0     |       0       |
+#> |     cowNR     |  character  |             243|     0     |       0       |
+#> |     Label     |  character  |             243|     0     |       0       |
+#> ----------------------------------------------------------------------------
+#> 
+#> 
+#> $ICOW
+#> ----------------------------------------------------------------------------
+#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+#> ----------------------------------------------------------------------------
+#> |     cowID     |  character  |             217|     0     |       0       |
+#> |     Label     |  character  |             217|     0     |       0       |
+#> |   ColRuler    |   numeric   |             217|    46     |     21.2      |
+#> |    IndFrom    |   numeric   |             217|    39     |     17.97     |
+#> |    IndDate    |    mdate    |             217|     0     |       0       |
+#> |    IndViol    |   numeric   |             217|     0     |       0       |
+#> |    IndType    |   numeric   |             217|     0     |       0       |
+#> |    SecFrom    |   numeric   |             217|    179    |     82.49     |
+#> |    SecDate    |    mdate    |             217|    179    |     82.49     |
+#> |    SecViol    |   numeric   |             217|    179    |     82.49     |
+#> |     Into      |   numeric   |             217|    198    |     91.24     |
+#> |   IntoDate    |    mdate    |             217|    198    |     91.24     |
+#> |    COWsys     |    mdate    |             217|     0     |       0       |
+#> |     GWsys     |    mdate    |             217|    22     |     10.14     |
+#> |     Notes     |  character  |             217|    58     |     26.73     |
+#> ----------------------------------------------------------------------------
+#> 
+#> 
+#> $GNEVAR_STATES
+#> ---------------------------------------------------------------------------------------
+#> |       Column Name        |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+#> ---------------------------------------------------------------------------------------
+#> |         stateID          |  character  |             722|     0     |       0       |
+#> |          Label           |  character  |             722|    271    |     37.53     |
+#> |         Capital          |  character  |             722|    111    |     15.37     |
+#> |           Beg            |    mdate    |             722|    400    |     55.4      |
+#> |           End            |    mdate    |             722|    400    |     55.4      |
+#> |         Latitude         |   numeric   |             722|    225    |     31.16     |
+#> |        Longitude         |   numeric   |             722|    225    |     31.16     |
+#> |           Area           |  character  |             722|    590    |     81.72     |
+#> |          Region          |  character  |             722|    590    |     81.72     |
+#> |       RatProcedure       |   numeric   |             722|    690    |     95.57     |
+#> |Constitutional Description|  character  |             722|    690    |     95.57     |
+#> |          Source          |  character  |             722|    682    |     94.46     |
+#> ---------------------------------------------------------------------------------------
+#> 
+#> 
+#> $ICOW_COL
+#> ----------------------------------------------------------------------------
+#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+#> ----------------------------------------------------------------------------
+#> |     cowID     |  character  |             221|     2     |      0.9      |
+#> |     cowNR     |   numeric   |             221|     0     |       0       |
+#> |     Label     |  character  |             221|     0     |       0       |
+#> |      Beg      |    mdate    |             221|     0     |       0       |
+#> | cowID_Origin  |   numeric   |             221|     0     |       0       |
+#> |   IndepType   |   numeric   |             221|     0     |       0       |
+#> |    Beg_COW    |    mdate    |             221|     0     |       0       |
+#> |    Beg_GW     |    mdate    |             221|    23     |     10.41     |
+#> |  Beg_Polity2  |    mdate    |             221|    74     |     33.48     |
+#> ----------------------------------------------------------------------------
+#> 
+#> 
+#> $RATRULES
+#> ----------------------------------------------------------------------------
+#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+#> ----------------------------------------------------------------------------
+#> |    stateID    |  character  |             177|     0     |       0       |
+#> |     Label     |  character  |             177|     0     |       0       |
+#> | RatProcedure  |   numeric   |             177|     0     |       0       |
+#> ----------------------------------------------------------------------------
+}\if{html}{\out{</div>}}
 }
 \keyword{datasets}

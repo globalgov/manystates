@@ -1,15 +1,16 @@
 # Polity5 Preparation Script
 
 # This is a template for importing, cleaning, and exporting data
-# ready for the qPackage.
+# ready for the many packages universe.
 
 # Stage one: Collecting data
 
 #### Sidenote ####
-# Both Polity datasets have a slightly different structure. Polity5 is a
-# year-country dataset while Polity5d is a "polity case" dataset 
-# (e.g. one observation per regime change). We only integrate the Polity5
-# dataset in the present package.
+# Both Polity datasets have a slightly different structure.
+# Polity5 is a year-country dataset
+# while Polity5d is a "polity case" dataset
+# (e.g. one observation per regime change).
+# We only integrate the Polity5 dataset in the present package.
 
 # Polity case data
 Polity5 <- readxl::read_excel("data-raw/regimes/Polity5/p5v2018.xls")
@@ -19,17 +20,22 @@ Polity5 <- readxl::read_excel("data-raw/regimes/Polity5/p5v2018.xls")
 # formats of the 'Polity5' object until the object created
 # below (in stage three) passes all the tests.
 Polity5 <- tibble::as_tibble(Polity5) %>%
-  manydata::transmutate(Polity5_ID = ccode,
-              Beg = manypkgs::standardise_dates(byear, bmonth, bday),
-              End = manypkgs::standardise_dates(eyear, emonth, eday),
+  dplyr::mutate(cowID = manystates::code_states(country, abbrev = TRUE)) %>%
+  manydata::transmutate(
+              Beg = messydates::make_messydate(byear, bmonth, bday),
+              End = messydates::make_messydate(eyear, emonth, eday),
+              Year = messydates::as_messydate(as.character(year)),
               Label = manypkgs::standardise_titles(country)) %>%
-  dplyr::arrange(Polity5_ID, year) %>%
+  dplyr::mutate(ID = paste0(cowID, "-", Year)) %>%
+  dplyr::arrange(cowID, Year) %>%
   dplyr::select(-scode) %>%
-  dplyr::relocate(Polity5_ID, year, Label)
+  dplyr::relocate(ID, cowID, Year, Label)
+
 # manydata includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.
-# Dealing with special codes in autoc, democ, polity and polity2 variables
+
+# Dealing with special codes in autoc, democ, polity and polity2 variables.
 # Adds a dummy variable for polity interruptions, interregnum and transitions.
 Polity5 <- Polity5 %>%
   # Create a new variable to hold special cases
@@ -54,7 +60,7 @@ Polity5 <- Polity5 %>%
                               ~dplyr::na_if(., "NA-NA-NA")))
 # Stage three: Connecting data
 # Next run the following line to make Polity5 available
-# within the qPackage.
+# within the many package.
 manypkgs::export_data(Polity5, database = "regimes", 
                      URL = "http://www.systemicpeace.org/inscrdata.html")
 # This function also does two additional things.

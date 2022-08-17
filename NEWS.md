@@ -1,3 +1,24 @@
+# manystates 0.2.0
+
+## Package
+
+* Updated regex for `code_states()` to more accurately match and translate states' names.
+* Updated workflow files to include package caching.
+* Re-rendered documentation using `messydates::mreport()`.
+* Added `{cshapes}` and `{vdemdata}` dependencies
+
+## Data
+
+* Added data across databases
+  * Closed #9 by adding ICOW datasets to `states` database.
+  * Closed #24 by adding Economic Freedom datasets to `economics` database.
+  * Closed #25 by adding Freedom House data to `regimes` database.
+  * Closed #48 by adding data on states' ratification rules to `ratrules` database.
+  * Closed #49 by adding Colonial Relations data from ICOW dataset to `colsrels` database.
+  * Closed #50 by adding self-coded data on the latitude and longitude of state capitals as `GNEVAR_STATES` dataset in `states` database.
+  * Closed #51 by adding contiguity and regions data from FAO and ICOW in `contiguity` database.
+* Changed class for date variables (`Beg` and `End`) from `messydt` to `mdate` using `messydates::as_messydate()` in preparation scripts across databases.
+
 # manystates 0.1.0
 
 ## Package

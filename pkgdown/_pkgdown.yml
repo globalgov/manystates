@@ -18,6 +18,7 @@ navbar:
     - news
     right:
     - packages
+    - search
     - github
   components:
     home:
@@ -50,9 +51,8 @@ navbar:
           href: https://globalgov.github.io/manytrade/
 reference:
   - title: "Functions to code states"
-    desc: "These functions are here to assist in creating ID's for states:"
+    desc: "This function is here to assist in translating state names and creating IDs (based on abbreviations) for states:"
     contents:
-    # - code_modern_states Commented out in code
     - code_states
   - title: "Functions to import CShapes 2.0 data"
     desc: "These functions are here to assist users in importing correctly formatted CShapes 2.0 data:"
@@ -71,4 +71,12 @@ reference:
     - states
     - leaders
     - regimes
-    - genevar
+    - economics
+    - contiguity
+footer:
+  structure:
+    left: devs
+    right: panarchic
+  components:
+    devs: Developed by [James Hollway](https://jameshollway.com/).
+    panarchic: Part of the [PANARCHIC project](https://panarchic.ch/).

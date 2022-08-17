@@ -8,6 +8,8 @@ output: github_document
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/globalgov/manystates)
 ![GitHub Release Date](https://img.shields.io/github/release-date/globalgov/manystates)
 ![GitHub issues](https://img.shields.io/github/issues-raw/globalgov/manystates)
+[![Codecov test coverage](https://codecov.io/gh/globalgov/manystates/branch/main/graph/badge.svg)](https://app.codecov.io/gh/globalgov/manystates?branch=main)
+[![CodeFactor](https://www.codefactor.io/repository/github/globalgov/manystates/badge)](https://www.codefactor.io/repository/github/globalgov/manystates)
 <!-- badges: end -->
 
 `manystates` is a data package within the
@@ -31,11 +33,9 @@ data in R. Simply install the core package,
 and then you can discover, install and update various 'many packages' from the
 console.
 
-```{r install, eval = FALSE}
-# install.packages(remotes)
-remotes::install_github("globalgov/manydata") # this installs our core package, the only one you need to do independently
+```{r install, warning=FALSE, message=FALSE}
 manydata::get_packages() # this prints a list of the publicly available data packages currently available
-manydata::get_packages("manystates") # this downloads and installs the named package
+#manydata::get_packages("manystates") # this downloads and installs the named package
 ```
 
 ## Data included
@@ -43,7 +43,7 @@ manydata::get_packages("manystates") # this downloads and installs the named pac
 Once you have installed `{manydata}`, you can see the different databases and
 datasets included in the `{manystates}` package using the following function.
 
-```{r datasets, eval = FALSE}
+```{r datasets, warning=FALSE, message=FALSE}
 manydata::data_contrast("manystates")
 ```
 

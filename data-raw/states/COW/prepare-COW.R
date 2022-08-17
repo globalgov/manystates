@@ -11,18 +11,18 @@ COW <- readr::read_csv("data-raw/states/COW/states2016.csv")
 # formats of the 'COW' object until the object created
 # below (in stage three) passes all the tests.
 COW <- tibble::as_tibble(COW) %>%
-  manydata::transmutate(COW_ID = stateabb,
-                     Beg = manypkgs::standardise_dates(lubridate::as_date(paste(styear, stmonth, stday, sep = "-"))),
-                     End = manypkgs::standardise_dates(lubridate::as_date(paste(endyear, endmonth, endday, sep = "-"))),
-                     Label = manypkgs::standardise_titles(statenme),
-                     COW_Nr = manypkgs::standardise_titles(as.character(ccode))) %>%
-  dplyr::select(COW_ID, COW_Nr, Beg, End, Label) %>%
-  dplyr::relocate(COW_ID, Beg, End, COW_Nr, Label) %>%
-  dplyr::arrange(Beg, COW_ID)
+  manydata::transmutate(cowID = stateabb,
+                        Beg = messydates::make_messydate(styear, stmonth, stday),
+                        End = messydates::make_messydate(endyear, endmonth, endday),
+                        Label = manypkgs::standardise_titles(statenme),
+                        cowNR = manypkgs::standardise_titles(as.character(ccode))) %>%
+  dplyr::select(cowID, Beg, End, cowNR, Label) %>%
+  dplyr::arrange(Beg, cowID)
+
 # We know that COW data for "old" states is set to 1816-01-01 by default.
-# This is a rather uncretain date, that is, the dataset considers them states
+# This is a rather uncertain date, that is, the dataset considers them states
 # on 1st January 1816, but they may have been established (much) earlier.
-# Let's signal to this uncretainty using the `{messydates}` package,
+# Let's signal to this uncertainty using the `{messydates}` package,
 # which is designed to deal with date uncertainty
 COW <- COW %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01-01", messydates::on_or_before(Beg), Beg)),
                              End = messydates::as_messydate(ifelse(End >= "2016-12-31", messydates::on_or_after(End), End)))
@@ -32,7 +32,7 @@ COW <- COW %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-
 # Please see the vignettes or website for more details.
 
 # Stage three: Connecting data
-# Next run the following line to make COW available within the qPackage.
+# Next run the following line to make COW available within the many package.
 manypkgs::export_data(COW, database = "states",
                      URL = "https://correlatesofwar.org/data-sets/state-system-membership")
 

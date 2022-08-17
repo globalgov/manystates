@@ -11,23 +11,25 @@ import_vdem()
 import_vparty()
 }
 \value{
-A dataframe of the\verb{[vdem]} dataset in a qVerse-consistent format.
+A dataframe of the\verb{[vdem]} dataset in a many packages
+universe-consistent format.
 
-A dataframe of the\verb{[vparty]} dataset in a qVerse-consistent format.
+A dataframe of the\verb{[vparty]} dataset consistent with the
+many packages universe.
 }
 \description{
 Functions to import the
 \href{https://www.v-dem.net/en/data/data/v-dem-dataset-v111/}{V-Dem} and the
 \href{https://www.v-dem.net/en/data/data/v-party-dataset/}{V-Party} datasets
-from their \href{https://github.com/vdeminstitute/vdemdata}{\code{{vdemdata}}}
-package in a qVerse consistent format.
+from the \href{https://github.com/vdeminstitute/vdemdata}{\code{{vdemdata}}}
+package in a many packages universe consistent format.
 }
 \details{
 \code{import_vdem()} imports VDem 11.1 dataset
-and formats them to a qVerse consistent output.
+and formats it to be consistent with the many packages universe.
 
-\code{import_vparty()} imports the V-Party dataset and formats it to
-a qVerse consistent dataframe.
+\code{import_vparty()} imports the V-Party dataset and
+formats it to be consistent with the many packages universe.
 }
 \examples{
 \donttest{
