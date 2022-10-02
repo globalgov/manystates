@@ -1,3 +1,9 @@
+# manystates 0.1.1
+
+## Functions
+
+* Added `generate_states()` for generating lists of fictional state names
+
 # manystates 0.1.0
 
 ## Package
