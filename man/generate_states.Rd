@@ -10,8 +10,9 @@ generate_states(n = 10, prefixed = 0.15, suffixed = 0.15)
 \item{n}{Integer number of country names to generate
 from a library of fictional country names.}
 
-\item{affixed}{Proportion of country names with either
-a prefix or a suffix, by default 0.3.}
+\item{prefixed}{Proportion of country names with a prefix by default 0.15.}
+
+\item{suffixed}{Proportion of country names with a suffix by default 0.15.}
 }
 \value{
 String vector of fictional country names

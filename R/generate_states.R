@@ -1,8 +1,8 @@
 #' Generate a list of fictional country names
 #' @param n Integer number of country names to generate
 #'   from a library of fictional country names.
-#' @param affixed Proportion of country names with either
-#'   a prefix or a suffix, by default 0.3.
+#' @param prefixed Proportion of country names with a prefix by default 0.15.
+#' @param suffixed Proportion of country names with a suffix by default 0.15.
 #' @return String vector of fictional country names
 #' @importFrom stringr str_trim
 #' @examples
