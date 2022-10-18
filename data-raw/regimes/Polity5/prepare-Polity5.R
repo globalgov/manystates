@@ -20,7 +20,7 @@ Polity5 <- readxl::read_excel("data-raw/regimes/Polity5/p5v2018.xls")
 # formats of the 'Polity5' object until the object created
 # below (in stage three) passes all the tests.
 Polity5 <- tibble::as_tibble(Polity5) %>%
-  dplyr::mutate(cowID = manystates::code_states(country, abbrev = TRUE)) %>%
+  dplyr::mutate(cowID = manypkgs::code_states(country, abbrev = TRUE)) %>%
   manydata::transmutate(
               Beg = messydates::make_messydate(byear, bmonth, bday),
               End = messydates::make_messydate(eyear, emonth, eday),
@@ -58,11 +58,13 @@ Polity5 <- Polity5 %>%
   # Set messydates column NA-NA-NA to NA
   dplyr::mutate(dplyr::across(c(Beg, End),
                               ~dplyr::na_if(., "NA-NA-NA")))
+
 # Stage three: Connecting data
 # Next run the following line to make Polity5 available
 # within the many package.
 manypkgs::export_data(Polity5, database = "regimes", 
                      URL = "http://www.systemicpeace.org/inscrdata.html")
+
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence
 # to certain standards.You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows)

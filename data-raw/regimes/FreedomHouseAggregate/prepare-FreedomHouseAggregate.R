@@ -26,7 +26,7 @@ FreedomHouseAggregate.1 <- dplyr::rename(FreedomHouseAggregate.1,
                                          Label = `Country/Territory`) %>%
   manydata::transmutate(Territory = ifelse(`C/T?` == "t", 1, 0)) %>%
   dplyr::mutate(
-    cowID = manystates::code_states(Label, abbrev = TRUE),
+    cowID = manypkgs::code_states(Label, abbrev = TRUE),
     Year = as.character(Edition - 1),
     Edition = as.character(Edition),
     ID = paste0(cowID, "-", Year)
@@ -37,7 +37,7 @@ FreedomHouseAggregate.1 <- dplyr::rename(FreedomHouseAggregate.1,
 FreedomHouseAggregate.2 <- dplyr::rename(FreedomHouseAggregate.2,
                                          Label = `Country/Territory`) %>%
   manydata::transmutate(Territory = ifelse(`C/T?` == "t", 1, 0)) %>%
-  dplyr::mutate(cowID = manystates::code_states(Label, abbrev = TRUE)) %>%
+  dplyr::mutate(cowID = manypkgs::code_states(Label, abbrev = TRUE)) %>%
   tidyr::pivot_longer(cols = !c(Territory, cowID, Label)) %>%
   dplyr::mutate(
     Year = ifelse(grepl("03", name), "2002",

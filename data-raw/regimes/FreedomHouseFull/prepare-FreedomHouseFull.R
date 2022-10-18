@@ -22,7 +22,7 @@ FreedomHouseFull <- readxl::read_excel("data-raw/regimes/FreedomHouseFull/All_da
 FreedomHouseFull <- dplyr::rename(FreedomHouseFull, Label = `Country/Territory`) %>%
   manydata::transmutate(Territory = ifelse(`C/T` == "t", 1, 0)) %>%
   dplyr::mutate(
-    cowID = manystates::code_states(Label, abbrev = TRUE),
+    cowID = manypkgs::code_states(Label, abbrev = TRUE),
     Year = messydates::as_messydate(as.character(Edition - 1)),
     #Year in which the data was collected is one year prior to the edition year
     Edition = messydates::as_messydate(as.character(Edition)),

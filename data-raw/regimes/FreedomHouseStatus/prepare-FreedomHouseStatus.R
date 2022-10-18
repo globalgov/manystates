@@ -72,7 +72,7 @@ FreedomHouseStatus.1$Status_1972[161] <- "F"
 FreedomHouseStatus <- rbind(FreedomHouseStatus.1, FreedomHouseStatus.2) %>%
   dplyr::mutate(
     Country = manypkgs::standardise_titles(Country),
-    cowID = manystates::code_states(Country, abbrev = TRUE)) %>%
+    cowID = manypkgs::code_states(Country, abbrev = TRUE)) %>%
   dplyr::rename(Label = Country)
 FreedomHouseStatus$Territory <- c(
   rep(0, nrow(FreedomHouseStatus.1)),
