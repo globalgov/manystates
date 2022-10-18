@@ -41,7 +41,8 @@ Imports:
     tibble,
     lubridate,
     cshapes,
-    vdemdata
+    vdemdata,
+    stringr
 Suggests:
     pointblank,
     messydates,
