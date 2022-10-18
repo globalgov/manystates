@@ -1,23 +1,27 @@
-# GNEVAR_STATES Preparation Script
+# HUGGO_STATES Preparation Script
+
+# This dataset contains handcoded information on states,
+# such as the capitals, latitude and longitude, beginning and end dates,
+# regions, and ratification rules.
 
 # This is a template for importing, cleaning, and exporting data
 # ready for many packages universe.
 
 # Stage one: Collecting data
-GNEVAR_STATES <- readr::read_csv("data-raw/states/GNEVAR_STATES/statlatlons.csv")
-beg <- read.csv2("data-raw/states/GNEVAR_STATES/extra_begdates.csv")
-nap <- read.csv2("data-raw/states/GNEVAR_STATES/extra_napdates.csv")
-regions <- readr::read_csv("data-raw/states/GNEVAR_STATES/extra_regions.csv")
-capitals <- readr::read_csv("data-raw/states/GNEVAR_STATES/extra_capitals.csv")
-ratif <- readr::read_csv("data-raw/states/GNEVAR_STATES/extra_ratifs.csv")
+HUGGO_STATES <- readr::read_csv("data-raw/states/HUGGO_STATES/statlatlons.csv")
+beg <- read.csv2("data-raw/states/HUGGO_STATES/extra_begdates.csv")
+nap <- read.csv2("data-raw/states/HUGGO_STATES/extra_napdates.csv")
+regions <- readr::read_csv("data-raw/states/HUGGO_STATES/extra_regions.csv")
+capitals <- readr::read_csv("data-raw/states/HUGGO_STATES/extra_capitals.csv")
+ratif <- readr::read_csv("data-raw/states/HUGGO_STATES/extra_ratifs.csv")
 
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
-# formats of the 'GNEVAR_STATES' object until the object created
+# formats of the 'HUGGO_STATES' object until the object created
 # below (in stage three) passes all the tests.
 # We recommend that you avoid using one letter variable names to keep
 # away from issues with ambiguous names down the road.
-GNEVAR_STATES <- as_tibble(GNEVAR_STATES) %>%
+HUGGO_STATES <- as_tibble(HUGGO_STATES) %>%
   manydata::transmutate(stateID = manypkgs::standardise_titles(StatID)) %>%
   dplyr::rename(Latitude = Lat, Longitude = Lon) %>%
   dplyr::relocate(stateID, Capital)
@@ -61,7 +65,7 @@ ratif <- ratif %>%
   dplyr::rename(RatProcedure = Rat)
 
 # Combine data
-GNEVAR_STATES <- GNEVAR_STATES %>%
+HUGGO_STATES <- HUGGO_STATES %>%
   dplyr::full_join(beg, by = "stateID") %>%
   dplyr::full_join(nap, by = c("stateID", "Label", "Beg", "End")) %>%
   dplyr::full_join(capitals,
@@ -71,22 +75,26 @@ GNEVAR_STATES <- GNEVAR_STATES %>%
                           "Latitude", "Longitude")) %>%
   dplyr::full_join(ratif, by = c("stateID", "Label"))
 
-# remove complete duplicates
-GNEVAR_STATES <- subset(GNEVAR_STATES,
-                        subset = !duplicated(GNEVAR_STATES[, c(1,2,3,4,5,6,7,8,9,10,11,12)]))
-
 # reorder variables and arrange chronologically
-GNEVAR_STATES <- GNEVAR_STATES %>%
+HUGGO_STATES <- HUGGO_STATES %>%
   dplyr::relocate(stateID, Label, Capital, Beg, End, Latitude, Longitude,
                   Area, Region) %>%
   dplyr::arrange(Beg)
+
+# make sure all vars are correctly coded as NA if necessary
+HUGGO_STATES <- HUGGO_STATES %>% 
+  dplyr::mutate(across(everything(),
+                       ~stringr::str_replace_all(., "^NA$", NA_character_))) %>%
+  mutate(Beg = messydates::as_messydate(Beg),
+         End = messydates::as_messydate(End)) %>% 
+  dplyr::distinct(.keep_all = TRUE)
 
 # manypkgs includes several functions that should help cleaning
 # and standardising your data such as `standardise_titles()`.
 # Please see the vignettes or website for more details.
 
 # Stage three: Connecting data
-# Next run the following line to make GNEVAR_STATES available
+# Next run the following line to make HUGGO_STATES available
 # within the package.
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence
@@ -101,6 +109,6 @@ GNEVAR_STATES <- GNEVAR_STATES %>%
 # Therefore, please make sure that you have permission to use the dataset
 # that you're including in the package.
 # To add a template of .bib file to the package,
-# please run `manypkgs::add_bib("states", "GNEVAR_STATES")`.
-manypkgs::export_data(GNEVAR_STATES, database = "states",
-                      URL = "NA")
+# please run `manypkgs::add_bib("states", "HUGGO_STATES")`.
+manypkgs::export_data(HUGGO_STATES, database = "states",
+                      URL = "Hand-coded data by the GGO team")
