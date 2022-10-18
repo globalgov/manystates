@@ -6,22 +6,9 @@
 \title{contiguity database documentation}
 \format{
 The contiguity database is a list that contains the
-following 2 datasets: COW_DIRCONT, GNEVAR_CONT.
-GNEVAR_* datasets are handcoded original data or
-corrections to existing datasets where coding errors were found.
-In the latter case, the suffix will reference the original dataset.
-In the contiguity database, GNEVAR_CONT contains handcoded data on
-the states with which a state shares its borders.
+following 2 datasets: COW_DIRCONT, HUGGO_CONT.
 For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
-\describe{
-\item{COW_DIRCONT: }{A dataset with 847 observations and the following
-8 variables: dyadID, ContiguityType, Beg, End, stateID1, Label1,
-stateID2, Label2.}
-\item{GNEVAR_CONT: }{A dataset with 192 observations and the following
-9 variables: stateID, Label, Beg, End, Contiguity, EntityType,
-FAOmembership, Group, url.}
-}
 }
 \usage{
 contiguity
@@ -30,7 +17,7 @@ contiguity
 contiguity database documentation
 }
 \details{
-\if{html}{\out{<div class="sourceCode">}}\preformatted{#> $DIRCONT
+\if{html}{\out{<div class="sourceCode">}}\preformatted{#> $COW_DIRCONT
 #> ----------------------------------------------------------------------------
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
@@ -45,7 +32,7 @@ contiguity database documentation
 #> ----------------------------------------------------------------------------
 #> 
 #> 
-#> $GNEVAR_CONT
+#> $HUGGO_CONT
 #> ----------------------------------------------------------------------------
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
@@ -58,21 +45,6 @@ contiguity database documentation
 #> | FAOmembership |  character  |             192|     0     |       0       |
 #> |     Group     |  character  |             192|     0     |       0       |
 #> |      url      |  character  |             192|     0     |       0       |
-#> ----------------------------------------------------------------------------
-#> 
-#> 
-#> $COW_DIRCONT
-#> ----------------------------------------------------------------------------
-#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
-#> ----------------------------------------------------------------------------
-#> |    dyadID     |   numeric   |             847|     0     |       0       |
-#> |ContiguityType |   numeric   |             847|     0     |       0       |
-#> |      Beg      |    mdate    |             847|     0     |       0       |
-#> |      End      |    mdate    |             847|     0     |       0       |
-#> |   stateID1    |   numeric   |             847|     0     |       0       |
-#> |    Label1     |  character  |             847|     0     |       0       |
-#> |   stateID2    |   numeric   |             847|     0     |       0       |
-#> |    Label2     |  character  |             847|     0     |       0       |
 #> ----------------------------------------------------------------------------
 }\if{html}{\out{</div>}}
 }

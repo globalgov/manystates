@@ -1,18 +1,18 @@
-# GNEVAR_CONT Preparation Script
+# HUGGO_CONT Preparation Script
 
 # This is a template for importing, cleaning, and exporting data
 # ready for many packages universe.
 
 # Stage one: Collecting data
-GNEVAR_CONT <- readr::read_csv("data-raw/contiguity/REGIONS/FAO and Region Membership Data.csv")
+HUGGO_CONT <- readr::read_csv("data-raw/contiguity/HUGGO_CONT/FAO and Region Membership Data.csv")
 
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
-# formats of the 'GNEVAR_CONT' object until the object created
+# formats of the 'HUGGO_CONT' object until the object created
 # below (in stage three) passes all the tests.
 # We recommend that you avoid using one letter variable names to keep
 # away from issues with ambiguous names down the road.
-GNEVAR_CONT <- as_tibble(GNEVAR_CONT) %>%
+HUGGO_CONT <- as_tibble(HUGGO_CONT) %>%
   dplyr::filter(ID != "ISO3") %>%
   # filtering removes the rows that contain repetitions of variable names only
   dplyr::rename(stateID = ID, EntityType = CATEGORY,
@@ -25,13 +25,21 @@ GNEVAR_CONT <- as_tibble(GNEVAR_CONT) %>%
                 Group, url) %>%
   dplyr::arrange(Beg, stateID)
 
+# make sure all vars are correctly coded as NA if necessary
+HUGGO_CONT <- HUGGO_CONT %>% 
+  dplyr::mutate(across(everything(),
+                       ~stringr::str_replace_all(., "^NA$", NA_character_))) %>%
+  mutate(Beg = messydates::as_messydate(Beg),
+         End = messydates::as_messydate(End)) %>% 
+  dplyr::distinct(.keep_all = TRUE)
+
 # manypkgs includes several functions that should help cleaning
 # and standardising your data such as `standardise_titles()`
 # and `standardise_texts()`.
 # Please see the vignettes or website for more details.
 
 # Stage three: Connecting data
-# Next run the following line to make REGIONS available
+# Next run the following line to make HUGGO_CONT available
 # within the package.
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence
@@ -46,6 +54,6 @@ GNEVAR_CONT <- as_tibble(GNEVAR_CONT) %>%
 # Therefore, please make sure that you have permission to use the dataset
 # that you're including in the package.
 # To add a template of .bib file to the package,
-# please run `manypkgs::add_bib("contiguity", "GNEVAR_CONT")`.
-manypkgs::export_data(GNEVAR_CONT, database = "contiguity",
-                      URL = "NA")
+# please run `manypkgs::add_bib("contiguity", "HUGGO_CONT")`.
+manypkgs::export_data(HUGGO_CONT, database = "contiguity",
+                      URL = "Hand-coded data by the GGO team")
