@@ -28,35 +28,35 @@ import_vdem <- function() {
   vdem <- vdemdata::vdem
   # Stage 2: Correcting data
   vdem <- as_tibble(vdem) %>%
-    dplyr::rename("VDem_ID" = "country_id", "Abbrv" = "country_text_id") %>%
-    dplyr::group_by(.data$histname) %>%
-    dplyr::mutate(beg = min(.data$year),
-                  end = max(.data$year)) %>%
+    dplyr::rename("vdemID" = "country_id", "stateID" = "country_text_id") %>%
+    dplyr::group_by(histname) %>%
+    dplyr::mutate(beg = min(year),
+                  end = max(year)) %>%
     dplyr::ungroup() %>%
     dplyr::mutate(
-      Beg = messydates::make_messydate(as.character(.data$beg)),
-      End = messydates::make_messydate(as.character(.data$end)),
-      Label = .data$histname,
-      Country = .data$country_name,
-      Date = messydates::make_messydate(.data$historical_date),
-      Year = messydates::make_messydate(as.character(.data$year))) %>%
-    dplyr::select(-.data$project, #variable indicates which V-Dem project code
+      Beg = messydates::make_messydate(as.character(beg)),
+      End = messydates::make_messydate(as.character(end)),
+      State = histname,
+      StateName = country_name,
+      Date = messydates::make_messydate(historical_date),
+      Year = messydates::make_messydate(as.character(year))) %>%
+    dplyr::select(-project, #variable indicates which V-Dem project code
                   # that country-year: Contemporary V-Dem, Historical V-Dem
-                  -.data$historical, #variable indicates if the Historical V-Dem
+                  -historical, #variable indicates if the Historical V-Dem
                   # project coded a country at any time
-                  -.data$codingstart_contemp, -.data$codingend_contemp,
+                  -codingstart_contemp, -codingend_contemp,
                   # removed because
                   # variable explains methodology relating to V-Dem coding
                   # time-periods
-                  -.data$codingstart_hist, -.data$codingend_hist,
+                  -codingstart_hist, -codingend_hist,
                   #removed because
                   # variable explains methodology relating to V-Dem
                   # coding time-periods.
-                  -.data$beg, .data$end, .data$histname, .data$country_name,
-                  .data$historical_date, .data$year) %>%
-    dplyr::arrange(.data$VDem_ID, .data$Year) %>%
-    dplyr::relocate(.data$VDem_ID, .data$Abbrv, .data$Label, .data$Country,
-                    .data$Beg, .data$End, .data$Year, .data$Date)
+                  -beg, end, histname, country_name,
+                  historical_date, year) %>%
+    dplyr::arrange(vdemID, Year) %>%
+    dplyr::relocate(vdemID, stateID, StateName, State,
+                    Beg, End, Year, Date)
   return(vdem)
 }
 
@@ -80,33 +80,35 @@ import_vparty <- function() {
   vparty <- vdemdata::vparty
   # Step 2: Format it to a many packages consistent format
   vparty <- as_tibble(vparty) %>%
-    dplyr::rename("VParty_ID" = "v2paid",
-                  "Country_ID" = "country_id",
-                  "Abbrv" = "v2pashname",
+    dplyr::rename("vpartyID" = "v2paid",
+                  "stateNR" = "country_id",
+                  "stateID" = "country_text_id",
+                  "partyID" = "v2pashname",
                   "Geographic Region" = "e_regiongeo",
                   "Geopolitical Region" = "e_regionpol") %>%
-    dplyr::group_by(.data$VParty_ID) %>%
-    dplyr::mutate(beg = min(.data$year), #Year is observation year of the panel
-                  end = max(.data$year)) %>%
+    dplyr::group_by(vpartyID) %>%
+    dplyr::mutate(beg = min(year), #Year is observation year of the panel
+                  end = max(year)) %>%
     dplyr::mutate(
-      Label = .data$v2paenname,
-      Country = .data$country_name,
-      Country_hist = .data$histname,
-      Beg = messydates::make_messydate(as.character(.data$beg)),
-      End = messydates::make_messydate(as.character(.data$end)),
-      Year = messydates::make_messydate(as.character(.data$year))) %>%
-    dplyr::select(-.data$v2paorname,
+      Party = v2paenname,
+      StateName = country_name,
+      State = histname,
+      Beg = messydates::make_messydate(as.character(beg)),
+      End = messydates::make_messydate(as.character(end)),
+      Year = messydates::make_messydate(as.character(year))) %>%
+    dplyr::select(-v2paorname,
                   #original party name, primarily a repetition of v2paid
-                  -.data$pf_party_id,
+                  -pf_party_id,
                   #refers to party ID used in predecessor dataset
-                  -.data$pf_url,
+                  -pf_url,
                   #URL to party's webpage in predecessor dataset's website
-                  .data$v2paenname, .data$country_name, .data$histname,
-                  .data$beg, .data$end, .data$year) %>%
-    dplyr::arrange(.data$Country, .data$VParty_ID, .data$Beg) %>%
-    dplyr::relocate(.data$VParty_ID, .data$Label, .data$Abbrv,
-                    .data$Country, .data$Country_hist,
-                    .data$Country_ID, .data$Beg, .data$End, .data$Year, )
+                  v2paenname, country_name, histname,
+                  beg, end, year) %>%
+    dplyr::arrange(StateName, vpartyID, Beg) %>%
+    dplyr::relocate(vpartyID, Party, partyID,
+                    StateName, State, stateID,
+                    stateNR, Beg, End, Year,
+                    `Geographic Region`, `Geopolitical Region`)
   # Step 3: return vparty
   return(vparty)
 }
