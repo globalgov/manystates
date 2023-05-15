@@ -1,10 +1,9 @@
-#' states database documentation
+2#' states database documentation
 #'
 #' @format The states database is a list that contains the
 #' following 7 datasets: GW, ISD, COW, ICOW, ICOW_COL, RATRULES, HUGGO_STATES.
 #' For more information and references to each of the datasets used,
 #' please use the `data_source()` and `data_contrast()` functions.
-#' @imports manydata
 #'\describe{
 #' \item{GW: }{A dataset with 216 observations and the following
 #' 5 variables: cowID, Beg, End, cowNR, Label.}
@@ -21,9 +20,11 @@
 #' \item{RATRULES: }{A dataset with 177 observations and the following
 #' 3 variables: stateID, Label, RatProcedure.}
 #' \item{HUGGO_STATES: }{A dataset with 722 observations and the following
-#' 12 variables: stateID, Label, Capital, Beg, End, Latitude, Longitude, Area,
-#' Region, RatProcedure, Constitutional Description, Source.}
+#' 14 variables: stateID, Label, Capital, Beg, End, Latitude, Longitude, Area,
+#' Region, RatProcedure, Constitutional Description, Source, Continent,
+#' Region_gapminder.}
 #' }
+
 #'
 #' @details
 #' ``` {r, echo = FALSE, warning = FALSE}

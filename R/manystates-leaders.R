@@ -4,7 +4,6 @@
 #' following 2 datasets: ARCHIGOS, HUGGO_ARCHIGOS.
 #' For more information and references to each of the datasets used,
 #' please use the `data_source()` and `data_contrast()` functions.
-#' @imports manydata
 #'\describe{
 #' \item{ARCHIGOS: }{A dataset with 17686 observations and the following
 #' 30 variables: archigosID, leaderID, cowID, idacr, Label, leader, Beg, End,

@@ -4,7 +4,6 @@
 #' following 2 datasets: EconomicFreedom, EconomicFreedomHist.
 #' For more information and references to each of the datasets used,
 #' please use the `data_source()` and `data_contrast()` functions.
-#' @imports manydata
 #'\describe{
 #' \item{EconomicFreedom: }{A dataset with 4290 observations and the following
 #' 72 variables: cowID, Year, Countries, Economic Freedom Summary Index, Rank,
