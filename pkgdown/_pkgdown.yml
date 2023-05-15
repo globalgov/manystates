@@ -30,6 +30,8 @@ navbar:
     articles:
       text: Articles
       menu:
+      - text: Working with manystates data
+        href: articles/manystates_data.html
       - text: Creating historical maps
         href: articles/CShapesMaps.html
     news:
