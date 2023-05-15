@@ -1,15 +1,15 @@
 #' Extract V-Dem and V-Party data
 #'
 #' Functions to import the
-#' [V-Dem](https://www.v-dem.net/en/data/data/v-dem-dataset-v111/) and the
-#' [V-Party](https://www.v-dem.net/en/data/data/v-party-dataset/) datasets
+#' [V-Dem](https://www.v-dem.net/data/the-v-dem-dataset/) and the
+#' [V-Party](https://www.v-dem.net/data/v-party-dataset/) datasets
 #' from the [`{vdemdata}`](https://github.com/vdeminstitute/vdemdata)
 #' package in a many packages universe consistent format.
 #' @name extract_vdem
 NULL
 
 #' @name extract_vdem
-#' @details `import_vdem()` imports VDem 11.1 dataset
+#' @details `import_vdem()` imports the latest version of VDEM dataset
 #' and formats it to be consistent with the many packages universe.
 #' @importFrom tibble as_tibble
 #' @importFrom manypkgs standardise_dates
@@ -24,6 +24,10 @@ NULL
 #' }
 #' @export
 import_vdem <- function() {
+  histname <- beg <- end <- country_name <- historical_date <- project <-
+    historical <- codingstart_contemp <- codingend_contemp <-
+    codingstart_hist <- codingend_hist <- vdemID <- Year <- stateID <-
+    StateName <- State <- Beg <- End <- NULL
   # Stage 1: Importing
   vdem <- vdemdata::vdem
   # Stage 2: Correcting data
@@ -61,8 +65,8 @@ import_vdem <- function() {
 }
 
 #' @name extract_vdem
-#' @details `import_vparty()` imports the V-Party dataset and
-#' formats it to be consistent with the many packages universe.
+#' @details `import_vparty()` imports the latest version of the V-Party dataset 
+#' and formats it to be consistent with the many packages universe.
 #' @importFrom tibble as_tibble
 #' @importFrom manypkgs standardise_dates
 #' @importFrom rlang .data
@@ -76,6 +80,10 @@ import_vdem <- function() {
 #' }
 #' @export
 import_vparty <- function() {
+  vpartyID <- v2paenname <- country_name <- histname <- beg <- end <-
+    v2paorname <- pf_party_id <- pf_url <- StateName <- Beg <- Party <-
+    partyID <- State <- stateID <- stateNR <- End <- Year <-
+    'Geographic Region' <- 'Geopolitical Region' <- NULL
   # Step 1: Import the data from the vdemdata package
   vparty <- vdemdata::vparty
   # Step 2: Format it to a many packages consistent format

@@ -31,6 +31,8 @@ NULL
 #' }
 #' @export
 import_cshapes <- function(date, ...) {
+  start <- end <- country_name <- capname <- caplong <- caplat <- b_def <-
+    owner <- cowcode <- fid <- cowID <- Beg <- End <- Label <- status <- NULL
   # Step 1: Set string dates to actual dates
   date <- as.Date(date)
   # Test for correct dates
@@ -87,6 +89,8 @@ import_cshapes <- function(date, ...) {
 #' }
 #' @export
 import_distlist <- function(date, type, ...) {
+  ccode1 <- ccode2 <- capdist <- FromLabel <- ToLabel <- FromCode <- ToCode <-
+    Distance <- mindist <- centdist <- NULL
   # Step 1: Change date in string format to date format
   date <- as.Date(date)
   # Check whether inputs are in range of permitted values for dates and type.
