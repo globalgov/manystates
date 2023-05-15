@@ -89,6 +89,14 @@ HUGGO_STATES <- HUGGO_STATES %>%
          End = messydates::as_messydate(End)) %>% 
   dplyr::distinct(.keep_all = TRUE)
 
+# Add region data
+gapminder <- dslabs::gapminder %>% 
+  select(country, continent, region) %>% # select only the variables we want
+  rename(Continent = continent, Region_gapminder = region) %>%
+  distinct() # keeps only distinct rolls (no duplicates)
+HUGGO_STATES <- dplyr::left_join(HUGGO_STATES, gapminder,
+                                 by = c("Label" = "country"))
+
 # manypkgs includes several functions that should help cleaning
 # and standardising your data such as `standardise_titles()`.
 # Please see the vignettes or website for more details.
