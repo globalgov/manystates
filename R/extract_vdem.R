@@ -56,8 +56,8 @@ import_vdem <- function() {
                   #removed because
                   # variable explains methodology relating to V-Dem
                   # coding time-periods.
-                  -beg, end, histname, country_name,
-                  historical_date, year) %>%
+                  -beg, -end, -histname, -country_name,
+                  -historical_date, -year) %>%
     dplyr::arrange(vdemID, Year) %>%
     dplyr::relocate(vdemID, stateID, StateName, State,
                     Beg, End, Year, Date)
@@ -110,8 +110,8 @@ import_vparty <- function() {
                   #refers to party ID used in predecessor dataset
                   -pf_url,
                   #URL to party's webpage in predecessor dataset's website
-                  v2paenname, country_name, histname,
-                  beg, end, year) %>%
+                  -v2paenname, -country_name, -histname,
+                  -beg, -end, -year) %>%
     dplyr::arrange(StateName, vpartyID, Beg) %>%
     dplyr::relocate(vpartyID, Party, partyID,
                     StateName, State, stateID,
