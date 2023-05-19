@@ -72,8 +72,8 @@ FreedomHouseStatus.1$Status_1972[161] <- "F"
 FreedomHouseStatus <- rbind(FreedomHouseStatus.1, FreedomHouseStatus.2) %>%
   dplyr::mutate(
     Country = manypkgs::standardise_titles(Country),
-    cowID = manypkgs::code_states(Country, abbrev = TRUE)) %>%
-  dplyr::rename(Label = Country)
+    stateID = manypkgs::code_states(Country, abbrev = TRUE)) %>%
+  dplyr::rename(StateName = Country)
 FreedomHouseStatus$Territory <- c(
   rep(0, nrow(FreedomHouseStatus.1)),
   rep(1, nrow(FreedomHouseStatus.2))
@@ -85,13 +85,13 @@ FreedomHouseStatus <- tidyr::pivot_longer(FreedomHouseStatus,
                                        list(value = as.character)) %>%
   tidyr::separate(name, into = c("name", "Year"), sep = "_") %>%
   dplyr::mutate(Year = messydates::as_messydate(Year),
-                ID = paste0(cowID, "-", as.character(Year))) %>%
+                ID = paste0(stateID, "-", as.character(Year))) %>%
   tidyr::pivot_wider(names_from = name,
                      values_from = value) %>%
   dplyr::rename(`PR rating` = PR, `CL rating` = CL) %>%
   dplyr::mutate(`PR rating` = as.double(`PR rating`),
                 `CL rating` = as.double(`CL rating`)) %>%
-  dplyr::relocate(ID, cowID, Year, Label, `PR rating`, `CL rating`, Status)
+  dplyr::relocate(ID, stateID, Year, StateName, `PR rating`, `CL rating`, Status)
 
 # Stage three: Connecting data
 # Next run the following line to make FreedomHouseStatus available

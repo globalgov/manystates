@@ -20,16 +20,16 @@ Polity5 <- readxl::read_excel("data-raw/regimes/Polity5/p5v2018.xls")
 # formats of the 'Polity5' object until the object created
 # below (in stage three) passes all the tests.
 Polity5 <- tibble::as_tibble(Polity5) %>%
-  dplyr::mutate(cowID = manypkgs::code_states(country, abbrev = TRUE)) %>%
+  dplyr::mutate(stateID = manypkgs::code_states(country, abbrev = TRUE)) %>%
   manydata::transmutate(
               Beg = messydates::make_messydate(byear, bmonth, bday),
               End = messydates::make_messydate(eyear, emonth, eday),
               Year = messydates::as_messydate(as.character(year)),
-              Label = manypkgs::standardise_titles(country)) %>%
+              StateName = manypkgs::standardise_titles(country)) %>%
   dplyr::mutate(ID = paste0(cowID, "-", Year)) %>%
-  dplyr::arrange(cowID, Year) %>%
+  dplyr::arrange(stateID, Year) %>%
   dplyr::select(-scode) %>%
-  dplyr::relocate(ID, cowID, Year, Label)
+  dplyr::relocate(ID, stateID, Year, StateName)
 
 # manydata includes several functions that should help cleaning
 # and standardising your data.

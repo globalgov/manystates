@@ -19,16 +19,16 @@ FreedomHouseFull <- readxl::read_excel("data-raw/regimes/FreedomHouseFull/All_da
                                        na = c("-", "N/A"))
 
 # Stage two: Correcting data
-FreedomHouseFull <- dplyr::rename(FreedomHouseFull, Label = `Country/Territory`) %>%
+FreedomHouseFull <- dplyr::rename(FreedomHouseFull, StateName = `Country/Territory`) %>%
   manydata::transmutate(Territory = ifelse(`C/T` == "t", 1, 0)) %>%
   dplyr::mutate(
-    cowID = manypkgs::code_states(Label, abbrev = TRUE),
+    stateID = manypkgs::code_states(StateName, abbrev = TRUE),
     Year = messydates::as_messydate(as.character(Edition - 1)),
     #Year in which the data was collected is one year prior to the edition year
     Edition = messydates::as_messydate(as.character(Edition)),
-    ID = paste0(cowID, "-", as.character(Year))
+    ID = paste0(stateID, "-", as.character(Year))
   ) %>%
-  dplyr::relocate(ID, cowID, Year, Label)
+  dplyr::relocate(ID, stateID, Year, StateName)
 
 # manypkgs includes several functions that should help cleaning
 # and standardising your data.
