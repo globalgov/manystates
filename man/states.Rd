@@ -11,22 +11,22 @@ For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
 \describe{
 \item{GW: }{A dataset with 216 observations and the following
-5 variables: cowID, Beg, End, cowNR, Label.}
+5 variables: cowID, Beg, End, cowNR, StateName.}
 \item{ISD: }{A dataset with 362 observations and the following
-7 variables: cowID, Beg, End, cowNR, Label, Micro, NewState.}
+7 variables: cowID, Beg, End, cowNR, StateName, Micro, NewState.}
 \item{COW: }{A dataset with 243 observations and the following
-5 variables: cowID, Beg, End, cowNR, Label.}
+5 variables: cowID, Beg, End, cowNR, StateName.}
 \item{ICOW: }{A dataset with 217 observations and the following
-15 variables: cowID, Label, ColRuler, IndFrom, IndDate, IndViol, IndType,
+15 variables: cowID, StateName, ColRuler, IndFrom, IndDate, IndViol, IndType,
 SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
 \item{ICOW_COL: }{A dataset with 221 observations and the following
-9 variables: cowID, cowNR, Label, Beg, cowID_Origin, IndepType, Beg_COW,
+9 variables: cowID, cowNR, StateName, Beg, cowID_Origin, IndepType, Beg_COW,
 Beg_GW, Beg_Polity2.}
 \item{RATRULES: }{A dataset with 177 observations and the following
-3 variables: stateID, Label, RatProcedure.}
+3 variables: stateID, StateName, RatProcedure.}
 \item{HUGGO_STATES: }{A dataset with 722 observations and the following
-14 variables: stateID, Label, Capital, Beg, End, Latitude, Longitude, Area,
-Region, RatProcedure, Constitutional Description, Source, Continent,
+14 variables: stateID, StateName, Capital, Beg, End, Latitude, Longitude,
+Area, Region, RatProcedure, Constitutional Description, Source, Continent,
 Region_gapminder.}
 }
 }
@@ -45,7 +45,7 @@ states database documentation
 #> |      Beg      |    mdate    |             216|     0     |       0       |
 #> |      End      |    mdate    |             216|     0     |       0       |
 #> |     cowNR     |  character  |             216|     0     |       0       |
-#> |     Label     |  character  |             216|     0     |       0       |
+#> |   StateName   |  character  |             216|     0     |       0       |
 #> ----------------------------------------------------------------------------
 #> 
 #> 
@@ -57,7 +57,7 @@ states database documentation
 #> |      Beg      |    mdate    |             362|     0     |       0       |
 #> |      End      |    mdate    |             362|     0     |       0       |
 #> |     cowNR     |  character  |             362|     0     |       0       |
-#> |     Label     |  character  |             362|     0     |       0       |
+#> |   StateName   |  character  |             362|     0     |       0       |
 #> |     Micro     |  character  |             362|     0     |       0       |
 #> |   NewState    |  character  |             362|     0     |       0       |
 #> ----------------------------------------------------------------------------
@@ -71,7 +71,7 @@ states database documentation
 #> |      Beg      |    mdate    |             243|     0     |       0       |
 #> |      End      |    mdate    |             243|     0     |       0       |
 #> |     cowNR     |  character  |             243|     0     |       0       |
-#> |     Label     |  character  |             243|     0     |       0       |
+#> |   StateName   |  character  |             243|     0     |       0       |
 #> ----------------------------------------------------------------------------
 #> 
 #> 
@@ -80,7 +80,7 @@ states database documentation
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
 #> |     cowID     |  character  |             217|     0     |       0       |
-#> |     Label     |  character  |             217|     0     |       0       |
+#> |   StateName   |  character  |             217|     0     |       0       |
 #> |   ColRuler    |   numeric   |             217|    46     |     21.2      |
 #> |    IndFrom    |   numeric   |             217|    39     |     17.97     |
 #> |    IndDate    |    mdate    |             217|     0     |       0       |
@@ -103,7 +103,7 @@ states database documentation
 #> ----------------------------------------------------------------------------
 #> |     cowID     |  character  |             221|     2     |      0.9      |
 #> |     cowNR     |   numeric   |             221|     0     |       0       |
-#> |     Label     |  character  |             221|     0     |       0       |
+#> |   StateName   |  character  |             221|     0     |       0       |
 #> |      Beg      |    mdate    |             221|     0     |       0       |
 #> | cowID_Origin  |   numeric   |             221|     0     |       0       |
 #> |   IndepType   |   numeric   |             221|     0     |       0       |
@@ -118,7 +118,7 @@ states database documentation
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
 #> |    stateID    |  character  |             177|     0     |       0       |
-#> |     Label     |  character  |             177|     0     |       0       |
+#> |   StateName   |  character  |             177|     0     |       0       |
 #> | RatProcedure  |   numeric   |             177|     0     |       0       |
 #> ----------------------------------------------------------------------------
 #> 
@@ -128,7 +128,7 @@ states database documentation
 #> |       Column Name        |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ---------------------------------------------------------------------------------------
 #> |         stateID          |  character  |             722|     0     |       0       |
-#> |          Label           |  character  |             722|    271    |     37.53     |
+#> |        StateName         |  character  |             722|    271    |     37.53     |
 #> |         Capital          |  character  |             722|    111    |     15.37     |
 #> |           Beg            |    mdate    |             722|    400    |     55.4      |
 #> |           End            |    mdate    |             722|    400    |     55.4      |

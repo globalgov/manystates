@@ -23,7 +23,7 @@ test_that("object has the correct variables", {
   pointblank::expect_col_exists(states[["RATRULES"]],
                                 pointblank::vars(stateID))
   pointblank::expect_col_exists(states[["RATRULES"]],
-                                pointblank::vars(Label))
+                                pointblank::vars(StateName))
 })
 
 # Labels are standardized

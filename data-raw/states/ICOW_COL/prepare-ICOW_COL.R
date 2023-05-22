@@ -16,7 +16,7 @@ ICOW_COL <- tibble::as_tibble(ICOW_COL) %>%
   manydata::transmutate(cowNR = State,
                         cowID_Origin = From,
                         IndepType = Type,
-                        Label = manypkgs::standardise_titles(Name),
+                        StateName = manypkgs::standardise_titles(Name),
                         Beg = messydates::as_messydate(as.character(Indep),
                                                        resequence = "ym"),
                         Beg_COW = messydates::as_messydate(as.character(COWsys),
@@ -28,7 +28,7 @@ ICOW_COL <- tibble::as_tibble(ICOW_COL) %>%
                                                  destination = "cowc")) %>%
   dplyr::mutate(Beg_Polity2 = gsub("-0009", NA, Beg_Polity2),
                 Beg_GW = gsub("-0009", NA, Beg_GW)) %>%
-  dplyr::select(cowID, cowNR, Label, Beg, cowID_Origin, IndepType, Beg_COW,
+  dplyr::select(cowID, cowNR, StateName, Beg, cowID_Origin, IndepType, Beg_COW,
                 Beg_GW, Beg_Polity2) %>%
   dplyr::arrange(Beg)
 

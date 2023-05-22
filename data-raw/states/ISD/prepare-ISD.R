@@ -14,19 +14,19 @@ ISD <- tibble::as_tibble(ISD) %>%
   dplyr::rename(Finish = End) %>%
   # Renaming the end date column to avoid self reference in transmutate.
   manydata::transmutate(cowID = `COW.ID`,
-                     Beg = messydates::as_messydate(Start,
+                        Beg = messydates::as_messydate(Start,
                                                     resequence = "dmy"),
-                     End = messydates::as_messydate(Finish,
+                        End = messydates::as_messydate(Finish,
                                                     resequence = "dmy"),
-                     Label = manypkgs::standardise_titles(as.character(State.Name)),
-                     cowNr = manypkgs::standardise_titles(as.character(COW.Nr.))) %>%
+                        StateName = manypkgs::standardise_titles(as.character(State.Name)),
+                        cowNr = manypkgs::standardise_titles(as.character(COW.Nr.))) %>%
   # Standardising the dummy variables
   dplyr::mutate(across(c(Micro, NewState),  ~ replace(., . == "", 0))) %>%
   dplyr::mutate(across(c(Micro, NewState), ~ replace(., . == "X", 1))) %>%  
   #Dropping unnecessary columns.
   dplyr::select(-X, -X.1, -X.2, -X.3, -X.4, -X.5,  -X.6, -X.7) %>%
   # Arranging dataset
-  dplyr::relocate(cowID, Beg, End, cowNR, Label, Micro, NewState) %>%
+  dplyr::relocate(cowID, Beg, End, cowNR, StateName, Micro, NewState) %>%
   dplyr::arrange(Beg, cowID)
 
 # Like COW, ISD sets "old" states as beginning on 1816-01-01 by default.
@@ -45,7 +45,7 @@ ISD <- ISD %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-
 # Stage three: Connecting data
 # Next run the following line to make ISD available within the package.
 manypkgs::export_data(ISD, database = "states",
-                     URL = "http://www.ryan-griffiths.com/data")
+                      URL = "http://www.ryan-griffiths.com/data")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence
 # to certain standards. You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows)
