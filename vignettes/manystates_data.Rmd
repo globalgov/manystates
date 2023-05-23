@@ -115,7 +115,8 @@ vdem <- vdem %>% dplyr::select(StateName, stateID, Year,
   # create a new regime type variable and rename the categories within
   drop_na() # drop rows where there is at least one NA obs...
 
-fh <- dplyr::select(fh, c(StateName, stateID, Year, PR, CL, B, C, D)) %>%
+fh <- dplyr::select(fh, c(Label, cowID, Year, PR, CL, B, C, D)) %>%
+  dplyr::rename(StateName = Label, stateID = cowID) %>% 
   # select only the variables of interest
   dplyr::filter(Year > 1989, PR > 17) %>%
   # filter for last 30 years (bigger than 1989) and for democracies only
@@ -127,7 +128,8 @@ fh <- dplyr::select(fh, c(StateName, stateID, Year, PR, CL, B, C, D)) %>%
   # create a new regime type variable and rename the categories within
   drop_na() # drop rows where there is at least one NA obs...
 
-p5 <- dplyr::select(p5, c(StateName, stateID, Year, polity2, xconst)) %>%
+p5 <- dplyr::select(p5, c(Label, cowID, Year, polity2, xconst)) %>%
+  dplyr::rename(StateName = Label, stateID = cowID) %>%
   # select only the variables of interest
   dplyr::mutate(regime_type = case_when(polity2 > 5 ~ "Electoral Democracy",
                                         polity2 < 5  ~ "Non-Democracy")) %>%
@@ -245,7 +247,7 @@ vdem %>% # saving this object to use later
   select(StateName, regime_type, Year, Aggregated_Mean_Indicators) %>%
   # select only a few variables
   rename(State = StateName, Regime = regime_type) %>%
-  ggplot(aes(x = Year, y = Aggregated_Mean_Indicators,
+  ggplot(aes(x = as.numeric(Year), y = Aggregated_Mean_Indicators,
              colour = (Regime == "Liberal Democracy"))) + 
   geom_line(aes(group=1)) +
   facet_wrap("State") +
@@ -266,11 +268,12 @@ aggregated indicators per region for 1990 and 2021.
 
 ```{r regions}
 HUGGO_STATES <- states$HUGGO_STATES %>%
-  select(StateName, Region_gapminder) %>% # select only the variables we want
+  select(Label, Region_gapminder) %>% # select only the variables we want
+  rename(StateName = Label) %>%
   distinct() # keeps only distinct rolls (no duplicates)
 vdem %>% dplyr::left_join(HUGGO_STATES, by = "StateName") %>%
   filter(Year == 1990 | Year == 2021) %>% # filter for first and last year of data
-  group_by(Region_gapminder, year) %>% # group region and year
+  group_by(Region_gapminder, Year) %>% # group region and year
   summarise(Aggregated_Mean_Indicators = (mean(accountability) +
                                             mean(freedom_expression) +
                                             mean(civil_society))/3) %>% 
