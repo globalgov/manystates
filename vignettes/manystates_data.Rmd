@@ -1,6 +1,6 @@
 ---
 title: "Working with manystates data"
-author: "Henrique Sposito"
+author: "Henrique Sposito and Jael Tan"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
@@ -14,42 +14,58 @@ knitr::opts_chunk$set(collapse = TRUE, comment = "#>",
                       warning = FALSE, message = FALSE)
 ```
 
+# Introducing {manystates}
+
+`{manystates}` provides data on states in the international system across time,
+assembling together datasets from reputable sources including
+The Correlates of War project, The Issue Correlates of War project, and
+Gleditsch and Ward's dataset on interstate system membership.
+The package can also be used to study related features such as
+political regimes (`regimes` database),
+regions and contiguity (`contiguity` database),
+leadership (`leaders` database), and economic indicators (`economics` database).
+
 # Have democracies become more free and accountable since the 1990s?
 
-`{manystates}` provides many data on states in the international system across time.
-The package can be used to study political regimes, peace/conflict, leadership,
-and economic indicators.
+To illustrate the uses of the data, we explore here the question of whether
+states have indeed become more free and accountable.
+Since 2017, more than half of the states in the world have become democracies.
+However, at the same time,
+influential works have theorized about the recent "democratic decay" and "stretch";
+especially with the recent(ish) elections of leaders
+with authoritarian tendencies in several democracies.
 
-## Background
-
-Since 2017 more than half of the countries in world were
-technically consider democracies. However, at the same time,
-influential works have theorized about the recent "democratic decay" and
-"stretch"; specially with the recent(ish) elections
-of leaders with authoritarian tendencies across several democracies.
-
-Below, we use `{manystates}` to study democratic accountability using
+Below, we use `{manystates}` to study democratic accountability using data
+from the `regimes` database as well as the `import_vdem()` function to extract 
 [Variaties of Democracy Data (VDEM)](https://www.v-dem.net/project.html) data.
 
 ## Data
 
-VDEM's approach measures democracy with as many indicators as possible.
-Let's import the data.
+The `regimes` database contains data on political regimes in the Polity5 and Freedom House datasets.
+The Polity5, Freedom House, and VDEM projects
+have slightly different approaches to the measurement of democracy,
+which we will explore below.
+Let's import the data first.
+We can call the Polity5 and Freedom House datasets directly
+from the `{manystates}` package as the datasets are already stored in the database,
+but the VDEM dataset will need to be imported with a function.
 
 ```{r import}
 library(manystates)
+p5 <- manystates::regimes$Polity5
+fh <- manystates::regimes$FreedomHouseFull
 vdem <- import_vdem()
 ```
 
-Let's select a few variables that are helpful to investigate freedom and accountability in democracies since the 1990s.
+Let's examine first the data in VDEM by selecting a few variables
+that are helpful to investigate freedom and accountability in democracies since the 1990s.
 
-First, we need to know if a country is democratic and how much.
-Since we are interested in democracies, we can use the "v2x_regime" variable
-to subset the two types of democratic regimes (electoral and liberal) in the
-variable:
+First, we need to know if a country is democratic and to what extent.
+The "v2x_regime" variable in VDEM
+differentiates between two types of democratic regimes (electoral and liberal) :
 
-- Electoral democracy: with free and fair multiparty elections ...
-- Liberal democracy: with free and fair multiparty elections, access to justice,   transparent law enforcement, respect for personal liberties, rule of law...
+- Electoral democracy: free and fair multiparty elections...
+- Liberal democracy: free and fair multiparty elections, access to justice, transparent law enforcement, respect for personal liberties, rule of law...
 
 Second, we need indicators of democracy.
 Let's focus on transparency and accountability ("v2x_accountability_osp"),
@@ -63,49 +79,101 @@ ordinal data from the surveys (ordered categorical) as follows:
 - Freedom of expression: low to high (0-1)
 - Civil society participation: low to high (0-1)
 
+Freedom House organises its data somewhat differently,
+disaggregating the concept of democracy into two components:
+political rights ("PR rating" - "A" + "B" + "C") and
+civil liberties ("CL rating" - "D" + "E" + "F" + "G").
+The `FreedomHouseFull` dataset also contains the raw scores of each state for each question,
+which are then grouped into categories labelled with alphabets from "A" to "G".
+In terms of indicators of democracy, accountability is captured in category "C",
+freedom of expression in category "D",
+and civil society participation in category "B".
+
+In contrast to VDEM and Freedom House,
+the Polity5 dataset primarily provides a measurement of the state of
+electoral democracy in states through indicators such as participation, openness,
+constraints on the executive and competitiveness of executive appointment.
+While it does not measure accountability directly,
+some measure of accountability may be inferred from the measure of
+constraints on Chief Executive ("xconst").
+
 ```{r subset}
 library(dplyr)
 library(tidyr)
-dem <- dplyr::select(vdem, c(country_name, stateID, year,
+vdem <- vdem %>% dplyr::select(StateName, stateID, Year,
                               v2x_regime, v2x_accountability_osp,
-                              v2x_freexp_altinf, v2x_cspart)) %>%
+                              v2x_freexp_altinf, v2x_cspart) %>%
   # select only the variables of interest
-  dplyr::filter(year > 1989, v2x_regime == 2 | v2x_regime == 3) %>%
+  dplyr::filter(Year > 1989, v2x_regime == 2 | v2x_regime == 3) %>%
   # filter for last 30 years (bigger than 1989) and for democracies only
   dplyr::rename(regime = v2x_regime,
                 freedom_expression = v2x_freexp_altinf,
-                account_index = v2x_accountability_osp,
+                accountability = v2x_accountability_osp,
                 civil_society = v2x_cspart) %>% # rename some of these variables
   dplyr::mutate(regime_type = case_when(regime == 2 ~ "Electoral Democracy",
                                         regime == 3 ~ "Liberal Democracy")) %>% 
   # create a new regime type variable and rename the categories within
   drop_na() # drop rows where there is at least one NA obs...
-```
 
-*Food for thought: Do you think these variables are correlated
-among themselves (i.e. multicolinearity)?*
+fh <- dplyr::select(fh, c(StateName, stateID, Year, PR, CL, B, C, D)) %>%
+  # select only the variables of interest
+  dplyr::filter(Year > 1989, PR > 17) %>%
+  # filter for last 30 years (bigger than 1989) and for democracies only
+  manydata::transmutate(freedom_expression = D/16,
+                        accountability = C/12,
+                        civil_society = B/16) %>% # rename and standardise some of these variables
+  dplyr::mutate(regime_type = ifelse(CL > 52, "Liberal Democracy",
+                                     "Electoral Democracy")) %>%
+  # create a new regime type variable and rename the categories within
+  drop_na() # drop rows where there is at least one NA obs...
+
+p5 <- dplyr::select(p5, c(StateName, stateID, Year, polity2, xconst)) %>%
+  # select only the variables of interest
+  dplyr::mutate(regime_type = case_when(polity2 > 5 ~ "Electoral Democracy",
+                                        polity2 < 5  ~ "Non-Democracy")) %>%
+  # create a new regime type variable using a cut-off score and rename the categories within
+  manydata::transmutate(accountability = xconst/7) %>%
+  drop_na() # drop rows where there is at least one NA obs...
+```
 
 ## Investigate the data
 
-Let's see the averages for our democracy indicators related to accountability.
+Let's see the 5 states with the highest accountability scores (on average) for
+Electoral and Liberal Democracy in each dataset:
 
 ```{r investigate}
-dem %>% # call data without assigning it
-  group_by(country_name, regime_type) %>% # group by country name
-  summarise(mean = mean(account_index)) %>% 
+vdem %>% # call data without assigning it
+  group_by(StateName) %>% # group by state name
+  summarise(mean = mean(accountability)) %>%
   # summarize grouped accountability variable by mean
-  arrange(mean) # arrange the data by mean, in decreasing order
+  arrange(desc(mean)) %>% # arrange the data by mean, in decreasing order
+  slice(1:5)
+
+fh %>% # call data without assigning it
+  group_by(StateName) %>% # group by state name
+  summarise(mean = mean(accountability)) %>%
+  # summarize grouped accountability variable by mean
+  arrange(desc(mean)) %>%
+  slice(1:5) # arrange the data by mean, in decreasing order
+
+p5 %>% # call data without assigning it
+  filter(regime_type == "Electoral Democracy") %>%
+  group_by(StateName) %>% # group by state name
+  summarise(mean = mean(accountability)) %>%
+  # summarize grouped accountability variable by mean
+  arrange(desc(mean)) %>% # arrange the data by mean, in decreasing order
+  slice(1:5)
 ```
 
 ## Pathways: from electoral to liberal democracies (and vice-versa)
 
-Let's see which countries had multiple democratic regimes.
+Using the VDEM data only, let's see which countries had multiple democratic regimes.
 
 ```{r transitions}
-dem %>% # saving this object to use later
-  group_by(country_name, regime_type) %>% # group by country and regime
+vdem %>% # saving this object to use later
+  group_by(StateName, regime_type) %>% # group by country and regime
   count() %>% # count grouped observations
-  group_by(country_name) %>% # re-group by country name only 
+  group_by(StateName) %>% # re-group by country name only 
   mutate(Duplicated = n()) %>% # add duplicated columns for country names
   filter(Duplicated > 1) %>%  # filter for names that appear more than once
   select(-c(Duplicated)) %>% # remove duplicated variables
@@ -117,13 +185,13 @@ the countries with multiple regimes.
 
 ```{r differences}
 library(ggplot2)
-dem %>%
-  group_by(country_name, regime_type) %>% # group by country and regime
-  summarise(Accountability = mean(account_index),
+vdem %>%
+  group_by(StateName, regime_type) %>% # group by country and regime
+  summarise(Accountability = mean(accountability),
             Freedom_of_Expression = mean(freedom_expression),
             Civil_Society = mean(civil_society)) %>%
   # summarize various grouped variable by mean
-  group_by(country_name) %>% # re-group by country name only 
+  group_by(StateName) %>% # re-group by country name only 
   mutate(Duplicated = n()) %>% # add duplicated columns for country names
   filter(Duplicated > 1) %>% # filter for names that appear more than once
   pivot_wider(names_from = regime_type,
@@ -136,21 +204,21 @@ dem %>%
          Civil_Society_dif = `Civil_Society-Liberal Democracy` -
            `Civil_Society-Electoral Democracy`) %>% 
   # create variables with mean difference
-  select(country_name, Accountability_dif, Freedom_of_Expression_dif,
+  select(StateName, Accountability_dif, Freedom_of_Expression_dif,
          Civil_Society_dif) %>% # select only pertinent observations
   pivot_longer(cols = Accountability_dif:Civil_Society_dif) %>% 
   # pivot table longer again
-  rename(Country = country_name,
+  rename(State = StateName,
          Indicator_Difference = name,
          Mean_Difference = value) %>% # rename for clarity
-  ggplot(aes(x = Mean_Difference, y = Country,
+  ggplot(aes(x = Mean_Difference, y = State,
              fill = Indicator_Difference)) + # plot
   geom_point(aes(color = Indicator_Difference)) +
   facet_wrap("Indicator_Difference") +
   theme_minimal() +
   theme(legend.position = "none") +
   labs(title = "From Electoral to Liberal Democracies",
-       y = "Country",
+       y = "State",
        x = "Mean Difference")
 ```
 
@@ -161,27 +229,26 @@ Let's try a different approach, plot averages for all indicators together
 in time and by country.
 
 ```{r pathways}
-dem %>% # saving this object to use later
-  group_by(country_name, regime_type) %>% # group by country and regime
+vdem %>% # saving this object to use later
+  group_by(StateName, regime_type) %>% # group by state and regime
   count() %>% # count grouped observations
-  group_by(country_name) %>% # re-group by country name only 
+  group_by(StateName) %>% # re-group by state name only 
   mutate(Duplicated = n()) %>% # add duplicated columns for country names
   filter(Duplicated > 1) %>%  # filter for names that appear more than once
   select(-c(Duplicated)) %>% # remove duplicated variables
   select(-n) %>% # remove years
-  inner_join(dem, by = c("country_name", "regime_type"), multiple = "all") %>%
+  inner_join(vdem, by = c("StateName", "regime_type"), multiple = "all") %>%
   # keep only obs in present in both datasets
-  mutate(Aggregated_Mean_Indicators = (account_index +
+  mutate(Aggregated_Mean_Indicators = (accountability +
            freedom_expression + civil_society)/3) %>%
   # add rows to form the aggregated indicator
-  select(country_name, regime_type, year, Aggregated_Mean_Indicators) %>%
+  select(StateName, regime_type, Year, Aggregated_Mean_Indicators) %>%
   # select only a few variables
-  rename(Country = country_name, Regime = regime_type,
-         Year = year) %>%
+  rename(State = StateName, Regime = regime_type) %>%
   ggplot(aes(x = Year, y = Aggregated_Mean_Indicators,
              colour = (Regime == "Liberal Democracy"))) + 
   geom_line(aes(group=1)) +
-  facet_wrap("Country") +
+  facet_wrap("State") +
   theme_minimal() +
   theme(legend.position = "bottom") +
   labs(title = "From Electoral to Liberal Democracies (and vice-versa)",
@@ -199,12 +266,12 @@ aggregated indicators per region for 1990 and 2021.
 
 ```{r regions}
 HUGGO_STATES <- states$HUGGO_STATES %>%
-  select(Label, Region_gapminder) %>% # select only the variables we want
+  select(StateName, Region_gapminder) %>% # select only the variables we want
   distinct() # keeps only distinct rolls (no duplicates)
-dem %>% dplyr::left_join(HUGGO_STATES, by = c("country_name" = "Label")) %>%
-  filter(year == 1990 | year == 2021) %>% # filter for first and last year of data
+vdem %>% dplyr::left_join(HUGGO_STATES, by = "StateName") %>%
+  filter(Year == 1990 | Year == 2021) %>% # filter for first and last year of data
   group_by(Region_gapminder, year) %>% # group region and year
-  summarise(Aggregated_Mean_Indicators = (mean(account_index) +
+  summarise(Aggregated_Mean_Indicators = (mean(accountability) +
                                             mean(freedom_expression) +
                                             mean(civil_society))/3) %>% 
   # add aggregated means by groups
@@ -214,7 +281,7 @@ dem %>% dplyr::left_join(HUGGO_STATES, by = c("country_name" = "Label")) %>%
       Fill = Region_gapminder)) +
   geom_point(aes(color = Region_gapminder)) +
   geom_line(aes(color = Region_gapminder)) +
-  geom_text(aes(label = year), nudge_y = 0.3) +
+  geom_text(aes(label = Year), nudge_y = 0.3) +
   theme_minimal() +
   theme(legend.position="none") +
   labs(title = "Are democracies better off in 2021 than in 1990?",
