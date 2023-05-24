@@ -25,9 +25,8 @@ Beg_GW, Beg_Polity2.}
 \item{RATRULES: }{A dataset with 177 observations and the following
 3 variables: stateID, StateName, RatProcedure.}
 \item{HUGGO_STATES: }{A dataset with 722 observations and the following
-14 variables: stateID, StateName, Capital, Beg, End, Latitude, Longitude,
-Area, Region, RatProcedure, Constitutional Description, Source, Continent,
-Region_gapminder.}
+12 variables: stateID, StateName, Capital, Beg, End, Latitude, Longitude,
+Area, Region, RatProcedure, Constitutional Description, Source.}
 }
 }
 \usage{
@@ -135,12 +134,10 @@ states database documentation
 #> |         Latitude         |  character  |             722|    225    |     31.16     |
 #> |        Longitude         |  character  |             722|    225    |     31.16     |
 #> |           Area           |  character  |             722|    590    |     81.72     |
-#> |          Region          |  character  |             722|    590    |     81.72     |
+#> |          Region          |  character  |             722|    496    |     68.7      |
 #> |       RatProcedure       |  character  |             722|    690    |     95.57     |
 #> |Constitutional Description|  character  |             722|    690    |     95.57     |
 #> |          Source          |  character  |             722|    682    |     94.46     |
-#> |        Continent         |   factor    |             722|    628    |     86.98     |
-#> |     Region_gapminder     |   factor    |             722|    628    |     86.98     |
 #> ---------------------------------------------------------------------------------------
 }\if{html}{\out{</div>}}
 }

@@ -101,6 +101,9 @@ HUGGO_STATES <- HUGGO_STATES %>%
   dplyr::select(-c(Region, Continent, Region_gapminder)) %>%
   dplyr::rename(Region = Regionc) %>%
   dplyr::mutate(Region = stringr::str_replace(Region, "-", " "))
+HUGGO_STATES <- HUGGO_STATES %>%
+  dplyr::relocate(stateID, StateName, Capital, Beg, End, Latitude, Longitude,
+                  Area, Region)
 
 # manypkgs includes several functions that should help cleaning
 # and standardising your data such as `standardise_titles()`.

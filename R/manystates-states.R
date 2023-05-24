@@ -21,7 +21,7 @@
 #' 3 variables: stateID, StateName, RatProcedure.}
 #' \item{HUGGO_STATES: }{A dataset with 722 observations and the following
 #' 12 variables: stateID, StateName, Capital, Beg, End, Latitude, Longitude,
-#' Area, RatProcedure, Constitutional Description, Source, Region.}
+#' Area, Region, RatProcedure, Constitutional Description, Source.}
 #' }
 #'
 #' @details
