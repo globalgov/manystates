@@ -96,6 +96,11 @@ gapminder <- dslabs::gapminder %>%
   distinct() # keeps only distinct rolls (no duplicates)
 HUGGO_STATES <- dplyr::left_join(HUGGO_STATES, gapminder,
                                  by = c("StateName" = "country"))
+HUGGO_STATES$Regionc <- dplyr::coalesce(HUGGO_STATES$Region, HUGGO_STATES$Region_gapminder)
+HUGGO_STATES <- HUGGO_STATES %>%
+  dplyr::select(-c(Region, Continent, Region_gapminder)) %>%
+  dplyr::rename(Region = Regionc) %>%
+  dplyr::mutate(Region = stringr::str_replace(Region, "-", " "))
 
 # manypkgs includes several functions that should help cleaning
 # and standardising your data such as `standardise_titles()`.

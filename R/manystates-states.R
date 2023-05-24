@@ -20,9 +20,8 @@
 #' \item{RATRULES: }{A dataset with 177 observations and the following
 #' 3 variables: stateID, StateName, RatProcedure.}
 #' \item{HUGGO_STATES: }{A dataset with 722 observations and the following
-#' 14 variables: stateID, StateName, Capital, Beg, End, Latitude, Longitude,
-#' Area, Region, RatProcedure, Constitutional Description, Source, Continent,
-#' Region_gapminder.}
+#' 12 variables: stateID, StateName, Capital, Beg, End, Latitude, Longitude,
+#' Area, RatProcedure, Constitutional Description, Source, Region.}
 #' }
 #'
 #' @details
