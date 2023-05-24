@@ -17,19 +17,19 @@ HUGGO_CONT <- as_tibble(HUGGO_CONT) %>%
   # filtering removes the rows that contain repetitions of variable names only
   dplyr::rename(stateID = ID, EntityType = CATEGORY,
                 FAOmembership = FAO_MEMBERS, Group = IS_IN_GROUP, url = URI) %>%
-  manydata::transmutate(Label = manypkgs::standardise_titles(LISTNAME_EN),
+  manydata::transmutate(StateName = manypkgs::standardise_titles(LISTNAME_EN),
                         Contiguity = manypkgs::standardise_titles(HAS_BORDER_WITH),
                         Beg = messydates::as_messydate(VALID_SINCE),
                         End = messydates::as_messydate(VALID_UNTIL)) %>%
-  dplyr::select(stateID, Label, Beg, End, Contiguity, EntityType, FAOmembership,
-                Group, url) %>%
+  dplyr::select(stateID, StateName, Beg, End, Contiguity, EntityType,
+                FAOmembership, Group, url) %>%
   dplyr::arrange(Beg, stateID)
 
 # make sure all vars are correctly coded as NA if necessary
 HUGGO_CONT <- HUGGO_CONT %>% 
   dplyr::mutate(across(everything(),
                        ~stringr::str_replace_all(., "^NA$", NA_character_))) %>%
-  mutate(Beg = messydates::as_messydate(Beg),
+  dplyr::mutate(Beg = messydates::as_messydate(Beg),
          End = messydates::as_messydate(End)) %>% 
   dplyr::distinct(.keep_all = TRUE)
 

@@ -11,9 +11,11 @@ For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
 \describe{
 \item{COW_DIRCONT: }{A dataset with 847 observations and the following
-8 variables: dyadID, ContiguityType, Beg, End, stateID1, Label1, stateID2, Label2.}
+8 variables: dyadID, ContiguityType, Beg, End, stateID1, StateName1,
+stateID2, StateName2.}
 \item{HUGGO_CONT: }{A dataset with 192 observations and the following
-9 variables: stateID, Label, Beg, End, Contiguity, EntityType, FAOmembership, Group, url.}
+9 variables: stateID, StateName, Beg, End, Contiguity, EntityType,
+FAOmembership, Group, url.}
 }
 }
 \usage{
@@ -32,9 +34,9 @@ contiguity database documentation
 #> |      Beg      |    mdate    |             847|     0     |       0       |
 #> |      End      |    mdate    |             847|     0     |       0       |
 #> |   stateID1    |   numeric   |             847|     0     |       0       |
-#> |    Label1     |  character  |             847|     0     |       0       |
+#> |  StateName1   |  character  |             847|     0     |       0       |
 #> |   stateID2    |   numeric   |             847|     0     |       0       |
-#> |    Label2     |  character  |             847|     0     |       0       |
+#> |  StateName2   |  character  |             847|     0     |       0       |
 #> ----------------------------------------------------------------------------
 #> 
 #> 
@@ -43,7 +45,7 @@ contiguity database documentation
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
 #> |    stateID    |  character  |             192|     0     |       0       |
-#> |     Label     |  character  |             192|     0     |       0       |
+#> |   StateName   |  character  |             192|     0     |       0       |
 #> |      Beg      |    mdate    |             192|     0     |       0       |
 #> |      End      |    mdate    |             192|     0     |       0       |
 #> |  Contiguity   |  character  |             192|    41     |     21.35     |
