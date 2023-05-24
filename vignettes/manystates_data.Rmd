@@ -81,20 +81,9 @@ ordinal data from the surveys (ordered categorical) as follows:
 - Freedom of expression: low to high (0-1)
 - Civil society participation: low to high (0-1)
 
-Freedom House organises its data somewhat differently,
-disaggregating the concept of democracy into two components:
-political rights ("PR rating" - "A" + "B" + "C") and
-civil liberties ("CL rating" - "D" + "E" + "F" + "G").
-The `FreedomHouseFull` dataset also contains the raw scores of each state for each question,
-which are then grouped into categories labelled with alphabets from "A" to "G".
-In terms of indicators of democracy, accountability is captured in category "C",
-freedom of expression in category "D",
-and civil society participation in category "B".
-
-```{r subset}
+```{r subset vdem}
 library(dplyr)
 library(tidyr)
-
 vdem <- vdem %>% dplyr::select(StateName, stateID, Year,
                               v2x_regime, v2x_accountability_osp,
                               v2x_freexp_altinf, v2x_cspart) %>%
@@ -108,29 +97,49 @@ vdem <- vdem %>% dplyr::select(StateName, stateID, Year,
   dplyr::mutate(regime_type = case_when(regime == 2 ~ "Electoral Democracy",
                                         regime == 3 ~ "Liberal Democracy")) %>% 
   # create a new regime type variable and rename the categories within
+  arrange(desc(Year)) %>% # arrange by year
   drop_na() # drop rows where there is at least one NA obs...
+```
 
+The Freedom House data contains state year data starting from the year 2012.
+Therefore, it is much smaller then VDEM.
+Freedom House also organises its data somewhat differently,
+disaggregating the concept of democracy into two components:
+political rights ("PR rating" - "A" + "B" + "C") and
+civil liberties ("CL rating" - "D" + "E" + "F" + "G").
+The `FreedomHouseFull` dataset also contains the raw scores of each state for each question,
+which are then grouped into categories labelled with alphabets from "A" to "G".
+In terms of indicators of democracy, accountability is captured in category "C",
+freedom of expression in category "D",
+and civil society participation in category "B".
+Let's subset the data accordingly.
+
+```{r subset fh}
 fh <- dplyr::select(fh, c(StateName, stateID, Year, PR, CL, B, C, D)) %>%
   # select only the variables of interest
-  dplyr::filter(Year > 1989, PR > 17) %>%
-  # filter for last 30 years (bigger than 1989) and for democracies only
+  dplyr::filter(PR > 17) %>% # filter for democracies only
   manydata::transmutate(freedom_expression = D/16,
                         accountability = C/12,
-                        civil_society = B/16) %>% # rename and standardise some of these variables
+                        civil_society = B/16) %>%
+  # rename and standardise some of these variables
   dplyr::mutate(regime_type = ifelse(CL > 52, "Liberal Democracy",
                                      "Electoral Democracy")) %>%
-  # create a new regime type variable and rename the categories within, benchmark score derived from Scores table in Freedom House Codebook
+  # create a new regime type variable and rename the categories within,
+  # benchmark score derived from Scores table in Freedom House Codebook
+  arrange(desc(Year)) %>% # arrange by year
   drop_na() # drop rows where there is at least one NA obs...
 ```
 
 ## Investigate the data
 
-Let's compare the 10 states with the highest accountability scores (on average) in each dataset:
+Let's first compare the 10 states with the highest accountability scores
+(on average) in each dataset since 2012.
 
 ```{r investigate}
 library(kableExtra)
 
 vdem_account_10 <- vdem %>% # call data without assigning it
+  dplyr::filter(Year > 2011) %>% # filter for years in both datasets
   group_by(StateName) %>% # group by state name
   summarise(Mean_VDEM = mean(accountability)) %>%
   arrange(desc(Mean_VDEM)) %>% # arrange the data by mean, in decreasing order
@@ -148,38 +157,43 @@ full_join(vdem_account_10, fh_account_10) %>%
   kable_styling("striped")
 ```
 
+It seems that the datasets differ somewhat on the states with highest accountability scores (on average). 
+
 ## Pathways: from electoral to liberal democracies (and vice-versa)
 
-Let's see which countries had multiple democratic regimes.
+Let's compare which states appear as having multiple democratic regimes since 2012 in both datasets.
 
 ```{r transitions}
-vdem %>% # saving this object to use later
+vdem_transition <- vdem %>% # saving this object to use later
+  dplyr::filter(Year > 2011) %>% # filter for years in both datasets
   group_by(StateName, regime_type) %>% # group by state and regime
   count() %>% # count grouped observations
   group_by(StateName) %>% # re-group by state name only 
   mutate(Duplicated = n()) %>% # add duplicated columns for state names
   filter(Duplicated > 1) %>%  # filter for names that appear more than once
   select(-c(Duplicated)) %>% # remove duplicated variables
-  rename('Years VDEM' = n, 'Regime Type' = regime_type) %>% # rename for clarity
-  kbl() %>% 
-  kable_styling("striped")
+  rename('Years VDEM' = n, 'Regime Type' = regime_type) # rename for clarity
 
-fh %>% # saving this object to use later
+fh_transition <- fh %>% # saving this object to use later
   group_by(StateName, regime_type) %>% # group by state and regime
   count() %>% # count grouped observations
   group_by(StateName) %>% # re-group by state name only 
   mutate(Duplicated = n()) %>% # add duplicated columns for state names
   filter(Duplicated > 1) %>%  # filter for names that appear more than once
   select(-c(Duplicated)) %>% # remove duplicated variables
-  rename('Years FH' = n, 'Regime Type' = regime_type) %>% # rename for clarity
+  rename('Years FH' = n, 'Regime Type' = regime_type) # rename for clarity
+
+dplyr::full_join(vdem_transition, fh_transition) %>%
+  arrange(StateName) %>%
   kbl() %>% 
   kable_styling("striped")
 ```
 
-There appears to be no consensus across datasets...
+VDEM and freedom house appear to differ quite a bit in the cases that transitioned from liberal democracies to electoral democracies (and vice-versa) since 2012. Let's investigate further by taking a closer look at cases that appear in both datasets.
 
 ```{r}
 transition_vdem <- vdem %>% # saving this object to use later
+  dplyr::filter(Year > 2011) %>% # filter for years in both datasets
   group_by(StateName, regime_type) %>% # group by state and regime
   summarise(Years_VDEM = paste(Year, collapse = ", ")) %>%
   group_by(StateName) %>% # re-group by state name only 
@@ -188,7 +202,6 @@ transition_vdem <- vdem %>% # saving this object to use later
   select(-c(Duplicated)) # remove duplicated variables
 
 transition_fh <- fh %>% # saving this object to use later
-  arrange(Year) %>%
   group_by(StateName, regime_type) %>% # group by state and regime
   summarise(Years_FH = paste(Year, collapse = ", ")) %>%
   group_by(StateName) %>% # re-group by state name only 
@@ -201,9 +214,12 @@ inner_join(transition_vdem, transition_fh) %>%
   kable_styling("striped")
 ```
 
-Let's work with only VDEM data since it has more state year observations.
-Let's look at the average differences for our democracy indicators for 
-the countries with multiple regimes.
+Even in the few cases of transtions from liberal democracies into electoral democracies (and vice-versa) since 2012 appear in both datasets, they seem to somewhat disagree in the specific years where these states are classified  as liberal and/or electoral democracies. 
+
+Since VDEM has more state year observations and we are interested in democracy pathways since the 1990s, let's work with VDEM data only from now onwards.
+
+Let's just look at the average differences for our democracy indicators for 
+the states with multiple regimes.
 
 ```{r differences}
 library(ggplot2)
@@ -245,9 +261,10 @@ vdem %>%
        x = "Mean Difference")
 ```
 
-It appears that some countries averages for these indicators were worse when
+Although the plot is not very informative, 
+it appears that some states averages for these indicators were worse when
 they were classified as liberal democracies in comparison to when they were
-electoral democracies. 
+electoral democracies. This is puzzling.
 
 Let's try a different approach, plotting averages for all indicators together
 in time and by state.
@@ -282,19 +299,36 @@ vdem %>% # saving this object to use later
                                 "Liberal Democracy"))
 ```
 
+Once again, it appears that for some states, aggregated indicators for accountability,
+freedom of expression, and civil society participation got better as they moved
+from electoral democracy to liberal democracy (e.g. Taiwan),
+or worse as they moved from liberal democracy to electoral democracy (e.g. Hungary). 
+In other cases, it is not clear these changed at all (e.g. Benin) or,
+even more puzzling, aggregated indicators got worse as they moved from electoral
+democracy to liberal democracy (e.g. Greece),
+or better as they moved from liberal democracy to electoral democracy (e.g. Slovakia).
+
 # Indicators by region
 
+Perhaps, however, we are missing important regional information that mediates the
+relationship between these indicators and whether states are classified 
+liberal or electoral democracies.
 How about we check the evolution of these indicators by region?
-Let's get and join region data from HUGGO states to see the evolution of the
-aggregated indicators per region for 1990 and 2021.
+Let's get and join region data from the `HUGGO_STATES` database to see the
+evolution of the aggregated indicators per region since the 1990s.
 
 ```{r regions}
 HUGGO_STATES <- states$HUGGO_STATES %>%
   select(StateName, Region) %>% # select only the variables we want
   distinct() # keeps only distinct rolls (no duplicates)
 
-vdem %>% dplyr::left_join(HUGGO_STATES, by = "StateName") %>%
-  filter(Year == 1990 | Year == 2021) %>% # filter for first and last year of data
+vdem %>%
+  dplyr::left_join(HUGGO_STATES, by = "StateName") %>%
+  group_by(Region) %>%
+  mutate(max_region_year = max(as.numeric(Year)),
+         min_region_year = min(as.numeric(Year))) %>% # get min and max values for each regions
+  filter(Year == min_region_year | Year == max_region_year) %>%
+  # filter for first and last year of data
   group_by(Region, Year) %>% # group region and year
   summarise(Aggregated_Mean_Indicators = (mean(accountability) +
                                             mean(freedom_expression) +
