@@ -1,3 +1,16 @@
+# manystates 0.2.0
+
+## Package
+
+* Closed #61 by updating functions to import [Varieties of Democracy](https://github.com/vdeminstitute) data from the Github package with standardised variable names.
+* Updated `import_vdem()`, `import_vparty()`, and `import_cshapes()` function by fixing CMD warnings and notes.
+* Closed #54 by moving `code_states()` to `{manypkgs}` for consistency across packages.
+* Added first draft of vignette to publicize `{manystates}` data.
+
+## Data
+
+* Closed #57 by replacing GNEVAR datasets with HUGGO datasets for handcoded data in `states`, `leaders`, and `contiguity` databases.
+
 # manystates 0.1.1
 
 ## Functions
