@@ -19,7 +19,7 @@
 #' Beg_GW, Beg_Polity2.}
 #' \item{RATRULES: }{A dataset with 177 observations and the following
 #' 3 variables: stateID, StateName, RatProcedure.}
-#' \item{HUGGO_STATES: }{A dataset with 722 observations and the following
+#' \item{HUGGO_STATES: }{A dataset with 574 observations and the following
 #' 12 variables: stateID, StateName, Capital, Beg, End, Latitude, Longitude,
 #' Area, Region, RatProcedure, Constitutional Description, Source.}
 #' }

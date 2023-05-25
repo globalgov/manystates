@@ -24,7 +24,7 @@ SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
 Beg_GW, Beg_Polity2.}
 \item{RATRULES: }{A dataset with 177 observations and the following
 3 variables: stateID, StateName, RatProcedure.}
-\item{HUGGO_STATES: }{A dataset with 722 observations and the following
+\item{HUGGO_STATES: }{A dataset with 574 observations and the following
 12 variables: stateID, StateName, Capital, Beg, End, Latitude, Longitude,
 Area, Region, RatProcedure, Constitutional Description, Source.}
 }
@@ -126,18 +126,18 @@ states database documentation
 #> ---------------------------------------------------------------------------------------
 #> |       Column Name        |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ---------------------------------------------------------------------------------------
-#> |         stateID          |  character  |             722|     0     |       0       |
-#> |        StateName         |  character  |             722|    271    |     37.53     |
-#> |         Capital          |  character  |             722|    111    |     15.37     |
-#> |           Beg            |    mdate    |             722|    400    |     55.4      |
-#> |           End            |    mdate    |             722|    400    |     55.4      |
-#> |         Latitude         |  character  |             722|    225    |     31.16     |
-#> |        Longitude         |  character  |             722|    225    |     31.16     |
-#> |           Area           |  character  |             722|    590    |     81.72     |
-#> |          Region          |  character  |             722|    496    |     68.7      |
-#> |       RatProcedure       |  character  |             722|    690    |     95.57     |
-#> |Constitutional Description|  character  |             722|    690    |     95.57     |
-#> |          Source          |  character  |             722|    682    |     94.46     |
+#> |         stateID          |  character  |             574|     0     |       0       |
+#> |        StateName         |  character  |             574|    214    |     37.28     |
+#> |         Capital          |  character  |             574|    215    |     37.46     |
+#> |           Beg            |    mdate    |             574|    257    |     44.77     |
+#> |           End            |    mdate    |             574|    257    |     44.77     |
+#> |         Latitude         |  character  |             574|    234    |     40.77     |
+#> |        Longitude         |  character  |             574|    234    |     40.77     |
+#> |           Area           |  character  |             574|    448    |     78.05     |
+#> |          Region          |  character  |             574|    356    |     62.02     |
+#> |       RatProcedure       |  character  |             574|    542    |     94.43     |
+#> |Constitutional Description|  character  |             574|    542    |     94.43     |
+#> |          Source          |  character  |             574|    533    |     92.86     |
 #> ---------------------------------------------------------------------------------------
 }\if{html}{\out{</div>}}
 }
