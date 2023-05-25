@@ -19,17 +19,17 @@ many packages universe.
 }
 \description{
 Functions to import the
-\href{https://www.v-dem.net/en/data/data/v-dem-dataset-v111/}{V-Dem} and the
-\href{https://www.v-dem.net/en/data/data/v-party-dataset/}{V-Party} datasets
+\href{https://www.v-dem.net/data/the-v-dem-dataset/}{V-Dem} and the
+\href{https://www.v-dem.net/data/v-party-dataset/}{V-Party} datasets
 from the \href{https://github.com/vdeminstitute/vdemdata}{\code{{vdemdata}}}
 package in a many packages universe consistent format.
 }
 \details{
-\code{import_vdem()} imports VDem 11.1 dataset
+\code{import_vdem()} imports the latest version of VDEM dataset
 and formats it to be consistent with the many packages universe.
 
-\code{import_vparty()} imports the V-Party dataset and
-formats it to be consistent with the many packages universe.
+\code{import_vparty()} imports the latest version of the V-Party dataset
+and formats it to be consistent with the many packages universe.
 }
 \examples{
 \donttest{

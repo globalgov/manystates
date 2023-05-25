@@ -12,7 +12,7 @@ ICOW <- readr::read_csv("data-raw/states/ICOW/coldata110.csv")
 # below (in stage three) passes all the tests.
 colnames <- colnames(ICOW)
 colnames[[1]] <- "cowID"
-colnames[[2]] <- "Label"
+colnames[[2]] <- "StateName"
 cust_match <- c("260" = "GFR",
                 "730" = "KOR")
 ICOW <- dplyr::as_tibble(ICOW) %>%
@@ -116,11 +116,11 @@ ICOW <- dplyr::as_tibble(ICOW) %>%
                                                             4, 5)),
                                               GWsys)))) %>%
   dplyr::mutate(IndDate = messydates::as_messydate(IndDate),
-              SecDate = messydates::as_messydate(SecDate),
-              IntoDate = messydates::as_messydate(IntoDate),
-              COWsys = messydates::as_messydate(COWsys),
-              GWsys = messydates::as_messydate(GWsys)) %>%
-  manydata::transmutate(Label = manypkgs::standardise_titles(Name)) %>%
+                SecDate = messydates::as_messydate(SecDate),
+                IntoDate = messydates::as_messydate(IntoDate),
+                COWsys = messydates::as_messydate(COWsys),
+                GWsys = messydates::as_messydate(GWsys)) %>%
+  manydata::transmutate(StateName = manypkgs::standardise_titles(Name)) %>%
   dplyr::select(-State) %>%
   dplyr::arrange(cowID)
 # Reorder columns

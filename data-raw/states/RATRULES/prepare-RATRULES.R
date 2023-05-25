@@ -14,11 +14,11 @@ RATRULES <- readr::read_csv("data-raw/states/RATRULES/BSrat.csv")
 # away from issues with ambiguous names down the road.
 RATRULES <- as_tibble(RATRULES) %>%
   dplyr::rename(stateID = StatID, RatProcedure = Rat) %>%
-  dplyr::mutate(Label = countrycode::countrycode(stateID,
+  dplyr::mutate(StateName = countrycode::countrycode(stateID,
                                                  origin = "iso3c",
                                                  destination = "country.name")) %>%
-  dplyr::mutate(Label = manypkgs::standardize_titles(Label)) %>%
-  dplyr::select(stateID, Label, RatProcedure)
+  dplyr::mutate(StateName = manypkgs::standardize_titles(Label)) %>%
+  dplyr::select(stateID, StateName, RatProcedure)
 
 # manypkgs includes several functions that should help cleaning
 # and standardising your data such as `standardise_titles()`

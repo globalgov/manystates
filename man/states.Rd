@@ -6,27 +6,27 @@
 \title{states database documentation}
 \format{
 The states database is a list that contains the
-following 7 datasets: GW, ISD, COW, ICOW, GNEVAR_STATES, ICOW_COL, RATRULES.
+following 7 datasets: GW, ISD, COW, ICOW, ICOW_COL, RATRULES, HUGGO_STATES.
 For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
 \describe{
 \item{GW: }{A dataset with 216 observations and the following
-5 variables: cowID, Beg, End, cowNR, Label.}
+5 variables: cowID, Beg, End, cowNR, StateName.}
 \item{ISD: }{A dataset with 362 observations and the following
-7 variables: cowID, Beg, End, cowNR, Label, Micro, NewState.}
+7 variables: cowID, Beg, End, cowNR, StateName, Micro, NewState.}
 \item{COW: }{A dataset with 243 observations and the following
-5 variables: cowID, Beg, End, cowNR, Label.}
+5 variables: cowID, Beg, End, cowNR, StateName.}
 \item{ICOW: }{A dataset with 217 observations and the following
-15 variables: cowID, Label, ColRuler, IndFrom, IndDate, IndViol, IndType,
+15 variables: cowID, StateName, ColRuler, IndFrom, IndDate, IndViol, IndType,
 SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
-\item{GNEVAR_STATES: }{A dataset with 722 observations and the following
-12 variables: stateID, Label, Capital, Beg, End, Latitude, Longitude, Area,
-Region, RatProcedure, Constitutional Description, Source.}
 \item{ICOW_COL: }{A dataset with 221 observations and the following
-9 variables: cowID, cowNR, Label, Beg, cowID_Origin, IndepType, Beg_COW,
+9 variables: cowID, cowNR, StateName, Beg, cowID_Origin, IndepType, Beg_COW,
 Beg_GW, Beg_Polity2.}
 \item{RATRULES: }{A dataset with 177 observations and the following
-3 variables: stateID, Label, RatProcedure.}
+3 variables: stateID, StateName, RatProcedure.}
+\item{HUGGO_STATES: }{A dataset with 574 observations and the following
+12 variables: stateID, StateName, Capital, Beg, End, Latitude, Longitude,
+Area, Region, RatProcedure, Constitutional Description, Source.}
 }
 }
 \usage{
@@ -44,7 +44,7 @@ states database documentation
 #> |      Beg      |    mdate    |             216|     0     |       0       |
 #> |      End      |    mdate    |             216|     0     |       0       |
 #> |     cowNR     |  character  |             216|     0     |       0       |
-#> |     Label     |  character  |             216|     0     |       0       |
+#> |   StateName   |  character  |             216|     0     |       0       |
 #> ----------------------------------------------------------------------------
 #> 
 #> 
@@ -56,7 +56,7 @@ states database documentation
 #> |      Beg      |    mdate    |             362|     0     |       0       |
 #> |      End      |    mdate    |             362|     0     |       0       |
 #> |     cowNR     |  character  |             362|     0     |       0       |
-#> |     Label     |  character  |             362|     0     |       0       |
+#> |   StateName   |  character  |             362|     0     |       0       |
 #> |     Micro     |  character  |             362|     0     |       0       |
 #> |   NewState    |  character  |             362|     0     |       0       |
 #> ----------------------------------------------------------------------------
@@ -70,7 +70,7 @@ states database documentation
 #> |      Beg      |    mdate    |             243|     0     |       0       |
 #> |      End      |    mdate    |             243|     0     |       0       |
 #> |     cowNR     |  character  |             243|     0     |       0       |
-#> |     Label     |  character  |             243|     0     |       0       |
+#> |   StateName   |  character  |             243|     0     |       0       |
 #> ----------------------------------------------------------------------------
 #> 
 #> 
@@ -79,7 +79,7 @@ states database documentation
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
 #> |     cowID     |  character  |             217|     0     |       0       |
-#> |     Label     |  character  |             217|     0     |       0       |
+#> |   StateName   |  character  |             217|     0     |       0       |
 #> |   ColRuler    |   numeric   |             217|    46     |     21.2      |
 #> |    IndFrom    |   numeric   |             217|    39     |     17.97     |
 #> |    IndDate    |    mdate    |             217|     0     |       0       |
@@ -96,32 +96,13 @@ states database documentation
 #> ----------------------------------------------------------------------------
 #> 
 #> 
-#> $GNEVAR_STATES
-#> ---------------------------------------------------------------------------------------
-#> |       Column Name        |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
-#> ---------------------------------------------------------------------------------------
-#> |         stateID          |  character  |             722|     0     |       0       |
-#> |          Label           |  character  |             722|    271    |     37.53     |
-#> |         Capital          |  character  |             722|    111    |     15.37     |
-#> |           Beg            |    mdate    |             722|    400    |     55.4      |
-#> |           End            |    mdate    |             722|    400    |     55.4      |
-#> |         Latitude         |   numeric   |             722|    225    |     31.16     |
-#> |        Longitude         |   numeric   |             722|    225    |     31.16     |
-#> |           Area           |  character  |             722|    590    |     81.72     |
-#> |          Region          |  character  |             722|    590    |     81.72     |
-#> |       RatProcedure       |   numeric   |             722|    690    |     95.57     |
-#> |Constitutional Description|  character  |             722|    690    |     95.57     |
-#> |          Source          |  character  |             722|    682    |     94.46     |
-#> ---------------------------------------------------------------------------------------
-#> 
-#> 
 #> $ICOW_COL
 #> ----------------------------------------------------------------------------
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
 #> |     cowID     |  character  |             221|     2     |      0.9      |
 #> |     cowNR     |   numeric   |             221|     0     |       0       |
-#> |     Label     |  character  |             221|     0     |       0       |
+#> |   StateName   |  character  |             221|     0     |       0       |
 #> |      Beg      |    mdate    |             221|     0     |       0       |
 #> | cowID_Origin  |   numeric   |             221|     0     |       0       |
 #> |   IndepType   |   numeric   |             221|     0     |       0       |
@@ -136,9 +117,28 @@ states database documentation
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
 #> |    stateID    |  character  |             177|     0     |       0       |
-#> |     Label     |  character  |             177|     0     |       0       |
+#> |   StateName   |  character  |             177|     0     |       0       |
 #> | RatProcedure  |   numeric   |             177|     0     |       0       |
 #> ----------------------------------------------------------------------------
+#> 
+#> 
+#> $HUGGO_STATES
+#> ---------------------------------------------------------------------------------------
+#> |       Column Name        |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+#> ---------------------------------------------------------------------------------------
+#> |         stateID          |  character  |             574|     0     |       0       |
+#> |        StateName         |  character  |             574|    214    |     37.28     |
+#> |         Capital          |  character  |             574|    215    |     37.46     |
+#> |           Beg            |    mdate    |             574|    257    |     44.77     |
+#> |           End            |    mdate    |             574|    257    |     44.77     |
+#> |         Latitude         |  character  |             574|    234    |     40.77     |
+#> |        Longitude         |  character  |             574|    234    |     40.77     |
+#> |           Area           |  character  |             574|    448    |     78.05     |
+#> |          Region          |  character  |             574|    356    |     62.02     |
+#> |       RatProcedure       |  character  |             574|    542    |     94.43     |
+#> |Constitutional Description|  character  |             574|    542    |     94.43     |
+#> |          Source          |  character  |             574|    533    |     92.86     |
+#> ---------------------------------------------------------------------------------------
 }\if{html}{\out{</div>}}
 }
 \keyword{datasets}

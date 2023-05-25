@@ -31,6 +31,8 @@ NULL
 #' }
 #' @export
 import_cshapes <- function(date, ...) {
+  start <- end <- country_name <- capname <- caplong <- caplat <- b_def <-
+    owner <- cowcode <- fid <- cowID <- Beg <- End <- Label <- status <- NULL
   # Step 1: Set string dates to actual dates
   date <- as.Date(date)
   # Test for correct dates
@@ -43,25 +45,26 @@ import_cshapes <- function(date, ...) {
   cshapes <- cshapes::cshp(date, ..., useGW = FALSE) # Use cowID instead of GW
   # Step 3: Correcting data
   cshapes <- tibble::as_tibble(cshapes) %>%
-    dplyr::mutate(Beg = messydates::make_messydate(.data$start),
-                End = messydates::make_messydate(.data$end),
-                Label = manypkgs::standardise_titles(.data$country_name),
-                cowID = manystates::code_states(
-                  as.character(.data$country_name), abbrev = TRUE),
-                Capital = manypkgs::standardise_titles(.data$capname),
-                CapitalLong = .data$caplong,
-                CapitalLat = .data$caplat,
-                WellDefinedBorders = .data$b_def,
-                Status = dplyr::if_else(.data$status == "independent", 1, 0),
+    dplyr::mutate(Beg = messydates::make_messydate(start),
+                End = messydates::make_messydate(end),
+                Label = manypkgs::standardise_titles(country_name),
+                cowID = manypkgs::code_states(as.character(country_name),
+                                              activity = FALSE,
+                                              replace = "ID"),
+                Capital = manypkgs::standardise_titles(capname),
+                CapitalLong = caplong,
+                CapitalLat = caplat,
+                WellDefinedBorders = b_def,
+                Status = dplyr::if_else(status == "independent", 1, 0),
                 # All are independent states.
                 # Check where the colonies are.
-                Owner = .data$owner) %>%
-    dplyr::select(-(.data$start), -(.data$end), -(.data$country_name),
-                  -(.data$cowcode), -(.data$capname), -(.data$caplong),
-                  -(.data$caplat), -(.data$b_def), -(.data$status),
-                  -(.data$owner), -(.data$fid)) %>%
-    dplyr::relocate(.data$cowID, .data$Beg, .data$End, .data$Label) %>%
-    dplyr::arrange(.data$Beg, .data$cowID)
+                Owner = owner) %>%
+    dplyr::select(-c(start, end, country_name,
+                  cowcode, capname, caplong,
+                  caplat, b_def, status,
+                  owner, fid)) %>%
+    dplyr::relocate(cowID, Beg, End, Label) %>%
+    dplyr::arrange(Beg, cowID)
   return(cshapes)
 }
 
@@ -86,6 +89,8 @@ import_cshapes <- function(date, ...) {
 #' }
 #' @export
 import_distlist <- function(date, type, ...) {
+  ccode1 <- ccode2 <- capdist <- FromLabel <- ToLabel <- FromCode <- ToCode <-
+    Distance <- mindist <- centdist <- NULL
   # Step 1: Change date in string format to date format
   date <- as.Date(date)
   # Check whether inputs are in range of permitted values for dates and type.
@@ -108,63 +113,69 @@ import_distlist <- function(date, type, ...) {
   if (type == "capdist") {
     dist <- tibble::as_tibble(dist) %>%
       dplyr::mutate(FromLabel =
-                      countrycode::countrycode(sourcevar = .data$ccode1,
+                      countrycode::countrycode(sourcevar = ccode1,
                                                origin = "cown",
                                                destination = "country.name",
                                                custom_match = custom_match),
                     ToLabel =
-                      countrycode::countrycode(sourcevar = .data$ccode2,
+                      countrycode::countrycode(sourcevar = ccode2,
                                                origin = "cown",
                                                destination = "country.name",
                                                custom_match = custom_match)) %>%
-      dplyr::rename(FromCode = .data$ccode1, ToCode = .data$ccode2,
-                    Distance = .data$capdist) %>%
-      dplyr::mutate(FromCode = manystates::code_states(.data$FromLabel,
-                                                       abbrev = TRUE),
-                    ToCode = manystates::code_states(.data$ToLabel,
-                                                     abbrev = TRUE)) %>%
-      dplyr::relocate(.data$FromLabel, .data$FromCode, .data$ToLabel,
-                      .data$ToCode, .data$Distance)
+      dplyr::rename(FromCode = ccode1, ToCode = ccode2,
+                    Distance = capdist) %>%
+      dplyr::mutate(FromCode = manypkgs::code_states(FromLabel,
+                                                     activity = FALSE,
+                                                     replace = "ID"),
+                    ToCode = manypkgs::code_states(ToLabel,
+                                                   activity = FALSE,
+                                                   replace = "ID")) %>%
+      dplyr::relocate(FromLabel, FromCode, ToLabel,
+                      ToCode, Distance)
   } else if (type == "mindist") {
     dist <- tibble::as_tibble(dist) %>%
       dplyr::mutate(FromLabel =
-                      countrycode::countrycode(sourcevar = .data$ccode1,
+                      countrycode::countrycode(sourcevar = ccode1,
                                                origin = "cown",
                                                destination = "country.name",
                                                custom_match = custom_match),
                     ToLabel =
-                      countrycode::countrycode(sourcevar = .data$ccode2,
+                      countrycode::countrycode(sourcevar = ccode2,
                                                origin = "cown",
                                                destination = "country.name",
                                                custom_match = custom_match)) %>%
-      dplyr::rename(FromCode = .data$ccode1, ToCode = .data$ccode2,
-                    Distance = .data$mindist) %>%
-      dplyr::mutate(FromCode = manystates::code_states(.data$FromLabel,
-                                                       abbrev = TRUE),
-                    ToCode = manystates::code_states(.data$ToLabel,
-                                                     abbrev = TRUE)) %>%
-      dplyr::relocate(.data$FromLabel, .data$FromCode, .data$ToLabel,
-                      .data$ToCode, .data$Distance)
+      dplyr::rename(FromCode = ccode1, ToCode = ccode2,
+                    Distance = mindist) %>%
+      dplyr::mutate(FromCode = manypkgs::code_states(FromLabel,
+                                                     activity = FALSE,
+                                                     replace = "ID"),
+                    ToCode = manypkgs::code_states(ToLabel,
+                                                   activity = FALSE,
+                                                   replace = "ID")) %>%
+      dplyr::relocate(FromLabel, FromCode, ToLabel,
+                      ToCode, Distance)
   } else {
     dist <- tibble::as_tibble(dist) %>%
       dplyr::mutate(FromLabel =
-                      countrycode::countrycode(sourcevar = .data$ccode1,
+                      countrycode::countrycode(sourcevar = ccode1,
                                                origin = "cown",
                                                destination = "country.name",
                                                custom_match = custom_match),
                     ToLabel =
-                      countrycode::countrycode(sourcevar = .data$ccode2,
+                      countrycode::countrycode(sourcevar = ccode2,
                                                origin = "cown",
                                                destination = "country.name",
                                                custom_match = custom_match)) %>%
-      dplyr::rename(FromCode = .data$ccode1, ToCode = .data$ccode2,
-                    Distance = .data$centdist) %>%
-      dplyr::mutate(FromCode = manystates::code_states(.data$FromLabel,
-                                                       abbrev = TRUE),
-                    ToCode = manystates::code_states(.data$ToLabel,
-                                                     abbrev = TRUE)) %>%
-      dplyr::relocate(.data$FromLabel, .data$FromCode, .data$ToLabel,
-                      .data$ToCode, .data$Distance)
+      dplyr::rename(FromCode = ccode1, ToCode = ccode2,
+                    Distance = centdist) %>%
+      dplyr::mutate(FromCode = manypkgs::code_states(FromLabel,
+                                                     activity = FALSE,
+                                                     replace = "ID"),
+                    ToCode = manypkgs::code_states(ToLabel,
+                                                   activity = FALSE,
+                                                   replace = "ID")) %>%
+      dplyr::relocate(FromLabel, FromCode, ToLabel,
+                      ToCode, Distance)
   }
   return(dist)
 }

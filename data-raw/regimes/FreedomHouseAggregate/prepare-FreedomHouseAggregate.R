@@ -23,22 +23,22 @@ FreedomHouseAggregate.2 <- readxl::read_excel("data-raw/regimes/FreedomHouseAggr
 # away from issues with ambiguous names down the road.
 FreedomHouseAggregate.1 <- FreedomHouseAggregate.1[, 1:19]
 FreedomHouseAggregate.1 <- dplyr::rename(FreedomHouseAggregate.1,
-                                         Label = `Country/Territory`) %>%
+                                         StateName = `Country/Territory`) %>%
   manydata::transmutate(Territory = ifelse(`C/T?` == "t", 1, 0)) %>%
   dplyr::mutate(
-    cowID = manystates::code_states(Label, abbrev = TRUE),
+    stateID = manypkgs::code_states(StateName, abbrev = TRUE),
     Year = as.character(Edition - 1),
     Edition = as.character(Edition),
-    ID = paste0(cowID, "-", Year)
+    ID = paste0(stateID, "-", Year)
   ) %>%
   dplyr::rename(`PR rating` = `PR Rating`, `CL rating` = `CL Rating`) %>%
-  dplyr::relocate(ID, cowID, Year, Label)
+  dplyr::relocate(ID, stateID, Year, StateName)
 
 FreedomHouseAggregate.2 <- dplyr::rename(FreedomHouseAggregate.2,
-                                         Label = `Country/Territory`) %>%
+                                         StateName = `Country/Territory`) %>%
   manydata::transmutate(Territory = ifelse(`C/T?` == "t", 1, 0)) %>%
-  dplyr::mutate(cowID = manystates::code_states(Label, abbrev = TRUE)) %>%
-  tidyr::pivot_longer(cols = !c(Territory, cowID, Label)) %>%
+  dplyr::mutate(stateID = manypkgs::code_states(StateName, abbrev = TRUE)) %>%
+  tidyr::pivot_longer(cols = !c(Territory, stateID, StateName)) %>%
   dplyr::mutate(
     Year = ifelse(grepl("03", name), "2002",
                   ifelse(grepl("04", name), "2003",
@@ -50,9 +50,9 @@ FreedomHouseAggregate.2 <- dplyr::rename(FreedomHouseAggregate.2,
                            "Total"
                     )
     ),
-    ID = paste0(cowID, "-", Year)
+    ID = paste0(stateID, "-", Year)
   ) %>%
-  dplyr::select(ID, cowID, Year, Label, Rating, Territory, value) %>%
+  dplyr::select(ID, stateID, Year, StateName, Rating, Territory, value) %>%
   tidyr::pivot_wider(names_from = Rating, values_from = value)
 
 FreedomHouseAggregate <- dplyr::bind_rows(FreedomHouseAggregate.1, FreedomHouseAggregate.2) %>%

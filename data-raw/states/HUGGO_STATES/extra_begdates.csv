@@ -1,0 +1,111 @@
+StatID;Label;Start;Start2;End;End2;Comment
+ALB;Albania;1272-02-21;NA;1392-12-31;NA;
+ALB;Albania;1913-07-29;NA;1939-04-09;NA;
+ALB;Albania;1944-11-17;NA;9999-12-31;NA;
+AND;Andorra;1278-09-08;NA;1812-01-26;NA;
+AND;Andorra;1814-03-10;NA;9999-12-31;NA;
+ARM;Armenia;1918-05-28;NA;1920-12-02;NA;
+ARM;Armenia;1991-09-23;NA;9999-12-31;NA;
+AUH;Austria-Hungary;1867-03-30;NA;1918-11-11;NA;Birth of the dual monarchy
+AUT;Austria;1804-08-11;NA;1867-03-30;NA;
+AUT;Austria;1919-09-10;NA;1938-03-13;NA;
+AUT;Austria;1955-07-27;NA;9999-12-31;NA;
+AZE;Azerbaijan;1918-05-28;NA;1920-04-28;NA;
+AZE;Azerbaijan;1991-10-18;NA;9999-12-31;NA;Declaration of independance
+BEL;Belgium;1830-12-20;NA;1940-05-28;NA;
+BEL;Belgium;1945-06-26;NA;9999-12-31;NA;
+BGD;Bangladesh;1971-12-16;NA;9999-12-31;NA;
+BGR;Bulgaria;0681-12-31;NA;1018-12-31;NA;
+BGR;Bulgaria;1185-10-26;NA;1396-09-25;NA;
+BGR;Bulgaria;1878-03-03;NA;9999-12-31;NA;
+BLR;Belarus;1918-03-25;NA;1919-01-05;NA;
+BLR;SSR Byelorussia;1920-07-31;NA;1991-08-19;NA;
+BLR;Belarus;1991-08-25;NA;9999-12-31;NA;
+CHL;Chile;1818-02-12;NA;9999-12-31;NA;Declaration of independance
+CHN;China;1816-01-01;NA;9999-12-31;NA;
+COL;Colombia;1831-11-19;NA;9999-12-31;NA;
+COM;Comoros;1975-07-06;NA;9999-12-31;NA;
+CRI;Costa Rica;1838-11-05;NA;9999-12-31;NA;Declaration of independance
+DOM;Dominican Republic;1821-11-30;NA;1822-02-09;NA;
+DOM;Dominican Republic;1844-02-27;NA;1861-03-18;NA;
+DOM;Dominican Republic;1865-03-03;NA;1916-05-16;NA;
+DOM;Dominican Republic;1924-07-13;NA;9999-12-31;NA;
+ECU;Ecuador;1830-05-13;NA;9999-12-31;NA;
+EGY;Egypt;1805-05-17;NA;1882-09-15;NA;
+EGY;Egypt;1953-06-18;NA;9999-12-31;NA;Definitive end of british presence and start of the republic
+EST;Estonia;1918-02-24;NA;1940-06-16;NA;
+EST;Estonia;1991-08-20;NA;9999-12-31;NA;
+ETH;Ethiopia;1855-02-11;NA;1936-05-05;NA;
+ETH;Ethiopia;1941-05-05;NA;9999-12-31;NA;
+GEO;Georgia;1918-05-26;NA;1921-02-25;NA;
+GEO;Georgia;1991-04-09;NA;9999-12-31;NA;
+GRC;Greece;1827-05-17;NA;1941-04-23;NA;
+GRC;Greece;1944-10-13;NA;9999-12-31;NA;
+GTM;Guatemala;1840-01-01;NA;9999-12-31;NA;
+HAN;Hanover;1814-10-12;NA;1866-07-26;NA;
+HAN;Hanover;1946-08-23;NA;1946-11-23;NA;
+HND;Honduras;1838-11-05;NA;9999-12-31;NA;
+HRV;Croatia;0879-06-07;NA;1102-12-31;NA;
+HRV;Croatia;1941-04-10;NA;1945-05-08;NA;
+HRV;Croatia;1991-10-08;NA;9999-12-31;NA;Expiry of moratorium from declaration of independence
+HSE;Hesse Electoral;1803-04-27;NA;1807-07-09;NA;
+HSE;Hesse Electoral;1814-05-30;NA;1866-08-23;NA;
+HSG;Hesse Grand Ducal;1806-08-13;NA;1871-01-18;NA;When joins the German empire
+HUN;Hungary;1000-12-25;NA;1526-08-29;NA;
+HUN;Hungary;1920-06-04;NA;9999-12-31;NA;Treaty of Trianon
+IRL;Ireland;1922-12-06;NA;9999-12-31;NA;
+JOR;Jordan;1946-05-25;NA;9999-12-31;NA;
+JPN;Japan;1816-01-01;NA;1945-08-14;NA;
+JPN;Japan;1952-04-28;NA;9999-12-31;NA;
+KOS;Kosovo;2008-02-17;NA;9999-12-31;NA;
+LBN;Lebanon;1945-10-24;NA;9999-12-31;NA;As founding member state of UN, French mandate terminated from this date
+LBR;Liberia;1847-07-26;NA;9999-12-31;NA;
+LIE;Liechtenstein;1718-01-23;NA;1806-07-25;NA;
+LIE;Liechtenstein;1813-10-19;NA;1815-06-20;NA;
+LIE;Liechtenstein;1866-08-24;NA;9999-12-31;NA;Dissolution of the German Confederation
+LUX;Luxembourg;1867-05-11;NA;1890-11-22;NA;
+LUX;Luxembourg;1890-11-23;NA;1940-05-10;NA;
+LUX;Luxembourg;1944-09-10;NA;9999-12-31;NA;
+LVA;Latvia;1918-11-18;NA;1940-06-16;NA;
+LVA;Latvia;1991-09-06;NA;9999-12-31;NA;Declaration of independance
+MAR;Morocco;1664-08-02;NA;1912-03-30;NA;From coronation of Al-Rashid to Treaty of Fez
+MAR;Morocco;1956-03-02;NA;9999-12-31;NA;French-Moroccan Agreement
+MCO;Monaco;1641-09-14;NA;1793-02-14;NA;
+MCO;Monaco;1861-02-02;NA;9999-12-31;NA;
+MDG;Madagascar;1810-07-06;NA;1896-08-06;NA;From death of Andrianampoinimerina to French proclamation of colony
+MDG;Madagascar;1960-06-26;NA;9999-12-31;NA;
+MEC;Mecklenburg Schwerin;1815-06-14;NA;1871-01-18;NA;
+MEX;Mexico;1821-09-28;NA;9999-12-31;NA;
+MNE;Montenegro;1852-03-13;NA;1918-11-28;NA;
+MNE;Montenegro;2006-06-03;NA;9999-12-31;NA;
+MOD;Modena;1452-05-18;NA;1796-05-07;NA;
+MOD;Modena;1814-07-14;NA;1859-08-20;NA;
+NER;Niger;1960-08-03;NA;9999-12-31;NA;
+NIC;Nicaragua;1838-04-30;NA;9999-12-31;NA;
+NOR;Norway;1905-06-07;NA;1940-06-10;NA;
+NOR;Norway;1945-05-07;NA;9999-12-31;NA;
+NPL;Nepal;1816-01-01;NA;9999-12-31;NA;
+NRU;Nauru;1968-01-31;NA;9999-12-31;NA;
+PAL;Palembang;1816-01-01;NA;1823-12-31;NA;
+PLW;Palau;1994-10-01;NA;9999-12-31;NA;Compact of Free Association
+PMA;Parma;1545-09-16;NA;1802-10-09;NA;
+PMA;Parma;1814-04-11;NA;1859-09-15;NA;Dynasty declared deposed
+POL;Poland;1025-04-18;NA;1795-10-24;NA;
+POL;Poland;1807-06-09;NA;1815-06-09;NA;
+POL;Poland;1918-11-11;NA;1939-09-27;NA;
+POL;Poland;1945-06-28;NA;9999-12-31;NA;
+SAX;Saxony;1806-12-20;NA;1871-01-18;NA;Joined German Empire
+SIC;Two Sicilies;1442-06-02;NA;1458-06-27;NA;
+SIC;Two Sicilies;1501-08-01;NA;1714-03-07;NA;
+SIC;Two Sicilies;1816-12-12;NA;1861-03-17;NA;
+SLV;El Salvador;1841-02-18;NA;1896-09-15;NA;
+SLV;El Salvador;1898-11-21;NA;9999-12-31;NA;
+SMR;San Marino;0301-09-03;NA;9999-12-31;NA;
+SVN;Slovenia;1991-06-25;NA;9999-12-31;NA;
+TRA;Transvaal;1852-01-17;NA;1902-05-31;NA;
+TUS;Tuscany;1569-08-27;NA;1801-03-21;NA;
+TUS;Tuscany;1815-06-09;NA;1859-12-08;NA;Until merged into United Provinces of Central Italy
+UKR;Ukrainian SSR;1919-03-10;NA;1991-08-19;NA;
+UKR;Ukraine;1991-12-08;NA;9999-12-31;NA;
+URY;Uruguay;1828-08-27;NA;9999-12-31;NA;Treaty of Montevideo
+ZAF;South Africa;1910-05-31;NA;9999-12-31;NA;

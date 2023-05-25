@@ -6,24 +6,19 @@
 \title{leaders database documentation}
 \format{
 The leaders database is a list that contains the
-following 2 datasets: ARCHIGOS, GNEVAR_ARCHIGOS.
-GNEVAR_* datasets are handcoded original data or
-corrections to existing datasets where coding errors were found.
-In the latter case, the suffix will reference the original dataset.
-In the leaders database, GNEVAR_ARCHIGOS contains corrections to
-birth dates and familial ties of states' leaders.
+following 2 datasets: ARCHIGOS, HUGGO_ARCHIGOS.
 For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
 \describe{
 \item{ARCHIGOS: }{A dataset with 17686 observations and the following
-30 variables: archigosID, leaderID, cowID, idacr, Label, leader, Beg, End,
-BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
+30 variables: archigosID, leaderID, cowID, idacr, StateName, leader, Beg,
+End, BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
 prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry, num.exit,
 num.exitcode, num.posttenurefate, FtiesNameA, FtiesCodeA, FtiesNameB,
 FtiesCodeB, FtiesNameC, FtiesCodeC, ftcur.}
-\item{GNEVAR_ARCHIGOS: }{A dataset with 24 observations and the following
-30 variables: archigosID, cowID, leaderID, idacr, Label, leader, Beg, End,
-BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
+\item{HUGGO_ARCHIGOS: }{A dataset with 24 observations and the following
+30 variables: archigosID, cowID, leaderID, idacr, StateName, leader, Beg,
+End, BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
 prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry, num.exit,
 num.exitcode, num.posttenurefate, FtiesNameA, FtiesCodeA, FtiesNameB,
 FtiesCodeB, FtiesNameC, FtiesCodeC, ftcur.}
@@ -44,7 +39,7 @@ leaders database documentation
 #> |     leaderID     |  character  |           17686|     0     |       0       |
 #> |      cowID       |  character  |           17686|     0     |       0       |
 #> |      idacr       |  character  |           17686|     0     |       0       |
-#> |      Label       |  character  |           17686|     0     |       0       |
+#> |    StateName     |  character  |           17686|     0     |       0       |
 #> |      leader      |  character  |           17686|     0     |       0       |
 #> |       Beg        |    mdate    |           17686|     0     |       0       |
 #> |       End        |    mdate    |           17686|     0     |       0       |
@@ -73,7 +68,7 @@ leaders database documentation
 #> -------------------------------------------------------------------------------
 #> 
 #> 
-#> $GNEVAR_ARCHIGOS
+#> $HUGGO_ARCHIGOS
 #> -------------------------------------------------------------------------------
 #> |   Column Name    |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> -------------------------------------------------------------------------------
@@ -81,7 +76,7 @@ leaders database documentation
 #> |      cowID       |  character  |              24|     0     |       0       |
 #> |     leaderID     |  character  |              24|     0     |       0       |
 #> |      idacr       |  character  |              24|     0     |       0       |
-#> |      Label       |  character  |              24|     0     |       0       |
+#> |    StateName     |  character  |              24|     0     |       0       |
 #> |      leader      |  character  |              24|     0     |       0       |
 #> |       Beg        |    mdate    |              24|     0     |       0       |
 #> |       End        |    mdate    |              24|     0     |       0       |
@@ -89,7 +84,7 @@ leaders database documentation
 #> |    DeathDate     |    mdate    |              24|    11     |     45.83     |
 #> |     YearBorn     |    mdate    |              24|     0     |       0       |
 #> |     YearDied     |    mdate    |              24|     0     |       0       |
-#> |      Female      |   numeric   |              24|     0     |       0       |
+#> |      Female      |  character  |              24|     0     |       0       |
 #> |      entry       |  character  |              24|    18     |      75       |
 #> |       exit       |  character  |              24|    18     |      75       |
 #> |     exitcode     |  character  |              24|    18     |      75       |
@@ -106,7 +101,7 @@ leaders database documentation
 #> |    FtiesCodeB    |  character  |              24|    19     |     79.17     |
 #> |    FtiesNameC    |  character  |              24|    24     |      100      |
 #> |    FtiesCodeC    |  character  |              24|    24     |      100      |
-#> |      ftcur       |   integer   |              24|     6     |      25       |
+#> |      ftcur       |  character  |              24|     6     |      25       |
 #> -------------------------------------------------------------------------------
 }\if{html}{\out{</div>}}
 }

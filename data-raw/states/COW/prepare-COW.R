@@ -1,7 +1,7 @@
 # COW Preparation Script
 
 # This is a template for importing, cleaning, and exporting data
-# ready for the qPackage.
+# ready for the many package.
 
 # Stage one: Collecting data
 COW <- readr::read_csv("data-raw/states/COW/states2016.csv")
@@ -14,9 +14,9 @@ COW <- tibble::as_tibble(COW) %>%
   manydata::transmutate(cowID = stateabb,
                         Beg = messydates::make_messydate(styear, stmonth, stday),
                         End = messydates::make_messydate(endyear, endmonth, endday),
-                        Label = manypkgs::standardise_titles(statenme),
+                        StateName = manypkgs::standardise_titles(statenme),
                         cowNR = manypkgs::standardise_titles(as.character(ccode))) %>%
-  dplyr::select(cowID, Beg, End, cowNR, Label) %>%
+  dplyr::select(cowID, Beg, End, cowNR, StateName) %>%
   dplyr::arrange(Beg, cowID)
 
 # We know that COW data for "old" states is set to 1816-01-01 by default.
@@ -34,7 +34,7 @@ COW <- COW %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-
 # Stage three: Connecting data
 # Next run the following line to make COW available within the many package.
 manypkgs::export_data(COW, database = "states",
-                     URL = "https://correlatesofwar.org/data-sets/state-system-membership")
+                      URL = "https://correlatesofwar.org/data-sets/state-system-membership")
 
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence

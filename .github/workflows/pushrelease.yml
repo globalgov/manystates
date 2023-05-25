@@ -101,7 +101,7 @@ jobs:
         run: ls -R
 
       - name: Rename Mac release
-        run: mv ./macOS/*.tgz manystates_macOS.tgz
+        run: mv ./macOS/*.tgz pkg_macOS.tgz
 
       - name: Upload Mac binary
         id: upload-mac
@@ -110,12 +110,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: manystates_macOS.tgz
-          asset_name: manystates_macOS.tgz
+          asset_path: pkg_macOS.tgz
+          asset_name: pkg_macOS.tgz
           asset_content_type: application/zip
 
       - name: Rename Linux release
-        run: mv ./linuxOS/*.tar.gz manystates_linuxOS.tar.gz
+        run: mv ./linuxOS/*.tar.gz pkg_linuxOS.tar.gz
 
       - name: Upload Linux binary
         id: upload-lin
@@ -124,12 +124,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: manystates_linuxOS.tar.gz
-          asset_name: manystates_linuxOS.tar.gz
+          asset_path: pkg_linuxOS.tar.gz
+          asset_name: pkg_linuxOS.tar.gz
           asset_content_type: application/zip
 
       - name: Rename Windows release
-        run: mv ./winOS/*.zip manystates_winOS.zip
+        run: mv ./winOS/*.zip pkg_winOS.zip
 
       - name: Upload Windows binary
         id: upload-win
@@ -138,8 +138,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: manystates_winOS.zip
-          asset_name: manystates_winOS.zip
+          asset_path: pkg_winOS.zip
+          asset_name: pkg_winOS.zip
           asset_content_type: application/zip
 
   render:

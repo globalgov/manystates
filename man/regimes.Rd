@@ -6,26 +6,27 @@
 \title{regimes database documentation}
 \format{
 The regimes database is a list that contains the
-following 4 datasets: Polity5, FreedomHouseStatus, FreedomHouseFull,
-FreedomHouseAggregate.
+following 4 datasets: Polity5, FreedomHouseStatus, FreedomHouseFull, FreedomHouseAggregate.
 For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
 \describe{
 \item{Polity5: }{A dataset with 17574 observations and the following
-35 variables: ID, cowID, Year, Label, p5, cyear, ccode, flag, fragment,
+35 variables: ID, stateID, Year, StateName, p5, cyear, ccode, flag, fragment,
 democ, autoc, polity, polity2, durable, xrreg, xrcomp, xropen, xconst,
-parreg, parcomp, exrec, exconst, polcomp, prior, eprec, interim, bprec,
-post, change, d5, sf, regtrans, Beg, End, speccat.}
+parreg, parcomp, exrec, exconst, polcomp, prior, eprec, interim, bprec, post,
+change, d5, sf, regtrans, Beg, End, speccat.}
 \item{FreedomHouseStatus: }{A dataset with 11088 observations and the following
-8 variables: ID, cowID, Year, Label, PR rating, CL rating, Status, Territory.}
+8 variables: ID, stateID, Year, StateName, PR rating, CL rating, Status,
+Territory.}
 \item{FreedomHouseFull: }{A dataset with 1885 observations and the following
-47 variables: ID, cowID, Year, Label, Region, Edition, Status, PR rating,
-CL rating, A1, A2, A3, A, B1, B2, B3, B4, B, C1, C2, C3, C, Add Q, Add A,
-PR, D1, D2, D3, D4, D, E1, E2, E3, E, F1, F2, F3, F4, F, G1, G2, G3, G4, G,
-CL, Total, Territory.}
+47 variables: ID, stateID, Year, StateName, Region, Edition, Status,
+PR rating, CL rating, A1, A2, A3, A, B1, B2, B3, B4, B, C1, C2, C3, C, Add Q,
+Add A, PR, D1, D2, D3, D4, D, E1, E2, E3, E, F1, F2, F3, F4, F, G1, G2, G3,
+G4, G, CL, Total, Territory.}
 \item{FreedomHouseAggregate: }{A dataset with 3960 observations and the following
-22 variables: ID, cowID, Year, Label, Region, Edition, Status, PR rating,
-CL rating, A, B, C, Add Q, Add A, PR, D, E, F, G, CL, Total, Territory.}
+22 variables: ID, stateID, Year, StateName, Region, Edition, Status,
+PR rating, CL rating, A, B, C, Add Q, Add A, PR, D, E, F, G, CL, Total,
+Territory.}
 }
 }
 \usage{
@@ -40,9 +41,9 @@ regimes database documentation
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
 #> |      ID       |  character  |           17574|     0     |       0       |
-#> |     cowID     |  character  |           17574|     0     |       0       |
+#> |    stateID    |  character  |           17574|     0     |       0       |
 #> |     Year      |    mdate    |           17574|     0     |       0       |
-#> |     Label     |  character  |           17574|     0     |       0       |
+#> |   StateName   |  character  |           17574|     0     |       0       |
 #> |      p5       |   numeric   |           17574|     0     |       0       |
 #> |     cyear     |   numeric   |           17574|     0     |       0       |
 #> |     ccode     |   numeric   |           17574|     0     |       0       |
@@ -82,9 +83,9 @@ regimes database documentation
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
 #> |      ID       |  character  |           11088|     0     |       0       |
-#> |     cowID     |  character  |           11088|    480    |     4.33      |
+#> |    stateID    |  character  |           11088|    480    |     4.33      |
 #> |     Year      |    mdate    |           11088|     0     |       0       |
-#> |     Label     |  character  |           11088|     0     |       0       |
+#> |   StateName   |  character  |           11088|     0     |       0       |
 #> |   PR rating   |   numeric   |           11088|   1959    |     17.67     |
 #> |   CL rating   |   numeric   |           11088|   1959    |     17.67     |
 #> |    Status     |  character  |           11088|   1959    |     17.67     |
@@ -97,9 +98,9 @@ regimes database documentation
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
 #> |      ID       |  character  |            1885|     0     |       0       |
-#> |     cowID     |  character  |            1885|    40     |     2.12      |
+#> |    stateID    |  character  |            1885|    40     |     2.12      |
 #> |     Year      |    mdate    |            1885|     0     |       0       |
-#> |     Label     |  character  |            1885|     0     |       0       |
+#> |   StateName   |  character  |            1885|     0     |       0       |
 #> |    Region     |  character  |            1885|     0     |       0       |
 #> |    Edition    |    mdate    |            1885|     0     |       0       |
 #> |    Status     |  character  |            1885|     0     |       0       |
@@ -151,9 +152,9 @@ regimes database documentation
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
 #> |      ID       |  character  |            3960|     0     |       0       |
-#> |     cowID     |  character  |            3960|    87     |      2.2      |
+#> |    stateID    |  character  |            3960|    87     |      2.2      |
 #> |     Year      |    mdate    |            3960|     0     |       0       |
-#> |     Label     |  character  |            3960|     0     |       0       |
+#> |   StateName   |  character  |            3960|     0     |       0       |
 #> |    Region     |  character  |            3960|    621    |     15.68     |
 #> |    Edition    |    mdate    |            3960|    621    |     15.68     |
 #> |    Status     |  character  |            3960|    621    |     15.68     |

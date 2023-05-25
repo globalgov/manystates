@@ -36,11 +36,11 @@ test_that("Columns with dates are standardized", {
 # Contains the required variables
 test_that("object has the correct variables", {
   pointblank::expect_col_exists(vparty,
-                                pointblank::vars(VParty_ID))
+                                pointblank::vars(vpartyID))
   pointblank::expect_col_exists(vparty,
                                 pointblank::vars(Beg))
   pointblank::expect_col_exists(vparty,
                                 pointblank::vars(End))
   pointblank::expect_col_exists(vparty,
-                                pointblank::vars(Label))
+                                pointblank::vars(Party))
 })

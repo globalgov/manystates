@@ -13,8 +13,9 @@ please use the \code{data_source()} and \code{data_contrast()} functions.
 \item{EconomicFreedom: }{A dataset with 4290 observations and the following
 72 variables: cowID, Year, Countries, Economic Freedom Summary Index, Rank,
 Quartile, 1A Government Consumption, 1A_data, 1B  Transfers and subsidies,
-1B_data, 1C  Government investment, 1C_data, 1Di Top marginal income tax rate,
-1Di_data, 1Dii Top marginal income and payroll tax rate, 1Dii_data,
+1B_data, 1C  Government investment, 1C_data,
+1Di Top marginal income tax rate, 1Di_data,
+1Dii Top marginal income and payroll tax rate, 1Dii_data,
 1D  Top marginal tax rate, IE State Ownership of Assets,
 1  Size of Government, 2A  Judicial independence, 2B  Impartial courts,
 2C  Protection of property rights,
@@ -22,8 +23,8 @@ Quartile, 1A Government Consumption, 1A_data, 1B  Transfers and subsidies,
 2E Integrity of the legal system, 2F Legal enforcement of contracts,
 2G Regulatory restrictions on the sale of real property,
 2H Reliability of police, Gender Legal Rights Adjustment,
-2  Legal System & Property Rights, 3A  Money growth,
-3A_data, 3B  Standard deviation of inflation, 3B_data,
+2  Legal System & Property Rights, 3A  Money growth, 3A_data,
+3B  Standard deviation of inflation, 3B_data,
 3C  Inflation: Most recent year, 3C_data,
 3D  Freedom to own foreign currency bank accounts, 3  Sound Money,
 4Ai  Revenue from trade taxes (\% of trade sector), 4Ai_data,
@@ -39,15 +40,14 @@ Quartile, 1A Government Consumption, 1A_data, 1B  Transfers and subsidies,
 5Aiii  Interest rate controls/negative real interest rates),
 5A  Credit market regulations, 5Bi  Hiring regulations and minimum wage,
 5Bii  Hiring and firing regulations,
-5Biii  Centralized collective bargaining,
-5Biv  Hours Regulations, 5Bv Mandated cost of worker dismissal,
-5Bvi  Conscription, 5B  Labor market regulations,
-5Ci  Administrative requirements, 5Cii  Regulatory Burden,
-5Ciii  Starting a  business, 5Civ  Impartial Public Administration,
-5Cv Licensing restrictions, 5Cvi Tax compliance,
-5C  Business regulations, 5  Regulation.}
+5Biii  Centralized collective bargaining, 5Biv  Hours Regulations,
+5Bv Mandated cost of worker dismissal, 5Bvi  Conscription,
+5B  Labor market regulations, 5Ci  Administrative requirements,
+5Cii  Regulatory Burden, 5Ciii  Starting a  business,
+5Civ  Impartial Public Administration, 5Cv Licensing restrictions,
+5Cvi Tax compliance, 5C  Business regulations, 5  Regulation.}
 \item{EconomicFreedomHist: }{A dataset with 458 observations and the following
-5 variables: cowID, Year, Country, EFW, Rank.}
+5 variables: stateID, Year, StateName, EFW, Rank.}
 }
 }
 \usage{
@@ -141,9 +141,9 @@ economics database documentation
 #> ----------------------------------------------------------------------------
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
-#> |     cowID     |  character  |             458|     0     |       0       |
+#> |    stateID    |  character  |             458|     0     |       0       |
 #> |     Year      |    mdate    |             458|     0     |       0       |
-#> |    Country    |  character  |             458|     0     |       0       |
+#> |   StateName   |  character  |             458|     0     |       0       |
 #> |      EFW      |   numeric   |             458|     0     |       0       |
 #> |     Rank      |   numeric   |             458|     0     |       0       |
 #> ----------------------------------------------------------------------------

@@ -25,7 +25,7 @@ test_that("object has the correct variables", {
   pointblank::expect_col_exists(states[["ICOW_COL"]],
                                 pointblank::vars(Beg))
   pointblank::expect_col_exists(states[["ICOW_COL"]],
-                                pointblank::vars(Label))
+                                pointblank::vars(StateName))
 })
 
 # Variables with dates are standardized

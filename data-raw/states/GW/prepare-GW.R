@@ -11,12 +11,12 @@ GW <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
 # formats of the 'GW' object until the object created
 # below (in stage three) passes all the tests.
 GW <- tibble::as_tibble(GW) %>%
-  manydata::transmutate(COW_ID = `Cow ID`,
+  manydata::transmutate(cowID = `Cow ID`,
                      Beg = messydates::as_messydate(Start),
                      End = messydates::as_messydate(Finish),
-                     Label = manypkgs::standardise_titles(`Name of State`),
-                     COW_Nr = manypkgs::standardise_titles(`Cow Nr.`)) %>%
-  dplyr::select(cowID, Beg, End, cowNR, Label) %>%
+                     StateName = manypkgs::standardise_titles(`Name of State`),
+                     cowNr = manypkgs::standardise_titles(`Cow Nr.`)) %>%
+  dplyr::select(cowID, Beg, End, cowNR, StateName) %>%
   dplyr::arrange(Beg, cowID)
 
 # Like COW data, GW sets "old" states as beginning from 1816-01-01 by default.
@@ -36,7 +36,7 @@ GW <- GW %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01
 # Stage three: Connecting data
 # Next run the following line to make GW available within the qPackage.
 manypkgs::export_data(GW, database = "states",
-                     URL = "http://ksgleditsch.com/data-4.html")
+                      URL = "http://ksgleditsch.com/data-4.html")
 
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence
