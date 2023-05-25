@@ -34,7 +34,7 @@ HUGGO_ARCHIGOS$FtiesCodeB[c(2163:2167)] <-
 # Formatting dataset for exporting
 HUGGO_ARCHIGOS <- HUGGO_ARCHIGOS %>%
   dplyr::select(
-    archigosID, cowID, leaderID, idacr, Label, leader, Beg, End,
+    archigosID, cowID, leaderID, idacr, StateName, leader, Beg, End,
     BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit, exitcode,
     prevtimesinoffice, posttenurefate, dbpedia.uri, num.entry,
     num.exit, num.exitcode, num.posttenurefate, FtiesNameA,

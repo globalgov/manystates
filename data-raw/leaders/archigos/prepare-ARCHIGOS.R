@@ -43,7 +43,7 @@ ARCHIGOS <- as_tibble(ARCHIGOS) %>%
     FtiesNameB = stringi::stri_trans_general(FtiesNameB, "latin-ascii"),
     FtiesNameC = stringi::stri_trans_general(FtiesNameC, "latin-ascii"),
   ) %>%
-  dplyr::mutate(Label =
+  dplyr::mutate(StateName =
                   countrycode::countrycode(ccode,
                                           origin = "cown",
                                           destination = "cow.name",
@@ -78,12 +78,12 @@ ARCHIGOS <- as_tibble(ARCHIGOS) %>%
 # 815; Refers to imperial Vietnam prior to the French colonization
 # Ordering variables for output:
 ARCHIGOS <- ARCHIGOS %>%
-    dplyr::select(archigosID, leaderID, cowID, idacr, Label, leader, Beg, End,
-                  BornDate, DeathDate, YearBorn, YearDied, Female, entry, exit,
-                  exitcode, prevtimesinoffice, posttenurefate, dbpedia.uri,
-                  num.entry, num.exit, num.exitcode, num.posttenurefate,
-                  FtiesNameA, FtiesCodeA, FtiesNameB, FtiesCodeB, FtiesNameC,
-                  FtiesCodeC, ftcur)
+    dplyr::select(archigosID, leaderID, cowID, idacr, StateName, leader, Beg,
+                  End, BornDate, DeathDate, YearBorn, YearDied, Female, entry,
+                  exit, exitcode, prevtimesinoffice, posttenurefate,
+                  dbpedia.uri, num.entry, num.exit, num.exitcode,
+                  num.posttenurefate, FtiesNameA, FtiesCodeA, FtiesNameB,
+                  FtiesCodeB, FtiesNameC, FtiesCodeC, ftcur)
 
 # manypkgs includes several functions that should help cleaning
 # and standardising your data.
