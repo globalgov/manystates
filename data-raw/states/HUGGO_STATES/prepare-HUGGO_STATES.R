@@ -91,6 +91,21 @@ HUGGO_STATES <- HUGGO_STATES %>%
          End = messydates::as_messydate(End)) %>% 
   dplyr::distinct(.keep_all = TRUE)
 
+# Combine rows with same stateID to avoid missing State Names
+names <- HUGGO_STATES %>%
+  dplyr::group_by(stateID) %>%
+  dplyr::summarise(dplyr::across(c(1:2, 7:8), list(~ .[!is.na(.)][1])))
+colnames(names) <- stringr::str_remove_all(colnames(names), "_1")
+HUGGO_STATES <- dplyr::left_join(HUGGO_STATES, names, by = "stateID") %>%
+  dplyr::mutate(StateName = ifelse(is.na(StateName.x), StateName.y, StateName.x),
+                Capital = ifelse(is.na(Capital.x), Capital.y, Capital.x),
+                Area = ifelse(is.na(Area.x), Area.y, Area.x),
+                Region = ifelse(is.na(Region.x), Region.y, Region.x)) %>%
+  dplyr::select(stateID, StateName, Capital, Beg, End, Latitude, Longitude,
+                Area, Region, RatProcedure, `Constitutional Description`,
+                Source) %>%
+  dplyr::distinct()
+
 # Add region data
 gapminder <- dslabs::gapminder %>% 
   select(country, continent, region) %>% # select only the variables we want
@@ -107,11 +122,6 @@ HUGGO_STATES <- HUGGO_STATES %>%
 HUGGO_STATES <- HUGGO_STATES %>%
   dplyr::relocate(stateID, StateName, Capital, Beg, End, Latitude, Longitude,
                   Area, Region)
-HUGGO_STATES <- HUGGO_STATES %>%
-  dplyr::arrange(Beg, stateID)
-
-# Fill in missing State Names
-
 
 # manypkgs includes several functions that should help cleaning
 # and standardising your data such as `standardise_titles()`.
