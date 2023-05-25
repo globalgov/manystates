@@ -127,14 +127,14 @@ states database documentation
 #> |       Column Name        |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ---------------------------------------------------------------------------------------
 #> |         stateID          |  character  |             574|     0     |       0       |
-#> |        StateName         |  character  |             574|    214    |     37.28     |
-#> |         Capital          |  character  |             574|    215    |     37.46     |
+#> |        StateName         |  character  |             574|    125    |     21.78     |
+#> |         Capital          |  character  |             574|     0     |       0       |
 #> |           Beg            |    mdate    |             574|    257    |     44.77     |
 #> |           End            |    mdate    |             574|    257    |     44.77     |
 #> |         Latitude         |  character  |             574|    234    |     40.77     |
 #> |        Longitude         |  character  |             574|    234    |     40.77     |
-#> |           Area           |  character  |             574|    448    |     78.05     |
-#> |          Region          |  character  |             574|    356    |     62.02     |
+#> |           Area           |  character  |             574|    343    |     59.76     |
+#> |          Region          |  character  |             574|    197    |     34.32     |
 #> |       RatProcedure       |  character  |             574|    542    |     94.43     |
 #> |Constitutional Description|  character  |             574|    542    |     94.43     |
 #> |          Source          |  character  |             574|    533    |     92.86     |

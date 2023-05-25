@@ -10,6 +10,7 @@
 ## Data
 
 * Closed #57 by replacing GNEVAR datasets with HUGGO datasets for handcoded data in `states`, `leaders`, and `contiguity` databases.
+* Added some missing state names (StateName variable) and regions (Region variable) in HUGGO_STATES dataset.
 
 # manystates 0.1.1
 
