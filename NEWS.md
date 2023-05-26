@@ -6,11 +6,12 @@
 * Updated `import_vdem()`, `import_vparty()`, and `import_cshapes()` function by fixing CMD warnings and notes.
 * Closed #54 by moving `code_states()` to `{manypkgs}` for consistency across packages.
 * Added first draft of vignette to publicize `{manystates}` data.
+* Updated pkgdown.yml file
 
 ## Data
 
 * Closed #57 by replacing GNEVAR datasets with HUGGO datasets for handcoded data in `states`, `leaders`, and `contiguity` databases.
-* Added some missing state names (StateName variable) and regions (Region variable) in HUGGO_STATES dataset.
+* Added some missing state names (`StateName` variable) and regions (`Region` variable) in `HUGGO_STATES` dataset.
 
 # manystates 0.1.1
 
