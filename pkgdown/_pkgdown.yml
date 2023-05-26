@@ -2,8 +2,9 @@ url: https://globalgov.github.io/manystates/
 development:
     mode: auto
 template:
+  bootstrap: 5
   params:
-    bootswatch: paper
+    bootswatch: litera
 authors:
   James Hollway:
     href: https://jameshollway.com
@@ -18,7 +19,6 @@ navbar:
     - news
     right:
     - packages
-    - search
     - github
   components:
     home:
@@ -52,10 +52,10 @@ navbar:
         - text: manytrade
           href: https://globalgov.github.io/manytrade/
 reference:
-  - title: "Functions to code states"
-    desc: "This function is here to assist in translating state names and creating IDs (based on abbreviations) for states:"
+  - title: "Function to generate state names"
+    desc: "This function is here to generate a list of fictional state names:"
     contents:
-    - code_states
+    - generate_states
   - title: "Functions to import CShapes 2.0 data"
     desc: "These functions are here to assist users in importing correctly formatted CShapes 2.0 data:"
     contents:
