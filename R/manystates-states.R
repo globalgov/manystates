@@ -1,6 +1,6 @@
-#' states database documentation
+#' states datacube documentation
 #'
-#' @format The states database is a list that contains the
+#' @format The states datacube is a list that contains the
 #' following 7 datasets: GW, ISD, COW, ICOW, ICOW_COL, RATRULES, HUGGO_STATES.
 #' For more information and references to each of the datasets used,
 #' please use the `data_source()` and `data_contrast()` functions.

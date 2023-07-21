@@ -22,8 +22,8 @@ assembling together datasets from reputable sources including
 [The Issue Correlates of War project](http://www.paulhensel.org/icow.html), and
 [Gleditsch and Ward's dataset](https://doi.org/10.1080/03050629908434958) on interstate system membership.
 The package can also be used to study related features such as
-political regimes (`regimes` database), contiguity (`contiguity` database),
-leadership (`leaders` database), and economic indicators (`economics` database).
+political regimes (`regimes` datacube), contiguity (`contiguity` datacube),
+leadership (`leaders` datacube), and economic indicators (`economics` datacube).
 
 To illustrate the uses of the data, we explore here the question of whether
 states have indeed become more free and accountable.
@@ -34,9 +34,9 @@ especially with the recent(ish) elections of leaders
 with authoritarian tendencies in several democracies.
 
 Below, we use `{manystates}` to study democratic accountability using data
-from the `regimes` database as well as the `import_vdem()` function to extract 
+from the `regimes` datacube as well as the `import_vdem()` function to extract 
 [Variaties of Democracy Data (VDEM)](https://www.v-dem.net/project.html) data.
-The `regimes` database contains data on political regimes in the Polity5 and Freedom House datasets.
+The `regimes` datacube contains data on political regimes in the Polity5 and Freedom House datasets.
 
 ## Data
 
@@ -314,7 +314,7 @@ Perhaps, however, we are missing important regional information that mediates th
 relationship between these indicators and whether states are classified 
 liberal or electoral democracies.
 How about we check the evolution of these indicators by region?
-Let's get and join region data from the `HUGGO_STATES` database to see the
+Let's get and join region data from the `HUGGO_STATES` datacube to see the
 evolution of the aggregated indicators per region since the 1990s.
 
 ```{r regions}

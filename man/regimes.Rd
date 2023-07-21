@@ -3,9 +3,9 @@
 \docType{data}
 \name{regimes}
 \alias{regimes}
-\title{regimes database documentation}
+\title{regimes datacube documentation}
 \format{
-The regimes database is a list that contains the
+The regimes datacube is a list that contains the
 following 4 datasets: Polity5, FreedomHouseStatus, FreedomHouseFull, FreedomHouseAggregate.
 For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
@@ -33,7 +33,7 @@ Territory.}
 regimes
 }
 \description{
-regimes database documentation
+regimes datacube documentation
 }
 \details{
 \if{html}{\out{<div class="sourceCode">}}\preformatted{#> $Polity5

@@ -1,6 +1,6 @@
-#' contiguity database documentation
+#' contiguity datacube documentation
 #'
-#' @format The contiguity database is a list that contains the
+#' @format The contiguity datacube is a list that contains the
 #' following 2 datasets: COW_DIRCONT, HUGGO_CONT.
 #' For more information and references to each of the datasets used,
 #' please use the `data_source()` and `data_contrast()` functions.

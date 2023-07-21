@@ -3,9 +3,9 @@
 \docType{data}
 \name{leaders}
 \alias{leaders}
-\title{leaders database documentation}
+\title{leaders datacube documentation}
 \format{
-The leaders database is a list that contains the
+The leaders datacube is a list that contains the
 following 2 datasets: ARCHIGOS, HUGGO_ARCHIGOS.
 For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
@@ -28,7 +28,7 @@ FtiesCodeB, FtiesNameC, FtiesCodeC, ftcur.}
 leaders
 }
 \description{
-leaders database documentation
+leaders datacube documentation
 }
 \details{
 \if{html}{\out{<div class="sourceCode">}}\preformatted{#> $ARCHIGOS

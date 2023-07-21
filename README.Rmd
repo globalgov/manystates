@@ -40,7 +40,7 @@ manydata::get_packages() # this prints a list of the publicly available data pac
 
 ## Data included
 
-Once you have installed `{manydata}`, you can see the different databases and
+Once you have installed `{manydata}`, you can see the different datacubes and
 datasets included in the `{manystates}` package using the following function.
 
 ```{r datasets, warning=FALSE, message=FALSE}

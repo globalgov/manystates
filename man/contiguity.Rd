@@ -3,9 +3,9 @@
 \docType{data}
 \name{contiguity}
 \alias{contiguity}
-\title{contiguity database documentation}
+\title{contiguity datacube documentation}
 \format{
-The contiguity database is a list that contains the
+The contiguity datacube is a list that contains the
 following 2 datasets: COW_DIRCONT, HUGGO_CONT.
 For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
@@ -22,7 +22,7 @@ FAOmembership, Group, url.}
 contiguity
 }
 \description{
-contiguity database documentation
+contiguity datacube documentation
 }
 \details{
 \if{html}{\out{<div class="sourceCode">}}\preformatted{#> $COW_DIRCONT

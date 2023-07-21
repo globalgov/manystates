@@ -3,9 +3,9 @@
 \docType{data}
 \name{economics}
 \alias{economics}
-\title{economics database documentation}
+\title{economics datacube documentation}
 \format{
-The economics database is a list that contains the
+The economics datacube is a list that contains the
 following 2 datasets: EconomicFreedom, EconomicFreedomHist.
 For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
@@ -54,7 +54,7 @@ Quartile, 1A Government Consumption, 1A_data, 1B  Transfers and subsidies,
 economics
 }
 \description{
-economics database documentation
+economics datacube documentation
 }
 \details{
 \if{html}{\out{<div class="sourceCode">}}\preformatted{#> $EconomicFreedom

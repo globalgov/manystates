@@ -1,6 +1,6 @@
-#' leaders database documentation
+#' leaders datacube documentation
 #'
-#' @format The leaders database is a list that contains the
+#' @format The leaders datacube is a list that contains the
 #' following 2 datasets: ARCHIGOS, HUGGO_ARCHIGOS.
 #' For more information and references to each of the datasets used,
 #' please use the `data_source()` and `data_contrast()` functions.

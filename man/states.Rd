@@ -3,9 +3,9 @@
 \docType{data}
 \name{states}
 \alias{states}
-\title{states database documentation}
+\title{states datacube documentation}
 \format{
-The states database is a list that contains the
+The states datacube is a list that contains the
 following 7 datasets: GW, ISD, COW, ICOW, ICOW_COL, RATRULES, HUGGO_STATES.
 For more information and references to each of the datasets used,
 please use the \code{data_source()} and \code{data_contrast()} functions.
@@ -33,7 +33,7 @@ Area, Region, RatProcedure, Constitutional Description, Source.}
 states
 }
 \description{
-states database documentation
+states datacube documentation
 }
 \details{
 \if{html}{\out{<div class="sourceCode">}}\preformatted{#> $GW
