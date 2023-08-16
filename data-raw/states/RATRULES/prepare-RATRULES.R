@@ -42,5 +42,5 @@ RATRULES <- as_tibble(RATRULES) %>%
 # that you're including in the package.
 # To add a template of .bib file to the package,
 # please run `manypkgs::add_bib("states", "RATRULES")`.
-manypkgs::export_data(RATRULES, database = "states",
-                      URL = "NA")
+manypkgs::export_data(RATRULES, datacube = "states",
+                      URL = "https://doi.org/10.1017/CBO9780511811340")
