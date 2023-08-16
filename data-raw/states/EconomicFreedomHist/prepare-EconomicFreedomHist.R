@@ -39,7 +39,7 @@ EconomicFreedomHist <- dplyr::as_tibble(EconomicFreedomHist) %>%
 # Therefore, please make sure that you have permission to use the dataset
 # that you're including in the package.
 # To add a template of .bib file to package,
-# run `manypkgs::add_bib("economics", "EconomicFreedomHist")`.
+# run `manypkgs::add_bib("states", "EconomicFreedomHist")`.
 # Economic Freedom Historical
-manypkgs::export_data(EconomicFreedomHist, database = "economics",
+manypkgs::export_data(EconomicFreedomHist, datacube = "states",
                       URL = "https://www.fraserinstitute.org/economic-freedom")
