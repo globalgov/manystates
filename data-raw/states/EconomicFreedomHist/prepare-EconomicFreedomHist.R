@@ -4,7 +4,7 @@
 # ready for many packages universe.
 
 # Stage one: Collecting data
-path <- "data-raw/Economics/EconomicFreedomHist/EconomicFreedomIndex.xlsx"
+path <- "data-raw/states/EconomicFreedomHist/EconomicFreedomIndex.xlsx"
 EconomicFreedomHist <- readxl::read_excel(path, sheet = 3)
 
 # Stage two: Correcting data

@@ -10,7 +10,7 @@
 # authors' design.
 
 # Import
-path <- "data-raw/economics/EconomicFreedom/EconomicFreedomIndex.xlsx"
+path <- "data-raw/states/EconomicFreedom/EconomicFreedomIndex.xlsx"
 EconomicFreedom <- readxl::read_excel(path = path,
                                       skip = 4)[, 1:73]
 # Stage two: Correcting data
