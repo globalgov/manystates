@@ -6,59 +6,50 @@
 \title{states datacube documentation}
 \format{
 The states datacube is a list that contains the
-following 9 datasets: GW, ISD, COW, ICOW, ICOW_COL, RATRULES, HUGGO_STATES, EconomicFreedom, EconomicFreedomHist.
+following 8 datasets: GW, ISD, COW, ICOW, RATRULES, HUGGO_STATES, EconomicFreedom, EconomicFreedomHist.
 For more information and references to each of the datasets used,
-please use the \code{data_source()} and \code{data_contrast()} functions.
+please use the \code{manydata::call_sources()} and \code{manydata::compare_dimensions()} functions.
 \describe{
 \item{GW: }{A dataset with 216 observations and the following
-5 variables: cowID, Beg, End, cowNR, StateName.}
+5 variables: cowID, Begin, End, cowNR, StateName.}
 \item{ISD: }{A dataset with 362 observations and the following
-7 variables: cowID, Beg, End, cowNR, StateName, Micro, NewState.}
+7 variables: cowID, Begin, End, cowNR, StateName, Micro, NewState.}
 \item{COW: }{A dataset with 243 observations and the following
-5 variables: cowID, Beg, End, cowNR, StateName.}
+5 variables: cowID, Begin, End, cowNR, StateName.}
 \item{ICOW: }{A dataset with 217 observations and the following
-15 variables: cowID, StateName, ColRuler, IndFrom, IndDate, IndViol, IndType,
+15 variables: cowID, StateName, ColRuler, IndFrom, Begin, IndViol, IndType,
 SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
-\item{ICOW_COL: }{A dataset with 221 observations and the following
-9 variables: cowID, cowNR, StateName, Beg, cowID_Origin, IndepType, Beg_COW,
-Beg_GW, Beg_Polity2.}
 \item{RATRULES: }{A dataset with 177 observations and the following
 3 variables: stateID, StateName, RatProcedure.}
 \item{HUGGO_STATES: }{A dataset with 574 observations and the following
-12 variables: stateID, StateName, Capital, Beg, End, Latitude, Longitude,
+12 variables: stateID, StateName, Capital, Begin, End, Latitude, Longitude,
 Area, Region, RatProcedure, Constitutional Description, Source.}
 \item{EconomicFreedom: }{A dataset with 4290 observations and the following
-72 variables: cowID, Year, Countries, Economic Freedom Summary Index, Rank,
+72 variables: cowID, Year, StateName, Economic Freedom Summary Index, Rank,
 Quartile, 1A Government Consumption, 1A_data, 1B  Transfers and subsidies,
 1B_data, 1C  Government investment, 1C_data, 1Di Top marginal income tax rate,
 1Di_data, 1Dii Top marginal income and payroll tax rate, 1Dii_data,
-1D  Top marginal tax rate, IE State Ownership of Assets,
-1  Size of Government, 2A  Judicial independence, 2B  Impartial courts,
-2C  Protection of property rights,
+1D  Top marginal tax rate, IE State Ownership of Assets, 1  Size of Government,
+2A  Judicial independence, 2B  Impartial courts, 2C  Protection of property rights,
 2D  Military interference in rule of law and politics,
 2E Integrity of the legal system, 2F Legal enforcement of contracts,
 2G Regulatory restrictions on the sale of real property,
 2H Reliability of police, Gender Legal Rights Adjustment,
 2  Legal System & Property Rights, 3A  Money growth, 3A_data,
-3B  Standard deviation of inflation, 3B_data,
-3C  Inflation: Most recent year, 3C_data,
-3D  Freedom to own foreign currency bank accounts, 3  Sound Money,
+3B  Standard deviation of inflation, 3B_data, 3C  Inflation: Most recent year,
+3C_data, 3D  Freedom to own foreign currency bank accounts, 3  Sound Money,
 4Ai  Revenue from trade taxes (\% of trade sector), 4Ai_data,
 4Aii  Mean tariff rate, 4Aii_data, 4Aiii  Standard deviation of tariff rates,
 4Aiii_data, 4A  Tariffs, 4Bi  Non-tariff trade barriers,
-4Bii  Compliance costs of importing and exporting,
-4B  Regulatory trade barriers, 4C  Black market exchange rates,
-4Di  Financial Openness, 4Dii  Capital controls,
-4Diii Freedom of foreigners to visit,
-4D  Controls of the movement of capital and people,
-4  Freedom to trade internationally, 5Ai  Ownership of banks,
-5Aii Private sector credit,
+4Bii  Compliance costs of importing and exporting, 4B  Regulatory trade barriers,
+4C  Black market exchange rates, 4Di  Financial Openness, 4Dii  Capital controls,
+4Diii Freedom of foreigners to visit, 4D  Controls of the movement of capital and people,
+4  Freedom to trade internationally, 5Ai  Ownership of banks, 5Aii Private sector credit,
 5Aiii  Interest rate controls/negative real interest rates),
 5A  Credit market regulations, 5Bi  Hiring regulations and minimum wage,
 5Bii  Hiring and firing regulations, 5Biii  Centralized collective bargaining,
-5Biv  Hours Regulations, 5Bv Mandated cost of worker dismissal,
-5Bvi  Conscription, 5B  Labor market regulations,
-5Ci  Administrative requirements, 5Cii  Regulatory Burden,
+5Biv  Hours Regulations, 5Bv Mandated cost of worker dismissal, 5Bvi  Conscription,
+5B  Labor market regulations, 5Ci  Administrative requirements, 5Cii  Regulatory Burden,
 5Ciii  Starting a  business, 5Civ  Impartial Public Administration,
 5Cv Licensing restrictions, 5Cvi Tax compliance, 5C  Business regulations,
 5  Regulation.}
@@ -69,23 +60,21 @@ Quartile, 1A Government Consumption, 1A_data, 1B  Transfers and subsidies,
 \source{
 \itemize{
 \item{GW: }{
-\link{1} K. S. Gleditsch and M. D. Ward. “Interstate system membership: A revised list of the independentstates since 1816”. In: \emph{International Interactions} 25.4 (1998), pp. 393-413.}
+\link{1} K. S. Gleditsch and M. D. Ward. “Interstate system membership: A revised list of the independent statessince 1816”. In: \emph{International Interactions} 25.4 (1999), pp. 393-413.}
 \item{ISD: }{
-\link{1} R. D. Griffiths and C. R. Butcher. “Introducing the international system (s) dataset (ISD),1816-2011”. In: \emph{International Interactions} 39.5 (2012), pp. 748-768.}
+\link{1} R. D. Griffiths and C. R. Butcher. “Introducing the international system (s) dataset (ISD), 1816-2011”. In:\emph{International Interactions} 39.5 (2013), pp. 748-768.}
 \item{COW: }{
-\link{1} Correlates of War Project. \emph{State System Membership List, v2016.} \url{http://correlatesofwar.org}.Accessed: 2021-01-25. 2016.}
+\link{1} Correlates of War Project. \emph{State System Membership List, v2016.} \url{http://correlatesofwar.org}. Accessed:2021-01-25. 2017.}
 \item{ICOW: }{
-\link{1} P. R. Hensel. \emph{ICOW Colonial History Data Set, version 1.1.}\url{http://www.paulhensel.org/icowcol.html}. Accessed: 2021-12-23. 2017.}
-\item{ICOW_COL: }{
-\link{1} P. R. Hensel and S. M. Mitchell. \emph{ICOW Colonial History Data Set Version 0.4}. 2016.\url{https://doi.org/10.7910/DVN/5EMETG}.}
+\link{1} P. R. Hensel. \emph{ICOW Colonial History Data Set, version 1.1.} \url{http://www.paulhensel.org/icowcol.html}.Accessed: 2021-12-23. 2018.}
 \item{RATRULES: }{
-\link{1} B. A. Simmons. \emph{Mobilizing for Human Rights: International Law in Domestic Politics}. Cambridge University Press, 2009.}
+\link{1} B. A. Simmons. \emph{Mobilizing for Human Rights: International Law in Domestic Politics}. Cambridge UniversityPress, 2009.}
 \item{HUGGO_STATES: }{
-\link{1} J. Hollway. \emph{Hand-coded data on states' beginning and end dates, regions, capitals, longitude andlatitude}. 2020.}
+\link{1} J. Hollway. \emph{Hand-coded data on states' beginning and end dates, regions, capitals, longitude and latitude}.2021.}
 \item{EconomicFreedom: }{
-\link{1} J. Gwartney, R. Lawson, and J. Hall. \emph{2020 Economic Freedom Dataset, published in Economic Freedomof the World: 2020 Annual Report}.\url{http://www.fraserinstitute.org/studies/economic-freedom-of-the-world-2020-annual-report}. Accessed:2021-12-23. 2020.}
+\link{1} J. Gwartney, R. Lawson, and J. Hall. \emph{2020 Economic Freedom Dataset, published in Economic Freedom of theWorld: 2020 Annual Report}.\url{http://www.fraserinstitute.org/studies/economic-freedom-of-the-world-2020-annual-report}. Accessed: 2021-12-23.2020.}
 \item{EconomicFreedomHist: }{
-\link{1} J. Gwartney, R. Lawson, and J. Hall. \emph{2020 Economic Freedom Dataset, published in Economic Freedomof the World: 2020 Annual Report}.\url{http://www.fraserinstitute.org/studies/economic-freedom-of-the-world-2020-annual-report}. Accessed:2021-12-23. 2020.}
+\link{1} J. Gwartney, R. Lawson, and J. Hall. \emph{2020 Economic Freedom Dataset, published in Economic Freedom of theWorld: 2020 Annual Report}.\url{http://www.fraserinstitute.org/studies/economic-freedom-of-the-world-2020-annual-report}. Accessed: 2021-12-23.2020.}
 }
 }
 \usage{
@@ -100,8 +89,8 @@ states datacube documentation
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
 #> |     cowID     |  character  |             216|     0     |       0       |
-#> |      Beg      |    mdate    |             216|     0     |       0       |
-#> |      End      |    mdate    |             216|     0     |       0       |
+#> |     Begin     |    mdate    |             216|     0     |       0       |
+#> |      End      |  character  |             216|     0     |       0       |
 #> |     cowNR     |  character  |             216|     0     |       0       |
 #> |   StateName   |  character  |             216|     0     |       0       |
 #> ----------------------------------------------------------------------------
@@ -112,7 +101,7 @@ states datacube documentation
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
 #> |     cowID     |  character  |             362|     0     |       0       |
-#> |      Beg      |    mdate    |             362|     0     |       0       |
+#> |     Begin     |    mdate    |             362|     0     |       0       |
 #> |      End      |    mdate    |             362|     0     |       0       |
 #> |     cowNR     |  character  |             362|     0     |       0       |
 #> |   StateName   |  character  |             362|     0     |       0       |
@@ -126,8 +115,8 @@ states datacube documentation
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
 #> |     cowID     |  character  |             243|     0     |       0       |
-#> |      Beg      |    mdate    |             243|     0     |       0       |
-#> |      End      |    mdate    |             243|     0     |       0       |
+#> |     Begin     |    mdate    |             243|     0     |       0       |
+#> |      End      |  character  |             243|     0     |       0       |
 #> |     cowNR     |  character  |             243|     0     |       0       |
 #> |   StateName   |  character  |             243|     0     |       0       |
 #> ----------------------------------------------------------------------------
@@ -139,35 +128,19 @@ states datacube documentation
 #> ----------------------------------------------------------------------------
 #> |     cowID     |  character  |             217|     0     |       0       |
 #> |   StateName   |  character  |             217|     0     |       0       |
-#> |   ColRuler    |   numeric   |             217|    46     |     21.2      |
-#> |    IndFrom    |   numeric   |             217|    39     |     17.97     |
+#> |   ColRuler    |  character  |             217|    46     |     21.2      |
+#> |    IndFrom    |  character  |             217|    39     |     17.97     |
 #> |    IndDate    |    mdate    |             217|     0     |       0       |
-#> |    IndViol    |   numeric   |             217|     0     |       0       |
-#> |    IndType    |   numeric   |             217|     0     |       0       |
-#> |    SecFrom    |   numeric   |             217|    179    |     82.49     |
+#> |    IndViol    |  character  |             217|     0     |       0       |
+#> |    IndType    |  character  |             217|     0     |       0       |
+#> |    SecFrom    |  character  |             217|    179    |     82.49     |
 #> |    SecDate    |    mdate    |             217|    179    |     82.49     |
-#> |    SecViol    |   numeric   |             217|    179    |     82.49     |
-#> |     Into      |   numeric   |             217|    198    |     91.24     |
+#> |    SecViol    |  character  |             217|    179    |     82.49     |
+#> |     Into      |  character  |             217|    198    |     91.24     |
 #> |   IntoDate    |    mdate    |             217|    198    |     91.24     |
 #> |    COWsys     |    mdate    |             217|     0     |       0       |
 #> |     GWsys     |    mdate    |             217|    22     |     10.14     |
 #> |     Notes     |  character  |             217|    58     |     26.73     |
-#> ----------------------------------------------------------------------------
-#> 
-#> 
-#> $ICOW_COL
-#> ----------------------------------------------------------------------------
-#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
-#> ----------------------------------------------------------------------------
-#> |     cowID     |  character  |             221|     2     |      0.9      |
-#> |     cowNR     |   numeric   |             221|     0     |       0       |
-#> |   StateName   |  character  |             221|     0     |       0       |
-#> |      Beg      |    mdate    |             221|     0     |       0       |
-#> | cowID_Origin  |   numeric   |             221|     0     |       0       |
-#> |   IndepType   |   numeric   |             221|     0     |       0       |
-#> |    Beg_COW    |    mdate    |             221|     0     |       0       |
-#> |    Beg_GW     |    mdate    |             221|    23     |     10.41     |
-#> |  Beg_Polity2  |    mdate    |             221|    74     |     33.48     |
 #> ----------------------------------------------------------------------------
 #> 
 #> 
@@ -177,7 +150,7 @@ states datacube documentation
 #> ----------------------------------------------------------------------------
 #> |    stateID    |  character  |             177|     0     |       0       |
 #> |   StateName   |  character  |             177|     0     |       0       |
-#> | RatProcedure  |   numeric   |             177|     0     |       0       |
+#> | RatProcedure  |  character  |             177|     0     |       0       |
 #> ----------------------------------------------------------------------------
 #> 
 #> 
@@ -188,8 +161,8 @@ states datacube documentation
 #> |         stateID          |  character  |             574|     0     |       0       |
 #> |        StateName         |  character  |             574|    125    |     21.78     |
 #> |         Capital          |  character  |             574|     0     |       0       |
-#> |           Beg            |    mdate    |             574|    257    |     44.77     |
-#> |           End            |    mdate    |             574|    257    |     44.77     |
+#> |          Begin           |    mdate    |             574|    257    |     44.77     |
+#> |           End            |  character  |             574|    257    |     44.77     |
 #> |         Latitude         |  character  |             574|    234    |     40.77     |
 #> |        Longitude         |  character  |             574|    234    |     40.77     |
 #> |           Area           |  character  |             574|    343    |     59.76     |
@@ -206,77 +179,77 @@ states datacube documentation
 #> ------------------------------------------------------------------------------------------------------------------------
 #> |                           cowID                           |  character  |            4290|     0     |       0       |
 #> |                           Year                            |    mdate    |            4290|     0     |       0       |
-#> |                         Countries                         |  character  |            4290|     0     |       0       |
-#> |              Economic Freedom Summary Index               |   numeric   |            4290|    718    |     16.74     |
-#> |                           Rank                            |   numeric   |            4290|    718    |     16.74     |
-#> |                         Quartile                          |   numeric   |            4290|    718    |     16.74     |
-#> |                 1A Government Consumption                 |   numeric   |            4290|    664    |     15.48     |
-#> |                          1A_data                          |   numeric   |            4290|    664    |     15.48     |
-#> |                1B  Transfers and subsidies                |   numeric   |            4290|   1018    |     23.73     |
-#> |                          1B_data                          |   numeric   |            4290|   1018    |     23.73     |
-#> |                 1C  Government investment                 |   numeric   |            4290|    686    |     15.99     |
-#> |                          1C_data                          |   numeric   |            4290|    686    |     15.99     |
-#> |             1Di Top marginal income tax rate              |   numeric   |            4290|   1122    |     26.15     |
+#> |                         StateName                         |  character  |            4290|     0     |       0       |
+#> |              Economic Freedom Summary Index               |  character  |            4290|    718    |     16.74     |
+#> |                           Rank                            |  character  |            4290|    718    |     16.74     |
+#> |                         Quartile                          |  character  |            4290|    718    |     16.74     |
+#> |                 1A Government Consumption                 |  character  |            4290|    664    |     15.48     |
+#> |                          1A_data                          |  character  |            4290|    664    |     15.48     |
+#> |                1B  Transfers and subsidies                |  character  |            4290|   1018    |     23.73     |
+#> |                          1B_data                          |  character  |            4290|   1018    |     23.73     |
+#> |                 1C  Government investment                 |  character  |            4290|    686    |     15.99     |
+#> |                          1C_data                          |  character  |            4290|    686    |     15.99     |
+#> |             1Di Top marginal income tax rate              |  character  |            4290|   1122    |     26.15     |
 #> |                         1Di_data                          |  character  |            4290|   1125    |     26.22     |
-#> |       1Dii Top marginal income and payroll tax rate       |   numeric   |            4290|   1571    |     36.62     |
+#> |       1Dii Top marginal income and payroll tax rate       |  character  |            4290|   1571    |     36.62     |
 #> |                         1Dii_data                         |  character  |            4290|   1575    |     36.71     |
-#> |                 1D  Top marginal tax rate                 |   numeric   |            4290|   1122    |     26.15     |
-#> |               IE State Ownership of Assets                |   numeric   |            4290|    234    |     5.45      |
-#> |                   1  Size of Government                   |   numeric   |            4290|    341    |     7.95      |
-#> |                 2A  Judicial independence                 |   numeric   |            4290|    78     |     1.82      |
-#> |                   2B  Impartial courts                    |   numeric   |            4290|    132    |     3.08      |
-#> |             2C  Protection of property rights             |   numeric   |            4290|    782    |     18.23     |
-#> |   2D  Military interference in rule of law and politics   |   numeric   |            4290|    654    |     15.24     |
-#> |             2E Integrity of the legal system              |   numeric   |            4290|    130    |     3.03      |
-#> |             2F Legal enforcement of contracts             |   numeric   |            4290|    587    |     13.68     |
-#> |  2G Regulatory restrictions on the sale of real property  |   numeric   |            4290|    814    |     18.97     |
-#> |                 2H Reliability of police                  |   numeric   |            4290|    974    |     22.7      |
-#> |              Gender Legal Rights Adjustment               |   numeric   |            4290|     6     |     0.14      |
-#> |             2  Legal System & Property Rights             |   numeric   |            4290|    121    |     2.82      |
-#> |                     3A  Money growth                      |   numeric   |            4290|    621    |     14.48     |
-#> |                          3A_data                          |   numeric   |            4290|    621    |     14.48     |
-#> |            3B  Standard deviation of inflation            |   numeric   |            4290|    665    |     15.5      |
-#> |                          3B_data                          |   numeric   |            4290|    665    |     15.5      |
-#> |              3C  Inflation: Most recent year              |   numeric   |            4290|    661    |     15.41     |
-#> |                          3C_data                          |   numeric   |            4290|    661    |     15.41     |
-#> |     3D  Freedom to own foreign currency bank accounts     |   numeric   |            4290|    696    |     16.22     |
-#> |                      3  Sound Money                       |   numeric   |            4290|    684    |     15.94     |
-#> |     4Ai  Revenue from trade taxes (\% of trade sector)     |   numeric   |            4290|    948    |     22.1      |
-#> |                         4Ai_data                          |   numeric   |            4290|    948    |     22.1      |
-#> |                  4Aii  Mean tariff rate                   |   numeric   |            4290|   1041    |     24.27     |
-#> |                         4Aii_data                         |   numeric   |            4290|   1041    |     24.27     |
-#> |         4Aiii  Standard deviation of tariff rates         |   numeric   |            4290|   1334    |     31.1      |
-#> |                        4Aiii_data                         |   numeric   |            4290|   1334    |     31.1      |
-#> |                        4A  Tariffs                        |   numeric   |            4290|    760    |     17.72     |
-#> |              4Bi  Non-tariff trade barriers               |   numeric   |            4290|   1641    |     38.25     |
-#> |     4Bii  Compliance costs of importing and exporting     |   numeric   |            4290|   1497    |     34.9      |
-#> |               4B  Regulatory trade barriers               |   numeric   |            4290|   1423    |     33.17     |
-#> |              4C  Black market exchange rates              |   numeric   |            4290|    692    |     16.13     |
-#> |                  4Di  Financial Openness                  |   numeric   |            4290|    484    |     11.28     |
-#> |                  4Dii  Capital controls                   |   numeric   |            4290|    690    |     16.08     |
-#> |           4Diii Freedom of foreigners to visit            |   numeric   |            4290|   1990    |     46.39     |
-#> |    4D  Controls of the movement of capital and people     |   numeric   |            4290|    297    |     6.92      |
-#> |            4  Freedom to trade internationally            |   numeric   |            4290|    763    |     17.79     |
-#> |                  5Ai  Ownership of banks                  |   numeric   |            4290|    913    |     21.28     |
-#> |                5Aii Private sector credit                 |   numeric   |            4290|    654    |     15.24     |
-#> |5Aiii  Interest rate controls/negative real interest rates)|   numeric   |            4290|    938    |     21.86     |
-#> |               5A  Credit market regulations               |   numeric   |            4290|    697    |     16.25     |
-#> |         5Bi  Hiring regulations and minimum wage          |   numeric   |            4290|   1393    |     32.47     |
-#> |            5Bii  Hiring and firing regulations            |   numeric   |            4290|   1593    |     37.13     |
-#> |         5Biii  Centralized collective bargaining          |   numeric   |            4290|   1457    |     33.96     |
-#> |                  5Biv  Hours Regulations                  |   numeric   |            4290|   1287    |      30       |
-#> |           5Bv Mandated cost of worker dismissal           |   numeric   |            4290|   1488    |     34.69     |
-#> |                    5Bvi  Conscription                     |   numeric   |            4290|    728    |     16.97     |
-#> |               5B  Labor market regulations                |   numeric   |            4290|   1233    |     28.74     |
-#> |             5Ci  Administrative requirements              |   numeric   |            4290|   1730    |     40.33     |
-#> |                  5Cii  Regulatory Burden                  |   numeric   |            4290|   1576    |     36.74     |
+#> |                 1D  Top marginal tax rate                 |  character  |            4290|   1122    |     26.15     |
+#> |               IE State Ownership of Assets                |  character  |            4290|    234    |     5.45      |
+#> |                   1  Size of Government                   |  character  |            4290|    341    |     7.95      |
+#> |                 2A  Judicial independence                 |  character  |            4290|    78     |     1.82      |
+#> |                   2B  Impartial courts                    |  character  |            4290|    132    |     3.08      |
+#> |             2C  Protection of property rights             |  character  |            4290|    782    |     18.23     |
+#> |   2D  Military interference in rule of law and politics   |  character  |            4290|    654    |     15.24     |
+#> |             2E Integrity of the legal system              |  character  |            4290|    130    |     3.03      |
+#> |             2F Legal enforcement of contracts             |  character  |            4290|    587    |     13.68     |
+#> |  2G Regulatory restrictions on the sale of real property  |  character  |            4290|    814    |     18.97     |
+#> |                 2H Reliability of police                  |  character  |            4290|    974    |     22.7      |
+#> |              Gender Legal Rights Adjustment               |  character  |            4290|     6     |     0.14      |
+#> |             2  Legal System & Property Rights             |  character  |            4290|    121    |     2.82      |
+#> |                     3A  Money growth                      |  character  |            4290|    621    |     14.48     |
+#> |                          3A_data                          |  character  |            4290|    621    |     14.48     |
+#> |            3B  Standard deviation of inflation            |  character  |            4290|    665    |     15.5      |
+#> |                          3B_data                          |  character  |            4290|    665    |     15.5      |
+#> |              3C  Inflation: Most recent year              |  character  |            4290|    661    |     15.41     |
+#> |                          3C_data                          |  character  |            4290|    661    |     15.41     |
+#> |     3D  Freedom to own foreign currency bank accounts     |  character  |            4290|    696    |     16.22     |
+#> |                      3  Sound Money                       |  character  |            4290|    684    |     15.94     |
+#> |     4Ai  Revenue from trade taxes (\% of trade sector)     |  character  |            4290|    948    |     22.1      |
+#> |                         4Ai_data                          |  character  |            4290|    948    |     22.1      |
+#> |                  4Aii  Mean tariff rate                   |  character  |            4290|   1041    |     24.27     |
+#> |                         4Aii_data                         |  character  |            4290|   1041    |     24.27     |
+#> |         4Aiii  Standard deviation of tariff rates         |  character  |            4290|   1334    |     31.1      |
+#> |                        4Aiii_data                         |  character  |            4290|   1334    |     31.1      |
+#> |                        4A  Tariffs                        |  character  |            4290|    760    |     17.72     |
+#> |              4Bi  Non-tariff trade barriers               |  character  |            4290|   1641    |     38.25     |
+#> |     4Bii  Compliance costs of importing and exporting     |  character  |            4290|   1497    |     34.9      |
+#> |               4B  Regulatory trade barriers               |  character  |            4290|   1423    |     33.17     |
+#> |              4C  Black market exchange rates              |  character  |            4290|    692    |     16.13     |
+#> |                  4Di  Financial Openness                  |  character  |            4290|    484    |     11.28     |
+#> |                  4Dii  Capital controls                   |  character  |            4290|    690    |     16.08     |
+#> |           4Diii Freedom of foreigners to visit            |  character  |            4290|   1990    |     46.39     |
+#> |    4D  Controls of the movement of capital and people     |  character  |            4290|    297    |     6.92      |
+#> |            4  Freedom to trade internationally            |  character  |            4290|    763    |     17.79     |
+#> |                  5Ai  Ownership of banks                  |  character  |            4290|    913    |     21.28     |
+#> |                5Aii Private sector credit                 |  character  |            4290|    654    |     15.24     |
+#> |5Aiii  Interest rate controls/negative real interest rates)|  character  |            4290|    938    |     21.86     |
+#> |               5A  Credit market regulations               |  character  |            4290|    697    |     16.25     |
+#> |         5Bi  Hiring regulations and minimum wage          |  character  |            4290|   1393    |     32.47     |
+#> |            5Bii  Hiring and firing regulations            |  character  |            4290|   1593    |     37.13     |
+#> |         5Biii  Centralized collective bargaining          |  character  |            4290|   1457    |     33.96     |
+#> |                  5Biv  Hours Regulations                  |  character  |            4290|   1287    |      30       |
+#> |           5Bv Mandated cost of worker dismissal           |  character  |            4290|   1488    |     34.69     |
+#> |                    5Bvi  Conscription                     |  character  |            4290|    728    |     16.97     |
+#> |               5B  Labor market regulations                |  character  |            4290|   1233    |     28.74     |
+#> |             5Ci  Administrative requirements              |  character  |            4290|   1730    |     40.33     |
+#> |                  5Cii  Regulatory Burden                  |  character  |            4290|   1576    |     36.74     |
 #> |              5Ciii  Starting
-#> a  business               |   numeric   |            4290|   1383    |     32.24     |
-#> |           5Civ  Impartial Public Administration           |   numeric   |            4290|    233    |     5.43      |
-#> |                5Cv Licensing restrictions                 |   numeric   |            4290|   1921    |     44.78     |
-#> |                    5Cvi Tax compliance                    |   numeric   |            4290|   1412    |     32.91     |
-#> |                 5C  Business regulations                  |   numeric   |            4290|   1354    |     31.56     |
-#> |                       5  Regulation                       |   numeric   |            4290|    695    |     16.2      |
+#> a  business               |  character  |            4290|   1383    |     32.24     |
+#> |           5Civ  Impartial Public Administration           |  character  |            4290|    233    |     5.43      |
+#> |                5Cv Licensing restrictions                 |  character  |            4290|   1921    |     44.78     |
+#> |                    5Cvi Tax compliance                    |  character  |            4290|   1412    |     32.91     |
+#> |                 5C  Business regulations                  |  character  |            4290|   1354    |     31.56     |
+#> |                       5  Regulation                       |  character  |            4290|    695    |     16.2      |
 #> ------------------------------------------------------------------------------------------------------------------------
 #> 
 #> 
@@ -287,8 +260,8 @@ states datacube documentation
 #> |    stateID    |  character  |             458|     0     |       0       |
 #> |     Year      |    mdate    |             458|     0     |       0       |
 #> |   StateName   |  character  |             458|     0     |       0       |
-#> |      EFW      |   numeric   |             458|     0     |       0       |
-#> |     Rank      |   numeric   |             458|     0     |       0       |
+#> |      EFW      |  character  |             458|     0     |       0       |
+#> |     Rank      |  character  |             458|     0     |       0       |
 #> ----------------------------------------------------------------------------
 }\if{html}{\out{</div>}}
 }
@@ -299,7 +272,6 @@ states datacube documentation
 \item{ISD: }{ \url http://www.ryan-griffiths.com/data}
 \item{COW: }{ \url https://correlatesofwar.org/data-sets/state-system-membership}
 \item{ICOW: }{ \url http://www.paulhensel.org/icowcol.html}
-\item{ICOW_COL: }{ \url https://doi.org/10.7910/DVN/5EMETG}
 \item{RATRULES: }{ \url https://doi.org/10.1017/CBO9780511811340}
 \item{HUGGO_STATES: }{ \url Hand-coded data by the GGO team}
 \item{EconomicFreedom: }{ \url https://www.fraserinstitute.org/economic-freedom}
@@ -313,58 +285,86 @@ states datacube documentation
 \item{GW: }{
 Variable Mapping\tabular{cc}{
    \emph{from} \tab \emph{to} \cr
-   original_name \tab new_name \cr
-   Please fill in variable mapping here as above.} \tab  \cr
-   \item{ISD: }{ \tab  \cr
-   Variable Mapping \tab  \cr
+   Cow ID \tab cowID \cr
+   Start \tab Begin \cr
+   Finish \tab End \cr
+   Name of State \tab StateName \cr
+   Cow NR. \tab cowNR \cr
 }
-\tabular{cc}{
-   \emph{from} \tab \emph{to} \cr
-   original_name \tab new_name \cr
-   Please fill in variable mapping here as above.} \tab  \cr
-   \item{COW: }{ \tab  \cr
-   Variable Mapping \tab  \cr
+
+
 }
-\tabular{cc}{
+\item{ISD: }{
+Variable Mapping\tabular{cc}{
    \emph{from} \tab \emph{to} \cr
-   original_name \tab new_name \cr
-   Please fill in variable mapping here as above.} \tab  \cr
-   \item{ICOW: }{ \tab  \cr
-   Variable Mapping \tab  \cr
+   COW.ID \tab cowID \cr
+   Start \tab Begin \cr
+   Finish \tab End \cr
+   State.Name \tab StateName \cr
+   COW.Nr \tab cowNr \cr
 }
-\tabular{cc}{
-   \emph{from} \tab \emph{to} \cr
-   original_name \tab new_name \cr
-   Please fill in variable mapping here as above.} \tab  \cr
-   \item{ICOW_COL: }{ \tab  \cr
-   Variable Mapping \tab  \cr
+
+
 }
-\tabular{cc}{
+\item{COW: }{
+Variable Mapping\tabular{cc}{
    \emph{from} \tab \emph{to} \cr
-   original_name \tab new_name \cr
-   Please fill in variable mapping here as above.} \tab  \cr
-   \item{RATRULES: }{ \tab  \cr
-   Variable Mapping \tab  \cr
+   stateabb \tab cowID \cr
+   styear, stmonth, stday \tab Begin \cr
+   endyear, endmonth, endday \tab End \cr
+   statenme \tab StateName \cr
+   ccode \tab cowNR \cr
 }
-\tabular{cc}{
-   \emph{from} \tab \emph{to} \cr
-   original_name \tab new_name \cr
-   Please fill in variable mapping here as above.} \tab  \cr
-   \item{EconomicFreedom: }{ \tab  \cr
-   Variable Mapping \tab  \cr
+
+
 }
-\tabular{cc}{
+\item{ICOW: }{
+Variable Mapping\tabular{cc}{
    \emph{from} \tab \emph{to} \cr
-   original_name \tab new_name \cr
-   Please fill in variable mapping here as above.} \tab  \cr
-   \item{EconomicFreedomHist: }{ \tab  \cr
-   Variable Mapping \tab  \cr
+   State \tab cowID \cr
+   Name \tab StateName \cr
+   IndDate \tab Begin \cr
 }
-\tabular{cc}{
+
+
+}
+\item{RATRULES: }{
+Variable Mapping\tabular{cc}{
    \emph{from} \tab \emph{to} \cr
-   original_name \tab new_name \cr
-   Please fill in variable mapping here as above.} \tab  \cr
-   } \tab  \cr
+   StatID \tab stateID \cr
+   Rat \tab RatProcedure \cr
+}
+
+
+}
+\item{EconomicFreedom: }{
+Variable Mapping\tabular{cc}{
+   \emph{from} \tab \emph{to} \cr
+   Countries \tab StateName \cr
+   ISO_Code_3 \tab cowID \cr
+   data...9 \tab 1A_data \cr
+   data...11 \tab 1B_data \cr
+   data...13 \tab 1C_data \cr
+   data...15 \tab 1Di_data \cr
+   data...17 \tab 1Dii_data \cr
+   data...32 \tab 3A_data \cr
+   data...34 \tab 3B_data \cr
+   data...36 \tab 3C_data \cr
+   data...40 \tab 4Ai_data \cr
+   data...42 \tab 4Aii_data \cr
+   data...44 \tab 4Aiii_data \cr
+}
+
+
+}
+\item{EconomicFreedomHist: }{
+Variable Mapping\tabular{cc}{
+   \emph{from} \tab \emph{to} \cr
+   Country \tab StateName \cr
+}
+
+
+}
 }
 }
 

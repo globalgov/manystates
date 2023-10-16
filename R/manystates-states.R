@@ -1,61 +1,52 @@
 #' states datacube documentation
 #'
 #' @format The states datacube is a list that contains the
-#' following 9 datasets: GW, ISD, COW, ICOW, ICOW_COL, RATRULES, HUGGO_STATES, EconomicFreedom, EconomicFreedomHist.
+#' following 8 datasets: GW, ISD, COW, ICOW, RATRULES, HUGGO_STATES, EconomicFreedom, EconomicFreedomHist.
 #' For more information and references to each of the datasets used,
-#' please use the `data_source()` and `data_contrast()` functions.
+#' please use the `manydata::call_sources()` and `manydata::compare_dimensions()` functions.
 #'\describe{
 #' \item{GW: }{A dataset with 216 observations and the following
-#' 5 variables: cowID, Beg, End, cowNR, StateName.}
+#' 5 variables: cowID, Begin, End, cowNR, StateName.}
 #' \item{ISD: }{A dataset with 362 observations and the following
-#' 7 variables: cowID, Beg, End, cowNR, StateName, Micro, NewState.}
+#' 7 variables: cowID, Begin, End, cowNR, StateName, Micro, NewState.}
 #' \item{COW: }{A dataset with 243 observations and the following
-#' 5 variables: cowID, Beg, End, cowNR, StateName.}
+#' 5 variables: cowID, Begin, End, cowNR, StateName.}
 #' \item{ICOW: }{A dataset with 217 observations and the following
-#' 15 variables: cowID, StateName, ColRuler, IndFrom, IndDate, IndViol, IndType,
+#' 15 variables: cowID, StateName, ColRuler, IndFrom, Begin, IndViol, IndType,
 #' SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
-#' \item{ICOW_COL: }{A dataset with 221 observations and the following
-#' 9 variables: cowID, cowNR, StateName, Beg, cowID_Origin, IndepType, Beg_COW,
-#' Beg_GW, Beg_Polity2.}
 #' \item{RATRULES: }{A dataset with 177 observations and the following
 #' 3 variables: stateID, StateName, RatProcedure.}
 #' \item{HUGGO_STATES: }{A dataset with 574 observations and the following
-#' 12 variables: stateID, StateName, Capital, Beg, End, Latitude, Longitude,
+#' 12 variables: stateID, StateName, Capital, Begin, End, Latitude, Longitude,
 #' Area, Region, RatProcedure, Constitutional Description, Source.}
 #' \item{EconomicFreedom: }{A dataset with 4290 observations and the following
-#' 72 variables: cowID, Year, Countries, Economic Freedom Summary Index, Rank,
+#' 72 variables: cowID, Year, StateName, Economic Freedom Summary Index, Rank,
 #' Quartile, 1A Government Consumption, 1A_data, 1B  Transfers and subsidies,
 #' 1B_data, 1C  Government investment, 1C_data, 1Di Top marginal income tax rate,
 #' 1Di_data, 1Dii Top marginal income and payroll tax rate, 1Dii_data,
-#' 1D  Top marginal tax rate, IE State Ownership of Assets,
-#' 1  Size of Government, 2A  Judicial independence, 2B  Impartial courts,
-#' 2C  Protection of property rights,
+#' 1D  Top marginal tax rate, IE State Ownership of Assets, 1  Size of Government,
+#' 2A  Judicial independence, 2B  Impartial courts, 2C  Protection of property rights,
 #' 2D  Military interference in rule of law and politics,
 #' 2E Integrity of the legal system, 2F Legal enforcement of contracts,
 #' 2G Regulatory restrictions on the sale of real property,
 #' 2H Reliability of police, Gender Legal Rights Adjustment,
 #' 2  Legal System & Property Rights, 3A  Money growth, 3A_data,
-#' 3B  Standard deviation of inflation, 3B_data,
-#' 3C  Inflation: Most recent year, 3C_data,
-#' 3D  Freedom to own foreign currency bank accounts, 3  Sound Money,
+#' 3B  Standard deviation of inflation, 3B_data, 3C  Inflation: Most recent year,
+#' 3C_data, 3D  Freedom to own foreign currency bank accounts, 3  Sound Money,
 #' 4Ai  Revenue from trade taxes (% of trade sector), 4Ai_data,
 #' 4Aii  Mean tariff rate, 4Aii_data, 4Aiii  Standard deviation of tariff rates,
 #' 4Aiii_data, 4A  Tariffs, 4Bi  Non-tariff trade barriers,
-#' 4Bii  Compliance costs of importing and exporting,
-#' 4B  Regulatory trade barriers, 4C  Black market exchange rates,
-#' 4Di  Financial Openness, 4Dii  Capital controls,
-#' 4Diii Freedom of foreigners to visit,
-#' 4D  Controls of the movement of capital and people,
-#' 4  Freedom to trade internationally, 5Ai  Ownership of banks,
-#' 5Aii Private sector credit,
+#' 4Bii  Compliance costs of importing and exporting, 4B  Regulatory trade barriers,
+#' 4C  Black market exchange rates, 4Di  Financial Openness, 4Dii  Capital controls,
+#' 4Diii Freedom of foreigners to visit, 4D  Controls of the movement of capital and people,
+#' 4  Freedom to trade internationally, 5Ai  Ownership of banks, 5Aii Private sector credit,
 #' 5Aiii  Interest rate controls/negative real interest rates),
 #' 5A  Credit market regulations, 5Bi  Hiring regulations and minimum wage,
 #' 5Bii  Hiring and firing regulations, 5Biii  Centralized collective bargaining,
-#' 5Biv  Hours Regulations, 5Bv Mandated cost of worker dismissal,
-#' 5Bvi  Conscription, 5B  Labor market regulations,
-#' 5Ci  Administrative requirements, 5Cii  Regulatory Burden,
+#' 5Biv  Hours Regulations, 5Bv Mandated cost of worker dismissal, 5Bvi  Conscription,
+#' 5B  Labor market regulations, 5Ci  Administrative requirements, 5Cii  Regulatory Burden,
 #' 5Ciii  Starting a  business, 5Civ  Impartial Public Administration,
-#' 5Cv Licensing restrictions, 5Cvi Tax compliance, 5C  Business regulations,
+#' 5Cv Licensing restrictions, 5Cvi Tax compliance, 5C  Business regulations, 
 #' 5  Regulation.}
 #' \item{EconomicFreedomHist: }{A dataset with 458 observations and the following
 #' 5 variables: stateID, Year, StateName, EFW, Rank.}
@@ -63,23 +54,21 @@
 #' @source
 #'\itemize{
 #' \item{GW: }{
-#' [1] K. S. Gleditsch and M. D. Ward. “Interstate system membership: A revised list of the independentstates since 1816”. In: _International Interactions_ 25.4 (1998), pp. 393-413.}
+#' [1] K. S. Gleditsch and M. D. Ward. “Interstate system membership: A revised list of the independent statessince 1816”. In: _International Interactions_ 25.4 (1999), pp. 393-413.}
 #' \item{ISD: }{
-#' [1] R. D. Griffiths and C. R. Butcher. “Introducing the international system (s) dataset (ISD),1816-2011”. In: _International Interactions_ 39.5 (2012), pp. 748-768.}
+#' [1] R. D. Griffiths and C. R. Butcher. “Introducing the international system (s) dataset (ISD), 1816-2011”. In:_International Interactions_ 39.5 (2013), pp. 748-768.}
 #' \item{COW: }{
-#' [1] Correlates of War Project. _State System Membership List, v2016._ <http://correlatesofwar.org>.Accessed: 2021-01-25. 2016.}
+#' [1] Correlates of War Project. _State System Membership List, v2016._ <http://correlatesofwar.org>. Accessed:2021-01-25. 2017.}
 #' \item{ICOW: }{
-#' [1] P. R. Hensel. _ICOW Colonial History Data Set, version 1.1._<http://www.paulhensel.org/icowcol.html>. Accessed: 2021-12-23. 2017.}
-#' \item{ICOW_COL: }{
-#' [1] P. R. Hensel and S. M. Mitchell. _ICOW Colonial History Data Set Version 0.4_. 2016.<https://doi.org/10.7910/DVN/5EMETG>.}
+#' [1] P. R. Hensel. _ICOW Colonial History Data Set, version 1.1._ <http://www.paulhensel.org/icowcol.html>.Accessed: 2021-12-23. 2018.}
 #' \item{RATRULES: }{
-#' [1] B. A. Simmons. _Mobilizing for Human Rights: International Law in Domestic Politics_. Cambridge University Press, 2009.}
+#' [1] B. A. Simmons. _Mobilizing for Human Rights: International Law in Domestic Politics_. Cambridge UniversityPress, 2009.}
 #' \item{HUGGO_STATES: }{
-#' [1] J. Hollway. _Hand-coded data on states' beginning and end dates, regions, capitals, longitude andlatitude_. 2020.}
+#' [1] J. Hollway. _Hand-coded data on states' beginning and end dates, regions, capitals, longitude and latitude_.2021.}
 #' \item{EconomicFreedom: }{
-#' [1] J. Gwartney, R. Lawson, and J. Hall. _2020 Economic Freedom Dataset, published in Economic Freedomof the World: 2020 Annual Report_.<http://www.fraserinstitute.org/studies/economic-freedom-of-the-world-2020-annual-report>. Accessed:2021-12-23. 2020.}
+#' [1] J. Gwartney, R. Lawson, and J. Hall. _2020 Economic Freedom Dataset, published in Economic Freedom of theWorld: 2020 Annual Report_.<http://www.fraserinstitute.org/studies/economic-freedom-of-the-world-2020-annual-report>. Accessed: 2021-12-23.2020.}
 #' \item{EconomicFreedomHist: }{
-#' [1] J. Gwartney, R. Lawson, and J. Hall. _2020 Economic Freedom Dataset, published in Economic Freedomof the World: 2020 Annual Report_.<http://www.fraserinstitute.org/studies/economic-freedom-of-the-world-2020-annual-report>. Accessed:2021-12-23. 2020.}
+#' [1] J. Gwartney, R. Lawson, and J. Hall. _2020 Economic Freedom Dataset, published in Economic Freedom of theWorld: 2020 Annual Report_.<http://www.fraserinstitute.org/studies/economic-freedom-of-the-world-2020-annual-report>. Accessed: 2021-12-23.2020.}
 #' }
 #' @section URL:
 #'\itemize{
@@ -87,7 +76,6 @@
 #' \item{ISD: }{ \url http://www.ryan-griffiths.com/data}
 #' \item{COW: }{ \url https://correlatesofwar.org/data-sets/state-system-membership}
 #' \item{ICOW: }{ \url http://www.paulhensel.org/icowcol.html}
-#' \item{ICOW_COL: }{ \url https://doi.org/10.7910/DVN/5EMETG}
 #' \item{RATRULES: }{ \url https://doi.org/10.1017/CBO9780511811340}
 #' \item{HUGGO_STATES: }{ \url Hand-coded data by the GGO team}
 #' \item{EconomicFreedom: }{ \url https://www.fraserinstitute.org/economic-freedom}
@@ -100,57 +88,84 @@
 #'
 #' |  *from*  | *to*
 #' |:------------:|:------------:|
-#' | original_name | new_name |
-#' Please fill in variable mapping here as above.}
+#' | Cow ID | cowID |
+#' | Start | Begin |
+#' | Finish | End |
+#' | Name of State | StateName |
+#' | Cow NR. | cowNR |
+#' 
+#' }
 #' \item{ISD: }{
 #' Variable Mapping
 #'
 #' |  *from*  | *to*
 #' |:------------:|:------------:|
-#' | original_name | new_name |
-#' Please fill in variable mapping here as above.}
+#' | COW.ID | cowID |
+#' | Start | Begin |
+#' | Finish | End |
+#' | State.Name | StateName |
+#' | COW.Nr | cowNr |
+#' 
+#' }
 #' \item{COW: }{
 #' Variable Mapping
 #'
 #' |  *from*  | *to*
 #' |:------------:|:------------:|
-#' | original_name | new_name |
-#' Please fill in variable mapping here as above.}
+#' | stateabb | cowID |
+#' | styear, stmonth, stday | Begin |
+#' | endyear, endmonth, endday | End |
+#' | statenme | StateName |
+#' | ccode | cowNR |
+#' 
+#' }
 #' \item{ICOW: }{
 #' Variable Mapping
 #'
 #' |  *from*  | *to*
 #' |:------------:|:------------:|
-#' | original_name | new_name |
-#' Please fill in variable mapping here as above.}
-#' \item{ICOW_COL: }{
-#' Variable Mapping
-#'
-#' |  *from*  | *to*
-#' |:------------:|:------------:|
-#' | original_name | new_name |
-#' Please fill in variable mapping here as above.}
+#' | State | cowID |
+#' | Name | StateName |
+#' | IndDate | Begin |
+#' 
+#' }
 #' \item{RATRULES: }{
 #' Variable Mapping
 #'
 #' |  *from*  | *to*
 #' |:------------:|:------------:|
-#' | original_name | new_name |
-#' Please fill in variable mapping here as above.}
+#' | StatID | stateID |
+#' | Rat | RatProcedure |
+#' 
+#' }
 #' \item{EconomicFreedom: }{
 #' Variable Mapping
 #'
 #' |  *from*  | *to*
 #' |:------------:|:------------:|
-#' | original_name | new_name |
-#' Please fill in variable mapping here as above.}
+#' | Countries | StateName |
+#' | ISO_Code_3 | cowID |
+#' | data...9 | 1A_data |
+#' | data...11 | 1B_data |
+#' | data...13 | 1C_data |
+#' | data...15 | 1Di_data |
+#' | data...17 | 1Dii_data |
+#' | data...32 | 3A_data |
+#' | data...34 | 3B_data |
+#' | data...36 | 3C_data |
+#' | data...40 | 4Ai_data |
+#' | data...42 | 4Aii_data |
+#' | data...44 | 4Aiii_data |
+#' 
+#' }
 #' \item{EconomicFreedomHist: }{
 #' Variable Mapping
 #'
 #' |  *from*  | *to*
 #' |:------------:|:------------:|
-#' | original_name | new_name |
-#' Please fill in variable mapping here as above.}
+#' | Country | StateName |
+#' 
+#' }
 #' }
 #' @md
 #' @details

@@ -19,6 +19,13 @@ EconomicFreedomHist <- dplyr::as_tibble(EconomicFreedomHist) %>%
   dplyr::arrange(stateID, Year) %>%
   dplyr::relocate(stateID, Year)
 
+# ensure NAs are coded correctly
+EconomicFreedomHist <- EconomicFreedomHist %>%
+  dplyr::mutate(across(everything(),
+                       ~stringr::str_replace_all(.,
+                                                 "^NA$", NA_character_))) %>%
+  dplyr::mutate(Year = messydates::as_messydate(Year))
+
 # manypkgs includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.

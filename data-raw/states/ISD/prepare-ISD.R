@@ -38,13 +38,23 @@ ISD <- tibble::as_tibble(ISD) %>%
 ISD <- ISD %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01-01", messydates::on_or_before(Beg), Beg)),
                              End = messydates::as_messydate(ifelse(End >= "2011-12-31", messydates::on_or_after(End), End)))
 
+# ensure NAs are coded correctly
+ISD <- ISD %>%
+  dplyr::mutate(across(everything(),
+                       ~stringr::str_replace_all(.,
+                                                 "^NA$", NA_character_))) %>%
+  dplyr::rename(Begin = Beg) %>%
+  dplyr::mutate(Begin = messydates::as_messydate(Begin),
+                End = messydates::as_messydate(End)) %>%
+  dplyr::relocate(cowID, Begin, End)
+
 # manydata and manypkgs include several other
 # functions that should help cleaning and
 # standardizing your data.
 # Please see the vignettes or website for more details.
 # Stage three: Connecting data
 # Next run the following line to make ISD available within the package.
-manypkgs::export_data(ISD, database = "states",
+manypkgs::export_data(ISD, datacube = "states",
                       URL = "http://www.ryan-griffiths.com/data")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence

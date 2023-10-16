@@ -120,8 +120,18 @@ HUGGO_STATES <- HUGGO_STATES %>%
   dplyr::rename(Region = Regionc) %>%
   dplyr::mutate(Region = stringr::str_replace(Region, "-", " "))
 HUGGO_STATES <- HUGGO_STATES %>%
-  dplyr::relocate(stateID, StateName, Capital, Beg, End, Latitude, Longitude,
+  dplyr::rename(Begin = Beg) %>%
+  dplyr::relocate(stateID, StateName, Capital, Begin, End, Latitude, Longitude,
                   Area, Region)
+
+# ensure NAs are coded correctly
+HUGGO_STATES <- HUGGO_STATES %>%
+  dplyr::mutate(across(everything(),
+                       ~stringr::str_replace_all(.,
+                                                 "^NA$", NA_character_))) %>%
+  dplyr::mutate(Begin = messydates::as_messydate(Begin),
+                End = messydates::as_messydate(End))
+  dplyr::relocate(stateID, StateName, Capital, Begin)
 
 # manypkgs includes several functions that should help cleaning
 # and standardising your data such as `standardise_titles()`.
@@ -144,5 +154,5 @@ HUGGO_STATES <- HUGGO_STATES %>%
 # that you're including in the package.
 # To add a template of .bib file to the package,
 # please run `manypkgs::add_bib("states", "HUGGO_STATES")`.
-manypkgs::export_data(HUGGO_STATES, database = "states",
+manypkgs::export_data(HUGGO_STATES, datacube = "states",
                       URL = "Hand-coded data by the GGO team")

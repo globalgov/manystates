@@ -41,6 +41,15 @@ EconomicFreedom <- dplyr::as_tibble(EconomicFreedom) %>%
   dplyr::relocate(cowID, Year) %>%
   dplyr::select(-c(ISO_Code_2, ISO_Code_3)) # obtainable from COW codes
 
+EconomicFreedom <- EconomicFreedom %>% dplyr::rename(StateName = Countries)
+
+# ensure NAs are coded correctly
+EconomicFreedom <- EconomicFreedom %>%
+  dplyr::mutate(across(everything(),
+                       ~stringr::str_replace_all(.,
+                                                 "^NA$", NA_character_))) %>%
+  dplyr::mutate(Year = messydates::as_messydate(Year))
+
 # manypkgs includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.
