@@ -25,7 +25,7 @@ test_that("object has the correct variables", {
   pointblank::expect_col_exists(states[["ICOW"]],
                                 pointblank::vars(cowID))
   pointblank::expect_col_exists(states[["ICOW"]],
-                                pointblank::vars(IndDate))
+                                pointblank::vars(Begin))
   pointblank::expect_col_exists(states[["ICOW"]],
                                 pointblank::vars(SecDate))
   pointblank::expect_col_exists(states[["ICOW"]],
@@ -34,10 +34,10 @@ test_that("object has the correct variables", {
 
 # Variables with dates are standardized
 test_that("dates are standardised", {
-  expect_s3_class(states[["ICOW"]]$IndDate, "mdate")
+  expect_s3_class(states[["ICOW"]]$Begin, "mdate")
   expect_s3_class(states[["ICOW"]]$SecDate, "mdate")
   expect_s3_class(states[["ICOW"]]$IntoDate, "mdate")
-  expect_false(any(grepl("/", states[["ICOW"]]$IndDate)))
+  expect_false(any(grepl("/", states[["ICOW"]]$Begin)))
   expect_false(any(grepl("/", states[["ICOW"]]$SecDate)))
   expect_false(any(grepl("/", states[["ICOW"]]$IntoDate)))
 })

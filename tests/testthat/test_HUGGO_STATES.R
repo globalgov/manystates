@@ -11,7 +11,7 @@ test_that("missing observations are reported correctly", {
   expect_false(any(grepl("n\\.a\\.$", states[["HUGGO_STATES"]])))
 })
 
-# Date columns should be in messydt class
+# Date columns should be in mdate class
 test_that("Columns are not in date, POSIXct or POSIXlt class", {
   expect_false(any(lubridate::is.Date(states[["HUGGO_STATES"]])))
   expect_false(any(lubridate::is.POSIXct(states[["HUGGO_STATES"]])))
@@ -23,7 +23,7 @@ test_that("object has the correct variables", {
   pointblank::expect_col_exists(states[["HUGGO_STATES"]],
                                 pointblank::vars(stateID))
   pointblank::expect_col_exists(states[["HUGGO_STATES"]],
-                                pointblank::vars(Beg))
+                                pointblank::vars(Begin))
   pointblank::expect_col_exists(states[["HUGGO_STATES"]],
                                 pointblank::vars(End))
   pointblank::expect_col_exists(states[["HUGGO_STATES"]],
@@ -32,9 +32,9 @@ test_that("object has the correct variables", {
 
 # Variables with dates are standardized
 test_that("dates are standardised", {
-  expect_s3_class(states[["HUGGO_STATES"]]$Beg, "mdate")
+  expect_s3_class(states[["HUGGO_STATES"]]$Begin, "mdate")
   expect_s3_class(states[["HUGGO_STATES"]]$End, "mdate")
-  expect_false(any(grepl("/", states[["HUGGO_STATES"]]$Beg)))
+  expect_false(any(grepl("/", states[["HUGGO_STATES"]]$Begin)))
   expect_false(any(grepl("/", states[["HUGGO_STATES"]]$End)))
 })
 
