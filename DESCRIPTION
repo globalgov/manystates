@@ -4,7 +4,7 @@ Version: 0.2.0
 Date: 2023-05-26
 Description: manystates provide data on states in the international system across time. 
     The package combines and cross-references several existing datasets consistent with the manydata package aims.
-URL: https://github.com/globalgov/manystates
+URL: https://github.com/globalgov/manystates, https://globalgov.github.io/manystates/
 BugReports: https://github.com/globalgov/manystates/issues
 Authors@R: 
     c(person(given = "James",
