@@ -53,37 +53,58 @@
 #' 5 variables: stateID, Year, StateName, EFW, Rank.}
 #' }
 #' @source
-#'\itemize{
+#' \itemize{
 #' \item{GW: }{
-#' [1] K. S. Gleditsch and M. D. Ward. “Interstate system membership: A revised list of the independent statessince 1816”. In: _International Interactions_ 25.4 (1999), pp. 393-413.}
+#' K. S. Gleditsch and M. D. Ward. “Interstate system membership: A revised list of the independent states since 1816”.
+#' _International Interactions_ 25.4 (1999), pp. 393-413.}
 #' \item{ISD: }{
-#' [1] R. D. Griffiths and C. R. Butcher. “Introducing the international system (s) dataset (ISD), 1816-2011”. In:_International Interactions_ 39.5 (2013), pp. 748-768.}
+#' R. D. Griffiths and C. R. Butcher. “Introducing the international system (s) dataset (ISD), 1816-2011”.
+#' _International Interactions_ 39.5 (2013), pp. 748-768.}
 #' \item{COW: }{
-#' [1] Correlates of War Project. _State System Membership List, v2016._ <http://correlatesofwar.org>. Accessed:2021-01-25. 2017.}
+#' Correlates of War Project. _State System Membership List, v2016._
+#' <http://correlatesofwar.org>. Accessed: 2021-01-25.}
 #' \item{ICOW: }{
-#' [1] P. R. Hensel. _ICOW Colonial History Data Set, version 1.1._ <http://www.paulhensel.org/icowcol.html>.Accessed: 2021-12-23. 2018.}
+#' P. R. Hensel. (2018). _ICOW Colonial History Data Set, version 1.1._
+#' <http://www.paulhensel.org/icowcol.html>.Accessed: 2021-12-23.}
 #' \item{RATRULES: }{
-#' [1] B. A. Simmons. _Mobilizing for Human Rights: International Law in Domestic Politics_. Cambridge UniversityPress, 2009.}
+#' B. A. Simmons. _Mobilizing for Human Rights: International Law in Domestic Politics_.
+#' Cambridge University Press, 2009.}
 #' \item{HUGGO_STATES: }{
-#' [1] J. Hollway. _Hand-coded data on states' beginning and end dates, regions, capitals, longitude and latitude_.2021.}
+#' J. Hollway. (2021). Hand-coded data on states' beginning and end dates, regions, capitals, longitude and latitude.}
 #' \item{EconomicFreedom: }{
-#' [1] J. Gwartney, R. Lawson, and J. Hall. _2020 Economic Freedom Dataset, published in Economic Freedom of theWorld: 2020 Annual Report_.<http://www.fraserinstitute.org/studies/economic-freedom-of-the-world-2020-annual-report>. Accessed: 2021-12-23.2020.}
+#' J. Gwartney, R. Lawson, and J. Hall. (2020). _2020 Economic Freedom Dataset, published in Economic Freedom of the World: 2020 Annual Report_.
+#' <http://www.fraserinstitute.org/studies/economic-freedom-of-the-world-2020-annual-report>. Accessed: 2021-12-23.}
 #' \item{EconomicFreedomHist: }{
-#' [1] J. Gwartney, R. Lawson, and J. Hall. _2020 Economic Freedom Dataset, published in Economic Freedom of theWorld: 2020 Annual Report_.<http://www.fraserinstitute.org/studies/economic-freedom-of-the-world-2020-annual-report>. Accessed: 2021-12-23.2020.}
+#' J. Gwartney, R. Lawson, and J. Hall. (2020). _2020 Economic Freedom Dataset, published in Economic Freedom of the World: 2020 Annual Report_.
+#' <http://www.fraserinstitute.org/studies/economic-freedom-of-the-world-2020-annual-report>. Accessed: 2021-12-23.}
 #' }
 #' @section URL:
-#'\itemize{
-#' \item{GW: }{ \url http://ksgleditsch.com/data-4.html}
-#' \item{ISD: }{ \url http://www.ryan-griffiths.com/data}
-#' \item{COW: }{ \url https://correlatesofwar.org/data-sets/state-system-membership}
-#' \item{ICOW: }{ \url http://www.paulhensel.org/icowcol.html}
-#' \item{RATRULES: }{ \url https://doi.org/10.1017/CBO9780511811340}
-#' \item{HUGGO_STATES: }{ \url Hand-coded data by the GGO team}
-#' \item{EconomicFreedom: }{ \url https://www.fraserinstitute.org/economic-freedom}
-#' \item{EconomicFreedomHist: }{ \url https://www.fraserinstitute.org/economic-freedom}
+#' \itemize{
+#' \item{GW: }{
+#' \url{http://ksgleditsch.com/data-4.html}
+#' }
+#' \item{ISD: }{
+#' \url{http://www.ryan-griffiths.com/data}
+#' }
+#' \item{COW: }{
+#' \url{https://correlatesofwar.org/data-sets/state-system-membership}
+#' }
+#' \item{ICOW: }{
+#' \url{http://www.paulhensel.org/icowcol.html}
+#' }
+#' \item{RATRULES: }{
+#' \url{https://doi.org/10.1017/CBO9780511811340}
+#' }
+#' \item{HUGGO_STATES: }{Hand-coded data by the GGO team}
+#' \item{EconomicFreedom: }{
+#' \url{https://www.fraserinstitute.org/economic-freedom}
+#' }
+#' \item{EconomicFreedomHist: }{
+#' \url{https://www.fraserinstitute.org/economic-freedom}
+#' }
 #' }
 #' @section Mapping:
-#'\itemize{
+#' \itemize{
 #' \item{GW: }{
 #' Variable Mapping
 #'
