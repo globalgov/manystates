@@ -39,6 +39,12 @@ COW <- COW %>%
                 Begin = messydates::as_messydate(Begin),
                 End = messydates::as_messydate(End))
 
+# Add stateID
+COW <- COW %>%
+  dplyr::mutate(stateID = manypkgs::code_states(StateName, activity = F,
+                                                replace = "ID"),
+                stateID = ifelse(is.na(stateID), cowID, stateID))
+
 # manydata and manypkgs include several other
 # functions that should help cleaning and
 # standardizing your data.

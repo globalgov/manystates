@@ -50,6 +50,12 @@ EconomicFreedom <- EconomicFreedom %>%
                                                  "^NA$", NA_character_))) %>%
   dplyr::mutate(Year = messydates::as_messydate(Year))
 
+# Add stateID
+EconomicFreedom <- EconomicFreedom %>%
+  dplyr::mutate(stateID = manypkgs::code_states(StateName, activity = F,
+                                                replace = "ID"),
+                stateID = ifelse(is.na(stateID), cowID, stateID))
+
 # manypkgs includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.

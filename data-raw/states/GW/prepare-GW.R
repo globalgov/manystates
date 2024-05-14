@@ -41,13 +41,19 @@ GW <- GW %>%
   dplyr::mutate(Begin = messydates::as_messydate(Begin),
                 End = messydates::as_messydate(End))
 
+# Add stateID
+GW <- GW %>%
+  dplyr::mutate(stateID = manypkgs::code_states(StateName, activity = F,
+                                                replace = "ID"),
+                stateID = ifelse(is.na(stateID), cowID, stateID))
+
 # manydata and manypkgs include several other
 # functions that should help cleaning and
 # standardizing your data.
 # Please see the vignettes or website for more details.
 
 # Stage three: Connecting data
-# Next run the following line to make GW available within the qPackage.
+# Next run the following line to make GW available within the package.
 manypkgs::export_data(GW, datacube = "states",
                       URL = "http://ksgleditsch.com/data-4.html")
 

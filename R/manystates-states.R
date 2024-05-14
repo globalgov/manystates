@@ -1,26 +1,27 @@
 #' states datacube documentation
 #'
 #' @format The states datacube is a list that contains the
-#' following 8 datasets: GW, ISD, COW, ICOW, RATRULES, HUGGO_STATES, EconomicFreedom, EconomicFreedomHist.
+#' following 8 datasets: GW, ISD, COW, ICOW, RATRULES, HUGGO_STATES,
+#' EconomicFreedom, EconomicFreedomHist.
 #' For more information and references to each of the datasets used,
 #' please use the `manydata::call_sources()` and `manydata::compare_dimensions()` functions.
 #'\describe{
 #' \item{GW: }{A dataset with 216 observations and the following
-#' 5 variables: cowID, Begin, End, cowNR, StateName.}
+#' 6 variables: cowID, Begin, End, cowNR, StateName, stateID.}
 #' \item{ISD: }{A dataset with 362 observations and the following
-#' 7 variables: cowID, Begin, End, cowNR, StateName, Micro, NewState.}
+#' 8 variables: cowID, Begin, End, cowNR, StateName, Micro, NewState, stateID.}
 #' \item{COW: }{A dataset with 243 observations and the following
-#' 5 variables: cowID, Begin, End, cowNR, StateName.}
+#' 6 variables: cowID, Begin, End, cowNR, StateName, stateID.}
 #' \item{ICOW: }{A dataset with 217 observations and the following
-#' 15 variables: cowID, StateName, ColRuler, IndFrom, Begin, IndViol, IndType,
-#' SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes.}
+#' 16 variables: cowID, StateName, ColRuler, IndFrom, Begin, IndViol, IndType,
+#' SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes, stateID.}
 #' \item{RATRULES: }{A dataset with 177 observations and the following
 #' 3 variables: stateID, StateName, RatProcedure.}
 #' \item{HUGGO_STATES: }{A dataset with 574 observations and the following
 #' 12 variables: stateID, StateName, Capital, Begin, End, Latitude, Longitude,
 #' Area, Region, RatProcedure, Constitutional Description, Source.}
 #' \item{EconomicFreedom: }{A dataset with 4290 observations and the following
-#' 72 variables: cowID, Year, StateName, Economic Freedom Summary Index, Rank,
+#' 73 variables: cowID, Year, StateName, Economic Freedom Summary Index, Rank,
 #' Quartile, 1A Government Consumption, 1A_data, 1B  Transfers and subsidies,
 #' 1B_data, 1C  Government investment, 1C_data, 1Di Top marginal income tax rate,
 #' 1Di_data, 1Dii Top marginal income and payroll tax rate, 1Dii_data,
@@ -47,7 +48,7 @@
 #' 5B  Labor market regulations, 5Ci  Administrative requirements, 5Cii  Regulatory Burden,
 #' 5Ciii  Starting a  business, 5Civ  Impartial Public Administration,
 #' 5Cv Licensing restrictions, 5Cvi Tax compliance, 5C  Business regulations, 
-#' 5  Regulation.}
+#' 5  Regulation, stateID.}
 #' \item{EconomicFreedomHist: }{A dataset with 458 observations and the following
 #' 5 variables: stateID, Year, StateName, EFW, Rank.}
 #' }

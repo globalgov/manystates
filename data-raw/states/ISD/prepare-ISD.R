@@ -48,6 +48,12 @@ ISD <- ISD %>%
                 End = messydates::as_messydate(End)) %>%
   dplyr::relocate(cowID, Begin, End)
 
+# Add stateID
+ISD <- ISD %>%
+  dplyr::mutate(stateID = manypkgs::code_states(StateName, activity = F,
+                                                replace = "ID"),
+                stateID = ifelse(is.na(stateID), cowID, stateID))
+
 # manydata and manypkgs include several other
 # functions that should help cleaning and
 # standardizing your data.

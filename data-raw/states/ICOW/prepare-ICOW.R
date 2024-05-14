@@ -137,6 +137,12 @@ ICOW <- ICOW %>%
                 COWsys = messydates::as_messydate(COWsys),
                 GWsys = messydates::as_messydate(GWsys))
 
+# Add stateID
+ICOW <- ICOW %>%
+  dplyr::mutate(stateID = manypkgs::code_states(StateName, activity = F,
+                                                replace = "ID"),
+                stateID = ifelse(is.na(stateID), cowID, stateID))
+
 # manypkgs includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.
