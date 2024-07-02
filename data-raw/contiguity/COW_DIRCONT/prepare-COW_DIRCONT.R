@@ -5,6 +5,7 @@
 
 # Stage one: Collecting data
 COW_DIRCONT <- readr::read_csv("data-raw/contiguity/COW_DIRCONT/contdir.csv")
+# version 3.2
 
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
@@ -17,18 +18,47 @@ COW_DIRCONT <- readr::read_csv("data-raw/contiguity/COW_DIRCONT/contdir.csv")
 # and `standardise_texts()`.
 # Please see the vignettes or website for more details.
 COW_DIRCONT <- as_tibble(COW_DIRCONT) %>%
-  dplyr::rename(dyadID = dyad, stateID1 = statelno, stateID2 = statehno,
+  dplyr::rename(dyadID = dyad, cowNR1 = statelno, cowNR2 = statehno,
                 ContiguityType = conttype) %>%
-  manydata::transmutate(Beg = messydates::as_messydate(as.character(begin),
-                                                       resequence = "ym"),
+  manydata::transmutate(Begin = messydates::as_messydate(as.character(begin),
+                                                         resequence = "ym"),
                         End = messydates::as_messydate(as.character(end),
                                                        resequence = "ym"),
-                        StateName1 = manypkgs::standardize_titles(statelab),
-                        StateName2 = manypkgs::standardize_titles(statehab)) %>%
+                        cowID1 = manypkgs::standardize_titles(statelab),
+                        cowID2 = manypkgs::standardize_titles(statehab)) %>%
+  # Add StateName var to facilitate consolidation with other datasets
+  dplyr::mutate(StateName1 = countrycode::countrycode(cowID1, origin = "cowc",
+                                                      destination = "country.name"),
+                StateName2 = countrycode::countrycode(cowID2, origin = "cowc",
+                                                      destination = "country.name")) %>%
+  # manually correct names
+  dplyr::mutate(StateName1 = ifelse(cowID1 == "KOR", "Republic of Korea", StateName1),
+                StateName1 = ifelse(cowID1 == "GFR", "Germany", StateName1),
+                StateName1 = ifelse(StateName1 == "Congo - Kinshasa",
+                                    "Democratic Republic of the Congo",
+                                    StateName1),
+                StateName1 = ifelse(StateName1 == "Congo - Brazzaville",
+                                    "Congo", StateName1),
+                StateName2 = ifelse(cowID2 == "KOR", "Republic of Korea", StateName2),
+                StateName2 = ifelse(cowID2 == "GFR", "Germany", StateName2),
+                StateName2 = ifelse(StateName2 == "Congo - Kinshasa",
+                                    "Democratic Republic of the Congo",
+                                    StateName2),
+                StateName2 = ifelse(StateName2 == "Congo - Brazzaville",
+                                    "Congo", StateName2)) %>%
+  # Add standardised stateID var to facilitate consolidation with other datasets
+  dplyr::mutate(StateName1 = manypkgs::code_states(StateName1, activity = FALSE,
+                                                   replace = "names"),
+                stateID1 = manypkgs::code_states(StateName1, activity = FALSE,
+                                                 replace = "ID"),
+                StateName2 = manypkgs::code_states(StateName2, activity = FALSE,
+                                                   replace = "names"),
+                stateID2 = manypkgs::code_states(StateName2, activity = FALSE,
+                                                 replace = "ID")) %>%
   dplyr::select(-c(notes, version)) %>%
-  dplyr::relocate(dyadID, ContiguityType, Beg, End, stateID1, StateName1,
-                  stateID2, StateName2) %>%
-  dplyr::arrange(Beg)
+  dplyr::relocate(dyadID, ContiguityType, Begin, End, cowNR1, cowID1, cowNR2,
+                  cowID2, stateID1, StateName1, stateID2, StateName2) %>%
+  dplyr::arrange(Begin)
 
 # Stage three: Connecting data
 # Next run the following line to make COW_DIRCONT available
@@ -47,5 +77,5 @@ COW_DIRCONT <- as_tibble(COW_DIRCONT) %>%
 # that you're including in the package.
 # To add a template of .bib file to the package,
 # please run `manypkgs::add_bib("contiguity", "COW_DIRCONT")`.
-manypkgs::export_data(COW_DIRCONT, database = "contiguity",
+manypkgs::export_data(COW_DIRCONT, datacube = "contiguity",
                       URL = "https://correlatesofwar.org/data-sets/direct-contiguity")
