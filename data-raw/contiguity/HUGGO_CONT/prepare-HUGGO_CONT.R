@@ -51,7 +51,7 @@ HUGGO_CONT <- as_tibble(HUGGO_CONT) %>%
                 stateID1 = ifelse(is.na(stateID1), stateID, stateID1),
                 stateID1 = ifelse(stateID1 == "KOR - PRK", "PRK", stateID1),
                 ContiguityType = "Shared Border") %>%
-  dplyr::select(stateID1, StateName1, stateID2, StateName2, Begin, End,
+  dplyr::select(stateID1, stateID2, Begin, End, StateName1, StateName2,
                 ContiguityType, EntityType, FAOmember, Group, url) %>%
   dplyr::arrange(Begin, stateID1)
 

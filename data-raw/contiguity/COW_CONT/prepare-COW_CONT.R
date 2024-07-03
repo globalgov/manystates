@@ -1,15 +1,15 @@
-# COW_DIRCONT Preparation Script
+# COW_CONT Preparation Script
 
 # This is a template for importing, cleaning, and exporting data
 # ready for many packages universe.
 
 # Stage one: Collecting data
-COW_DIRCONT <- readr::read_csv("data-raw/contiguity/COW_DIRCONT/contdir.csv")
+COW_CONT <- readr::read_csv("data-raw/contiguity/COW_CONT/contdir.csv")
 # version 3.2
 
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
-# formats of the 'COW_DIRCONT' object until the object created
+# formats of the 'COW_CONT' object until the object created
 # below (in stage three) passes all the tests.
 # We recommend that you avoid using one letter variable names to keep
 # away from issues with ambiguous names down the road.
@@ -17,7 +17,7 @@ COW_DIRCONT <- readr::read_csv("data-raw/contiguity/COW_DIRCONT/contdir.csv")
 # and standardising your data such as `standardise_titles()`
 # and `standardise_texts()`.
 # Please see the vignettes or website for more details.
-COW_DIRCONT <- as_tibble(COW_DIRCONT) %>%
+COW_CONT <- as_tibble(COW_CONT) %>%
   dplyr::rename(dyadID = dyad, cowNR1 = statelno, cowNR2 = statehno,
                 ContiguityType = conttype) %>%
   manydata::transmutate(Begin = messydates::as_messydate(as.character(begin),
@@ -61,7 +61,7 @@ COW_DIRCONT <- as_tibble(COW_DIRCONT) %>%
   dplyr::arrange(Begin)
 
 # Stage three: Connecting data
-# Next run the following line to make COW_DIRCONT available
+# Next run the following line to make COW_CONT available
 # within the package.
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence
@@ -76,6 +76,6 @@ COW_DIRCONT <- as_tibble(COW_DIRCONT) %>%
 # Therefore, please make sure that you have permission to use the dataset
 # that you're including in the package.
 # To add a template of .bib file to the package,
-# please run `manypkgs::add_bib("contiguity", "COW_DIRCONT")`.
-manypkgs::export_data(COW_DIRCONT, datacube = "contiguity",
+# please run `manypkgs::add_bib("contiguity", "COW_CONT")`.
+manypkgs::export_data(COW_CONT, datacube = "contiguity",
                       URL = "https://correlatesofwar.org/data-sets/direct-contiguity")
