@@ -9,8 +9,8 @@
 #' 12 variables: dyadID, ContiguityType, Begin, End, cowNR1, cowID1, cowNR2,
 #' cowID2, stateID1, StateName1, stateID2, StateName2.}
 #' \item{HUGGO_CONT: }{A dataset with 609 observations and the following
-#' 11 variables: stateID1, stateID2, Begin, End, StateName1, StateName2,
-#' ContiguityType, EntityType, FAOmember, Group, url.}
+#' 8 variables: stateID1, stateID2, Begin, End, StateName1, StateName2,
+#' ContiguityType, url.}
 #' }
 #' @source
 #'\itemize{

@@ -6,21 +6,21 @@
 \title{contiguity datacube documentation}
 \format{
 The contiguity datacube is a list that contains the
-following 2 datasets: COW_DIRCONT, HUGGO_CONT.
+following 2 datasets: COW_CONT, HUGGO_CONT.
 For more information and references to each of the datasets used,
 please use the \code{manydata::call_sources()} and \code{manydata::compare_dimensions()} functions.
 \describe{
-\item{COW_DIRCONT: }{A dataset with 847 observations and the following
+\item{COW_CONT: }{A dataset with 847 observations and the following
 12 variables: dyadID, ContiguityType, Begin, End, cowNR1, cowID1, cowNR2,
 cowID2, stateID1, StateName1, stateID2, StateName2.}
 \item{HUGGO_CONT: }{A dataset with 609 observations and the following
-11 variables: stateID1, StateName1, stateID2, StateName2, Begin, End,
-ContiguityType, EntityType, FAOmember, Group, url.}
+8 variables: stateID1, stateID2, Begin, End, StateName1, StateName2,
+ContiguityType, url.}
 }
 }
 \source{
 \itemize{
-\item{COW_DIRCONT: }{
+\item{COW_CONT: }{
 Hensel, Paul R. \emph{Correlates of War Project. Direct Contiguity Data, 1816-2016. Version 3.2.} 2017.
 }
 \item{HUGGO_CONT: }{
@@ -34,47 +34,47 @@ contiguity
 contiguity datacube documentation
 }
 \details{
-\if{html}{\out{<div class="sourceCode">}}\preformatted{#> $COW_DIRCONT
-#> ----------------------------------------------------------------------------
-#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
-#> ----------------------------------------------------------------------------
-#> |    dyadID     |   numeric   |             847|     0     |       0       |
-#> |ContiguityType |   numeric   |             847|     0     |       0       |
-#> |     Begin     |    mdate    |             847|     0     |       0       |
-#> |      End      |    mdate    |             847|     0     |       0       |
-#> |    cowNR1     |   numeric   |             847|     0     |       0       |
-#> |    cowID1     |  character  |             847|     0     |       0       |
-#> |    cowNR2     |   numeric   |             847|     0     |       0       |
-#> |    cowID2     |  character  |             847|     0     |       0       |
-#> |   stateID1    |  character  |             847|     0     |       0       |
-#> |  StateName1   |  character  |             847|     0     |       0       |
-#> |   stateID2    |  character  |             847|     0     |       0       |
-#> |  StateName2   |  character  |             847|     0     |       0       |
-#> ----------------------------------------------------------------------------
-#> 
-#> 
-#> $HUGGO_CONT
+\if{html}{\out{<div class="sourceCode">}}\preformatted{#> $HUGGO_CONT
 #> ----------------------------------------------------------------------------
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
 #> |   stateID1    |  character  |             609|     0     |       0       |
-#> |  StateName1   |  character  |             609|     0     |       0       |
 #> |   stateID2    |  character  |             609|     3     |     0.49      |
-#> |  StateName2   |  character  |             609|     0     |       0       |
 #> |     Begin     |    mdate    |             609|     0     |       0       |
 #> |      End      |    mdate    |             609|     0     |       0       |
+#> |  StateName1   |  character  |             609|     0     |       0       |
+#> |  StateName2   |  character  |             609|     0     |       0       |
 #> |ContiguityType |  character  |             609|     0     |       0       |
 #> |  EntityType   |  character  |             609|     0     |       0       |
 #> |   FAOmember   |  character  |             609|     0     |       0       |
 #> |     Group     |  character  |             609|     0     |       0       |
 #> |      url      |  character  |             609|     0     |       0       |
 #> ----------------------------------------------------------------------------
+#> 
+#> 
+#> $COW_CONT
+#> ----------------------------------------------------------------------------
+#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+#> ----------------------------------------------------------------------------
+#> |   stateID1    |  character  |             847|     0     |       0       |
+#> |   stateID2    |  character  |             847|     0     |       0       |
+#> |     Begin     |    mdate    |             847|     0     |       0       |
+#> |      End      |    mdate    |             847|     0     |       0       |
+#> |  StateName1   |  character  |             847|     0     |       0       |
+#> |  StateName2   |  character  |             847|     0     |       0       |
+#> |ContiguityType |   numeric   |             847|     0     |       0       |
+#> |    dyadID     |   numeric   |             847|     0     |       0       |
+#> |    cowID1     |  character  |             847|     0     |       0       |
+#> |    cowNR1     |   numeric   |             847|     0     |       0       |
+#> |    cowID2     |  character  |             847|     0     |       0       |
+#> |    cowNR2     |   numeric   |             847|     0     |       0       |
+#> ----------------------------------------------------------------------------
 }\if{html}{\out{</div>}}
 }
 \section{URL}{
 
 \itemize{
-\item{COW_DIRCONT: }{
+\item{COW_CONT: }{
 \url{https://correlatesofwar.org/data-sets/direct-contiguity}
 }
 \item{HUGGO_CONT: }{Hand-coded data by the GGO team}
@@ -84,7 +84,7 @@ contiguity datacube documentation
 \section{Mapping}{
 
 \itemize{
-\item{COW_DIRCONT: }{
+\item{COW_CONT: }{
 Variable Mapping\tabular{cc}{
    \emph{from} \tab \emph{to} \cr
    dyad \tab dyadID \cr

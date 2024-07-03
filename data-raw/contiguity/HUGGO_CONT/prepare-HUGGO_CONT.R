@@ -15,9 +15,7 @@ HUGGO_CONT <- readr::read_csv("data-raw/contiguity/HUGGO_CONT/FAO and Region Mem
 HUGGO_CONT <- as_tibble(HUGGO_CONT) %>%
   dplyr::filter(ID != "ISO3") %>%
   # filtering removes the rows that contain repetitions of variable names only
-  dplyr::rename(stateID = ID, EntityType = CATEGORY,
-                FAOmember = FAO_MEMBERS, Group = IS_IN_GROUP,
-                url = URL) %>%
+  dplyr::rename(stateID = ID, url = URL) %>%
   manydata::transmutate(StateName1 = manypkgs::standardise_titles(LISTNAME_EN),
                         Contiguity = HAS_BORDER_WITH,
                         Begin = messydates::as_messydate(VALID_SINCE),
@@ -28,9 +26,7 @@ HUGGO_CONT <- as_tibble(HUGGO_CONT) %>%
                                    StateName1),
                 StateName1 = ifelse(stringr::str_detect(StateName1, "Korea - "),
                                     "Democratic People's Republic of Korea",
-                                    StateName1),
-                FAOmember = ifelse(FAOmember == "FAO MEMBER NATION",
-                                   "Yes", NA)) %>%
+                                    StateName1)) %>%
   tidyr::separate_wider_delim(Contiguity, delim = ",",
                               names_sep = "_", too_few = "align_start") %>%
   tidyr::pivot_longer(c("Contiguity_1":"Contiguity_14"),
@@ -50,9 +46,10 @@ HUGGO_CONT <- as_tibble(HUGGO_CONT) %>%
                                                  replace = "ID"),
                 stateID1 = ifelse(is.na(stateID1), stateID, stateID1),
                 stateID1 = ifelse(stateID1 == "KOR - PRK", "PRK", stateID1),
-                ContiguityType = "Shared Border") %>%
+                # coding standardised with COW_CONT: 1 = shared border
+                ContiguityType = 1) %>%
   dplyr::select(stateID1, stateID2, Begin, End, StateName1, StateName2,
-                ContiguityType, EntityType, FAOmember, Group, url) %>%
+                ContiguityType, url) %>%
   dplyr::arrange(Begin, stateID1)
 
 # make sure all vars are correctly coded as NA if necessary
@@ -60,7 +57,8 @@ HUGGO_CONT <- HUGGO_CONT %>%
   dplyr::mutate(across(everything(),
                        ~stringr::str_replace_all(., "^NA$", NA_character_))) %>%
   dplyr::mutate(Begin = messydates::as_messydate(Begin),
-                End = messydates::as_messydate(End)) %>% 
+                End = messydates::as_messydate(End),
+                ContiguityType = as.numeric(ContiguityType)) %>% 
   dplyr::distinct(.keep_all = TRUE)
 
 # manypkgs includes several functions that should help cleaning
