@@ -23,7 +23,7 @@ test_that("object has the correct variables", {
   pointblank::expect_col_exists(states[["ICOW"]],
                                 pointblank::vars(StateName))
   pointblank::expect_col_exists(states[["ICOW"]],
-                                pointblank::vars(cowID))
+                                pointblank::vars(stateID))
   pointblank::expect_col_exists(states[["ICOW"]],
                                 pointblank::vars(Begin))
   pointblank::expect_col_exists(states[["ICOW"]],

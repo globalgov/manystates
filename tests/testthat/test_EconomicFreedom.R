@@ -21,7 +21,9 @@ test_that("Columns are not in date, POSIXct or POSIXlt class", {
 # Contains the required variables
 test_that("object has the correct variables", {
   pointblank::expect_col_exists(states[["EconomicFreedom"]],
-                                pointblank::vars(cowID))
+                                pointblank::vars(stateID))
+  pointblank::expect_col_exists(states[["EconomicFreedom"]],
+                                pointblank::vars(StateName))
 })
 
 # Variables with dates are standardized
