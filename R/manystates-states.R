@@ -17,9 +17,10 @@
 #' SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes, stateID.}
 #' \item{RATRULES: }{A dataset with 177 observations and the following
 #' 3 variables: stateID, StateName, RatProcedure.}
-#' \item{HUGGO_STATES: }{A dataset with 574 observations and the following
-#' 12 variables: stateID, StateName, Capital, Begin, End, Latitude, Longitude,
-#' Area, Region, RatProcedure, Constitutional Description, Source.}
+#' \item{HUGGO_STATES: }{A dataset with 470 observations and the following
+#' 14 variables: stateID, StateName, Capital, Begin, End, StateName2, Capital2,
+#' Latitude, Longitude, Area, Region, RatProcedure, Constitutional Description,
+#' Source_rat.}
 #' \item{EconomicFreedom: }{A dataset with 4290 observations and the following
 #' 73 variables: cowID, Year, StateName, Economic Freedom Summary Index, Rank,
 #' Quartile, 1A Government Consumption, 1A_data, 1B  Transfers and subsidies,
@@ -70,7 +71,7 @@
 #' B. A. Simmons. _Mobilizing for Human Rights: International Law in Domestic Politics_.
 #' Cambridge University Press, 2009.}
 #' \item{HUGGO_STATES: }{
-#' J. Hollway. (2021). Hand-coded data on states' beginning and end dates, regions, capitals, longitude and latitude.}
+#' J. Hollway. manystates: States for manydata. 2021.}
 #' \item{EconomicFreedom: }{
 #' J. Gwartney, R. Lawson, and J. Hall. (2020). _2020 Economic Freedom Dataset, published in Economic Freedom of the World: 2020 Annual Report_.
 #' <http://www.fraserinstitute.org/studies/economic-freedom-of-the-world-2020-annual-report>. Accessed: 2021-12-23.}
