@@ -13,8 +13,8 @@
 #' \item{COW: }{A dataset with 243 observations and the following
 #' 6 variables: cowID, Begin, End, cowNR, StateName, stateID.}
 #' \item{ICOW: }{A dataset with 217 observations and the following
-#' 16 variables: cowID, StateName, ColRuler, IndFrom, Begin, IndViol, IndType,
-#' SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes, stateID.}
+#' 16 variables: stateID, StateName, Begin, ColRuler, IndFrom, IndViol, IndType,
+#' SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes, cowID.}
 #' \item{RATRULES: }{A dataset with 177 observations and the following
 #' 3 variables: stateID, StateName, RatProcedure.}
 #' \item{HUGGO_STATES: }{A dataset with 470 observations and the following
