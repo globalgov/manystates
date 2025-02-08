@@ -24,108 +24,44 @@
 #' \itemize{
 #' \item{GW: }{
 #' K. S. Gleditsch and M. D. Ward. “Interstate system membership: A revised list of the independent states since 1816”.
-#' _International Interactions_ 25.4 (1999), pp. 393-413.}
-#' \item{ISD: }{
-#' R. D. Griffiths and C. R. Butcher. “Introducing the international system (s) dataset (ISD), 1816-2011”.
-#' _International Interactions_ 39.5 (2013), pp. 748-768.}
-#' \item{COW: }{
-#' Correlates of War Project. _State System Membership List, v2016._
-#' <http://correlatesofwar.org>. Accessed: 2021-01-25.}
-#' \item{ICOW: }{
-#' P. R. Hensel. (2018). _ICOW Colonial History Data Set, version 1.1._
-#' <http://www.paulhensel.org/icowcol.html>.Accessed: 2021-12-23.}
-#' \item{RATRULES: }{
-#' B. A. Simmons. _Mobilizing for Human Rights: International Law in Domestic Politics_.
-#' Cambridge University Press, 2009.}
-#' \item{HUGGO_STATES: }{
-#' J. Hollway. manystates: States for manydata. 2021.}
-#' \item{EconomicFreedom: }{
-#' J. Gwartney, R. Lawson, and J. Hall. (2020). _2020 Economic Freedom Dataset, published in Economic Freedom of the World: 2020 Annual Report_.
-#' <http://www.fraserinstitute.org/studies/economic-freedom-of-the-world-2020-annual-report>. Accessed: 2021-12-23.}
-#' \item{EconomicFreedomHist: }{
-#' J. Gwartney, R. Lawson, and J. Hall. (2020). _2020 Economic Freedom Dataset, published in Economic Freedom of the World: 2020 Annual Report_.
-#' <http://www.fraserinstitute.org/studies/economic-freedom-of-the-world-2020-annual-report>. Accessed: 2021-12-23.}
-#' }
-#' @section URL:
-#' \itemize{
-#' \item{GW: }{
+#' _International Interactions_ 25.4 (1999), pp. 393-413.
 #' \url{http://ksgleditsch.com/data-4.html}
 #' }
 #' \item{ISD: }{
+#' R. D. Griffiths and C. R. Butcher. “Introducing the international system (s) dataset (ISD), 1816-2011”.
+#' _International Interactions_ 39.5 (2013), pp. 748-768.
 #' \url{http://www.ryan-griffiths.com/data}
 #' }
 #' \item{COW: }{
+#' Correlates of War Project. _State System Membership List, v2016._
+#' <http://correlatesofwar.org>. Accessed: 2021-01-25.
 #' \url{https://correlatesofwar.org/data-sets/state-system-membership}
 #' }
 #' \item{ICOW: }{
+#' P. R. Hensel. (2018). _ICOW Colonial History Data Set, version 1.1._
+#' <http://www.paulhensel.org/icowcol.html>.Accessed: 2021-12-23.
 #' \url{http://www.paulhensel.org/icowcol.html}
 #' }
 #' \item{RATRULES: }{
+#' B. A. Simmons. _Mobilizing for Human Rights: International Law in Domestic Politics_.
+#' Cambridge University Press, 2009.
 #' \url{https://doi.org/10.1017/CBO9780511811340}
 #' }
-#' \item{HUGGO_STATES: }{Hand-coded data by the GGO team}
-#' \item{EconomicFreedom: }{
-#' \url{https://www.fraserinstitute.org/economic-freedom}
-#' }
-#' \item{EconomicFreedomHist: }{
-#' \url{https://www.fraserinstitute.org/economic-freedom}
-#' }
-#' }
+#' \item{HUGGO_STATES: }{
+#' J. Hollway. manystates: States for manydata. 2021.
+#' Hand-coded by the GGO team.}
 #' @section Mapping:
-#' \itemize{
-#' \item{GW: }{
-#' Variable Mapping
-#'
-#' |  *from*  | *to*
-#' |:------------:|:------------:|
-#' | Cow ID | cowID |
-#' | Start | Begin |
-#' | Finish | End |
-#' | Name of State | StateName |
-#' | Cow NR. | cowNR |
 #' 
-#' }
-#' \item{ISD: }{
-#' Variable Mapping
-#'
-#' |  *from*  | *to*
-#' |:------------:|:------------:|
-#' | COW.ID | cowID |
-#' | Start | Begin |
-#' | Finish | End |
-#' | State.Name | StateName |
-#' | COW.Nr | cowNr |
+#' |  *manystates*  | *GW*  | *ISD* | *COW* | *ICOW* | *RATRULES* |
+#' |:---------------|:------|:------|:------|:-------|:-----------|
+#' | stateID  | | | | | StatID |
+#' | cowID | Cow ID | COW.ID | stateabb | State |
+#' | Begin | Start | Start | styear,stmonth,stday | IndDate|
+#' | End | Finish | Finish | endyear,endmonth,endday | |
+#' | StateName | Name of State | State.Name | statenme | Name |
+#' | cowNR | Cow NR. | COW.Nr | ccode | |
+#' | RatProcedure | | | | | Rat |
 #' 
-#' }
-#' \item{COW: }{
-#' Variable Mapping
-#'
-#' |  *from*  | *to*
-#' |:------------:|:------------:|
-#' | stateabb | cowID |
-#' | styear, stmonth, stday | Begin |
-#' | endyear, endmonth, endday | End |
-#' | statenme | StateName |
-#' | ccode | cowNR |
-#' 
-#' }
-#' \item{ICOW: }{
-#' Variable Mapping
-#'
-#' |  *from*  | *to*
-#' |:------------:|:------------:|
-#' | State | cowID |
-#' | Name | StateName |
-#' | IndDate | Begin |
-#' 
-#' }
-#' \item{RATRULES: }{
-#' Variable Mapping
-#'
-#' |  *from*  | *to*
-#' |:------------:|:------------:|
-#' | StatID | stateID |
-#' | Rat | RatProcedure |
 #' @md
 #' @details
 #' ``` {r, echo = FALSE, warning = FALSE}
