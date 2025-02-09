@@ -1,34 +1,40 @@
-#' states datacube documentation
-#'
-#' @format The states datacube is a list that contains the
-#' following 8 datasets: GW, ISD, COW, ICOW, RATRULES, and HUGGO_STATES.
+#' States datacube
+#' @description The states datacube is a list containing 
+#' `r length(manystates::states)` datasets: 
+#' `r cli::pluralize("{names(manystates::states)}")`.
+#' It is a work-in-progress, so please do not rely on it yet.
+#' @format
+#' \describe{
+#' \item{GW: }{A dataset with `r prettyNum(nrow(manystates::states$GW), big.mark=",")` 
+#' observations and `r ncol(manystates::states$GW)` variables: 
+#' `r cli::pluralize("{names(manystates::states$GW)}")`.}
+#' \item{ISD: }{A dataset with `r prettyNum(nrow(manystates::states$ISD), big.mark=",")` 
+#' observations and `r ncol(manystates::states$ISD)` variables: 
+#' `r cli::pluralize("{names(manystates::states$ISD)}")`.}
+#' \item{COW: }{A dataset with `r prettyNum(nrow(manystates::states$COW), big.mark=",")` 
+#' observations and `r ncol(manystates::states$COW)` variables: 
+#' `r cli::pluralize("{names(manystates::states$COW)}")`.}
+#' \item{ICOW: }{A dataset with `r prettyNum(nrow(manystates::states$ICOW), big.mark=",")` 
+#' observations and `r ncol(manystates::states$ICOW)` variables: 
+#' `r cli::pluralize("{names(manystates::states$ICOW)}")`.}
+#' \item{RATRULES: }{A dataset with `r prettyNum(nrow(manystates::states$RATRULES), big.mark=",")` 
+#' observations and `r ncol(manystates::states$RATRULES)` variables: 
+#' `r cli::pluralize("{names(manystates::states$RATRULES)}")`.}
+#' \item{HUGGO_STATES: }{A dataset with `r prettyNum(nrow(manystates::states$HUGGO_STATES), big.mark=",")` 
+#' observations and `r ncol(manystates::states$HUGGO_STATES)` variables: 
+#' `r cli::pluralize("{names(manystates::states$HUGGO_STATES)}")`.}
+#' }
 #' For more information and references to each of the datasets used,
 #' please use the `manydata::call_sources()` and `manydata::compare_dimensions()` functions.
-#'\describe{
-#' \item{GW: }{A dataset with 216 observations and the following
-#' 6 variables: cowID, Begin, End, cowNR, StateName, stateID.}
-#' \item{ISD: }{A dataset with 362 observations and the following
-#' 8 variables: cowID, Begin, End, cowNR, StateName, Micro, NewState, stateID.}
-#' \item{COW: }{A dataset with 243 observations and the following
-#' 6 variables: cowID, Begin, End, cowNR, StateName, stateID.}
-#' \item{ICOW: }{A dataset with 217 observations and the following
-#' 16 variables: stateID, StateName, Begin, ColRuler, IndFrom, IndViol, IndType,
-#' SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes, cowID.}
-#' \item{RATRULES: }{A dataset with 177 observations and the following
-#' 3 variables: stateID, StateName, RatProcedure.}
-#' \item{HUGGO_STATES: }{A dataset with 470 observations and the following
-#' 14 variables: stateID, StateName, Capital, Begin, End, StateName2, Capital2,
-#' Latitude, Longitude, Area, Region, RatProcedure, Constitutional Description,
-#' Source_rat.}
 #' @source
 #' \itemize{
 #' \item{GW: }{
-#' K. S. Gleditsch and M. D. Ward. “Interstate system membership: A revised list of the independent states since 1816”.
+#' Gleditsch, K.S., and M. D. Ward. “Interstate system membership: A revised list of the independent states since 1816”.
 #' _International Interactions_ 25.4 (1999), pp. 393-413.
 #' \url{http://ksgleditsch.com/data-4.html}
 #' }
 #' \item{ISD: }{
-#' R. D. Griffiths and C. R. Butcher. “Introducing the international system (s) dataset (ISD), 1816-2011”.
+#' Griffiths, R.D., and C. R. Butcher. “Introducing the international system (s) dataset (ISD), 1816-2011”.
 #' _International Interactions_ 39.5 (2013), pp. 748-768.
 #' \url{http://www.ryan-griffiths.com/data}
 #' }
@@ -38,18 +44,19 @@
 #' \url{https://correlatesofwar.org/data-sets/state-system-membership}
 #' }
 #' \item{ICOW: }{
-#' P. R. Hensel. (2018). _ICOW Colonial History Data Set, version 1.1._
-#' <http://www.paulhensel.org/icowcol.html>.Accessed: 2021-12-23.
+#' Hensel, P.R. (2018). _ICOW Colonial History Data Set, version 1.1._
+#' <http://www.paulhensel.org/icowcol.html>. Accessed: 2021-12-23.
 #' \url{http://www.paulhensel.org/icowcol.html}
 #' }
 #' \item{RATRULES: }{
-#' B. A. Simmons. _Mobilizing for Human Rights: International Law in Domestic Politics_.
+#' Simmons, B.A. _Mobilizing for Human Rights: International Law in Domestic Politics_.
 #' Cambridge University Press, 2009.
 #' \url{https://doi.org/10.1017/CBO9780511811340}
 #' }
 #' \item{HUGGO_STATES: }{
-#' J. Hollway. manystates: States for manydata. 2021.
+#' Hollway, J. manystates: States for manydata. 2021.
 #' Hand-coded by the GGO team.}
+#' }
 #' @section Mapping:
 #' 
 #' |  *manystates*  | *GW*  | *ISD* | *COW* | *ICOW* | *RATRULES* |

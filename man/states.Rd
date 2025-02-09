@@ -3,38 +3,40 @@
 \docType{data}
 \name{states}
 \alias{states}
-\title{states datacube documentation}
+\title{States datacube}
 \format{
-The states datacube is a list that contains the
-following 8 datasets: GW, ISD, COW, ICOW, RATRULES, and HUGGO_STATES.
+\describe{
+\item{GW: }{A dataset with 216
+observations and 6 variables:
+cowID, Begin, End, cowNR, StateName, and stateID.}
+\item{ISD: }{A dataset with 362
+observations and 8 variables:
+cowID, Begin, End, cowNR, StateName, Micro, NewState, and stateID.}
+\item{COW: }{A dataset with 243
+observations and 6 variables:
+cowID, Begin, End, cowNR, StateName, and stateID.}
+\item{ICOW: }{A dataset with 217
+observations and 16 variables:
+stateID, StateName, Begin, ColRuler, IndFrom, IndViol, IndType, SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes, and cowID.}
+\item{RATRULES: }{A dataset with 177
+observations and 3 variables:
+stateID, StateName, and RatProcedure.}
+\item{HUGGO_STATES: }{A dataset with 470
+observations and 14 variables:
+stateID, StateName, Capital, Begin, End, StateName2, Capital2, Latitude, Longitude, Area, Region, RatProcedure, Constitutional Description, and Source_rat.}
+}
 For more information and references to each of the datasets used,
 please use the \code{manydata::call_sources()} and \code{manydata::compare_dimensions()} functions.
-\describe{
-\item{GW: }{A dataset with 216 observations and the following
-6 variables: cowID, Begin, End, cowNR, StateName, stateID.}
-\item{ISD: }{A dataset with 362 observations and the following
-8 variables: cowID, Begin, End, cowNR, StateName, Micro, NewState, stateID.}
-\item{COW: }{A dataset with 243 observations and the following
-6 variables: cowID, Begin, End, cowNR, StateName, stateID.}
-\item{ICOW: }{A dataset with 217 observations and the following
-16 variables: stateID, StateName, Begin, ColRuler, IndFrom, IndViol, IndType,
-SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes, cowID.}
-\item{RATRULES: }{A dataset with 177 observations and the following
-3 variables: stateID, StateName, RatProcedure.}
-\item{HUGGO_STATES: }{A dataset with 470 observations and the following
-14 variables: stateID, StateName, Capital, Begin, End, StateName2, Capital2,
-Latitude, Longitude, Area, Region, RatProcedure, Constitutional Description,
-Source_rat.}
 }
 \source{
 \itemize{
 \item{GW: }{
-K. S. Gleditsch and M. D. Ward. “Interstate system membership: A revised list of the independent states since 1816”.
+Gleditsch, K.S., and M. D. Ward. “Interstate system membership: A revised list of the independent states since 1816”.
 \emph{International Interactions} 25.4 (1999), pp. 393-413.
 \url{http://ksgleditsch.com/data-4.html}
 }
 \item{ISD: }{
-R. D. Griffiths and C. R. Butcher. “Introducing the international system (s) dataset (ISD), 1816-2011”.
+Griffiths, R.D., and C. R. Butcher. “Introducing the international system (s) dataset (ISD), 1816-2011”.
 \emph{International Interactions} 39.5 (2013), pp. 748-768.
 \url{http://www.ryan-griffiths.com/data}
 }
@@ -44,24 +46,28 @@ Correlates of War Project. \emph{State System Membership List, v2016.}
 \url{https://correlatesofwar.org/data-sets/state-system-membership}
 }
 \item{ICOW: }{
-P. R. Hensel. (2018). \emph{ICOW Colonial History Data Set, version 1.1.}
-\url{http://www.paulhensel.org/icowcol.html}.Accessed: 2021-12-23.
+Hensel, P.R. (2018). \emph{ICOW Colonial History Data Set, version 1.1.}
+\url{http://www.paulhensel.org/icowcol.html}. Accessed: 2021-12-23.
 \url{http://www.paulhensel.org/icowcol.html}
 }
 \item{RATRULES: }{
-B. A. Simmons. \emph{Mobilizing for Human Rights: International Law in Domestic Politics}.
+Simmons, B.A. \emph{Mobilizing for Human Rights: International Law in Domestic Politics}.
 Cambridge University Press, 2009.
 \url{https://doi.org/10.1017/CBO9780511811340}
 }
 \item{HUGGO_STATES: }{
-J. Hollway. manystates: States for manydata. 2021.
+Hollway, J. manystates: States for manydata. 2021.
 Hand-coded by the GGO team.}
+}
 }
 \usage{
 states
 }
 \description{
-states datacube documentation
+The states datacube is a list containing
+6 datasets:
+GW, ISD, COW, ICOW, RATRULES, and HUGGO_STATES.
+It is a work-in-progress, so please do not rely on it yet.
 }
 \details{
 \if{html}{\out{<div class="sourceCode">}}\preformatted{#> $GW
