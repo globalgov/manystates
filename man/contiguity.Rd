@@ -44,10 +44,7 @@ contiguity datacube documentation
 #> |      End      |    mdate    |             609|     0     |       0       |
 #> |  StateName1   |  character  |             609|     0     |       0       |
 #> |  StateName2   |  character  |             609|     0     |       0       |
-#> |ContiguityType |  character  |             609|     0     |       0       |
-#> |  EntityType   |  character  |             609|     0     |       0       |
-#> |   FAOmember   |  character  |             609|     0     |       0       |
-#> |     Group     |  character  |             609|     0     |       0       |
+#> |ContiguityType |   numeric   |             609|     0     |       0       |
 #> |      url      |  character  |             609|     0     |       0       |
 #> ----------------------------------------------------------------------------
 #> 
