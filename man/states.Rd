@@ -21,7 +21,7 @@ stateID, StateName, Begin, ColRuler, IndFrom, IndViol, IndType, SecFrom, SecDate
 \item{RATRULES: }{A dataset with 177
 observations and 3 variables:
 stateID, StateName, and RatProcedure.}
-\item{HUGGO_STATES: }{A dataset with 470
+\item{HUGGO: }{A dataset with 470
 observations and 14 variables:
 stateID, StateName, Capital, Begin, End, StateName2, Capital2, Latitude, Longitude, Area, Region, RatProcedure, Constitutional Description, and Source_rat.}
 }
@@ -51,11 +51,11 @@ Hensel, P.R. (2018). \emph{ICOW Colonial History Data Set, version 1.1.}
 \url{http://www.paulhensel.org/icowcol.html}
 }
 \item{RATRULES: }{
-Simmons, B.A. \emph{Mobilizing for Human Rights: International Law in Domestic Politics}.
-Cambridge University Press, 2009.
+Simmons, B.A. (2009). \emph{Mobilizing for Human Rights: International Law in Domestic Politics}.
+Cambridge University Press.
 \url{https://doi.org/10.1017/CBO9780511811340}
 }
-\item{HUGGO_STATES: }{
+\item{HUGGO: }{
 Hollway, J. manystates: States for manydata. 2021.
 Hand-coded by the GGO team.}
 }
@@ -66,7 +66,7 @@ states
 \description{
 The states datacube is a list containing
 6 datasets:
-GW, ISD, COW, ICOW, RATRULES, and HUGGO_STATES.
+GW, ISD, COW, ICOW, RATRULES, and HUGGO.
 It is a work-in-progress, so please do not rely on it yet.
 }
 \details{
@@ -144,25 +144,7 @@ It is a work-in-progress, so please do not rely on it yet.
 #> ----------------------------------------------------------------------------
 #> 
 #> 
-#> $HUGGO_STATES
-#> ---------------------------------------------------------------------------------------
-#> |       Column Name        |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
-#> ---------------------------------------------------------------------------------------
-#> |         stateID          |  character  |             470|     0     |       0       |
-#> |        StateName         |  character  |             470|     2     |     0.43      |
-#> |         Capital          |  character  |             470|     3     |     0.64      |
-#> |          Begin           |    mdate    |             470|    150    |     31.91     |
-#> |           End            |    mdate    |             470|    150    |     31.91     |
-#> |        StateName2        |  character  |             470|    464    |     98.72     |
-#> |         Capital2         |  character  |             470|    469    |     99.79     |
-#> |         Latitude         |  character  |             470|     3     |     0.64      |
-#> |        Longitude         |  character  |             470|     3     |     0.64      |
-#> |           Area           |  character  |             470|    259    |     55.11     |
-#> |          Region          |  character  |             470|    259    |     55.11     |
-#> |       RatProcedure       |  character  |             470|    440    |     93.62     |
-#> |Constitutional Description|  character  |             470|    440    |     93.62     |
-#> |        Source_rat        |  character  |             470|    432    |     91.91     |
-#> ---------------------------------------------------------------------------------------
+#> $HUGGO
 }\if{html}{\out{</div>}}
 }
 \section{Mapping}{

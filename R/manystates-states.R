@@ -49,11 +49,11 @@
 #' \url{http://www.paulhensel.org/icowcol.html}
 #' }
 #' \item{RATRULES: }{
-#' Simmons, B.A. _Mobilizing for Human Rights: International Law in Domestic Politics_.
-#' Cambridge University Press, 2009.
+#' Simmons, B.A. (2009). _Mobilizing for Human Rights: International Law in Domestic Politics_.
+#' Cambridge University Press.
 #' \url{https://doi.org/10.1017/CBO9780511811340}
 #' }
-#' \item{HUGGO_STATES: }{
+#' \item{HUGGO: }{
 #' Hollway, J. manystates: States for manydata. 2021.
 #' Hand-coded by the GGO team.}
 #' }
