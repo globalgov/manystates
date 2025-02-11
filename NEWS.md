@@ -29,6 +29,11 @@
 - Improved dataset documentation by making it computational
 - Dropped `leaders` and `regimes`
 
+## Functions
+
+- Dropped `extract_cshapes()`
+- Dropped `extract_vdem()`
+
 # manystates 0.2.0
 
 ## Package
