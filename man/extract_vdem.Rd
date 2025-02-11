@@ -31,11 +31,3 @@ and formats it to be consistent with the many packages universe.
 \code{import_vparty()} imports the latest version of the V-Party dataset
 and formats it to be consistent with the many packages universe.
 }
-\examples{
-\donttest{
-import_vdem()
-}
-\donttest{
-import_vparty()
-}
-}

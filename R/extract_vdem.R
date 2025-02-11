@@ -18,10 +18,10 @@ NULL
 #' @import vdemdata
 #' @return A dataframe of the`[vdem]` dataset in a many packages
 #' universe-consistent format.
-#' @examples
-#' \donttest{
-#' import_vdem()
-#' }
+# #' @examples
+# #' \donttest{
+# #' import_vdem()
+# #' }
 #' @export
 import_vdem <- function() {
   histname <- beg <- end <- country_name <- historical_date <- project <-
@@ -74,10 +74,10 @@ import_vdem <- function() {
 #' @import vdemdata
 #' @return A dataframe of the`[vparty]` dataset consistent with the
 #' many packages universe.
-#' @examples
-#' \donttest{
-#' import_vparty()
-#' }
+# #' @examples
+# #' \donttest{
+# #' import_vparty()
+# #' }
 #' @export
 import_vparty <- function() {
   vpartyID <- v2paenname <- country_name <- histname <- beg <- end <-
