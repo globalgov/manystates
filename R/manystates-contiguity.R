@@ -1,31 +1,28 @@
-#' contiguity datacube documentation
+#' State contiguity datacube
 #'
-#' @format The contiguity datacube is a list that contains the
-#' following 2 datasets: COW_CONT, HUGGO_CONT.
+#' @description The contiguity datacube is a list containing 
+#' `r length(manystates::contiguity)` datasets: 
+#' `r cli::pluralize("{names(manystates::contiguity)}")`.
+#' It is a work-in-progress, so please do not rely on it yet.
+#' @format
+#' \describe{
+#' \item{COW: }{A dataset with `r prettyNum(nrow(manystates::contiguity$COW), big.mark=",")` 
+#' observations and `r ncol(manystates::contiguity$COW)` variables: 
+#' `r cli::pluralize("{names(manystates::contiguity$COW)}")`.}
+#' \item{HUGGO: }{A dataset with `r prettyNum(nrow(manystates::contiguity$HUGGO), big.mark=",")` 
+#' observations and `r ncol(manystates::contiguity$HUGGO)` variables: 
+#' `r cli::pluralize("{names(manystates::contiguity$HUGGO)}")`.}
+#' }
 #' For more information and references to each of the datasets used,
 #' please use the `manydata::call_sources()` and `manydata::compare_dimensions()` functions.
-#'\describe{
-#' \item{COW_CONT: }{A dataset with 847 observations and the following
-#' 12 variables: dyadID, ContiguityType, Begin, End, cowNR1, cowID1, cowNR2,
-#' cowID2, stateID1, StateName1, stateID2, StateName2.}
-#' \item{HUGGO_CONT: }{A dataset with 609 observations and the following
-#' 8 variables: stateID1, stateID2, Begin, End, StateName1, StateName2,
-#' ContiguityType, url.}
-#' }
 #' @source
 #'\itemize{
-#' \item{COW_CONT: }{
+#' \item{COW: }{
 #' Hensel, Paul R. _Correlates of War Project. Direct Contiguity Data, 1816-2016. Version 3.2._ 2017.
-#' }
-#' \item{HUGGO_CONT: }{
-#' J. Hollway. manystates: States for manydata. 2021.}
-#' }
-#' @section URL:
-#'\itemize{
-#' \item{COW_CONT: }{
 #' \url{https://correlatesofwar.org/data-sets/direct-contiguity}
 #' }
-#' \item{HUGGO_CONT: }{Hand-coded data by the GGO team}
+#' \item{HUGGO: }{
+#' J. Hollway. manystates: States for manydata. 2021.}
 #' }
 #' @section Mapping:
 #'\itemize{

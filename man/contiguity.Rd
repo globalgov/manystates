@@ -3,27 +3,26 @@
 \docType{data}
 \name{contiguity}
 \alias{contiguity}
-\title{contiguity datacube documentation}
+\title{State contiguity datacube}
 \format{
-The contiguity datacube is a list that contains the
-following 2 datasets: COW_CONT, HUGGO_CONT.
+\describe{
+\item{COW: }{A dataset with 847
+observations and 12 variables:
+stateID1, stateID2, Begin, End, StateName1, StateName2, ContiguityType, dyadID, cowID1, cowNR1, cowID2, and cowNR2.}
+\item{HUGGO: }{A dataset with 609
+observations and 8 variables:
+stateID1, stateID2, Begin, End, StateName1, StateName2, ContiguityType, and url.}
+}
 For more information and references to each of the datasets used,
 please use the \code{manydata::call_sources()} and \code{manydata::compare_dimensions()} functions.
-\describe{
-\item{COW_CONT: }{A dataset with 847 observations and the following
-12 variables: dyadID, ContiguityType, Begin, End, cowNR1, cowID1, cowNR2,
-cowID2, stateID1, StateName1, stateID2, StateName2.}
-\item{HUGGO_CONT: }{A dataset with 609 observations and the following
-8 variables: stateID1, stateID2, Begin, End, StateName1, StateName2,
-ContiguityType, url.}
-}
 }
 \source{
 \itemize{
-\item{COW_CONT: }{
+\item{COW: }{
 Hensel, Paul R. \emph{Correlates of War Project. Direct Contiguity Data, 1816-2016. Version 3.2.} 2017.
+\url{https://correlatesofwar.org/data-sets/direct-contiguity}
 }
-\item{HUGGO_CONT: }{
+\item{HUGGO: }{
 J. Hollway. manystates: States for manydata. 2021.}
 }
 }
@@ -31,10 +30,13 @@ J. Hollway. manystates: States for manydata. 2021.}
 contiguity
 }
 \description{
-contiguity datacube documentation
+The contiguity datacube is a list containing
+2 datasets:
+HUGGO and COW.
+It is a work-in-progress, so please do not rely on it yet.
 }
 \details{
-\if{html}{\out{<div class="sourceCode">}}\preformatted{#> $HUGGO_CONT
+\if{html}{\out{<div class="sourceCode">}}\preformatted{#> $HUGGO
 #> ----------------------------------------------------------------------------
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
@@ -49,7 +51,7 @@ contiguity datacube documentation
 #> ----------------------------------------------------------------------------
 #> 
 #> 
-#> $COW_CONT
+#> $COW
 #> ----------------------------------------------------------------------------
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
@@ -68,16 +70,6 @@ contiguity datacube documentation
 #> ----------------------------------------------------------------------------
 }\if{html}{\out{</div>}}
 }
-\section{URL}{
-
-\itemize{
-\item{COW_CONT: }{
-\url{https://correlatesofwar.org/data-sets/direct-contiguity}
-}
-\item{HUGGO_CONT: }{Hand-coded data by the GGO team}
-}
-}
-
 \section{Mapping}{
 
 \itemize{
