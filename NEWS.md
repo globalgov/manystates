@@ -5,6 +5,7 @@
 - Added package startup message
 - Updated references from database to datacube
 - Updated website, linking to manytreaties and manyigos
+- Updated github workflows
 
 ## Data
 
