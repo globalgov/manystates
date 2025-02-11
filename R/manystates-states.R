@@ -20,9 +20,9 @@
 #' \item{RATRULES: }{A dataset with `r prettyNum(nrow(manystates::states$RATRULES), big.mark=",")` 
 #' observations and `r ncol(manystates::states$RATRULES)` variables: 
 #' `r cli::pluralize("{names(manystates::states$RATRULES)}")`.}
-#' \item{HUGGO_STATES: }{A dataset with `r prettyNum(nrow(manystates::states$HUGGO_STATES), big.mark=",")` 
-#' observations and `r ncol(manystates::states$HUGGO_STATES)` variables: 
-#' `r cli::pluralize("{names(manystates::states$HUGGO_STATES)}")`.}
+#' \item{HUGGO: }{A dataset with `r prettyNum(nrow(manystates::states$HUGGO), big.mark=",")` 
+#' observations and `r ncol(manystates::states$HUGGO)` variables: 
+#' `r cli::pluralize("{names(manystates::states$HUGGO)}")`.}
 #' }
 #' For more information and references to each of the datasets used,
 #' please use the `manydata::call_sources()` and `manydata::compare_dimensions()` functions.
@@ -62,10 +62,10 @@
 #' |  *manystates*  | *GW*  | *ISD* | *COW* | *ICOW* | *RATRULES* |
 #' |:---------------|:------|:------|:------|:-------|:-----------|
 #' | stateID  | | | | | StatID |
-#' | cowID | Cow ID | COW.ID | stateabb | State |
 #' | Begin | Start | Start | styear,stmonth,stday | IndDate|
 #' | End | Finish | Finish | endyear,endmonth,endday | |
 #' | StateName | Name of State | State.Name | statenme | Name |
+#' | cowID | Cow ID | COW.ID | stateabb | State |
 #' | cowNR | Cow NR. | COW.Nr | ccode | |
 #' | RatProcedure | | | | | Rat |
 #' 

@@ -8,22 +8,22 @@
 \describe{
 \item{GW: }{A dataset with 216
 observations and 6 variables:
-cowID, Begin, End, cowNR, StateName, and stateID.}
+stateID, Begin, End, StateName, cowID, and cowNR.}
 \item{ISD: }{A dataset with 362
 observations and 8 variables:
-cowID, Begin, End, cowNR, StateName, Micro, NewState, and stateID.}
+stateID, Begin, End, StateName, cowID, cowNR, Micro, and NewState.}
 \item{COW: }{A dataset with 243
 observations and 6 variables:
-cowID, Begin, End, cowNR, StateName, and stateID.}
+stateID, Begin, End, StateName, cowID, and cowNR.}
 \item{ICOW: }{A dataset with 217
 observations and 16 variables:
-stateID, StateName, Begin, ColRuler, IndFrom, IndViol, IndType, SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes, and cowID.}
+stateID, Begin, StateName, ColRuler, IndFrom, IndViol, IndType, SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes, and cowID.}
 \item{RATRULES: }{A dataset with 177
 observations and 3 variables:
 stateID, StateName, and RatProcedure.}
 \item{HUGGO: }{A dataset with 470
 observations and 14 variables:
-stateID, StateName, Capital, Begin, End, StateName2, Capital2, Latitude, Longitude, Area, Region, RatProcedure, Constitutional Description, and Source_rat.}
+stateID, Begin, End, StateName, Capital, Latitude, Longitude, Constitution, RatProcedure, Area, Region, StateName2, Capital2, and Source_rat.}
 }
 For more information and references to each of the datasets used,
 please use the \code{manydata::call_sources()} and \code{manydata::compare_dimensions()} functions.
@@ -74,12 +74,12 @@ It is a work-in-progress, so please do not rely on it yet.
 #> ----------------------------------------------------------------------------
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
-#> |     cowID     |  character  |             216|     0     |       0       |
+#> |    stateID    |  character  |             216|     0     |       0       |
 #> |     Begin     |    mdate    |             216|     0     |       0       |
 #> |      End      |    mdate    |             216|     0     |       0       |
-#> |     cowNR     |  character  |             216|     0     |       0       |
 #> |   StateName   |  character  |             216|     0     |       0       |
-#> |    stateID    |  character  |             216|     0     |       0       |
+#> |     cowID     |  character  |             216|     0     |       0       |
+#> |     cowNR     |  character  |             216|     0     |       0       |
 #> ----------------------------------------------------------------------------
 #> 
 #> 
@@ -87,14 +87,14 @@ It is a work-in-progress, so please do not rely on it yet.
 #> ----------------------------------------------------------------------------
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
-#> |     cowID     |  character  |             362|     0     |       0       |
+#> |    stateID    |  character  |             362|     0     |       0       |
 #> |     Begin     |    mdate    |             362|     0     |       0       |
 #> |      End      |    mdate    |             362|     0     |       0       |
-#> |     cowNR     |  character  |             362|     0     |       0       |
 #> |   StateName   |  character  |             362|     0     |       0       |
+#> |     cowID     |  character  |             362|     0     |       0       |
+#> |     cowNR     |  character  |             362|     0     |       0       |
 #> |     Micro     |  character  |             362|     0     |       0       |
 #> |   NewState    |  character  |             362|     0     |       0       |
-#> |    stateID    |  character  |             362|     0     |       0       |
 #> ----------------------------------------------------------------------------
 #> 
 #> 
@@ -102,12 +102,12 @@ It is a work-in-progress, so please do not rely on it yet.
 #> ----------------------------------------------------------------------------
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
-#> |     cowID     |  character  |             243|     0     |       0       |
+#> |    stateID    |  character  |             243|     0     |       0       |
 #> |     Begin     |    mdate    |             243|     0     |       0       |
 #> |      End      |    mdate    |             243|     0     |       0       |
-#> |     cowNR     |  character  |             243|     0     |       0       |
 #> |   StateName   |  character  |             243|     0     |       0       |
-#> |    stateID    |  character  |             243|     0     |       0       |
+#> |     cowID     |  character  |             243|     0     |       0       |
+#> |     cowNR     |  character  |             243|     0     |       0       |
 #> ----------------------------------------------------------------------------
 #> 
 #> 
@@ -116,8 +116,8 @@ It is a work-in-progress, so please do not rely on it yet.
 #> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
 #> ----------------------------------------------------------------------------
 #> |    stateID    |  character  |             217|     0     |       0       |
-#> |   StateName   |  character  |             217|     0     |       0       |
 #> |     Begin     |    mdate    |             217|     0     |       0       |
+#> |   StateName   |  character  |             217|     0     |       0       |
 #> |   ColRuler    |  character  |             217|    46     |     21.2      |
 #> |    IndFrom    |  character  |             217|    39     |     17.97     |
 #> |    IndViol    |  character  |             217|     0     |       0       |
@@ -145,6 +145,24 @@ It is a work-in-progress, so please do not rely on it yet.
 #> 
 #> 
 #> $HUGGO
+#> ----------------------------------------------------------------------------
+#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
+#> ----------------------------------------------------------------------------
+#> |    stateID    |  character  |             470|     0     |       0       |
+#> |     Begin     |    mdate    |             470|    150    |     31.91     |
+#> |      End      |    mdate    |             470|    150    |     31.91     |
+#> |   StateName   |  character  |             470|     2     |     0.43      |
+#> |    Capital    |  character  |             470|     3     |     0.64      |
+#> |   Latitude    |  character  |             470|     3     |     0.64      |
+#> |   Longitude   |  character  |             470|     3     |     0.64      |
+#> | Constitution  |  character  |             470|    440    |     93.62     |
+#> | RatProcedure  |  character  |             470|    440    |     93.62     |
+#> |     Area      |  character  |             470|    259    |     55.11     |
+#> |    Region     |  character  |             470|    259    |     55.11     |
+#> |  StateName2   |  character  |             470|    464    |     98.72     |
+#> |   Capital2    |  character  |             470|    469    |     99.79     |
+#> |  Source_rat   |  character  |             470|    432    |     91.91     |
+#> ----------------------------------------------------------------------------
 }\if{html}{\out{</div>}}
 }
 \section{Mapping}{
