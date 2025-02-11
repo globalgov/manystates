@@ -6,34 +6,34 @@
 \title{State contiguity datacube}
 \format{
 \describe{
-\item{COW: }{A dataset with 847
-observations and 12 variables:
-stateID1, stateID2, Begin, End, StateName1, StateName2, ContiguityType, dyadID, cowID1, cowNR1, cowID2, and cowNR2.}
 \item{HUGGO: }{A dataset with 609
 observations and 8 variables:
 stateID1, stateID2, Begin, End, StateName1, StateName2, ContiguityType, and url.}
+\item{COW: }{A dataset with 847
+observations and 12 variables:
+stateID1, stateID2, Begin, End, StateName1, StateName2, ContiguityType, dyadID, cowID1, cowNR1, cowID2, and cowNR2.}
 }
 For more information and references to each of the datasets used,
 please use the \code{manydata::call_sources()} and \code{manydata::compare_dimensions()} functions.
 }
 \source{
-\itemize{
+\describe{
 \item{COW: }{
 Hensel, Paul R. \emph{Correlates of War Project. Direct Contiguity Data, 1816-2016. Version 3.2.} 2017.
 \url{https://correlatesofwar.org/data-sets/direct-contiguity}
 }
 \item{HUGGO: }{
-J. Hollway. manystates: States for manydata. 2021.}
+Hollway, James, Henrique Sposito, and Jael Tan. 2001. \emph{manystates: States for manydata}.}
 }
 }
 \usage{
 contiguity
 }
 \description{
-The contiguity datacube is a list containing
+The \code{contiguity} datacube is a list containing
 2 datasets:
 HUGGO and COW.
-It is a work-in-progress, so please do not rely on it yet.
+It is a work-in-progress, so please let us know if you have any comments or suggestions.
 }
 \details{
 \if{html}{\out{<div class="sourceCode">}}\preformatted{#> $HUGGO
@@ -71,10 +71,7 @@ It is a work-in-progress, so please do not rely on it yet.
 }\if{html}{\out{</div>}}
 }
 \section{Mapping}{
-
-\itemize{
-\item{COW_CONT: }{
-Variable Mapping\tabular{ll}{
+\tabular{ll}{
    \emph{manystates} \tab \emph{COW} \cr
    stateID1 \tab statelab \cr
    stateID2 \tab statehab \cr
@@ -84,10 +81,6 @@ Variable Mapping\tabular{ll}{
    cowNR1 \tab statelno \cr
    cowNR2 \tab statehno \cr
    ContiguityType \tab conttype \cr
-}
-
-
-}
 }
 }
 
