@@ -29,16 +29,16 @@
 #' \item{COW_CONT: }{
 #' Variable Mapping
 #'
-#' |  *from*  | *to*
-#' |:------------:|:------------:|
-#' | dyad | dyadID |
-#' | statelno | cowNR1 |
-#' | statehno | cowNR2 |
-#' | conttype | ContiguityType |
-#' | begin | Begin |
-#' | end | End |
-#' | statelab | cowID1 |
-#' | statehab | cowID2 |
+#' |  *manystates*  | *COW*
+#' |:------------|:------------|
+#' | stateID1 | statelab |
+#' | stateID2 | statehab |
+#' | Begin | begin |
+#' | End | end |
+#' | dyadID | dyad |
+#' | cowNR1 | statelno |
+#' | cowNR2 | statehno |
+#' | ContiguityType | conttype |
 #' 
 #' }
 #' }

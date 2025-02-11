@@ -169,10 +169,10 @@ It is a work-in-progress, so please do not rely on it yet.
 \tabular{llllll}{
    \emph{manystates} \tab \emph{GW} \tab \emph{ISD} \tab \emph{COW} \tab \emph{ICOW} \tab \emph{RATRULES} \cr
    stateID \tab  \tab  \tab  \tab  \tab StatID \cr
-   cowID \tab Cow ID \tab COW.ID \tab stateabb \tab State \tab  \cr
    Begin \tab Start \tab Start \tab styear,stmonth,stday \tab IndDate \tab  \cr
    End \tab Finish \tab Finish \tab endyear,endmonth,endday \tab  \tab  \cr
    StateName \tab Name of State \tab State.Name \tab statenme \tab Name \tab  \cr
+   cowID \tab Cow ID \tab COW.ID \tab stateabb \tab State \tab  \cr
    cowNR \tab Cow NR. \tab COW.Nr \tab ccode \tab  \tab  \cr
    RatProcedure \tab  \tab  \tab  \tab  \tab Rat \cr
 }

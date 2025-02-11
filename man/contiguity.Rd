@@ -74,16 +74,16 @@ It is a work-in-progress, so please do not rely on it yet.
 
 \itemize{
 \item{COW_CONT: }{
-Variable Mapping\tabular{cc}{
-   \emph{from} \tab \emph{to} \cr
-   dyad \tab dyadID \cr
-   statelno \tab cowNR1 \cr
-   statehno \tab cowNR2 \cr
-   conttype \tab ContiguityType \cr
-   begin \tab Begin \cr
-   end \tab End \cr
-   statelab \tab cowID1 \cr
-   statehab \tab cowID2 \cr
+Variable Mapping\tabular{ll}{
+   \emph{manystates} \tab \emph{COW} \cr
+   stateID1 \tab statelab \cr
+   stateID2 \tab statehab \cr
+   Begin \tab begin \cr
+   End \tab end \cr
+   dyadID \tab dyad \cr
+   cowNR1 \tab statelno \cr
+   cowNR2 \tab statehno \cr
+   ContiguityType \tab conttype \cr
 }
 
 
