@@ -47,10 +47,10 @@ navbar:
           href: https://globalgov.github.io/manydata/
         - text: manypkgs
           href: https://globalgov.github.io/manypkgs/
-        - text: manyenviron
-          href: https://globalgov.github.io/manyenviron/
-        - text: manytrade
-          href: https://globalgov.github.io/manytrade/
+        - text: manytreaties
+          href: https://globalgov.github.io/manytreaties/
+        - text: manyigos
+          href: https://globalgov.github.io/manyigos/
 reference:
   - title: "Function to generate state names"
     desc: "This function is here to generate a list of fictional state names:"
@@ -71,8 +71,6 @@ reference:
     desc: "manystates contains the following databases on states or state related concepts"
     contents:
     - states
-    - leaders
-    - regimes
     - contiguity
 footer:
   structure:
