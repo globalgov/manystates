@@ -1,33 +1,33 @@
 #' States datacube
-#' @description The states datacube is a list containing 
+#' @description The `states` datacube is a list containing 
 #' `r length(manystates::states)` datasets: 
 #' `r cli::pluralize("{names(manystates::states)}")`.
-#' It is a work-in-progress, so please do not rely on it yet.
+#' It is a work-in-progress, so please let us know if you have any comments or suggestions.
 #' @format
 #' \describe{
-#' \item{GW: }{A dataset with `r prettyNum(nrow(manystates::states$GW), big.mark=",")` 
-#' observations and `r ncol(manystates::states$GW)` variables: 
-#' `r cli::pluralize("{names(manystates::states$GW)}")`.}
-#' \item{ISD: }{A dataset with `r prettyNum(nrow(manystates::states$ISD), big.mark=",")` 
-#' observations and `r ncol(manystates::states$ISD)` variables: 
-#' `r cli::pluralize("{names(manystates::states$ISD)}")`.}
+#' \item{HUGGO: }{A dataset with `r prettyNum(nrow(manystates::states$HUGGO), big.mark=",")` 
+#' observations and `r ncol(manystates::states$HUGGO)` variables: 
+#' `r cli::pluralize("{names(manystates::states$HUGGO)}")`.}
 #' \item{COW: }{A dataset with `r prettyNum(nrow(manystates::states$COW), big.mark=",")` 
 #' observations and `r ncol(manystates::states$COW)` variables: 
 #' `r cli::pluralize("{names(manystates::states$COW)}")`.}
 #' \item{ICOW: }{A dataset with `r prettyNum(nrow(manystates::states$ICOW), big.mark=",")` 
 #' observations and `r ncol(manystates::states$ICOW)` variables: 
 #' `r cli::pluralize("{names(manystates::states$ICOW)}")`.}
+#' \item{GW: }{A dataset with `r prettyNum(nrow(manystates::states$GW), big.mark=",")` 
+#' observations and `r ncol(manystates::states$GW)` variables: 
+#' `r cli::pluralize("{names(manystates::states$GW)}")`.}
+#' \item{ISD: }{A dataset with `r prettyNum(nrow(manystates::states$ISD), big.mark=",")` 
+#' observations and `r ncol(manystates::states$ISD)` variables: 
+#' `r cli::pluralize("{names(manystates::states$ISD)}")`.}
 #' \item{RATRULES: }{A dataset with `r prettyNum(nrow(manystates::states$RATRULES), big.mark=",")` 
 #' observations and `r ncol(manystates::states$RATRULES)` variables: 
 #' `r cli::pluralize("{names(manystates::states$RATRULES)}")`.}
-#' \item{HUGGO: }{A dataset with `r prettyNum(nrow(manystates::states$HUGGO), big.mark=",")` 
-#' observations and `r ncol(manystates::states$HUGGO)` variables: 
-#' `r cli::pluralize("{names(manystates::states$HUGGO)}")`.}
 #' }
 #' For more information and references to each of the datasets used,
 #' please use the `manydata::call_sources()` and `manydata::compare_dimensions()` functions.
 #' @source
-#' \itemize{
+#' \describe{
 #' \item{GW: }{
 #' Gleditsch, K.S., and M. D. Ward. “Interstate system membership: A revised list of the independent states since 1816”.
 #' _International Interactions_ 25.4 (1999), pp. 393-413.
@@ -54,8 +54,7 @@
 #' \url{https://doi.org/10.1017/CBO9780511811340}
 #' }
 #' \item{HUGGO: }{
-#' Hollway, J. manystates: States for manydata. 2021.
-#' Hand-coded by the GGO team.}
+#' Hollway, James, Henrique Sposito, and Jael Tan. 2001. _manystates: States for manydata_.}
 #' }
 #' @section Mapping:
 #' 
