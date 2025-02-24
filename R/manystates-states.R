@@ -1,8 +1,8 @@
 #' States datacube
 #' @description The `states` datacube is a list containing 
-#' `r length(manystates::states)` datasets: 
-#' `r cli::pluralize("{names(manystates::states)}")`.
-#' It is a work-in-progress, so please let us know if you have any comments or suggestions.
+#'   `r length(manystates::states)` datasets: 
+#'   `r cli::pluralize("{names(manystates::states)}")`.
+#'   It is a work-in-progress, so please let us know if you have any comments or suggestions.
 #' @format
 #' \describe{
 #' \item{HUGGO: }{A dataset with `r prettyNum(nrow(manystates::states$HUGGO), big.mark=",")` 
@@ -54,7 +54,7 @@
 #' \url{https://doi.org/10.1017/CBO9780511811340}
 #' }
 #' \item{HUGGO: }{
-#' Hollway, James, Henrique Sposito, and Jael Tan. 2001. _manystates: States for manydata_.}
+#' Hollway, James, Henrique Sposito, and Jael Tan. 2021. _manystates: States for manydata_.}
 #' }
 #' @section Mapping:
 #' 
