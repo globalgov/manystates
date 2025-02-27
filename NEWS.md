@@ -1,3 +1,39 @@
+# manystates 0.3.0
+
+## Package
+
+- Added package startup message
+- Updated references from database to datacube
+- Updated website, linking to manytreaties and manyigos
+- Updated github workflows
+
+## Data
+
+- Updated `states`
+  - Renamed `states$HUGGO_STATES` to `states$HUGGO`
+  - Improved `states$HUGGO` by adding missing state names
+  - Improved `states$HUGGO` by adding missing latitude/longitudes, where possible
+  - Improved country coding in `states$ICOW`
+  - Added `stateID` for datasets without this variable using `manypkgs::code_states()` (closes #71)
+  - Renamed `Beg` variable `Begin` in all datasets (closes #67)
+  - Fixed RATRULES citation
+  - Dropped economic freedom dataset (closes #66)
+  - Reordered variables so that shared variables lead datasets
+- Updated `contiguity`
+  - Rearranged `contiguity` variables
+  - Renamed `contiguity$HUGGO_CONT` to `contiguity$HUGGO`
+  - Renamed `contiguity$COW_DIRCONT` to `contiguity$COW`
+  - Dropped additional variables in `contiguity$HUGGO` as duplicates of `states$HUGGO`
+- Updated related tests
+- Improved variable mapping explanation (closes #68)
+- Improved dataset documentation by making it computational
+- Dropped `leaders` and `regimes`
+
+## Functions
+
+- Dropped `extract_cshapes()`
+- Dropped `extract_vdem()`
+
 # manystates 0.2.0
 
 ## Package

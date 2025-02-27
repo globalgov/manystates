@@ -12,20 +12,39 @@ COW <- readr::read_csv("data-raw/states/COW/states2016.csv")
 # below (in stage three) passes all the tests.
 COW <- tibble::as_tibble(COW) %>%
   manydata::transmutate(cowID = stateabb,
-                        Beg = messydates::make_messydate(styear, stmonth, stday),
+                        Begin = messydates::make_messydate(styear, stmonth, stday),
                         End = messydates::make_messydate(endyear, endmonth, endday),
                         StateName = manypkgs::standardise_titles(statenme),
                         cowNR = manypkgs::standardise_titles(as.character(ccode))) %>%
-  dplyr::select(cowID, Beg, End, cowNR, StateName) %>%
-  dplyr::arrange(Beg, cowID)
+  dplyr::select(cowID, Begin, End, cowNR, StateName) %>%
+  dplyr::arrange(Begin, cowID)
 
 # We know that COW data for "old" states is set to 1816-01-01 by default.
 # This is a rather uncertain date, that is, the dataset considers them states
 # on 1st January 1816, but they may have been established (much) earlier.
 # Let's signal to this uncertainty using the `{messydates}` package,
 # which is designed to deal with date uncertainty
-COW <- COW %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01-01", messydates::on_or_before(Beg), Beg)),
-                             End = messydates::as_messydate(ifelse(End >= "2016-12-31", messydates::on_or_after(End), End)))
+COW <- COW %>% dplyr::mutate(Begin = messydates::as_messydate(ifelse(Begin <= "1816-01-01",
+                                                                     messydates::on_or_before(Begin),
+                                                                     Begin)),
+                             End = messydates::as_messydate(ifelse(End >= "2016-12-31",
+                                                                   messydates::on_or_after(End),
+                                                                   End)))
+
+# ensure all NAs are coded correctly
+COW <- COW %>%
+  dplyr::mutate(across(everything(),
+                       ~stringr::str_replace_all(.,
+                                                 "^NA$", NA_character_)),
+                Begin = messydates::as_messydate(Begin),
+                End = messydates::as_messydate(End))
+
+# Add stateID
+COW <- COW %>%
+  dplyr::mutate(stateID = manypkgs::code_states(StateName, activity = F,
+                                                replace = "ID"),
+                stateID = ifelse(is.na(stateID), cowID, stateID))
+
 # manydata and manypkgs include several other
 # functions that should help cleaning and
 # standardizing your data.
@@ -33,7 +52,7 @@ COW <- COW %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-
 
 # Stage three: Connecting data
 # Next run the following line to make COW available within the many package.
-manypkgs::export_data(COW, database = "states",
+manypkgs::export_data(COW, datacube = "states",
                       URL = "https://correlatesofwar.org/data-sets/state-system-membership")
 
 # This function also does two additional things.

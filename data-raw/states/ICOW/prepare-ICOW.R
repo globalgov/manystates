@@ -10,20 +10,44 @@ ICOW <- readr::read_csv("data-raw/states/ICOW/coldata110.csv")
 # In this stage you will want to correct the variable names and
 # formats of the 'ICOW' object until the object created
 # below (in stage three) passes all the tests.
-colnames <- colnames(ICOW)
-colnames[[1]] <- "cowID"
-colnames[[2]] <- "StateName"
 cust_match <- c("260" = "GFR",
-                "730" = "KOR")
+                "730" = "KOR",
+                "89" = "UPC")
+
 ICOW <- dplyr::as_tibble(ICOW) %>%
-  dplyr::na_if(-9) %>%
-  dplyr::na_if(-90) %>%
+  # convert -9 values to NA
+  dplyr::mutate(ColRuler = na_if(ColRuler, -9),
+                IndFrom = na_if(IndFrom, -9),
+                SecFrom = na_if(SecFrom, -9),
+                SecDate = na_if(SecDate, -9),
+                SecViol = na_if(SecViol, -9),
+                Into = na_if(Into, -9),
+                IntoDate = na_if(IntoDate, -9),
+                GWsys = na_if(GWsys, -9),
+                Notes = na_if(Notes, "-9")) %>%
+  # convert COW number codes to COW three-letter codes
   dplyr::mutate(cowID = countrycode::countrycode(State,
-                                                  "cown",
+                                                  "cown", #COWN 89??
                                                   "cowc",
-                                                  custom_match = cust_match)) %>%
+                                                  custom_match = cust_match),
+                ColRuler = countrycode::countrycode(ColRuler,
+                                                    "cown",
+                                                    "cowc",
+                                                    custom_match = cust_match),
+                IndFrom = countrycode::countrycode(IndFrom,
+                                                   "cown",
+                                                   "cowc",
+                                                   custom_match = cust_match),
+                SecFrom = countrycode::countrycode(SecFrom,
+                                                   "cown",
+                                                   "cowc",
+                                                   custom_match = cust_match),
+                Into = countrycode::countrycode(Into,
+                                                "cown",
+                                                "cowc",
+                                                custom_match = cust_match)) %>%
   # Preprocess strings for {messydates}
-  dplyr::mutate(IndDate = ifelse(nchar(as.character(IndDate)) == 6,
+  dplyr::mutate(Begin = ifelse(nchar(as.character(IndDate)) == 6,
                                  paste0(substr(as.character(IndDate), 1, 4),
                                         "-",
                                         substr(as.character(IndDate), 5, 6)),
@@ -115,16 +139,37 @@ ICOW <- dplyr::as_tibble(ICOW) %>%
                                                      substr(as.character(GWsys),
                                                             4, 5)),
                                               GWsys)))) %>%
-  dplyr::mutate(IndDate = messydates::as_messydate(IndDate),
+  dplyr::mutate(Begin = messydates::as_messydate(Begin),
                 SecDate = messydates::as_messydate(SecDate),
                 IntoDate = messydates::as_messydate(IntoDate),
                 COWsys = messydates::as_messydate(COWsys),
                 GWsys = messydates::as_messydate(GWsys)) %>%
   manydata::transmutate(StateName = manypkgs::standardise_titles(Name)) %>%
-  dplyr::select(-State) %>%
-  dplyr::arrange(cowID)
+  dplyr::select(-State)
+
+# ensure NAs are coded correctly
+ICOW <- ICOW %>%
+  dplyr::mutate(across(everything(),
+                       ~stringr::str_replace_all(.,
+                                                 "^NA$", NA_character_))) %>%
+  dplyr::mutate(Begin = messydates::as_messydate(Begin),
+                SecDate = messydates::as_messydate(SecDate),
+                IntoDate = messydates::as_messydate(IntoDate),
+                COWsys = messydates::as_messydate(COWsys),
+                GWsys = messydates::as_messydate(GWsys))
+
+# Add stateID
+ICOW <- ICOW %>%
+  dplyr::mutate(stateID = manypkgs::code_states(StateName, activity = F,
+                                                replace = "ID"),
+                stateID = ifelse(is.na(stateID), cowID, stateID))
+
 # Reorder columns
-ICOW <- ICOW[, colnames]
+ICOW <- ICOW %>%
+  dplyr::select(-IndDate) %>%
+  dplyr::relocate(stateID, StateName, Begin) %>%
+  dplyr::arrange(stateID)
+
 # manypkgs includes several functions that should help cleaning
 # and standardising your data.
 # Please see the vignettes or website for more details.
@@ -146,5 +191,5 @@ ICOW <- ICOW[, colnames]
 # that you're including in the package.
 # To add a template of .bib file to package,
 # run `manypkgs::add_bib(states, ICOW)`.
-manypkgs::export_data(ICOW, database = "states",
+manypkgs::export_data(ICOW, datacube = "states",
                       URL = "http://www.paulhensel.org/icowcol.html")

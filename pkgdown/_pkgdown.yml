@@ -27,13 +27,6 @@ navbar:
     reference:
       text: Reference
       href: reference/index.html
-    articles:
-      text: Articles
-      menu:
-      - text: Working with manystates data
-        href: articles/manystates_data.html
-      - text: Creating historical maps
-        href: articles/CShapesMaps.html
     news:
       text: News
       href: news/index.html
@@ -47,34 +40,31 @@ navbar:
           href: https://globalgov.github.io/manydata/
         - text: manypkgs
           href: https://globalgov.github.io/manypkgs/
-        - text: manyenviron
-          href: https://globalgov.github.io/manyenviron/
-        - text: manytrade
-          href: https://globalgov.github.io/manytrade/
+        - text: manytreaties
+          href: https://globalgov.github.io/manytreaties/
+        - text: manyigos
+          href: https://globalgov.github.io/manyigos/
 reference:
   - title: "Function to generate state names"
     desc: "This function is here to generate a list of fictional state names:"
     contents:
     - generate_states
-  - title: "Functions to import CShapes 2.0 data"
-    desc: "These functions are here to assist users in importing correctly formatted CShapes 2.0 data:"
-    contents:
-    - import_cshapes
-    - import_distlist
-    - import_distmatrix
-  - title: "Functions to import V-Dem and V-Party data"
-    desc: "These functions are here to assist users in importing correctly formatted VDEM and VParty data:"
-    contents:
-    - import_vdem
-    - import_vparty
+  # - title: "Functions to import CShapes 2.0 data"
+  #   desc: "These functions are here to assist users in importing correctly formatted CShapes 2.0 data:"
+  #   contents:
+  #   - import_cshapes
+  #   - import_distlist
+  #   - import_distmatrix
+  # - title: "Functions to import V-Dem and V-Party data"
+  #   desc: "These functions are here to assist users in importing correctly formatted VDEM and VParty data:"
+  #   contents:
+  #   - import_vdem
+  #   - import_vparty
   - title: "States Data"
     desc: "manystates contains the following databases on states or state related concepts"
     contents:
     - states
-    - leaders
-    - regimes
-    - economics
-    - contiguity
+    # - contiguity
 footer:
   structure:
     left: devs

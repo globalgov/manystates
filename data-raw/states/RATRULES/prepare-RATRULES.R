@@ -17,8 +17,16 @@ RATRULES <- as_tibble(RATRULES) %>%
   dplyr::mutate(StateName = countrycode::countrycode(stateID,
                                                  origin = "iso3c",
                                                  destination = "country.name")) %>%
-  dplyr::mutate(StateName = manypkgs::standardize_titles(Label)) %>%
+  dplyr::mutate(StateName = manypkgs::standardize_titles(Label),
+                RatProcedure = formatC(RatProcedure,
+                                       digits = 1, format = "f")) %>%
   dplyr::select(stateID, StateName, RatProcedure)
+
+# ensure NAs are coded correctly
+RATRULES <- RATRULES %>%
+  dplyr::mutate(across(everything(),
+                       ~stringr::str_replace_all(.,
+                                                 "^NA$", NA_character_)))
 
 # manypkgs includes several functions that should help cleaning
 # and standardising your data such as `standardise_titles()`
@@ -42,5 +50,5 @@ RATRULES <- as_tibble(RATRULES) %>%
 # that you're including in the package.
 # To add a template of .bib file to the package,
 # please run `manypkgs::add_bib("states", "RATRULES")`.
-manypkgs::export_data(RATRULES, database = "states",
-                      URL = "NA")
+manypkgs::export_data(RATRULES, datacube = "states",
+                      URL = "https://doi.org/10.1017/CBO9780511811340")

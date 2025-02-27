@@ -41,3 +41,5 @@ data-raw/Other/*
 docs
 inst/doc
 *.DS_Store
+next/*
+docs-old/*

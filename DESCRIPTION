@@ -1,10 +1,10 @@
 Package: manystates
 Title: States for manydata
-Version: 0.2.0
-Date: 2023-05-26
+Version: 0.3.0
+Date: 2025-02-11
 Description: manystates provide data on states in the international system across time. 
     The package combines and cross-references several existing datasets consistent with the manydata package aims.
-URL: https://github.com/globalgov/manystates
+URL: https://globalgov.github.io/manystates
 BugReports: https://github.com/globalgov/manystates/issues
 Authors@R: 
     c(person(given = "James",
@@ -34,14 +34,6 @@ Depends:
     R (>= 3.5.0),
     manydata
 Imports:
-    dplyr,
-    rlang,
-    countrycode,
-    manypkgs,
-    tibble,
-    lubridate,
-    cshapes,
-    vdemdata,
     stringr
 Suggests:
     pointblank,
@@ -55,10 +47,18 @@ Suggests:
     dslabs,
     kableExtra
 Remotes:
-    vdeminstitute/vdemdata,
     globalgov/manypkgs
 Encoding: UTF-8
-VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
+Config/Needs/check: 
+    covr,
+    lintr,
+    lubridate,
+    spelling
+Config/Needs/website:
+    pkgdown
+Config/testthat/parallel: true
 Config/testthat/edition: 3
+Config/testthat/start-first: V-Party 
+

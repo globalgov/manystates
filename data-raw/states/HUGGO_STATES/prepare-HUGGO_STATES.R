@@ -23,105 +23,163 @@ latlon <- readr::read_csv("data-raw/states/HUGGO_STATES/statlatlons.csv")
 # away from issues with ambiguous names down the road.
 HUGGO_STATES <- as_tibble(HUGGO_STATES) %>%
   manydata::transmutate(stateID = manypkgs::standardise_titles(StatID),
-                        Beg = messydates::as_messydate(Start)) %>%
-  dplyr::mutate(StateName = manypkgs::standardise_titles(Label),
-                End = messydates::as_messydate(End)) %>%
-  dplyr::select(stateID, StateName, Beg, End)
+                        Begin = messydates::as_messydate(Start),
+                        StateName = manypkgs::standardise_titles(Label)) %>%
+  dplyr::mutate(End = messydates::as_messydate(End)) %>%
+  dplyr::select(stateID, StateName, Begin, End) %>%
+  dplyr::distinct()
 
 nap <- nap %>%
   manydata::transmutate(stateID = manypkgs::standardise_titles(StatID),
-                        Beg = messydates::as_messydate(Start)) %>%
-  dplyr::mutate(StateName = manypkgs::standardise_titles(Label),
-                End = messydates::as_messydate(End)) %>%
-  dplyr::select(stateID, StateName, Beg, End)
+                        Begin = messydates::as_messydate(Start),
+                        StateName = manypkgs::standardise_titles(Label)) %>%
+  dplyr::mutate(End = messydates::as_messydate(End)) %>%
+  dplyr::select(stateID, StateName, Begin, End) %>%
+  dplyr::distinct()
 
+# add data on capitals
 capitals <- capitals %>%
   manydata::transmutate(stateID = manypkgs::standardise_titles(StatID),
-                        Beg = messydates::as_messydate(Start)) %>%
-  dplyr::mutate(StateName = manypkgs::standardise_titles(Label),
-                Capital = manypkgs::standardise_titles(Capital),
+                        Begin = messydates::as_messydate(Start),
+                        StateName = manypkgs::standardise_titles(Label)) %>%
+  dplyr::mutate(Capital = manypkgs::standardise_titles(Capital),
                 End = messydates::as_messydate(End)) %>%
-  dplyr::select(stateID, StateName, Capital, Beg, End)
+  dplyr::select(stateID, StateName, Capital, Begin, End) %>%
+  dplyr::distinct()
 
+# add data on regions
 regions <- regions %>%
-  manydata::transmutate(stateID = manypkgs::standardise_titles(StatID)) %>%
-  dplyr::mutate(StateName = manypkgs::standardise_titles(Label),
-                Capital = manypkgs::standardise_titles(Capital),
+  manydata::transmutate(stateID = manypkgs::standardise_titles(StatID),
+                        StateName = manypkgs::standardise_titles(Label)) %>%
+  dplyr::mutate(Capital = manypkgs::standardise_titles(Capital),
                 Region = manypkgs::standardise_titles(Region),
                 Area = manypkgs::standardise_titles(Area)) %>%
   dplyr::rename(Latitude = Lat, Longitude = Lon) %>%
-  dplyr::select(stateID, StateName, Capital, Area, Region, Latitude, Longitude)
+  dplyr::select(stateID, StateName, Capital, Area, Region, Latitude, Longitude) %>%
+  dplyr::distinct()
 
+# data on latitude and longitude
 latlon <- latlon %>%
   manydata::transmutate(stateID = manypkgs::standardise_titles(StatID)) %>%
   dplyr::rename(Latitude = Lat, Longitude = Lon) %>%
-  dplyr::relocate(stateID, Capital)
+  dplyr::relocate(stateID, Capital) %>%
+  dplyr::distinct()
 
-# add additional hand-coded information on states' ratification rules
+# combine data on latitude and longitude
+regions2 <- regions %>%
+  dplyr::full_join(latlon, by = c("stateID", "Capital")) %>%
+  dplyr::distinct()
+regions2 <- regions2 %>%
+  dplyr::mutate(Latitude.x = ifelse(is.na(Latitude.x), Latitude.y, Latitude.x),
+                Longitude.x = ifelse(is.na(Longitude.x), Longitude.y, Longitude.x),
+                Latitude2 = ifelse(Latitude.x != Latitude.y, 1, 0),
+                Latitude2 = ifelse(Latitude2 == 1, Latitude.y, NA),
+                Longitude2 = ifelse(Longitude.x != Longitude.y, 1, 0),
+                Longitude2 = ifelse(Longitude2 == 1, Longitude.y, NA)) %>%
+  dplyr::rename(Latitude = Latitude.x, Longitude = Longitude.x)
+# Checked Latitude2 and Longitude2, no alternative Latitude and Longitude values
+regions2 <- regions2 %>%
+  dplyr::select(stateID, StateName, Capital, Area, Region,
+                Latitude, Longitude) %>%
+  dplyr::distinct()
+
+# additional hand-coded information on states' ratification rules
 ratif <- ratif %>%
   dplyr::select(-(`...1`)) %>%
   manydata::transmutate(stateID = manypkgs::standardise_titles(StatID),
                         StateName = manypkgs::standardise_titles(Label)) %>%
-  dplyr::rename(RatProcedure = Rat) %>%
+  dplyr::rename(RatProcedure = Rat, Source_rat = Source) %>%
   dplyr::relocate(stateID, StateName)
 
-# Combine data
-HUGGO_STATES <- HUGGO_STATES %>%
-  dplyr::full_join(nap, by = c("stateID", "StateName", "Beg", "End")) %>%
+### Combine data
+HUGGO_STATES2 <- dplyr::bind_rows(HUGGO_STATES, nap) %>%
+  dplyr::arrange(stateID, Begin) %>%
+  dplyr::distinct()
+
+HUGGO_STATES2 <- HUGGO_STATES2 %>%
   dplyr::full_join(capitals,
-                   by = c("stateID", "StateName", "Beg", "End")) %>%
-  dplyr::full_join(regions,
-                   by = c("stateID", "StateName", "Capital")) %>%
-  dplyr::full_join(latlon, by = c("stateID", "Capital",
-                                  "Latitude", "Longitude")) %>%
+                   by = c("stateID", "StateName", "Begin", "End")) %>%
+  dplyr::distinct()
+
+# Missing StateName for some observations in regions2
+# Combine rows with same stateID to avoid missing State Names after merging
+names <- HUGGO_STATES2 %>%
+  dplyr::group_by(stateID) %>%
+  dplyr::summarise(dplyr::across(1, list(~ .[!is.na(.)][1])))
+colnames(names) <- stringr::str_remove_all(colnames(names), "_1")
+regions2 <- dplyr::left_join(regions2, names, by = "stateID")
+regions2 <- regions2 %>%
+  dplyr::mutate(StateName = ifelse(is.na(StateName.x), StateName.y, StateName.x)) %>%
+  dplyr::select(-c(StateName.x, StateName.y)) %>%
+  dplyr::distinct()
+
+HUGGO_STATES2 <- HUGGO_STATES2 %>%
+  dplyr::full_join(regions2,
+                   by = "stateID") %>%
+  dplyr::distinct()
+# Keep state/capital names and alternative state/capital names if available
+HUGGO_STATES2 <- HUGGO_STATES2 %>%
+  dplyr::mutate(StateName = ifelse(!is.na(StateName.x), StateName.x, StateName.y),
+                StateName2 = ifelse(StateName.x != StateName.y, StateName.y, NA),
+                Capital = ifelse(!is.na(Capital.x), Capital.x, Capital.y),
+                Capital2 = ifelse(Capital.x != Capital.y, Capital.y, NA))%>%
+  dplyr::select(-c(StateName.x, StateName.y, Capital.x, Capital.y)) %>%
+  dplyr::relocate(stateID, StateName, StateName2, Begin, End, Capital, Capital2) %>%
+  dplyr::arrange(stateID, Begin)
+
+HUGGO_STATES2 <- HUGGO_STATES2 %>%
   dplyr::full_join(ratif, by = c("stateID", "StateName")) %>%
   dplyr::distinct()
 
 # reorder variables and arrange chronologically
-HUGGO_STATES <- HUGGO_STATES %>%
-  dplyr::relocate(stateID, StateName, Capital, Beg, End, Latitude, Longitude,
+HUGGO_STATES <- HUGGO_STATES2 %>%
+  dplyr::relocate(stateID, StateName, Capital, Begin, End, Latitude, Longitude,
                   Area, Region) %>%
-  dplyr::arrange(Beg)
+  dplyr::arrange(Begin)
 
 # make sure all vars are correctly coded as NA if necessary
 HUGGO_STATES <- HUGGO_STATES %>% 
   dplyr::mutate(across(everything(),
                        ~stringr::str_replace_all(., "^NA$", NA_character_))) %>%
-  mutate(Beg = messydates::as_messydate(Beg),
+  mutate(Begin = messydates::as_messydate(Begin),
          End = messydates::as_messydate(End)) %>% 
   dplyr::distinct(.keep_all = TRUE)
 
-# Combine rows with same stateID to avoid missing State Names
-names <- HUGGO_STATES %>%
-  dplyr::group_by(stateID) %>%
-  dplyr::summarise(dplyr::across(c(1:2, 7:8), list(~ .[!is.na(.)][1])))
-colnames(names) <- stringr::str_remove_all(colnames(names), "_1")
-HUGGO_STATES <- dplyr::left_join(HUGGO_STATES, names, by = "stateID") %>%
-  dplyr::mutate(StateName = ifelse(is.na(StateName.x), StateName.y, StateName.x),
-                Capital = ifelse(is.na(Capital.x), Capital.y, Capital.x),
-                Area = ifelse(is.na(Area.x), Area.y, Area.x),
-                Region = ifelse(is.na(Region.x), Region.y, Region.x)) %>%
-  dplyr::select(stateID, StateName, Capital, Beg, End, Latitude, Longitude,
-                Area, Region, RatProcedure, `Constitutional Description`,
-                Source) %>%
-  dplyr::distinct()
+### Download file as csv to check and fill in observations
+write.csv(HUGGO_STATES, "HUGGO_STATES_additional.csv")
 
-# Add region data
-gapminder <- dslabs::gapminder %>% 
-  select(country, continent, region) %>% # select only the variables we want
-  rename(Continent = continent, Region_gapminder = region) %>%
-  distinct() # keeps only distinct rolls (no duplicates)
-HUGGO_STATES <- dplyr::left_join(HUGGO_STATES, gapminder,
-                                 by = c("StateName" = "country"))
-HUGGO_STATES$Regionc <- dplyr::coalesce(HUGGO_STATES$Region,
-                                        HUGGO_STATES$Region_gapminder)
+# Fill in missing information on begin/end dates, latitude/longitude,
+# area, regions, ratification procedure?
+
+# Load file without duplicates and filled in missing state names
+HUGGO_STATES <- readr::read_csv("data-raw/states/HUGGO_STATES/HUGGO_STATES_additional.csv")
+
+# # Fill in missing region data
+# gapminder <- dslabs::gapminder %>% 
+#   select(country, continent, region) %>% # select only the variables we want
+#   rename(Continent = continent, Region_gapminder = region) %>%
+#   distinct() # keeps only distinct rolls (no duplicates)
+# HUGGO_STATES <- dplyr::left_join(HUGGO_STATES, gapminder,
+#                                  by = c("StateName" = "country"))
+# HUGGO_STATES$Regionc <- dplyr::coalesce(HUGGO_STATES$Region,
+#                                         HUGGO_STATES$Region_gapminder)
+# HUGGO_STATES <- HUGGO_STATES %>%
+#   dplyr::select(-c(Region, Continent, Region_gapminder)) %>%
+#   dplyr::rename(Region = Regionc) %>%
+#   dplyr::mutate(Region = stringr::str_replace(Region, "-", " "))
+# HUGGO_STATES <- HUGGO_STATES %>%
+#   dplyr::rename(Begin = Beg) %>%
+#   dplyr::relocate(stateID, StateName, Capital, Begin, End, Latitude, Longitude,
+#                   Area, Region)
+
+# ensure NAs are coded correctly
 HUGGO_STATES <- HUGGO_STATES %>%
-  dplyr::select(-c(Region, Continent, Region_gapminder)) %>%
-  dplyr::rename(Region = Regionc) %>%
-  dplyr::mutate(Region = stringr::str_replace(Region, "-", " "))
-HUGGO_STATES <- HUGGO_STATES %>%
-  dplyr::relocate(stateID, StateName, Capital, Beg, End, Latitude, Longitude,
-                  Area, Region)
+  dplyr::mutate(across(everything(),
+                       ~stringr::str_replace_all(.,
+                                                 "^NA$", NA_character_))) %>%
+  dplyr::mutate(Begin = messydates::as_messydate(Begin),
+                End = messydates::as_messydate(End)) %>%
+  dplyr::relocate(stateID, StateName, Capital, Begin, End)
 
 # manypkgs includes several functions that should help cleaning
 # and standardising your data such as `standardise_titles()`.
@@ -144,5 +202,5 @@ HUGGO_STATES <- HUGGO_STATES %>%
 # that you're including in the package.
 # To add a template of .bib file to the package,
 # please run `manypkgs::add_bib("states", "HUGGO_STATES")`.
-manypkgs::export_data(HUGGO_STATES, database = "states",
+manypkgs::export_data(HUGGO_STATES, datacube = "states",
                       URL = "Hand-coded data by the GGO team")

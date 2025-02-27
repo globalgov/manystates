@@ -96,7 +96,7 @@ manypkgs::export_data(ARCHIGOS, database = "leaders",
                       URL = "http://ksgleditsch.com/archigos.html")
 # This function also does two additional things.
 # First, it creates a set of tests for this object to ensure adherence
-# to certain standards.You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows)
+# to certain standards. You can hit Cmd-Shift-T (Mac) or Ctrl-Shift-T (Windows)
 # to run these tests locally at any point.
 # Any test failures should be pretty self-explanatory and may require
 # you to return to stage two and further clean, standardise, or wrangle

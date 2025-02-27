@@ -11,7 +11,7 @@ manystates provide data on states in the international system across time. The p
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/globalgov/manystates}
+  \item \url{https://globalgov.github.io/manystates}
   \item Report bugs at \url{https://github.com/globalgov/manystates/issues}
 }
 

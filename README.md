@@ -18,11 +18,11 @@ coverage](https://codecov.io/gh/globalgov/manystates/branch/main/graph/badge.svg
 `manystates` is a data package within the [many universe of
 packages](https://github.com/globalgov). It contains an ensemble of
 datasets currently available on states in the world, including
-information on states’ beginning and, where applicable, end dates,
-regime characteristics, and state leaders. An important aim of
-`manystates` is to record and include states as far back in history as
-possible. The package is geared towards global governance research, but
-can also be used by anyone interested in state actors across time.
+information on states’ beginning and, where applicable, end dates, and
+geographical characteristics. An important aim of `manystates` is to
+record and include states as far back in history as possible. The
+package is geared towards global governance research, but can also be
+used by anyone interested in state actors across time.
 
 Please also check out
 [`{manydata}`](https://github.com/globalgov/manydata) for more
@@ -38,31 +38,30 @@ you can discover, install and update various ‘many packages’ from the
 console.
 
 ``` r
-# install.packages(remotes)
-remotes::install_github("globalgov/manydata") # this installs our core package, the only one you need to do independently
-manydata::get_packages() # this prints a list of the publicly available data packages currently available
-manydata::get_packages("manystates") # this downloads and installs the named package
+manydata::call_packages() # this prints a list of the publicly available data packages currently available
+# manydata::call_packages("manystates") # this downloads and installs the named package
 ```
 
 ## Data included
 
-Once you have installed `{manydata}`, you can see the different
-databases and datasets included in the `{manystates}` package using the
+Once you have installed the package, you can see the different datasets
+included in a specific datacube in the {`manystates`} package using the
 following function.
 
 ``` r
-manydata::data_contrast("manystates")
+manydata::call_sources("manystates", "states")
 ```
 
 Working with ensembles of related data has many advantages for robust
 analysis. Just take a look at our vignettes
 [here](https://globalgov.github.io/manydata/articles/user.html).
 
-## The many packages universe
+## Many packages
 
-The [many universe of packages](https://github.com/globalgov/manydata)
-is aimed at collecting, connecting and correcting network data across
-issue-domains of global governance.
+The development of [many
+packages](https://github.com/globalgov/manydata) is aimed at collecting,
+connecting and correcting network data across issue-domains of global
+governance.
 
 While some ‘many packages’ can and do include novel data, much of what
 they offer involves standing on the shoulders of giants. ‘many packages’
@@ -77,7 +76,6 @@ below.
 citation("manystates")
 ```
 
-    ## 
     ## To cite manystates in publications use:
     ## 
     ##   J. Hollway. manystates: States for manydata. 2021.
@@ -93,8 +91,8 @@ citation("manystates")
 
 ## Contributing
 
-[manydata](https://github.com/globalgov/manydata/blob/main/.github/CONTRIBUTING.md)
-also makes it easy to contribute in lots of different ways.
+[`{manypkgs}`](https://github.com/globalgov/manypkgs) also makes it easy
+to contribute in lots of different ways.
 
 If you have already developed a dataset salient to this package, please
 reach out by flagging this as an
@@ -105,11 +103,11 @@ data can be used easily.
 
 If you have collected or developed other data that may not be best for
 this package, but could be useful within the wider universe of
-`many packages`, [manypkgs](https://github.com/globalgov/manypkgs)
+`many packages`, [`{manypkgs}`](https://github.com/globalgov/manypkgs)
 includes a number of functions that make it easy to create a new
 `many package` and populate it with clean, consistent global governance
 data.
 
 If you have any other ideas about how this package or the manydata
-packages universe more broadly might better facilitate your empirical
-analysis, we’d be very happy to hear from you.
+universe more broadly might better facilitate your empirical analysis,
+we’d be very happy to hear from you.

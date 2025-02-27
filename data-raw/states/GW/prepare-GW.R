@@ -12,12 +12,12 @@ GW <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
 # below (in stage three) passes all the tests.
 GW <- tibble::as_tibble(GW) %>%
   manydata::transmutate(cowID = `Cow ID`,
-                     Beg = messydates::as_messydate(Start),
-                     End = messydates::as_messydate(Finish),
-                     StateName = manypkgs::standardise_titles(`Name of State`),
-                     cowNr = manypkgs::standardise_titles(`Cow Nr.`)) %>%
-  dplyr::select(cowID, Beg, End, cowNR, StateName) %>%
-  dplyr::arrange(Beg, cowID)
+                        Begin = messydates::as_messydate(Start),
+                        End = messydates::as_messydate(Finish),
+                        StateName = manypkgs::standardise_titles(`Name of State`),
+                        cowNr = manypkgs::standardise_titles(`Cow Nr.`)) %>%
+  dplyr::select(cowID, Begin, End, cowNR, StateName) %>%
+  dplyr::arrange(Begin, cowID)
 
 # Like COW data, GW sets "old" states as beginning from 1816-01-01 by default.
 # This is an approximate and uncertain date,
@@ -25,8 +25,27 @@ GW <- tibble::as_tibble(GW) %>%
 # We can annotate the date to account for this uncertainty 
 # using the `{messydates}` package,
 # which is designed to deal with date uncertainty.
-GW <- GW %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01-01", messydates::on_or_before(Beg), Beg)),
-                           End = messydates::as_messydate(ifelse(End >= "2017-12-31", messydates::on_or_after(End), End)))
+GW <- GW %>%
+  dplyr::mutate(Begin = messydates::as_messydate(ifelse(Begin <= "1816-01-01",
+                                                        messydates::on_or_before(Begin),
+                                                        Begin)),
+                End = messydates::as_messydate(ifelse(End >= "2017-12-31",
+                                                      messydates::on_or_after(End),
+                                                      End)))
+
+# ensure all NAs are coded correctly
+GW <- GW %>%
+  dplyr::mutate(across(everything(),
+                       ~stringr::str_replace_all(.,
+                                                 "^NA$", NA_character_))) %>%
+  dplyr::mutate(Begin = messydates::as_messydate(Begin),
+                End = messydates::as_messydate(End))
+
+# Add stateID
+GW <- GW %>%
+  dplyr::mutate(stateID = manypkgs::code_states(StateName, activity = F,
+                                                replace = "ID"),
+                stateID = ifelse(is.na(stateID), cowID, stateID))
 
 # manydata and manypkgs include several other
 # functions that should help cleaning and
@@ -34,8 +53,8 @@ GW <- GW %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01
 # Please see the vignettes or website for more details.
 
 # Stage three: Connecting data
-# Next run the following line to make GW available within the qPackage.
-manypkgs::export_data(GW, database = "states",
+# Next run the following line to make GW available within the package.
+manypkgs::export_data(GW, datacube = "states",
                       URL = "http://ksgleditsch.com/data-4.html")
 
 # This function also does two additional things.
