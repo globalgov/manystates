@@ -16,7 +16,7 @@ output: github_document
 [many universe of packages](https://github.com/globalgov).
 It contains an ensemble of datasets currently available on states in the world,
 including information on states' beginning and, where applicable, end dates,
-regime characteristics, and state leaders. An important aim of `manystates` is
+and geographical characteristics. An important aim of `manystates` is
 to record and include states as far back in history as possible. The package is
 geared towards global governance research, but can also be used by anyone
 interested in state actors across time. 
@@ -33,26 +33,25 @@ data in R. Simply install the core package,
 and then you can discover, install and update various 'many packages' from the
 console.
 
-```{r install, warning=FALSE, message=FALSE}
-manydata::get_packages() # this prints a list of the publicly available data packages currently available
-#manydata::get_packages("manystates") # this downloads and installs the named package
+```{r install, eval= FALSE}
+manydata::call_packages() # this prints a list of the publicly available data packages currently available
+# manydata::call_packages("manystates") # this downloads and installs the named package
 ```
 
 ## Data included
 
-Once you have installed `{manydata}`, you can see the different datacubes and
-datasets included in the `{manystates}` package using the following function.
+Once you have installed the package, you can see the different datasets included in a specific datacube in the {`manystates`} package using the following function.
 
-```{r datasets, warning=FALSE, message=FALSE}
-manydata::data_contrast("manystates")
+```{r datasets, eval = FALSE}
+manydata::call_sources("manystates", "states")
 ```
 
 Working with ensembles of related data has many advantages for robust analysis.
 Just take a look at our vignettes [here](https://globalgov.github.io/manydata/articles/user.html).
 
-## The many packages universe
+## Many packages
 
-The [many universe of packages](https://github.com/globalgov/manydata) is aimed
+The development of [many packages](https://github.com/globalgov/manydata) is aimed
 at collecting, connecting and correcting network data across issue-domains of
 global governance.
 
@@ -71,8 +70,8 @@ citation("manystates")
 
 ## Contributing
 
-[manydata](https://github.com/globalgov/manydata/blob/main/.github/CONTRIBUTING.md)
-also makes it easy to contribute in lots of different ways.
+[`{manypkgs}`](https://github.com/globalgov/manypkgs) also makes it easy to 
+contribute in lots of different ways.
 
 If you have already developed a dataset salient to this package,
 please reach out by flagging this as an [issue](https://github.com/globalgov/manystates/issues)
@@ -82,10 +81,10 @@ so that your data can be used easily.
 
 If you have collected or developed other data that may not be best for this
 package, but could be useful within the wider universe of `many packages`, 
-[manypkgs](https://github.com/globalgov/manypkgs) includes a number of
+[`{manypkgs}`](https://github.com/globalgov/manypkgs) includes a number of
 functions that make it easy to create a new `many package` and populate it with
 clean, consistent global governance data.
 
-If you have any other ideas about how this package or the manydata packages
+If you have any other ideas about how this package or the manydata 
 universe more broadly might better facilitate your empirical analysis, we'd be
 very happy to hear from you.
