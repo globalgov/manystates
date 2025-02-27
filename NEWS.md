@@ -10,7 +10,7 @@
 ## Data
 
 - Updated `states`
-  - Renamed `states$HUGGO` to `states$HUGGO`
+  - Renamed `states$HUGGO_STATES` to `states$HUGGO`
   - Improved `states$HUGGO` by adding missing state names
   - Improved `states$HUGGO` by adding missing latitude/longitudes, where possible
   - Improved country coding in `states$ICOW`
