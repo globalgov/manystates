@@ -9,27 +9,21 @@
 \item{HUGGO: }{A dataset with 470
 observations and 14 variables:
 stateID, Begin, End, StateName, Capital, Latitude, Longitude, Constitution, RatProcedure, Area, Region, StateName2, Capital2, and Source_rat.}
-\item{COW: }{A dataset with 243
-observations and 6 variables:
-stateID, Begin, End, StateName, cowID, and cowNR.}
-\item{ICOW: }{A dataset with 217
-observations and 16 variables:
-stateID, Begin, StateName, ColRuler, IndFrom, IndViol, IndType, SecFrom, SecDate, SecViol, Into, IntoDate, COWsys, GWsys, Notes, and cowID.}
 \item{GW: }{A dataset with 216
 observations and 6 variables:
 stateID, Begin, End, StateName, cowID, and cowNR.}
 \item{ISD: }{A dataset with 362
 observations and 8 variables:
 stateID, Begin, End, StateName, cowID, cowNR, Micro, and NewState.}
-\item{RATRULES: }{A dataset with 177
-observations and 3 variables:
-stateID, StateName, and RatProcedure.}
 }
 For more information and references to each of the datasets used,
 please use the \code{manydata::call_sources()} and \code{manydata::compare_dimensions()} functions.
 }
 \source{
 \describe{
+\item{HUGGO: }{
+Hollway, James, Henrique Sposito, and Jael Tan. 2021. \emph{manystates: States for manydata}.
+}
 \item{GW: }{
 Gleditsch, K.S., and M. D. Ward. “Interstate system membership: A revised list of the independent states since 1816”.
 \emph{International Interactions} 25.4 (1999), pp. 393-413.
@@ -40,23 +34,6 @@ Griffiths, R.D., and C. R. Butcher. “Introducing the international system (s) 
 \emph{International Interactions} 39.5 (2013), pp. 748-768.
 \url{http://www.ryan-griffiths.com/data}
 }
-\item{COW: }{
-Correlates of War Project. \emph{State System Membership List, v2016.}
-\url{http://correlatesofwar.org}. Accessed: 2021-01-25.
-\url{https://correlatesofwar.org/data-sets/state-system-membership}
-}
-\item{ICOW: }{
-Hensel, P.R. (2018). \emph{ICOW Colonial History Data Set, version 1.1.}
-\url{http://www.paulhensel.org/icowcol.html}. Accessed: 2021-12-23.
-\url{http://www.paulhensel.org/icowcol.html}
-}
-\item{RATRULES: }{
-Simmons, B.A. (2009). \emph{Mobilizing for Human Rights: International Law in Domestic Politics}.
-Cambridge University Press.
-\url{https://doi.org/10.1017/CBO9780511811340}
-}
-\item{HUGGO: }{
-Hollway, James, Henrique Sposito, and Jael Tan. 2001. \emph{manystates: States for manydata}.}
 }
 }
 \usage{
@@ -64,116 +41,69 @@ states
 }
 \description{
 The \code{states} datacube is a list containing
-6 datasets:
-HUGGO, COW, ICOW, GW, ISD, and RATRULES.
+3 datasets:
+HUGGO, GW, and ISD.
 It is a work-in-progress, so please let us know if you have any comments or suggestions.
 }
 \details{
 \if{html}{\out{<div class="sourceCode">}}\preformatted{#> $HUGGO
-#> ----------------------------------------------------------------------------
-#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
-#> ----------------------------------------------------------------------------
-#> |    stateID    |  character  |             470|     0     |       0       |
-#> |     Begin     |    mdate    |             470|    150    |     31.91     |
-#> |      End      |    mdate    |             470|    150    |     31.91     |
-#> |   StateName   |  character  |             470|     2     |     0.43      |
-#> |    Capital    |  character  |             470|     3     |     0.64      |
-#> |   Latitude    |  character  |             470|     3     |     0.64      |
-#> |   Longitude   |  character  |             470|     3     |     0.64      |
-#> | Constitution  |  character  |             470|    440    |     93.62     |
-#> | RatProcedure  |  character  |             470|    440    |     93.62     |
-#> |     Area      |  character  |             470|    259    |     55.11     |
-#> |    Region     |  character  |             470|    259    |     55.11     |
-#> |  StateName2   |  character  |             470|    464    |     98.72     |
-#> |   Capital2    |  character  |             470|    469    |     99.79     |
-#> |  Source_rat   |  character  |             470|    432    |     91.91     |
-#> ----------------------------------------------------------------------------
-#> 
-#> 
-#> $COW
-#> ----------------------------------------------------------------------------
-#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
-#> ----------------------------------------------------------------------------
-#> |    stateID    |  character  |             243|     0     |       0       |
-#> |     Begin     |    mdate    |             243|     0     |       0       |
-#> |      End      |    mdate    |             243|     0     |       0       |
-#> |   StateName   |  character  |             243|     0     |       0       |
-#> |     cowID     |  character  |             243|     0     |       0       |
-#> |     cowNR     |  character  |             243|     0     |       0       |
-#> ----------------------------------------------------------------------------
-#> 
-#> 
-#> $ICOW
-#> ----------------------------------------------------------------------------
-#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
-#> ----------------------------------------------------------------------------
-#> |    stateID    |  character  |             217|     0     |       0       |
-#> |     Begin     |    mdate    |             217|     0     |       0       |
-#> |   StateName   |  character  |             217|     0     |       0       |
-#> |   ColRuler    |  character  |             217|    46     |     21.2      |
-#> |    IndFrom    |  character  |             217|    39     |     17.97     |
-#> |    IndViol    |  character  |             217|     0     |       0       |
-#> |    IndType    |  character  |             217|     0     |       0       |
-#> |    SecFrom    |  character  |             217|    179    |     82.49     |
-#> |    SecDate    |    mdate    |             217|    179    |     82.49     |
-#> |    SecViol    |  character  |             217|    179    |     82.49     |
-#> |     Into      |  character  |             217|    198    |     91.24     |
-#> |   IntoDate    |    mdate    |             217|    198    |     91.24     |
-#> |    COWsys     |    mdate    |             217|     0     |       0       |
-#> |     GWsys     |    mdate    |             217|    22     |     10.14     |
-#> |     Notes     |  character  |             217|    58     |     26.73     |
-#> |     cowID     |  character  |             217|     0     |       0       |
-#> ----------------------------------------------------------------------------
+#> -------------------------------------------------------
+#> |  Variable  |  Class  |  Obs  |  Missing  |  Miss \%  |
+#> -------------------------------------------------------
+#> |stateID     |character|    470|          0|         0|
+#> |Begin       |mdate    |    320|        150|     31.91|
+#> |End         |mdate    |    320|        150|     31.91|
+#> |StateName   |character|    468|          2|      0.43|
+#> |Capital     |character|    467|          3|      0.64|
+#> |Latitude    |character|    467|          3|      0.64|
+#> |Longitude   |character|    467|          3|      0.64|
+#> |Constitution|character|     30|        440|     93.62|
+#> |RatProcedure|character|     30|        440|     93.62|
+#> |Area        |character|    211|        259|     55.11|
+#> |Region      |character|    211|        259|     55.11|
+#> |StateName2  |character|      6|        464|     98.72|
+#> |Capital2    |character|      1|        469|     99.79|
+#> |Source_rat  |character|     38|        432|     91.91|
+#> -------------------------------------------------------
 #> 
 #> 
 #> $GW
-#> ----------------------------------------------------------------------------
-#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
-#> ----------------------------------------------------------------------------
-#> |    stateID    |  character  |             216|     0     |       0       |
-#> |     Begin     |    mdate    |             216|     0     |       0       |
-#> |      End      |    mdate    |             216|     0     |       0       |
-#> |   StateName   |  character  |             216|     0     |       0       |
-#> |     cowID     |  character  |             216|     0     |       0       |
-#> |     cowNR     |  character  |             216|     0     |       0       |
-#> ----------------------------------------------------------------------------
+#> -------------------------------------------------------
+#> |  Variable  |  Class  |  Obs  |  Missing  |  Miss \%  |
+#> -------------------------------------------------------
+#> |stateID     |character|    216|          0|         0|
+#> |Begin       |mdate    |    216|          0|         0|
+#> |End         |mdate    |    216|          0|         0|
+#> |StateName   |character|    216|          0|         0|
+#> |cowID       |character|    216|          0|         0|
+#> |cowNR       |character|    216|          0|         0|
+#> -------------------------------------------------------
 #> 
 #> 
 #> $ISD
-#> ----------------------------------------------------------------------------
-#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
-#> ----------------------------------------------------------------------------
-#> |    stateID    |  character  |             362|     0     |       0       |
-#> |     Begin     |    mdate    |             362|     0     |       0       |
-#> |      End      |    mdate    |             362|     0     |       0       |
-#> |   StateName   |  character  |             362|     0     |       0       |
-#> |     cowID     |  character  |             362|     0     |       0       |
-#> |     cowNR     |  character  |             362|     0     |       0       |
-#> |     Micro     |  character  |             362|     0     |       0       |
-#> |   NewState    |  character  |             362|     0     |       0       |
-#> ----------------------------------------------------------------------------
-#> 
-#> 
-#> $RATRULES
-#> ----------------------------------------------------------------------------
-#> |  Column Name  |  Data Type  |  Observations  |  Missing  |  Missing (\%)  |
-#> ----------------------------------------------------------------------------
-#> |    stateID    |  character  |             177|     0     |       0       |
-#> |   StateName   |  character  |             177|     0     |       0       |
-#> | RatProcedure  |  character  |             177|     0     |       0       |
-#> ----------------------------------------------------------------------------
+#> -------------------------------------------------------
+#> |  Variable  |  Class  |  Obs  |  Missing  |  Miss \%  |
+#> -------------------------------------------------------
+#> |stateID     |character|    362|          0|         0|
+#> |Begin       |mdate    |    362|          0|         0|
+#> |End         |mdate    |    362|          0|         0|
+#> |StateName   |character|    362|          0|         0|
+#> |cowID       |character|    362|          0|         0|
+#> |cowNR       |character|    362|          0|         0|
+#> |Micro       |character|    362|          0|         0|
+#> |NewState    |character|    362|          0|         0|
+#> -------------------------------------------------------
 }\if{html}{\out{</div>}}
 }
 \section{Mapping}{
-\tabular{llllll}{
-   \emph{manystates} \tab \emph{GW} \tab \emph{ISD} \tab \emph{COW} \tab \emph{ICOW} \tab \emph{RATRULES} \cr
-   stateID \tab  \tab  \tab  \tab  \tab StatID \cr
-   Begin \tab Start \tab Start \tab styear,stmonth,stday \tab IndDate \tab  \cr
-   End \tab Finish \tab Finish \tab endyear,endmonth,endday \tab  \tab  \cr
-   StateName \tab Name of State \tab State.Name \tab statenme \tab Name \tab  \cr
-   cowID \tab Cow ID \tab COW.ID \tab stateabb \tab State \tab  \cr
-   cowNR \tab Cow NR. \tab COW.Nr \tab ccode \tab  \tab  \cr
-   RatProcedure \tab  \tab  \tab  \tab  \tab Rat \cr
+\tabular{lll}{
+   \emph{manystates} \tab \emph{GW} \tab \emph{ISD} \cr
+   stateID \tab  \tab  \cr
+   Begin \tab Start \tab Start \cr
+   End \tab Finish \tab Finish \cr
+   StateName \tab Name of State \tab State.Name \cr
+   cowID \tab Cow ID \tab COW.ID \cr
+   cowNR \tab Cow NR. \tab COW.Nr \cr
 }
 }
 
