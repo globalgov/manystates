@@ -115,7 +115,7 @@ regions2 <- regions2 %>%
 
 HUGGO_STATES2 <- HUGGO_STATES2 %>%
   dplyr::full_join(regions2,
-                   by = c("stateID")) %>%
+                   by = "stateID") %>%
   dplyr::distinct()
 # Keep state/capital names and alternative state/capital names if available
 HUGGO_STATES2 <- HUGGO_STATES2 %>%
