@@ -8,26 +8,20 @@
 #' \item{HUGGO: }{A dataset with `r prettyNum(nrow(manystates::states$HUGGO), big.mark=",")` 
 #' observations and `r ncol(manystates::states$HUGGO)` variables: 
 #' `r cli::pluralize("{names(manystates::states$HUGGO)}")`.}
-#' \item{COW: }{A dataset with `r prettyNum(nrow(manystates::states$COW), big.mark=",")` 
-#' observations and `r ncol(manystates::states$COW)` variables: 
-#' `r cli::pluralize("{names(manystates::states$COW)}")`.}
-#' \item{ICOW: }{A dataset with `r prettyNum(nrow(manystates::states$ICOW), big.mark=",")` 
-#' observations and `r ncol(manystates::states$ICOW)` variables: 
-#' `r cli::pluralize("{names(manystates::states$ICOW)}")`.}
 #' \item{GW: }{A dataset with `r prettyNum(nrow(manystates::states$GW), big.mark=",")` 
 #' observations and `r ncol(manystates::states$GW)` variables: 
 #' `r cli::pluralize("{names(manystates::states$GW)}")`.}
 #' \item{ISD: }{A dataset with `r prettyNum(nrow(manystates::states$ISD), big.mark=",")` 
 #' observations and `r ncol(manystates::states$ISD)` variables: 
 #' `r cli::pluralize("{names(manystates::states$ISD)}")`.}
-#' \item{RATRULES: }{A dataset with `r prettyNum(nrow(manystates::states$RATRULES), big.mark=",")` 
-#' observations and `r ncol(manystates::states$RATRULES)` variables: 
-#' `r cli::pluralize("{names(manystates::states$RATRULES)}")`.}
 #' }
 #' For more information and references to each of the datasets used,
 #' please use the `manydata::call_sources()` and `manydata::compare_dimensions()` functions.
 #' @source
 #' \describe{
+#' \item{HUGGO: }{
+#' Hollway, James, Henrique Sposito, and Jael Tan. 2021. _manystates: States for manydata_.
+#' }
 #' \item{GW: }{
 #' Gleditsch, K.S., and M. D. Ward. “Interstate system membership: A revised list of the independent states since 1816”.
 #' _International Interactions_ 25.4 (1999), pp. 393-413.
@@ -38,39 +32,21 @@
 #' _International Interactions_ 39.5 (2013), pp. 748-768.
 #' \url{http://www.ryan-griffiths.com/data}
 #' }
-#' \item{COW: }{
-#' Correlates of War Project. _State System Membership List, v2016._
-#' <http://correlatesofwar.org>. Accessed: 2021-01-25.
-#' \url{https://correlatesofwar.org/data-sets/state-system-membership}
-#' }
-#' \item{ICOW: }{
-#' Hensel, P.R. (2018). _ICOW Colonial History Data Set, version 1.1._
-#' <http://www.paulhensel.org/icowcol.html>. Accessed: 2021-12-23.
-#' \url{http://www.paulhensel.org/icowcol.html}
-#' }
-#' \item{RATRULES: }{
-#' Simmons, B.A. (2009). _Mobilizing for Human Rights: International Law in Domestic Politics_.
-#' Cambridge University Press.
-#' \url{https://doi.org/10.1017/CBO9780511811340}
-#' }
-#' \item{HUGGO: }{
-#' Hollway, James, Henrique Sposito, and Jael Tan. 2021. _manystates: States for manydata_.}
 #' }
 #' @section Mapping:
 #' 
-#' |  *manystates*  | *GW*  | *ISD* | *COW* | *ICOW* | *RATRULES* |
-#' |:---------------|:------|:------|:------|:-------|:-----------|
-#' | stateID  | | | | | StatID |
-#' | Begin | Start | Start | styear,stmonth,stday | IndDate|
-#' | End | Finish | Finish | endyear,endmonth,endday | |
-#' | StateName | Name of State | State.Name | statenme | Name |
-#' | cowID | Cow ID | COW.ID | stateabb | State |
-#' | cowNR | Cow NR. | COW.Nr | ccode | |
-#' | RatProcedure | | | | | Rat |
+#' |  *manystates*  | *GW*  | *ISD* | 
+#' |:---------------|:------|:------|
+#' | stateID  | | |
+#' | Begin | Start | Start |
+#' | End | Finish | Finish |
+#' | StateName | Name of State | State.Name |
+#' | cowID | Cow ID | COW.ID |
+#' | cowNR | Cow NR. | COW.Nr |
 #' 
 #' @md
 #' @details
 #' ``` {r, echo = FALSE, warning = FALSE}
-#' lapply(states, messydates::mreport)
+#' lapply(states, manydata::mreport)
 #' ```
 "states"
