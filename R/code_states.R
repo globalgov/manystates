@@ -237,4 +237,17 @@ countryregex <- dplyr::tribble(
   "JOR","Jordan","jordan|jordanie",
   "JPN","Japan","japan|nippon|japon",
   "JPR","Jaipur","jaipur",
+  ## N ####
+  "NAG","Nagpur","nagpur",
+  "NAM","Namibia","namibia|namibie",
+  "NAS","Nassau","nassau",
+  "NER","Niger","\bniger(?!ia)",
+  "NGA","Nigeria","nigeria",
+  "NIC","Nicaragua","nicaragua",
+  "NIU","Niue","niue",
+  "NLD","Netherlands","(?!.*ant)(?!.*carib).*netherlands|netherlands.antil|dutch.antil|aruba|curacao|pays-bas",
+  "NOR","Norway","norway|norweg|norvege",
+  "NPL","Nepal","nepal",
+  "NRU","Nauru","nauru",
+  "NZL","New Zealand","new.?zealand|nouvelle-zelande",
 )
