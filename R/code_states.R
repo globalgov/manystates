@@ -186,4 +186,16 @@ countryregex <- dplyr::tribble(
   "DRV","Annam","annam",
   "DZA","Algeria","ottoman.?algeria|algerie|(?<!ottoman )algeria",
   "DZG","Free City of Danzig","free city of danzig",
+  ## E ####
+  "EAZ","Zanzibar","zanzibar",
+  "ECU","Ecuador","ecuador|equateur",
+  "EGY","Egypt","egypt|egypte",
+  "EHT","State of Haiti","state of haiti",
+  "ERI","Eritrea","eritrea|erythree",
+  "ESH","Western Sahara","western sahara|sahrawi|sahara occidental",
+  "ESP","Spain","spain|castile|spanish(?! guinea)|espagne",
+  "EST","Estonia","estonia|estonie",
+  "ETH","Ethiopia","ethiopia|abyssinia|ethiopie",
+  "ETS","Eastern Turkistan","eastern turkistan",
+  "EUE","European Union","european union|\seu\s|\beu\b|^e[[:punct:]]u[[:punct:]]\s|\se[[:punct:]]u[[:punct:]]\s|\se[[:punct:]]u[[:punct:]]$|\be[[:punct:]]u[[:punct:]]\b",
 )
