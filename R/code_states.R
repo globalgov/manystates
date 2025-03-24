@@ -218,4 +218,15 @@ countryregex <- dplyr::tribble(
   "HSG","Hesse Grand Ducal","hess.*gran.*ducal|hesse.darmstadt",
   "HTI","Haiti","haiti|hayti|haiti",
   "HUN","Hungary","(?<!austria-|austria )hungary|hungarian|hongrie",
+  ## I ####
+  "IDN","Indonesia","indonesia|indonesie",
+  "IND","India","india(?!.*ocea)|inde",
+  "INO","Indore","indore",
+  "IPH","Perak","perak",
+  "IRL","Ireland","(?=.*(?<!northern )ireland)(?=.*(?<!britain and )ireland)|irish|irlande",
+  "IRN","Islamic Republic of Iran","\biran|persia|iran",
+  "IRQ","Iraq","\biraq|mesopotamia|irak",
+  "ISL","Iceland","iceland|islande",
+  "ISR","Israel","israel",
+  "ITA","Italy","italy|italian|italo|italie",
 )
