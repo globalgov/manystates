@@ -372,6 +372,12 @@ countryregex <- dplyr::tribble(
   "TUV","Tuvalu","tuvalu",
   "TWN","Chinese Taipei","taiwan|taipei|formosa|taiwan",
   "TZA","United Republic of Tanzania","tanzania|tanzanie",
+  ## V ####
+  "VAT","Holy See","holy.?see|vatican|papal.?st|etat de la cite du vatican",
+  "VCT","St. Vincent and the Grenadines","vincent|saint-vincent-et-les-grenadines",
+  "VEN","Bolivarian Republic of Venezuela","venezuela",
+  "VNM","Viet Nam","(?<=socialist|democratic|north).*viet.?nam|viet.?nam socialist|viet.?nam democratic|\bviet.?nam$|viet.?nam.?dem|dem.?rep.?viet.?nam",
+  "VUT","Vanuatu","vanuatu|new.?hebrides|vanuatu",
   ## W ####
   "WAD","Wadai","wadai",
   "WRT","Wuerttemburg","w(ue|ü)rttemburg|w.rtemberg",
