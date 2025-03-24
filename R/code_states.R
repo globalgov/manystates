@@ -101,3 +101,7 @@ code_states <- function(title, activity = TRUE, replace = NULL) {
   parties
 }
 
+# Regex ####
+countryregex <- dplyr::tribble(
+  ~stateID, ~Label, ~Regex,
+)
