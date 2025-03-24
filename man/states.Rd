@@ -20,29 +20,17 @@ For more information and references to each of the datasets used,
 please use the \code{manydata::call_sources()} and \code{manydata::compare_dimensions()} functions.
 }
 \source{
-\describe{
-\item{HUGGO: }{
-Hollway, James, Henrique Sposito, and Jael Tan. 2021. \emph{manystates: States for manydata}.
-}
-\item{GW: }{
-Gleditsch, K.S., and M. D. Ward. “Interstate system membership: A revised list of the independent states since 1816”.
-\emph{International Interactions} 25.4 (1999), pp. 393-413.
-\url{http://ksgleditsch.com/data-4.html}
-}
-\item{ISD: }{
-Griffiths, R.D., and C. R. Butcher. “Introducing the international system (s) dataset (ISD), 1816-2011”.
-\emph{International Interactions} 39.5 (2013), pp. 748-768.
-\url{http://www.ryan-griffiths.com/data}
-}
+\itemize{
+\item Hollway, James, Henrique Sposito, and Jael Tan. 2021. States for manydata.
+\item Gleditsch, K.S., and M. D. Ward. 'Interstate system membership: A revised list of the independent states since 1816'. International Interactions 25.4 (1999), pp. 393-413.
+\item Griffiths, R.D., and C. R. Butcher. 'Introducing the international system(s) dataset (ISD), 1816-2011'. International Interactions 39.5 (2013), pp. 748-768.
 }
 }
 \usage{
 states
 }
 \description{
-The \code{states} datacube is a list containing
-3 datasets:
-HUGGO, GW, and ISD.
+The \code{manystates::states} datacube is a list containing 3 datasets: HUGGO, GW, and ISD.
 It is a work-in-progress, so please let us know if you have any comments or suggestions.
 }
 \details{

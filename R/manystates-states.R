@@ -1,7 +1,5 @@
 #' States datacube
-#' @description The `states` datacube is a list containing 
-#'   `r length(manystates::states)` datasets: 
-#'   `r cli::pluralize("{names(manystates::states)}")`.
+#' @description `r describe_datacube(manystates::states)`.
 #'   It is a work-in-progress, so please let us know if you have any comments or suggestions.
 #' @format
 #' \describe{
@@ -18,21 +16,7 @@
 #' For more information and references to each of the datasets used,
 #' please use the `manydata::call_sources()` and `manydata::compare_dimensions()` functions.
 #' @source
-#' \describe{
-#' \item{HUGGO: }{
-#' Hollway, James, Henrique Sposito, and Jael Tan. 2021. _manystates: States for manydata_.
-#' }
-#' \item{GW: }{
-#' Gleditsch, K.S., and M. D. Ward. “Interstate system membership: A revised list of the independent states since 1816”.
-#' _International Interactions_ 25.4 (1999), pp. 393-413.
-#' \url{http://ksgleditsch.com/data-4.html}
-#' }
-#' \item{ISD: }{
-#' Griffiths, R.D., and C. R. Butcher. “Introducing the international system (s) dataset (ISD), 1816-2011”.
-#' _International Interactions_ 39.5 (2013), pp. 748-768.
-#' \url{http://www.ryan-griffiths.com/data}
-#' }
-#' }
+#'   `r call_citations(states, output = "help")`
 #' @section Mapping:
 #' 
 #' |  *manystates*  | *GW*  | *ISD* | 
@@ -50,3 +34,12 @@
 #' lapply(states, manydata::mreport)
 #' ```
 "states"
+
+info_states <- tibble::tibble(Dataset = names(data(states, package = "manystates")),
+                               Source = c("Hollway, James, Henrique Sposito, and Jael Tan. 2021. States for manydata.",
+                                          "Gleditsch, K.S., and M. D. Ward. 'Interstate system membership: A revised list of the independent states since 1816'. International Interactions 25.4 (1999), pp. 393-413.",
+                                          "Griffiths, R.D., and C. R. Butcher. 'Introducing the international system(s) dataset (ISD), 1816-2011'. International Interactions 39.5 (2013), pp. 748-768."),
+                               URL = c("",
+                                       "http://ksgleditsch.com/data-4.html",
+                                       "http://www.ryan-griffiths.com/data"))
+
