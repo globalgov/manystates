@@ -260,4 +260,14 @@ countryregex <- dplyr::tribble(
   "WAD","Wadai","wadai",
   "WRT","Wuerttemburg","w(ue|ü)rttemburg|w.rtemberg",
   "WSM","Samoa","(?!.*amer).*samoa|samoa",
+  ## Z ####
+  "ZAF","South Africa","south.africa|s\. africa|afrique du sud",
+  "ZIN","Zinder (Damagaram)","zinder (damagaram)",
+  "ZMB","Zambia","zambia|northern.?rhodesia|zambie",
+  "ZUL","Zululand","zululand",
+  "ZWE","Zimbabwe","zimbabwe|(?<!northern )rhodesia|zimbabwe",
+  ## Other ####
+  "EC","European Community","european economic community|european community|e[[:punct:]]c[[:punct:]]|^eec$|^ec$",
+  "AU","African Union","african union",
+  "EFTA","European Free Trade Association","^efta$|european free trade association"
 )
