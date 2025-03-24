@@ -250,4 +250,10 @@ countryregex <- dplyr::tribble(
   "NPL","Nepal","nepal",
   "NRU","Nauru","nauru",
   "NZL","New Zealand","new.?zealand|nouvelle-zelande",
+  ## O ####
+  "OFS","Orange Free State","orange free state|\sovs\s",
+  "OLD","Oldenburg","oldenburg",
+  "OMN","Oman","\boman|trucial",
+  "OVB","Ovimbundu","ovimbundu",
+  "OYO","Oyo","oyo",
 )
