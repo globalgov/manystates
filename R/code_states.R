@@ -256,4 +256,8 @@ countryregex <- dplyr::tribble(
   "OMN","Oman","\boman|trucial",
   "OVB","Ovimbundu","ovimbundu",
   "OYO","Oyo","oyo",
+  ## W ####
+  "WAD","Wadai","wadai",
+  "WRT","Wuerttemburg","w(ue|ü)rttemburg|w.rtemberg",
+  "WSM","Samoa","(?!.*amer).*samoa|samoa",
 )
