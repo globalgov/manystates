@@ -104,4 +104,24 @@ code_states <- function(title, activity = TRUE, replace = NULL) {
 # Regex ####
 countryregex <- dplyr::tribble(
   ~stateID, ~Label, ~Regex,
+  ## A ####
+  "ABK","Abkhazia","abkhaz",
+  "ACH","Aceh","aceh",
+  "AFG","Afghanistan","afghan|afghanistan",
+  "AGO","Angola","angola",
+  "ALB","Albania","albania|albanie",
+  "ALT","Los Altos","los altos",
+  "AND","Andorra","andorra|andorre",
+  "ARE","United Arab Emirates","emirates|u[[:punct:]]a[[:punct:]]e[[:punct:]]|uae|united.?arab.?em|emirats arabes unis",
+  "ARG","Argentina","argentin|argentine",
+  "ARM","Armenia","armenia|armenie",
+  "ASA","Assam","assam",
+  "ASI","Asir","asir",
+  "AST","Ashanti","ashanti",
+  "ATG","Antigua and Barbuda","antigua|barbuda|antigua-et-barbuda",
+  "AUH","Austria-Hungary","austria-hungary",
+  "AUS","Australia","australia|australie",
+  "AUT","Austria","austria(?!-hungary| hungary)|austri.*emp|austrian|autriche",
+  "AZA","Azande","azande",
+  "AZE","Azerbaijan","azerbaijan|azerbaidjan",
 )
