@@ -346,6 +346,11 @@ countryregex <- dplyr::tribble(
   ## Q ####
   "QAT","Qatar","qatar",
   "QUA","Qu'aiti Sultanate","qu'aiti sultanate",
+  ## R ####
+  "ROU","Romania","r(o|u|ou)mania|roumanie",
+  "RUS","Russian Federation","russia|russian fed.*|soviet.?union|union of soviet|u[[:punct:]]s[[:punct:]]s[[:punct:]]r[[:punct:]]|socialist.?republics|USSR|RSFSR|russie",
+  "RVN","Republic of Vietnam","(?<!socialist|democratic) republic of viet.?nam|\brep.*viet.?nam|viet.?nam rep|south viet.?nam",
+  "RWA","Rwanda","rwanda|rwandese|ruanda",
   ## T ####
   "TBT","Tibet","tibet",
   "TCD","Chad","\bchad|tchad",
