@@ -198,4 +198,12 @@ countryregex <- dplyr::tribble(
   "ETH","Ethiopia","ethiopia|abyssinia|ethiopie",
   "ETS","Eastern Turkistan","eastern turkistan",
   "EUE","European Union","european union|\seu\s|\beu\b|^e[[:punct:]]u[[:punct:]]\s|\se[[:punct:]]u[[:punct:]]\s|\se[[:punct:]]u[[:punct:]]$|\be[[:punct:]]u[[:punct:]]\b",
+  ## F ####
+  "FIN","Finland","finland|finlande",
+  "FJI","Fiji","fiji|fidji",
+  "FNJ","Funj","funj",
+  "FRA","France","(?!.*\bdep)(?!.*martinique).*france|french.?republic|\bgaul|france",
+  "FRO","Faroe Islands","faroe|faeroe|iles feroe",
+  "FSM","Federated States of Micronesia","micronesia|micronesie (etats federes de)",
+  "FTO","Fouta Toro","fouta toro|futa",
 )
