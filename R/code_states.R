@@ -206,4 +206,16 @@ countryregex <- dplyr::tribble(
   "FRO","Faroe Islands","faroe|faeroe|iles feroe",
   "FSM","Federated States of Micronesia","micronesia|micronesie (etats federes de)",
   "FTO","Fouta Toro","fouta toro|futa",
+  ## H ####
+  "HAN","Hanover","hanover",
+  "HAW","Hawaii","hawaii",
+  "HBG","Hamburg","hamburg",
+  "HEJ","Hejaz","hejaz",
+  "HKG","Hong Kong","Hong Kong|r.a.s. chinoise de hong kong",
+  "HND","Honduras","(?<!british )honduras|honduras",
+  "HRV","Croatia","croatia|croatie",
+  "HSE","Hesse Electoral","hesse.*lectoral|hesse.kassel",
+  "HSG","Hesse Grand Ducal","hess.*gran.*ducal|hesse.darmstadt",
+  "HTI","Haiti","haiti|hayti|haiti",
+  "HUN","Hungary","(?<!austria-|austria )hungary|hungarian|hongrie",
 )
