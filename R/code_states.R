@@ -229,4 +229,12 @@ countryregex <- dplyr::tribble(
   "ISL","Iceland","iceland|islande",
   "ISR","Israel","israel",
   "ITA","Italy","italy|italian|italo|italie",
+  ## J ####
+  "JAM","Jamaica","jama.?ca|jamaique",
+  "JMK","Jimma-Kakka","jimma-kakka",
+  "JOD","Jodhpur","jodhpur",
+  "JOH","Johore","johor",
+  "JOR","Jordan","jordan|jordanie",
+  "JPN","Japan","japan|nippon|japon",
+  "JPR","Jaipur","jaipur",
 )
