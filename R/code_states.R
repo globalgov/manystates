@@ -173,4 +173,17 @@ countryregex <- dplyr::tribble(
   "CUT","Cutch","cutch|Kutch|Kachchh",
   "CYP","Cyprus","cyprus|chypre",
   "CZE","Czech Republic","(?=.*rep).*czech|czechia|bohemia|czechoslovakia|tchequie",
+  ## D ####
+  "DDR","German Democratic Republic","german democratic rep|democratic.?rep.*germany|east.germany",
+  "DEU","Germany","(?<!east )germany|german(?!.*democratic) republic|prussia|allemagne",
+  "DFR","Darfur","darfur",
+  "DIR","Dir"," dir ",
+  "DJA","Fouta Djallon","fouta djallon",
+  "DJI","Djibouti","djibouti",
+  "DMA","Dominica","dominica(?!n)|dominique",
+  "DNK","Denmark","denmark|danish(?!.*waters)|danemark",
+  "DOM","Dominican Republic","dominican.rep|republique dominicaine",
+  "DRV","Annam","annam",
+  "DZA","Algeria","ottoman.?algeria|algerie|(?<!ottoman )algeria",
+  "DZG","Free City of Danzig","free city of danzig",
 )
