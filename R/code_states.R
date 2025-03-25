@@ -123,7 +123,7 @@ countryregex <- dplyr::tribble(
   "AUS","Australia","australia|australie",
   "AUT","Austria","austria(?!-hungary| hungary)|austri.*emp|austrian|autriche",
   "AZA","Azande","azande",
-  "AZE","Azerbaijan","azerbaijan|azerbaidjan",
+  "AZE","Azerbaijan","azerbaijan|azerbaidjan|azerbeijan",
   ## B ####
   "BAD","Baden","baden",
   "BAV","Bavaria","bavaria",
