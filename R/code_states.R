@@ -390,6 +390,11 @@ countryregex <- dplyr::tribble(
   "WAD","Wadai","wadai",
   "WRT","Wuerttemburg","w(ue|ü)rttemburg|w.rtemberg",
   "WSM","Samoa","(?!.*amer).*samoa|samoa",
+  ## Y ####
+  "YEK","Yeke Kingdom","yeke kingdom",
+  "YEM","Yemen","(?<= arab|north|sana).*yemen|yemen(?= arab)|\byemen\b",
+  "YPR","Yemen People’s Republic","(?=.*peo).*yemen|(?!.*rep)(?=.*dem).*yemen|(?=.*south).*yemen|(?=.*aden).*yemen|(?=.*\bp\.?d\.?r).*yemen",
+  "YUG","Yugoslavia","yugoslavia",
   ## Z ####
   "ZAF","South Africa","south.africa|s\. africa|afrique du sud",
   "ZIN","Zinder (Damagaram)","zinder (damagaram)",
