@@ -430,7 +430,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "TZA","United Republic of Tanzania","tanzania|tanzanie",
   ## U ####
   "UGA","Uganda","uganda|buganda|ouganda",
-  "UKR","Ukraine","ukrain|ukraine|ukrainian ssr",
+  "UKR","Ukraine","ukrain|ukraine|ukrainian ssr|ukrainian soviet",
   "UPC","United Provinces of Central America","united provinces of central america|United Provinces of CA|United Province of CA|United Province CA",
   "UPR","Udaipur","udaipur",
   "URY","Uruguay","uruguay",
