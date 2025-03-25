@@ -167,7 +167,7 @@ countryregex <- dplyr::tribble(
   "COK","Cook Islands","\bcook|iles cook",
   "COL","Colombia","(?<!great |gran )colombia|colombie",
   "COM","Comoros","comoro|comores",
-  "CPV","Cape Verde","verde|cap-vert",
+  "CPV","Cape Verde","verde|cap-vert|cabo verde|cap vert",
   "CRI","Costa Rica","costa.?rica|costa rica",
   "CUB","Cuba","\bcuba|cuba",
   "CUT","Cutch","cutch|Kutch|Kachchh",
