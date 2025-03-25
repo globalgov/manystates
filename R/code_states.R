@@ -189,7 +189,7 @@ countryregex <- dplyr::tribble(
   ## E ####
   "EAZ","Zanzibar","zanzibar",
   "ECU","Ecuador","ecuador|equateur",
-  "EGY","Egypt","egypt|egypte",
+  "EGY","Egypt","egypt|egypte|united arab republic",
   "EHT","State of Haiti","state of haiti",
   "ERI","Eritrea","eritrea|erythree",
   "ESH","Western Sahara","western sahara|sahrawi|sahara occidental",
