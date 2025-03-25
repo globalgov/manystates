@@ -128,7 +128,7 @@ countryregex <- dplyr::tribble(
   "BAD","Baden","baden",
   "BAV","Bavaria","bavaria",
   "BDI","Burundi","burundi",
-  "BEL","Belgium","(?!.*luxem).*belgium|belgian|flemish|belgique",
+  "BEL","Belgium","(?!.*luxem).*belgium|belgian|flemish|belgique|walloon|brussels|bruxelles",
   "BEN","Benin","benin|dahome|dahomey",
   "BFA","Burkina Faso","burkina|\bfaso|upper.?volta|burkina faso",
   "BGD","Bangladesh","bangladesh|(?=.*east).*paki?stan|bangladesh",
