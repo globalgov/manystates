@@ -153,7 +153,7 @@ countryregex <- dplyr::tribble(
   "BUR","Urundi","urundi|burundi",
   "BWA","Botswana","botswana|bechuana|botswana",
   ## C ####
-  "CAF","Central African Republic","\bcentral.african.republic|central afr.* rep.*|republique centrafricaine",
+  "CAF","Central African Republic","\bcentral.african.republic|central afr.* rep.*|republique centrafricaine|centrafrique",
   "CAN","Canada","canada|canadian|canada",
   "CAY","Cayor","cayor|Kajoor",
   "CHE","Switzerland","switz|swiss|suisse",
