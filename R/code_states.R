@@ -372,6 +372,14 @@ countryregex <- dplyr::tribble(
   "TUV","Tuvalu","tuvalu",
   "TWN","Chinese Taipei","taiwan|taipei|formosa|taiwan",
   "TZA","United Republic of Tanzania","tanzania|tanzanie",
+  ## U ####
+  "UGA","Uganda","uganda|buganda|ouganda",
+  "UKR","Ukraine","ukrain|ukraine|ukrainian ssr",
+  "UPC","United Provinces of Central America","united provinces of central america|United Provinces of CA|United Province of CA|United Province CA",
+  "UPR","Udaipur","udaipur",
+  "URY","Uruguay","uruguay",
+  "USA","United States of America","united states of america|united states(?!.*of brazil)|u[[:punct:]]s[[:punct:]]a[[:punct:]]|u[[:punct:]]s[[:punct:]](?!.*s[[:punct:]]r[[:punct:]])|\busa\b|\bus\b|etats-unis",
+  "UZB","Uzbekistan","uzbek|ouzbekistan",
   ## V ####
   "VAT","Holy See","holy.?see|vatican|papal.?st|etat de la cite du vatican",
   "VCT","St. Vincent and the Grenadines","vincent|saint-vincent-et-les-grenadines",
