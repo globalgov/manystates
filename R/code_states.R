@@ -197,7 +197,7 @@ countryregex <- dplyr::tribble(
   "EST","Estonia","estonia|estonie",
   "ETH","Ethiopia","ethiopia|abyssinia|ethiopie",
   "ETS","Eastern Turkistan","eastern turkistan",
-  "EUE","European Union","european union|\seu\s|\beu\b|^e[[:punct:]]u[[:punct:]]\s|\se[[:punct:]]u[[:punct:]]\s|\se[[:punct:]]u[[:punct:]]$|\be[[:punct:]]u[[:punct:]]\b",
+  "EUE","European Union","european union|\beu\b|\be[[:punct:]]u[[:punct:]]\b",
   ## F ####
   "FIN","Finland","finland|finlande",
   "FJI","Fiji","fiji|fidji",
@@ -209,7 +209,7 @@ countryregex <- dplyr::tribble(
   ## G ####
   "GAB","Gabon","gabon",
   "GBR","United Kingdom",",
-england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:punct:]]k[[:punct:]]\b|\buk\/|\/uk\b|\buk\/|\/uk\b|royaume-uni",
+england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:punct:]]k[[:punct:]]\b|royaume-uni",
   "GCL","Gran Colombia","gran colombia|great colombia",
   "GEO","Georgia","(?<!south )georgia|georgie",
   "GHA","Ghana","ghana|gold.?coast|ghana",
@@ -336,7 +336,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "NRU","Nauru","nauru",
   "NZL","New Zealand","new.?zealand|nouvelle-zelande",
   ## O ####
-  "OFS","Orange Free State","orange free state|\sovs\s",
+  "OFS","Orange Free State","orange free state|\bovs\b",
   "OLD","Oldenburg","oldenburg",
   "OMN","Oman","\boman|trucial",
   "OVB","Ovimbundu","ovimbundu",
@@ -370,7 +370,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   ## S ####
   "SAL","Saloum","saloum",
   "SAR","Sardinia","sardinia|Sardinia",
-  "SAU","Emirate of Diriyah","\bsa\w*.?arabia|first saudi state|emirate of dir.?iyah|arabie saoudite",
+  "SAU","Emirate of Diriyah","\bsa\b*.?arabia|first saudi state|emirate of dir.?iyah|arabie saoudite",
   "SAW","Sawantvadi","sawantvadi|sawantwadi",
   "SAX","Saxony","saxony",
   "SDN","Sudan","(?<!south )sudan|soudan|funj sultanate of sennar",
@@ -392,7 +392,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "SOM","Somalia","somali|somalie",
   "SOT","South Ossetia","south ossetia",
   "SRB","Serbia","(?!.*monte).*serbia|serbie",
-  "SSD","South Sudan","\bs\w*.?sudan|soudan du sud",
+  "SSD","South Sudan","\bs\b*.?sudan|soudan du sud",
   "STP","Sao Tome and Principe","\bs(a|ã)o.?tom(e|é)|sao tome-et-principe",
   "SUL","Sulu","sulu",
   "SUR","Suriname","surinam|dutch.?guiana|suriname",
@@ -449,10 +449,10 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   ## Y ####
   "YEK","Yeke Kingdom","yeke kingdom",
   "YEM","Yemen","(?<= arab|north|sana).*yemen|yemen(?= arab)|\byemen\b",
-  "YPR","Yemen People’s Republic","(?=.*peo).*yemen|(?!.*rep)(?=.*dem).*yemen|(?=.*south).*yemen|(?=.*aden).*yemen|(?=.*\bp\.?d\.?r).*yemen",
+  "YPR","Yemen People’s Republic","(?=.*peo).*yemen|(?!.*rep)(?=.*dem).*yemen|(?=.*south).*yemen|(?=.*aden).*yemen|(?=.*\bp\\.?d\\.?r).*yemen",
   "YUG","Yugoslavia","yugoslavia",
   ## Z ####
-  "ZAF","South Africa","south.africa|s\. africa|afrique du sud",
+  "ZAF","South Africa","south.africa|s\\. africa|afrique du sud",
   "ZIN","Zinder (Damagaram)","zinder (damagaram)",
   "ZMB","Zambia","zambia|northern.?rhodesia|zambie",
   "ZUL","Zululand","zululand",
