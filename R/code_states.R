@@ -163,7 +163,7 @@ countryregex <- dplyr::tribble(
   "CIV","Cote d'Ivoire","ivoire|ivory|cote d'ivoire",
   "CMR","Cameroon","cameroon|cameroun|cameroun",
   "COD","Democratic Republic of the Congo","dem.*congo|congo(.+)?dem|d[[:punct:]]r[[:punct:]]c[[:punct:]]|belgian.?congo|congo.?free.?state|kinshasa|zaire|l.opoldville|drc| droc |rdc|^droc | droc$|congo-kinshasa",
-  "COG","Congo","(?=rep).*congo|(?<!democratic )republic of the congo|congo[[:punct:]]? (?!dem.*)rep|^congo$|congo-brazzaville",
+  "COG","Congo","(?=rep).*congo|(?<!democratic )republic of the congo|congo[[:punct:]]? (?!dem.*)rep|^congo$|congo-brazzaville|brazzaville|congobrazz",
   "COK","Cook Islands","\bcook|iles cook",
   "COL","Colombia","(?<!great |gran )colombia|colombie",
   "COM","Comoros","comoro|comores",
