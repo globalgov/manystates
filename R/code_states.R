@@ -101,6 +101,19 @@ code_states <- function(title, activity = TRUE, replace = NULL) {
   parties
 }
 
+#' @export
+code_states2 <- function(charvec, code = TRUE){
+  
+  purrr::map_chr(charvec, function(x) {
+    out <- as.data.frame(countryregex)[
+                      which(stringi::stri_detect_regex(x, unlist(countryregex[, 3]),
+                                                 max_count = 1,
+                                                 opts_regex = list(case_insensitive = TRUE))),
+                      ifelse(code, 1, 2)]
+    if(length(out)==0) NA_character_ else out
+  })
+}
+
 # Regex ####
 countryregex <- dplyr::tribble(
   ~stateID, ~Label, ~Regex,
