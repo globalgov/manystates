@@ -283,7 +283,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "KNB","Kanem-Bornu","kanem-bornu",
   "KOK","Kokand","kokand",
   "KON","Kongo Kingdom","kongo kingdom",
-  "KOR","Republic of Korea","(?<!d.p.r. |dpr |democrat |Democratic People's Republic of |north )korea(?!.*d.p.r)|DPRK|coree du sud",
+  "KOR","Republic of Korea","(?<!d.p.r. |dpr |democrat |Democratic People's Republic of |north )korea(?!.*d.p.r)|cor[eé]e.*sud",
   "KOS","Kosovo","kosovo",
   "KOT","Kotah","kotah",
   "KPT","Kapurthala","kapurthala",
