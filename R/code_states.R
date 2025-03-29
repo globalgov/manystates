@@ -152,7 +152,7 @@ countryregex <- dplyr::tribble(
   "BHT","Bharatpur","bharatpur",
   "BIH","Bosnia and Herzegovina","herzegovina|bosnia|bosnie-herzegovine|herzego",
   "BIK","Bikaner","bikaner",
-  "BLR","Belarus","belarus|byelo|bielorussie",
+  "BLR","Belarus","belarus|byelo|bielorussie|bélarus",
   "BLZ","Belize","belize|(?=.*british).*honduras|belize",
   "BNJ","Benjermassin","benjermassin",
   "BOL","Plurinational State of Bolivia","bolivia|bolivie",
