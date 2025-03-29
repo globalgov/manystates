@@ -451,8 +451,8 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   ## V ####
   "VAT","Holy See","holy.?see|vatican|papal.?st|etat de la cite du vatican",
   "VCT","St. Vincent and the Grenadines","vincent|saint-vincent-et-les-grenadines",
-  "VEN","Bolivarian Republic of Venezuela","venezuela",
   "VNM","Viet Nam","(?<=socialist|democratic|north).*viet.?nam|viet.?nam socialist|viet.?nam democratic|\bviet.?nam$|viet.?nam.?dem|dem.?rep.?viet.?nam",
+  "VEN","Bolivarian Republic of Venezuela","v[eé]n[eé]zu[eé]la",
   "VUT","Vanuatu","vanuatu|new.?hebrides|vanuatu",
   ## W ####
   "WAD","Wadai","wadai",
