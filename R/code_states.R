@@ -303,7 +303,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "LIP","Lippe","lippe",
   "LKA","Sri Lanka","sri.?lanka|ceylon|sri lanka",
   "LSO","Lesotho","lesotho|basuto.*",
-  "LTU","Lithuania","lithuania|lituanie",
+  "LTU","Lithuania","lithuania|lituanie|lithuanie",
   "LUB","Luba","luba",
   "LUN","Lunda Empire","lunda empire|kingdom of lunda",
   "LUX","Luxembourg","(?<!belgian )luxem|luxembourg",
