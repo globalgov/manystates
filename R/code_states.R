@@ -346,7 +346,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "NOR","Norway","norway|norweg|norvege",
   "NPL","Nepal","nepal",
   "NRU","Nauru","nauru",
-  "NZL","New Zealand","new.?zealand|nouvelle-zelande",
+  "NZL","New Zealand","new.?zealand|nouvelle.z[eé]lande",
   ## O ####
   "OFS","Orange Free State","orange free state|\bovs\b",
   "OLD","Oldenburg","oldenburg",
