@@ -247,7 +247,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "HTI","Haiti","haiti|hayti|haiti",
   "HUN","Hungary","(?<!austria-|austria )hungary|hungarian|hongrie",
   ## I ####
-  "IDN","Indonesia","indonesia|indonesie",
+  "IDN","Indonesia","indonesia|indonésie",
   "IND","India","india(?!.*ocea)|inde",
   "INO","Indore","indore",
   "IPH","Perak","perak",
