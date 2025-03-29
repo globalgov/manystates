@@ -295,7 +295,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   ## L ####
   "LAO","Lao People's Democratic Republic","\blaos?\b|laos",
   "LBN","Lebanon","lebanon|liban",
-  "LBR","Liberia","liberia",
+  "LBR","Liberia","liberia|libéria",
   "LBY","Libya","libya|tripolitania|libye",
   "LCA","St. Lucia","\blucia|sainte-lucie",
   "LIE","Liechtenstein","liechtenstein",
