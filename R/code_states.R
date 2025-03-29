@@ -196,7 +196,7 @@ countryregex <- dplyr::tribble(
   "DNK","Denmark","denmar|danish(?!.*waters)|danemark|faroe",
   "DOM","Dominican Republic","dominican rep|republique dominicaine|santo domin",
   "DRV","Annam","annam",
-  "DZA","Algeria","ottoman.?algeria|algerie|(?<!ottoman )algeria",
+  "DZA","Algeria","ottoman.?algeria|algerie|algérie|(?<!ottoman )algeria",
   "DZG","Free City of Danzig","free city of danzig",
   ## E ####
   "EAZ","Zanzibar","zanzibar",
