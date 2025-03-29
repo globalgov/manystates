@@ -255,7 +255,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "IRN","Islamic Republic of Iran","\biran|persia|iran",
   "IRQ","Iraq","\biraq|mesopotamia|irak",
   "ISL","Iceland","iceland|islande",
-  "ISR","Israel","israel",
+  "ISR","Israel","israel|israël",
   "ITA","Italy","italy|italian|italo|italie",
   ## J ####
   "JAM","Jamaica","jama.?ca|jama[iï]que",
