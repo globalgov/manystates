@@ -339,7 +339,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "NAM","Namibia","namibia|namibie",
   "NAS","Nassau","nassau",
   "NER","Niger","\bniger(?!ia)",
-  "NGA","Nigeria","nigeria",
+  "NGA","Nigeria","nig[eé]ria",
   "NIC","Nicaragua","nicaragua",
   "NIU","Niue","niue",
   "NLD","Netherlands","(?!.*ant)(?!.*carib).*netherlands|netherlands.antil|dutch.antil|aruba|curacao|pays-bas",
