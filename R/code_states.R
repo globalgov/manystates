@@ -228,7 +228,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "GIN","Guinea","(?<!new |spanish |portuguese |equatorial )guinea(?!.*equ|-bissau| bissau)|\bguinee\b",
   "GMB","Gambia","gambia|gambie",
   "GNB","Guinea-Bissau","bissau|(?=.*portu).*guinea|guinee-bissau",
-  "GNQ","Equatorial Guinea","guine.*eq|eq.*guine|(?=.*span).*guinea|guinee equatoriale",
+  "GNQ","Equatorial Guinea","guine.*eq|eq.*guine|(?=.*span).*guinea|guin[eé]e [eé]quatoriale",
   "GRC","Greece","greece|hellenic|hellas|greek|gr[eè]ce",
   "GRD","Grenada","grenada|grenade",
   "GTM","Guatemala","guatemala",
