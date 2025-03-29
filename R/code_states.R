@@ -388,7 +388,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "SDN","Sudan","(?<!south )sudan|soudan|funj sultanate of sennar",
   "SEG","Segou","segou|s.?gou",
   "SEL","Selangor","selangor",
-  "SEN","Senegal","senegal",
+  "SEN","Senegal","s[eé]n[eé]gal",
   "SGP","Singapore","singapore|singapour",
   "SHO","Shoa","shoa|shewa|shua|showa|shuwa",
   "SIA","Siak","siak|siunia|syunik",
