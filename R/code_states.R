@@ -358,7 +358,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "PAK","Pakistan","(?<!east |eastern )paki?stan|pakistan",
   "PAL","Palembang","palembang",
   "PAN","Panama","panama",
-  "PER","Peru","peru|perou",
+  "PER","Peru","peru|p[eé]rou",
   "PES","Peshwa","peshwa",
   "PHL","Philippines","philippines",
   "PLW","Palau","palau|palaos",
