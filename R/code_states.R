@@ -435,7 +435,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "TRA","Transvaal","transvaal",
   "TTO","Trinidad and Tobago","trinidad|tobag|trinite",
   "TUN","Tunisia","tunisia|tunisie",
-  "TUR","Turkiye","turkey|turkiye|turquie|ottoman emp",
+  "TUR","Turkiye","turkey|t[uü]rkiye|turquie|ottoman emp",
   "TUS","Tuscany","tuscany",
   "TUV","Tuvalu","tuvalu",
   "TWN","Chinese Taipei","taiwan|taipei|formosa|taiwan",
