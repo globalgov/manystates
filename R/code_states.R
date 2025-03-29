@@ -258,7 +258,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "ISR","Israel","israel",
   "ITA","Italy","italy|italian|italo|italie",
   ## J ####
-  "JAM","Jamaica","jama.?ca|jamaique",
+  "JAM","Jamaica","jama.?ca|jama[iï]que",
   "JMK","Jimma-Kakka","jimma-kakka",
   "JOD","Jodhpur","jodhpur",
   "JOH","Johore","johor",
