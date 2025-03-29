@@ -184,7 +184,7 @@ countryregex <- dplyr::tribble(
   "CUB","Cuba","\bcuba|cuba",
   "CUT","Cutch","cutch|Kutch|Kachchh",
   "CYP","Cyprus","cyprus|chypre",
-  "CZE","Czech Republic","(?=.*rep).*czech|czechia|bohemia|czechoslovakia|tchequie",
+  "CZE","Czech Republic","(?=.*rep).*czech|czechia|bohemia|czechoslovakia|tchequie|czech|tchéqu.+|tchèqu.+",
   ## D ####
   "DDR","German Democratic Republic","german democratic rep|democratic.?rep.*germany|east.germany",
   "DEU","Germany","(?<!east )germany|german(?!.*democratic) republic|prussia|allemagne",
