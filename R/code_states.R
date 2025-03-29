@@ -447,7 +447,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "UPR","Udaipur","udaipur",
   "URY","Uruguay","uruguay",
   "USA","United States of America","united states of america|united states(?!.*of brazil)|u[[:punct:]]s[[:punct:]]a[[:punct:]]|u[[:punct:]]s[[:punct:]](?!.*s[[:punct:]]r[[:punct:]])|\busa\b|\bus\b|etats-unis",
-  "UZB","Uzbekistan","uzbek|ouzbekistan",
+  "UZB","Uzbekistan","uzbek|ouzb[eé]kistan",
   ## V ####
   "VAT","Holy See","holy.?see|vatican|papal.?st|etat de la cite du vatican",
   "VCT","St. Vincent and the Grenadines","vincent|saint-vincent-et-les-grenadines",
