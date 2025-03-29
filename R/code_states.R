@@ -324,7 +324,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "MLI","Mali","\bmali\b",
   "MLT","Malta","\bmalta|malte",
   "MMR","Myanmar","myanmar|burma|myanmar (birmanie)",
-  "MNE","Montenegro","(?!.*serbia).*montenegro|montenegro",
+  "MNE","Montenegro","(?!.*serbia).*montenegro|mont[eé]n[eé]gro",
   "MNG","Mongolia","mongol|mongolie",
   "MOD","Modena","modena",
   "MOS","Yatenga (Mossi)","yatenga (mossi)",
