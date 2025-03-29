@@ -223,7 +223,7 @@ countryregex <- dplyr::tribble(
   "GBR","United Kingdom",",
 england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:punct:]]k[[:punct:]]\b|royaume-uni",
   "GCL","Gran Colombia","gran colombia|great colombia",
-  "GEO","Georgia","(?<!south )georgia|georgie",
+  "GEO","Georgia","(?<!south )georgia|georgie|géorgie",
   "GHA","Ghana","ghana|gold.?coast|ghana",
   "GIN","Guinea","(?<!new |spanish |portuguese |equatorial )guinea(?!.*equ|-bissau| bissau)|\bguinee\b",
   "GMB","Gambia","gambia|gambie",
