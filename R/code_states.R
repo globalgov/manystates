@@ -244,7 +244,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "HRV","Croatia","croatia|croatie",
   "HSE","Hesse Electoral","hesse.*lectoral|hesse.kassel",
   "HSG","Hesse Grand Ducal","hess.*gran.*ducal|hesse.darmstadt",
-  "HTI","Haiti","haiti|hayti|haiti",
+  "HTI","Haiti","haiti|hayti|haïti",
   "HUN","Hungary","(?<!austria-|austria )hungary|hungarian|hongrie",
   ## I ####
   "IDN","Indonesia","indonesia|indonésie",
