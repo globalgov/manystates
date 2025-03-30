@@ -411,7 +411,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "SVK","Slovakia","(?<!czecho)slovak|slovaquie",
   "SVN","Slovenia","sloven|slovenie",
   "SWA","Swat","^swat$|dera yusufzai",
-  "SWE","Sweden","swed|suede",
+  "SWE","Sweden","swed|su[eè]de",
   "SWZ","Eswatini","swaziland|eswatini",
   "SXA","Saxe-Atenburg","saxe-atenburg",
   "SXG","Saxe-Coburg-Gotha","saxe-coburg-gotha",
