@@ -460,8 +460,8 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "WSM","Samoa","(?!.*amer).*samoa|samoa",
   ## Y ####
   "YEK","Yeke Kingdom","yeke kingdom",
-  "YEM","Yemen","(?<= arab|north|sana).*yemen|yemen(?= arab)|\byemen\b",
   "YPR","Yemen People’s Republic","(?=.*peo).*yemen|(?!.*rep)(?=.*dem).*yemen|(?=.*south).*yemen|(?=.*aden).*yemen|(?=.*\bp\\.?d\\.?r).*yemen",
+  "YEM","Yemen","(?<= arab|north|sana).*yemen|yemen(?= arab)|y[eé]men",
   "YUG","Yugoslavia","yugoslavia",
   ## Z ####
   "ZAF","South Africa","south.africa|s\\. africa|afrique du sud",
