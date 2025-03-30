@@ -425,7 +425,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "TER","Terengganu","terengganu|trengganu|tringganu",
   "TEX","Texas","texas",
   "TGO","Togo","togo",
-  "THA","Thailand","thailand|\bsiam|thailande",
+  "THA","Thailand","thailand|siam|tha[iï]lande",
   "TJK","Tajikistan","tajik|tadjikistan",
   "TKL","Tokelau","tokelau",
   "TKM","Turkmenistan","turkmen|turkmenistan",
