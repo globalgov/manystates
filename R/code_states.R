@@ -290,7 +290,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "KRG","Karangasem (Bali and Lombok)","karangasem (bali and lombok)",
   "KTA","Kaarta","kaarta",
   "KUB","Kuba","kuba",
-  "KWT","Kuwait","kuwait|koweit",
+  "KWT","Kuwait","kuwait|koweït|koweit",
   "KZB","Kazembe","kazembe",
   ## L ####
   "LAO","Lao People's Democratic Republic","\blaos?\b|laos",
