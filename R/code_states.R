@@ -105,8 +105,9 @@ code_states <- function(title, activity = TRUE, replace = NULL) {
 code_states2 <- function(charvec, code = TRUE){
   
   purrr::map_chr(charvec, function(x) {
-    out <- as.data.frame(countryregex)[
-                      which(stringi::stri_detect_regex(x, unlist(countryregex[, 3]),
+    out <- as.data.frame(countryRegex)[
+                      which(stringi::stri_detect_regex(stringi::stri_enc_toutf8(x), 
+                                                       unlist(countryRegex[, 3]),
                                                  max_count = 1,
                                                  opts_regex = list(case_insensitive = TRUE))),
                       ifelse(code, 1, 2)]
@@ -115,7 +116,7 @@ code_states2 <- function(charvec, code = TRUE){
 }
 
 # Regex ####
-countryregex <- dplyr::tribble(
+countryRegex <- dplyr::tribble(
   ~stateID, ~Label, ~Regex,
   ## A ####
   "ABK","Abkhazia","abkhaz",
