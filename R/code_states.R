@@ -127,7 +127,7 @@ countryregex <- dplyr::tribble(
   "AND","Andorra","andorra|andorre",
   "ARE","United Arab Emirates","emirates|u[[:punct:]]a[[:punct:]]e[[:punct:]]|uae|united.?arab.?em|emirats arabes unis",
   "ARG","Argentina","argentin|argentine",
-  "ARM","Armenia","armenia|armenie",
+  "ARM","Armenia","armenia|arménie",
   "ASA","Assam","assam",
   "ASI","Asir","asir",
   "AST","Ashanti","ashanti",
