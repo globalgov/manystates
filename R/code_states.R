@@ -318,7 +318,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "MDG","Madagascar","madagascar|malagasy|madagasacar",
   "MDK","Mandinka Empire (Wassulu)","mandinka empire (wassulu)",
   "MDV","Maldives","maldive|maldives",
-  "MEC","Mecklenburg Schwerin","mecklenbur.*schwerin",
+  "MEC","Mecklenburg Schwerin","mecklenbur.*schwerin|mecklenbur",
   "MEX","Mexico","mexic|mexique",
   "MHL","Marshall Islands","marshall|iles marshall",
   "MIN","Minangkabau","minangkabau",
