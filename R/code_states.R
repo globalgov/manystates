@@ -345,8 +345,8 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "NIC","Nicaragua","nicaragua",
   "NLD","Netherlands","(?!.*ant)(?!.*carib).*netherlands|netherlands.antil|dutch.antil|aruba|curacao|pays-bas",
   "NOR","Norway","norway|norweg|norvege",
-  "NPL","Nepal","nepal",
   "NIU","Niue","niue|niou[eé]",
+  "NPL","Nepal","n[eé]pal",
   "NRU","Nauru","nauru",
   "NZL","New Zealand","new.?zealand|nouvelle.z[eé]lande",
   ## O ####
