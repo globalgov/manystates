@@ -168,7 +168,7 @@ countryRegex <- dplyr::tribble(
   "BWA","Botswana","botswana|bechuana|botswana",
   ## C ####
   "CAF","Central African Republic","\bcentral.african.republic|central afr.* rep.*|republique centrafricaine|centrafrique",
-  "CAN","Canada","canada|canadian|canada",
+  "CAN","Canada","canada|canadian|canada|newfoundland",
   "CAY","Cayor","cayor|Kajoor",
   "CHE","Switzerland","switz|swiss|suisse",
   "CHL","Chile","chile|chili",
