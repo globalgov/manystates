@@ -369,7 +369,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "POL","Poland","poland|polish|pologne",
   "PPR","Polish Peoples Republic","polish peoples republic",
   "PRK","Democratic People's Republic of Korea","dprk|d.p.r.k|korea.+(d.p.r|dpr|north|dem.*peo.*rep.*)|(d.p.r|dpr|dem.*peo.*rep.*).+korea|north korea|coree du nord",
-  "PRT","Portugal","portugal|portuguese|portugal",
+  "PRT","Portugal","portugal|portuguese|portugal|azores|açores",
   "PRY","Paraguay","paraguay(?! river)|paraguay",
   "PSE","Gaza Empire","palestin|\bgaza|west.?bank|territoires palestiniens",
   "PUN","Punjab","punjab|panj.?b|panj-.?b",
