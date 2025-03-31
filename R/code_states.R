@@ -241,7 +241,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "HAW","Hawaii","hawaii",
   "HBG","Hamburg","hamburg",
   "HEJ","Hejaz","hejaz",
-  "HKG","Hong Kong","Hong Kong|r.a.s. chinoise de hong kong",
+  "HKG","Hong Kong","hong.kong|r.a.s. chinoise de hong kong",
   "HND","Honduras","(?<!british )honduras|honduras",
   "HRV","Croatia","croatia|croatie",
   "HSE","Hesse Electoral","hesse.*lectoral|hesse.kassel",
