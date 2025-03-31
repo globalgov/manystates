@@ -213,7 +213,7 @@ countryRegex <- dplyr::tribble(
   "ETS","Eastern Turkistan","eastern turkistan",
   "EUE","European Union","european union|\beu\b|\be[[:punct:]]u[[:punct:]]\b",
   ## F ####
-  "FIN","Finland","finland|finlande",
+  "FIN","Finland","finland|finlande|aland|åland",
   "FJI","Fiji","fiji|fidji",
   "FNJ","Funj","funj",
   "FRA","France","(?!.*\bdep)(?!.*martinique).*france|french.?republic|\bgaul|france",
