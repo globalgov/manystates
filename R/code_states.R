@@ -315,7 +315,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "MAS","Massina","massina|maasina|macina",
   "MCO","Monaco","monaco",
   "MDA","Republic of Moldova","moldov|moldavia|b(a|e)ssarabia|moldavie",
-  "MDG","Madagascar","madagascar|malagasy|madagascar",
+  "MDG","Madagascar","madagascar|malagasy|madagasacar",
   "MDK","Mandinka Empire (Wassulu)","mandinka empire (wassulu)",
   "MDV","Maldives","maldive|maldives",
   "MEC","Mecklenburg Schwerin","mecklenbur.*schwerin",
