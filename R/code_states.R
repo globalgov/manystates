@@ -144,6 +144,7 @@ countryRegex <- dplyr::tribble(
   "BDI","Burundi","burundi",
   "BEL","Belgium","(?!.*luxem).*belgium|belgian|flemish|belgique|walloon|brussels|bruxelles",
   "BEN","Benin","benin|dahome|dahomey|bénin",
+  "BFA","Burkina Faso","burkina|faso|upper.?volta|burkina ?faso|burkna faso",
   "BGD","Bangladesh","bangladesh|(?=.*east).*paki?stan|bangladesh",
   "BGR","Bulgaria","bulgaria|bulgarie",
   "BHP","Bhopal","bhopal",
