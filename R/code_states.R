@@ -343,10 +343,10 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "NER","Niger","niger(?!ia)",
   "NGA","Nigeria","nig[eé]ria",
   "NIC","Nicaragua","nicaragua",
-  "NIU","Niue","niue",
   "NLD","Netherlands","(?!.*ant)(?!.*carib).*netherlands|netherlands.antil|dutch.antil|aruba|curacao|pays-bas",
   "NOR","Norway","norway|norweg|norvege",
   "NPL","Nepal","nepal",
+  "NIU","Niue","niue|niou[eé]",
   "NRU","Nauru","nauru",
   "NZL","New Zealand","new.?zealand|nouvelle.z[eé]lande",
   ## O ####
