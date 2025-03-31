@@ -335,7 +335,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "MRT","Mauritania","mauritania|mauritanie",
   "MUS","Mauritius","mauritius|maurice",
   "MWI","Malawi","malawi|nyasa|malawi",
-  "MYS","Malaysia","malaysia|malaisie",
+  "MYS","Malaysia","malaysia|malaisie|malay",
   ## N ####
   "NAG","Nagpur","nagpur",
   "NAM","Namibia","namibia|namibie",
