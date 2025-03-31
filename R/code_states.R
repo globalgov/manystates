@@ -466,7 +466,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "YEM","Yemen","(?<= arab|north|sana).*yemen|yemen(?= arab)|y[eé]men",
   "YUG","Yugoslavia","yugoslavia",
   ## Z ####
-  "ZAF","South Africa","south.africa|s\\. africa|afrique du sud",
+  "ZAF","South Africa","south.africa|s\\. africa|afrique du sud|so.africa|venda|bophutatswana|transkei|ciskei",
   "ZIN","Zinder (Damagaram)","zinder (damagaram)",
   "ZMB","Zambia","zambia|northern.?rhodesia|zambie",
   "ZUL","Zululand","zululand",
