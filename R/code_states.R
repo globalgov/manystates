@@ -322,7 +322,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "MEX","Mexico","mexic|mexique",
   "MHL","Marshall Islands","marshall|iles marshall",
   "MIN","Minangkabau","minangkabau",
-  "MKD","North Macedonia","macedonia|fyrom|former yugoslav republic of mac.*|macedoine du nord",
+  "MKD","North Macedonia","macedonia|fyrom|former yugoslav republic of mac.*|mac[eé]doine",
   "MLI","Mali","mali",
   "MLT","Malta","malta|malte",
   "MMR","Myanmar","myanmar|burma|myanmar (birmanie)",
