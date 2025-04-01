@@ -209,7 +209,7 @@ countryRegex <- dplyr::tribble(
   "ESH","Western Sahara","western sahara|sahrawi|sahara occidental",
   "ESP","Spain","spain|castile|spanish(?! guinea)|espagne",
   "EST","Estonia","estonia|estonie",
-  "ETH","Ethiopia","ethiopia|abyssinia|ethiopie",
+  "ETH","Ethiopia","ethiopia|abyssinia|ethiopie|eth.pia",
   "ETS","Eastern Turkistan","eastern turkistan",
   "EUE","European Union","european union|\beu\b|\be[[:punct:]]u[[:punct:]]\b",
   ## F ####
