@@ -216,7 +216,7 @@ countryRegex <- dplyr::tribble(
   "FIN","Finland","finland|finlande|aland|åland",
   "FJI","Fiji","fiji|fidji",
   "FNJ","Funj","funj",
-  "FRA","France","(?!.*\bdep)(?!.*martinique).*france|french.?republic|\bgaul|france",
+  "FRA","France","(?!.*\bdep)(?!.*martinique).*france|french.?republic|gaul|france|french|guadeloupe|burgundy|mayotte|new.caledonia|martinique|r[eé]union|barthelemy|t.martin|st\\..martin|miquelon|futuna",
   "FRO","Faroe Islands","faroe|faeroe|iles feroe",
   "FSM","Federated States of Micronesia","micronesia|micron[eé]sie",
   "FTO","Fouta Toro","fouta toro|futa",
