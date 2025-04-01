@@ -439,9 +439,9 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "TUN","Tunisia","tunisia|tunisie",
   "TUR","Turkiye","turkey|t[uü]rkiye|turquie|ottoman emp",
   "TUS","Tuscany","tuscany",
-  "TZA","United Republic of Tanzania","tanzania|tanzanie",
   "TUV","Tuvalu","tu[vl]a[lv]u",
   "TWN","Chinese Taipei","ta[iï]wan|taipei|formosa",
+  "TZA","United Republic of Tanzania","tanzania|tanzanie|tanganyika",
   ## U ####
   "UGA","Uganda","uganda|buganda|ouganda",
   "UKR","Ukraine","ukrain|ukraine|ukrainian ssr|ukrainian soviet",
