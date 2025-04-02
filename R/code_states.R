@@ -451,8 +451,8 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "USA","United States of America","united states of america|united.states(?!.*of brazil)|u[[:punct:]]s[[:punct:]]a[[:punct:]]|u[[:punct:]]s[[:punct:]](?!.*s[[:punct:]]r[[:punct:]])|\busa\b|\bus\b|etats-unis|northern.mariana|puerto.rico|guam|(?<![:alpha:])usa(?![:alpha:])",
   "UZB","Uzbekistan","uzbek|ouzb[eé]kistan",
   ## V ####
-  "VCT","St. Vincent and the Grenadines","vincent|saint-vincent-et-les-grenadines",
   "VAT","Holy See","holy.?see|vatican|papal.?st|etat de la cite du vatican|saint.siège",
+  "VCT","St. Vincent and the Grenadines","vincent|saint-vincent-et-les-grenadines|st.vin",
   "VEN","Bolivarian Republic of Venezuela","v[eé]n[eé]zu[eé]la",
   "VNM","Viet Nam","(?<=socialist|democratic|north).*viet.?nam|viet.?nam socialist|viet.?nam democratic|\bviet.?nam$|viet.?nam.?dem|dem.?rep.?viet.?nam|viet.?nam n|viet.?nam, n|viet.?nam, d|viet.?nam d|viet.?nam",
   "VUT","Vanuatu","vanuatu|new.?hebrides|vanuatu",
