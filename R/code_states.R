@@ -472,7 +472,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "ZUL","Zululand","zululand",
   "ZWE","Zimbabwe","zimbabwe|(?<!northern )rhodesia|zimbabwe",
   ## Other ####
-  "EC","European Community","european economic community|european community|e[[:punct:]]c[[:punct:]]|^eec$|^ec$",
-  "AU","African Union","african union",
-  "EFTA","European Free Trade Association","^efta$|european free trade association"
+  "EC","European Community","european economic community|european community|e[[:punct:]]c[[:punct:]]|(?<![:alpha:])eec(?![:alpha:])|european.comm|european.union|euratom|union.euro|eu-15",
+  "AU","African Union","african.union",
+  "EFTA","European Free Trade Association","(?<![:alpha:])efta(?![:alpha:])|european free trade association"
 )
