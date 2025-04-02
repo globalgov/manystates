@@ -379,7 +379,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   ## R ####
   "ROU","Romania","r(o|u|ou)mania|roumanie",
   "RUS","Russian Federation","russia|russian fed.*|soviet.?union|union of soviet|u[[:punct:]]s[[:punct:]]s[[:punct:]]r[[:punct:]]|socialist.?republics|USSR|RSFSR|russie",
-  "RVN","Republic of Vietnam","(?<!socialist|democratic) republic of viet.?nam|\brep.*viet.?nam|viet.?nam rep|south viet.?nam",
+  "RVN","Republic of Vietnam","(?<!socialist|democratic) republic.of.viet.?nam|republic.of.viet.?nam|viet.?nam rep|south.viet.?nam|viet.?nam.south|svietnam|vietnam, s|vietnam, r",
   "RWA","Rwanda","rwanda|rwandese|ruanda",
   ## S ####
   "SAL","Saloum","saloum",
@@ -453,8 +453,8 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   ## V ####
   "VAT","Holy See","holy.?see|vatican|papal.?st|etat de la cite du vatican",
   "VCT","St. Vincent and the Grenadines","vincent|saint-vincent-et-les-grenadines",
-  "VNM","Viet Nam","(?<=socialist|democratic|north).*viet.?nam|viet.?nam socialist|viet.?nam democratic|\bviet.?nam$|viet.?nam.?dem|dem.?rep.?viet.?nam",
   "VEN","Bolivarian Republic of Venezuela","v[eé]n[eé]zu[eé]la",
+  "VNM","Viet Nam","(?<=socialist|democratic|north).*viet.?nam|viet.?nam socialist|viet.?nam democratic|\bviet.?nam$|viet.?nam.?dem|dem.?rep.?viet.?nam|viet.?nam n|viet.?nam, n|viet.?nam, d|viet.?nam d|viet.?nam",
   "VUT","Vanuatu","vanuatu|new.?hebrides|vanuatu",
   ## W ####
   "WAD","Wadai","wadai",
