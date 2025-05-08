@@ -4,55 +4,48 @@
 # ready for the many packages universe
 
 # Stage one: Collecting data
-ISD <- utils::read.csv("data-raw/states/ISD/ISD_Version1_Dissemination.csv")
+ISD <- readxl::read_excel("data-raw/states/ISD/ISD+V2.xlsx")
 
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
 # formats of the 'ISD' object until the object created
 # below (in stage three) passes all the tests.
 ISD <- tibble::as_tibble(ISD) %>%
-  dplyr::rename(Finish = End) %>%
-  # Renaming the end date column to avoid self reference in transmutate.
-  manydata::transmutate(cowID = `COW.ID`,
-                        Beg = messydates::as_messydate(Start,
-                                                    resequence = "dmy"),
-                        End = messydates::as_messydate(Finish,
-                                                    resequence = "dmy"),
-                        StateName = manypkgs::standardise_titles(as.character(State.Name)),
-                        cowNr = manypkgs::standardise_titles(as.character(COW.Nr.))) %>%
-  # Standardising the dummy variables
-  dplyr::mutate(across(c(Micro, NewState),  ~ replace(., . == "", 0))) %>%
-  dplyr::mutate(across(c(Micro, NewState), ~ replace(., . == "X", 1))) %>%  
-  #Dropping unnecessary columns.
-  dplyr::select(-X, -X.1, -X.2, -X.3, -X.4, -X.5,  -X.6, -X.7) %>%
-  # Arranging dataset
-  dplyr::relocate(cowID, Beg, End, cowNR, StateName, Micro, NewState) %>%
-  dplyr::arrange(Beg, cowID)
+  # standardizing State Name
+  dplyr::mutate(StateName = manypkgs::standardise_titles(as.character(StateName))) %>%
+  manydata::transmutate(StateName2 = manypkgs::standardise_titles(as.character(OtherName))) %>%
+  # standardizing ID vars
+  dplyr::rename(cowNR = COWNum, cowID = COWID) %>%
+  dplyr::mutate(stateID = manypkgs::code_states(StateName, activity = F,
+                                                replace = "ID")) %>%
+  # standardizing Begin and End dates
+  manydata::transmutate(Begin = ifelse(EStart != -9,
+                                       messydates::as_messydate(EStart, resequence = "dmy"),
+                                       messydates::as_messydate(Start, resequence = "dmy"))) %>%
+  dplyr::mutate(Begin = ifelse(EStart_Am == 1|Start_Am == 1,
+                               messydates::as_uncertain(Begin), Begin),
+                End = messydates::as_messydate(End, resequence = "dmy"),
+                End = ifelse(End_Am == 1, messydates::as_uncertain(End), End)) %>%
+  # Dropping unnecessary columns
+  dplyr::relocate(stateID, StateName, StateName2, Begin, End,
+                  Latitude, Longitude, StartType, EndType, cowID, cowNR) %>%
+  # Arrange observations
+  dplyr::arrange(Begin, stateID)
 
-# Like COW, ISD sets "old" states as beginning on 1816-01-01 by default.
-# This is an approximate and uncertain date,
-# since these states may have been established (much) earlier.
-# We can annotate the date to account for this uncertainty
-# using the `{messydates}` package,
-# which is designed to deal with date uncertainty.
-ISD <- ISD %>% dplyr::mutate(Beg = messydates::as_messydate(ifelse(Beg <= "1816-01-01", messydates::on_or_before(Beg), Beg)),
-                             End = messydates::as_messydate(ifelse(End >= "2011-12-31", messydates::on_or_after(End), End)))
+# Fix NAs in stateID
+ISD <- ISD %>%
+  dplyr::mutate(stateID = ifelse(is.na(stateID), cowID, stateID))
 
 # ensure NAs are coded correctly
 ISD <- ISD %>%
   dplyr::mutate(across(everything(),
                        ~stringr::str_replace_all(.,
                                                  "^NA$", NA_character_))) %>%
-  dplyr::rename(Begin = Beg) %>%
+  dplyr::mutate(across(everything(),
+                       ~stringr::str_replace_all(.,
+                                                 "-9", NA_character_))) %>%
   dplyr::mutate(Begin = messydates::as_messydate(Begin),
-                End = messydates::as_messydate(End)) %>%
-  dplyr::relocate(cowID, Begin, End)
-
-# Add stateID
-ISD <- ISD %>%
-  dplyr::mutate(stateID = manypkgs::code_states(StateName, activity = F,
-                                                replace = "ID"),
-                stateID = ifelse(is.na(stateID), cowID, stateID))
+                End = messydates::as_messydate(End))
 
 # manydata and manypkgs include several other
 # functions that should help cleaning and
