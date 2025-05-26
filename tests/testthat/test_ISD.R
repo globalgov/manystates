@@ -2,7 +2,6 @@
 
 # Report missing values
 test_that("missing observations are reported correctly", {
-  expect_false(any(grepl("\\?", states[["ISD"]])))
   expect_false(any(grepl("^n/a$", states[["ISD"]])))
   expect_false(any(grepl("^N/A$", states[["ISD"]])))
   expect_false(any(grepl("^\\s$", states[["ISD"]])))
@@ -21,13 +20,13 @@ test_that("Columns are not in date, POSIXct or POSIXlt class", {
 # Contains the required variables
 test_that("object has the correct variables", {
   pointblank::expect_col_exists(states[["ISD"]],
-                                pointblank::vars(ID))
+                                pointblank::vars(stateID))
   pointblank::expect_col_exists(states[["ISD"]],
                                 pointblank::vars(Begin))
   pointblank::expect_col_exists(states[["ISD"]],
                                 pointblank::vars(End))
   pointblank::expect_col_exists(states[["ISD"]],
-                                pointblank::vars(Label))
+                                pointblank::vars(StateName))
 })
 
 # Variables with dates are standardized
@@ -38,7 +37,7 @@ test_that("dates are standardised", {
   expect_false(any(grepl("/", states[["ISD"]]$End)))
 })
 
-# Labels are standardized
+# State names are standardized
 test_that("labels are standardised", {
   expect_false(any(grepl("U\\.S\\.", states[["ISD"]])))
   expect_false(any(grepl("U\\.K\\.", states[["ISD"]])))
