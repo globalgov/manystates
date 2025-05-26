@@ -45,9 +45,10 @@ navbar:
         - text: manyigos
           href: https://globalgov.github.io/manyigos/
 reference:
-  - title: "Function to generate state names"
-    desc: "This function is here to generate a list of fictional state names:"
+  - title: "Functions to generate state names"
+    desc: "These functions assist users to generate a list of real or fictional state names and IDs:"
     contents:
+    - code_states
     - generate_states
   # - title: "Functions to import CShapes 2.0 data"
   #   desc: "These functions are here to assist users in importing correctly formatted CShapes 2.0 data:"
