@@ -1,3 +1,15 @@
+# manystates 0.3.1
+
+## Package
+
+- Moved `code_states()` function from `{manypkgs}` to be user-facing
+- Added `code_states()` to website
+- Improved regex matches for `code_states()`
+
+## Data
+
+- Added version 2 of `states$ISD`
+
 # manystates 0.3.0
 
 ## Package
