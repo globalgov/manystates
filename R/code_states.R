@@ -407,7 +407,7 @@ england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:pu
   "SOT","South Ossetia","south ossetia",
   "SRB","Serbia","(?!.*monte).*serbia|serbie|yugoslav",
   "SSD","South Sudan","south.sudan|soudan du sud",
-  "STP","Sao Tome and Principe","s[aã]o.tom[ee]|sao tome-et-principe|saotome",
+  "STP","Sao Tome and Principe","s[a]o.tom[ee]|sao tome-et-principe|saotome",
   "SUL","Sulu","sulu",
   "SUR","Suriname","surinam|dutch.?guiana|suriname",
   "SVK","Slovakia","(?<!czecho)slovak|slovaquie|slovaque",
