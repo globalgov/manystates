@@ -39,6 +39,7 @@ Imports:
 Suggests:
     pointblank,
     messydates,
+    lubridate,
     stringi,
     testthat (>= 3.0.0),
     WDI,
@@ -54,7 +55,6 @@ RoxygenNote: 7.3.2
 Config/Needs/check: 
     covr,
     lintr,
-    lubridate,
     spelling
 Config/Needs/website:
     pkgdown
