@@ -141,7 +141,7 @@ countryRegex <- dplyr::tribble(
   "ETS","Eastern Turkistan","eastern turkistan",
   "EUE","European Union","european union|\beu\b|\be[[:punct:]]u[[:punct:]]\b",
   ## F ####
-  "FIN","Finland","finland|finlande|aland",
+  "FIN","Finland","finland|finlande|[^e]aland",
   "FJI","Fiji","fiji|fidji",
   "FNJ","Funj","funj",
   "FRA","France","(?!.*\bdep)(?!.*martinique).*france|french.?republic|gaul|france|french|guadeloupe|burgundy|mayotte|new.caledonia|martinique|r[ee]union|barthelemy|t.martin|st\\..martin|miquelon|futuna",
@@ -150,8 +150,7 @@ countryRegex <- dplyr::tribble(
   "FTO","Fouta Toro","fouta toro|futa",
   ## G ####
   "GAB","Gabon","gabon",
-  "GBR","United Kingdom",",
-england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:punct:]]k[[:punct:]]\b|royaume-uni|bermuda|anguilla|cayman|channel.is|akrotiri|dhekelia|falkland.is|virgin.is|gibraltar|guernsey|guernesey|jersey|isle of man|northern.ireland|pitcairn|helena|norfolk|montserrat|south.sandwich.is|caicos|grande.bretagne|england",
+  "GBR","United Kingdom","england|united.?kingdom|britain|british(?!.*hondur| east africa)|\buk\b|\bu[[:punct:]]k[[:punct:]]\b|royaume-uni|bermuda|anguilla|cayman|channel.is|akrotiri|dhekelia|falkland.is|virgin.is|gibraltar|guernsey|guernesey|jersey|isle of man|northern.ireland|pitcairn|helena|norfolk|montserrat|south.sandwich.is|caicos|grande.bretagne|the uk",
   "GCL","Gran Colombia","gran colombia|great colombia",
   "GEO","Georgia","(?<!south )georgia|georgie|georgie",
   "GHA","Ghana","ghana|gold.?coast|ghana",
