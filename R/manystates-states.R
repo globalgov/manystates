@@ -36,9 +36,9 @@
 "states"
 
 info_states <- tibble::tibble(Dataset = names(utils::data(states, package = "manystates")),
-                               Source = c("Griffiths, R.D., and C. R. Butcher. 'Introducing the international system(s) dataset (ISD), 1816-2011'. International Interactions 39.5 (2013), pp. 748-768.",
+                               Source = c("Griffiths, Ryan D., and Charles R. Butcher. 'Introducing the international system(s) dataset (ISD), 1816-2011'. International Interactions 39.5 (2013), pp. 748-768.",
                                           "Hollway, James, Henrique Sposito, and Jael Tan. 2021. States for manydata.",
-                                          "Gleditsch, K.S., and M. D. Ward. 'Interstate system membership: A revised list of the independent states since 1816'. International Interactions 25.4 (1999), pp. 393-413."),
+                                          "Gleditsch, Kristian S., and Michael D. Ward. 'Interstate system membership: A revised list of the independent states since 1816'. International Interactions 25.4 (1999), pp. 393-413."),
                                URL = c("http://www.ryan-griffiths.com/data",
                                        "",
                                        "http://ksgleditsch.com/data-4.html"))
