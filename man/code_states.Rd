@@ -19,7 +19,7 @@ Updates and suggestions welcome.}
 \item{max_count}{Integer how many countries to search for in each element
 of the vector.
 Where more than one country is matched, the countries are returned as a set,
-i.e. in the format "{AUS,NZL}".
+i.e. in the format "\{AUS,NZL\}".
 By default \code{max_count = 1}, which will just return the first match.}
 }
 \description{
