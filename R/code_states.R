@@ -1,10 +1,23 @@
 #' Code Agreement Parties
+#' @description
+#'   This function allows for the identification of countries in a text.
+#' @param text A vector of text to search for country names within.
+#' @param code Logical whether the function should return the three-letter
+#'   abbreviation (an extended version of ISO-3166 alpha-3), 
+#'   or the name of the state.
+#'   For the complete list of entities and their search terms, 
+#'   run the function without an argument (i.e. `code_states()`).
+#'   Updates and suggestions welcome.
 #' @importFrom stringr str_replace_all str_detect
 #' @importFrom knitr kable
 #' @examples
+#' code_states(c("I went to England",
+#'   "I come from Venezuela",
+#'   "Did you know there was a Lunda Empire?",
+#'   "I like both Australia and New Zealand"))
 #' @export
-#' @export
-code_states2 <- function(charvec, code = TRUE){
+code_states <- function(text, code = TRUE, max_count = 1){
+  
   
   purrr::map_chr(charvec, function(x) {
     out <- as.data.frame(countryRegex)[
