@@ -8,6 +8,11 @@
 #'   For the complete list of entities and their search terms, 
 #'   run the function without an argument (i.e. `code_states()`).
 #'   Updates and suggestions welcome.
+#' @param max_count Integer how many countries to search for in each element
+#'   of the vector.
+#'   Where more than one country is matched, the countries are returned as a set,
+#'   i.e. in the format "{AUS,NZL}".
+#'   By default `max_count = 1`, which will just return the first match.
 #' @importFrom stringr str_replace_all str_detect
 #' @importFrom knitr kable
 #' @examples
@@ -19,14 +24,16 @@
 code_states <- function(text, code = TRUE, max_count = 1){
   
   
-  purrr::map_chr(charvec, function(x) {
+  purrr::map_chr(text, function(x) {
     out <- as.data.frame(countryRegex)[
                       which(stringi::stri_detect_regex(stringi::stri_enc_toutf8(x), 
                                                        unlist(countryRegex[, 3]),
-                                                 max_count = 1,
+                                                 max_count = max_count,
                                                  opts_regex = list(case_insensitive = TRUE))),
                       ifelse(code, 1, 2)]
-    if(length(out)==0) NA_character_ else out
+    if(length(out)==0) NA_character_ else 
+      if(max_count > 1 && length(out)>1) 
+        paste0("{",paste(out, collapse = ","),"}") else out
   })
 }
 
