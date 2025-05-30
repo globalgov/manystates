@@ -1,7 +1,7 @@
 Package: manystates
 Title: States for manydata
 Version: 0.3.1
-Date: 2025-05-26
+Date: 2025-05-30
 Description: manystates provide data on states in the international system across time. 
     The package combines and cross-references several existing datasets consistent with the manydata package aims.
 URL: https://globalgov.github.io/manystates
@@ -34,19 +34,16 @@ Depends:
     R (>= 3.5.0),
     manydata
 Imports:
-    stringr,
-    knitr
+    knitr,
+    purrr,
+    stringr
 Suggests:
+    ggplot2,
     pointblank,
     messydates,
     lubridate,
     stringi,
-    testthat (>= 3.0.0),
-    WDI,
-    hrbrthemes,
-    ggplot2,
-    dslabs,
-    kableExtra
+    testthat (>= 3.0.0)
 Remotes:
     globalgov/manypkgs
 Encoding: UTF-8
