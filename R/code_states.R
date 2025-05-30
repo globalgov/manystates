@@ -20,9 +20,15 @@
 #'   "I come from Venezuela",
 #'   "Did you know there was a Lunda Empire?",
 #'   "I like both Australia and New Zealand"))
+#' code_states(c("I went to England",
+#'   "I come from Venezuela",
+#'   "Did you know there was a Lunda Empire?",
+#'   "I like both Australia and New Zealand"), max_count = 2)
+#' @importFrom purrr map_chr
 #' @export
 code_states <- function(text, code = TRUE, max_count = 1){
   
+  if(missing(text)) return(countryRegex)
   
   purrr::map_chr(text, function(x) {
     out <- as.data.frame(countryRegex)[

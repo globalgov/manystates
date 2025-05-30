@@ -4,44 +4,34 @@
 \alias{code_states}
 \title{Code Agreement Parties}
 \usage{
-code_states(title, activity = TRUE, replace = NULL)
+code_states(text, code = TRUE, max_count = 1)
 }
 \arguments{
-\item{title}{A character vector of treaty titles}
+\item{text}{A vector of text to search for country names within.}
 
-\item{activity}{Do you want the activity of treaty to be coded?
-By default, TRUE.}
+\item{code}{Logical whether the function should return the three-letter
+abbreviation (an extended version of ISO-3166 alpha-3),
+or the name of the state.
+For the complete list of entities and their search terms,
+run the function without an argument (i.e. \code{code_states()}).
+Updates and suggestions welcome.}
 
-\item{replace}{Do you want the state name or abbreviation to be returned?
-By default, NULL.
-Other options include, "names", for the state name,
-or "ID", for the 3 letter state abbreviation.}
-}
-\value{
-A character vector of parties
-that are mentioned in the treaty title
+\item{max_count}{Integer how many countries to search for in each element
+of the vector.
+Where more than one country is matched, the countries are returned as a set,
+i.e. in the format "{AUS,NZL}".
+By default \code{max_count = 1}, which will just return the first match.}
 }
 \description{
-Identify the countries that are part of an agreement.
-}
-\details{
-The function codes states in treaty titles.
-The function also returns the "activity" for bilateral treaties coded,
-if activity is TRUE.
-Bilateral agreements usually detail their activity and specify area in the
-last words of the titles.
-These last words are abbreviated by the function to differentiate between
-bilateral treaties and avoid false positives being generated since multiple,
-different, bilateral treaties are often signed in the same day.
-For the complete list of parties coded please run the function without
-an argument (i.e. \code{code_states()}).
+This function allows for the identification of countries in a text.
 }
 \examples{
-\dontrun{
-IEADB <- dplyr::slice_sample(manyenviron::agreements$IEADB, n = 10)
-code_states(IEADB$Title)
-code_states(IEADB$Title, activity = FALSE)
-code_states(IEADB$Title, activity = FALSE, replace = "names")
-code_states(IEADB$Title, activity = FALSE, replace = "ID")
-}
+code_states(c("I went to England",
+  "I come from Venezuela",
+  "Did you know there was a Lunda Empire?",
+  "I like both Australia and New Zealand"))
+code_states(c("I went to England",
+  "I come from Venezuela",
+  "Did you know there was a Lunda Empire?",
+  "I like both Australia and New Zealand"), max_count = 2)
 }
