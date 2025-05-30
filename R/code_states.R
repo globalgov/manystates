@@ -30,9 +30,11 @@ code_states <- function(text, code = TRUE, max_count = 1){
   
   if(missing(text)) return(countryRegex)
   
+  text <- stringi::stri_trans_general(text, "latin-ascii")
+  
   purrr::map_chr(text, function(x) {
     out <- as.data.frame(countryRegex)[
-                      which(stringi::stri_detect_regex(stringi::stri_enc_toutf8(x), 
+                      which(stringi::stri_detect_regex(x, 
                                                        unlist(countryRegex[, 3]),
                                                  max_count = max_count,
                                                  opts_regex = list(case_insensitive = TRUE))),
