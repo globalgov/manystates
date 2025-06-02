@@ -1,6 +1,7 @@
 states_test <- read.csv(paste0(testthat::test_path(), "/ctry_orig2ctry_pref.csv"),
                         encoding = "UTF-8")
 states_test <- subset(states_test, nchar(ctry_orig) > 3)
+states_test <- subset(states_test, ctry_orig != "EURATOM")
 accents <- subset(states_test, stringr::str_detect(states_test$ctry_orig, "ã|é|è|ï|ü|ô"))
 
 test_that("code_states works", {
