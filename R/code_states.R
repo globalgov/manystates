@@ -405,3 +405,6 @@ countryRegex <- dplyr::tribble(
   # "AU","African Union","african.union",
   # "EFTA","European Free Trade Association","(?<![:alpha:])efta(?![:alpha:])|european free trade association"
 )
+
+# Useful resource:
+# https://stringi.gagolewski.com/weave/regular_expressions.html#
