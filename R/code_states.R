@@ -106,7 +106,7 @@ countryRegex <- dplyr::tribble(
   "CHN","China","(?!.*\\bmac)(?!.*\\bhong)(?!.*\\btai)(?!.*\\brep).*china|(?=.*peo)(?=.*rep).*china|chine|macao|china",
   "CIV","Cote d'Ivoire","ivoire|ivory|cote d'ivo.+",
   "CMR","Cameroon","cameroon|cameroun|cameroun",
-  "COD","Democratic Republic of the Congo","dem.*congo|congo(.+)?dem|d[[:punct:]]r[[:punct:]]c[[:punct:]]|belgian.?congo|congo.?free.?state|kinshasa|zaire|l.opoldville|drc| droc |rdc|droc|congo-kinshasa|congo dr|d.r. of the congo|congo.+kin",
+  "COD","Democratic Republic of the Congo","dem.*congo|congo(.+)?dem|d[[:punct:]]r[[:punct:]]c[[:punct:]]|belgian.?congo|congo.?free.?state|kinshasa|zaire|l.opoldville|drc| droc |rdc|droc|congo-kinshasa|congo dr|d.r. of the congo|congo.+kin|dr.congo",
   "COG","Congo","(?=rep).*congo|(?<!democratic )republic of the congo|congo[[:punct:]]? (?!dem.*)rep|^congo$|congo-brazzaville|brazzaville|congobrazz|congo.+bra|congo.+rep",
   "COK","Cook Islands","cook.is|iles.cook",
   "COL","Colombia","(?<!great |gran )colombia|colombie",
