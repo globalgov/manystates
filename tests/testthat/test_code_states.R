@@ -15,7 +15,7 @@ test_that("code_states works with non-ascii characters", {
 })
 
 test_that("state codes are 3 characters or less", {
-  expect_true(any(nchar(code_states()$stateID) > 3))
+  expect_false(any(nchar(code_states()$stateID) > 3))
 })
 
 test_that("state codes are all upper case", {
