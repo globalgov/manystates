@@ -156,7 +156,7 @@ countryRegex <- dplyr::tribble(
   "GCL","Gran Colombia","gran colombia|great colombia",
   "GEO","Georgia","(?<!south )georgia|georgie|georgie",
   "GHA","Ghana","ghana|gold.?coast|ghana",
-  "GIN","Guinea","(?<!new |spanish |portuguese |equatorial )guinea(?!.*equ|-bissau| bissau)|\\bguinee\\b|[^(new)] guinee|[^(equatorial)] guinee|guinee[^-bissau]",
+  "GIN","Guinea","(?<!new |spanish |portuguese |equatorial |papua new )guinea(?!.*equ|-bissau| bissau)|(?<!nouvelle.)guinee(?!-bissa| equatoriale)",
   "GMB","Gambia","gambia|gambie",
   "GNB","Guinea-Bissau","bissau|(?=.*portu).*guinea|guin[ee]e.bissa[uo]",
   "GNQ","Equatorial Guinea","guine.*eq|eq.*guine|(?=.*span).*guinea|guin[ee]e [ee]quatoriale",
