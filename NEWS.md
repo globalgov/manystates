@@ -5,10 +5,12 @@
 - Moved `code_states()` function from `{manypkgs}` to be user-facing
 - Added `code_states()` to website
 - Improved regex matches for `code_states()`
+- Added tests for `code_states()`
 
 ## Data
 
-- Added version 2 of `states$ISD`
+- Closed #72 by adding version 2 of `states$ISD`
+- Closed #64 by filling in missing state names in `states$HUGGO`
 
 # manystates 0.3.0
 
