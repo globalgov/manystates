@@ -124,7 +124,7 @@ countryRegex <- dplyr::tribble(
   "DIR","Dir"," dir ",
   "DJA","Fouta Djallon","fouta djallon",
   "DJI","Djibouti","djibouti",
-  "DMA","Dominica","dominica(?!n)|dominique",
+  "DMA","Dominica","dominica\\b|dominique",
   "DNK","Denmark","denmar|danish(?!.*waters)|danemark|faroe|greenland",
   "DOM","Dominican Republic","domin.*rep|republique dominicaine|santo domin",
   "DRV","Annam","annam",
