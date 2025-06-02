@@ -141,7 +141,7 @@ countryRegex <- dplyr::tribble(
   "EST","Estonia","estonia|estonie",
   "ETH","Ethiopia","ethiopia|abyssinia|ethiopie|eth.pia",
   "ETS","Eastern Turkistan","eastern turkistan",
-  "EUE","European Union","european union|\\beu\\b|\\be[[:punct:]]u[[:punct:]]\\b",
+  "EUE","European Union","european union|\\beu\\b|\\be[[:punct:]]u[[:punct:]]\\b|european.union|union.euro|european.comm|european.economic.comm",
   ## F ####
   "FIN","Finland","finland|finlande|\\baland\\b",
   "FJI","Fiji","fiji|fidji",
@@ -399,9 +399,9 @@ countryRegex <- dplyr::tribble(
   "ZIN","Zinder (Damagaram)","zinder (damagaram)",
   "ZMB","Zambia","zambia|northern.?rhodesia|zambie",
   "ZUL","Zululand","zululand",
-  "ZWE","Zimbabwe","zimbabwe|(?<!northern )rhodesia|zimbabwe",
+  "ZWE","Zimbabwe","zimbabwe|(?<!northern )rhodesia|zimbabwe"#,
   ## Other ####
-  "EC","European Community","european economic community|european community|e[[:punct:]]c[[:punct:]]|(?<![:alpha:])eec(?![:alpha:])|european.comm|european.union|euratom|union.euro|eu-15",
-  "AU","African Union","african.union",
-  "EFTA","European Free Trade Association","(?<![:alpha:])efta(?![:alpha:])|european free trade association"
+  # "EC","European Community","european economic community|european community|e[[:punct:]]c[[:punct:]]|(?<![:alpha:])eec(?![:alpha:])|european.comm|euratom|union.euro|eu-15",
+  # "AU","African Union","african.union",
+  # "EFTA","European Free Trade Association","(?<![:alpha:])efta(?![:alpha:])|european free trade association"
 )
