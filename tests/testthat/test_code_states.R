@@ -5,10 +5,9 @@ states_test <- subset(states_test, ctry_orig != "EURATOM")
 accents <- subset(states_test, stringr::str_detect(states_test$ctry_orig, "ã|é|è|ï|ü|ô"))
 
 test_that("code_states works", {
-  expect_equal(sum(is.na(code_states(states_test$ctry_orig))), 0)
+  stts <- states_test[is.na(code_states(states_test$ctry_orig)),1]
+  expect_equal(stts, vector("character"))
 })
-# states_test <- dplyr::as_tibble(states_test)
-# states_test[is.na(code_states(states_test$ctry_orig)),] %>% print(n = 30)
 
 test_that("code_states works with non-ascii characters", {
   expect_equal(code_states(accents$ctry_orig, code = F),
