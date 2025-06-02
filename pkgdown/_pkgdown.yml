@@ -24,6 +24,7 @@ navbar:
     home:
       icon: fa-home fa-lg
       href: index.html
+      aria-label: Go home
     reference:
       text: Reference
       href: reference/index.html
@@ -33,6 +34,7 @@ navbar:
     github:
       icon: "fab fa-github fa-lg"
       href: https://github.com/globalgov/manystates
+      aria-label: Go to the Github page
     packages:
       text: Other packages
       menu:
@@ -45,9 +47,10 @@ navbar:
         - text: manyigos
           href: https://globalgov.github.io/manyigos/
 reference:
-  - title: "Function to generate state names"
-    desc: "This function is here to generate a list of fictional state names:"
+  - title: "Functions to generate state names"
+    desc: "These functions assist users to identify states and countries in text, or generate a list of fictional state names"
     contents:
+    - code_states
     - generate_states
   # - title: "Functions to import CShapes 2.0 data"
   #   desc: "These functions are here to assist users in importing correctly formatted CShapes 2.0 data:"

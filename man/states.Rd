@@ -6,55 +6,85 @@
 \title{States datacube}
 \format{
 \describe{
+\item{ISD: }{A dataset with 482
+observations and 35 variables:
+stateID, StateName, StateName2, Begin, End, Latitude, Longitude, StartType, EndType, cowID, cowNR, ISD_Category, Region, Start_Am, EStart_Am, Declare, DecDate, Population, ..., VioEnd, and VioEnd_Am.}
 \item{HUGGO: }{A dataset with 470
 observations and 14 variables:
-stateID, Begin, End, StateName, Capital, Latitude, Longitude, Constitution, RatProcedure, Area, Region, StateName2, Capital2, and Source_rat.}
+stateID, StateName, Capital, Begin, End, Latitude, Longitude, Constitution, RatProcedure, Area, Region, StateName2, Capital2, and Source_rat.}
 \item{GW: }{A dataset with 216
 observations and 6 variables:
 stateID, Begin, End, StateName, cowID, and cowNR.}
-\item{ISD: }{A dataset with 362
-observations and 8 variables:
-stateID, Begin, End, StateName, cowID, cowNR, Micro, and NewState.}
 }
 For more information and references to each of the datasets used,
 please use the \code{manydata::call_sources()} and \code{manydata::compare_dimensions()} functions.
 }
 \source{
-\describe{
-\item{HUGGO: }{
-Hollway, James, Henrique Sposito, and Jael Tan. 2021. \emph{manystates: States for manydata}.
-}
-\item{GW: }{
-Gleditsch, K.S., and M. D. Ward. “Interstate system membership: A revised list of the independent states since 1816”.
-\emph{International Interactions} 25.4 (1999), pp. 393-413.
-\url{http://ksgleditsch.com/data-4.html}
-}
-\item{ISD: }{
-Griffiths, R.D., and C. R. Butcher. “Introducing the international system (s) dataset (ISD), 1816-2011”.
-\emph{International Interactions} 39.5 (2013), pp. 748-768.
-\url{http://www.ryan-griffiths.com/data}
-}
+\itemize{
+\item Griffiths, Ryan D., and Charles R. Butcher. 'Introducing the international system(s) dataset (ISD), 1816-2011'. International Interactions 39.5 (2013), pp. 748-768.
+\item Hollway, James, Henrique Sposito, and Jael Tan. 2021. States for manydata.
+\item Gleditsch, Kristian S., and Michael D. Ward. 'Interstate system membership: A revised list of the independent states since 1816'. International Interactions 25.4 (1999), pp. 393-413.
 }
 }
 \usage{
 states
 }
 \description{
-The \code{states} datacube is a list containing
-3 datasets:
-HUGGO, GW, and ISD.
+The \code{manystates::states} datacube is a list containing 3 datasets: ISD, HUGGO, and GW.
 It is a work-in-progress, so please let us know if you have any comments or suggestions.
 }
 \details{
-\if{html}{\out{<div class="sourceCode">}}\preformatted{#> $HUGGO
+\if{html}{\out{<div class="sourceCode">}}\preformatted{#> $ISD
+#> ---------------------------------------------------------
+#> |   Variable   |  Class  |  Obs  |  Missing  |  Miss \%  |
+#> ---------------------------------------------------------
+#> |stateID       |character|    482|          0|         0|
+#> |StateName     |character|    482|          0|         0|
+#> |StateName2    |character|    188|        294|        61|
+#> |Begin         |mdate    |    482|          0|         0|
+#> |End           |mdate    |    482|          0|         0|
+#> |Latitude      |character|    282|        200|     41.49|
+#> |Longitude     |character|    282|        200|     41.49|
+#> |StartType     |character|    278|        204|     42.32|
+#> |EndType       |character|    263|        219|     45.44|
+#> |cowID         |character|    482|          0|         0|
+#> |cowNR         |character|    482|          0|         0|
+#> |ISD_Category  |character|    482|          0|         0|
+#> |Region        |character|    482|          0|         0|
+#> |Start_Am      |character|    482|          0|         0|
+#> |EStart_Am     |character|    202|        280|     58.09|
+#> |Declare       |character|    257|        225|     46.68|
+#> |DecDate       |character|     53|        429|        89|
+#> |Population    |character|    266|        216|     44.81|
+#> |PopDate       |character|    265|        217|     45.02|
+#> |PopAm         |character|    283|        199|     41.29|
+#> |PopulationHigh|character|    132|        350|     72.61|
+#> |PopulationLow |character|    103|        379|     78.63|
+#> |StartType_Am  |character|    280|        202|     41.91|
+#> |StartSettle   |character|    261|        221|     45.85|
+#> |End_Am        |character|    482|          0|         0|
+#> |EndType_Am    |character|    260|        222|     46.06|
+#> |EndSettle     |character|    253|        229|     47.51|
+#> |Sovereignty_Am|character|    482|          0|         0|
+#> |EuroDip       |character|    273|        209|     43.36|
+#> |Borders       |character|    273|        209|     43.36|
+#> |Borders_Am    |character|    283|        199|     41.29|
+#> |VioStart      |character|    264|        218|     45.23|
+#> |VioStart_Am   |character|    273|        209|     43.36|
+#> |VioEnd        |character|    259|        223|     46.27|
+#> |VioEnd_Am     |character|    264|        218|     45.23|
+#> ---------------------------------------------------------
+#> 
+#> 
+#> $HUGGO
 #> -------------------------------------------------------
 #> |  Variable  |  Class  |  Obs  |  Missing  |  Miss \%  |
 #> -------------------------------------------------------
 #> |stateID     |character|    470|          0|         0|
+#> |StateName   |character|    470|          0|         0|
+#> |Capital     |character|    467|          3|      0.64|
 #> |Begin       |mdate    |    320|        150|     31.91|
 #> |End         |mdate    |    320|        150|     31.91|
-#> |StateName   |character|    468|          2|      0.43|
-#> |Capital     |character|    467|          3|      0.64|
 #> |Latitude    |character|    467|          3|      0.64|
 #> |Longitude   |character|    467|          3|      0.64|
 #> |Constitution|character|     30|        440|     93.62|
@@ -77,21 +107,6 @@ It is a work-in-progress, so please let us know if you have any comments or sugg
 #> |StateName   |character|    216|          0|         0|
 #> |cowID       |character|    216|          0|         0|
 #> |cowNR       |character|    216|          0|         0|
-#> -------------------------------------------------------
-#> 
-#> 
-#> $ISD
-#> -------------------------------------------------------
-#> |  Variable  |  Class  |  Obs  |  Missing  |  Miss \%  |
-#> -------------------------------------------------------
-#> |stateID     |character|    362|          0|         0|
-#> |Begin       |mdate    |    362|          0|         0|
-#> |End         |mdate    |    362|          0|         0|
-#> |StateName   |character|    362|          0|         0|
-#> |cowID       |character|    362|          0|         0|
-#> |cowNR       |character|    362|          0|         0|
-#> |Micro       |character|    362|          0|         0|
-#> |NewState    |character|    362|          0|         0|
 #> -------------------------------------------------------
 }\if{html}{\out{</div>}}
 }

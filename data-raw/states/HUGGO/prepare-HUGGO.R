@@ -137,49 +137,20 @@ HUGGO_STATES <- HUGGO_STATES2 %>%
                   Area, Region) %>%
   dplyr::arrange(Begin)
 
-# make sure all vars are correctly coded as NA if necessary
-HUGGO_STATES <- HUGGO_STATES %>% 
-  dplyr::mutate(across(everything(),
-                       ~stringr::str_replace_all(., "^NA$", NA_character_))) %>%
-  mutate(Begin = messydates::as_messydate(Begin),
-         End = messydates::as_messydate(End)) %>% 
-  dplyr::distinct(.keep_all = TRUE)
-
-### Download file as csv to check and fill in observations
-write.csv(HUGGO_STATES, "HUGGO_STATES_additional.csv")
-
-# Fill in missing information on begin/end dates, latitude/longitude,
-# area, regions, ratification procedure?
-
-# Load file without duplicates and filled in missing state names
-HUGGO_STATES <- readr::read_csv("data-raw/states/HUGGO_STATES/HUGGO_STATES_additional.csv")
-
-# # Fill in missing region data
-# gapminder <- dslabs::gapminder %>% 
-#   select(country, continent, region) %>% # select only the variables we want
-#   rename(Continent = continent, Region_gapminder = region) %>%
-#   distinct() # keeps only distinct rolls (no duplicates)
-# HUGGO_STATES <- dplyr::left_join(HUGGO_STATES, gapminder,
-#                                  by = c("StateName" = "country"))
-# HUGGO_STATES$Regionc <- dplyr::coalesce(HUGGO_STATES$Region,
-#                                         HUGGO_STATES$Region_gapminder)
-# HUGGO_STATES <- HUGGO_STATES %>%
-#   dplyr::select(-c(Region, Continent, Region_gapminder)) %>%
-#   dplyr::rename(Region = Regionc) %>%
-#   dplyr::mutate(Region = stringr::str_replace(Region, "-", " "))
-# HUGGO_STATES <- HUGGO_STATES %>%
-#   dplyr::rename(Begin = Beg) %>%
-#   dplyr::relocate(stateID, StateName, Capital, Begin, End, Latitude, Longitude,
-#                   Area, Region)
+# Fill in missing state names for now
+HUGGO_STATES <- HUGGO_STATES %>%
+  dplyr::mutate(StateName = ifelse(stateID == "YEM", "Yemen", StateName),
+                StateName = ifelse(stateID == "ZWE", "Zimbabwe", StateName))
 
 # ensure NAs are coded correctly
-HUGGO_STATES <- HUGGO_STATES %>%
+HUGGO <- HUGGO_STATES %>%
   dplyr::mutate(across(everything(),
                        ~stringr::str_replace_all(.,
                                                  "^NA$", NA_character_))) %>%
   dplyr::mutate(Begin = messydates::as_messydate(Begin),
                 End = messydates::as_messydate(End)) %>%
-  dplyr::relocate(stateID, StateName, Capital, Begin, End)
+  dplyr::relocate(stateID, StateName, Capital, Begin, End) %>%
+  dplyr::arrange(Begin)
 
 # manypkgs includes several functions that should help cleaning
 # and standardising your data such as `standardise_titles()`.
@@ -201,6 +172,6 @@ HUGGO_STATES <- HUGGO_STATES %>%
 # Therefore, please make sure that you have permission to use the dataset
 # that you're including in the package.
 # To add a template of .bib file to the package,
-# please run `manypkgs::add_bib("states", "HUGGO_STATES")`.
-manypkgs::export_data(HUGGO_STATES, datacube = "states",
+# please run `manypkgs::add_bib("states", "HUGGO")`.
+manypkgs::export_data(HUGGO, datacube = "states",
                       URL = "Hand-coded data by the GGO team")
