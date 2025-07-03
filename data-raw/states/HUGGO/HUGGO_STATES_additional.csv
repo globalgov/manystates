@@ -64,14 +64,31 @@ Changed: End
 Added: StateName2, Source
 Checked: StateName, Capital, Capital2, Begin, Latitude, Longitude, RatProcedure, Constitutional Description, Source-rat, Area, Region
 Deleted: second line with dates from 1816 to 1817 which is part of the same period of statehood (see Guha, 1983, p. 9)"
-ASI,Asir,NA,Abha,NA,1818-01-01,1872-04-30,18.21639,42.50528,NA,NA,NA,ASIA,Western Asia,,,
-ASI,Asir,NA,Abha,NA,1/1/14,12/31/26,18.21639,42.50528,NA,NA,NA,ASIA,Western Asia,,,
-AST,Ashanti,NA,Kumasi,NA,1670-01-01,1896-02-01,6.68848,-1.62443,NA,NA,NA,AFRICA,Western Africa,,,
-AST,Ashanti,NA,Kumasi,NA,1816-01-01,1896-02-01,6.68848,-1.62443,NA,NA,NA,AFRICA,Western Africa,,,
-ATG,Antigua and Barbuda,NA,Saint Johns,NA,11/1/81,9999-12-31,29.91218,-81.40989,NA,NA,NA,NA,NA,,,
-AUH,Austria-Hungary,NA,Vienna,NA,1867-03-01,11/12/18,48.20849,16.37208,3,"By constitution, at the foundation of the dual system in 1867, the Austro-Hungarian Monarchy consists of the two separate and sovereign States of Austria and Hungary. Each state provided its own parliament, government and its own Crown. The two offices of Emperor of Austria and King of Hungary are distinct, but by the constitution, they vest in the same person. Even the two offices are independent. Minister for War and Minister for Foreign Affairs are to be found in the joint ministry of Austria-Hungary, which is attached to a joint parliament, providing the element of a common legislature of Austria-Hungary. The joint legislature, the Delegations consists of two committees appointed by and from the two parliament of Austria and of Hungary. The Delegations are to control foreign affairs, but treaties must be ratified by the two separate parliaments.",https://www.jstor.org/stable/30082697,NA,NA,,,
-AUH,Austria-Hungary,NA,Vienna,NA,1867-03-30,11/11/18,48.20849,16.37208,3,"By constitution, at the foundation of the dual system in 1867, the Austro-Hungarian Monarchy consists of the two separate and sovereign States of Austria and Hungary. Each state provided its own parliament, government and its own Crown. The two offices of Emperor of Austria and King of Hungary are distinct, but by the constitution, they vest in the same person. Even the two offices are independent. Minister for War and Minister for Foreign Affairs are to be found in the joint ministry of Austria-Hungary, which is attached to a joint parliament, providing the element of a common legislature of Austria-Hungary. The joint legislature, the Delegations consists of two committees appointed by and from the two parliament of Austria and of Hungary. The Delegations are to control foreign affairs, but treaties must be ratified by the two separate parliaments.",https://www.jstor.org/stable/30082697,NA,NA,,,
-AUS,Australia,NA,Canberra,NA,1/1/01,9999-12-31,-35.28346,149.12807,NA,NA,NA,NA,NA,,,
+ASI,Asir,Emirate of Asir,Abha,NA,1907-01-01,1934-04-05,18.21639,42.50528,NA,NA,NA,ASIA,Western Asia,"ALEtaneh, G. F., Hayajneh, R., Al-Khatib, J. M., & Abdalla, A. A. (2024). British-Idrisi relations in resisting Ottoman influence in Tihama Asir 1915-1926, p. 61.
+Ghanem, I. (1990). The Legal History of'A Sir (Al-Mikhlaf Al-Sulaymani). Arab Law Quarterly, pp. 212-213.",NA,"Changed: Begin, End
+Added: StateName2, Source
+Checked: StateName, Capital, Capital2, Latitude, Longitude, RatProcedure, Constitutional Description, Source-rat, Area, Region
+Deleted: second line with dates from 1914 to 1926 which are part of the same period of statehood indicated here"
+AST,Ashanti,Asante Empire,Kumasi,NA,1670-01-01,1902-01-01,6.68848,-1.62443,NA,NA,NA,AFRICA,Western Africa,"Asante empire (Britannica)
+Asante – The People Of A Wealthy Gold-Rich Empire (The Black Faces)
+Rise of the Asante Empire (EBSCO)","https://www.britannica.com/place/Asante-empire
+https://www.theblackfaces.com/asante-the-people-of-a-wealthy-gold-rich-empire/
+https://www.ebsco.com/research-starters/history/rise-asante-empire","Changed: End
+Added: StateName2, Source
+Checked: StateName, Capital, Capital2, Begin, Latitude, Longitude, RatProcedure, Constitutional Description, Source-rat, Area, Region
+Deleted: second line with dates from 1816 to 1896 which are part of the same period of statehood indicated here"
+ATG,Antigua and Barbuda,NA,Saint Johns,NA,1981-11-01,9999-12-31,29.91218,-81.40989,NA,"WHEREAS the People of Antigua and Barbuda-
+(a) proclaim that they are a sovereign nation founded upon principles that acknowledge the supremacy of God, the dignity and worth of the human person, the entitlement of all persons to the fundamental rights and freedoms of the individual, the position of the family in a society of free men and women and free institu-tions;
+1.—(1) Antigua and Barbuda shall be a unitary sovereign democratic State.",The Antigua and Barbuda Constitution Order 1981,AMERICA,Northern Caribbean,"Paget, H. ‘After the Storms: Barbuda and Antigua Yesterday, Today and Tomorrow’, in The Antigua and Barbuda Review of Books, Antigua and Barbuda Studies Association, vol. 12, 2019, pp. 28-29.",NA,"Added: Constitutional Description, Source-rat, Area, Region, Source
+Checked: StateName, StateName2, Capital, Capital2, Begin, End, Latitude, Longitude, RatProcedure"
+AUH,Austria-Hungary,NA,Vienna,NA,1867-03-01,1918-11-11,48.20849,16.37208,3,"By constitution, at the foundation of the dual system in 1867, the Austro-Hungarian Monarchy consists of the two separate and sovereign States of Austria and Hungary. Each state provided its own parliament, government and its own Crown. The two offices of Emperor of Austria and King of Hungary are distinct, but by the constitution, they vest in the same person. Even the two offices are independent. Minister for War and Minister for Foreign Affairs are to be found in the joint ministry of Austria-Hungary, which is attached to a joint parliament, providing the element of a common legislature of Austria-Hungary. The joint legislature, the Delegations consists of two committees appointed by and from the two parliament of Austria and of Hungary. The Delegations are to control foreign affairs, but treaties must be ratified by the two separate parliaments.",https://www.jstor.org/stable/30082697,EUROPE,Central Europe,"Helczmanovszki, H. (2021). Austria-Hungary. In European demography and economic growth (pp. 27-78). Routledge.",NA,"Added: Area, Region, Source
+Checked: StateName, StateName2, Capital, Capital2, Begin, End, Latitude, Longitude, RatProcedure, Constitutional Description, Source-rat
+Deleted: second line with dates from 1867 to 1918 because it was a repetition "
+AUS,Australia,Commonwealth of Australia,Canberra,NA,1901-01-01,9999-12-31,-35.28346,149.12807,NA,"WHEREAS the people of New South Wales, Victoria, South Australia, Queensland, and Tasmania, humbly
+relying on the blessing of Almighty God, have agreed to unite in one indissoluble Federal Commonwealth
+under the Crown of the United Kingdom of Great Britain and Ireland, and under the Constitution hereby
+established: the Commonwealth of Australia",Commonwealth of Australia Constitution Act (https://www.aph.gov.au/-/media/05_About_Parliament/52_Sen/523_PPP/2023_Australian_Constitution.pdf),OCEANIA,South Pacific,"Gare, D. (1999). Dating Australia's independence: national sovereignty and the 1986 Australia Acts. Australian Historical Studies, 29(113), p. 251.",NA,"Added:  StateName2, Constitutional Description, Source-rat, Area, Region, Source
+Checked: StateName, Capital, Capital2, Begin, End, Latitude, Longitude, RatProcedure"
 AUT,Austria,NA,Vienna,NA,1804-08-11,1867-03-30,48.20849,16.37208,NA,NA,NA,NA,NA,,,
 AUT,Austria,NA,Vienna,NA,9/10/19,3/13/38,48.20849,16.37208,NA,NA,NA,NA,NA,,,
 AUT,Austria,NA,Vienna,NA,7/27/55,9999-12-31,48.20849,16.37208,NA,NA,NA,NA,NA,,,
