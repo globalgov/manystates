@@ -59,9 +59,13 @@ jobs:
           name: ${{ matrix.config.asset_name }}
           path: build/
 
-      - name: Calculate code coverage
-        run: Rscript -e "covr::codecov()"
-
+      - name: Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          name: codecov # optional
+          fail_ci_if_error: false # optional (default = false)
+    
       - name: Lint
         run: lintr::lint_package()
         shell: Rscript {0}
