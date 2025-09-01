@@ -57,6 +57,39 @@ manystates::states
 Working with ensembles of related data has many advantages for robust analysis.
 Just take a look at our vignettes [here](https://globalgov.github.io/manydata/articles/user.html).
 
+## Included functions
+
+In addition to the datasets, the package also includes a number of
+functions that help you work with state data.
+`code_states()` is a particularly useful function that helps you
+identify states or state-like entities when referenced within text data.
+By default it will identify the first state mentioned in each text,
+but it is possible to look for multiple states by setting the
+`max_count` argument to a value greater than 1.
+By default, the function will return ISO 3166 alpha-3 codes,
+but it is possible to return a standardised state name instead.
+
+```{r codestates, eval = TRUE}
+manystates::code_states(c("This was done in the United Kingdom", 
+            "Switzerland and New Zealand made an agreement"),
+            max_count = 2)
+```
+
+Additionally, there is a somewhat whimsical function that generates
+a number of random state names.
+This function is inspired by observed state names,
+but is not intended to reflect any actual states.
+It is primarily designed for use in class exercises when a number of novel
+state names are required.
+It can also be used to generate fictional state names for
+creative writing or games.
+
+```{r genstates, eval = TRUE}
+manystates::generate_states(3)
+```
+
+Feedback on either of these functions is most welcome.
+
 ## Many packages
 
 The development of [many packages](https://github.com/globalgov/manydata) is aimed
