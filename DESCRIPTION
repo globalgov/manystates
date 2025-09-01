@@ -38,13 +38,9 @@ Imports:
     purrr,
     stringi
 Suggests:
-    ggplot2,
     pointblank,
     messydates,
-    lubridate,
     testthat (>= 3.0.0)
-Remotes:
-    globalgov/manypkgs
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
