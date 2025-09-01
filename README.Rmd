@@ -126,3 +126,9 @@ clean, consistent global governance data.
 If you have any other ideas about how this package or the manydata 
 universe more broadly might better facilitate your empirical analysis, we'd be
 very happy to hear from you.
+
+## Funding details
+
+Development on this package has been funded by the Swiss National Science Foundation (SNSF)
+[Grant Number 188976](https://data.snf.ch/grants/grant/188976): 
+"Power and Networks and the Rate of Change in Institutional Complexes" (PANARCHIC).
