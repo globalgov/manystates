@@ -4,7 +4,7 @@
 #' @param prefixed Proportion of country names with a prefix by default 0.15.
 #' @param suffixed Proportion of country names with a suffix by default 0.15.
 #' @return String vector of fictional country names
-#' @importFrom stringr str_trim
+#' @importFrom stringi stri_trim_both
 #' @examples
 #'   generate_states(12)
 #' @export
@@ -20,5 +20,5 @@ generate_states <- function(n = 10, prefixed = 0.15, suffixed = 0.15){
   prefixlib <- c(prefixlib, rep("", round(length(prefixlib)/(prefixed*100)*100) - length(prefixlib)))
   suffixlib <- c("Confederacy", "Empire", "Islands", "Kingdom", "Republic", "Union", "United")
   suffixlib <- c(suffixlib, rep("", round(length(suffixlib)/(suffixed*100)*100) - length(suffixlib)))
-  stringr::str_trim(paste(sample(prefixlib, n), sample(namelib, n), sample(suffixlib, n)))
+  stringi::stri_trim_both(paste(sample(prefixlib, n), sample(namelib, n), sample(suffixlib, n)))
 }
