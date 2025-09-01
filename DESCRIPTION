@@ -1,6 +1,6 @@
 Package: manystates
 Title: Many data on state and state-like actors in the international system
-Version: 0.4.0
+Version: 1.0.0
 Date: 2025-09-01
 Description: manystates provides data on states in the international system across time. 
     The package combines and cross-references several existing datasets 

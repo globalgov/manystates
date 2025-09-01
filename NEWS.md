@@ -1,4 +1,4 @@
-# manystates 0.4.0
+# manystates 1.0.0
 
 ## Package
 
