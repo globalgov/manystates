@@ -1,4 +1,4 @@
-#' Code Agreement Parties
+#' Code states
 #' @description
 #'   This function allows for the identification of countries in a text.
 #' @param text A vector of text to search for country names within.
@@ -13,7 +13,7 @@
 #'   Where more than one country is matched, the countries are returned as a set,
 #'   i.e. in the format "\{AUS,NZL\}".
 #'   By default `max_count = 1`, which will just return the first match.
-#' @importFrom stringr str_replace_all str_detect
+#' @importFrom stringi stri_trans_general stri_detect_regex
 #' @importFrom knitr kable
 #' @examples
 #' code_states(c("I went to England",
@@ -87,7 +87,7 @@ countryRegex <- dplyr::tribble(
   "BLZ","Belize","belize|(?=.*british).*honduras|belize",
   "BNJ","Benjermassin","benjermassin",
   "BOL","Plurinational State of Bolivia","bolivia|bolivie",
-  "BOU","Burgundy","burgundy|bourgogne",
+  "BOU","Burgundy","burgundy|bourgogne|burgandy",
   "BPR","Bahawalpur","bahawalpur",
   "BRA","Brazil","brazil|brasil|bresil|bresil",
   "BRB","Barbados","barbados|barbade",
