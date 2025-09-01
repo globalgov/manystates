@@ -36,13 +36,12 @@ Depends:
 Imports:
     knitr,
     purrr,
-    stringr
+    stringi
 Suggests:
     ggplot2,
     pointblank,
     messydates,
     lubridate,
-    stringi,
     testthat (>= 3.0.0)
 Remotes:
     globalgov/manypkgs
