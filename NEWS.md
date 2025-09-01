@@ -1,3 +1,38 @@
+# manystates 0.4.0
+
+## Package
+
+- Dropped unnecessary dependencies for CRAN submission
+- Added more description of included data and functions to the README
+- Added funding details to the README
+- Package now considered stable
+
+## Data
+
+- Added more details on Abkhazia
+- Added more details on Aceh
+- Added more details on Afghanistan
+- Added more details on Angola
+- Added more details on Albania
+- Added more details on Los Altos
+- Added more details on Andorra
+- Added more details on UAE
+- Added more details on Argentina
+- Added more details on Armenia
+- Added more details on Assam
+- Added more details on Asir
+- Added more details on Ashanti
+- Added more details on Antigua and Barbuda
+- Added more details on Austria-Hungary
+- Added more details on Australia
+- All current states coded as ending 9999-12-31
+
+## Functions
+
+- Fixed Burgundy (BOU) identification in `code_states()`
+- `code_states()` and `generate_states()` now use stringi exclusively
+- Added tests for `generate_states()`
+
 # manystates 0.3.1
 
 ## Package
