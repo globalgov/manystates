@@ -4,9 +4,9 @@
 \name{manystates-package}
 \alias{manystates}
 \alias{manystates-package}
-\title{manystates: States for manydata}
+\title{manystates: Many data on state and state-like actors in the international system}
 \description{
-manystates provide data on states in the international system across time. The package combines and cross-references several existing datasets consistent with the manydata package aims.
+manystates provides data on states in the international system across time. The package combines and cross-references several existing datasets consistent with the aims of the manydata package. It also includes functions for identifying state references in text, and for generating fictional state names.
 }
 \seealso{
 Useful links:
