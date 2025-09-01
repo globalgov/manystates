@@ -14,12 +14,13 @@ output: github_document
 
 `manystates` is a data package within the
 [many universe of packages](https://github.com/globalgov).
-It contains an ensemble of datasets currently available on states in the world,
+It contains an ensemble of datasets currently available on states and 
+state-like entities in the world,
 including information on states' beginning and, where applicable, end dates,
-and geographical characteristics. An important aim of `manystates` is
-to record and include states as far back in history as possible. The package is
-geared towards global governance research, but can also be used by anyone
-interested in state actors across time. 
+and geographical characteristics. 
+An important aim of `manystates` is to record and include states as far back in history as possible. 
+The package is geared towards global governance research, 
+but can also be used by anyone interested in state actors across time. 
 
 Please also check out [`{manydata}`](https://github.com/globalgov/manydata) for
 more information about the other packages and tools to handle data from the
@@ -38,12 +39,19 @@ manydata::call_packages() # this prints a list of the publicly available data pa
 # manydata::call_packages("manystates") # this downloads and installs the named package
 ```
 
-## Data included
+## Included data
 
-Once you have installed the package, you can see the different datasets included in a specific datacube in the {`manystates`} package using the following function.
+Once you have installed the package, you can access the primary datacube in the
+package, `states`, as follows.
+You can see that currently the datacube combines three datasets:
+Gleditsch and Ward's (1999) state list,
+the International System(s) Dataset (ISD) by Griffiths and Butcher (2013),
+and the state list developed by Hollway, Sposito, and Tan (2021) for
+this package.
 
-```{r datasets, eval = FALSE}
-manydata::call_sources("manystates", "states")
+```{r datasets, eval = TRUE}
+manydata::describe_datacube(manystates::states)
+manystates::states
 ```
 
 Working with ensembles of related data has many advantages for robust analysis.
@@ -69,9 +77,6 @@ citation("manystates")
 ```
 
 ## Contributing
-
-[`{manypkgs}`](https://github.com/globalgov/manypkgs) also makes it easy to 
-contribute in lots of different ways.
 
 If you have already developed a dataset salient to this package,
 please reach out by flagging this as an [issue](https://github.com/globalgov/manystates/issues)
