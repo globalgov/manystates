@@ -3,9 +3,9 @@
 ## Package
 
 - Dropped unnecessary dependencies for CRAN submission
-- Added more description of included data and functions to the README
+- Added more description of included data and functions to the README (closed #78)
 - Added funding details to the README
-- Package now considered stable
+- Package now considered stable (closed #76)
 
 ## Data
 
@@ -25,11 +25,11 @@
 - Added more details on Antigua and Barbuda
 - Added more details on Austria-Hungary
 - Added more details on Australia
-- All current states coded as ending 9999-12-31
+- All current states coded as ending 9999-12-31 (closed #85)
 
 ## Functions
 
-- Fixed Burgundy (BOU) identification in `code_states()`
+- Fixed Burgundy (BOU) identification in `code_states()` (fixed #79)
 - `code_states()` and `generate_states()` now use stringi exclusively
 - Added tests for `generate_states()`
 
