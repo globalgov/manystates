@@ -59,12 +59,11 @@ jobs:
           name: ${{ matrix.config.asset_name }}
           path: build/
 
-      - name: Codecov
-        uses: codecov/codecov-action@v5
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-          name: codecov # optional
-          fail_ci_if_error: false # optional (default = false)
+      - name: Calculate code coverage
+        if: runner.os == 'macOS'
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        run: Rscript -e 'covr::codecov(token = Sys.getenv("CODECOV_TOKEN"))'
     
       - name: Lint
         run: lintr::lint_package()
