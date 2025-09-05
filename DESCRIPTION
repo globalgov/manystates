@@ -37,6 +37,7 @@ Depends:
     R (>= 3.5.0),
     manydata
 Imports:
+    dplyr,
     knitr,
     purrr,
     stringi

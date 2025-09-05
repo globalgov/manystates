@@ -3,6 +3,8 @@
 export(code_states)
 export(consolidate)
 export(generate_states)
+export(state_system)
+importFrom(dplyr,filter)
 importFrom(knitr,kable)
 importFrom(manydata,consolidate)
 importFrom(purrr,map_chr)
