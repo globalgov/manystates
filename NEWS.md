@@ -29,6 +29,7 @@
 
 ## Functions
 
+- Added `state_system()` to identify the state system in a given year (closed #83)
 - Fixed Burgundy (BOU) identification in `code_states()` (fixed #79)
 - `code_states()` and `generate_states()` now use stringi exclusively
 - Added tests for `generate_states()`
