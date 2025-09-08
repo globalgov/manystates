@@ -345,10 +345,10 @@ countryRegex <- dplyr::tribble(
   "SWA","Swat","^swat$|dera yusufzai",
   "SWE","Sweden","swed|su[e]de",
   "SWZ","Eswatini","swaziland|eswatini",
-  "SXA","Saxe-Atenburg","saxe-atenburg",
+  "SXA","Saxe-Altenburg","saxe-atenburg|saxe-altenburg",
   "SXG","Saxe-Coburg-Gotha","saxe-coburg-gotha",
-  "SXM","Saxe-Meiningen-Hidburghausen","(?!.*martin)(?!.*saba).*maarten|saint-martin (partie neerlandaise)",
-  "SXW","Saxe-Wiemar-Eisenach","saxe.weimar.eisenach",
+  "SXM","Saxe-Meiningen-Hidburghausen","saxe.meiningen.hidburghausen",
+  "SXW","Saxe-Weimar-Eisenach","saxe.wiemar.eisenach|saxe-weimar-eisenach",
   "SYC","Seychelles","seychell|seychelles",
   "SYR","Syrian Arab Republic","syria|syrie",
   ## T ####
