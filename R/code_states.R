@@ -86,7 +86,7 @@ countryRegex <- dplyr::tribble(
   "BLR","Belarus","belarus|byelo|bielorussie|belarus",
   "BLZ","Belize","belize|(?=.*british).*honduras|belize",
   "BNJ","Benjermassin","benjermassin",
-  "BOL","Plurinational State of Bolivia","bolivia|bolivie",
+  "BOL","Plurinational State of Bolivia","(?!-).bolivia|bolivie|^bolivia$|bolivia..pluri",
   "BOU","Burgundy","burgundy|bourgogne|burgandy",
   "BPR","Bahawalpur","bahawalpur",
   "BRA","Brazil","brazil|brasil|bresil|bresil",
@@ -176,7 +176,7 @@ countryRegex <- dplyr::tribble(
   "HRV","Croatia","croatia|croatie",
   "HSE","Hesse Electoral","hesse.*lectoral|hesse.kassel|hesseelect",
   "HSG","Hesse Grand Ducal","hess.*gran.*ducal|hesse.darmstadt|hessegrand",
-  "HTI","Haiti","haiti|hayti",
+  "HTI","Haiti","(?<!state of )haiti|hayti",
   "HUN","Hungary","(?<!austria-|austria )hungary|hungarian|hongrie",
   ## I ####
   "IDN","Indonesia","indonesia|indonesie",
