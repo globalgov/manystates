@@ -130,7 +130,7 @@ countryRegex <- dplyr::tribble(
   "DOM","Dominican Republic","domin.*rep|republique dominicaine|santo domin",
   "DRV","Annam","annam",
   "DZA","Algeria","ottoman.?algeria|algerie|(?<!ottoman )algeria",
-  "DZG","Free City of Danzig","free city of danzig",
+  "DZG","Free City of Danzig","danzig",
   ## E ####
   "EAZ","Zanzibar","zanzibar",
   "ECU","Ecuador","ecuador|equateur",
@@ -296,7 +296,7 @@ countryRegex <- dplyr::tribble(
   "PLW","Palau","palau|palaos",
   "PMA","Parma","parma",
   "PNG","Papua New Guinea","papua|new.?guinea|papouasie",
-  "POL","Poland","poland|polish|pologne|danzig",
+  "POL","Poland","poland|polish|pologne",
   "PPR","Polish Peoples Republic","polish peoples republic",
   "PRK","Democratic People's Republic of Korea","dprk|d.p.r.k|korea.+(d.p.r|dpr|north|dem.*peo.*rep)|(d.p.r|dpr|dem.*peo.*rep.*).+korea|north korea|cor[e]e.*nord|korea.dem|korea..dem|korea..peo|korea.pr|korea..pre-1950",
   "PRT","Portugal","portugal|portuguese|portugal|azores|acores",
