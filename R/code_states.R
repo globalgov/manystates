@@ -104,7 +104,7 @@ countryRegex <- dplyr::tribble(
   "CHE","Switzerland","switz|swiss|suisse",
   "CHL","Chile","chile|chili",
   "CHM","Chamba","chamba",
-  "CHN","China","(?!.*\\bmac)(?!.*\\bhong)(?!.*\\btai)(?!.*\\brep).*china|(?=.*peo)(?=.*rep).*china|chine|macao|china",
+  "CHN","China","(?!.*\\bmac)(?!.*\\bhong)(?!.*\\btai)(?!.*\\brep).*china|(?=.*peo)(?=.*rep).*china|chine\\b|macao|china",
   "CIV","Cote d'Ivoire","ivoire|ivory|cote d'ivo.+",
   "CMR","Cameroon","cameroon|cameroun|cameroun",
   "COD","Democratic Republic of the Congo","dem.*congo|congo(.+)?dem|d[[:punct:]]r[[:punct:]]c[[:punct:]]|belgian.?congo|congo.?free.?state|kinshasa|zaire|l.opoldville|drc| droc |rdc|droc|congo-kinshasa|congo dr|d.r. of the congo|congo.+kin|dr.congo",
@@ -384,7 +384,7 @@ countryRegex <- dplyr::tribble(
   "VAT","Holy See","holy.?see|vatican|papal.?st|etat de la cite du vatican|saint.siege",
   "VCT","St. Vincent and the Grenadines","vincent|saint-vincent-et-les-grenadines|st.vin",
   "VEN","Bolivarian Republic of Venezuela","v[ee]n[ee]zu[ee]la",
-  "VNM","Viet Nam","(?<=socialist|democratic|north).*viet.?nam|viet.?nam socialist|viet.?nam democratic|\\bviet.?nam$|viet.?nam.?dem|dem.?rep.?viet.?nam|viet.?nam n|viet.?nam, n|viet.?nam, d|viet.?nam d|viet.?nam",
+  "VNM","Viet Nam","(?<=socialist|democratic|north).*viet.?nam|viet.?nam socialist|viet.?nam democratic|viet.?nam.?dem|dem.?rep.?viet.?nam|viet.?nam n|viet.?nam, n|viet.?nam, d|viet.?nam d|(?<!republic of )viet.?nam",
   "VUT","Vanuatu","vanuatu|new.?hebrides|vanuatu",
   ## W ####
   "WAD","Wadai","wadai",
