@@ -1,7 +1,7 @@
 citHeader("To cite manystates in publications use:")
 
-citEntry(
-  entry    = "Manual",
+bibentry(
+  bibtype    = "Manual",
   title    = "manystates: Many data on state and state-like actors in the international system",
   author   = "James Hollway",
   year     = "2021",
