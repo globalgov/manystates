@@ -37,99 +37,99 @@ BFA,Burkina Faso,Ouagadougou,NA,9999-12-31,,,,12.36566,-1.53388,Western Africa,N
 BGD,Bangladesh,Dhaka,1971-12-16,9999-12-31,,,,23.7104,90.40744,Southern Asia,NA,NA,NA,NA,,,NA
 BGR,Bulgaria,Sofia,0681-12-31,1018-12-31,,,,42.69751,23.32415,Eastern Europe,NA,NA,NA,NA,,,NA
 BGR,Bulgaria,Sofia,1185-10-26,1396-09-25,,,,42.69751,23.32415,Eastern Europe,NA,NA,NA,NA,,,NA
-BGR,Bulgaria,Sofia,1878-03-03,9999-12-31,,,,42.69751,23.32415,NA,NA,NA,NA,NA,,,NA
+BGR,Bulgaria,Sofia,1878-03-03,9999-12-31,,,,42.69751,23.32415,Eastern Europe,NA,NA,NA,NA,,,NA
 BHP,Bhopal,Bhopal,1707-01-01,1818-03-01,,,,23.25469,77.40289,Southern Asia,NA,NA,NA,NA,,,NA
-BHR,Bahrain,Manama,NA,9999-12-31,,,,26.21536,50.5832,NA,NA,NA,NA,NA,,,NA
-BHS,Bahamas,Nassau,NA,9999-12-31,,,,40.73217,-73.58545,NA,NA,NA,NA,NA,,,NA
+BHR,Bahrain,Manama,NA,9999-12-31,,,,26.21536,50.5832,Western Asia,NA,NA,NA,NA,,,NA
+BHS,Bahamas,Nassau,NA,9999-12-31,,,,40.73217,-73.58545,Caribbean,NA,NA,NA,NA,,,NA
 BHT,Bharatpur,Bharatpur,1707-01-01,1828-12-31,,,,27.21731,77.49009,Southern Asia,NA,NA,NA,NA,,,NA
 BIH,Bosnia and Herzegovina,Sarajevo,NA,9999-12-31,,,,43.84864,18.35644,Eastern Europe,NA,NA,NA,NA,,,NA
 BIK,Bikaner,Bikaner,1465-01-01,1818-03-09,,,,28.02094,73.30749,Southern Asia,NA,NA,NA,NA,,,NA
 BLR,Belarus,Minsk,1918-03-25,1919-01-05,,,,53.9,27.56667,Eastern Europe,NA,NA,NA,NA,,,NA
 BLR,SSR Byelorussia,Minsk,1920-07-31,1991-08-19,,,,53.9,27.56667,Eastern Europe,Belarus,NA,NA,NA,,,NA
 BLR,Belarus,Minsk,1991-08-25,9999-12-31,,,,53.9,27.56667,Eastern Europe,NA,NA,NA,NA,,,NA
-BLZ,Belize,Belmopan,NA,9999-12-31,,,,17.25,-88.76667,NA,NA,NA,NA,NA,,,NA
+BLZ,Belize,Belmopan,NA,9999-12-31,,,,17.25,-88.76667,Central America,NA,NA,NA,NA,,,NA
 BNJ,Benjermassin,Banjarmasin,1526,1860-12-31,,,,-3.31987,114.59075,South Eastern Asia,NA,NA,NA,NA,,,NA
-BOL,Plurinational State of Bolivia,Sucre,NA,9999-12-31,,,,9,-75,NA,NA,NA,NA,NA,,,NA
+BOL,Plurinational State of Bolivia,Sucre,NA,9999-12-31,,,,9,-75,South America,NA,NA,NA,NA,,,NA
 BPR,Bahawalpur,Bahawalpur,1748-01-01,1838-01-18,,,,29.4,71.68333,Southern Asia,NA,NA,NA,NA,,,NA
-BRA,Brazil,Brasilia,NA,9999-12-31,,,,-10,-55,NA,NA,NA,NA,NA,,,NA
-BRB,Barbados,Bridgetown,NA,9999-12-31,,,,13.1,-59.61667,NA,NA,NA,NA,NA,,,NA
+BRA,Brazil,Brasilia,NA,9999-12-31,,,,-10,-55,South America,NA,NA,NA,NA,,,NA
+BRB,Barbados,Bridgetown,NA,9999-12-31,,,,13.1,-59.61667,Caribbean,NA,NA,NA,NA,,,NA
 BRE,Bremen,Bremen,1648-06-15,1871-01-17,,,,53.08891,8.79063,Western Europe,NA,NA,NA,NA,,,NA
 BRN,Brunei,Bandar Seri Begawan,1368-01-01,1888-01-01,,,,4.94029,114.94806,South Eastern Asia,NA,NA,"Brunei Darussalams ultimate authority rests with His Majesty the Sultan and Yang Di-Pertuan of Brunei Darussalam. Both executive power and legislature power is embedded on His Majesty the Sultan and Yang Di-Pertuan. Therefore, the consent of His Majesty the Sultan and Yang Di-Pertuan of Brunei Darussalam ratifies international treaties.",Executive,,Sultanate established,https://www.icj.org/wp-content/uploads/2013/04/Brunei-Constitution-1959-eng.pdf
 BTN,Bhutan,Thimphu,1616-01-01,1910-01-08,,,,27.46609,89.64191,Southern Asia,NA,NA,NA,NA,,,NA
 BUK,Bukhara,Bukhara,1785-01-01,1868-06-30,,,,39.77472,64.42861,Central Asia,NA,NA,NA,NA,,Emirate of Bukhara,NA
 BUR,Urundi,Gitega,1675-01-01,1890-05-14,,,,-3.5,29.95,Eastern Africa,NA,NA,NA,NA,,,NA
-BWA,Botswana,Gaborone,NA,9999-12-31,,,,-24.65451,25.90859,NA,NA,NA,NA,NA,,,NA
-CAF,Central African Republic,Bangui,NA,9999-12-31,,,,4.36122,18.55496,NA,NA,NA,NA,NA,,,NA
+BWA,Botswana,Gaborone,NA,9999-12-31,,,,-24.65451,25.90859,Southern Africa,NA,NA,NA,NA,,,NA
+CAF,Central African Republic,Bangui,NA,9999-12-31,,,,4.36122,18.55496,Central Africa,NA,NA,NA,NA,,,NA
 CAN,Canada,Ottawa,NA,9999-12-31,,,,45.41117,-75.69812,Northern America,NA,NA,NA,NA,,,NA
 CAY,Cayor,Mboul,1549-01-01,1859-12-31,,,,6.26667,14.28333,Western Africa,NA,NA,NA,NA,,,NA
-CHE,Switzerland,Bern,NA,9999-12-31,,,,46.94809,7.44744,NA,NA,NA,NA,NA,,,NA
-CHL,Chile,Santiago,1818-02-12,9999-12-31,1818-02-12,,,-33.45694,-70.64827,NA,NA,NA,NA,NA,,,NA
+CHE,Switzerland,Bern,NA,9999-12-31,,,,46.94809,7.44744,Western Europe,NA,NA,NA,NA,,,NA
+CHL,Chile,Santiago,1818-02-12,9999-12-31,1818-02-12,,,-33.45694,-70.64827,South America,NA,NA,NA,NA,,,NA
 CHM,Chamba,Chamba,0920-01-01,1846-03-09,,,,32.5558,76.12592,Southern Asia,NA,NA,NA,NA,,,NA
 CHN,China,Beijing,1368-01-01,9999-12-31,,,,39.9075,116.39723,Eastern Asia,NA,NA,NA,NA,,Beginning of Ming dynasty,NA
-CIV,Cote DIvoire,Yamoussoukro,NA,9999-12-31,,,,6.82055,-5.27674,NA,NA,NA,"Cote dIvoire, officially the Republic of Cote dIvoire, is a country located on the south coast of West Africa. Cote dIvoires Constitution of 2016 indicates the procedures of treaties ratification in a separate title, Title VI: International Treaties and Agreements. In Chapter I: Negotiation and Ratification, the President of the Republic has an authority of negotiation and ratification of international treaties and agreements. As provided by the following articles, the Constitutional Council shall review governing legislation for the purpose of ratification. If the Constitutional Council, called upon by the President of the Republic, the President of the National Assembly or Senate or by at least one-tenth of deputies or senators, has declared that an international treaty or agreement contains a clause contrary to the Constitution, authorisation to ratify it may take place only after review by the Constitution.",Legislature Informed,,,"Cote dIvoires Constitution of 2016. Title VI, Chap. I. https://www.constituteproject.org/constitution/Cote_DIvoire_2016.pdf?lang=en"
-CMR,Cameroon,Yaounde,NA,9999-12-31,,,,3.86667,11.51667,NA,NA,NA,NA,NA,,,NA
-COD,Democratic Republic of the Congo,Kinshasa,NA,9999-12-31,,,,-4.32142,15.30807,NA,NA,NA,NA,NA,,,NA
-COG,Congo,Brazzaville,NA,9999-12-31,,,,-4.26613,15.28318,NA,NA,NA,NA,NA,,,NA
-COK,Cook Islands,Avarua,NA,9999-12-31,,,,-21.20778,-159.775,NA,NA,NA,NA,NA,,,http://www.track.unodc.org/LegalLibrary/LegalResources/Cook%20Islands/Laws/Cook%20Islands%20Constitution%201965.pdf
-COL,Colombia,Bogota,1831-11-19,9999-12-31,,,,4.60971,-74.08175,NA,NA,NA,NA,NA,,,NA
-COM,Comoros,Moroni,1975-07-06,9999-12-31,,,,-11.70216,43.25506,NA,NA,NA,NA,NA,,,NA
-CPV,Cape Verde,Praia,NA,9999-12-31,,,,14.93152,-23.51254,NA,NA,NA,NA,NA,,,NA
-CRI,Costa Rica,San Jose,1838-11-05,9999-12-31,1838-11-05,,,37.33939,-121.89496,NA,NA,NA,NA,NA,,,NA
-CUB,Cuba,Havana,NA,9999-12-31,,,,23.13302,-82.38304,NA,NA,NA,NA,NA,,,NA
+CIV,Cote DIvoire,Yamoussoukro,NA,9999-12-31,,,,6.82055,-5.27674,Western Africa,NA,NA,"Cote dIvoire, officially the Republic of Cote dIvoire, is a country located on the south coast of West Africa. Cote dIvoires Constitution of 2016 indicates the procedures of treaties ratification in a separate title, Title VI: International Treaties and Agreements. In Chapter I: Negotiation and Ratification, the President of the Republic has an authority of negotiation and ratification of international treaties and agreements. As provided by the following articles, the Constitutional Council shall review governing legislation for the purpose of ratification. If the Constitutional Council, called upon by the President of the Republic, the President of the National Assembly or Senate or by at least one-tenth of deputies or senators, has declared that an international treaty or agreement contains a clause contrary to the Constitution, authorisation to ratify it may take place only after review by the Constitution.",Legislature Informed,,,"Cote dIvoires Constitution of 2016. Title VI, Chap. I. https://www.constituteproject.org/constitution/Cote_DIvoire_2016.pdf?lang=en"
+CMR,Cameroon,Yaounde,NA,9999-12-31,,,,3.86667,11.51667,Central Africa,NA,NA,NA,NA,,,NA
+COD,Democratic Republic of the Congo,Kinshasa,NA,9999-12-31,,,,-4.32142,15.30807,Central Africa,NA,NA,NA,NA,,,NA
+COG,Congo,Brazzaville,NA,9999-12-31,,,,-4.26613,15.28318,Central Africa,NA,NA,NA,NA,,,NA
+COK,Cook Islands,Avarua,NA,9999-12-31,,,,-21.20778,-159.775,Oceania,NA,NA,NA,NA,,,http://www.track.unodc.org/LegalLibrary/LegalResources/Cook%20Islands/Laws/Cook%20Islands%20Constitution%201965.pdf
+COL,Colombia,Bogota,1831-11-19,9999-12-31,,,,4.60971,-74.08175,South America,NA,NA,NA,NA,,,NA
+COM,Comoros,Moroni,1975-07-06,9999-12-31,,,,-11.70216,43.25506,Eastern Africa,NA,NA,NA,NA,,,NA
+CPV,Cape Verde,Praia,NA,9999-12-31,,,,14.93152,-23.51254,Western Africa,NA,NA,NA,NA,,,NA
+CRI,Costa Rica,San Jose,1838-11-05,9999-12-31,1838-11-05,,,37.33939,-121.89496,Central America,NA,NA,NA,NA,,,NA
+CUB,Cuba,Havana,NA,9999-12-31,,,,23.13302,-82.38304,Caribbean,NA,NA,NA,NA,,,NA
 CUT,Cutch,Bhuj,1147-01-01,1816-01-15,,,,23.25397,69.66928,Southern Asia,NA,NA,NA,NA,,,NA
-CYP,Cyprus,Nicosia,NA,9999-12-31,,,,35.16667,33.36667,NA,NA,NA,NA,NA,,,NA
-CZE,Czech Republic,Prague,NA,9999-12-31,,,,50.08804,14.42076,NA,NA,NA,NA,NA,,,NA
-DDR,German Democratic Republic,Berlin,1954-03-25,1990-10-02,,,,52.5233,13.41377,NA,NA,NA,NA,NA,,,NA
-DEU,German Federal Republic,Bonn,1949-05-23,1990-10-02,,,,50.73616,7.1002,NA,NA,NA,NA,NA,,,NA
+CYP,Cyprus,Nicosia,NA,9999-12-31,,,,35.16667,33.36667,Western Asia,NA,NA,NA,NA,,,NA
+CZE,Czech Republic,Prague,NA,9999-12-31,,,,50.08804,14.42076,Central Europe,NA,NA,NA,NA,,,NA
+DDR,German Democratic Republic,Berlin,1954-03-25,1990-10-02,,,,52.5233,13.41377,Eastern Europe,NA,NA,NA,NA,,,NA
+DEU,German Federal Republic,Bonn,1949-05-23,1990-10-02,,,,50.73616,7.1002,Western Europe,NA,NA,NA,NA,,,NA
 DFR,Darfur,Al Fasher,1603-01-01,1874-09-30,,,,32.799,-86.8073,Northern Africa,NA,NA,NA,NA,,,NA
 DIR,Dir,Dir,1626-01-01,1896-12-31,,,,9.59306,41.86611,Southern Asia,NA,NA,NA,NA,,,NA
 DJA,Fouta Djallon,Timbo,1725-01-01,1896-12-31,,,,-26.82333,-49.27167,Western Africa,NA,NA,NA,NA,,,NA
-DJI,Djibouti,Djibouti,NA,9999-12-31,,,,11.5,42.5,NA,NA,NA,NA,NA,,,NA
-DMA,Dominica,Roseau,NA,9999-12-31,,,,15.30174,-61.38808,NA,NA,NA,NA,NA,,,NA
-DNK,Denmark,Copenhagen,NA,9999-12-31,,,,55.67594,12.56553,NA,NA,NA,NA,NA,,,NA
-DOM,Dominican Republic,Santo Domingo,1821-11-30,1822-02-09,,,,19,-70.66667,NA,NA,NA,NA,NA,,,NA
-DOM,Dominican Republic,Santo Domingo,1844-02-27,1861-03-18,,,,19,-70.66667,NA,NA,NA,NA,NA,,,NA
-DOM,Dominican Republic,Santo Domingo,1865-03-03,1916-05-16,,,,19,-70.66667,NA,NA,NA,NA,NA,,,NA
-DOM,Dominican Republic,Santo Domingo,1924-07-13,9999-12-31,,,,19,-70.66667,NA,NA,NA,NA,NA,,,NA
+DJI,Djibouti,Djibouti,NA,9999-12-31,,,,11.5,42.5,Eastern Africa,NA,NA,NA,NA,,,NA
+DMA,Dominica,Roseau,NA,9999-12-31,,,,15.30174,-61.38808,Caribbean,NA,NA,NA,NA,,,NA
+DNK,Denmark,Copenhagen,NA,9999-12-31,,,,55.67594,12.56553,Northern Europe,NA,NA,NA,NA,,,NA
+DOM,Dominican Republic,Santo Domingo,1821-11-30,1822-02-09,,,,19,-70.66667,Caribbean,NA,NA,NA,NA,,,NA
+DOM,Dominican Republic,Santo Domingo,1844-02-27,1861-03-18,,,,19,-70.66667,Caribbean,NA,NA,NA,NA,,,NA
+DOM,Dominican Republic,Santo Domingo,1865-03-03,1916-05-16,,,,19,-70.66667,Caribbean,NA,NA,NA,NA,,,NA
+DOM,Dominican Republic,Santo Domingo,1924-07-13,9999-12-31,,,,19,-70.66667,Caribbean,NA,NA,NA,NA,,,NA
 DRV,Annam,Hue,0939-01-01,1883-08-31,,,,16.46667,107.6,South Eastern Asia,NA,NA,NA,NA,,Independence from China,NA
 DZG,Free City Of Danzig,Danzig,NA,NA,,,,54.35205,18.64637,Eastern Europe,NA,NA,NA,NA,,,NA
 EAZ,Zanzibar,Stone Town,1856-01-01,1890-07-01,,,,-6.16368,39.19184,Eastern Africa,NA,NA,NA,NA,,Separation from the Sultanate of Oman,NA
 EAZ,Zanzibar,Zanzibar City,1963-12-19,1964-04-26,,,,-6.16394,39.19793,Eastern Africa,NA,NA,NA,NA,,,NA
-ECU,Ecuador,Quito,1830-05-13,9999-12-31,,,,-0.22985,-78.52495,NA,NA,NA,NA,NA,,,NA
+ECU,Ecuador,Quito,1830-05-13,9999-12-31,,,,-0.22985,-78.52495,South America,NA,NA,NA,NA,,,NA
 EGY,Egypt,Cairo,1805-05-17,1882-09-15,,,,30.06263,31.24967,Northern Africa,NA,NA,NA,NA,,,NA
-EGY,Egypt,Cairo,1953-06-18,9999-12-31,,1953-06-18,,30.06263,31.24967,NA,NA,NA,NA,NA,,Definitive end of british presence and start of the republic,NA
+EGY,Egypt,Cairo,1953-06-18,9999-12-31,,1953-06-18,,30.06263,31.24967,Northern Africa,NA,NA,NA,NA,,Definitive end of british presence and start of the republic,NA
 EHT,State Of Haiti,Milot,NA,NA,,,,19.61667,-72.21667,Northern America,NA,NA,NA,NA,,,NA
-ERI,Eritrea,Asmara,NA,9999-12-31,,,,15.33805,38.93184,NA,NA,NA,NA,NA,,,NA
-ESP,Spain,Madrid,NA,9999-12-31,,,,40.4165,-3.70256,NA,NA,NA,NA,NA,,,NA
-EST,Estonia,Tallinn,1918-02-24,1940-06-16,,,,59.43696,24.75353,NA,NA,NA,NA,NA,,,NA
-EST,Estonia,Tallinn,1991-08-20,9999-12-31,,,,59.43696,24.75353,NA,NA,NA,NA,NA,,,NA
-ETH,Ethiopia,Addis Ababa,1270-01-01,1936-05-05,,,,9.02497,38.74689,NA,NA,NA,NA,NA,,Foundation of the Ethiopian Empire,NA
-ETH,Ethiopia,Addis Ababa,1855-02-11,1936-05-05,,,,9.02497,38.74689,NA,NA,NA,NA,NA,,,NA
-ETH,Ethiopia,Addis Ababa,1941-05-05,9999-12-31,,,,9.02497,38.74689,NA,NA,NA,NA,NA,,,NA
+ERI,Eritrea,Asmara,NA,9999-12-31,,,,15.33805,38.93184,Eastern Africa,NA,NA,NA,NA,,,NA
+ESP,Spain,Madrid,NA,9999-12-31,,,,40.4165,-3.70256,Western Europe,NA,NA,NA,NA,,,NA
+EST,Estonia,Tallinn,1918-02-24,1940-06-16,,,,59.43696,24.75353,Eastern Europe,NA,NA,NA,NA,,,NA
+EST,Estonia,Tallinn,1991-08-20,9999-12-31,,,,59.43696,24.75353,Eastern Europe,NA,NA,NA,NA,,,NA
+ETH,Ethiopia,Addis Ababa,1270-01-01,1936-05-05,,,,9.02497,38.74689,Eastern Africa,NA,NA,NA,NA,,Foundation of the Ethiopian Empire,NA
+ETH,Ethiopia,Addis Ababa,1855-02-11,1936-05-05,,,,9.02497,38.74689,Eastern Africa,NA,NA,NA,NA,,,NA
+ETH,Ethiopia,Addis Ababa,1941-05-05,9999-12-31,,,,9.02497,38.74689,Eastern Africa,NA,NA,NA,NA,,,NA
 ETS,Eastern Turkistan,Kashgar,1874-01-01,1877-12-31,,,,39.45472,75.97972,Eastern Asia,NA,NA,NA,NA,,,NA
-EUE,European Union,Brussels,NA,NA,,,,50.85045,4.34878,NA,NA,NA,"Provided by Treaty on European Union (TEU), Article 47 recognises the legal personality of the European Union, as a subject of international law. The European Union can negotiate and conclude international agreement within the scope of its competences. The executive branch has near exclusive competence in the ratification procedure of international treaties, although may be subject to a mandate voted or approval by national/regional parliament. The Lisbon Treaty gives a stronger role to the European Parliament, for instance, trade negotiations are conducted and concluded in the EU branches. In practice, the EU and Member States sign the treaty simultaneously. Mixed agreements require the agreement to be ratified at national level. In this case, treaties enter into force when the other partner, the EU and all Member States exchange ratification instruments.",Plebiscite,,,http://www.europarl.europa.eu/RegData/etudes/BRIE/2016/593489/EPRS_BRI(2016)593489_EN.pdf. http://www.europarl.europa.eu/RegData/etudes/BRIE/2016/593513/EPRS_BRI(2016)593513_EN.pdf
-FIN,Finland,Helsinki,NA,9999-12-31,,,,60.16952,24.93545,NA,NA,NA,NA,NA,,,NA
-FJI,Fiji,Suva,NA,9999-12-31,,,,-18.14161,178.44149,NA,NA,NA,NA,NA,,,NA
+EUE,European Union,Brussels,NA,NA,,,,50.85045,4.34878,Western Europe,NA,NA,"Provided by Treaty on European Union (TEU), Article 47 recognises the legal personality of the European Union, as a subject of international law. The European Union can negotiate and conclude international agreement within the scope of its competences. The executive branch has near exclusive competence in the ratification procedure of international treaties, although may be subject to a mandate voted or approval by national/regional parliament. The Lisbon Treaty gives a stronger role to the European Parliament, for instance, trade negotiations are conducted and concluded in the EU branches. In practice, the EU and Member States sign the treaty simultaneously. Mixed agreements require the agreement to be ratified at national level. In this case, treaties enter into force when the other partner, the EU and all Member States exchange ratification instruments.",Plebiscite,,,http://www.europarl.europa.eu/RegData/etudes/BRIE/2016/593489/EPRS_BRI(2016)593489_EN.pdf. http://www.europarl.europa.eu/RegData/etudes/BRIE/2016/593513/EPRS_BRI(2016)593513_EN.pdf
+FIN,Finland,Helsinki,NA,9999-12-31,,,,60.16952,24.93545,Northern Europe,NA,NA,NA,NA,,,NA
+FJI,Fiji,Suva,NA,9999-12-31,,,,-18.14161,178.44149,Oceania,NA,NA,NA,NA,,,NA
 FNJ,Funj,Sennar,1504-01-01,1821-06-30,,,,13.56907,33.56718,Northern Africa,NA,NA,NA,NA,,,NA
-FRA,France,Paris,NA,9999-12-31,,,,48.85341,2.3488,NA,NA,NA,NA,NA,,,NA
-FRO,Faroe Islands,Torshavn,NA,NA,,,,62.00973,-6.77164,NA,NA,NA,NA,NA,,,https://www.government.fo/en/foreign-relations/constitutional-status/
-FSM,Federated States of Micronesia,Palikir,NA,9999-12-31,,,,6.92477,158.16109,NA,NA,NA,NA,NA,,,NA
+FRA,France,Paris,NA,9999-12-31,,,,48.85341,2.3488,Western Europe,NA,NA,NA,NA,,,NA
+FRO,Faroe Islands,Torshavn,NA,NA,,,,62.00973,-6.77164,Western Europe,NA,NA,NA,NA,,,https://www.government.fo/en/foreign-relations/constitutional-status/
+FSM,Federated States of Micronesia,Palikir,NA,9999-12-31,,,,6.92477,158.16109,Oceania,NA,NA,NA,NA,,,NA
 FTO,Fouta Toro,Silla,1776-01-01,1888-12-31,,,,39.36667,-0.41667,Western Africa,NA,NA,NA,NA,,,NA
-GAB,Gabon,Libreville,NA,9999-12-31,,,,0.39241,9.45356,NA,NA,NA,NA,NA,,,NA
-GBR,United Kingdom,London,NA,9999-12-31,,,,51.5072648,-0.1278328,NA,NA,NA,NA,NA,,,NA
-GCL,Gran Colombia,Bogota,NA,NA,,,,4.60971,-74.08175,NA,NA,NA,NA,NA,,,NA
-GEO,Georgia,Tbilisi,1918-05-26,1921-02-25,,,,41.69411,44.83368,NA,NA,NA,NA,NA,,,NA
-GEO,Georgia,Tbilisi,1991-04-09,9999-12-31,,,,41.69411,44.83368,NA,NA,NA,NA,NA,,,NA
-GHA,Ghana,Accra,NA,9999-12-31,,,,5.55602,-0.1969,NA,NA,NA,NA,NA,,,NA
-GIN,Guinea,Conakry,NA,9999-12-31,,,,9.53795,-13.67729,NA,NA,NA,NA,NA,,,NA
-GMB,Gambia,Banjul,NA,9999-12-31,,,,13.45274,-16.57803,NA,NA,NA,NA,NA,,,NA
-GNB,Guinea-Bissau,Bissau,NA,9999-12-31,,,,11.86357,-15.59767,NA,NA,NA,NA,NA,,,NA
-GNQ,Equatorial Guinea,Malabo,NA,9999-12-31,,,,3.75,8.78333,NA,NA,NA,NA,NA,,,NA
-GRC,Greece,Athens,1827-05-17,1941-04-23,,,,37.97945,23.71622,NA,NA,NA,NA,NA,,,NA
-GRC,Greece,Athens,1944-10-13,9999-12-31,,,,37.97945,23.71622,NA,NA,NA,NA,NA,,,NA
-GRD,Grenada,Saint George’s,NA,9999-12-31,,,,12.05644,-61.74849,NA,NA,NA,NA,NA,,,NA
-GTM,Guatemala,Guatemala,1840-01-01,9999-12-31,,,,15.5,-90.25,NA,NA,NA,NA,NA,,,NA
-GUY,Guyana,Georgetown,NA,9999-12-31,,,,5.41123,100.33543,NA,NA,NA,NA,NA,,,NA
+GAB,Gabon,Libreville,NA,9999-12-31,,,,0.39241,9.45356,Central Africa,NA,NA,NA,NA,,,NA
+GBR,United Kingdom,London,NA,9999-12-31,,,,51.5072648,-0.1278328,Western Europe,NA,NA,NA,NA,,,NA
+GCL,Gran Colombia,Bogota,NA,NA,,,,4.60971,-74.08175,South America,NA,NA,NA,NA,,,NA
+GEO,Georgia,Tbilisi,1918-05-26,1921-02-25,,,,41.69411,44.83368,Eastern Europe,NA,NA,NA,NA,,,NA
+GEO,Georgia,Tbilisi,1991-04-09,9999-12-31,,,,41.69411,44.83368,Eastern Europe,NA,NA,NA,NA,,,NA
+GHA,Ghana,Accra,NA,9999-12-31,,,,5.55602,-0.1969,Western Africa,NA,NA,NA,NA,,,NA
+GIN,Guinea,Conakry,NA,9999-12-31,,,,9.53795,-13.67729,Western Africa,NA,NA,NA,NA,,,NA
+GMB,Gambia,Banjul,NA,9999-12-31,,,,13.45274,-16.57803,Western Africa,NA,NA,NA,NA,,,NA
+GNB,Guinea-Bissau,Bissau,NA,9999-12-31,,,,11.86357,-15.59767,Western Africa,NA,NA,NA,NA,,,NA
+GNQ,Equatorial Guinea,Malabo,NA,9999-12-31,,,,3.75,8.78333,Central Africa,NA,NA,NA,NA,,,NA
+GRC,Greece,Athens,1827-05-17,1941-04-23,,,,37.97945,23.71622,Eastern Europe,NA,NA,NA,NA,,,NA
+GRC,Greece,Athens,1944-10-13,9999-12-31,,,,37.97945,23.71622,Eastern Europe,NA,NA,NA,NA,,,NA
+GRD,Grenada,Saint George’s,NA,9999-12-31,,,,12.05644,-61.74849,Caribbean,NA,NA,NA,NA,,,NA
+GTM,Guatemala,Guatemala,1840-01-01,9999-12-31,,,,15.5,-90.25,Central America,NA,NA,NA,NA,,,NA
+GUY,Guyana,Georgetown,NA,9999-12-31,,,,5.41123,100.33543,South America,NA,NA,NA,NA,,,NA
 GWA,Gwalior,Lashkar,1731-01-01,1818-02-28,,,,34.58468,68.02543,Southern Asia,NA,NA,NA,NA,,,NA
 GWA,Gwalior,Lashkar,1816-01-01,1818-02-28,,,,34.58468,68.02543,Southern Asia,NA,NA,NA,NA,,,NA
 HAN,Hanover,Hannover,1814-10-12,1866-07-26,,,,52.37052,9.73322,Western Europe,NA,NA,NA,NA,,,NA
@@ -137,130 +137,130 @@ HAN,Hanover,Hannover,1946-08-23,1946-11-23,,,,52.37052,9.73322,Western Europe,NA
 HAW,Hawaii,Lahaina,1810-01-01,1898-07-06,,,,20.87833,-156.6825,Northern America,NA,NA,NA,NA,,,NA
 HBG,Hamburg,Hamburg,1806-01-01,1867-07-01,,,,53.57532,10.01534,Western Europe,NA,NA,NA,NA,,Sovereignty at the dissolution of the Holy Roman Empire,NA
 HEJ,Hejaz,Mecca,1916-10-01,1926-01-08,,,,21.42667,39.82611,Western Asia,NA,NA,NA,NA,,,NA
-HND,Honduras,Tegucigalpa,1838-11-05,9999-12-31,,,,14.0818,-87.20681,NA,NA,NA,NA,NA,,,NA
-HRV,Croatia,Zagreb,0879-06-07,1102-12-31,,,,45.81444,15.97798,NA,NA,NA,NA,NA,,,NA
-HRV,Croatia,Zagreb,1941-04-10,1945-05-08,,,,45.81444,15.97798,NA,NA,NA,NA,NA,,,NA
-HRV,Croatia,Zagreb,1991-10-08,9999-12-31,,,,45.81444,15.97798,NA,NA,NA,NA,NA,,Expiry of moratorium from declaration of independence,NA
+HND,Honduras,Tegucigalpa,1838-11-05,9999-12-31,,,,14.0818,-87.20681,Central America,NA,NA,NA,NA,,,NA
+HRV,Croatia,Zagreb,0879-06-07,1102-12-31,,,,45.81444,15.97798,Eastern Europe,NA,NA,NA,NA,,,NA
+HRV,Croatia,Zagreb,1941-04-10,1945-05-08,,,,45.81444,15.97798,Eastern Europe,NA,NA,NA,NA,,,NA
+HRV,Croatia,Zagreb,1991-10-08,9999-12-31,,,,45.81444,15.97798,Eastern Europe,NA,NA,NA,NA,,Expiry of moratorium from declaration of independence,NA
 HSE,Hesse Electoral,Kassel,1803-04-27,1807-07-09,,,,51.31667,9.5,Western Europe,NA,NA,NA,NA,,,https://en.wikisource.org/wiki/Translation:Constitution_of_the_State_of_Hesse
 HSE,Hesse Electoral,Kassel,1814-05-30,1866-08-23,,,,51.31667,9.5,Western Europe,NA,NA,NA,NA,,,https://en.wikisource.org/wiki/Translation:Constitution_of_the_State_of_Hesse
 HSG,Hesse Grand Ducal,Darmstadt,1806-08-13,1871-01-18,,,Unification,49.87056,8.64944,Western Europe,NA,NA,NA,NA,,,NA
-HTI,Haiti,Port-au-Prince,NA,9999-12-31,,,,18.53917,-72.335,NA,NA,NA,NA,NA,,,NA
+HTI,Haiti,Port-au-Prince,NA,9999-12-31,,,,18.53917,-72.335,Caribbean,NA,NA,NA,NA,,,NA
 HUN,Hungary,Budapest,1000-12-25,1526-08-29,,,,47.49801,19.03991,Eastern Europe,NA,NA,NA,NA,,,NA
-HUN,Hungary,Budapest,1920-06-04,9999-12-31,,,,47.49801,19.03991,NA,NA,NA,NA,NA,,,NA
-IDN,Indonesia,Jakarta,NA,9999-12-31,,,,-6.21462,106.84513,NA,NA,NA,NA,NA,,,NA
-IND,India,New Delhi,NA,9999-12-31,,,,28.63576,77.22445,NA,NA,NA,NA,NA,,,NA
+HUN,Hungary,Budapest,1920-06-04,9999-12-31,,,,47.49801,19.03991,Eastern Europe,NA,NA,NA,NA,,,NA
+IDN,Indonesia,Jakarta,NA,9999-12-31,,,,-6.21462,106.84513,South Eastern Asia,NA,NA,NA,NA,,,NA
+IND,India,New Delhi,NA,9999-12-31,,,,28.63576,77.22445,Southern Asia,NA,NA,NA,NA,,,NA
 INO,Indore,Maheshwar,1724-01-01,1818-12-31,,,,22.17592,75.58715,Southern Asia,NA,NA,NA,NA,,,NA
 IPH,Perak,Ipoh,1528-01-01,1874-01-20,,,,4.5841,101.0829,South Eastern Asia,NA,NA,NA,NA,,,NA
-IRL,Ireland,Dublin,1922-12-06,9999-12-31,,,,53.38046,-6.27113,NA,NA,NA,NA,NA,,,NA
-IRN,Islamic Republic of Iran,Tehran,NA,9999-12-31,,,,35.69439,51.42151,NA,NA,NA,"The Constitution of Islamic Republic of Iran, amended in 1989, is based on the governance of the jurisprudent. As provided by law, Art. 77 indicates the legislative power of ratifying treaties; treaties, transactions, contract and all international agreements must be ratified by the Islamic Consultative Assembly (Majiles). The executive power indicates the power of the government of Iran, pertaining to all the treaties, transactions, agreements, and contracts. It says that after they are approved by the Islamic Consultative Assembly, must by signed by the President of the Republic or his legal representative.",Unicameral Majority,,,"The Constitution of the Islamic Republic of Iran. The Legislative Power: The Chap. 6, Part 1, Art. 77; The Executive Power: Chap. 9, Section 1, Art. 125. https://www.wipo.int/edocs/lexdocs/laws/en/ir/ir001en.pdf"
-IRQ,Iraq,Baghdad,NA,9999-12-31,,,,33.34058,44.40088,NA,NA,NA,NA,NA,,,NA
-ISL,Iceland,Reykjavik,NA,9999-12-31,,,,64.13548,-21.89541,NA,NA,NA,NA,NA,,,NA
-ISR,Israel,Jerusalem,NA,9999-12-31,,,,31.76904,35.21633,NA,NA,NA,NA,NA,,,NA
-ITA,Italy,Rome,NA,9999-12-31,,,,41.89474,12.4839,NA,NA,NA,NA,NA,,,NA
-JAM,Jamaica,Kingston,NA,9999-12-31,,,,17.99702,-76.79358,NA,NA,NA,NA,NA,,,NA
+IRL,Ireland,Dublin,1922-12-06,9999-12-31,,,,53.38046,-6.27113,Western Europe,NA,NA,NA,NA,,,NA
+IRN,Islamic Republic of Iran,Tehran,NA,9999-12-31,,,,35.69439,51.42151,Western Asia,NA,NA,"The Constitution of Islamic Republic of Iran, amended in 1989, is based on the governance of the jurisprudent. As provided by law, Art. 77 indicates the legislative power of ratifying treaties; treaties, transactions, contract and all international agreements must be ratified by the Islamic Consultative Assembly (Majiles). The executive power indicates the power of the government of Iran, pertaining to all the treaties, transactions, agreements, and contracts. It says that after they are approved by the Islamic Consultative Assembly, must by signed by the President of the Republic or his legal representative.",Unicameral Majority,,,"The Constitution of the Islamic Republic of Iran. The Legislative Power: The Chap. 6, Part 1, Art. 77; The Executive Power: Chap. 9, Section 1, Art. 125. https://www.wipo.int/edocs/lexdocs/laws/en/ir/ir001en.pdf"
+IRQ,Iraq,Baghdad,NA,9999-12-31,,,,33.34058,44.40088,Western Asia,NA,NA,NA,NA,,,NA
+ISL,Iceland,Reykjavik,NA,9999-12-31,,,,64.13548,-21.89541,Western Europe,NA,NA,NA,NA,,,NA
+ISR,Israel,Jerusalem,NA,9999-12-31,,,,31.76904,35.21633,Western Asia,NA,NA,NA,NA,,,NA
+ITA,Italy,Rome,NA,9999-12-31,,,,41.89474,12.4839,Western Europe,NA,NA,NA,NA,,,NA
+JAM,Jamaica,Kingston,NA,9999-12-31,,,,17.99702,-76.79358,Caribbean,NA,NA,NA,NA,,,NA
 JMK,Jimma-Kakka,Jimma,1830-01-01,1885-12-31,,,,7.66667,37,Eastern Africa,NA,NA,NA,NA,,,NA
 JOD,Jodhpur,Jodhpur,1226-01-01,1818-06-06,,,,26.26841,73.00594,Southern Asia,NA,NA,NA,NA,,,NA
 JOH,Johore,Johor Bahru,1518-01-01,1885-12-31,,,,1.4655,103.7578,South Eastern Asia,NA,NA,NA,NA,,,NA
-JOR,Jordan,Amman,1946-05-25,9999-12-31,,,,31.95522,35.94503,NA,NA,NA,NA,NA,,,NA
+JOR,Jordan,Amman,1946-05-25,9999-12-31,,,,31.95522,35.94503,Western Asia,NA,NA,NA,NA,,,NA
 JPN,Japan,Tokyo,1600-01-01,1945-08-14,,,,35.6895,139.69171,Eastern Asia,NA,NA,NA,NA,,Tokugawa Shogunate and unification after the “warring states period”,NA
-JPN,Japan,Tokyo,1952-04-28,9999-12-31,,,,35.6895,139.69171,NA,NA,NA,NA,NA,,,NA
+JPN,Japan,Tokyo,1952-04-28,9999-12-31,,,,35.6895,139.69171,Eastern Asia,NA,NA,NA,NA,,,NA
 JPR,Jaipur,Jaipur,1128-01-01,1818-04-25,,,,26.91962,75.78781,Southern Asia,NA,NA,NA,NA,,,NA
 JPR,Jaipur,Jaipur,1816-01-01,1818-04-25,,,,26.91962,75.78781,Southern Asia,NA,NA,NA,NA,,,NA
 KAF,Kaffa,Jimma,1390-01-01,1897-09-11,,,,7.66667,37,Eastern Africa,NA,NA,NA,NA,,,NA
 KAS,Kasanje,Kasanje,1620-01-01,1911-12-31,,,,-1.3,29.86667,Eastern Africa,NA,NA,NA,NA,,,NA
 KAT,Kathiri Sultanate,Say’un,1490-01-01,1888-12-31,,,,15.96611,48.7883,Western Asia,NA,Sayun,NA,NA,,Approximation,NA
-KAZ,Kazakhstan,Astana,NA,9999-12-31,,,,51.1801,71.44598,NA,NA,NA,NA,NA,,,NA
+KAZ,Kazakhstan,Astana,NA,9999-12-31,,,,51.1801,71.44598,Central Asia,NA,NA,NA,NA,,,NA
 KED,Kedah,Alor Star,1136-01-01,1821-12-31,,,,6.12104,100.36014,South Eastern Asia,NA,NA,NA,NA,,,NA
 KEL,Kelantan,Wakaf Bharu,1760-01-01,1843-12-31,,,,6.11667,102.2,South Eastern Asia,NA,NA,NA,NA,,,NA
 KEL,Kelantan,Kota Bharu,1844-01-01,1909-03-10,,,,6.13328,102.2386,South Eastern Asia,NA,NA,NA,NA,,,NA
-KEN,Kenya,Nairobi,NA,9999-12-31,,,,-1.28333,36.81667,NA,NA,NA,NA,NA,,,NA
-KGZ,Kyrgyzstan,Bishkek,NA,9999-12-31,,,,42.87,74.59,NA,NA,NA,NA,NA,,,NA
+KEN,Kenya,Nairobi,NA,9999-12-31,,,,-1.28333,36.81667,Eastern Africa,NA,NA,NA,NA,,,NA
+KGZ,Kyrgyzstan,Bishkek,NA,9999-12-31,,,,42.87,74.59,Central Asia,NA,NA,NA,NA,,,NA
 KHI,Khairpur,Khairpur City,1775-01-01,1838-12-25,,,,27.52948,68.7617,Southern Asia,NA,NA,NA,NA,,,NA
-KHM,Cambodia,Phnom Penh,NA,9999-12-31,,,,11.56245,104.91601,NA,NA,NA,NA,NA,,,NA
+KHM,Cambodia,Phnom Penh,NA,9999-12-31,,,,11.56245,104.91601,South Eastern Asia,NA,NA,NA,NA,,,NA
 KHV,Khiva,Khiva,1511-01-01,1873-08-12,,,,41.37833,60.36389,Central Asia,NA,NA,NA,NA,,,NA
-KIR,Kiribati,Tarawa,NA,9999-12-31,,,,1.3278,172.97696,NA,NA,NA,NA,NA,,,https://www.wipo.int/edocs/lexdocs/laws/en/ki/ki001en.pdf
+KIR,Kiribati,Tarawa,NA,9999-12-31,,,,1.3278,172.97696,Oceania,NA,NA,NA,NA,,,https://www.wipo.int/edocs/lexdocs/laws/en/ki/ki001en.pdf
 KLT,Kalat,Kalat,1666-01-01,1876-12-31,,,,28.88242,66.53165,Southern Asia,NA,NA,NA,NA,,,NA
-KNA,St. Kitts and Nevis,Basseterre,NA,9999-12-31,,,,17.29484,-62.7261,NA,NA,NA,NA,NA,,,NA
-KNB,Kanem-Bornu,Dikoa,1380-01-01,1893-12-31,,,,12.02396,13.91646,Middle Africa,NA,NA,NA,NA,,Start of the Bornu Empire,NA
+KNA,St. Kitts and Nevis,Basseterre,NA,9999-12-31,,,,17.29484,-62.7261,Caribbean,NA,NA,NA,NA,,,NA
+KNB,Kanem-Bornu,Dikoa,1380-01-01,1893-12-31,,,,12.02396,13.91646,Central Africa,NA,NA,NA,NA,,Start of the Bornu Empire,NA
 KOK,Kokand,Kokand,1709-01-01,1865-05-30,,,,40.52861,70.9425,Central Asia,NA,NA,NA,NA,,,NA
-KON,Kongo Kingdom,Sao Salvador,1390-01-01,1888-12-31,,,,-12.97111,-38.51083,Middle Africa,NA,NA,NA,NA,,Approximation,NA
-KOR,Republic of Korea,Seoul,NA,9999-12-31,,,,37.56826,126.97783,NA,NA,NA,NA,NA,,,NA
+KON,Kongo Kingdom,Sao Salvador,1390-01-01,1888-12-31,,,,-12.97111,-38.51083,Central Africa,NA,NA,NA,NA,,Approximation,NA
+KOR,Republic of Korea,Seoul,NA,9999-12-31,,,,37.56826,126.97783,Eastern Asia,NA,NA,NA,NA,,,NA
 KOS,Kosovo,Kosovo,2008-02-17,9999-12-31,,,,42.58333,21,Southern Europe,NA,NA,"In Article 18, it declares that international agreements are ratified by two thirds vote of all deputies of the Assembly, if the subjects are territory, peace, alliances, political and military issues; fundamental rights and freedoms; membership of the Republic of Kosovo in international organisations; and the undertaking of financial obligations by the Republic of Kosovo. Other than those, the President of the Republic of Kosovo ratifies international agreements upon signature.",Super-majority/Bicameral,,,"Constitution of Republic of Kosovo. Chapter I, Article 18. http://www.kryeministri-ks.net/repository/docs/Constitution1Kosovo.pdf"
 KOT,Kotah,Kotah,1631-01-01,1818-12-31,,,,25.18254,75.83906,Southern Asia,NA,NA,NA,NA,,,NA
 KPT,Kapurthala,Kapurthala,1780-01-01,1826-12-31,,,,31.38011,75.38105,Southern Asia,NA,NA,NA,NA,,,NA
 KRG,Karangasem (Bali And Lombok),Amlapura,1740-01-01,1894-01-11,,,,-8.45,115.61667,South Eastern Asia,NA,NA,NA,NA,,,NA
 KTA,Kaarta,GuZmou,1650-01-01,1854-12-31,,,,14.51104,-11.85154,Western Africa,NA,Guemou,NA,NA,,Approximation,NA
-KUB,Kuba,Mushenge,1625-01-01,1910-12-31,,,,-4.52985,21.33321,Middle Africa,NA,NA,NA,NA,,Approximation,NA
-KWT,Kuwait,Kuwait,NA,9999-12-31,,,,29.5,47.75,NA,NA,NA,NA,NA,,,NA
+KUB,Kuba,Mushenge,1625-01-01,1910-12-31,,,,-4.52985,21.33321,Central Africa,NA,NA,NA,NA,,Approximation,NA
+KWT,Kuwait,Kuwait,NA,9999-12-31,,,,29.5,47.75,Western Asia,NA,NA,NA,NA,,,NA
 KZB,Kazembe,Kazembe,1740-01-01,1890-12-31,,,,-10.37327,23.18229,Eastern Africa,NA,NA,NA,NA,,Approximation,NA
-LAO,Lao Peoples Democratic Republic,Vientiane,NA,9999-12-31,,,,17.96667,102.6,NA,NA,NA,NA,NA,,,NA
-LBN,Lebanon,Beirut,1945-10-24,9999-12-31,,,,33.88894,35.49442,NA,NA,NA,NA,NA,,"As founding member state of UN, French mandate terminated from this date",NA
-LBR,Liberia,Monrovia,1847-07-26,9999-12-31,,,,6.30054,-10.7969,NA,NA,NA,NA,NA,,,NA
-LBY,Libya,Tripoli,NA,9999-12-31,,,,32.87519,13.18746,NA,NA,NA,NA,NA,,,NA
-LCA,St. Lucia,Castries,NA,9999-12-31,,,,13.9957,-61.00614,NA,NA,NA,NA,NA,,,NA
-LIE,Liechtenstein,Vaduz,1718-01-23,1806-07-25,,,,47.14151,9.52154,NA,NA,NA,NA,NA,,,NA
-LIE,Liechtenstein,Vaduz,1813-10-19,1815-06-20,,,,47.14151,9.52154,NA,NA,NA,NA,NA,,,NA
-LIE,Liechtenstein,Vaduz,1866-08-24,9999-12-31,,,,47.14151,9.52154,NA,NA,NA,NA,NA,,Dissolution of the German Confederation,NA
+LAO,Lao Peoples Democratic Republic,Vientiane,NA,9999-12-31,,,,17.96667,102.6,South Eastern Asia,NA,NA,NA,NA,,,NA
+LBN,Lebanon,Beirut,1945-10-24,9999-12-31,,,,33.88894,35.49442,Western Asia,NA,NA,NA,NA,,"As founding member state of UN, French mandate terminated from this date",NA
+LBR,Liberia,Monrovia,1847-07-26,9999-12-31,,,,6.30054,-10.7969,Western Africa,NA,NA,NA,NA,,,NA
+LBY,Libya,Tripoli,NA,9999-12-31,,,,32.87519,13.18746,Northern Africa,NA,NA,NA,NA,,,NA
+LCA,St. Lucia,Castries,NA,9999-12-31,,,,13.9957,-61.00614,Caribbean,NA,NA,NA,NA,,,NA
+LIE,Liechtenstein,Vaduz,1718-01-23,1806-07-25,,,,47.14151,9.52154,Western Europe,NA,NA,NA,NA,,,NA
+LIE,Liechtenstein,Vaduz,1813-10-19,1815-06-20,,,,47.14151,9.52154,Western Europe,NA,NA,NA,NA,,,NA
+LIE,Liechtenstein,Vaduz,1866-08-24,9999-12-31,,,,47.14151,9.52154,Western Europe,NA,NA,NA,NA,,Dissolution of the German Confederation,NA
 LIM,Enarya (Limmu),Saqqa,1801-01-01,1849-12-31,,,,33.4364,36.46638,Eastern Africa,NA,NA,NA,NA,,,NA
 LIP,Lippe,Detmold,1123-01-01,1867-07-01,,,,51.93855,8.87318,Western Europe,NA,NA,NA,NA,,,NA
-LKA,Sri Lanka,Colombo,NA,9999-12-31,,,,6.8664,80.0166,NA,NA,NA,NA,NA,,,NA
-LSO,Lesotho,Maseru,1822-01-01,1843-12-31,,,,-29.31667,27.48333,NA,NA,NA,NA,NA,,Reign of Moshoeshoe I,NA
-LTU,Lithuania,Vilnius,NA,9999-12-31,,,,54.68916,25.2798,NA,NA,NA,NA,NA,,,NA
-LUB,Luba,Kabongo,1585-01-01,1889-12-31,,,,-6.15061,22.81719,Middle Africa,NA,NA,NA,NA,,,NA
-LUN,Lunda Empire,Musumba,1644-01-01,1889-12-31,,,,-2.68333,30.71667,Middle Africa,NA,NA,NA,NA,,,NA
-LUX,Luxembourg,Luxembourg,1867-05-11,1890-11-22,,,,49.75,6.16667,NA,NA,NA,NA,NA,,,NA
-LUX,Luxembourg,Luxembourg,1890-11-23,1940-05-10,,,,49.75,6.16667,NA,NA,NA,NA,NA,,,NA
-LUX,Luxembourg,Luxembourg,1944-09-10,9999-12-31,,,,49.75,6.16667,NA,NA,NA,NA,NA,,,NA
-LVA,Latvia,Riga,1918-11-18,1940-06-16,,,,56.946,24.10589,NA,NA,NA,NA,NA,,,NA
-LVA,Latvia,Riga,1991-09-06,9999-12-31,1991-09-06,,,56.946,24.10589,NA,NA,NA,NA,NA,,,NA
+LKA,Sri Lanka,Colombo,NA,9999-12-31,,,,6.8664,80.0166,Southern Asia,NA,NA,NA,NA,,,NA
+LSO,Lesotho,Maseru,1822-01-01,1843-12-31,,,,-29.31667,27.48333,Southern Africa,NA,NA,NA,NA,,Reign of Moshoeshoe I,NA
+LTU,Lithuania,Vilnius,NA,9999-12-31,,,,54.68916,25.2798,Eastern Europe,NA,NA,NA,NA,,,NA
+LUB,Luba,Kabongo,1585-01-01,1889-12-31,,,,-6.15061,22.81719,Central Africa,NA,NA,NA,NA,,,NA
+LUN,Lunda Empire,Musumba,1644-01-01,1889-12-31,,,,-2.68333,30.71667,Central Africa,NA,NA,NA,NA,,,NA
+LUX,Luxembourg,Luxembourg,1867-05-11,1890-11-22,,,,49.75,6.16667,Western Europe,NA,NA,NA,NA,,,NA
+LUX,Luxembourg,Luxembourg,1890-11-23,1940-05-10,,,,49.75,6.16667,Western Europe,NA,NA,NA,NA,,,NA
+LUX,Luxembourg,Luxembourg,1944-09-10,9999-12-31,,,,49.75,6.16667,Western Europe,NA,NA,NA,NA,,,NA
+LVA,Latvia,Riga,1918-11-18,1940-06-16,,,,56.946,24.10589,Eastern Europe,NA,NA,NA,NA,,,NA
+LVA,Latvia,Riga,1991-09-06,9999-12-31,1991-09-06,,,56.946,24.10589,Eastern Europe,NA,NA,NA,NA,,,NA
 MAR,Morocco,Rabat,1664-08-02,1912-03-30,,,,34.01325,-6.83255,Northern Africa,NA,NA,NA,NA,,From coronation of Al-Rashid to Treaty of Fez,NA
-MAR,Morocco,Rabat,1956-03-02,9999-12-31,,,,34.01325,-6.83255,NA,NA,NA,NA,NA,,French-Moroccan Agreement,NA
+MAR,Morocco,Rabat,1956-03-02,9999-12-31,,,,34.01325,-6.83255,Northern Africa,NA,NA,NA,NA,,French-Moroccan Agreement,NA
 MAS,Massina,Hamdullahi,1820-01-01,1862-12-31,,,,11.62967,9.05725,Western Africa,NA,NA,NA,NA,,,NA
 MCO,Monaco,Monaco,1641-09-14,1793-02-14,,,,48.13743,11.57549,Western Europe,NA,NA,The principle of government is a hereditary and constitutional nomarchy. The executive power is exercised by the highest authority of the Prince. The legislative power is jointly exercised by the Prince and the National Council. The Prince signs and ratifies treaties after consulting the Crown Council. The National Council does not have treaty ratification powers explicitly.,Executive,,,"Constitution of the Principality, December 17th 1962 (as amended by Law n Section 1.249 dated April 2nd 2002). Chap. II, Art. 13, 14.http://www.monaco-consulate.com/wp-content/uploads/2009/06/Constitution.pdf"
-MCO,Monaco,Monaco,1861-02-02,9999-12-31,,,,48.13743,11.57549,NA,NA,NA,The principle of government is a hereditary and constitutional nomarchy. The executive power is exercised by the highest authority of the Prince. The legislative power is jointly exercised by the Prince and the National Council. The Prince signs and ratifies treaties after consulting the Crown Council. The National Council does not have treaty ratification powers explicitly.,Executive,,,"Constitution of the Principality, December 17th 1962 (as amended by Law n Section 1.249 dated April 2nd 2002). Chap. II, Art. 13, 14.http://www.monaco-consulate.com/wp-content/uploads/2009/06/Constitution.pdf"
-MDA,Republic of Moldova,Chisinau,NA,9999-12-31,,,,47.00556,28.8575,NA,NA,NA,NA,NA,,,NA
-MDG,Madagascar,Antananarivo,1810-07-06,1896-08-06,,,,-18.91368,47.53613,NA,NA,NA,NA,NA,,From death of Andrianampoinimerina to French proclamation of colony,NA
-MDG,Madagascar,Antananarivo,1960-06-26,9999-12-31,,,,-18.91368,47.53613,NA,NA,NA,NA,NA,,,NA
+MCO,Monaco,Monaco,1861-02-02,9999-12-31,,,,48.13743,11.57549,Western Europe,NA,NA,The principle of government is a hereditary and constitutional nomarchy. The executive power is exercised by the highest authority of the Prince. The legislative power is jointly exercised by the Prince and the National Council. The Prince signs and ratifies treaties after consulting the Crown Council. The National Council does not have treaty ratification powers explicitly.,Executive,,,"Constitution of the Principality, December 17th 1962 (as amended by Law n Section 1.249 dated April 2nd 2002). Chap. II, Art. 13, 14.http://www.monaco-consulate.com/wp-content/uploads/2009/06/Constitution.pdf"
+MDA,Republic of Moldova,Chisinau,NA,9999-12-31,,,,47.00556,28.8575,Eastern Europe,NA,NA,NA,NA,,,NA
+MDG,Madagascar,Antananarivo,1810-07-06,1896-08-06,,,,-18.91368,47.53613,Eastern Africa,NA,NA,NA,NA,,From death of Andrianampoinimerina to French proclamation of colony,NA
+MDG,Madagascar,Antananarivo,1960-06-26,9999-12-31,,,,-18.91368,47.53613,Eastern Africa,NA,NA,NA,NA,,,NA
 MDK,Mandinka Empire (Wassulu),Kankan,1878-01-01,1898-09-29,,,,10.38542,-9.30568,Western Africa,NA,NA,NA,NA,,,NA
-MDV,Maldives,Male,NA,9999-12-31,,,,4.1748,73.50888,NA,NA,NA,NA,NA,,,NA
+MDV,Maldives,Male,NA,9999-12-31,,,,4.1748,73.50888,Southern Asia,NA,NA,NA,NA,,,NA
 MEC,Mecklenburg Schwerin,Schwerin,1815-06-14,1871-01-18,,,,53.62937,11.41316,Western Europe,NA,NA,NA,NA,,,NA
-MEX,Mexico,Mexico,1821-09-28,9999-12-31,,,,23,-102,NA,NA,NA,NA,NA,,,NA
-MHL,Marshall Islands,Majuro,NA,9999-12-31,,,,7.113,171.236,NA,NA,NA,NA,NA,,,NA
+MEX,Mexico,Mexico,1821-09-28,9999-12-31,,,,23,-102,Central America,NA,NA,NA,NA,,,NA
+MHL,Marshall Islands,Majuro,NA,9999-12-31,,,,7.113,171.236,Oceania,NA,NA,NA,NA,,,NA
 MIN,Minangkabau,Batusangkar,1347-01-01,1837-12-31,,,,-0.45624,100.6268,South Eastern Asia,NA,NA,NA,NA,,Establishment of King Adityawarman,NA
-MKD,North Macedonia,Skopje,NA,9999-12-31,,,,42,21.41667,NA,NA,NA,NA,NA,,,NA
-MLI,Mali,Bamako,NA,9999-12-31,,,,12.65,-8,NA,NA,NA,NA,NA,,,NA
-MLT,Malta,Valletta,NA,9999-12-31,,,,35.89972,14.51472,NA,NA,NA,NA,NA,,,NA
-MMR,Myanmar,Rangoon,1044-01-01,1885-11-29,,,,16.80528,96.15611,NA,NA,NA,"As provided the Constitution of Myanmar (2008), the President shall have the power to enter into, ratify or annul international agreements which require the approval of the Pyidaungsu Hluttaw, the legislative body of Myanmar. In some cases, the President may enter into, ratify or annul international agreements without the approval of the Pyidaungsu Hluttaw, however, this authority is given by the Pyidaungsu Hluttaw.",Unicameral Majority,,Unification of the Kingdom under Anawratha,"Constitution of the Republic of the Union of Myanmar, 2008. Legislature: Chap. IV, 108 (a) (b); Executive: Chap. V, 209 (a) (b). http://www.burmalibrary.org/docs5/Myanmar_Constitution-2008-en.pdf"
-MNE,Montenegro,Cetinje,1852-03-13,1918-11-28,,,,42.39063,18.91417,NA,NA,NA,"As provided the Constitution of Montenegro (2007), the Government of Montenegro, which consists of the Prime Minister, one or more Deputy Prime Ministers and the ministers, shall have the responsibility to manage internal and foreign policy of Montenegro and to sign international agreements. The Parliament shall confirm international agreements by the majority consent.",Unicameral Majority,,,"The Constitution of Montenegro, 2007. Legislature: Part 3, 1, Art. 82 (17); Executive: Part 3, 3, Art. 100 (1) (4). https://www.wipo.int/edocs/lexdocs/laws/en/me/me004en.pdf"
-MNE,Montenegro,Cetinje,1852-03-13,1918-12-01,,,,42.39063,18.91417,NA,NA,NA,"As provided the Constitution of Montenegro (2007), the Government of Montenegro, which consists of the Prime Minister, one or more Deputy Prime Ministers and the ministers, shall have the responsibility to manage internal and foreign policy of Montenegro and to sign international agreements. The Parliament shall confirm international agreements by the majority consent.",Unicameral Majority,,,"The Constitution of Montenegro, 2007. Legislature: Part 3, 1, Art. 82 (17); Executive: Part 3, 3, Art. 100 (1) (4). https://www.wipo.int/edocs/lexdocs/laws/en/me/me004en.pdf"
-MNE,Montenegro,Podgorica,2006-06-03,9999-12-31,,,,42.44111,19.26361,NA,NA,NA,"As provided the Constitution of Montenegro (2007), the Government of Montenegro, which consists of the Prime Minister, one or more Deputy Prime Ministers and the ministers, shall have the responsibility to manage internal and foreign policy of Montenegro and to sign international agreements. The Parliament shall confirm international agreements by the majority consent.",Unicameral Majority,,,"The Constitution of Montenegro, 2007. Legislature: Part 3, 1, Art. 82 (17); Executive: Part 3, 3, Art. 100 (1) (4). https://www.wipo.int/edocs/lexdocs/laws/en/me/me004en.pdf"
-MNG,Mongolia,Ulaanbaatar,NA,9999-12-31,,,,47.90771,106.88324,NA,NA,NA,NA,NA,,,NA
+MKD,North Macedonia,Skopje,NA,9999-12-31,,,,42,21.41667,Eastern Europe,NA,NA,NA,NA,,,NA
+MLI,Mali,Bamako,NA,9999-12-31,,,,12.65,-8,Western Africa,NA,NA,NA,NA,,,NA
+MLT,Malta,Valletta,NA,9999-12-31,,,,35.89972,14.51472,Western Europe,NA,NA,NA,NA,,,NA
+MMR,Myanmar,Rangoon,1044-01-01,1885-11-29,,,,16.80528,96.15611,South Eastern Asia,NA,NA,"As provided the Constitution of Myanmar (2008), the President shall have the power to enter into, ratify or annul international agreements which require the approval of the Pyidaungsu Hluttaw, the legislative body of Myanmar. In some cases, the President may enter into, ratify or annul international agreements without the approval of the Pyidaungsu Hluttaw, however, this authority is given by the Pyidaungsu Hluttaw.",Unicameral Majority,,Unification of the Kingdom under Anawratha,"Constitution of the Republic of the Union of Myanmar, 2008. Legislature: Chap. IV, 108 (a) (b); Executive: Chap. V, 209 (a) (b). http://www.burmalibrary.org/docs5/Myanmar_Constitution-2008-en.pdf"
+MNE,Montenegro,Cetinje,1852-03-13,1918-11-28,,,,42.39063,18.91417,Eastern Europe,NA,NA,"As provided the Constitution of Montenegro (2007), the Government of Montenegro, which consists of the Prime Minister, one or more Deputy Prime Ministers and the ministers, shall have the responsibility to manage internal and foreign policy of Montenegro and to sign international agreements. The Parliament shall confirm international agreements by the majority consent.",Unicameral Majority,,,"The Constitution of Montenegro, 2007. Legislature: Part 3, 1, Art. 82 (17); Executive: Part 3, 3, Art. 100 (1) (4). https://www.wipo.int/edocs/lexdocs/laws/en/me/me004en.pdf"
+MNE,Montenegro,Cetinje,1852-03-13,1918-12-01,,,,42.39063,18.91417,Eastern Europe,NA,NA,"As provided the Constitution of Montenegro (2007), the Government of Montenegro, which consists of the Prime Minister, one or more Deputy Prime Ministers and the ministers, shall have the responsibility to manage internal and foreign policy of Montenegro and to sign international agreements. The Parliament shall confirm international agreements by the majority consent.",Unicameral Majority,,,"The Constitution of Montenegro, 2007. Legislature: Part 3, 1, Art. 82 (17); Executive: Part 3, 3, Art. 100 (1) (4). https://www.wipo.int/edocs/lexdocs/laws/en/me/me004en.pdf"
+MNE,Montenegro,Podgorica,2006-06-03,9999-12-31,,,,42.44111,19.26361,Eastern Europe,NA,NA,"As provided the Constitution of Montenegro (2007), the Government of Montenegro, which consists of the Prime Minister, one or more Deputy Prime Ministers and the ministers, shall have the responsibility to manage internal and foreign policy of Montenegro and to sign international agreements. The Parliament shall confirm international agreements by the majority consent.",Unicameral Majority,,,"The Constitution of Montenegro, 2007. Legislature: Part 3, 1, Art. 82 (17); Executive: Part 3, 3, Art. 100 (1) (4). https://www.wipo.int/edocs/lexdocs/laws/en/me/me004en.pdf"
+MNG,Mongolia,Ulaanbaatar,NA,9999-12-31,,,,47.90771,106.88324,Central Asia,NA,NA,NA,NA,,,NA
 MOD,Modena,Modena,1452-05-18,1796-05-07,,,,44.64783,10.92539,Southern Europe,NA,NA,"The first written constitution which appeared in Italy was known as the Constituzione della Repubilica Cispadana. It was adopted by the representatives of Bologna, Ferrara, Modena and Reggio, accepted by the people and published on the twenty-seventh of March, 1797. The main provisions were that the division of legislative power and executive power in that the legislative power should be exercised by two councils. The executive authority was placed in the hands of a Directory of three members elected by the legislative bodies. The Executive was expected to look to the security of the Republic, both within and without, having the power to issue proclamations in conformity with the law. The various administrative bodies occupied about the same position as at present. The 1848 Constitution by the Kingdom of Sardinia shows the role of the Advisory Council of State, the examination of foreign treaties as well as all matters pertaining to foreign affairs.",Unicameral Majority,,,1848 Constitution. https://doi.org/10.1177/000271629400500902
 MOD,Modena,Modena,1814-07-14,1859-08-20,,,,44.64783,10.92539,Southern Europe,NA,NA,"The first written constitution which appeared in Italy was known as the Constituzione della Repubilica Cispadana. It was adopted by the representatives of Bologna, Ferrara, Modena and Reggio, accepted by the people and published on the twenty-seventh of March, 1797. The main provisions were that the division of legislative power and executive power in that the legislative power should be exercised by two councils. The executive authority was placed in the hands of a Directory of three members elected by the legislative bodies. The Executive was expected to look to the security of the Republic, both within and without, having the power to issue proclamations in conformity with the law. The various administrative bodies occupied about the same position as at present. The 1848 Constitution by the Kingdom of Sardinia shows the role of the Advisory Council of State, the examination of foreign treaties as well as all matters pertaining to foreign affairs.",Unicameral Majority,,,1848 Constitution. https://doi.org/10.1177/000271629400500902
-MOS,Yatenga (Mossi),Ouagadougou,1200-01-01,1895-09-30,,,,12.36566,-1.53388,NA,NA,NA,NA,NA,,Approximation,NA
-MOZ,Mozambique,Maputo,NA,9999-12-31,,,,-25.96553,32.58322,NA,NA,NA,NA,NA,,,NA
+MOS,Yatenga (Mossi),Ouagadougou,1200-01-01,1895-09-30,,,,12.36566,-1.53388,Western Africa,NA,NA,NA,NA,,Approximation,NA
+MOZ,Mozambique,Maputo,NA,9999-12-31,,,,-25.96553,32.58322,Southern Africa,NA,NA,NA,NA,,,NA
 MPR,Manipur,Imphal,1110-01-01,1891-04-27,,,,24.80805,93.9442,Southern Asia,NA,NA,NA,NA,,,NA
-MRT,Mauritania,Nouakchott,NA,9999-12-31,,,,18.08581,-15.9785,NA,NA,NA,NA,NA,,,NA
-MUS,Mauritius,Port Louis,NA,9999-12-31,,,,-20.16194,57.49889,NA,NA,NA,NA,NA,,,NA
-MWI,Malawi,Lilongwe,NA,9999-12-31,,,,-13.96692,33.78725,NA,NA,NA,NA,NA,,,NA
-MYS,Malaysia,Kuala Lumpur,NA,9999-12-31,,,,3.1412,101.68653,NA,NA,NA,NA,NA,,,NA
+MRT,Mauritania,Nouakchott,NA,9999-12-31,,,,18.08581,-15.9785,Northern Africa,NA,NA,NA,NA,,,NA
+MUS,Mauritius,Port Louis,NA,9999-12-31,,,,-20.16194,57.49889,Eastern Africa,NA,NA,NA,NA,,,NA
+MWI,Malawi,Lilongwe,NA,9999-12-31,,,,-13.96692,33.78725,Eastern Africa,NA,NA,NA,NA,,,NA
+MYS,Malaysia,Kuala Lumpur,NA,9999-12-31,,,,3.1412,101.68653,South Eastern Asia,NA,NA,NA,NA,,,NA
 NAG,Nagpur,Nagpur,1703-01-01,1818-12-31,,,,21.15,79.1,Southern Asia,NA,NA,NA,NA,,,NA
-NAM,Namibia,Windhoek,NA,9999-12-31,,,,-22.55941,17.08323,NA,NA,NA,NA,NA,,,NA
+NAM,Namibia,Windhoek,NA,9999-12-31,,,,-22.55941,17.08323,Southern Africa,NA,NA,NA,NA,,,NA
 NAS,Nassau,Wiesbaden,1806-01-01,1866-12-31,,,,50.08258,8.24932,Western Europe,NA,NA,NA,NA,,,NA
-NER,Niger,Niamey,1960-08-03,9999-12-31,,,,13.51366,2.1098,NA,NA,NA,NA,NA,,,NA
-NGA,Nigeria,Abuja,NA,9999-12-31,,,,9.06853,7.48375,NA,NA,NA,NA,NA,,,NA
-NIC,Nicaragua,Managua,1838-04-30,9999-12-31,,,,12.13282,-86.2504,NA,NA,NA,NA,NA,,,NA
-NIU,Niue,Alofi,NA,9999-12-31,,,,-19.05952,-169.91867,NA,NA,NA,NA,NA,,,http://www.legislation.govt.nz/act/public/1974/0042/latest/DLM412793.html
-NLD,Netherlands,Amsterdam,NA,9999-12-31,,,,52.37403,4.88969,NA,NA,NA,NA,NA,,,NA
-NOR,Norway,Oslo,1905-06-07,1940-06-10,,,,59.91273,10.74609,NA,NA,NA,NA,NA,,,NA
-NOR,Norway,Oslo,1945-05-07,9999-12-31,,,,59.91273,10.74609,NA,NA,NA,NA,NA,,,NA
-NPL,Nepal,Kathmandu,1768-01-01,9999-12-31,,,,27.70169,85.3206,NA,NA,NA,NA,NA,,,NA
-NRU,Nauru,Yaren,1968-01-31,9999-12-31,,,,-0.54724,166.91599,NA,NA,NA,NA,NA,,,http://www.naurugov.nr/parliament-of-nauru/constitution-of-nauru.aspx
+NER,Niger,Niamey,1960-08-03,9999-12-31,,,,13.51366,2.1098,Western Africa,NA,NA,NA,NA,,,NA
+NGA,Nigeria,Abuja,NA,9999-12-31,,,,9.06853,7.48375,Western Africa,NA,NA,NA,NA,,,NA
+NIC,Nicaragua,Managua,1838-04-30,9999-12-31,,,,12.13282,-86.2504,Central America,NA,NA,NA,NA,,,NA
+NIU,Niue,Alofi,NA,9999-12-31,,,,-19.05952,-169.91867,Oceania,NA,NA,NA,NA,,,http://www.legislation.govt.nz/act/public/1974/0042/latest/DLM412793.html
+NLD,Netherlands,Amsterdam,NA,9999-12-31,,,,52.37403,4.88969,Western Europe,NA,NA,NA,NA,,,NA
+NOR,Norway,Oslo,1905-06-07,1940-06-10,,,,59.91273,10.74609,Northern Europe,NA,NA,NA,NA,,,NA
+NOR,Norway,Oslo,1945-05-07,9999-12-31,,,,59.91273,10.74609,Northern Europe,NA,NA,NA,NA,,,NA
+NPL,Nepal,Kathmandu,1768-01-01,9999-12-31,,,,27.70169,85.3206,Central Asia,NA,NA,NA,NA,,,NA
+NRU,Nauru,Yaren,1968-01-31,9999-12-31,,,,-0.54724,166.91599,Oceania,NA,NA,NA,NA,,,http://www.naurugov.nr/parliament-of-nauru/constitution-of-nauru.aspx
 NZL,New Zealand,Wellington,NA,9999-12-31,,,,-41.28664,174.77557,Oceania,NA,NA,NA,NA,,,NA
 OFS,Orange Free State,Bloemfontein,1854-03-28,1902-05-31,,,,-29.12106,26.214,Southern Africa,NA,NA,NA,NA,,Treaty of Vereeniging,NA
 OLD,Oldenburg,Oldenbourg,1815-01-01,1867-07-01,,,,53.14118,8.21467,Western Europe,NA,NA,NA,NA,,,NA
-OMN,Oman,Muscat,1744-01-01,1891-12-31,,,,23.61387,58.5922,NA,NA,NA,NA,NA,,,NA
-OVB,Ovimbundu,Kuito,1556-01-01,1903-12-31,,,,-0.22985,-78.52495,Middle Africa,NA,NA,NA,NA,,Independence from the Kingdom of Kongo,NA
+OMN,Oman,Muscat,1744-01-01,1891-12-31,,,,23.61387,58.5922,Western Asia,NA,NA,NA,NA,,,NA
+OVB,Ovimbundu,Kuito,1556-01-01,1903-12-31,,,,-0.22985,-78.52495,Central Africa,NA,NA,NA,NA,,Independence from the Kingdom of Kongo,NA
 OYO,Oyo,Oyo,1608-01-01,1835-12-31,,,,7.85,3.93333,Western Africa,NA,NA,NA,NA,,,NA
 PAH,Pahang,Pekan,1470-01-01,1874-12-31,,,,3.4836,103.3996,South Eastern Asia,NA,NA,NA,NA,,,NA
 PAK,Pakistan,Islamabad,NA,9999-12-31,,,,22.3384,91.83168,Southern Asia,NA,NA,NA,NA,,,NA
@@ -282,22 +282,22 @@ POL,Poland,Warsaw,1945-06-28,9999-12-31,,,,52.22977,21.01178,Eastern Europe,NA,N
 PRK,Democratic Peoples Republic Of Korea,Pyongyang,NA,9999-12-31,,,,39.03385,125.75432,Eastern Asia,NA,NA,"Amended and supplemented socialist constitution of the DPRK is adopted in 1998 by the first session of the 1st Supreme People's Assembly (SPA). As provided by law, the SPA Presidium has the duties and authority to ratify or abrogate treaties concluded with other countries. Also, the SPA has the authority to decide on the ratification or abrogation of treaties. The Cabinet has duties and authorities to conclude treaties with foreign countries, and conduct external activities.",Unicameral Majority,,,"DPRK's Socialist Consititution, 1998. SPA: Art. 11, Art. 91 (17); The Cabinet: Art. 119. https://www.ilo.org/dyn/natlex/docs/ELECTRONIC/56761/95661/F1832741191/PRK56761.pdf"
 PRT,Portugal,Lisbon,NA,9999-12-31,,,,38.71667,-9.13333,Western Europe,NA,NA,NA,NA,,,NA
 PRY,Paraguay,Asuncion,NA,9999-12-31,,,,-25.30066,-57.63591,South America,NA,NA,NA,NA,,,NA
-PSE,State Of Palestine,Jerusalem,NA,NA,,,,31.76904,35.21633,NA,NA,NA,"The governing system in Palestine shall be a democratic parliamentary system, based upon political and party pluralism. As provided by the Amended Basic Law of 2003, the Palestinian National Authority shall work without delay to become a party to regional and international declarations and covenants that protect human rights. As the hierarchy of norms has not been established, only we know is that the government is responsible for international relations. Even the democratic legislative procedure is established by Constitution, nothing is mentioned pertaining to treaty ratification process. Considering the political situation in State of Palestine, in practice, treaties are ratified by presidential decree.",Executive,,,Palestine's Constitution of 2003 with Amendments through 2005. Art. 10. https://constituteproject.org/constitution/Palestine_2005.pdf?lang=en
+PSE,State Of Palestine,Jerusalem,NA,NA,,,,31.76904,35.21633,Western Asia,NA,NA,"The governing system in Palestine shall be a democratic parliamentary system, based upon political and party pluralism. As provided by the Amended Basic Law of 2003, the Palestinian National Authority shall work without delay to become a party to regional and international declarations and covenants that protect human rights. As the hierarchy of norms has not been established, only we know is that the government is responsible for international relations. Even the democratic legislative procedure is established by Constitution, nothing is mentioned pertaining to treaty ratification process. Considering the political situation in State of Palestine, in practice, treaties are ratified by presidential decree.",Executive,,,Palestine's Constitution of 2003 with Amendments through 2005. Art. 10. https://constituteproject.org/constitution/Palestine_2005.pdf?lang=en
 PUN,Punjab,Lahore,1801-01-01,1846-12-31,,,,31.54972,74.34361,Southern Asia,NA,NA,NA,NA,,,NA
-QAT,Qatar,Doha,NA,9999-12-31,,,,25.27932,51.52245,NA,NA,NA,NA,NA,,,NA
+QAT,Qatar,Doha,NA,9999-12-31,,,,25.27932,51.52245,Western Asia,NA,NA,NA,NA,,,NA
 QUA,Quaiti Sultanate,Al Mukalla,1858-01-01,1888-12-31,,,,14.54248,49.12424,Western Asia,NA,NA,NA,NA,,,NA
 ROU,Romania,Bucharest,NA,9999-12-31,,,,44.43225,26.10626,Eastern Europe,NA,NA,NA,NA,,,NA
 RUS,Russian Federation,Moscow,NA,9999-12-31,,,,55.75,37.5,Eastern Europe,NA,NA,NA,NA,,,NA
 RVN,Republic Of Viet Nam,Saigon,NA,NA,,,,10.75,106.66667,South Eastern Asia,NA,NA,NA,NA,,,NA
-RWA,Ruanda,Kigali,1081-01-01,1890-05-14,,,,-1.94995,30.05885,NA,NA,NA,NA,NA,,,NA
+RWA,Ruanda,Kigali,1081-01-01,1890-05-14,,,,-1.94995,30.05885,Eastern Africa,NA,NA,NA,NA,,,NA
 SAL,Saloum,Kahone,1494-01-01,1887-12-31,,,,13.71667,-15.01667,Western Africa,NA,NA,NA,NA,,,NA
-SAU,Emirate of Diriyah,Riyadh,NA,9999-12-31,,,,24.68773,46.72185,NA,NA,NA,NA,NA,,,NA
+SAU,Emirate of Diriyah,Riyadh,NA,9999-12-31,,,,24.68773,46.72185,Western Asia,NA,NA,NA,NA,,,NA
 SAW,Sawantvadi,Kudal,1627-01-01,1838-12-31,,,,16.01148,73.68867,Southern Asia,NA,NA,NA,NA,,,NA
 SAX,Saxony,Dresden,1806-12-20,1871-01-18,,,Unification,51.05,13.75,Western Europe,NA,NA,NA,NA,,Joined German Empire,NA
-SDN,Sudan,Khartoum,NA,9999-12-31,,,,15.55177,32.53241,NA,NA,NA,NA,NA,,,NA
+SDN,Sudan,Khartoum,NA,9999-12-31,,,,15.55177,32.53241,Northern Africa,NA,NA,NA,NA,,,NA
 SEG,Segou,Segou,1712-01-01,1861-03-10,,,,13.6,-5.9,Western Africa,NA,NA,NA,NA,,,NA
 SEL,Selangor,Klang,1511-01-01,1875-10-30,,,,3.03333,101.45,South Eastern Asia,NA,NA,NA,NA,,,NA
-SEN,Senegal,Dakar,NA,9999-12-31,,,,14.6937,-17.44406,NA,NA,NA,NA,NA,,,NA
+SEN,Senegal,Dakar,NA,9999-12-31,,,,14.6937,-17.44406,Western Africa,NA,NA,NA,NA,,,NA
 SGP,Singapore,Singapore,NA,9999-12-31,,,,1.36667,103.8,South Eastern Asia,NA,NA,NA,NA,,,NA
 SHO,Shoa,Ankober,1865-06-30,1889-03-10,,,,9.3,39.76667,Eastern Africa,NA,NA,NA,NA,,,NA
 SIA,Siak,Siak Sri Indrapura,1723-01-01,1858-12-31,,,,0.76667,102.06667,South Eastern Asia,NA,NA,NA,NA,,,NA
@@ -309,53 +309,53 @@ SID,Sind,Thatta,1520-01-01,1839-12-31,,,Unification,24.74745,67.92353,Southern A
 SIK,Sikkim,Tumlong,1642-01-01,1890-03-17,,,,27.41667,88.58333,Southern Asia,NA,NA,NA,NA,,Foundation of the Sikkim monarchy,NA
 SIR,Sirohi,Sirohi,1425-01-01,1823-09-11,,,,24.88838,72.84794,Southern Asia,NA,NA,NA,NA,,,NA
 SLB,Solomon Islands,Honiara,NA,9999-12-31,,,,-9.43333,159.95,Oceania,NA,NA,"Provided by Solomon Islandss Constitution of 1978 with Amendments through 2009, the executive authority is vested in the Head of State (Governor-General), and Ministers. Prime Minister shall be elected by the members of Parliament. The legislative power is vested in the Parliament. The authority of international treaties ratification is not established in the Constitution, however, super majority rule is only mentioned in the removal of Governor-General, the alternation of Constitution,  the removal of Speaker and Deputy Speaker, and provisions for periods of public emergency. In this sense, the international treaties are ratified by majority consent of the Parliament.",Unicameral Majority,,,"Solomon Islandss Constitution of1978 with Amendments through 2009. Legislature: Chapter VI. Art. 59; Executive: Chapter V, Art. 30. http://extwprlegs1.fao.org/docs/pdf/sol132844.pdf"
-SLE,Sierra Leone,Freetown,NA,9999-12-31,,,,8.484,-13.22994,NA,NA,NA,NA,NA,,,NA
+SLE,Sierra Leone,Freetown,NA,9999-12-31,,,,8.484,-13.22994,Western Africa,NA,NA,NA,NA,,,NA
 SLV,El Salvador,San Salvador,1841-02-18,1896-09-15,,,,13.68935,-89.18718,Central America,NA,NA,NA,NA,,,NA
 SLV,El Salvador,San Salvador,1898-11-21,9999-12-31,,,,13.68935,-89.18718,Central America,NA,NA,NA,NA,,,NA
 SMR,San Marino,San Marino,0301-09-03,9999-12-31,,,,43.9367,12.4463,Western Europe,NA,NA,"San Marino, officially the Republic of San Marino, is an enclaved micro state surrounded by Italy. San Marino is governed by the Constitution of San Marino (Leges Statutae Republicae Sancti Marini). As provided by law, the Grand and General Council has the power to ratify treaties with other countries. Also, the Congress of State collegially implements international policies, as well as international treaties and agreements concerning general international policies and matters relevant for the States security, without prejudice to the functions performed by the Great and General Council. In conformity with Art. 5 of Constitutional Law, the Captains Regent promulgate and order the publication of the decrees ratifying international treaties and agreements, following the decision by the Great and General Council, as well as the decrees adopted by the Congress of State in conformity with Article 3 bis, fifth paragraph of the Declaration on the Citizens Rights, which must be signed also by the Minister of Internal Affairs.",Unicameral Majority,,,http://www.sanmarino.sm/on-line/search.jsp?instance=43&channel=44000068&node=44003217&hitsPerPage=10&query=treaties&x=0&y=0
 SOK,Sokoto,Sokoto,1804-02-04,1903-03-30,,,,13.06092,5.23902,Western Africa,NA,NA,NA,NA,,,NA
-SOM,Somalia,Mogadishu,NA,9999-12-31,,,,2.03711,45.34375,NA,NA,NA,NA,NA,,,NA
+SOM,Somalia,Mogadishu,NA,9999-12-31,,,,2.03711,45.34375,Eastern Africa,NA,NA,NA,NA,,,NA
 SOT,South Ossetia,Tskhinvali,NA,NA,,,,42.22764,43.96861,Western Asia,NA,NA,NA,NA,,,NA
-SRB,Serbia,Belgrade,NA,9999-12-31,,,,44.80401,20.46513,NA,NA,NA,NA,NA,,,NA
+SRB,Serbia,Belgrade,NA,9999-12-31,,,,44.80401,20.46513,Eastern Europe,NA,NA,NA,NA,,,NA
 SSD,South Sudan,Juba,2011-07-09,9999-12-31,,,,4.85165,31.58247,Eastern Africa,NA,NA,"South Sudan, offcially known as the Republic of South Sudan gained its independence from the Republic of the Sudan in 2011. 2011 The Transition Constitution of The Republic of South Sudan indicates procedures of treaty ratification, i.e. functions of the National Legislative Assembly and the President. As provided by law, the President shall perform direct and supervise foreign policy and ratify treaties and international agreements. These presidential functions are limited to the approval of the National Legislatve Assembly.",Unicameral Majority,,,The Transition Constitution of the Republic of South Sudan 2011. Legislature: Art.57 (d); Executive: Art.101 (p). https://www.wipo.int/edocs/lexdocs/laws/en/ss/ss013en.pdf
-STP,Sao Tome and Principe,Sao Tome,NA,9999-12-31,,,,0.33654,6.72732,NA,NA,NA,NA,NA,,,NA
+STP,Sao Tome and Principe,Sao Tome,NA,9999-12-31,,,,0.33654,6.72732,Western Africa,NA,NA,NA,NA,,,NA
 SUL,Sulu,Maimbung,1405-01-01,1851-04-19,,,,5.9272,121.02935,South Eastern Asia,NA,NA,NA,NA,,,NA
-SUR,Suriname,Paramaribo,NA,9999-12-31,,,,5.86638,-55.16682,NA,NA,NA,NA,NA,,,NA
+SUR,Suriname,Paramaribo,NA,9999-12-31,,,,5.86638,-55.16682,South America,NA,NA,NA,NA,,,NA
 SVK,Slovakia,Bratislava,NA,9999-12-31,,,,48.14816,17.10674,Eastern Europe,NA,NA,NA,NA,,,NA
 SVN,Slovenia,Ljubljana,1991-06-25,9999-12-31,,,,46.05108,14.50513,Eastern Europe,NA,NA,NA,NA,,,NA
 SWA,Swat,Saidu Sharif,1849-01-01,1896-12-31,,,,34.7447,72.3546,Southern Asia,NA,NA,NA,NA,,Establishment of the Yusafzai State of Swat,NA
-SWE,Sweden,Stockholm,NA,9999-12-31,,,,59.33258,18.0649,NA,NA,NA,NA,NA,,,NA
+SWE,Sweden,Stockholm,NA,9999-12-31,,,,59.33258,18.0649,Northern Europe,NA,NA,NA,NA,,,NA
 SWZ,Eswatini,Mbabane,NA,NA,,,,-26.31667,31.13333,Southern Africa,NA,NA,NA,NA,,,NA
 SXA,Saxe-Altenburg,Altenburg,1603-01-01,1867-07-01,,,,50.98763,12.43684,Western Europe,Saxe-Atenburg,NA,NA,NA,,,NA
 SXG,Saxe-Coburg-Gotha,Coburg,1680-01-01,1867-07-01,,,,50.25937,10.96384,Western Europe,NA,NA,NA,NA,,,NA
 SXM,Saxe-Meiningen-Hidburghausen,Meiningen,1675-01-01,1867-07-01,,,,50.56787,10.41521,Western Europe,NA,NA,NA,NA,,,NA
 SXW,Saxe-Wiemar-Eisenach,Weimar,1484-01-01,1867-07-01,,,,50.9803,11.32903,Western Europe,Saxe-Weimar-Eisenach,NA,NA,NA,,,NA
-SYC,Seychelles,Victoria,NA,9999-12-31,,,,22.28552,114.15769,NA,NA,NA,NA,NA,,,NA
-SYR,Syrian Arab Republic,Damascus,NA,9999-12-31,,,,33.5102,36.29128,NA,NA,NA,NA,NA,,,NA
+SYC,Seychelles,Victoria,NA,9999-12-31,,,,22.28552,114.15769,Eastern Africa,NA,NA,NA,NA,,,NA
+SYR,Syrian Arab Republic,Damascus,NA,9999-12-31,,,,33.5102,36.29128,Western Asia,NA,NA,NA,NA,,,NA
 TBT,Tibet,Lhassa,1913-01-01,1950-10-01,,,,29.65,91.1,Eastern Asia,NA,NA,NA,NA,,,NA
-TCD,Chad,NDjamena,NA,9999-12-31,,,,12.10672,15.0444,NA,NA,NA,NA,NA,,,NA
+TCD,Chad,NDjamena,NA,9999-12-31,,,,12.10672,15.0444,Northern Africa,NA,NA,NA,NA,,,NA
 TER,Terengganu,Kuala Terengganu,1724-01-01,1862-12-31,,,,5.3302,103.1408,South Eastern Asia,NA,NA,NA,NA,,,NA
 TEX,Texas,Colombia,1836-03-02,1837-06-04,,,,4,-72,Northern America,NA,NA,NA,NA,,,NA
 TEX,Texas,Houston,1837-06-05,1839-01-13,,,,29.76328,-95.36327,Northern America,NA,NA,NA,NA,,,NA
 TEX,Texas,Austin,1839-01-14,1846-02-19,,,,30.26715,-97.74306,Northern America,NA,NA,NA,NA,,,NA
-TGO,Togo,Lome,NA,9999-12-31,,,,6.13748,1.21227,NA,NA,NA,NA,NA,,,NA
+TGO,Togo,Lome,NA,9999-12-31,,,,6.13748,1.21227,Western Africa,NA,NA,NA,NA,,,NA
 THA,Thailand,Bangkok,NA,9999-12-31,,,,13.75398,100.50144,South Eastern Asia,NA,NA,NA,NA,,,NA
-TJK,Tajikistan,Dushanbe,NA,9999-12-31,,,,38.53575,68.77905,NA,NA,NA,NA,NA,,,NA
+TJK,Tajikistan,Dushanbe,NA,9999-12-31,,,,38.53575,68.77905,Central Asia,NA,NA,NA,NA,,,NA
 TKL,Tokelau,Atafu,NA,9999-12-31,,,,-8.558,-172.496,Oceania,NA,NA,"The capacity of Tokelau to enter into treaties shall be exercised by the Council for the ongoing Government. Also, any treaty or other international agreement shall be approved by the General Fono by Rule. General Fono, which has the executive powers, consists of the following members; the Faipule and Pulenuku of each village, and one delegate from each village for every 100 inhabitants of that village, based on the latest available census figures rounded to the nearest 100 inhabitants. No decision shall be taken by the General Fono unless at least two thirds of the members are present, including no fewer than four members from each village. Considering the members of the executive and the legislature, it can be coded as plebiscite.",Plebiscite,,,"Constitution of Tokelau, 1948. 5, (2); (3); (4). http://aceproject.org/ero-en/regions/pacific/TK/tokelau-constitution/at_download/file"
-TKM,Turkmenistan,Ashgabat,NA,9999-12-31,,,,37.95,58.38333,NA,NA,NA,NA,NA,,,NA
-TLS,Timor-Leste,Dili,NA,9999-12-31,,,,-8.55861,125.57361,NA,NA,NA,"The Constitution of the Democratic Republic of East Timor is decreed on the 22nd of March 2002. It defines the competencies of the National Parliament, the President of the Republic, and the Government in terms of treaty ratification. As provided by the law, the approval of the agreements and the ratification is incumbent upon the National Parliament.",Unicameral Majority,,,"Constitution of the Democratic Republic of Timor-Leste. Legislature: Chapter II, Section 95, 1 and 3; Executive: Chapter III, Section 115, 1. http://timor-leste.gov.tl/wp-content/uploads/2010/03/Constitution_RDTL_ENG.pdf"
+TKM,Turkmenistan,Ashgabat,NA,9999-12-31,,,,37.95,58.38333,Central Asia,NA,NA,NA,NA,,,NA
+TLS,Timor-Leste,Dili,NA,9999-12-31,,,,-8.55861,125.57361,South Eastern Asia,NA,NA,"The Constitution of the Democratic Republic of East Timor is decreed on the 22nd of March 2002. It defines the competencies of the National Parliament, the President of the Republic, and the Government in terms of treaty ratification. As provided by the law, the approval of the agreements and the ratification is incumbent upon the National Parliament.",Unicameral Majority,,,"Constitution of the Democratic Republic of Timor-Leste. Legislature: Chapter II, Section 95, 1 and 3; Executive: Chapter III, Section 115, 1. http://timor-leste.gov.tl/wp-content/uploads/2010/03/Constitution_RDTL_ENG.pdf"
 TOK,Tokolor,Segou,1848-01-01,1893-12-31,,,,13.6,-5.9,Western Africa,NA,NA,NA,NA,,,NA
-TON,Tonga,Nuku’alofa,NA,9999-12-31,,,,-21.13938,-175.2018,NA,NA,NA,NA,NA,,,NA
+TON,Tonga,Nuku’alofa,NA,9999-12-31,,,,-21.13938,-175.2018,Oceania,NA,NA,NA,NA,,,NA
 TRA,Transvaal,Pretoria,1852-01-17,1902-05-31,,,,-25.74486,28.18783,Southern Africa,NA,NA,NA,NA,,,NA
-TTO,Trinidad and Tobago,Port-of-Spain,NA,9999-12-31,,,,10.66617,-61.51657,NA,NA,NA,NA,NA,,,NA
+TTO,Trinidad and Tobago,Port-of-Spain,NA,9999-12-31,,,,10.66617,-61.51657,Caribbean,NA,NA,NA,NA,,,NA
 TUN,Tunisia,Tunis,NA,9999-12-31,,,,34,9,Northern Africa,NA,NA,NA,NA,,,NA
 TUR,Turkiye,Ankara,NA,9999-12-31,,,,39.91987,32.85427,Eastern Europe,Turkey,NA,NA,NA,,,NA
 TUS,Tuscany,Florence,1569-08-27,1801-03-21,,,,43.76667,11.25,Southern Europe,NA,NA,NA,NA,,,NA
 TUS,Tuscany,Florence,1815-06-09,1859-12-08,,,Unification,43.76667,11.25,Southern Europe,NA,NA,NA,NA,,Until merged into United Provinces of Central Italy,NA
-TUV,Tuvalu,Fongafale,NA,9999-12-31,,,,-8.52425,179.19417,NA,NA,NA,"Tuvalu is a sovereign democratic State, governed in accordance with the Constitution and in particular in accordance with the Principles set out in the Preamble. The powers and duties of treaty ratification are not explicitly mentioned in the Constitution. However, it can be deduced from the Constitution, implementing any international agreement binding on Tuvalu and approved by Parliament by resolution (Part I, Division I, 2. The area of Tuvalu (3)).",Unicameral Majority,,,"The Constitution of Tuvalu. Part I, Division I, 2. The area of Tuvalu (3). http://www.tuvaluislands.com/const_tuvalu.htm"
-TWN,Chinese Taipei,Taipei,NA,NA,,,,25.04776,121.53185,NA,NA,NA,"Taiwan, officially the Republic of China (ROC) is unitary semi-presidential constitutional republic. The ROC has its own constitution, independently elected president and arms forces. As provided by the Constitution of 1947, amended in 2005, the President, the Executive Yuan (a Council of the Executive Yuan), and the Legislative Yuan shall have the power to decide international treaties.",Unicameral Majority,,,"Taiwan (Republic of China)s Constitution of 1947 with amendment through 2005. Chap. IV, Art. 38; Chap. V, Art. 58; Chap. VI, Art. 63; Chap XIII, Section 2, Art. 141. https://www.constituteproject.org/constitution/Taiwan_2005.pdf?lang=en"
-TZA,United Republic of Tanzania,Dar es Salaam,NA,9999-12-31,,,,-6.82349,39.26951,NA,NA,NA,NA,NA,,,NA
-UGA,Buganda,Kampala,1300-01-01,1884-06-18,,,,0.31628,32.58219,NA,NA,NA,NA,NA,,Approximation. Kingdom founded by Kato Kintu,NA
+TUV,Tuvalu,Fongafale,NA,9999-12-31,,,,-8.52425,179.19417,Oceania,NA,NA,"Tuvalu is a sovereign democratic State, governed in accordance with the Constitution and in particular in accordance with the Principles set out in the Preamble. The powers and duties of treaty ratification are not explicitly mentioned in the Constitution. However, it can be deduced from the Constitution, implementing any international agreement binding on Tuvalu and approved by Parliament by resolution (Part I, Division I, 2. The area of Tuvalu (3)).",Unicameral Majority,,,"The Constitution of Tuvalu. Part I, Division I, 2. The area of Tuvalu (3). http://www.tuvaluislands.com/const_tuvalu.htm"
+TWN,Chinese Taipei,Taipei,NA,NA,,,,25.04776,121.53185,Eastern Asia,NA,NA,"Taiwan, officially the Republic of China (ROC) is unitary semi-presidential constitutional republic. The ROC has its own constitution, independently elected president and arms forces. As provided by the Constitution of 1947, amended in 2005, the President, the Executive Yuan (a Council of the Executive Yuan), and the Legislative Yuan shall have the power to decide international treaties.",Unicameral Majority,,,"Taiwan (Republic of China)s Constitution of 1947 with amendment through 2005. Chap. IV, Art. 38; Chap. V, Art. 58; Chap. VI, Art. 63; Chap XIII, Section 2, Art. 141. https://www.constituteproject.org/constitution/Taiwan_2005.pdf?lang=en"
+TZA,United Republic of Tanzania,Dar es Salaam,NA,9999-12-31,,,,-6.82349,39.26951,Eastern Africa,NA,NA,NA,NA,,,NA
+UGA,Buganda,Kampala,1300-01-01,1884-06-18,,,,0.31628,32.58219,Eastern Africa,NA,NA,NA,NA,,Approximation. Kingdom founded by Kato Kintu,NA
 UKR,Ukrainian SSR,Kiev,1919-03-10,1991-08-19,,,,50.45466,30.5238,Eastern Europe,NA,NA,NA,NA,,,NA
 UKR,Ukraine,Kiev,1991-12-08,9999-12-31,,,,50.45466,30.5238,Eastern Europe,NA,NA,NA,NA,,,NA
 UPC,United Provinces of Central America,Guatemala,NA,NA,,,,15.5,-90.25,Central America,NA,NA,NA,NA,,,NA
@@ -371,20 +371,19 @@ VCT,St. Vincent and the Grenadines,Saint-Pierre,NA,9999-12-31,,,,-21.3393,55.478
 VEN,Bolivarian Republic of Venezuela,Caracas,NA,9999-12-31,,,,10.48801,-66.87919,South America,NA,NA,NA,NA,,,NA
 VNM,Viet Nam,Hanoi,NA,9999-12-31,,,,21.0245,105.84117,South Eastern Asia,NA,NA,NA,NA,,,NA
 VUT,Vanuatu,Port-Vila,NA,9999-12-31,,,,-17.73381,168.32188,Oceania,NA,NA,NA,NA,,,NA
-WAD,Wadai,NA,1603-01-01,1906-06-06,,,,NA,NA,Middle Africa,NA,NA,NA,NA,,,NA
-WAD,Wadai,Ouara,1816-01-01,1890-12-31,,,,15.55834,-9.06186,Middle Africa,NA,NA,NA,NA,,,NA
-WAD,Wadai,Abeche,1891-01-01,1911-12-31,,,,13.82916,20.8324,Middle Africa,NA,NA,NA,NA,,,NA
+WAD,Wadai,Ouara,1603-01-01,1890-12-31,,,,15.55834,-9.06186,Central Africa,NA,NA,NA,NA,,,NA
+WAD,Wadai,Abeche,1891-01-01,1911-12-31,,,,13.82916,20.8324,Central Africa,NA,NA,NA,NA,,,NA
 WRT,Wuerttemburg,Stuttgart,NA,NA,,,,48.78232,9.17702,Western Europe,NA,NA,NA,NA,,,NA
 WSM,Samoa,Apia,NA,9999-12-31,,,,-13.83333,-171.76666,Oceania,NA,NA,NA,NA,,,http://extwprlegs1.fao.org/docs/pdf/sam132838.pdf
 YAR,Yemen Arab Republic,Sanaa,1918-11-11,1990-05-21,,,,15.35472,44.20667,Western Asia,NA,NA,NA,NA,,,NA
-YEK,Yeke Kingdom,Bunkeya,1880-01-01,1891-12-20,,,,-9.96667,26.93333,Middle Africa,NA,NA,NA,NA,,,NA
-YEM,Yemen,Sana'a,NA,9999-12-31,,,,15.35472,44.20667,NA,NA,NA,NA,NA,,,NA
+YEK,Yeke Kingdom,Bunkeya,1880-01-01,1891-12-20,,,,-9.96667,26.93333,Central Africa,NA,NA,NA,NA,,,NA
+YEM,Yemen,Sana'a,NA,9999-12-31,,,,15.35472,44.20667,Western Asia,NA,NA,NA,NA,,,NA
 YPR,Yemen Peoples Republic,Aden,1967-11-30,1990-05-21,,,,12.77944,45.03667,Western Asia,Yemen Peoplea€™s Republic,NA,NA,NA,,,NA
 YUG,Yugoslavia,Belgrade,1878-07-13,1941-04-20,,,,44.80401,20.46513,Eastern Europe,NA,NA,Constitution of the Federal Republic of Yugoslavia affirms that International treaties which have been ratified shall be a constituent part of the internal legal order. The powers and duties of treaty ratification belong to Federal Assembly and the President of the Republic.,Unicameral Majority,,,"Constitution of the Federal Republic of Yugoslavia, April, 1992. Basic Provisions: Section I, Art. 16; Legislature: Section V, 1, Art. 78 (4); Executive: Section V, 2, Art. 96 (2). http://www.worldstatesmen.org/Yugoslav_Const_1992.htm"
 YUG,Yugoslavia,Belgrade,1944-10-20,1992-05-22,,,,44.80401,20.46513,Eastern Europe,NA,NA,Constitution of the Federal Republic of Yugoslavia affirms that International treaties which have been ratified shall be a constituent part of the internal legal order. The powers and duties of treaty ratification belong to Federal Assembly and the President of the Republic.,Unicameral Majority,,,"Constitution of the Federal Republic of Yugoslavia, April, 1992. Basic Provisions: Section I, Art. 16; Legislature: Section V, 1, Art. 78 (4); Executive: Section V, 2, Art. 96 (2). http://www.worldstatesmen.org/Yugoslav_Const_1992.htm"
 ZAF,South Africa,Pretoria,1910-05-31,9999-12-31,,,,-25.74486,28.18783,Southern Africa,NA,NA,NA,NA,,,NA
 ZIN,Zinder (Damagaram),Zinder,1851-01-01,1889-07-30,,,,13.80716,8.9881,Western Africa,NA,NA,NA,NA,,,NA
-ZMB,Zambia,Lusaka,NA,9999-12-31,,,,-15.40669,28.28713,NA,NA,NA,NA,NA,,,NA
+ZMB,Zambia,Lusaka,NA,9999-12-31,,,,-15.40669,28.28713,Southern Africa,NA,NA,NA,NA,,,NA
 ZUL,Zululand,Bulawayo,1817-01-01,1828-12-31,,,,-20.15,28.58333,Southern Africa,NA,NA,NA,NA,,Beginning of centralization under the reign of Shaka,NA
 ZUL,Zululand,Makhosini,1829-01-01,1840-01-28,,,,-29.18951,29.55959,Southern Africa,NA,NA,NA,NA,,,NA
 ZUL,Zululand,Ulundi,1840-01-29,1879-07-04,,,,-28.33523,31.41617,Southern Africa,NA,NA,NA,NA,,,NA
