@@ -392,9 +392,8 @@ countryRegex <- dplyr::tribble(
   "WSM","Samoa","(?!.*amer).*samoa|samoa",
   ## Y ####
   "YEK","Yeke Kingdom","yeke kingdom",
-  "YEM","Yemen","(?<= arab|north|sana).*yemen|yemen(?= arab)|y[ee]men",
-  "YPR","Yemen Peoples Republic","(?=.*peo).*yemen|(?!.*rep)(?=.*dem).*yemen|(?=.*south).*yemen|(?=.*aden).*yemen|(?=.*\\bp\\.?d\\.?r).*yemen|aden",
-  "YUG","Yugoslavia","yugoslavia",
+  "YEM","Yemen","(?<= arab|north|sana).*yemen|yemen(?= arab)|yemen(?!.peo)",
+  "YPR","Yemen Peoples Republic","(?=.*peo).*yemen|(?!.*rep)(?=.*dem).*yemen|(?=.*south).*yemen|(?=.*\\bp\\.?d\\.?r).*yemen|\\baden",
   ## Z ####
   "ZAF","South Africa","south.africa|s\\. africa|afrique du sud|so.africa|venda|bophutatswana|transkei|ciskei",
   "ZIN","Zinder (Damagaram)","zinder (damagaram)",
