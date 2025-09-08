@@ -282,7 +282,7 @@ countryRegex <- dplyr::tribble(
   ## O ####
   "OFS","Orange Free State","orange free state|ovs",
   "OLD","Oldenburg","oldenburg",
-  "OMN","Oman","oman|trucial|omaan",
+  "OMN","Oman","\\boman|trucial|omaan",
   "OVB","Ovimbundu","ovimbundu",
   "OYO","Oyo","oyo",
   ## P ####
@@ -305,7 +305,7 @@ countryRegex <- dplyr::tribble(
   "PUN","Punjab","punjab|panj.?b|panj-.?b",
   ## Q ####
   "QAT","Qatar","qatar",
-  "QUA","Qu'aiti Sultanate","qu'aiti sultanate",
+  "QUA","Qu'aiti Sultanate","qu'aiti|quaiti",
   ## R ####
   "ROU","Romania","r(o|u|ou)mania|roumanie",
   "RUS","Russian Federation","russia|russian fed.*|soviet.?union|union of soviet|u[[:punct:]]s[[:punct:]]s[[:punct:]]r[[:punct:]]|socialist.?republics|USSR|RSFSR|russie|un.*sov.*soc.*rep",
