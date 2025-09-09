@@ -27,20 +27,20 @@ AUT,Austria,Vienna,1955-07-27,9999-12-31,,,,48.20849,16.37208,Western Europe,NA,
 AZA,Azande,Yambio,1816-01-01,1895-12-31,,,,4.57213,28.39549,Eastern Africa,NA,NA,NA,NA,,,NA
 AZE,Azerbaijan,Baku,1918-05-28,1920-04-28,1918-05-28,,,40.37767,49.89201,Western Asia,NA,NA,NA,NA,,,NA
 AZE,Azerbaijan,Baku,1991-10-18,9999-12-31,1991-10-18,,,40.37767,49.89201,Western Asia,NA,NA,NA,NA,,,NA
-BAD,Baden,Karlsruhe,NA,NA,,,,49.00472,8.38583,Western Europe,NA,NA,NA,NA,,,NA
-BAV,Bavaria,Munich,NA,NA,,,,48.13743,11.57549,Western Europe,NA,NA,NA,NA,,,NA
+BAD,Baden,Karlsruhe,1806-10-24,1918-11-14,,,Revolution,49.00472,8.38583,Western Europe,Grand Duchy of Baden,NA,NA,NA,Evrard,"Added: Begin, End, StateNameAlt (Ellis, L. M. (1986). Army, State and politics in the Grand Duchy of Baden, 1866-1920 (Germany). The Johns Hopkins University.)",NA
+BAV,Bavaria,Munich,1806,1918-11-14,,,,48.13743,11.57549,Western Europe,Kingdom of Bavaria,NA,NA,NA,Evrard,"Added: Begin, End, StateNameAlt (Kaiser, M. (2009). A Matter of Survival: Bavaria Becomes a Kingdom. In: Forrest, A., Wilson, P.H. (eds) The Bee and the Eagle. War, Culture and Society, 1750–1850. Palgrave Macmillan, London, p. 95)",NA
 BDI,Burundi,Bujumbura,1680-01-01,1890-05-14,,,,-3.3822,29.3644,Eastern Africa,NA,NA,NA,NA,,,NA
-BEL,Belgium,Brussels,1830-12-20,1940-05-28,,,,50.85045,4.34878,Western Europe,NA,NA,NA,NA,,,NA
+BEL,Belgium,Brussels,1830-12-20,1940-05-28,,,Occupation,50.85045,4.34878,Western Europe,NA,NA,NA,NA,,,NA
 BEL,Belgium,Brussels,1945-06-26,9999-12-31,,,,50.85045,4.34878,Western Europe,NA,NA,NA,NA,,,NA
-BEN,Benin,Porto-Novo,NA,9999-12-31,,,,6.49646,2.60359,Western Africa,NA,NA,NA,NA,,,NA
-BFA,Burkina Faso,Ouagadougou,NA,9999-12-31,,,,12.36566,-1.53388,Western Africa,NA,NA,NA,NA,,,NA
+BEN,Benin,Porto-Novo,1960-08-01,9999-12-31,,1958-12-04?,,6.49646,2.60359,Western Africa,Dahomey,NA,NA,NA,Evrard,"Added: Begin, End, Autonomy, StateNameAlt (https://www.gouv.bj/pages/histoire/)",NA
+BFA,Burkina Faso,Ouagadougou,1958-12-11,9999-12-31,1960-08-05,,,12.36566,-1.53388,Western Africa,Upper Volta,NA,NA,NA,Evrard,"Added: Begin, End, DeclIndep, StateNameAlt (https://perspective.usherbrooke.ca/bilan/servlet/BMEve/308) ",NA
 BGD,Bangladesh,Dhaka,1971-12-16,9999-12-31,,,,23.7104,90.40744,Southern Asia,NA,NA,NA,NA,,,NA
 BGR,Bulgaria,Sofia,0681-12-31,1018-12-31,,,,42.69751,23.32415,Eastern Europe,NA,NA,NA,NA,,,NA
 BGR,Bulgaria,Sofia,1185-10-26,1396-09-25,,,,42.69751,23.32415,Eastern Europe,NA,NA,NA,NA,,,NA
 BGR,Bulgaria,Sofia,1878-03-03,9999-12-31,,,,42.69751,23.32415,Eastern Europe,NA,NA,NA,NA,,,NA
 BHP,Bhopal,Bhopal,1707-01-01,1818-03-01,,,,23.25469,77.40289,Southern Asia,NA,NA,NA,NA,,,NA
-BHR,Bahrain,Manama,NA,9999-12-31,,,,26.21536,50.5832,Western Asia,NA,NA,NA,NA,,,NA
-BHS,Bahamas,Nassau,NA,9999-12-31,,,,40.73217,-73.58545,Caribbean,NA,NA,NA,NA,,,NA
+BHR,Bahrain,Manama,1971-08-15,9999-12-31,1971-08-15,,,26.21536,50.5832,Western Asia,NA,NA,NA,NA,Evrard,"Added: Begin, End, DeclIndep (https://history.state.gov/countries/bahrain)",NA
+BHS,Bahamas,Nassau,1973-07-10,9999-12-31,1973-07-10,,,40.73217,-73.58545,Caribbean,NA,NA,NA,NA,Evrard,"Added: Begin, End, DeclIndep (https://www.bahamas.gov.bs/overview-of-the-bahamas)",NA
 BHT,Bharatpur,Bharatpur,1707-01-01,1828-12-31,,,,27.21731,77.49009,Southern Asia,NA,NA,NA,NA,,,NA
 BIH,Bosnia and Herzegovina,Sarajevo,NA,9999-12-31,,,,43.84864,18.35644,Eastern Europe,NA,NA,NA,NA,,,NA
 BIK,Bikaner,Bikaner,1465-01-01,1818-03-09,,,,28.02094,73.30749,Southern Asia,NA,NA,NA,NA,,,NA
@@ -92,13 +92,13 @@ DOM,Dominican Republic,Santo Domingo,1844-02-27,1861-03-18,,,,19,-70.66667,Carib
 DOM,Dominican Republic,Santo Domingo,1865-03-03,1916-05-16,,,,19,-70.66667,Caribbean,NA,NA,NA,NA,,,NA
 DOM,Dominican Republic,Santo Domingo,1924-07-13,9999-12-31,,,,19,-70.66667,Caribbean,NA,NA,NA,NA,,,NA
 DRV,Annam,Hue,0939-01-01,1883-08-31,,,,16.46667,107.6,South Eastern Asia,NA,NA,NA,NA,,Independence from China,NA
-DZG,Free City Of Danzig,Danzig,NA,NA,,,,54.35205,18.64637,Eastern Europe,NA,NA,NA,NA,,,NA
+DZG,Free City Of Danzig,Danzig,1920-11-15,1939-09-01,,,Annexation,54.35205,18.64637,Eastern Europe,NA,NA,NA,NA,,,NA
 EAZ,Zanzibar,Stone Town,1856-01-01,1890-07-01,,,,-6.16368,39.19184,Eastern Africa,NA,NA,NA,NA,,Separation from the Sultanate of Oman,NA
 EAZ,Zanzibar,Zanzibar City,1963-12-19,1964-04-26,,,,-6.16394,39.19793,Eastern Africa,NA,NA,NA,NA,,,NA
 ECU,Ecuador,Quito,1830-05-13,9999-12-31,,,,-0.22985,-78.52495,South America,NA,NA,NA,NA,,,NA
 EGY,Egypt,Cairo,1805-05-17,1882-09-15,,,,30.06263,31.24967,Northern Africa,NA,NA,NA,NA,,,NA
 EGY,Egypt,Cairo,1953-06-18,9999-12-31,,1953-06-18,,30.06263,31.24967,Northern Africa,NA,NA,NA,NA,,Definitive end of british presence and start of the republic,NA
-EHT,State Of Haiti,Milot,NA,NA,,,,19.61667,-72.21667,Northern America,NA,NA,NA,NA,,,NA
+EHT,State Of Haiti,Milot,1806-10-17,1811-03-28,,,Unification,19.61667,-72.21667,Northern America,NA,NA,NA,NA,,,NA
 ERI,Eritrea,Asmara,NA,9999-12-31,,,,15.33805,38.93184,Eastern Africa,NA,NA,NA,NA,,,NA
 ESP,Spain,Madrid,NA,9999-12-31,,,,40.4165,-3.70256,Western Europe,NA,NA,NA,NA,,,NA
 EST,Estonia,Tallinn,1918-02-24,1940-06-16,,,,59.43696,24.75353,Eastern Europe,NA,NA,NA,NA,,,NA
@@ -112,7 +112,7 @@ FIN,Finland,Helsinki,NA,9999-12-31,,,,60.16952,24.93545,Northern Europe,NA,NA,NA
 FJI,Fiji,Suva,NA,9999-12-31,,,,-18.14161,178.44149,Oceania,NA,NA,NA,NA,,,NA
 FNJ,Funj,Sennar,1504-01-01,1821-06-30,,,,13.56907,33.56718,Northern Africa,NA,NA,NA,NA,,,NA
 FRA,France,Paris,NA,9999-12-31,,,,48.85341,2.3488,Western Europe,NA,NA,NA,NA,,,NA
-FRO,Faroe Islands,Torshavn,NA,NA,,,,62.00973,-6.77164,Western Europe,NA,NA,NA,NA,,,https://www.government.fo/en/foreign-relations/constitutional-status/
+FRO,Faroe Islands,Torshavn,NA,NA,1946-09-14,1948-03-30,,62.00973,-6.77164,Western Europe,NA,NA,NA,NA,,,https://www.government.fo/en/foreign-relations/constitutional-status/
 FSM,Federated States of Micronesia,Palikir,NA,9999-12-31,,,,6.92477,158.16109,Oceania,NA,NA,NA,NA,,,NA
 FTO,Fouta Toro,Silla,1776-01-01,1888-12-31,,,,39.36667,-0.41667,Western Africa,NA,NA,NA,NA,,,NA
 GAB,Gabon,Libreville,NA,9999-12-31,,,,0.39241,9.45356,Central Africa,NA,NA,NA,NA,,,NA
@@ -316,7 +316,10 @@ SMR,San Marino,San Marino,0301-09-03,9999-12-31,,,,43.9367,12.4463,Western Europ
 SOK,Sokoto,Sokoto,1804-02-04,1903-03-30,,,,13.06092,5.23902,Western Africa,NA,NA,NA,NA,,,NA
 SOM,Somalia,Mogadishu,NA,9999-12-31,,,,2.03711,45.34375,Eastern Africa,NA,NA,NA,NA,,,NA
 SOT,South Ossetia,Tskhinvali,NA,NA,,,,42.22764,43.96861,Western Asia,NA,NA,NA,NA,,,NA
-SRB,Serbia,Belgrade,NA,9999-12-31,,,,44.80401,20.46513,Eastern Europe,NA,NA,NA,NA,,,NA
+SRB,Yugoslavia,Belgrade,1878-07-13,1941-04-20,,,,44.80401,20.46513,Eastern Europe,NA,NA,Constitution of the Federal Republic of Yugoslavia affirms that International treaties which have been ratified shall be a constituent part of the internal legal order. The powers and duties of treaty ratification belong to Federal Assembly and the President of the Republic.,Unicameral Majority,,,"Constitution of the Federal Republic of Yugoslavia, April, 1992. Basic Provisions: Section I, Art. 16; Legislature: Section V, 1, Art. 78 (4); Executive: Section V, 2, Art. 96 (2). http://www.worldstatesmen.org/Yugoslav_Const_1992.htm"
+SRB,Yugoslavia,Belgrade,1944-10-20,1992-05-22,,,Dissolution,44.80401,20.46513,Eastern Europe,NA,NA,Constitution of the Federal Republic of Yugoslavia affirms that International treaties which have been ratified shall be a constituent part of the internal legal order. The powers and duties of treaty ratification belong to Federal Assembly and the President of the Republic.,Unicameral Majority,,,"Constitution of the Federal Republic of Yugoslavia, April, 1992. Basic Provisions: Section I, Art. 16; Legislature: Section V, 1, Art. 78 (4); Executive: Section V, 2, Art. 96 (2). http://www.worldstatesmen.org/Yugoslav_Const_1992.htm"
+SRB,Serbia and Montenegro,Belgrade,1992-04-27,2006-06-05,1992-04-27,,Dissolution,44.80401,20.46513,Eastern Europe,Federal Republic of Yugoslavia,,,,,,
+SRB,Serbia,Belgrade,2006-06-05,9999-12-31,2006-06-05,2006-06-03,,44.80401,20.46513,Eastern Europe,NA,NA,NA,NA,,,NA
 SSD,South Sudan,Juba,2011-07-09,9999-12-31,,,,4.85165,31.58247,Eastern Africa,NA,NA,"South Sudan, offcially known as the Republic of South Sudan gained its independence from the Republic of the Sudan in 2011. 2011 The Transition Constitution of The Republic of South Sudan indicates procedures of treaty ratification, i.e. functions of the National Legislative Assembly and the President. As provided by law, the President shall perform direct and supervise foreign policy and ratify treaties and international agreements. These presidential functions are limited to the approval of the National Legislatve Assembly.",Unicameral Majority,,,The Transition Constitution of the Republic of South Sudan 2011. Legislature: Art.57 (d); Executive: Art.101 (p). https://www.wipo.int/edocs/lexdocs/laws/en/ss/ss013en.pdf
 STP,Sao Tome and Principe,Sao Tome,NA,9999-12-31,,,,0.33654,6.72732,Western Africa,NA,NA,NA,NA,,,NA
 SUL,Sulu,Maimbung,1405-01-01,1851-04-19,,,,5.9272,121.02935,South Eastern Asia,NA,NA,NA,NA,,,NA
@@ -379,8 +382,6 @@ YAR,Yemen Arab Republic,Sanaa,1918-11-11,1990-05-21,,,,15.35472,44.20667,Western
 YEK,Yeke Kingdom,Bunkeya,1880-01-01,1891-12-20,,,,-9.96667,26.93333,Central Africa,NA,NA,NA,NA,,,NA
 YEM,Yemen,Sana'a,NA,9999-12-31,,,,15.35472,44.20667,Western Asia,NA,NA,NA,NA,,,NA
 YPR,Yemen Peoples Republic,Aden,1967-11-30,1990-05-21,,,,12.77944,45.03667,Western Asia,Yemen Peoplea€™s Republic,NA,NA,NA,,,NA
-YUG,Yugoslavia,Belgrade,1878-07-13,1941-04-20,,,,44.80401,20.46513,Eastern Europe,NA,NA,Constitution of the Federal Republic of Yugoslavia affirms that International treaties which have been ratified shall be a constituent part of the internal legal order. The powers and duties of treaty ratification belong to Federal Assembly and the President of the Republic.,Unicameral Majority,,,"Constitution of the Federal Republic of Yugoslavia, April, 1992. Basic Provisions: Section I, Art. 16; Legislature: Section V, 1, Art. 78 (4); Executive: Section V, 2, Art. 96 (2). http://www.worldstatesmen.org/Yugoslav_Const_1992.htm"
-YUG,Yugoslavia,Belgrade,1944-10-20,1992-05-22,,,,44.80401,20.46513,Eastern Europe,NA,NA,Constitution of the Federal Republic of Yugoslavia affirms that International treaties which have been ratified shall be a constituent part of the internal legal order. The powers and duties of treaty ratification belong to Federal Assembly and the President of the Republic.,Unicameral Majority,,,"Constitution of the Federal Republic of Yugoslavia, April, 1992. Basic Provisions: Section I, Art. 16; Legislature: Section V, 1, Art. 78 (4); Executive: Section V, 2, Art. 96 (2). http://www.worldstatesmen.org/Yugoslav_Const_1992.htm"
 ZAF,South Africa,Pretoria,1910-05-31,9999-12-31,,,,-25.74486,28.18783,Southern Africa,NA,NA,NA,NA,,,NA
 ZIN,Zinder (Damagaram),Zinder,1851-01-01,1889-07-30,,,,13.80716,8.9881,Western Africa,NA,NA,NA,NA,,,NA
 ZMB,Zambia,Lusaka,NA,9999-12-31,,,,-15.40669,28.28713,Southern Africa,NA,NA,NA,NA,,,NA
