@@ -84,9 +84,9 @@ DEU,German Federal Republic,Bonn,1949-05-23,1990-10-02,,,,50.73616,7.1002,Wester
 DFR,Darfur,Al Fasher,1603-01-01,1874-09-30,,,,32.799,-86.8073,Northern Africa,NA,NA,NA,NA,,,NA
 DIR,Dir,Dir,1626-01-01,1896-12-31,,,,9.59306,41.86611,Southern Asia,NA,NA,NA,NA,,,NA
 DJA,Fouta Djallon,Timbo,1725-01-01,1896-12-31,,,,-26.82333,-49.27167,Western Africa,NA,NA,NA,NA,,,NA
-DJI,Djibouti,Djibouti,NA,9999-12-31,,,,11.5,42.5,Eastern Africa,NA,NA,NA,NA,,,NA
-DMA,Dominica,Roseau,NA,9999-12-31,,,,15.30174,-61.38808,Caribbean,NA,NA,NA,NA,,,NA
-DNK,Denmark,Copenhagen,NA,9999-12-31,,,,55.67594,12.56553,Northern Europe,NA,NA,NA,NA,,,NA
+DJI,Djibouti,Djibouti,1977-06-27,9999-12-31,,,,11.5,42.5,Eastern Africa,NA,NA,NA,NA,,,NA
+DMA,Dominica,Roseau,1978-11-03,9999-12-31,,,,15.30174,-61.38808,Caribbean,NA,NA,NA,NA,,,NA
+DNK,Denmark,Copenhagen,0793,9999-12-31,,,,55.67594,12.56553,Northern Europe,NA,NA,NA,NA,,,NA
 DOM,Dominican Republic,Santo Domingo,1821-11-30,1822-02-09,,,,19,-70.66667,Caribbean,NA,NA,NA,NA,,,NA
 DOM,Dominican Republic,Santo Domingo,1844-02-27,1861-03-18,,,,19,-70.66667,Caribbean,NA,NA,NA,NA,,,NA
 DOM,Dominican Republic,Santo Domingo,1865-03-03,1916-05-16,,,,19,-70.66667,Caribbean,NA,NA,NA,NA,,,NA
@@ -99,37 +99,37 @@ ECU,Ecuador,Quito,1830-05-13,9999-12-31,,,,-0.22985,-78.52495,South America,NA,N
 EGY,Egypt,Cairo,1805-05-17,1882-09-15,,,,30.06263,31.24967,Northern Africa,NA,NA,NA,NA,,,NA
 EGY,Egypt,Cairo,1953-06-18,9999-12-31,,1953-06-18,,30.06263,31.24967,Northern Africa,NA,NA,NA,NA,,Definitive end of british presence and start of the republic,NA
 EHT,State Of Haiti,Milot,1806-10-17,1811-03-28,,,Unification,19.61667,-72.21667,Northern America,NA,NA,NA,NA,,,NA
-ERI,Eritrea,Asmara,NA,9999-12-31,,,,15.33805,38.93184,Eastern Africa,NA,NA,NA,NA,,,NA
-ESP,Spain,Madrid,NA,9999-12-31,,,,40.4165,-3.70256,Western Europe,NA,NA,NA,NA,,,NA
+ERI,Eritrea,Asmara,1993-05-24,9999-12-31,,,,15.33805,38.93184,Eastern Africa,NA,NA,NA,NA,,,NA
+ESP,Spain,Madrid,1479,9999-12-31,,,,40.4165,-3.70256,Western Europe,NA,NA,NA,NA,,,NA
 EST,Estonia,Tallinn,1918-02-24,1940-06-16,,,,59.43696,24.75353,Eastern Europe,NA,NA,NA,NA,,,NA
 EST,Estonia,Tallinn,1991-08-20,9999-12-31,,,,59.43696,24.75353,Eastern Europe,NA,NA,NA,NA,,,NA
 ETH,Ethiopia,Addis Ababa,1270-01-01,1936-05-05,,,,9.02497,38.74689,Eastern Africa,NA,NA,NA,NA,,Foundation of the Ethiopian Empire,NA
 ETH,Ethiopia,Addis Ababa,1855-02-11,1936-05-05,,,,9.02497,38.74689,Eastern Africa,NA,NA,NA,NA,,,NA
 ETH,Ethiopia,Addis Ababa,1941-05-05,9999-12-31,,,,9.02497,38.74689,Eastern Africa,NA,NA,NA,NA,,,NA
 ETS,Eastern Turkistan,Kashgar,1874-01-01,1877-12-31,,,,39.45472,75.97972,Eastern Asia,NA,NA,NA,NA,,,NA
-EUE,European Union,Brussels,NA,NA,,,,50.85045,4.34878,Western Europe,NA,NA,"Provided by Treaty on European Union (TEU), Article 47 recognises the legal personality of the European Union, as a subject of international law. The European Union can negotiate and conclude international agreement within the scope of its competences. The executive branch has near exclusive competence in the ratification procedure of international treaties, although may be subject to a mandate voted or approval by national/regional parliament. The Lisbon Treaty gives a stronger role to the European Parliament, for instance, trade negotiations are conducted and concluded in the EU branches. In practice, the EU and Member States sign the treaty simultaneously. Mixed agreements require the agreement to be ratified at national level. In this case, treaties enter into force when the other partner, the EU and all Member States exchange ratification instruments.",Plebiscite,,,http://www.europarl.europa.eu/RegData/etudes/BRIE/2016/593489/EPRS_BRI(2016)593489_EN.pdf. http://www.europarl.europa.eu/RegData/etudes/BRIE/2016/593513/EPRS_BRI(2016)593513_EN.pdf
-FIN,Finland,Helsinki,NA,9999-12-31,,,,60.16952,24.93545,Northern Europe,NA,NA,NA,NA,,,NA
-FJI,Fiji,Suva,NA,9999-12-31,,,,-18.14161,178.44149,Oceania,NA,NA,NA,NA,,,NA
+EUE,European Union,Brussels,1993-01-11,9999-12-31,,,,50.85045,4.34878,Western Europe,NA,NA,"Provided by Treaty on European Union (TEU), Article 47 recognises the legal personality of the European Union, as a subject of international law. The European Union can negotiate and conclude international agreement within the scope of its competences. The executive branch has near exclusive competence in the ratification procedure of international treaties, although may be subject to a mandate voted or approval by national/regional parliament. The Lisbon Treaty gives a stronger role to the European Parliament, for instance, trade negotiations are conducted and concluded in the EU branches. In practice, the EU and Member States sign the treaty simultaneously. Mixed agreements require the agreement to be ratified at national level. In this case, treaties enter into force when the other partner, the EU and all Member States exchange ratification instruments.",Plebiscite,,,http://www.europarl.europa.eu/RegData/etudes/BRIE/2016/593489/EPRS_BRI(2016)593489_EN.pdf. http://www.europarl.europa.eu/RegData/etudes/BRIE/2016/593513/EPRS_BRI(2016)593513_EN.pdf
+FIN,Finland,Helsinki,1917-12-06,9999-12-31,,,,60.16952,24.93545,Northern Europe,NA,NA,NA,NA,,,NA
+FJI,Fiji,Suva,1970-10-10,9999-12-31,,,,-18.14161,178.44149,Oceania,NA,NA,NA,NA,,,NA
 FNJ,Funj,Sennar,1504-01-01,1821-06-30,,,,13.56907,33.56718,Northern Africa,NA,NA,NA,NA,,,NA
-FRA,France,Paris,NA,9999-12-31,,,,48.85341,2.3488,Western Europe,NA,NA,NA,NA,,,NA
-FRO,Faroe Islands,Torshavn,NA,NA,1946-09-14,1948-03-30,,62.00973,-6.77164,Western Europe,NA,NA,NA,NA,,,https://www.government.fo/en/foreign-relations/constitutional-status/
-FSM,Federated States of Micronesia,Palikir,NA,9999-12-31,,,,6.92477,158.16109,Oceania,NA,NA,NA,NA,,,NA
+FRA,France,Paris,0843,9999-12-31,,,,48.85341,2.3488,Western Europe,NA,NA,NA,NA,,,NA
+FRO,Faroe Islands,Torshavn,1948-04-01,9999-12-31,1946-09-14,1948-03-30,,62.00973,-6.77164,Western Europe,NA,NA,NA,NA,,,https://www.government.fo/en/foreign-relations/constitutional-status/
+FSM,Federated States of Micronesia,Palikir,1986-11-03,9999-12-31,,,,6.92477,158.16109,Oceania,NA,NA,NA,NA,,,NA
 FTO,Fouta Toro,Silla,1776-01-01,1888-12-31,,,,39.36667,-0.41667,Western Africa,NA,NA,NA,NA,,,NA
-GAB,Gabon,Libreville,NA,9999-12-31,,,,0.39241,9.45356,Central Africa,NA,NA,NA,NA,,,NA
-GBR,United Kingdom,London,NA,9999-12-31,,,,51.5072648,-0.1278328,Western Europe,NA,NA,NA,NA,,,NA
-GCL,Gran Colombia,Bogota,NA,NA,,,,4.60971,-74.08175,South America,NA,NA,NA,NA,,,NA
+GAB,Gabon,Libreville,1960-08-17,9999-12-31,,,,0.39241,9.45356,Central Africa,NA,NA,NA,NA,,,NA
+GBR,United Kingdom,London,0927,9999-12-31,,,,51.5072648,-0.1278328,Western Europe,NA,NA,NA,NA,,,NA
+GCL,Gran Colombia,Bogota,1819-12-17,1830,,,,4.60971,-74.08175,South America,NA,NA,NA,NA,,,NA
 GEO,Georgia,Tbilisi,1918-05-26,1921-02-25,,,,41.69411,44.83368,Eastern Europe,NA,NA,NA,NA,,,NA
 GEO,Georgia,Tbilisi,1991-04-09,9999-12-31,,,,41.69411,44.83368,Eastern Europe,NA,NA,NA,NA,,,NA
-GHA,Ghana,Accra,NA,9999-12-31,,,,5.55602,-0.1969,Western Africa,NA,NA,NA,NA,,,NA
-GIN,Guinea,Conakry,NA,9999-12-31,,,,9.53795,-13.67729,Western Africa,NA,NA,NA,NA,,,NA
-GMB,Gambia,Banjul,NA,9999-12-31,,,,13.45274,-16.57803,Western Africa,NA,NA,NA,NA,,,NA
-GNB,Guinea-Bissau,Bissau,NA,9999-12-31,,,,11.86357,-15.59767,Western Africa,NA,NA,NA,NA,,,NA
-GNQ,Equatorial Guinea,Malabo,NA,9999-12-31,,,,3.75,8.78333,Central Africa,NA,NA,NA,NA,,,NA
+GHA,Ghana,Accra,1957-03-06,9999-12-31,,,,5.55602,-0.1969,Western Africa,NA,NA,NA,NA,,,NA
+GIN,Guinea,Conakry,1958-10-02,9999-12-31,,,,9.53795,-13.67729,Western Africa,NA,NA,NA,NA,,,NA
+GMB,Gambia,Banjul,1965-02-18,9999-12-31,,,,13.45274,-16.57803,Western Africa,NA,NA,NA,NA,,,NA
+GNB,Guinea-Bissau,Bissau,1974-09-10,9999-12-31,,,,11.86357,-15.59767,Western Africa,NA,NA,NA,NA,,,NA
+GNQ,Equatorial Guinea,Malabo,1968-10-12,9999-12-31,,,,3.75,8.78333,Central Africa,NA,NA,NA,NA,,,NA
 GRC,Greece,Athens,1827-05-17,1941-04-23,,,,37.97945,23.71622,Eastern Europe,NA,NA,NA,NA,,,NA
 GRC,Greece,Athens,1944-10-13,9999-12-31,,,,37.97945,23.71622,Eastern Europe,NA,NA,NA,NA,,,NA
-GRD,Grenada,Saint George’s,NA,9999-12-31,,,,12.05644,-61.74849,Caribbean,NA,NA,NA,NA,,,NA
+GRD,Grenada,Saint George’s,1974-02-07,9999-12-31,,,,12.05644,-61.74849,Caribbean,NA,NA,NA,NA,,,NA
 GTM,Guatemala,Guatemala,1840-01-01,9999-12-31,,,,15.5,-90.25,Central America,NA,NA,NA,NA,,,NA
-GUY,Guyana,Georgetown,NA,9999-12-31,,,,5.41123,100.33543,South America,NA,NA,NA,NA,,,NA
+GUY,Guyana,Georgetown,1966-05-26,9999-12-31,,,,5.41123,100.33543,South America,NA,NA,NA,NA,,,NA
 GWA,Gwalior,Lashkar,1731-01-01,1818-02-28,,,,34.58468,68.02543,Southern Asia,NA,NA,NA,NA,,,NA
 GWA,Gwalior,Lashkar,1816-01-01,1818-02-28,,,,34.58468,68.02543,Southern Asia,NA,NA,NA,NA,,,NA
 HAN,Hanover,Hannover,1814-10-12,1866-07-26,,,,52.37052,9.73322,Western Europe,NA,NA,NA,NA,,,NA
