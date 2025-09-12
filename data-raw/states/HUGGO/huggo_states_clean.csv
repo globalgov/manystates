@@ -62,23 +62,23 @@ BWA,Botswana,Gaborone,1966-09-30,9999-12-31,1966-09-30,,,-24.65451,25.90859,Sout
 CAF,Central African Republic,Bangui,1960-08-13,9999-12-31,1960-08-13,,,4.36122,18.55496,Central Africa,NA,NA,NA,NA,Evrard,"Added: Begin, DeclIndep (https://au.int/en/countryprofiles/central-african-republic)",NA
 CAN,Canada,Ottawa,1867-07-01,9999-12-31,1931-12-11,1867-07-01,,45.41117,-75.69812,Northern America,NA,NA,NA,NA,Evrard,"Added: Begin, DeclIndep, Autonomy (https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/discover-canada/read-online/canadas-history.html)",NA
 CAY,Cayor,Mboul,1549-01-01,1859-12-31,,,,6.26667,14.28333,Western Africa,NA,NA,NA,NA,,,NA
-CHE,Switzerland,Bern,1291-08-XX,9999-12-31,,,,46.94809,7.44744,Western Europe,NA,NA,NA,NA,Evrard,Added: Begin (https://www.aboutswitzerland.eda.admin.ch/en/the-history-of-switzerland),NA
+CHE,Switzerland,Bern,1291-08,9999-12-31,,,,46.94809,7.44744,Western Europe,NA,NA,NA,NA,Evrard,Added: Begin (https://www.aboutswitzerland.eda.admin.ch/en/the-history-of-switzerland),NA
 CHL,Chile,Santiago,1818-02-12,9999-12-31,1818-02-12,,,-33.45694,-70.64827,South America,NA,NA,NA,NA,,,NA
 CHM,Chamba,Chamba,0920-01-01,1846-03-09,,,,32.5558,76.12592,Southern Asia,NA,NA,NA,NA,,,NA
-CHN,China,Beijing,1368-01-01,9999-12-31,,,,39.9075,116.39723,Eastern Asia,NA,NA,NA,NA,,Beginning of Ming dynasty,NA
-CIV,Cote DIvoire,Yamoussoukro,NA,9999-12-31,,,,6.82055,-5.27674,Western Africa,NA,NA,"Cote dIvoire, officially the Republic of Cote dIvoire, is a country located on the south coast of West Africa. Cote dIvoires Constitution of 2016 indicates the procedures of treaties ratification in a separate title, Title VI: International Treaties and Agreements. In Chapter I: Negotiation and Ratification, the President of the Republic has an authority of negotiation and ratification of international treaties and agreements. As provided by the following articles, the Constitutional Council shall review governing legislation for the purpose of ratification. If the Constitutional Council, called upon by the President of the Republic, the President of the National Assembly or Senate or by at least one-tenth of deputies or senators, has declared that an international treaty or agreement contains a clause contrary to the Constitution, authorisation to ratify it may take place only after review by the Constitution.",Legislature Informed,,,"Cote dIvoires Constitution of 2016. Title VI, Chap. I. https://www.constituteproject.org/constitution/Cote_DIvoire_2016.pdf?lang=en"
-CMR,Cameroon,Yaounde,NA,9999-12-31,,,,3.86667,11.51667,Central Africa,NA,NA,NA,NA,,,NA
-COD,Democratic Republic of the Congo,Kinshasa,NA,9999-12-31,,,,-4.32142,15.30807,Central Africa,NA,NA,NA,NA,,,NA
-COG,Congo,Brazzaville,NA,9999-12-31,,,,-4.26613,15.28318,Central Africa,NA,NA,NA,NA,,,NA
-COK,Cook Islands,Avarua,NA,9999-12-31,,,,-21.20778,-159.775,Oceania,NA,NA,NA,NA,,,http://www.track.unodc.org/LegalLibrary/LegalResources/Cook%20Islands/Laws/Cook%20Islands%20Constitution%201965.pdf
+CHN,China,Beijing,1368,9999-12-31,,,,39.9075,116.39723,Eastern Asia,NA,NA,NA,NA,,Beginning of Ming dynasty,NA
+CIV,Cote DIvoire,Yamoussoukro,1960-08-07,9999-12-31,,,,6.82055,-5.27674,Western Africa,NA,NA,"Cote dIvoire, officially the Republic of Cote dIvoire, is a country located on the south coast of West Africa. Cote dIvoires Constitution of 2016 indicates the procedures of treaties ratification in a separate title, Title VI: International Treaties and Agreements. In Chapter I: Negotiation and Ratification, the President of the Republic has an authority of negotiation and ratification of international treaties and agreements. As provided by the following articles, the Constitutional Council shall review governing legislation for the purpose of ratification. If the Constitutional Council, called upon by the President of the Republic, the President of the National Assembly or Senate or by at least one-tenth of deputies or senators, has declared that an international treaty or agreement contains a clause contrary to the Constitution, authorisation to ratify it may take place only after review by the Constitution.",Legislature Informed,,,"Cote dIvoires Constitution of 2016. Title VI, Chap. I. https://www.constituteproject.org/constitution/Cote_DIvoire_2016.pdf?lang=en"
+CMR,Cameroon,Yaounde,1960-01-01,9999-12-31,,,,3.86667,11.51667,Central Africa,NA,NA,NA,NA,,,NA
+COD,Democratic Republic of the Congo,Kinshasa,1960-06-30,9999-12-31,,,,-4.32142,15.30807,Central Africa,NA,NA,NA,NA,,,NA
+COG,Congo,Brazzaville,1960-08-15,9999-12-31,,,,-4.26613,15.28318,Central Africa,NA,NA,NA,NA,,,NA
+COK,Cook Islands,Avarua,1965-08-04,9999-12-31,,,,-21.20778,-159.775,Oceania,NA,NA,NA,NA,,,http://www.track.unodc.org/LegalLibrary/LegalResources/Cook%20Islands/Laws/Cook%20Islands%20Constitution%201965.pdf
 COL,Colombia,Bogota,1831-11-19,9999-12-31,,,,4.60971,-74.08175,South America,NA,NA,NA,NA,,,NA
 COM,Comoros,Moroni,1975-07-06,9999-12-31,,,,-11.70216,43.25506,Eastern Africa,NA,NA,NA,NA,,,NA
-CPV,Cape Verde,Praia,NA,9999-12-31,,,,14.93152,-23.51254,Western Africa,NA,NA,NA,NA,,,NA
+CPV,Cape Verde,Praia,1975-07-05,9999-12-31,,,,14.93152,-23.51254,Western Africa,NA,NA,NA,NA,,,NA
 CRI,Costa Rica,San Jose,1838-11-05,9999-12-31,1838-11-05,,,37.33939,-121.89496,Central America,NA,NA,NA,NA,,,NA
-CUB,Cuba,Havana,NA,9999-12-31,,,,23.13302,-82.38304,Caribbean,NA,NA,NA,NA,,,NA
+CUB,Cuba,Havana,1902-05-20,9999-12-31,1902-05-20,,,23.13302,-82.38304,Caribbean,NA,NA,NA,NA,,,NA
 CUT,Cutch,Bhuj,1147-01-01,1816-01-15,,,,23.25397,69.66928,Southern Asia,NA,NA,NA,NA,,,NA
-CYP,Cyprus,Nicosia,NA,9999-12-31,,,,35.16667,33.36667,Western Asia,NA,NA,NA,NA,,,NA
-CZE,Czech Republic,Prague,NA,9999-12-31,,,,50.08804,14.42076,Central Europe,NA,NA,NA,NA,,,NA
+CYP,Cyprus,Nicosia,1960-08-16,9999-12-31,,,,35.16667,33.36667,Western Asia,NA,NA,NA,NA,,,NA
+CZE,Czech Republic,Prague,1918-10-28,9999-12-31,,,,50.08804,14.42076,Central Europe,NA,NA,NA,NA,,,NA
 DDR,German Democratic Republic,Berlin,1954-03-25,1990-10-02,,,,52.5233,13.41377,Eastern Europe,NA,NA,NA,NA,,,NA
 DEU,German Federal Republic,Bonn,1949-05-23,1990-10-02,,,,50.73616,7.1002,Western Europe,NA,NA,NA,NA,,,NA
 DFR,Darfur,Al Fasher,1603-01-01,1874-09-30,,,,32.799,-86.8073,Northern Africa,NA,NA,NA,NA,,,NA
