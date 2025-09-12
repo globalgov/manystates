@@ -32,8 +32,8 @@ BAV,Bavaria,Munich,1806,1918-11-14,,,,48.13743,11.57549,Western Europe,Kingdom o
 BDI,Burundi,Bujumbura,1680-01-01,1890-05-14,,,,-3.3822,29.3644,Eastern Africa,NA,NA,NA,NA,,,NA
 BEL,Belgium,Brussels,1830-12-20,1940-05-28,,,Occupation,50.85045,4.34878,Western Europe,NA,NA,NA,NA,,,NA
 BEL,Belgium,Brussels,1945-06-26,9999-12-31,,,,50.85045,4.34878,Western Europe,NA,NA,NA,NA,,,NA
-BEN,Benin,Porto-Novo,1960-08-01,9999-12-31,,1958-12-04?,,6.49646,2.60359,Western Africa,Dahomey,NA,NA,NA,Evrard,"Added: Begin, End, Autonomy, StateNameAlt (https://www.gouv.bj/pages/histoire/)",NA
-BFA,Burkina Faso,Ouagadougou,1958-12-11,9999-12-31,1960-08-05,,,12.36566,-1.53388,Western Africa,Upper Volta,NA,NA,NA,Evrard,"Added: Begin, End, DeclIndep, StateNameAlt (https://perspective.usherbrooke.ca/bilan/servlet/BMEve/308) ",NA
+BEN,Benin,Porto-Novo,1960-08-01,9999-12-31,,1958-12-04?,,6.49646,2.60359,Western Africa,Dahomey,NA,NA,NA,Evrard,"Added: Begin, End, Autonomy, StateNameAlt (https://www.gouv.bj/pages/histoire/), Renamed 1975",NA
+BFA,Burkina Faso,Ouagadougou,1958-12-11,9999-12-31,1960-08-05,,,12.36566,-1.53388,Western Africa,Upper Volta,NA,NA,NA,Evrard,"Added: Begin, End, DeclIndep, StateNameAlt (https://perspective.usherbrooke.ca/bilan/servlet/BMEve/308), Renamed 1984",NA
 BGD,Bangladesh,Dhaka,1971-12-16,9999-12-31,,,,23.7104,90.40744,Southern Asia,NA,NA,NA,NA,,,NA
 BGR,Bulgaria,Sofia,0681-12-31,1018-12-31,,,,42.69751,23.32415,Eastern Europe,NA,NA,NA,NA,,,NA
 BGR,Bulgaria,Sofia,1185-10-26,1396-09-25,,,,42.69751,23.32415,Eastern Europe,NA,NA,NA,NA,,,NA
