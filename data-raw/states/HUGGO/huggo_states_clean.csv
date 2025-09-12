@@ -193,19 +193,22 @@ KUB,Kuba,Mushenge,1625-01-01,1910-12-31,,,,-4.52985,21.33321,Central Africa,NA,N
 KWT,Kuwait,Kuwait,1961-06-19,1990-08-28,,,Annexation,29.5,47.75,Western Asia,NA,NA,NA,NA,,,NA
 KWT,Kuwait,Kuwait,1991-02-28,9999-12-31,,,,29.5,47.75,Western Asia,NA,NA,NA,NA,,,NA
 KZB,Kazembe,Kazembe,1740-01-01,1890-12-31,,,,-10.37327,23.18229,Eastern Africa,NA,NA,NA,NA,,Approximation,NA
-LAO,Lao Peoples Democratic Republic,Vientiane,NA,9999-12-31,,,,17.96667,102.6,South Eastern Asia,NA,NA,NA,NA,,,NA
+LAO,Laos,Vientiane,1953-10-22,9999-12-31,,,,17.96667,102.6,South Eastern Asia,Lao Peoples Democratic Republic,NA,NA,NA,,,NA
 LBN,Lebanon,Beirut,1945-10-24,9999-12-31,,,,33.88894,35.49442,Western Asia,NA,NA,NA,NA,,"As founding member state of UN, French mandate terminated from this date",NA
 LBR,Liberia,Monrovia,1847-07-26,9999-12-31,,,,6.30054,-10.7969,Western Africa,NA,NA,NA,NA,,,NA
-LBY,Libya,Tripoli,NA,9999-12-31,,,,32.87519,13.18746,Northern Africa,NA,NA,NA,NA,,,NA
-LCA,St. Lucia,Castries,NA,9999-12-31,,,,13.9957,-61.00614,Caribbean,NA,NA,NA,NA,,,NA
+LBY,Libya,Tripoli,1951-12-24,1969-09-01,,,Coup,32.87519,13.18746,Northern Africa,Kingdom of Libya,NA,NA,NA,,,NA
+LBY,Libya,Tripoli,1969-09-01,9999-12-31,,,,32.87519,13.18746,Northern Africa,Republic of Libya,NA,NA,NA,,,NA
+LCA,St. Lucia,Castries,1979-02-22,9999-12-31,,,,13.9957,-61.00614,Caribbean,NA,NA,NA,NA,,,NA
 LIE,Liechtenstein,Vaduz,1718-01-23,1806-07-25,,,,47.14151,9.52154,Western Europe,NA,NA,NA,NA,,,NA
 LIE,Liechtenstein,Vaduz,1813-10-19,1815-06-20,,,,47.14151,9.52154,Western Europe,NA,NA,NA,NA,,,NA
 LIE,Liechtenstein,Vaduz,1866-08-24,9999-12-31,,,,47.14151,9.52154,Western Europe,NA,NA,NA,NA,,Dissolution of the German Confederation,NA
 LIM,Enarya (Limmu),Saqqa,1801-01-01,1849-12-31,,,,33.4364,36.46638,Eastern Africa,NA,NA,NA,NA,,,NA
 LIP,Lippe,Detmold,1123-01-01,1867-07-01,,,,51.93855,8.87318,Western Europe,NA,NA,NA,NA,,,NA
-LKA,Sri Lanka,Colombo,NA,9999-12-31,,,,6.8664,80.0166,Southern Asia,NA,NA,NA,NA,,,NA
+LKA,Sri Lanka,Colombo,1948-02-04,9999-12-31,,,,6.8664,80.0166,Southern Asia,NA,NA,NA,NA,,,NA
 LSO,Lesotho,Maseru,1822-01-01,1843-12-31,,,,-29.31667,27.48333,Southern Africa,NA,NA,NA,NA,,Reign of Moshoeshoe I,NA
-LTU,Lithuania,Vilnius,NA,9999-12-31,,,,54.68916,25.2798,Eastern Europe,NA,NA,NA,NA,,,NA
+LTU,Lithuania,Vilnius,1236,1386-02-02,,,,54.68916,25.2798,Eastern Europe,NA,NA,NA,NA,,,NA
+LTU,Lithuania,Vilnius,1918-02-16,1940-06-16,,,,54.68916,25.2798,Eastern Europe,NA,NA,NA,NA,,,NA
+LTU,Lithuania,Vilnius,1990-03-11,9999-12-31,,,,54.68916,25.2798,Eastern Europe,NA,NA,NA,NA,,,NA
 LUB,Luba,Kabongo,1585-01-01,1889-12-31,,,,-6.15061,22.81719,Central Africa,NA,NA,NA,NA,,,NA
 LUN,Lunda Empire,Musumba,1644-01-01,1889-12-31,,,,-2.68333,30.71667,Central Africa,NA,NA,NA,NA,,,NA
 LUX,Luxembourg,Luxembourg,1867-05-11,1890-11-22,,,,49.75,6.16667,Western Europe,NA,NA,NA,NA,,,NA
