@@ -42,27 +42,27 @@ BHP,Bhopal,Bhopal,1707-01-01,1818-03-01,,,,23.25469,77.40289,Southern Asia,NA,NA
 BHR,Bahrain,Manama,1971-08-15,9999-12-31,1971-08-15,,,26.21536,50.5832,Western Asia,NA,NA,NA,NA,Evrard,"Added: Begin, End, DeclIndep (https://history.state.gov/countries/bahrain)",NA
 BHS,Bahamas,Nassau,1973-07-10,9999-12-31,1973-07-10,,,40.73217,-73.58545,Caribbean,NA,NA,NA,NA,Evrard,"Added: Begin, End, DeclIndep (https://www.bahamas.gov.bs/overview-of-the-bahamas)",NA
 BHT,Bharatpur,Bharatpur,1707-01-01,1828-12-31,,,,27.21731,77.49009,Southern Asia,NA,NA,NA,NA,,,NA
-BIH,Bosnia and Herzegovina,Sarajevo,NA,9999-12-31,,,,43.84864,18.35644,Eastern Europe,NA,NA,NA,NA,,,NA
+BIH,Bosnia and Herzegovina,Sarajevo,1992-03-01,9999-12-31,1992-03-01,,,43.84864,18.35644,Eastern Europe,NA,NA,NA,NA,Evrard,"Added: Begin, DeclIndep (https://portal.cor.europa.eu/divisionpowers/Pages/Bosnia-Herzegovina.aspx#:~:text=Bosnia and Herzegovina (Bosna i,Yugoslavia on 1 March 1992.)",NA
 BIK,Bikaner,Bikaner,1465-01-01,1818-03-09,,,,28.02094,73.30749,Southern Asia,NA,NA,NA,NA,,,NA
 BLR,Belarus,Minsk,1918-03-25,1919-01-05,,,,53.9,27.56667,Eastern Europe,NA,NA,NA,NA,,,NA
 BLR,SSR Byelorussia,Minsk,1920-07-31,1991-08-19,,,,53.9,27.56667,Eastern Europe,Belarus,NA,NA,NA,,,NA
 BLR,Belarus,Minsk,1991-08-25,9999-12-31,,,,53.9,27.56667,Eastern Europe,NA,NA,NA,NA,,,NA
-BLZ,Belize,Belmopan,NA,9999-12-31,,,,17.25,-88.76667,Central America,NA,NA,NA,NA,,,NA
+BLZ,Belize,Belmopan,1981-09-21,9999-12-31,1981-09-21,,,17.25,-88.76667,Central America,NA,NA,NA,NA,Evrard,"Added: Begin, DeclIndep (https://history.state.gov/countries/belize)",NA
 BNJ,Benjermassin,Banjarmasin,1526,1860-12-31,,,,-3.31987,114.59075,South Eastern Asia,NA,NA,NA,NA,,,NA
-BOL,Plurinational State of Bolivia,Sucre,NA,9999-12-31,,,,9,-75,South America,NA,NA,NA,NA,,,NA
+BOL,Plurinational State of Bolivia,Sucre,1825-08-06,9999-12-31,1825-08-06,,,9,-75,South America,NA,La Paz,NA,NA,Evrard,"Added: Begin, DeclIndep, CapitalAlt (https://otca.org/en/bolivia/)",NA
 BPR,Bahawalpur,Bahawalpur,1748-01-01,1838-01-18,,,,29.4,71.68333,Southern Asia,NA,NA,NA,NA,,,NA
-BRA,Brazil,Brasilia,NA,9999-12-31,,,,-10,-55,South America,NA,NA,NA,NA,,,NA
-BRB,Barbados,Bridgetown,NA,9999-12-31,,,,13.1,-59.61667,Caribbean,NA,NA,NA,NA,,,NA
+BRA,Brazil,Brasilia,1822-09-07,9999-12-31,1822-09-07,,,-10,-55,South America,NA,NA,NA,NA,Evrard,"Added: Begin, DeclIndep (https://www.cultura.gob.es/en/cultura/archivos/difusion/mc-difusion/bicentenarios/contexto-historico/las-independencias-iberoamericanas/independencia-brasil.html)",NA
+BRB,Barbados,Bridgetown,1966-11-30,9999-12-31,1966-11-30,,,13.1,-59.61667,Caribbean,NA,NA,NA,NA,Evrard,"Added: Begin, DeclIndep (https://www.barbadosparliament.com/main_page_content/show_content/14)",NA
 BRE,Bremen,Bremen,1648-06-15,1871-01-17,,,,53.08891,8.79063,Western Europe,NA,NA,NA,NA,,,NA
 BRN,Brunei,Bandar Seri Begawan,1368-01-01,1888-01-01,,,,4.94029,114.94806,South Eastern Asia,NA,NA,"Brunei Darussalams ultimate authority rests with His Majesty the Sultan and Yang Di-Pertuan of Brunei Darussalam. Both executive power and legislature power is embedded on His Majesty the Sultan and Yang Di-Pertuan. Therefore, the consent of His Majesty the Sultan and Yang Di-Pertuan of Brunei Darussalam ratifies international treaties.",Executive,,Sultanate established,https://www.icj.org/wp-content/uploads/2013/04/Brunei-Constitution-1959-eng.pdf
 BTN,Bhutan,Thimphu,1616-01-01,1910-01-08,,,,27.46609,89.64191,Southern Asia,NA,NA,NA,NA,,,NA
 BUK,Bukhara,Bukhara,1785-01-01,1868-06-30,,,,39.77472,64.42861,Central Asia,NA,NA,NA,NA,,Emirate of Bukhara,NA
 BUR,Urundi,Gitega,1675-01-01,1890-05-14,,,,-3.5,29.95,Eastern Africa,NA,NA,NA,NA,,,NA
-BWA,Botswana,Gaborone,NA,9999-12-31,,,,-24.65451,25.90859,Southern Africa,NA,NA,NA,NA,,,NA
-CAF,Central African Republic,Bangui,NA,9999-12-31,,,,4.36122,18.55496,Central Africa,NA,NA,NA,NA,,,NA
-CAN,Canada,Ottawa,NA,9999-12-31,,,,45.41117,-75.69812,Northern America,NA,NA,NA,NA,,,NA
+BWA,Botswana,Gaborone,1966-09-30,9999-12-31,1966-09-30,,,-24.65451,25.90859,Southern Africa,NA,NA,NA,NA,Evrard,"Added: Begin, DeclIndep (https://www.botswanaembassy.org/page/history-of-botswana)",NA
+CAF,Central African Republic,Bangui,1960-08-13,9999-12-31,1960-08-13,,,4.36122,18.55496,Central Africa,NA,NA,NA,NA,Evrard,"Added: Begin, DeclIndep (https://au.int/en/countryprofiles/central-african-republic)",NA
+CAN,Canada,Ottawa,1867-07-01,9999-12-31,1931-12-11,1867-07-01,,45.41117,-75.69812,Northern America,NA,NA,NA,NA,Evrard,"Added: Begin, DeclIndep, Autonomy (https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/discover-canada/read-online/canadas-history.html)",NA
 CAY,Cayor,Mboul,1549-01-01,1859-12-31,,,,6.26667,14.28333,Western Africa,NA,NA,NA,NA,,,NA
-CHE,Switzerland,Bern,NA,9999-12-31,,,,46.94809,7.44744,Western Europe,NA,NA,NA,NA,,,NA
+CHE,Switzerland,Bern,1291-08-XX,9999-12-31,,,,46.94809,7.44744,Western Europe,NA,NA,NA,NA,Evrard,Added: Begin (https://www.aboutswitzerland.eda.admin.ch/en/the-history-of-switzerland),NA
 CHL,Chile,Santiago,1818-02-12,9999-12-31,1818-02-12,,,-33.45694,-70.64827,South America,NA,NA,NA,NA,,,NA
 CHM,Chamba,Chamba,0920-01-01,1846-03-09,,,,32.5558,76.12592,Southern Asia,NA,NA,NA,NA,,,NA
 CHN,China,Beijing,1368-01-01,9999-12-31,,,,39.9075,116.39723,Eastern Asia,NA,NA,NA,NA,,Beginning of Ming dynasty,NA
