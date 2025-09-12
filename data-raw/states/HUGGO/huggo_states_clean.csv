@@ -287,7 +287,7 @@ QAT,Qatar,Doha,NA,9999-12-31,,,,25.27932,51.52245,Western Asia,NA,NA,NA,NA,,,NA
 QUA,Quaiti Sultanate,Al Mukalla,1858-01-01,1888-12-31,,,,14.54248,49.12424,Western Asia,NA,NA,NA,NA,,,NA
 ROU,Romania,Bucharest,NA,9999-12-31,,,,44.43225,26.10626,Eastern Europe,NA,NA,NA,NA,,,NA
 RUS,Russian Federation,Moscow,NA,9999-12-31,,,,55.75,37.5,Eastern Europe,NA,NA,NA,NA,,,NA
-RVN,Republic Of Viet Nam,Saigon,NA,NA,,,,10.75,106.66667,South Eastern Asia,NA,NA,NA,NA,,,NA
+RVN,Republic Of Viet Nam,Saigon,1954-12-29,1975-04-30,,,,10.75,106.66667,South Eastern Asia,NA,NA,NA,NA,,,NA
 RWA,Ruanda,Kigali,1081-01-01,1890-05-14,,,,-1.94995,30.05885,Eastern Africa,NA,NA,NA,NA,,,NA
 SAL,Saloum,Kahone,1494-01-01,1887-12-31,,,,13.71667,-15.01667,Western Africa,NA,NA,NA,NA,,,NA
 SAU,Emirate of Diriyah,Riyadh,NA,9999-12-31,,,,24.68773,46.72185,Western Asia,NA,NA,NA,NA,,,NA
@@ -318,20 +318,20 @@ SOT,South Ossetia,Tskhinvali,NA,NA,,,,42.22764,43.96861,Western Asia,NA,NA,NA,NA
 SRB,Serbia and Montenegro,Belgrade,1992-04-27,2006-06-05,1992-04-27,,Dissolution,44.80401,20.46513,Eastern Europe,Federal Republic of Yugoslavia,,,,,,
 SRB,Serbia,Belgrade,2006-06-05,9999-12-31,2006-06-05,2006-06-03,,44.80401,20.46513,Eastern Europe,NA,NA,NA,NA,,,NA
 SSD,South Sudan,Juba,2011-07-09,9999-12-31,,,,4.85165,31.58247,Eastern Africa,NA,NA,"South Sudan, offcially known as the Republic of South Sudan gained its independence from the Republic of the Sudan in 2011. 2011 The Transition Constitution of The Republic of South Sudan indicates procedures of treaty ratification, i.e. functions of the National Legislative Assembly and the President. As provided by law, the President shall perform direct and supervise foreign policy and ratify treaties and international agreements. These presidential functions are limited to the approval of the National Legislatve Assembly.",Unicameral Majority,,,The Transition Constitution of the Republic of South Sudan 2011. Legislature: Art.57 (d); Executive: Art.101 (p). https://www.wipo.int/edocs/lexdocs/laws/en/ss/ss013en.pdf
-STP,Sao Tome and Principe,Sao Tome,NA,9999-12-31,,,,0.33654,6.72732,Western Africa,NA,NA,NA,NA,,,NA
+STP,Sao Tome and Principe,Sao Tome,1975-07-12,9999-12-31,,,,0.33654,6.72732,Western Africa,NA,NA,NA,NA,,,NA
 SUL,Sulu,Maimbung,1405-01-01,1851-04-19,,,,5.9272,121.02935,South Eastern Asia,NA,NA,NA,NA,,,NA
-SUR,Suriname,Paramaribo,NA,9999-12-31,,,,5.86638,-55.16682,South America,NA,NA,NA,NA,,,NA
-SVK,Slovakia,Bratislava,NA,9999-12-31,,,,48.14816,17.10674,Eastern Europe,NA,NA,NA,NA,,,NA
+SUR,Suriname,Paramaribo,1975-11-25,9999-12-31,,,,5.86638,-55.16682,South America,NA,NA,NA,NA,,,NA
+SVK,Slovakia,Bratislava,1993-01-01,9999-12-31,,,,48.14816,17.10674,Eastern Europe,NA,NA,NA,NA,,,NA
 SVN,Slovenia,Ljubljana,1991-06-25,9999-12-31,,,,46.05108,14.50513,Eastern Europe,NA,NA,NA,NA,,,NA
 SWA,Swat,Saidu Sharif,1849-01-01,1896-12-31,,,,34.7447,72.3546,Southern Asia,NA,NA,NA,NA,,Establishment of the Yusafzai State of Swat,NA
 SWE,Sweden,Stockholm,NA,9999-12-31,,,,59.33258,18.0649,Northern Europe,NA,NA,NA,NA,,,NA
-SWZ,Eswatini,Mbabane,NA,NA,,,,-26.31667,31.13333,Southern Africa,NA,NA,NA,NA,,,NA
+SWZ,Eswatini,Mbabane,1968-09-06,9999-12-31,,,,-26.31667,31.13333,Southern Africa,NA,NA,NA,NA,,,NA
 SXA,Saxe-Altenburg,Altenburg,1603-01-01,1867-07-01,,,,50.98763,12.43684,Western Europe,Saxe-Atenburg,NA,NA,NA,,,NA
 SXG,Saxe-Coburg-Gotha,Coburg,1680-01-01,1867-07-01,,,,50.25937,10.96384,Western Europe,NA,NA,NA,NA,,,NA
 SXM,Saxe-Meiningen-Hidburghausen,Meiningen,1675-01-01,1867-07-01,,,,50.56787,10.41521,Western Europe,NA,NA,NA,NA,,,NA
 SXW,Saxe-Wiemar-Eisenach,Weimar,1484-01-01,1867-07-01,,,,50.9803,11.32903,Western Europe,Saxe-Weimar-Eisenach,NA,NA,NA,,,NA
-SYC,Seychelles,Victoria,NA,9999-12-31,,,,22.28552,114.15769,Eastern Africa,NA,NA,NA,NA,,,NA
-SYR,Syrian Arab Republic,Damascus,NA,9999-12-31,,,,33.5102,36.29128,Western Asia,NA,NA,NA,NA,,,NA
+SYC,Seychelles,Victoria,1976-06-29,9999-12-31,,,,22.28552,114.15769,Eastern Africa,NA,NA,NA,NA,,,NA
+SYR,Syrian Arab Republic,Damascus,1961-09-28,9999-12-31,,,,33.5102,36.29128,Western Asia,NA,NA,NA,NA,,,NA
 TBT,Tibet,Lhassa,1913-01-01,1950-10-01,,,,29.65,91.1,Eastern Asia,NA,NA,NA,NA,,,NA
 TCD,Chad,NDjamena,1960-08-11,9999-12-31,,,,12.10672,15.0444,Northern Africa,NA,NA,NA,NA,,,NA
 TER,Terengganu,Kuala Terengganu,1724-01-01,1862-12-31,,,,5.3302,103.1408,South Eastern Asia,NA,NA,NA,NA,,,NA
