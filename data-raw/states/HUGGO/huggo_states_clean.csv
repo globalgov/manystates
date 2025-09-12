@@ -251,13 +251,14 @@ MWI,Malawi,Lilongwe,1964-07-06,9999-12-31,,,,-13.96692,33.78725,Eastern Africa,N
 MYS,Malaya,Kuala Lumpur,1957-08-31,1963-09-16,,,,3.1412,101.68653,South Eastern Asia,Federation of Malaya,NA,NA,NA,,,NA
 MYS,Malaysia,Kuala Lumpur,1963-09-16,9999-12-31,,,,3.1412,101.68653,South Eastern Asia,NA,NA,NA,NA,,,NA
 NAG,Nagpur,Nagpur,1703-01-01,1818-12-31,,,,21.15,79.1,Southern Asia,NA,NA,NA,NA,,,NA
-NAM,Namibia,Windhoek,NA,9999-12-31,,,,-22.55941,17.08323,Southern Africa,NA,NA,NA,NA,,,NA
+NAM,Namibia,Windhoek,1990-03-21,9999-12-31,,,,-22.55941,17.08323,Southern Africa,NA,NA,NA,NA,,,NA
 NAS,Nassau,Wiesbaden,1806-01-01,1866-12-31,,,,50.08258,8.24932,Western Europe,NA,NA,NA,NA,,,NA
 NER,Niger,Niamey,1960-08-03,9999-12-31,,,,13.51366,2.1098,Western Africa,NA,NA,NA,NA,,,NA
-NGA,Nigeria,Abuja,NA,9999-12-31,,,,9.06853,7.48375,Western Africa,NA,NA,NA,NA,,,NA
+NGA,Nigeria,Abuja,1960-10-01,9999-12-31,1960-10-01,1963-10-01,,9.06853,7.48375,Western Africa,NA,NA,NA,NA,,,NA
 NIC,Nicaragua,Managua,1838-04-30,9999-12-31,,,,12.13282,-86.2504,Central America,NA,NA,NA,NA,,,NA
-NIU,Niue,Alofi,NA,9999-12-31,,,,-19.05952,-169.91867,Oceania,NA,NA,NA,NA,,,http://www.legislation.govt.nz/act/public/1974/0042/latest/DLM412793.html
-NLD,Netherlands,Amsterdam,NA,9999-12-31,,,,52.37403,4.88969,Western Europe,NA,NA,NA,NA,,,NA
+NIU,Niue,Alofi,1994,9999-12-31,,1974-10-19,,-19.05952,-169.91867,Oceania,NA,NA,NA,NA,,,http://www.legislation.govt.nz/act/public/1974/0042/latest/DLM412793.html
+NLD,Netherlands,Amsterdam,1581-07-26,1940-05-10,,,Occupation,52.37403,4.88969,Western Europe,"Holland, Kingdom of the Netherlands",NA,NA,NA,,,NA
+NLD,Netherlands,Amsterdam,1945-05-05,9999-12-31,,,,52.37403,4.88969,Western Europe,"Holland, Kingdom of the Netherlands",NA,NA,NA,,,NA
 NOR,Norway,Oslo,1905-06-07,1940-06-10,,,,59.91273,10.74609,Northern Europe,NA,NA,NA,NA,,,NA
 NOR,Norway,Oslo,1945-05-07,9999-12-31,,,,59.91273,10.74609,Northern Europe,NA,NA,NA,NA,,,NA
 NPL,Nepal,Kathmandu,1768-01-01,9999-12-31,,,,27.70169,85.3206,Central Asia,NA,NA,NA,NA,,,NA
