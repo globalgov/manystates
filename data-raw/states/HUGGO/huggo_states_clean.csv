@@ -333,48 +333,48 @@ SXW,Saxe-Wiemar-Eisenach,Weimar,1484-01-01,1867-07-01,,,,50.9803,11.32903,Wester
 SYC,Seychelles,Victoria,NA,9999-12-31,,,,22.28552,114.15769,Eastern Africa,NA,NA,NA,NA,,,NA
 SYR,Syrian Arab Republic,Damascus,NA,9999-12-31,,,,33.5102,36.29128,Western Asia,NA,NA,NA,NA,,,NA
 TBT,Tibet,Lhassa,1913-01-01,1950-10-01,,,,29.65,91.1,Eastern Asia,NA,NA,NA,NA,,,NA
-TCD,Chad,NDjamena,NA,9999-12-31,,,,12.10672,15.0444,Northern Africa,NA,NA,NA,NA,,,NA
+TCD,Chad,NDjamena,1960-08-11,9999-12-31,,,,12.10672,15.0444,Northern Africa,NA,NA,NA,NA,,,NA
 TER,Terengganu,Kuala Terengganu,1724-01-01,1862-12-31,,,,5.3302,103.1408,South Eastern Asia,NA,NA,NA,NA,,,NA
 TEX,Texas,Colombia,1836-03-02,1837-06-04,,,,4,-72,Northern America,NA,NA,NA,NA,,,NA
 TEX,Texas,Houston,1837-06-05,1839-01-13,,,,29.76328,-95.36327,Northern America,NA,NA,NA,NA,,,NA
 TEX,Texas,Austin,1839-01-14,1846-02-19,,,,30.26715,-97.74306,Northern America,NA,NA,NA,NA,,,NA
-TGO,Togo,Lome,NA,9999-12-31,,,,6.13748,1.21227,Western Africa,NA,NA,NA,NA,,,NA
-THA,Thailand,Bangkok,NA,9999-12-31,,,,13.75398,100.50144,South Eastern Asia,NA,NA,NA,NA,,,NA
-TJK,Tajikistan,Dushanbe,NA,9999-12-31,,,,38.53575,68.77905,Central Asia,NA,NA,NA,NA,,,NA
+TGO,Togo,Lome,1956-08-30,9999-12-31,,,,6.13748,1.21227,Western Africa,NA,NA,NA,NA,,,NA
+THA,Thailand,Bangkok,1238,9999-12-31,,,,13.75398,100.50144,South Eastern Asia,NA,NA,NA,NA,,,NA
+TJK,Tajikistan,Dushanbe,1991-09-09,9999-12-31,,,,38.53575,68.77905,Central Asia,NA,NA,NA,NA,,,NA
 TKL,Tokelau,Atafu,NA,9999-12-31,,,,-8.558,-172.496,Oceania,NA,NA,"The capacity of Tokelau to enter into treaties shall be exercised by the Council for the ongoing Government. Also, any treaty or other international agreement shall be approved by the General Fono by Rule. General Fono, which has the executive powers, consists of the following members; the Faipule and Pulenuku of each village, and one delegate from each village for every 100 inhabitants of that village, based on the latest available census figures rounded to the nearest 100 inhabitants. No decision shall be taken by the General Fono unless at least two thirds of the members are present, including no fewer than four members from each village. Considering the members of the executive and the legislature, it can be coded as plebiscite.",Plebiscite,,,"Constitution of Tokelau, 1948. 5, (2); (3); (4). http://aceproject.org/ero-en/regions/pacific/TK/tokelau-constitution/at_download/file"
-TKM,Turkmenistan,Ashgabat,NA,9999-12-31,,,,37.95,58.38333,Central Asia,NA,NA,NA,NA,,,NA
-TLS,Timor-Leste,Dili,NA,9999-12-31,,,,-8.55861,125.57361,South Eastern Asia,NA,NA,"The Constitution of the Democratic Republic of East Timor is decreed on the 22nd of March 2002. It defines the competencies of the National Parliament, the President of the Republic, and the Government in terms of treaty ratification. As provided by the law, the approval of the agreements and the ratification is incumbent upon the National Parliament.",Unicameral Majority,,,"Constitution of the Democratic Republic of Timor-Leste. Legislature: Chapter II, Section 95, 1 and 3; Executive: Chapter III, Section 115, 1. http://timor-leste.gov.tl/wp-content/uploads/2010/03/Constitution_RDTL_ENG.pdf"
+TKM,Turkmenistan,Ashgabat,1991-10-27,9999-12-31,,,,37.95,58.38333,Central Asia,NA,NA,NA,NA,,,NA
+TLS,Timor-Leste,Dili,2002-05-20,9999-12-31,,,,-8.55861,125.57361,South Eastern Asia,NA,NA,"The Constitution of the Democratic Republic of East Timor is decreed on the 22nd of March 2002. It defines the competencies of the National Parliament, the President of the Republic, and the Government in terms of treaty ratification. As provided by the law, the approval of the agreements and the ratification is incumbent upon the National Parliament.",Unicameral Majority,,,"Constitution of the Democratic Republic of Timor-Leste. Legislature: Chapter II, Section 95, 1 and 3; Executive: Chapter III, Section 115, 1. http://timor-leste.gov.tl/wp-content/uploads/2010/03/Constitution_RDTL_ENG.pdf"
 TOK,Tokolor,Segou,1848-01-01,1893-12-31,,,,13.6,-5.9,Western Africa,NA,NA,NA,NA,,,NA
-TON,Tonga,Nuku’alofa,NA,9999-12-31,,,,-21.13938,-175.2018,Oceania,NA,NA,NA,NA,,,NA
+TON,Tonga,Nuku’alofa,1970-06-04,9999-12-31,,,,-21.13938,-175.2018,Oceania,Kingdom of Tonga,NA,NA,NA,,,NA
 TRA,Transvaal,Pretoria,1852-01-17,1902-05-31,,,,-25.74486,28.18783,Southern Africa,NA,NA,NA,NA,,,NA
-TTO,Trinidad and Tobago,Port-of-Spain,NA,9999-12-31,,,,10.66617,-61.51657,Caribbean,NA,NA,NA,NA,,,NA
-TUN,Tunisia,Tunis,NA,9999-12-31,,,,34,9,Northern Africa,NA,NA,NA,NA,,,NA
-TUR,Turkiye,Ankara,NA,9999-12-31,,,,39.91987,32.85427,Eastern Europe,Turkey,NA,NA,NA,,,NA
+TTO,Trinidad and Tobago,Port-of-Spain,1962-08-31,9999-12-31,,,,10.66617,-61.51657,Caribbean,NA,NA,NA,NA,,,NA
+TUN,Tunisia,Tunis,1956-03-20,9999-12-31,,,,34,9,Northern Africa,NA,NA,NA,NA,,,NA
+TUR,Turkiye,Ankara,1923-10-29,9999-12-31,,,,39.91987,32.85427,Eastern Europe,Turkey,NA,NA,NA,,,NA
 TUS,Tuscany,Florence,1569-08-27,1801-03-21,,,,43.76667,11.25,Southern Europe,NA,NA,NA,NA,,,NA
 TUS,Tuscany,Florence,1815-06-09,1859-12-08,,,Unification,43.76667,11.25,Southern Europe,NA,NA,NA,NA,,Until merged into United Provinces of Central Italy,NA
-TUV,Tuvalu,Fongafale,NA,9999-12-31,,,,-8.52425,179.19417,Oceania,NA,NA,"Tuvalu is a sovereign democratic State, governed in accordance with the Constitution and in particular in accordance with the Principles set out in the Preamble. The powers and duties of treaty ratification are not explicitly mentioned in the Constitution. However, it can be deduced from the Constitution, implementing any international agreement binding on Tuvalu and approved by Parliament by resolution (Part I, Division I, 2. The area of Tuvalu (3)).",Unicameral Majority,,,"The Constitution of Tuvalu. Part I, Division I, 2. The area of Tuvalu (3). http://www.tuvaluislands.com/const_tuvalu.htm"
-TWN,Chinese Taipei,Taipei,NA,NA,,,,25.04776,121.53185,Eastern Asia,NA,NA,"Taiwan, officially the Republic of China (ROC) is unitary semi-presidential constitutional republic. The ROC has its own constitution, independently elected president and arms forces. As provided by the Constitution of 1947, amended in 2005, the President, the Executive Yuan (a Council of the Executive Yuan), and the Legislative Yuan shall have the power to decide international treaties.",Unicameral Majority,,,"Taiwan (Republic of China)s Constitution of 1947 with amendment through 2005. Chap. IV, Art. 38; Chap. V, Art. 58; Chap. VI, Art. 63; Chap XIII, Section 2, Art. 141. https://www.constituteproject.org/constitution/Taiwan_2005.pdf?lang=en"
-TZA,United Republic of Tanzania,Dar es Salaam,NA,9999-12-31,,,,-6.82349,39.26951,Eastern Africa,NA,NA,NA,NA,,,NA
+TUV,Tuvalu,Fongafale,1978-10-01,9999-12-31,,,,-8.52425,179.19417,Oceania,NA,NA,"Tuvalu is a sovereign democratic State, governed in accordance with the Constitution and in particular in accordance with the Principles set out in the Preamble. The powers and duties of treaty ratification are not explicitly mentioned in the Constitution. However, it can be deduced from the Constitution, implementing any international agreement binding on Tuvalu and approved by Parliament by resolution (Part I, Division I, 2. The area of Tuvalu (3)).",Unicameral Majority,,,"The Constitution of Tuvalu. Part I, Division I, 2. The area of Tuvalu (3). http://www.tuvaluislands.com/const_tuvalu.htm"
+TWN,Chinese Taipei,Taipei,1979,NA,,,,25.04776,121.53185,Eastern Asia,Republic of China,NA,"A unitary semi-presidential constitutional republic. The ROC has its own constitution, independently elected president and arms forces. As provided by the Constitution of 1947, amended in 2005, the President, the Executive Yuan (a Council of the Executive Yuan), and the Legislative Yuan shall have the power to decide international treaties.",Unicameral Majority,,,"Taiwan (Republic of China)s Constitution of 1947 with amendment through 2005. Chap. IV, Art. 38; Chap. V, Art. 58; Chap. VI, Art. 63; Chap XIII, Section 2, Art. 141. https://www.constituteproject.org/constitution/Taiwan_2005.pdf?lang=en"
+TZA,United Republic of Tanzania,Dar es Salaam,1963-12-10,9999-12-31,,,,-6.82349,39.26951,Eastern Africa,NA,NA,NA,NA,,,NA
 UGA,Buganda,Kampala,1300-01-01,1884-06-18,,,,0.31628,32.58219,Eastern Africa,NA,NA,NA,NA,,Approximation. Kingdom founded by Kato Kintu,NA
 UKR,Ukrainian SSR,Kiev,1919-03-10,1991-08-19,,,,50.45466,30.5238,Eastern Europe,NA,NA,NA,NA,,,NA
 UKR,Ukraine,Kiev,1991-12-08,9999-12-31,,,,50.45466,30.5238,Eastern Europe,NA,NA,NA,NA,,,NA
-UPC,United Provinces of Central America,Guatemala,NA,NA,,,,15.5,-90.25,Central America,NA,NA,NA,NA,,,NA
+UPC,United Provinces of Central America,Guatemala,1823,1840,,,,15.5,-90.25,Central America,NA,NA,NA,NA,,,NA
 UPC,United Provinces of Central America,Amapala,NA,NA,,,,13.28333,-87.63333,Central America,NA,NA,NA,NA,,,NA
 UPR,Mewar,Chittorgarh,1326-01-01,1568-02-23,,,,24.5,74.5,Southern Asia,NA,NA,NA,NA,,,NA
 UPR,Mewar,Udaipur,1568-02-24,1818-01-13,,,,24.57117,73.69183,Southern Asia,NA,NA,NA,NA,,,NA
 UPR,Udaipur,Udaipur,1615-01-01,1817-12-31,,,,24.57117,73.69183,Southern Asia,NA,NA,NA,NA,,Mughal suzerainty over Mewar,NA
 URY,Uruguay,Montevideo,1828-08-27,9999-12-31,,,,-34.83346,-56.16735,South America,NA,NA,NA,NA,,Treaty of Montevideo,NA
-USA,United States of America,Washington DC,NA,9999-12-31,,,,38.895112,-77.036366,Northern America,NA,NA,NA,NA,,,NA
-UZB,Uzbekistan,Tashkent,NA,9999-12-31,,,,41.26465,69.21627,Central Asia,NA,NA,NA,NA,,,NA
+USA,United States of America,Washington DC,1776-07-04,9999-12-31,,,,38.895112,-77.036366,Northern America,NA,NA,NA,NA,,,NA
+UZB,Uzbekistan,Tashkent,1991-09-01,9999-12-31,,,,41.26465,69.21627,Central Asia,NA,NA,NA,NA,,,NA
 VAT,Papal States,Rome,1849-07-02,1870-09-20,,,,41.89474,12.4839,Western Europe,NA,NA,NA,NA,,Until the capture of Rome,NA
-VCT,St. Vincent and the Grenadines,Saint-Pierre,NA,9999-12-31,,,,-21.3393,55.47811,Caribbean,NA,NA,NA,NA,,,NA
-VEN,Bolivarian Republic of Venezuela,Caracas,NA,9999-12-31,,,,10.48801,-66.87919,South America,NA,NA,NA,NA,,,NA
-VNM,Viet Nam,Hanoi,NA,9999-12-31,,,,21.0245,105.84117,South Eastern Asia,NA,NA,NA,NA,,,NA
-VUT,Vanuatu,Port-Vila,NA,9999-12-31,,,,-17.73381,168.32188,Oceania,NA,NA,NA,NA,,,NA
+VCT,St. Vincent and the Grenadines,Saint-Pierre,1979-10-27,9999-12-31,,,,-21.3393,55.47811,Caribbean,NA,NA,NA,NA,,,NA
+VEN,Bolivarian Republic of Venezuela,Caracas,1830,9999-12-31,,,,10.48801,-66.87919,South America,NA,NA,NA,NA,,,NA
+VNM,Viet Nam,Hanoi,1954-12-29,9999-12-31,,,,21.0245,105.84117,South Eastern Asia,NA,NA,NA,NA,,,NA
+VUT,Vanuatu,Port-Vila,1980-06-30,9999-12-31,,,,-17.73381,168.32188,Oceania,NA,NA,NA,NA,,,NA
 WAD,Wadai,Ouara,1603-01-01,1890-12-31,,,,15.55834,-9.06186,Central Africa,NA,NA,NA,NA,,,NA
 WAD,Wadai,Abeche,1891-01-01,1911-12-31,,,,13.82916,20.8324,Central Africa,NA,NA,NA,NA,,,NA
 WRT,Wuerttemburg,Stuttgart,NA,NA,,,,48.78232,9.17702,Western Europe,NA,NA,NA,NA,,,NA
-WSM,Samoa,Apia,NA,9999-12-31,,,,-13.83333,-171.76666,Oceania,NA,NA,NA,NA,,,http://extwprlegs1.fao.org/docs/pdf/sam132838.pdf
+WSM,Samoa,Apia,1962-01-01,9999-12-31,,,,-13.83333,-171.76666,Oceania,NA,NA,NA,NA,,,http://extwprlegs1.fao.org/docs/pdf/sam132838.pdf
 YAR,Yemen Arab Republic,Sanaa,1918-11-11,1990-05-21,,,,15.35472,44.20667,Western Asia,NA,NA,NA,NA,,,NA
 YEK,Yeke Kingdom,Bunkeya,1880-01-01,1891-12-20,,,,-9.96667,26.93333,Central Africa,NA,NA,NA,NA,,,NA
 YEM,Yemen,Sana'a,1990-05-22,9999-12-31,,,,15.35472,44.20667,Western Asia,NA,NA,NA,NA,,,NA
