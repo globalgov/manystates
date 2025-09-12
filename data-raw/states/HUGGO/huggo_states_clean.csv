@@ -293,14 +293,20 @@ PRT,Portugal,Lisbon,1910-10-05,9999-12-31,,,,38.71667,-9.13333,Western Europe,Po
 PRY,Paraguay,Asuncion,1811-05-14,9999-12-31,1811-05-14,1842-11-25,,-25.30066,-57.63591,South America,NA,NA,NA,NA,,,NA
 PSE,State Of Palestine,Jerusalem,NA,9999-12-31,1988-11-15,,,31.76904,35.21633,Western Asia,NA,NA,"The governing system in Palestine shall be a democratic parliamentary system, based upon political and party pluralism. As provided by the Amended Basic Law of 2003, the Palestinian National Authority shall work without delay to become a party to regional and international declarations and covenants that protect human rights. As the hierarchy of norms has not been established, only we know is that the government is responsible for international relations. Even the democratic legislative procedure is established by Constitution, nothing is mentioned pertaining to treaty ratification process. Considering the political situation in State of Palestine, in practice, treaties are ratified by presidential decree.",Executive,,,Palestine's Constitution of 2003 with Amendments through 2005. Art. 10. https://constituteproject.org/constitution/Palestine_2005.pdf?lang=en
 PUN,Punjab,Lahore,1801-01-01,1846-12-31,,,,31.54972,74.34361,Southern Asia,NA,NA,NA,NA,,,NA
-QAT,Qatar,Doha,NA,9999-12-31,,,,25.27932,51.52245,Western Asia,NA,NA,NA,NA,,,NA
+QAT,Qatar,Doha,1971-09-03,9999-12-31,1971-09-01,,,25.27932,51.52245,Western Asia,NA,NA,NA,NA,,,NA
 QUA,Quaiti Sultanate,Al Mukalla,1858-01-01,1888-12-31,,,,14.54248,49.12424,Western Asia,NA,NA,NA,NA,,,NA
-ROU,Romania,Bucharest,NA,9999-12-31,,,,44.43225,26.10626,Eastern Europe,NA,NA,NA,NA,,,NA
-RUS,Russian Federation,Moscow,NA,9999-12-31,,,,55.75,37.5,Eastern Europe,NA,NA,NA,NA,,,NA
+ROU,Romania,Bucharest,1877-05-10,9999-12-31,1877-05-10,1881-05-10,,44.43225,26.10626,Eastern Europe,NA,NA,NA,NA,,,NA
+RUS,Principality of Moscow,Moscow,1263,1547-01-16,,,,55.75,37.5,Eastern Europe,NA,NA,NA,NA,,,NA
+RUS,Tsardom of Russia,Moscow,1547-01-16,1721-11-02,,,,55.75,37.5,Eastern Europe,NA,NA,NA,NA,,,NA
+RUS,Russian Empire,Moscow,1721-11-02,1917-03-15,,,,55.75,37.5,Eastern Europe,NA,NA,NA,NA,,,NA
+RUS,Union of Soviet Socialist Republics,Moscow,1922-12-30,1990-06-12,,,,55.75,37.5,Eastern Europe,NA,NA,NA,NA,,,NA
+RUS,Russian Federation,Moscow,1991-12-12,9999-12-31,,,,55.75,37.5,Eastern Europe,NA,NA,NA,NA,,,NA
 RVN,Republic Of Viet Nam,Saigon,1954-12-29,1975-04-30,,,,10.75,106.66667,South Eastern Asia,NA,NA,NA,NA,,,NA
 RWA,Ruanda,Kigali,1081-01-01,1890-05-14,,,,-1.94995,30.05885,Eastern Africa,NA,NA,NA,NA,,,NA
 SAL,Saloum,Kahone,1494-01-01,1887-12-31,,,,13.71667,-15.01667,Western Africa,NA,NA,NA,NA,,,NA
-SAU,Emirate of Diriyah,Riyadh,NA,9999-12-31,,,,24.68773,46.72185,Western Asia,NA,NA,NA,NA,,,NA
+SAU,Emirate of Diriyah,Riyadh,1744,1818,,,,24.68773,46.72185,Western Asia,NA,NA,NA,NA,,,NA
+SAU,Emirate of Najd,Riyadh,1824,1891,,,,24.68773,46.72185,Western Asia,NA,NA,NA,NA,,,NA
+SAU,Saudi Arabia,Riyadh,1932-09-23,9999-12-31,,,,24.68773,46.72185,Western Asia,Kingdom of Saudi Arabia,NA,NA,NA,,,NA
 SAW,Sawantvadi,Kudal,1627-01-01,1838-12-31,,,,16.01148,73.68867,Southern Asia,NA,NA,NA,NA,,,NA
 SAX,Saxony,Dresden,1806-12-20,1871-01-18,,,Unification,51.05,13.75,Western Europe,NA,NA,NA,NA,,Joined German Empire,NA
 SDN,Sudan,Khartoum,1956-01-01,9999-12-31,,,,15.55177,32.53241,Northern Africa,NA,NA,NA,NA,,,NA
