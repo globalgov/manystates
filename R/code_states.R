@@ -470,8 +470,10 @@ countryRegex <- dplyr::tribble(
   ## U ####
   "UGA","Uganda","uganda|buganda|ouganda",
   "UKR","Ukraine","ukrain|ukraine|ukrainian ssr|ukrainian soviet",
-  "UPC","United Provinces of Central America","united provinces of central america|United Provinces of CA|United Province of CA|United Province CA",
+  "UNY","Unyanyembe","unyanyembe",
+  "UPC","United Provinces of Central America","united provinces of central america|United Provinces of CA|United Province of CA|United Province CA|federal.provinces.of.central.america",
   "UPR","Udaipur","udaipur|mewar",
+  "URA","Urambo","\\burambo\\b",
   "URY","Uruguay","uruguay",
   "USA","United States of America","united states of america|united.states(?!.*of brazil)|u[[:punct:]]s[[:punct:]]a[[:punct:]]|u[[:punct:]]s[[:punct:]](?!.*s[[:punct:]]r[[:punct:]])|\\busa\\b|\\bus\\b|etats-unis|northern.mariana|puerto.rico|guam|(?<![:alpha:])usa(?![:alpha:])",
   "UZB","Uzbekistan","uzbek|ouzb[ee]kistan",
@@ -480,10 +482,13 @@ countryRegex <- dplyr::tribble(
   "VCT","St. Vincent and the Grenadines","vincent|saint-vincent-et-les-grenadines|st.vin",
   "VEN","Bolivarian Republic of Venezuela","v[ee]n[ee]zu[ee]la",
   "VNM","Viet Nam","(?<=socialist|democratic|north).*viet.?nam|viet.?nam socialist|viet.?nam democratic|viet.?nam.?dem|dem.?rep.?viet.?nam|viet.?nam n|viet.?nam, n|viet.?nam, d|viet.?nam d|(?<!republic of )viet.?nam",
+  "VTN","Vientiane","vientiane|viang.chan",
   "VUT","Vanuatu","vanuatu|new.?hebrides|vanuatu",
   ## W ####
   "WAD","Wadai","wadai",
-  "WRT","Wuerttemburg","w(ue)rttemburg|w.rtemberg",
+  "WAG","Whanganui","w(ha|a)nganui",
+  "WAI","Waikato","waikato",
+  "WRT","Wuerttemburg","w(ue)rttemburg|w.rtemberg|wuerttemberg",
   "WSM","Samoa","(?!.*amer).*samoa|samoa",
   ## Y ####
   "YEK","Yeke Kingdom","yeke kingdom",
