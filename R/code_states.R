@@ -1,6 +1,16 @@
 #' Code states
 #' @description
-#'   This function allows for the identification of countries in a text.
+#'   This function allows for contemporary and historical countries or states
+#'   to be identified in text.
+#'   It uses a regular expression (regex) to search for
+#'   a number of common names and alternative spellings for each entity.
+#'   The function returns either the three-letter abbreviation
+#'   (an extended version of ISO-3166 alpha-3), or the name of the state.
+#'   The function can also return multiple matches, where more than one
+#'   country is mentioned in the text.
+#'   Currently, the function can identify `r nrow(code_states())` entities.
+#'   Updates and suggestions welcome.
+#'   
 #' @param text A vector of text to search for country names within.
 #' @param code Logical whether the function should return the three-letter
 #'   abbreviation (an extended version of ISO-3166 alpha-3), 
