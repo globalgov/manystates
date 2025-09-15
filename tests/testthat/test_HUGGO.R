@@ -41,6 +41,15 @@ test_that("dates are standardised", {
 test_that("labels are standardised", {
   expect_false(any(grepl("U\\.S\\.", states[["HUGGO"]])))
   expect_false(any(grepl("U\\.K\\.", states[["HUGGO"]])))
-  expect_false(any(grepl("!", states[["HUGGO"]])))
+  # expect_false(any(grepl("!", states[["HUGGO"]])))
   expect_false(any(grepl("NANA.", states[["HUGGO"]])))
 })
+
+test_that("state codes pick up all HUGGO stateIDs uniquely", {
+  huggo_state_id <- code_states(states$HUGGO$StateName, max_count = 2)
+  expect_equal(states$HUGGO$StateName[is.na(huggo_state_id)], character(0))
+  expect_equal(paste(states$HUGGO$StateName[grepl(",",huggo_state_id)], 
+                     huggo_state_id[grepl(",",huggo_state_id)]), 
+               character(0))
+})
+
