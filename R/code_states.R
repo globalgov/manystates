@@ -382,8 +382,12 @@ countryRegex <- dplyr::tribble(
   "QAT","Qatar","qatar",
   "QUA","Qu'aiti Sultanate","qu'aiti|quaiti",
   ## R ####
+  "REG","Reuss-Greiz","\\breuss.greiz\\b",
+  "RIA","Riau","riau",
   "ROU","Romania","r(o|u|ou)mania|roumanie",
-  "RUS","Russian Federation","\\brussia|russian fed.*|soviet.?union|union of soviet|u[[:punct:]]s[[:punct:]]s[[:punct:]]r[[:punct:]]|socialist.?republics|USSR|RSFSR|russie|un.*sov.*soc.*rep",
+  "ROZ","Rozvi","roz(vi|we)|mutapa|changamire",
+  "RSS","Reuss-Schleiz","\\breuss.schleiz\\b",
+  "RUS","Russian Federation","\\brussia|russian fed.*|soviet.?union|union of soviet|u[[:punct:]]s[[:punct:]]s[[:punct:]]r[[:punct:]]|socialist.?republics|USSR|RSFSR|russie|un.*sov.*soc.*rep|moscow",
   "RVN","Republic of Vietnam","(?<!socialist|democratic) republic.of.viet.?nam|republic.of.viet.?nam|viet.?nam rep|south.viet.?nam|viet.?nam.south|svietnam|vietnam, s|vietnam, r",
   "RWA","Rwanda","rwanda|rwandese|ruanda",
   ## S ####
