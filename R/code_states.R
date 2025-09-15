@@ -218,7 +218,13 @@ countryRegex <- dplyr::tribble(
   "HUZ","Hunza","hunza",
   "HYO","Hobyo","hobyo|obbia",
   ## I ####
+  "IBA","Ibadan","ibadan",
+  "IBU","Ijebu","\\bijebu",
   "IDN","Indonesia","indonesia|indonesie",
+  "IFE","Ile Ife","\\bile.ife\\b|\\bife\\b",
+  "IGA","Igala","igala|egarra",
+  "IJA","Ijaye","ijaye|kurumi",
+  "IJE","Ijesa","ijesa|ekiti",
   "IND","India","india(?!.*ocea)|inde",
   "INO","Indore","indore",
   "IPH","Perak","perak",
