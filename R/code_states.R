@@ -157,6 +157,7 @@ countryRegex <- dplyr::tribble(
   ## E ####
   "EAZ","Zanzibar","zanzibar",
   "ECU","Ecuador","ecuador|equateur",
+  "EGB","Egba","egba|abeokuta",
   "EGY","Egypt","egypt|egypte|united arab republic|(?<![:alpha:])uar(?![:alpha:])",
   "EHT","State of Haiti","state of haiti",
   "ERI","Eritrea","eritrea|erythr[ee]e",
@@ -164,16 +165,17 @@ countryRegex <- dplyr::tribble(
   "ESP","Spain","spain|castile|spanish(?! guinea)|espagne|canary|granada",
   "EST","Estonia","estonia|estonie",
   "ETH","Ethiopia","ethiopia|abyssinia|ethiopie|eth.pia",
-  "ETS","Eastern Turkistan","eastern turkistan",
+  "ETS","Eastern Turkistan","eastern.turkistan|eastern.turkestan",
   "EUE","European Union","european union|\\beu\\b|\\be[[:punct:]]u[[:punct:]]\\b|european.union|union.euro|european.comm|european.economic.comm",
   ## F ####
   "FIN","Finland","finland|finlande|\\baland\\b",
   "FJI","Fiji","fiji|fidji",
   "FNJ","Funj","funj",
   "FRA","France","(?!.*\\bdep)(?!.*martinique).*france|french.?republic|gaul|france|french|guadeloupe|burgundy|mayotte|new.caledonia|martinique|r[ee]union|barthelemy|t.martin|st\\..martin|miquelon|futuna",
+  "FRK","Frankfurt","frankfurt\\b|frankfort\\b",
   "FRO","Faroe Islands","faroe|faeroe|iles feroe",
   "FSM","Federated States of Micronesia","micronesia|micron[ee]sie",
-  "FTO","Fouta Toro","fouta toro|futa",
+  "FTO","Fouta Toro","f(ou|u|uu)ta.toro",
   ## G ####
   "GAB","Gabon","gabon",
   "GBR","United Kingdom","england|united.?kingdom|britain|british(?!.*hondur| east africa)|\\buk\\b|\\bu[[:punct:]]k[[:punct:]]\\b|royaume-uni|bermuda|anguilla|cayman|channel.is|akrotiri|dhekelia|falkland.is|virgin.is|gibraltar|guernsey|guernesey|jersey|isle of man|northern.ireland|pitcairn|helena|norfolk|montserrat|south.sandwich.is|caicos|grande.bretagne|the uk",
