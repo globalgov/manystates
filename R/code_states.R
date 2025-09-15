@@ -236,12 +236,16 @@ countryRegex <- dplyr::tribble(
   "ITA","Italy","italy|italian|italo|italie",
   ## J ####
   "JAM","Jamaica","jama.?ca|jama[i]que",
+  "JBS","Jabal Shammar","jabal.shammar|hajl.shammar",
+  "JEM","Jembrana","jembrana|djembrana|djambangrana|djambarana",
+  "JLF","Jolof","jolof|djoloff|wolof",
   "JMK","Jimma-Kakka","jimma-kakka",
   "JOD","Jodhpur","jodhpur",
   "JOH","Johore","johor",
   "JOR","Jordan","jordan|jordanie",
   "JPN","Japan","japan|nippon|japon",
   "JPR","Jaipur","jaipur",
+  "JSM","Jaisalmer","jaisalm(e|i)r",
   ## K ####
   "KAF","Kaffa","kaffa",
   "KAS","Kasanje","kasanje",
