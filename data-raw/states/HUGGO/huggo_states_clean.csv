@@ -28,8 +28,10 @@ AZA,Azande,Yambio,1816-01-01,1895-12-31,,,Colonisation,4.57213,28.39549,Eastern 
 AZE,Azerbaijan,Baku,1918-05-28,1920-04-28,1918-05-28,,Incorporation,40.37767,49.89201,Western Asia,NA,NA,NA,NA,,,NA
 AZE,Azerbaijan,Baku,1991-10-18,9999-12-31,1991-10-18,,,40.37767,49.89201,Western Asia,NA,NA,NA,NA,,,NA
 BAD,Baden,Karlsruhe,1806-10-24,1918-11-14,,,Revolution,49.00472,8.38583,Western Europe,Grand Duchy of Baden,NA,NA,NA,Evrard,"Added: Begin, End, StateNameAlt (Ellis, L. M. (1986). Army, State and politics in the Grand Duchy of Baden, 1866-1920 (Germany). The Johns Hopkins University.)",NA
-BAV,Bavaria,Munich,1806,1918-11-14,,,,48.13743,11.57549,Western Europe,Kingdom of Bavaria,NA,NA,NA,Evrard,"Added: Begin, End, StateNameAlt (Kaiser, M. (2009). A Matter of Survival: Bavaria Becomes a Kingdom. In: Forrest, A., Wilson, P.H. (eds) The Bee and the Eagle. War, Culture and Society, 1750–1850. Palgrave Macmillan, London, p. 95)",NA
-BDI,Burundi,Bujumbura,1680-01-01,1890-05-14,,,,-3.3822,29.3644,Eastern Africa,NA,NA,NA,NA,,,NA
+BAV,Bavaria,Munich,1806-01-01,1918-11-14,,,Revolution,48.13743,11.57549,Western Europe,Kingdom of Bavaria,NA,NA,NA,Evrard,"Added: Begin, End, StateNameAlt (Kaiser, M. (2009). A Matter of Survival: Bavaria Becomes a Kingdom. In: Forrest, A., Wilson, P.H. (eds) The Bee and the Eagle. War, Culture and Society, 1750–1850. Palgrave Macmillan, London, p. 95)",NA
+BDI,Burundi,Bujumbura,1680-01-01,1890-05-14,,,Colonisation,-3.3822,29.3644,Eastern Africa,NA,NA,NA,NA,,,NA
+BDI,Burundi,Bujumbura,1916-01-01,1962-01-01,,,Scission,-3.3822,29.3644,Eastern Africa,Ruanda-Urundi,NA,NA,NA,Evrard,,"https://www.arch.be/index.php?l=fr&m=actualites&r=toutes-les-actualites&a=2024-01-15-les-rapports-de-l-administration-coloniale-au-rwanda-et-burundi-sont-ouverts-a-la-recherche#:~:text=Entre 1916 et 1962, le,passé colonial de la Belgique."
+BDI,Burundi,Gitega,1962-01-01,9999-12-31,1962-01-01,,Colonisation,-3.3822,29.3644,Eastern Africa,NA,Bujumbura,NA,NA,Evrard,,https://perspective.usherbrooke.ca/bilan/servlet/BMEve/315
 BEL,Belgium,Brussels,1830-12-20,1940-05-28,,,Occupation,50.85045,4.34878,Western Europe,NA,NA,NA,NA,,,NA
 BEL,Belgium,Brussels,1945-06-26,9999-12-31,,,,50.85045,4.34878,Western Europe,NA,NA,NA,NA,,,NA
 BEN,Benin,Porto-Novo,1960-08-01,9999-12-31,,1958-12-04?,,6.49646,2.60359,Western Africa,Dahomey,NA,NA,NA,Evrard,"Added: Begin, End, Autonomy, StateNameAlt (https://www.gouv.bj/pages/histoire/), Renamed 1975",NA
