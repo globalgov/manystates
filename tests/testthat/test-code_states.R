@@ -26,4 +26,9 @@ test_that("state codes are unique", {
   expect_false(any(duplicated(code_states()$stateID)))
 })
 
-
+test_that("state codes don't use reserved codes", {
+  expect_false(any(code_states()$stateID %in% paste0("AA",LETTERS)))
+  expect_false(any(code_states()$stateID %in% paste0("Q",LETTERS[13:26],LETTERS)))
+  expect_false(any(code_states()$stateID %in% paste0("X",LETTERS,LETTERS)))
+  expect_false(any(code_states()$stateID %in% paste0("ZZ",LETTERS)))
+})
