@@ -4,7 +4,10 @@
 # ready for the many packages universe
 
 # Stage one: Collecting data
-ISD <- readxl::read_excel("data-raw/states/ISD/ISD+V2.xlsx")
+# ISD <- readxl::read_excel("data-raw/states/ISD/ISD+V2.xlsx")
+# ISD <- readxl::read_excel("data-raw/states/ISD/isd_2_2_update.xlsx")
+ISD <- readr::read_csv("data-raw/states/ISD/isd_2_2_update_reversedates.csv",
+                        na= c("", "NA", "-9"))
 
 # Stage two: Correcting data
 # In this stage you will want to correct the variable names and
@@ -12,40 +15,29 @@ ISD <- readxl::read_excel("data-raw/states/ISD/ISD+V2.xlsx")
 # below (in stage three) passes all the tests.
 ISD <- tibble::as_tibble(ISD) %>%
   # standardizing State Name
-  dplyr::mutate(StateName = manypkgs::standardise_titles(as.character(StateName))) %>%
-  manydata::transmutate(StateName2 = manypkgs::standardise_titles(as.character(OtherName))) %>%
+  dplyr::mutate(StateName = stringi::stri_trans_totitle(as.character(StateName))) %>%
+  manydata::transmutate(StateNameAlt = stringi::stri_trans_totitle(as.character(OtherName))) %>%
   # standardizing ID vars
   dplyr::rename(cowNR = COWNum, cowID = COWID) %>%
-  dplyr::mutate(stateID = manypkgs::code_states(StateName, activity = F,
-                                                replace = "ID")) %>%
+  dplyr::mutate(stateID = code_states(StateName)) %>%
   # standardizing Begin and End dates
-  manydata::transmutate(Begin = ifelse(EStart != -9,
-                                       messydates::as_messydate(EStart, resequence = "dmy"),
-                                       messydates::as_messydate(Start, resequence = "dmy"))) %>%
+  manydata::transmutate(Begin = messydates::as_messydate(dplyr::coalesce(as.character(EStart), 
+                                                                         as.character(Start)))) %>%
   dplyr::mutate(Begin = ifelse(EStart_Am == 1|Start_Am == 1,
                                messydates::as_uncertain(Begin), Begin),
-                End = messydates::as_messydate(End, resequence = "dmy"),
-                End = ifelse(End_Am == 1, messydates::as_uncertain(End), End)) %>%
+                End = messydates::as_messydate(End),
+                End = ifelse(End_Am == 1, messydates::as_uncertain(End), End),
+                Begin = messydates::as_messydate(Begin),
+                End = messydates::as_messydate(End),
+                End = messydates::as_messydate(ifelse(End == "2016-12-31",
+                                                messydates::on_or_after(End),
+                                                End))) %>%
   # Dropping unnecessary columns
-  dplyr::relocate(stateID, StateName, StateName2, Begin, End,
+  dplyr::relocate(stateID, StateName, Begin, End, StateNameAlt, 
                   Latitude, Longitude, StartType, EndType, cowID, cowNR) %>%
+  dplyr::select(-dplyr::matches("Destination")) %>%
   # Arrange observations
   dplyr::arrange(Begin, stateID)
-
-# Fix NAs in stateID
-ISD <- ISD %>%
-  dplyr::mutate(stateID = ifelse(is.na(stateID), cowID, stateID))
-
-# ensure NAs are coded correctly
-ISD <- ISD %>%
-  dplyr::mutate(across(everything(),
-                       ~stringr::str_replace_all(.,
-                                                 "^NA$", NA_character_))) %>%
-  dplyr::mutate(across(everything(),
-                       ~stringr::str_replace_all(.,
-                                                 "-9", NA_character_))) %>%
-  dplyr::mutate(Begin = messydates::as_messydate(Begin),
-                End = messydates::as_messydate(End))
 
 # manydata and manypkgs include several other
 # functions that should help cleaning and
