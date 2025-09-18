@@ -107,7 +107,7 @@ It is a work-in-progress, so please let us know if you have any comments or sugg
 #> -------------------------------------------------------
 #> |  Variable  |  Class  |  Obs  |  Missing  |  Miss \%  |
 #> -------------------------------------------------------
-#> |stateID     |character|    215|          1|      0.46|
+#> |stateID     |character|    216|          0|         0|
 #> |StateName   |character|    216|          0|         0|
 #> |Begin       |mdate    |    216|          0|         0|
 #> |End         |mdate    |    216|          0|         0|
