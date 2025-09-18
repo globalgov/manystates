@@ -10,8 +10,8 @@
 observations and 36 variables:
 stateID, StateName, Begin, End, StateNameAlt, Latitude, Longitude, StartType, EndType, cowID, cowNR, ISD_Category, Region, Start_Am, EStart_Am, Declare, DecDate, Population, ..., VioEnd, and VioEnd_Am.}
 \item{HUGGO: }{A dataset with 406
-observations and 19 variables:
-stateID, StateName, Capital, Begin, Basis, DecIndep, Autonomy, End, Grounds, Latitude, Longitude, Region, StateNameAlt, CapitalAlt, Constitution, RatProcedure, Coder, Comments, and Source.}
+observations and 15 variables:
+stateID, StateName, Capital, Begin, End, Grounds, Latitude, Longitude, Region, StateNameAlt, CapitalAlt, RatProcedure, Coder, Comments, and Source.}
 \item{GW: }{A dataset with 216
 observations and 7 variables:
 stateID, StateName, Begin, End, StateNameAlt, cowID, and cowNR.}
@@ -85,21 +85,17 @@ It is a work-in-progress, so please let us know if you have any comments or sugg
 #> |StateName   |character|    406|          0|         0|
 #> |Capital     |character|    406|          0|         0|
 #> |Begin       |mdate    |    405|          1|      0.25|
-#> |Basis       |character|    406|          0|         0|
-#> |DecIndep    |mdate    |    406|          0|         0|
-#> |Autonomy    |mdate    |    406|          0|         0|
 #> |End         |mdate    |    406|          0|         0|
-#> |Grounds     |character|    406|          0|         0|
+#> |Grounds     |character|    238|        168|     41.38|
 #> |Latitude    |numeric  |    406|          0|         0|
 #> |Longitude   |numeric  |    406|          0|         0|
 #> |Region      |character|    406|          0|         0|
 #> |StateNameAlt|character|     55|        351|     86.45|
-#> |CapitalAlt  |character|      9|        397|     97.78|
-#> |Constitution|character|     34|        372|     91.63|
-#> |RatProcedure|character|     36|        370|     91.13|
-#> |Coder       |character|    406|          0|         0|
-#> |Comments    |character|    406|          0|         0|
-#> |Source      |character|     61|        345|     84.98|
+#> |CapitalAlt  |character|      7|        399|     98.28|
+#> |RatProcedure|character|     35|        371|     91.38|
+#> |Coder       |character|     43|        363|     89.41|
+#> |Comments    |character|     63|        343|     84.48|
+#> |Source      |character|     60|        346|     85.22|
 #> -------------------------------------------------------
 #> 
 #> 

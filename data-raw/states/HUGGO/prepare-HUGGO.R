@@ -156,13 +156,15 @@
 # and standardising your data such as `standardise_titles()`.
 # Please see the vignettes or website for more details.
 
-HUGGO <- read.csv("data-raw/states/HUGGO/huggo_states_clean.csv")
+HUGGO <- read.csv("data-raw/states/HUGGO/huggo_states_clean.csv",
+                  na.strings = c("", "NA"))
 HUGGO <- dplyr::as_tibble(HUGGO) %>%
   dplyr::mutate(Begin = messydates::as_messydate(Begin),
                 End = messydates::as_messydate(End),
                 DecIndep = messydates::as_messydate(DecIndep),
                 Autonomy = messydates::as_messydate(Autonomy)
                 ) %>%
+  dplyr::select(-c(Basis,DecIndep,Autonomy,Constitution)) %>%
   dplyr::arrange(Begin)
 
 # Stage three: Connecting data

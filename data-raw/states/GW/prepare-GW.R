@@ -38,7 +38,8 @@ GW <- GW %>%
                                                         Begin)),
                 End = messydates::as_messydate(ifelse(End >= "2017-12-31",
                                                       messydates::on_or_after(End),
-                                                      End)))
+                                                      End))) %>%
+  dplyr::arrange(Begin, stateID)
 
 # Stage three: Connecting data
 # Next run the following line to make GW available within the package.
