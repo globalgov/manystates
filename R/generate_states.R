@@ -8,6 +8,33 @@
 #' @examples
 #'   generate_states(12)
 #' @export
+
+
+# Function to split into syllable-like units
+#' @rdname generate_states
+#' @examples
+#'   syllabise_states("Afghanistan")
+#'   syllabise_states("Saint Pierre and Miquelon")
+#' @export
+syllabise_states <- function(word) {
+  
+  if(length(word) > 1) return(lapply(word, syllabise_states))
+  
+  # standardise input
+  word <- tolower(stringi::stri_trans_general(word, "Latin-ASCII")) # remove accents
+  word <- stringi::stri_trim_both(word)
+
+  # Regex: match consonant cluster + vowel cluster as a unit
+  # This captures patterns like "bra", "zil", "ar", "gen", "ti", "na"
+  specials <- "burg|stan|land|dem|ia|king|af|ab|st |tion|acy|turk|stadt|-|arc|sax|nam"
+  pattern <- paste0("(?i)(?:", specials, ")|\\s+|(?:[^aeiou\\s]*[aeiou]+(?:[^aeiou\\s]*?(?=(?:", specials, ")|\\s|$))?)")
+  stringi::stri_extract_all_regex(word, pattern)[[1]]
+}
+
+#' @rdname generate_states
+#' @export
+syllabize_states <- syllabise_states
+
 #' @rdname generate_states
 #' @examples
 #'   generate_states(12)
