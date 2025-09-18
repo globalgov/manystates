@@ -1,7 +1,7 @@
 Package: manystates
 Title: Many data on state and state-like actors in the international system
 Version: 1.0.0
-Date: 2025-09-01
+Date: 2025-09-18
 Description: manystates provides data on states in the international system across time. 
     The package combines and cross-references several existing datasets 
     consistent with the aims of the manydata package.
@@ -47,7 +47,7 @@ Suggests:
     testthat (>= 3.0.0)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Config/Needs/check: 
     covr,
     lintr,
@@ -57,4 +57,3 @@ Config/Needs/website:
 Config/testthat/parallel: true
 Config/testthat/edition: 3
 Config/testthat/start-first: code_states 
-

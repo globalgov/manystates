@@ -5,34 +5,43 @@
 - Dropped unnecessary dependencies for CRAN submission
 - Added more description of included data and functions to the README (closed #78)
 - Added funding details to the README
-- Package now considered stable (closed #76)
+- Package still under development but considered stable (closed #76)
+- Fixed code coverage
+- Updated CITATION
 
 ## Data
 
-- Added more details on Abkhazia
-- Added more details on Aceh
-- Added more details on Afghanistan
-- Added more details on Angola
-- Added more details on Albania
-- Added more details on Los Altos
-- Added more details on Andorra
-- Added more details on UAE
-- Added more details on Argentina
-- Added more details on Armenia
-- Added more details on Assam
-- Added more details on Asir
-- Added more details on Ashanti
-- Added more details on Antigua and Barbuda
-- Added more details on Austria-Hungary
-- Added more details on Australia
-- All current states coded as ending 9999-12-31 (closed #85)
+- Improved `states$GW`
+  - Fixed GW preparation script so that `$stateID` is coded correctly
+  - Fixed a few formatting issues in some state names (Wuerttemberg, Cote D'Ivoire)
+  - Added `$StateNameAlt` from secondary labels in parentheses
+- Improved `states$ISD`
+  - Updated ISD to version 2.2
+  - Fixed ISD preparation script so that `$Begin` and `$End` are coded correctly
+- Improved `states$HUGGO`
+  - Simplified HUGGO preparation script by exporting and working on clean csv
+  - Fixed current states ending as 9999-12-31 (closed #85)
+  - Removed ~64 duplicated or overlapping records
+  - Added missing details on many states (thanks @myevrard)
 
 ## Functions
 
+- Improved `code_states()`
+  - Now uses `{stringi}` exclusively
+  - Fixed Burgundy (BOU) identification in `code_states()` (fixed #79)
+  - Fixed various negative lookup bugs in regex patterns for e.g. Korea
+  - Added 172 new regex patterns to `code_states()`
+  - Added tests for `code_states()` that cover all datasets in `states`
+  - Added tests to make sure that no ISO reserved codes assigned
+  - Added tests to make sure that all states identified uniquely
+- Improved `generate_states()`
+  - Now uses `{stringi}` exclusively
+  - Added `syllabise_states()` for splitting state names into syllables
+  - Improved state name generation algorithm to be based off of a Markov chain of syllables
+  - Improved state name generation algorithm to better match the length distribution of real state names
+  - Added checks to avoid generating existing, duplicate, or awkward state names
+  - Added tests for `generate_states()`
 - Added `state_system()` to identify the state system in a given year (closed #83)
-- Fixed Burgundy (BOU) identification in `code_states()` (fixed #79)
-- `code_states()` and `generate_states()` now use stringi exclusively
-- Added tests for `generate_states()`
 
 # manystates 0.3.1
 
