@@ -31,8 +31,8 @@ The function returns either the three-letter abbreviation
 (an extended version of ISO-3166 alpha-3), or the name of the state.
 The function can also return multiple matches, where more than one
 country is mentioned in the text.
-Currently, the function can identify 427 entities.
-Updates and suggestions welcome.
+Currently, the function can identify 499 entities.
+Updates, bug reports, and suggestions welcome.
 }
 \examples{
 code_states(c("I went to England",

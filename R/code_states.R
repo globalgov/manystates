@@ -269,7 +269,7 @@ countryRegex <- dplyr::tribble(
   "IJE","Ijesa","ijesa|ekiti",
   "ILN","Ilorin","ilorin",
   "IMN","Isle of Man","isle.of.man",
-  "IND","India","india(?!.*ocea)|inde",
+  "IND","India","india(?!.*ocea)|\\binde\\b",
   "INO","Indore","indore",
   "IOT","British Indian Ocean Territory","indian.ocean.territory|diego.garcia",
   "IPH","Perak","perak",
