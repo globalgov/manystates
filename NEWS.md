@@ -13,7 +13,6 @@
 
 - Improved `states$GW`
   - Fixed GW preparation script so that `$stateID` is coded correctly
-  - Fixed a few formatting issues in some state names (Wuerttemberg, Cote D'Ivoire)
   - Added `$StateNameAlt` from secondary labels in parentheses
 - Improved `states$ISD`
   - Updated ISD to version 2.2
@@ -21,8 +20,8 @@
 - Improved `states$HUGGO`
   - Simplified HUGGO preparation script by exporting and working on clean csv
   - Fixed current states ending as 9999-12-31 (closed #85)
-  - Removed ~64 duplicated or overlapping records
-  - Added missing details on many states (thanks @myevrard)
+  - Removed ~64 duplicated or overlapping records (closed #84)
+  - Added details on many states (closed #83, thanks @myevrard)
 
 ## Functions
 
@@ -41,7 +40,7 @@
   - Improved state name generation algorithm to better match the length distribution of real state names
   - Added checks to avoid generating existing, duplicate, or awkward state names
   - Added tests for `generate_states()`
-- Added `state_system()` to identify the state system in a given year (closed #83)
+- Added `state_system()` to identify the state system in a given year (closed #77)
 
 # manystates 0.3.1
 

@@ -44,8 +44,8 @@ navbar:
           href: https://globalgov.github.io/manypkgs/
         - text: manytreaties
           href: https://globalgov.github.io/manytreaties/
-        - text: manyigos
-          href: https://globalgov.github.io/manyigos/
+        - text: manyios
+          href: https://globalgov.github.io/manyios/
 reference:
   - title: "Functions to generate state names"
     desc: "These functions assist users to identify states and countries in text, or generate a list of fictional state names"
@@ -67,6 +67,7 @@ reference:
     desc: "manystates contains the following databases on states or state related concepts"
     contents:
     - states
+    - state_system
     # - contiguity
 footer:
   structure:
