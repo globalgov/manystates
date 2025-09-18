@@ -9,9 +9,8 @@
 #'   generate_states(12)
 #' @export
 
-
-# Function to split into syllable-like units
 #' @rdname generate_states
+#' @param word One or more words (character vector) to split into syllable-like units.
 #' @examples
 #'   syllabise_states("Afghanistan")
 #'   syllabise_states("Saint Pierre and Miquelon")
@@ -52,6 +51,7 @@ generate_states <- function(n = 10, countries = NULL) {
   unique_countries <- unique(tolower(stringi::stri_trans_general(countries, 
                                                                  "Latin-ASCII")))
   unique_countries <- stringi::stri_replace_all_regex(unique_countries, "\\(|\\)", "")
+  unique_countries <- stringi::stri_replace_all_regex(unique_countries, ",", "")
   
   # Use improved syllable splitter
   syllable_list <- syllabise_states(unique_countries)
