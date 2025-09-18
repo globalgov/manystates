@@ -438,6 +438,7 @@ countryRegex <- dplyr::tribble(
   "QAT","Qatar","qatar",
   "QUA","Qu'aiti Sultanate","qu'aiti|quaiti",
   ## R ####
+  "RAB","Rabih","rabih",
   "REG","Reuss-Greiz","\\breuss.greiz\\b",
   "REU","Reunion","\\breunion\\b",
   "RIA","Riau","riau",
@@ -492,7 +493,7 @@ countryRegex <- dplyr::tribble(
   "SWA","Swat","^swat$|dera yusufzai",
   "SWE","Sweden","swed|su[e]de",
   "SWK","Sarawak","sarawak",
-  "SWZ","Eswatini","swaziland|eswatini",
+  "SWZ","Eswatini","swazi|eswatini",
   "SXA","Saxe-Altenburg","saxe-atenburg|saxe-altenburg",
   "SXG","Saxe-Coburg-Gotha","saxe-coburg-gotha",
   "SXH","Saxe-Meiningen-Hidburghausen","saxe.meiningen.hidburghausen",
@@ -502,6 +503,7 @@ countryRegex <- dplyr::tribble(
   "SYR","Syrian Arab Republic","syria|syrie",
   ## T ####
   "TAB","Tabanan","\\btabanan\\b",
+  "TAH","Tahiti","\\btahiti\\b|pomare",
   "TAM","Tampin","\\btampin\\b",
   "TBT","Tibet","tibet",
   "TCA","Turks and Caicos Islands","turks.and.caicos|iles.turques.et.caicos",
@@ -512,6 +514,7 @@ countryRegex <- dplyr::tribble(
   "TEX","Texas","texas",
   "TGO","Togo","togo",
   "THA","Thailand","thailand|siam|tha[i]lande",
+  "TIG","Tigray","t(i|e)gr(ay|e)",
   "TJK","Tajikistan","tajik|tadjikistan",
   "TKL","Tokelau","tokelau",
   "TKM","Turkmenistan","turkmen|turkmenistan|turkmenistan",
