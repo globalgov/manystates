@@ -9,7 +9,7 @@
 #'   The function can also return multiple matches, where more than one
 #'   country is mentioned in the text.
 #'   Currently, the function can identify `r nrow(code_states())` entities.
-#'   Updates and suggestions welcome.
+#'   Updates, bug reports, and suggestions welcome.
 #'   
 #' @param text A vector of text to search for country names within.
 #' @param code Logical whether the function should return the three-letter
@@ -96,6 +96,7 @@ countryRegex <- dplyr::tribble(
   "AZE","Azerbaijan","azerbaijan|azerbaidjan|azerbeijan",
   ## B ####
   "BAD","Baden","baden",
+  "BAU","Bau","\\bbau\\b",
   "BAV","Bavaria","bavaria",
   "BDG","Badung","badung|badong|bandanapura",
   "BDI","Burundi","burundi",
@@ -105,6 +106,7 @@ countryRegex <- dplyr::tribble(
   "BFA","Burkina Faso","burkina|faso|upper.?volta|burkina ?faso|burkna faso",
   "BGD","Bangladesh","bangladesh|(?=.*east).*paki?stan|bangladesh",
   "BGI","Bagirmi","bag(i|ui)rmi|bakarmi",
+  "BGM","Begemder","begemder",
   "BGR","Bulgaria","bulgaria|bulgarie",
   "BGU","Borgu","\\bborgu\\b|\\bborgawa\\b|\\bbariba\\b",
   "BHP","Bhopal","bhopal",
@@ -117,6 +119,7 @@ countryRegex <- dplyr::tribble(
   "BLM","Saint Bathelemy","saint.barthelemy",
   "BLR","Belarus","belarus|byelo|bielorussie|belarus",
   "BLZ","Belize","belize|(?=.*british).*honduras|belize",
+  "BMN","Bamum","bamum|bamoun",
   "BMU","Bermuda","bermuda",
   "BNJ","Benjermassin","benjermassin",
   "BOH","Bohol","bohol",
