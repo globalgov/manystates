@@ -4,23 +4,71 @@
 \alias{syllabise_states}
 \alias{syllabize_states}
 \alias{generate_states}
-\title{Generate a list of fictional country names}
+\title{Generate fictional country names}
 \usage{
-generate_states(n = 10, prefixed = 0.15, suffixed = 0.15)
+syllabise_states(word)
+
+syllabize_states(word)
+
+generate_states(n = 10, countries = NULL)
 }
 \arguments{
 \item{word}{One or more words (character vector) to split into syllable-like units.}
 
-\item{prefixed}{Proportion of country names with a prefix by default 0.15.}
+\item{n}{Integer number of country names to generate
+from a library of fictional country names.
+Default is 10.}
 
-\item{suffixed}{Proportion of country names with a suffix by default 0.15.}
+\item{countries}{Optional string vector of country names
+to use as a library for generating fictional names.}
 }
 \value{
 String vector of fictional country names
 }
 \description{
-Generate a list of fictional country names
+This function generates a vector of fictional country names.
+While the generated names are designed to resemble real country names,
+the results will not match (at least not exactly) country names from
+the library provided.
+
+The names are generated using a Markov chain approach based on
+syllable patterns found in a library of real country names.
+The function \code{generate_states()} uses the \code{syllabise_states()} function
+to split existing country names into syllable-like units,
+providing special attention to common patterns in country names
+such as "land", "stan", "burg", and others.
+A transition matrix is then built from these syllable units,
+allowing for the generation of new names that mimic the structure and
+length of real country names.
+Checks are included to ensure that the generated names
+are unique, do not match any existing country names,
+and avoid certain uncommon patterns such as ending on a preposition.
+
+If no library of country names is provided,
+the function defaults to using a comprehensive list
+of country names from the \code{{manystates}} package.
+However, users can supply their own list of country names
+to customize the generation process.
+
+This function can be useful for creating fictional datasets
+for testing, illustrative, or pedagogical purposes.
+For example, it can be used in classroom exercises that rely on
+invented country names, such as
+in-class simulations of international relations or negotiation,
+role-playing scenarios,
+or mock data analysis tasks.
+Using fictional country names helps avoid any unintended
+bias or preconceptions associated with real countries.
+Or they can be used in creative writing or game design.
+The names might inspire fictional settings or entities
+in stories, games, or other creative works.
+Each name could inspire a unique culture, conflict, or mythology.
+Writers could use them to kickstart short stories,
+while game designers might build entire maps or quests around them.
 }
 \examples{
+  generate_states(12)
+  syllabise_states("Afghanistan")
+  syllabise_states("Saint Pierre and Miquelon")
   generate_states(12)
 }
