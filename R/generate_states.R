@@ -139,8 +139,10 @@ generate_states <- function(n = 10, countries = NULL) {
         state <- " "
       }
       if(state == " " && name_parts[length(name_parts)] == " ") next
-      if(state == "of" && name_parts[length(name_parts)-1] == "of") next
-      if(state == "and" && name_parts[length(name_parts)-1] == "and") next
+      # avoid preposition chaining
+      if(state == "and" && name_parts[length(name_parts)-1] %in% c("and","of","the")) next
+      if(state == "of" && name_parts[length(name_parts)-1] %in% c("and","of","the")) next
+      if(state == "the" && name_parts[length(name_parts)-1] %in% c("and","of","the")) next
       name_parts <- c(name_parts, state)
     }
     
