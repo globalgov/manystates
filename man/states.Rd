@@ -6,12 +6,12 @@
 \title{States datacube}
 \format{
 \describe{
-\item{HUGGO: }{A dataset with 389
-observations and 18 variables:
-stateID, StateName, Capital, Begin, End, DecIndep, Autonomy, Grounds, Latitude, Longitude, Region, StateNameAlt, CapitalAlt, Constitution, RatProcedure, Coder, Comments, and Source_rat.}
 \item{ISD: }{A dataset with 499
 observations and 36 variables:
 stateID, StateName, Begin, End, StateNameAlt, Latitude, Longitude, StartType, EndType, cowID, cowNR, ISD_Category, Region, Start_Am, EStart_Am, Declare, DecDate, Population, ..., VioEnd, and VioEnd_Am.}
+\item{HUGGO: }{A dataset with 406
+observations and 19 variables:
+stateID, StateName, Capital, Begin, Basis, DecIndep, Autonomy, End, Grounds, Latitude, Longitude, Region, StateNameAlt, CapitalAlt, Constitution, RatProcedure, Coder, Comments, and Source.}
 \item{GW: }{A dataset with 216
 observations and 7 variables:
 stateID, StateName, Begin, End, StateNameAlt, cowID, and cowNR.}
@@ -81,24 +81,25 @@ It is a work-in-progress, so please let us know if you have any comments or sugg
 #> -------------------------------------------------------
 #> |  Variable  |  Class  |  Obs  |  Missing  |  Miss \%  |
 #> -------------------------------------------------------
-#> |stateID     |character|    389|          0|         0|
-#> |StateName   |character|    389|          0|         0|
-#> |Capital     |character|    389|          0|         0|
-#> |Begin       |mdate    |    248|        141|     36.25|
-#> |End         |mdate    |    374|         15|      3.86|
-#> |DecIndep    |mdate    |    389|          0|         0|
-#> |Autonomy    |mdate    |    389|          0|         0|
-#> |Grounds     |character|    389|          0|         0|
-#> |Latitude    |numeric  |    389|          0|         0|
-#> |Longitude   |numeric  |    389|          0|         0|
-#> |Region      |character|    389|          0|         0|
-#> |StateNameAlt|character|      8|        381|     97.94|
-#> |CapitalAlt  |character|      2|        387|     99.49|
-#> |Constitution|character|     29|        360|     92.54|
-#> |RatProcedure|character|     29|        360|     92.54|
-#> |Coder       |character|    389|          0|         0|
-#> |Comments    |character|    389|          0|         0|
-#> |Source_rat  |character|     38|        351|     90.23|
+#> |stateID     |character|    406|          0|         0|
+#> |StateName   |character|    406|          0|         0|
+#> |Capital     |character|    406|          0|         0|
+#> |Begin       |mdate    |    405|          1|      0.25|
+#> |Basis       |character|    406|          0|         0|
+#> |DecIndep    |mdate    |    406|          0|         0|
+#> |Autonomy    |mdate    |    406|          0|         0|
+#> |End         |mdate    |    406|          0|         0|
+#> |Grounds     |character|    406|          0|         0|
+#> |Latitude    |numeric  |    406|          0|         0|
+#> |Longitude   |numeric  |    406|          0|         0|
+#> |Region      |character|    406|          0|         0|
+#> |StateNameAlt|character|     55|        351|     86.45|
+#> |CapitalAlt  |character|      9|        397|     97.78|
+#> |Constitution|character|     34|        372|     91.63|
+#> |RatProcedure|character|     36|        370|     91.13|
+#> |Coder       |character|    406|          0|         0|
+#> |Comments    |character|    406|          0|         0|
+#> |Source      |character|     61|        345|     84.98|
 #> -------------------------------------------------------
 #> 
 #> 
