@@ -190,7 +190,7 @@ KOR,Republic of Korea,Seoul,1948-08-15,,,,9999-12-31,None,37.56826,126.97783,Eas
 KOS,Kosovo,Kosovo,2008-02-17,,,,9999-12-31,None,42.58333,21,Southern Europe,NA,NA,"In Article 18, it declares that international agreements are ratified by two thirds vote of all deputies of the Assembly, if the subjects are territory, peace, alliances, political and military issues; fundamental rights and freedoms; membership of the Republic of Kosovo in international organisations; and the undertaking of financial obligations by the Republic of Kosovo. Other than those, the President of the Republic of Kosovo ratifies international agreements upon signature.",Super-majority/Bicameral,,,"Constitution of Republic of Kosovo. Chapter I, Article 18. http://www.kryeministri-ks.net/repository/docs/Constitution1Kosovo.pdf"
 KOT,Kotah,Kotah,1631-01-01,,,,1818-12-31,,25.18254,75.83906,Southern Asia,NA,NA,NA,NA,,,NA
 KPT,Kapurthala,Kapurthala,1780-01-01,,,,1826-12-31,,31.38011,75.38105,Southern Asia,NA,NA,NA,NA,,,NA
-KRG,Karangasem (Bali And Lombok),Amlapura,1740-01-01,,,,1894-01-11,,-8.45,115.61667,South Eastern Asia,NA,NA,NA,NA,,,NA
+KRG,Karangasem,Amlapura,1740-01-01,,,,1894-01-11,,-8.45,115.61667,South Eastern Asia,Bali And Lombok,NA,NA,NA,,,NA
 KTA,Kaarta,GuZmou,1650-01-01,,,,1854-12-31,,14.51104,-11.85154,Western Africa,NA,Guemou,NA,NA,,Approximation,NA
 KUB,Kuba,Mushenge,1625-01-01,,,,1910-12-31,,-4.52985,21.33321,Central Africa,NA,NA,NA,NA,,Approximation,NA
 KWT,Kuwait,Kuwait,1961-06-19,,,,1990-08-28,Annexation,29.5,47.75,Western Asia,NA,NA,NA,NA,,,NA
@@ -205,7 +205,7 @@ LCA,St. Lucia,Castries,1979-02-22,,,,9999-12-31,None,13.9957,-61.00614,Caribbean
 LIE,Liechtenstein,Vaduz,1718-01-23,,,,1806-07-25,,47.14151,9.52154,Western Europe,NA,NA,NA,NA,,,NA
 LIE,Liechtenstein,Vaduz,1813-10-19,,,,1815-06-20,,47.14151,9.52154,Western Europe,NA,NA,NA,NA,,,NA
 LIE,Liechtenstein,Vaduz,1866-08-24,,,,9999-12-31,None,47.14151,9.52154,Western Europe,NA,NA,NA,NA,,Dissolution of the German Confederation,NA
-LIM,Enarya (Limmu),Saqqa,1801-01-01,,,,1849-12-31,,33.4364,36.46638,Eastern Africa,NA,NA,NA,NA,,,NA
+LIM,Limmu,Saqqa,1801-01-01,,,,1849-12-31,,33.4364,36.46638,Eastern Africa,Enarya,NA,NA,NA,,,NA
 LIP,Lippe,Detmold,1123-01-01,,,,1867-07-01,,51.93855,8.87318,Western Europe,NA,NA,NA,NA,,,NA
 LKA,Sri Lanka,Colombo,1948-02-04,,,,9999-12-31,None,6.8664,80.0166,Southern Asia,NA,NA,NA,NA,,,NA
 LSO,Lesotho,Maseru,1822-01-01,,,,1843-12-31,,-29.31667,27.48333,Southern Africa,NA,NA,NA,NA,,Reign of Moshoeshoe I,NA
@@ -228,7 +228,7 @@ MDA,Moldova,Chisinau,1346,,,,1538,Vassalisation,47.00556,28.8575,Eastern Europe,
 MDA,Moldova,Chisinau,1991-08-27,,,,9999-12-31,None,47.00556,28.8575,Eastern Europe,Republic of Moldova,NA,NA,NA,,,NA
 MDG,Madagascar,Antananarivo,1810-07-06,,,,1896-08-06,,-18.91368,47.53613,Eastern Africa,NA,NA,NA,NA,,From death of Andrianampoinimerina to French proclamation of colony,NA
 MDG,Madagascar,Antananarivo,1960-06-26,,,,9999-12-31,None,-18.91368,47.53613,Eastern Africa,NA,NA,NA,NA,,,NA
-MDK,Mandinka Empire (Wassulu),Kankan,1878-01-01,,,,1898-09-29,,10.38542,-9.30568,Western Africa,NA,NA,NA,NA,,,NA
+MDK,Mandinka Empire,Kankan,1878-01-01,,,,1898-09-29,,10.38542,-9.30568,Western Africa,Wassulu,NA,NA,NA,,,NA
 MDV,Maldives,Male,1965-07-26,,,,9999-12-31,None,4.1748,73.50888,Southern Asia,NA,NA,NA,NA,,,NA
 MEC,Mecklenburg Schwerin,Schwerin,1815-06-14,,,,1871-01-18,,53.62937,11.41316,Western Europe,NA,NA,NA,NA,,,NA
 MEX,Mexico,Mexico,1821-09-28,,,,9999-12-31,None,23,-102,Central America,NA,NA,NA,NA,,,NA
@@ -245,7 +245,7 @@ MNE,Montenegro,Podgorica,2006-06-03,,,,9999-12-31,None,42.44111,19.26361,Eastern
 MNG,Mongolia,Ulaanbaatar,1924-11-26,,,,9999-12-31,None,47.90771,106.88324,Central Asia,NA,NA,NA,NA,,,NA
 MOD,Modena,Modena,1452-05-18,,,,1796-05-07,,44.64783,10.92539,Southern Europe,NA,NA,"The first written constitution which appeared in Italy was known as the Constituzione della Repubilica Cispadana. It was adopted by the representatives of Bologna, Ferrara, Modena and Reggio, accepted by the people and published on the twenty-seventh of March, 1797. The main provisions were that the division of legislative power and executive power in that the legislative power should be exercised by two councils. The executive authority was placed in the hands of a Directory of three members elected by the legislative bodies. The Executive was expected to look to the security of the Republic, both within and without, having the power to issue proclamations in conformity with the law. The various administrative bodies occupied about the same position as at present. The 1848 Constitution by the Kingdom of Sardinia shows the role of the Advisory Council of State, the examination of foreign treaties as well as all matters pertaining to foreign affairs.",Unicameral Majority,,,1848 Constitution. https://doi.org/10.1177/000271629400500902
 MOD,Modena,Modena,1814-07-14,,,,1859-08-20,,44.64783,10.92539,Southern Europe,NA,NA,"The first written constitution which appeared in Italy was known as the Constituzione della Repubilica Cispadana. It was adopted by the representatives of Bologna, Ferrara, Modena and Reggio, accepted by the people and published on the twenty-seventh of March, 1797. The main provisions were that the division of legislative power and executive power in that the legislative power should be exercised by two councils. The executive authority was placed in the hands of a Directory of three members elected by the legislative bodies. The Executive was expected to look to the security of the Republic, both within and without, having the power to issue proclamations in conformity with the law. The various administrative bodies occupied about the same position as at present. The 1848 Constitution by the Kingdom of Sardinia shows the role of the Advisory Council of State, the examination of foreign treaties as well as all matters pertaining to foreign affairs.",Unicameral Majority,,,1848 Constitution. https://doi.org/10.1177/000271629400500902
-MOS,Yatenga (Mossi),Ouagadougou,1200-01-01,,,,1895-09-30,,12.36566,-1.53388,Western Africa,NA,NA,NA,NA,,Approximation,NA
+MOS,Mossi,Ouagadougou,1200-01-01,,,,1895-09-30,,12.36566,-1.53388,Western Africa,Yatenga,NA,NA,NA,,Approximation,NA
 MOZ,Mozambique,Maputo,1975-06-25,,,,9999-12-31,None,-25.96553,32.58322,Southern Africa,NA,NA,NA,NA,,,NA
 MPR,Manipur,Imphal,1110-01-01,,,,1891-04-27,,24.80805,93.9442,Southern Asia,NA,NA,NA,NA,,,NA
 MRT,Mauritania,Nouakchott,1960-11-28,,,,9999-12-31,None,18.08581,-15.9785,Northern Africa,NA,NA,NA,NA,,,NA
@@ -399,7 +399,7 @@ YPR,Yemen Peoples Republic,Aden,1967-11-30,,,,1990-05-21,Unification,12.77944,45
 YUG,Yugoslavia,Belgrade,1878-07-13,,,,1941-04-20,,44.80401,20.46513,Eastern Europe,NA,NA,Constitution of the Federal Republic of Yugoslavia affirms that International treaties which have been ratified shall be a constituent part of the internal legal order. The powers and duties of treaty ratification belong to Federal Assembly and the President of the Republic.,Unicameral Majority,,,"Constitution of the Federal Republic of Yugoslavia, April, 1992. Basic Provisions: Section I, Art. 16; Legislature: Section V, 1, Art. 78 (4); Executive: Section V, 2, Art. 96 (2). http://www.worldstatesmen.org/Yugoslav_Const_1992.htm"
 YUG,Yugoslavia,Belgrade,1944-10-20,,,,1992-05-22,Dissolution,44.80401,20.46513,Eastern Europe,NA,NA,Constitution of the Federal Republic of Yugoslavia affirms that International treaties which have been ratified shall be a constituent part of the internal legal order. The powers and duties of treaty ratification belong to Federal Assembly and the President of the Republic.,Unicameral Majority,,,"Constitution of the Federal Republic of Yugoslavia, April, 1992. Basic Provisions: Section I, Art. 16; Legislature: Section V, 1, Art. 78 (4); Executive: Section V, 2, Art. 96 (2). http://www.worldstatesmen.org/Yugoslav_Const_1992.htm"
 ZAF,South Africa,Pretoria,1910-05-31,,,,9999-12-31,None,-25.74486,28.18783,Southern Africa,NA,NA,NA,NA,,,NA
-ZIN,Zinder (Damagaram),Zinder,1851-01-01,,,,1889-07-30,,13.80716,8.9881,Western Africa,NA,NA,NA,NA,,,NA
+ZIN,Zinder,Zinder,1851-01-01,,,,1889-07-30,,13.80716,8.9881,Western Africa,Damagram,NA,NA,NA,,,NA
 ZMB,Zambia,Lusaka,1976-06-29,,,,9999-12-31,None,-15.40669,28.28713,Southern Africa,NA,NA,NA,NA,,,NA
 ZUL,Zululand,Bulawayo,1817-01-01,,,,1828-12-31,,-20.15,28.58333,Southern Africa,NA,NA,NA,NA,,Beginning of centralization under the reign of Shaka,NA
 ZUL,Zululand,Makhosini,1829-01-01,,,,1840-01-28,,-29.18951,29.55959,Southern Africa,NA,NA,NA,NA,,,NA
