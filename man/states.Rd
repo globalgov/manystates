@@ -13,8 +13,8 @@ stateID, StateName, StateName2, Begin, End, Latitude, Longitude, StartType, EndT
 observations and 18 variables:
 stateID, StateName, Capital, Begin, End, DecIndep, Autonomy, Grounds, Latitude, Longitude, Region, StateNameAlt, CapitalAlt, Constitution, RatProcedure, Coder, Comments, and Source_rat.}
 \item{GW: }{A dataset with 216
-observations and 6 variables:
-stateID, Begin, End, StateName, cowID, and cowNR.}
+observations and 7 variables:
+stateID, StateName, Begin, End, StateNameAlt, cowID, and cowNR.}
 }
 For more information and references to each of the datasets used,
 please use the \code{manydata::call_sources()} and \code{manydata::compare_dimensions()} functions.
@@ -105,10 +105,11 @@ It is a work-in-progress, so please let us know if you have any comments or sugg
 #> -------------------------------------------------------
 #> |  Variable  |  Class  |  Obs  |  Missing  |  Miss \%  |
 #> -------------------------------------------------------
-#> |stateID     |character|    216|          0|         0|
+#> |stateID     |character|    215|          1|      0.46|
+#> |StateName   |character|    216|          0|         0|
 #> |Begin       |mdate    |    216|          0|         0|
 #> |End         |mdate    |    216|          0|         0|
-#> |StateName   |character|    216|          0|         0|
+#> |StateNameAlt|character|     20|        196|     90.74|
 #> |cowID       |character|    216|          0|         0|
 #> |cowNR       |character|    216|          0|         0|
 #> -------------------------------------------------------

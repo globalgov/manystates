@@ -12,12 +12,19 @@ GW <- readxl::read_excel("data-raw/states/GW/gwstates.xlsx")
 # below (in stage three) passes all the tests.
 GW <- tibble::as_tibble(GW) %>%
   manydata::transmutate(cowID = `Cow ID`,
+                        cowNR = `Cow Nr.`,
                         Begin = messydates::as_messydate(Start),
-                        End = messydates::as_messydate(Finish),
-                        StateName = manypkgs::standardise_titles(`Name of State`),
-                        cowNr = manypkgs::standardise_titles(`Cow Nr.`)) %>%
-  dplyr::select(cowID, Begin, End, cowNR, StateName) %>%
-  dplyr::arrange(Begin, cowID)
+                        StateName = stringi::stri_trans_totitle(`Name of State`)) %>%
+  dplyr::mutate(End = messydates::as_messydate(End),
+                StateNameAlt = t(as.data.frame(stringi::stri_split_fixed(StateName, "(")))[,2],
+                StateNameAlt = stringi::stri_replace_all_regex(StateNameAlt, "\\)", ""),
+                StateNameAlt = stringi::stri_replace_all_regex(StateNameAlt, "/", ", "),
+                StateName = t(as.data.frame(stringi::stri_split_fixed(StateName, "(")))[,1],
+                StateName = stringi::stri_trim_both(StateName),
+                StateNameAlt = dplyr::if_else(StateNameAlt == StateName, NA_character_, StateNameAlt),
+                stateID = code_states(StateName)) %>%
+  dplyr::select(stateID, StateName, Begin, End, StateNameAlt, everything()) %>%
+  dplyr::arrange(Begin, stateID)
 
 # Like COW data, GW sets "old" states as beginning from 1816-01-01 by default.
 # This is an approximate and uncertain date,
@@ -32,25 +39,6 @@ GW <- GW %>%
                 End = messydates::as_messydate(ifelse(End >= "2017-12-31",
                                                       messydates::on_or_after(End),
                                                       End)))
-
-# ensure all NAs are coded correctly
-GW <- GW %>%
-  dplyr::mutate(across(everything(),
-                       ~stringr::str_replace_all(.,
-                                                 "^NA$", NA_character_))) %>%
-  dplyr::mutate(Begin = messydates::as_messydate(Begin),
-                End = messydates::as_messydate(End))
-
-# Add stateID
-GW <- GW %>%
-  dplyr::mutate(stateID = manypkgs::code_states(StateName, activity = F,
-                                                replace = "ID"),
-                stateID = ifelse(is.na(stateID), cowID, stateID))
-
-# manydata and manypkgs include several other
-# functions that should help cleaning and
-# standardizing your data.
-# Please see the vignettes or website for more details.
 
 # Stage three: Connecting data
 # Next run the following line to make GW available within the package.
