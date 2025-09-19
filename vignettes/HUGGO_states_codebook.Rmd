@@ -24,7 +24,8 @@ library(manystates)
 
 This document provides a brief overview of the coding rationale for key variables in the list of episodes of independent states and state-like entities in the international system provided in `manystates::states$HUGGO`. 
 
-Note that this dataset was constructed as a complement to datasets such as the Gleditsch and Ward Revised List of Independent States (`manystates::states$GW`) and Butcher and Griffiths’ International System(s) Dataset (`manystates::states$ISD`). As such, it is incomplete in observations nor variables, yet offers some more specificity and some additional entries compared to such other datasets.
+Note that this dataset was constructed as a complement to datasets such as the Gleditsch and Ward Revised List of Independent States (`manystates::states$GW`) and Butcher and Griffiths’ International System(s) Dataset (`manystates::states$ISD`). 
+As such, it is incomplete in observations nor variables, yet offers some more specificity and some additional entries compared to such other datasets.
 
 Work on this dataset was supported by the Swiss National Science Foundation (SNSF)
 [Grant Number 188976](https://data.snf.ch/grants/grant/188976): 
@@ -89,22 +90,31 @@ This distinguishes them from missing data, which is always coded `NA`.
 The basis is coded as how the state began. We use the categories offered in the ISD dataset:
 
 - _Consolidation_: state created over space where none previously existed 
-- _Secession_: state secedes from larger state that continues to exist
-- _Dissolution_: state born as a fragment of a larger state that broke apart and ceased to exist (e.g. Austro-Hungarian Empire)
-- _Unification_: state born from the voluntary merging of several (typically equally sized) states
+- _Declaration_: state born from a declaration of independence from a larger state that continues to exist
 - _Decolonisation_: state born from decolonisation
+- _Dissolution_: state born as a fragment of a larger state that broke apart and ceased to exist (e.g. Austro-Hungarian Empire)
+- _Restoration_: state restored after a period of non-existence
+- _Secession_: state secedes from larger state that continues to exist
+- _Unification_: state born from the voluntary merging of several (typically equally sized) states
 - _Other_: to be explained in the comments
+
+Where the code is followed by a `?` annotation, this indicates uncertainty about the coding.
 
 ## Grounds
 
 The grounds is coded as how the state ended. We use the categories offered in the ISD dataset:
 
-- _Colonisation_: state subjected to imperial, non-contiguous colonisation
 - _Annexation_: state taken over by conquest/foreign take-over
-- _Unification_: state ceases through process of voluntary unification
+- _Colonisation_: state subjected to imperial, non-contiguous colonisation, 
+becomes a protectorate, or vassal
+- _Unification_: state ceases through process of voluntary unification or incorporation
 - _Dissolution_: state ceases through dissolution of the state
-- _Partition_: state ceases through partition by outside powers
+- _Occupation_: state ceases through occupation by outside powers
+- _Partition_: state ceases through partition by outside powers or scission
+- _Revolution_: state ceases through internal revolution or coup
 - _Other_: to be explained in the comments
+
+Where the code is followed by a `?` annotation, this indicates uncertainty about the coding.
 
 ## Capital, CapitalAlt
 
