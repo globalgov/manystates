@@ -40,6 +40,7 @@
 #'   Writers could use them to kickstart short stories, 
 #'   while game designers might build entire maps or quests around them.
 #' 
+#' @name generate_states
 #' @param n Integer number of country names to generate
 #'   from a library of fictional country names.
 #'   Default is 10.
@@ -47,34 +48,7 @@
 #'   to use as a library for generating fictional names.
 #' @return String vector of fictional country names
 #' @importFrom stringi stri_trim_both
-#' @examples
-#'   generate_states(12)
-#' @export
-
-#' @rdname generate_states
-#' @param word One or more words (character vector) to split into syllable-like units.
-#' @examples
-#'   syllabise_states("Afghanistan")
-#'   syllabise_states("Saint Pierre and Miquelon")
-#' @export
-syllabise_states <- function(word) {
-  
-  if(length(word) > 1) return(lapply(word, syllabise_states))
-  
-  # standardise input
-  word <- tolower(stringi::stri_trans_general(word, "Latin-ASCII")) # remove accents
-  word <- stringi::stri_trim_both(word)
-
-  # Regex: match consonant cluster + vowel cluster as a unit
-  # This captures patterns like "bra", "zil", "ar", "gen", "ti", "na"
-  specials <- "burg|stan|land|dem|ia|king|af|ab|st |tion|acy|turk|stadt|-|arc|sax|nam"
-  pattern <- paste0("(?i)(?:", specials, ")|\\s+|(?:[^aeiou\\s]*[aeiou]+(?:[^aeiou\\s]*?(?=(?:", specials, ")|\\s|$))?)")
-  stringi::stri_extract_all_regex(word, pattern)[[1]]
-}
-
-#' @rdname generate_states
-#' @export
-syllabize_states <- syllabise_states
+NULL
 
 #' @rdname generate_states
 #' @examples
@@ -173,3 +147,29 @@ generate_states <- function(n = 10, countries = NULL) {
   
   results
 }
+
+#' @rdname generate_states
+#' @param word One or more words (character vector) to split into syllable-like units.
+#' @examples
+#'   syllabise_states("Afghanistan")
+#'   syllabise_states("Saint Pierre and Miquelon")
+#' @export
+syllabise_states <- function(word) {
+  
+  if(length(word) > 1) return(lapply(word, syllabise_states))
+  
+  # standardise input
+  word <- tolower(stringi::stri_trans_general(word, "Latin-ASCII")) # remove accents
+  word <- stringi::stri_trim_both(word)
+
+  # Regex: match consonant cluster + vowel cluster as a unit
+  # This captures patterns like "bra", "zil", "ar", "gen", "ti", "na"
+  specials <- "burg|stan|land|dem|ia|king|af|ab|st |tion|acy|turk|stadt|-|arc|sax|nam"
+  pattern <- paste0("(?i)(?:", specials, ")|\\s+|(?:[^aeiou\\s]*[aeiou]+(?:[^aeiou\\s]*?(?=(?:", specials, ")|\\s|$))?)")
+  stringi::stri_extract_all_regex(word, pattern)[[1]]
+}
+
+#' @rdname generate_states
+#' @export
+syllabize_states <- syllabise_states
+
