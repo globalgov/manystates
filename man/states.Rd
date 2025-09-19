@@ -9,9 +9,9 @@
 \item{ISD: }{A dataset with 499
 observations and 36 variables:
 stateID, StateName, Begin, End, StateNameAlt, Latitude, Longitude, StartType, EndType, cowID, cowNR, ISD_Category, Region, Start_Am, EStart_Am, Declare, DecDate, Population, ..., VioEnd, and VioEnd_Am.}
-\item{HUGGO: }{A dataset with 406
-observations and 15 variables:
-stateID, StateName, Capital, Begin, End, Grounds, Latitude, Longitude, Region, StateNameAlt, CapitalAlt, RatProcedure, Coder, Comments, and Source.}
+\item{HUGGO: }{A dataset with 408
+observations and 16 variables:
+stateID, StateName, Capital, Begin, Basis, End, Grounds, Latitude, Longitude, Region, StateNameAlt, CapitalAlt, RatProcedure, Coder, Comments, and Source.}
 \item{GW: }{A dataset with 216
 observations and 7 variables:
 stateID, StateName, Begin, End, StateNameAlt, cowID, and cowNR.}
@@ -81,21 +81,22 @@ It is a work-in-progress, so please let us know if you have any comments or sugg
 #> -------------------------------------------------------
 #> |  Variable  |  Class  |  Obs  |  Missing  |  Miss \%  |
 #> -------------------------------------------------------
-#> |stateID     |character|    406|          0|         0|
-#> |StateName   |character|    406|          0|         0|
-#> |Capital     |character|    406|          0|         0|
-#> |Begin       |mdate    |    405|          1|      0.25|
-#> |End         |mdate    |    406|          0|         0|
-#> |Grounds     |character|    238|        168|     41.38|
-#> |Latitude    |numeric  |    406|          0|         0|
-#> |Longitude   |numeric  |    406|          0|         0|
-#> |Region      |character|    406|          0|         0|
-#> |StateNameAlt|character|     55|        351|     86.45|
-#> |CapitalAlt  |character|      7|        399|     98.28|
-#> |RatProcedure|character|     35|        371|     91.38|
-#> |Coder       |character|     43|        363|     89.41|
-#> |Comments    |character|     63|        343|     84.48|
-#> |Source      |character|     60|        346|     85.22|
+#> |stateID     |character|    408|          0|         0|
+#> |StateName   |character|    408|          0|         0|
+#> |Capital     |character|    407|          1|      0.25|
+#> |Begin       |mdate    |    407|          1|      0.25|
+#> |Basis       |character|     65|        343|     84.07|
+#> |End         |mdate    |    408|          0|         0|
+#> |Grounds     |character|    241|        167|     40.93|
+#> |Latitude    |numeric  |    408|          0|         0|
+#> |Longitude   |numeric  |    408|          0|         0|
+#> |Region      |character|    408|          0|         0|
+#> |StateNameAlt|character|     56|        352|     86.27|
+#> |CapitalAlt  |character|      7|        401|     98.28|
+#> |RatProcedure|character|     45|        363|     88.97|
+#> |Coder       |character|     56|        352|     86.27|
+#> |Comments    |character|     67|        341|     83.58|
+#> |Source      |character|     76|        332|     81.37|
 #> -------------------------------------------------------
 #> 
 #> 

@@ -164,7 +164,7 @@ HUGGO <- dplyr::as_tibble(HUGGO) %>%
                 DecIndep = messydates::as_messydate(DecIndep),
                 Autonomy = messydates::as_messydate(Autonomy)
                 ) %>%
-  dplyr::select(-c(Basis,DecIndep,Autonomy,Constitution)) %>%
+  dplyr::select(-c(DecIndep,Autonomy,Constitution)) %>%
   dplyr::arrange(Begin)
 
 # Stage three: Connecting data
