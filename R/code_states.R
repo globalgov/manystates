@@ -1,4 +1,4 @@
-#' Code states
+#' Code stateIDs from text
 #' @description
 #'   This function allows for contemporary and historical countries or states
 #'   to be identified in text.

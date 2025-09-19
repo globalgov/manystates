@@ -2,7 +2,7 @@
 % Please edit documentation in R/code_states.R
 \name{code_states}
 \alias{code_states}
-\title{Code states}
+\title{Code stateIDs from text}
 \usage{
 code_states(text, code = TRUE, max_count = 1)
 }
