@@ -1,10 +1,10 @@
 ---
-title: "HUGGO States Codebook"
+title: "HUGGO states codebook"
 output: rmarkdown::html_vignette
 author: James Hollway
 date: "2025-09-19"
 vignette: >
-  %\VignetteIndexEntry{HUGGO}
+  %\VignetteIndexEntry{HUGGO states codebook}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

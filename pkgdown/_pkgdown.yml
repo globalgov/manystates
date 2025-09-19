@@ -28,6 +28,9 @@ navbar:
     reference:
       text: Reference
       href: reference/index.html
+    articles:
+      text: Codebook
+      href: articles/HUGGO%20states%20codebook.html
     news:
       text: News
       href: news/index.html
