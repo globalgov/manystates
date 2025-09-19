@@ -1,0 +1,173 @@
+---
+title: "HUGGO States Codebook"
+output: rmarkdown::html_vignette
+author: James Hollway
+date: "2025-09-19"
+vignette: >
+  %\VignetteIndexEntry{HUGGO}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, echo=FALSE, message=FALSE}
+library(manystates)
+```
+
+## Release 1.0
+
+This document provides a brief overview of the coding rationale for key variables in the list of episodes of independent states and state-like entities in the international system provided in `manystates::states$HUGGO`. 
+
+Note that this dataset was constructed as a complement to datasets such as the Gleditsch and Ward Revised List of Independent States (`manystates::states$GW`) and Butcher and Griffiths’ International System(s) Dataset (`manystates::states$ISD`). As such, it is incomplete in observations nor variables, yet offers some more specificity and some additional entries compared to such other datasets.
+
+Work on this dataset was supported by the Swiss National Science Foundation (SNSF)
+[Grant Number 188976](https://data.snf.ch/grants/grant/188976): 
+"Power and Networks and the Rate of Change in Institutional Complexes" (PANARCHIC).
+
+Please direct all comments and suggestions to:
+
+<center>
+_James Hollway_
+
+_International Relations/Political Science Department_
+
+_Graduate Institute of International and Development Studies_
+
+_Geneva, Switzerland_
+
+_james.hollway@graduateinstitute.ch_
+</center>
+
+## StateName, StateNameAlt
+
+This is the name or names of the state or state-like entity. 
+Since the dataset includes entities (or dates placing these entities) 
+before the advent of the modern interstate system, 
+the definition of a state has changed but we include them here for reasons
+of comprehensivity.
+Where there are alternative or longer forms of the name of the state name,
+or names in other languages, these are included in the `StateNameAlt` variable.
+The shorter or more common name is preferred for the `StateName` variable,
+so long as it is unambiguous.
+
+## stateID
+
+This is the three-letter code associated with the state or state-like entity. 
+These three-letter codes are based on the ISO 3166-1 alpha-3 list, and all codes are consistent with it, 
+however additional codes have been added to cover historical and other states that are not covered by the ISO’s own list. 
+Where possible, we use the Correlates of War three-letter codes for this purpose, or those used in the `GW` or `ISD` datasets. 
+However, in some cases we must select new codes and in such situations, 
+we aim to use recognisable, unique codes relying on significant consonants or vowels.
+
+Note that we endeavour to use existing codes where possible for state episodes that are substantially similar in territory and involve some inheritance of the international legal obligations, rights, and recognitions of the predecessor states. 
+For this reason there is a series of episodes associated with "RUS", for example, ranging from the Russian Empire, through the USSR, to the Russian Federation. 
+However, where the state is not considered the legal successor state, 
+for example Serbia is not considered the legal successor of Yugoslavia, 
+we use different stateID codes (in this case "SRB" and "YUG"). 
+In cases of dissolution (see below), the old stateID code should cease, 
+whereas in cases of secession, the old stateID code should continue for the rump state.
+
+## Begin, End
+
+These are the dates when an episode of state independence is deemed to have begun or ended. 
+Dates are coded using the messydates system. 
+This implements ISO’s extended date/time format. 
+As such, some dates are only entered as a year or are annotated with a question mark if the source is uncertain. 
+For more details see `{messydates}`.
+
+States that are currently independent have an end date `9999-12-31`. 
+This distinguishes them from missing data, which is always coded `NA`.
+
+## Basis
+
+The basis is coded as how the state began. We use the categories offered in the ISD dataset:
+
+- _Consolidation_: state created over space where none previously existed 
+- _Secession_: state secedes from larger state that continues to exist
+- _Dissolution_: state born as a fragment of a larger state that broke apart and ceased to exist (e.g. Austro-Hungarian Empire)
+- _Unification_: state born from the voluntary merging of several (typically equally sized) states
+- _Decolonisation_: state born from decolonisation
+- _Other_: to be explained in the comments
+
+## Grounds
+
+The grounds is coded as how the state ended. We use the categories offered in the ISD dataset:
+
+- _Colonisation_: state subjected to imperial, non-contiguous colonisation
+- _Annexation_: state taken over by conquest/foreign take-over
+- _Unification_: state ceases through process of voluntary unification
+- _Dissolution_: state ceases through dissolution of the state
+- _Partition_: state ceases through partition by outside powers
+- _Other_: to be explained in the comments
+
+## Capital, CapitalAlt
+
+This is the name of the capital city. 
+For the most part, this is fairly straightforward, 
+however in some cases there is a second capital city, 
+in which case this will appear in the `CapitalAlt` variable.
+
+## Latitude, Longitude
+
+Here we use the latitude and longitude in decimal form. 
+If possible, we code the location of the capital city. 
+If this is not possible, we attempt to identify the longitude and latitude of the barycentre of the territory.
+
+## Region
+
+We code the region more specifically than in some other datasets. 
+We code the region descriptively and as a character string, 
+which affords the opportunity to search by regular expression such as “America” to get “Northern America”, “Southern America”, “Central America”, and “Caribbean America”. 
+Note that we use the adjectival form, e.g. “Southern Africa”, to distinguish the region from the country “South Africa”. 
+We use “Central” to describe areas in the middle of the continent, if applicable. 
+The data includes the following regions:
+
+- _Northern America_
+- _Southern America_
+- _Central America_
+- _Caribbean America_
+- _Northern Europe_
+- _Eastern Europe_
+- _Southeastern Europe_
+- _Southern Europe_
+- _Western Europe_
+- _Central Europe_
+- _Eastern Asia_
+- _Southeastern Asia_
+- _Southern Asia_
+- _Western Asia_
+- _Central Asia_
+- _Northern Africa_
+- _Eastern Africa_
+- _Southern Africa_
+- _Western Africa_
+- _Central Africa_
+- _Oceania_
+
+## RatProcedure
+
+This is the procedure by which international treaties are ratified. 
+This is important for understanding how states engage in international cooperation. 
+The categories are similar to Beth Simmons' categorisation,
+but adds in an additional category for entities that have their foreign affairs
+managed by another state:
+
+- _Executive_: treaties can be brought into effect or ratified by the executive alone
+- _Legislature Informed_: ratification requires that the legislature is informed
+- _Unicameral Majority_: ratification requires legislative approval from one legislative chamber
+- _Supermajority/Bicameral_: ratification requires legislative approval from two chambers or a supermajority
+- _Referendum_: treaties require a referendum or plebiscite
+- _External_: foreign affairs are managed by another state
+- _Other_: to be explained in the comments
+
+## Coder, Comments, Source
+
+The `Coder` variable is a comma separated vector of the surnames of those who have added or verified data for each entry/observation. 
+Where special conditions arise, the `Comments` variable offers a free text area for explanations or recording how the coding has changed from version to version. 
+The `Source` variable should contain only links or bibliographic information for the sources used to add or verify information.
