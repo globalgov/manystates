@@ -30,7 +30,7 @@ navbar:
       href: reference/index.html
     articles:
       text: Codebook
-      href: articles/HUGGO%20states%20codebook.html
+      href: articles/HUGGO_states_codebook.html
     news:
       text: News
       href: news/index.html
@@ -50,10 +50,13 @@ navbar:
         - text: manyios
           href: https://globalgov.github.io/manyios/
 reference:
-  - title: "Functions to generate state names"
-    desc: "These functions assist users to identify states and countries in text, or generate a list of fictional state names"
+  - title: "Functions to code state IDs"
+    desc: "This functions assist users to identify states and countries in text"
     contents:
     - code_states
+  - title: "Functions to generate state names"
+    desc: "These functions assist users with generating a list of fictional state names"
+    contents:
     - generate_states
   # - title: "Functions to import CShapes 2.0 data"
   #   desc: "These functions are here to assist users in importing correctly formatted CShapes 2.0 data:"
@@ -66,8 +69,7 @@ reference:
   #   contents:
   #   - import_vdem
   #   - import_vparty
-  - title: "States Data"
-    desc: "manystates contains the following databases on states or state related concepts"
+  - title: "Data on states and state-like entities"
     contents:
     - states
     - state_system
