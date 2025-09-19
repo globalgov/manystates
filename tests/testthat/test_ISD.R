@@ -47,7 +47,7 @@ test_that("labels are standardised", {
 
 test_that("state codes pick up all ISD stateIDs uniquely", {
   isd_state_id <- code_states(states$ISD$StateName, max_count = 2)
-  states$ISD[is.na(isd_state_id),1:4] %>% dplyr::arrange(stateID)
+  # states$ISD[is.na(isd_state_id),1:4] %>% dplyr::arrange(stateID)
   expect_equal(states$ISD$StateName[is.na(isd_state_id)], character(0))
   expect_equal(paste(states$ISD$StateName[grepl(",",isd_state_id)], 
                      isd_state_id[grepl(",",isd_state_id)]), 
