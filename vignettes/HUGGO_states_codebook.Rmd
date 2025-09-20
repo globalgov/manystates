@@ -87,16 +87,27 @@ This distinguishes them from missing data, which is always coded `NA`.
 
 ## Basis
 
-The basis is coded as how the state began. We use the categories offered in the ISD dataset:
+The basis is coded as how the episode of state independence began. 
+We adopt many of the categories offered in the ISD dataset,
+but add some additional categories to improve specificity:
 
-- _Consolidation_: state created over space where none previously existed 
-- _Declaration_: state born from a declaration of independence from a larger state that continues to exist
-- _Decolonisation_: state born from decolonisation
-- _Dissolution_: state born as a fragment of a larger state that broke apart and ceased to exist (e.g. Austro-Hungarian Empire)
-- _Restoration_: state restored after a period of non-existence
-- _Secession_: state secedes from larger state that continues to exist
-- _Unification_: state born from the voluntary merging of several (typically equally sized) states
-- _Other_: to be explained in the comments
+- _Consolidation_: state created over territory where no unified state previously existed,
+often uniting smaller local polities into a single entity
+- _Decolonisation_: state born from decolonisation of an empire or colonial metropole,
+including the conclusion of a protectorate or trusteeship arrangement
+- _Dissolution_: state born as a fragment of a larger state that broke apart 
+and ceased to exist (e.g. Austro-Hungarian Empire)
+- _Liberation_: state restored after a period of non-existence,
+for example following occupation or annexation (e.g. Belgium after WWII occupation)
+- _Secession_: state secedes or breaks away from larger state or empire that continues to exist
+- _Transformation_: state continues in substance but changes its 
+constitutional form, title, or status without foreign conquest or voluntary unification
+(e.g. Tsardom of Russia 1721 to Russian Empire)
+- _Unification_: state born from the voluntary merging of several 
+(typically equally sized) states that previously existed,
+e.g. UAE in 1971
+- _Other_: for unusual or unclear cases;
+to be used sparingly with an explanation or elaboration required in the comments
 
 Where the code is followed by a `?` annotation, this indicates uncertainty about the coding.
 
@@ -104,15 +115,24 @@ Where the code is followed by a `?` annotation, this indicates uncertainty about
 
 The grounds is coded as how the state ended. We use the categories offered in the ISD dataset:
 
-- _Annexation_: state taken over by conquest/foreign take-over
+- _Annexation_: state taken over by conquest/foreign take-over (e.g. Aceh in 1874 by the Netherlands)
 - _Colonisation_: state subjected to imperial, non-contiguous colonisation, 
-becomes a protectorate, or vassal
+becomes a protectorate, or vassal (e.g. Mewar 1818 under British protection)
 - _Unification_: state ceases through process of voluntary unification or incorporation
-- _Dissolution_: state ceases through dissolution of the state
+(e.g. Croatia 1102 into Hungary)
+- _Dissolution_: state ceases through dissolution of the state into several smaller states
+(e.g. Gran Colombia 1830)
 - _Occupation_: state ceases through occupation by outside powers
+(e.g. Albania by Italy in 1939)
 - _Partition_: state ceases through partition by outside powers or scission
+(e.g. Poland 1795)
 - _Revolution_: state ceases through internal revolution or coup
-- _Other_: to be explained in the comments
+(e.g. Russian Empire 1917)
+- _Transformation_: state continues in substance but changes its 
+constitutional form, title, or status without foreign conquest or voluntary unification
+(e.g. Tsardom of Russia 1721 to Russian Empire)
+- _Other_: for unusual or unclear cases;
+to be used sparingly with an explanation or elaboration required in the comments
 
 Where the code is followed by a `?` annotation, this indicates uncertainty about the coding.
 
@@ -169,12 +189,13 @@ but adds in an additional category for entities that have their foreign affairs
 managed by another state:
 
 - _Executive_: treaties can be brought into effect or ratified by the executive alone
-- _Legislature Informed_: ratification requires that the legislature is informed
-- _Unicameral Majority_: ratification requires legislative approval from one legislative chamber
-- _Supermajority/Bicameral_: ratification requires legislative approval from two chambers or a supermajority
+- _Informed_: ratification requires that the legislature is informed
+- _Majority_: ratification requires legislative approval from one legislative chamber
+- _Supermajority_: ratification requires legislative approval from two chambers or a supermajority
 - _Referendum_: treaties require a referendum or plebiscite
 - _External_: foreign affairs are managed by another state
-- _Other_: to be explained in the comments
+- _Other_: for unusual or unclear cases;
+to be used sparingly with an explanation or elaboration required in the comments
 
 ## Coder, Comments, Source
 
