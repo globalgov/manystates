@@ -1,10 +1,10 @@
 ---
-title: "HUGGO states codebook"
+title: "GGO states codebook"
 output: rmarkdown::html_vignette
 author: James Hollway
 date: "2025-09-19"
 vignette: >
-  %\VignetteIndexEntry{HUGGO states codebook}
+  %\VignetteIndexEntry{GGO states codebook}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -22,7 +22,7 @@ library(manystates)
 
 ## Release 1.0
 
-This document provides a brief overview of the coding rationale for key variables in the list of episodes of independent states and state-like entities in the international system provided in `manystates::states$HUGGO`. 
+This document provides a brief overview of the coding rationale for key variables in the list of episodes of independent states and state-like entities in the international system provided in `manystates::states$GGO`. 
 
 Note that this dataset was constructed as a complement to datasets such as the Gleditsch and Ward Revised List of Independent States (`manystates::states$GW`) and Butcher and Griffiths’ International System(s) Dataset (`manystates::states$ISD`). 
 As such, it is incomplete in observations nor variables, yet offers some more specificity and some additional entries compared to such other datasets.
