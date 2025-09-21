@@ -15,19 +15,23 @@ coverage](https://codecov.io/gh/globalgov/manystates/branch/main/graph/badge.svg
 [![CodeFactor](https://www.codefactor.io/repository/github/globalgov/manystates/badge)](https://www.codefactor.io/repository/github/globalgov/manystates)
 <!-- badges: end -->
 
-`manystates` is a data package within the [many universe of
-packages](https://github.com/globalgov). It contains an ensemble of
-datasets currently available on states and state-like entities in the
-world, including information on states’ beginning and, where applicable,
-end dates, and geographical characteristics. An important aim of
-`manystates` is to record and include states as far back in history as
-possible. The package is geared towards global governance research, but
-can also be used by anyone interested in state actors across time.
-
-Please also check out
+`manystates` is a package within the [many universe of
+packages](https://github.com/globalgov) useful for working with states
+and state-like entities. It contains an ensemble of datasets currently
+available on states and state-like entities in the world, including
+information on states’ beginning and, where applicable, end dates, and
+geographical and other characteristics. Please also check out
 [`{manydata}`](https://github.com/globalgov/manydata) for more
 information about the other packages and tools to handle data from the
 many universe of packages.
+
+In addition, the package includes several unique functions to help you
+work with state data, including `code_states()` to identify states
+mentioned in text data, and `generate_states()` to create fictional
+state names. It also includes data from An important aim of `manystates`
+is to record and include states as far back in history as possible. The
+package is geared towards global governance research, but can also be
+used by anyone interested in state actors across time.
 
 ## How to install
 
@@ -48,74 +52,74 @@ Once you have installed the package, you can access the primary datacube
 in the package, `states`, as follows. You can see that currently the
 datacube combines three datasets: Gleditsch and Ward’s (1999) state
 list, the International System(s) Dataset (ISD) by Griffiths and Butcher
-(2013), and the state list developed by Hollway, Sposito, and Tan (2021)
-for this package.
+(2013), and the GGO state list developed by the PANARCHIC team for this
+package.
 
 ``` r
 manydata::describe_datacube(manystates::states)
 ```
 
-    ## [1] "The `manystates::states` datacube is a list containing 3 datasets: ISD, HUGGO, and GW"
+    ## [1] "The `manystates::states` datacube is a list containing 3 datasets: ISD, GW, and GGO"
 
 ``` r
 manystates::states
 ```
 
     ## $ISD
-    ## # A tibble: 482 × 35
-    ##    stateID StateName StateName2 Begin End   Latitude Longitude StartType EndType
-    ##    <chr>   <chr>     <chr>      <mda> <mda> <chr>    <chr>     <chr>     <chr>  
-    ##  1 KOR     Korea     Koryo Cho… 0676  1905… 37 34 0… 126 58 0… 4         2      
-    ##  2 CHI     Chien Kh… <NA>       0800? 1831… 19 25 0… 103 30 0… 2         2      
-    ##  3 TON     Tonga     Kingdom O… 1100? 1900… 21 8 0 S 175 12 0… 4         1      
-    ##  4 MNG     Mongolia  <NA>       1200? 2016… 47 55 1… 106 55 2… 2         <NA>   
-    ##  5 BOH     Bohol     <NA>       1200? 1829… 9 54 0 N 124 12 0… <NA>      1      
-    ##  6 ETH     Ethiopia  Abyssinia… 1270  1936… 14 07 2… 38 44 21… 6         2      
-    ##  7 LWU     Luwu      Ware       1300  1906… 3 0 0 S  120 12 0… 1         1      
-    ##  8 BON     Bone      <NA>       1300? 1905… 4 32 19… 120 19 4… 2         1      
-    ##  9 MIN     Minangka… <NA>       1347  1837… 0 26 22… 100 40 9… 2         1      
-    ## 10 IFE     Ile Ife   Ife Kingd… 1350? 1849… 7 29 25… 4 33 10.… 1         2      
-    ## # ℹ 472 more rows
-    ## # ℹ 26 more variables: cowID <chr>, cowNR <chr>, ISD_Category <chr>,
-    ## #   Region <chr>, Start_Am <chr>, EStart_Am <chr>, Declare <chr>,
-    ## #   DecDate <chr>, Population <chr>, PopDate <chr>, PopAm <chr>,
-    ## #   PopulationHigh <chr>, PopulationLow <chr>, StartType_Am <chr>,
-    ## #   StartSettle <chr>, End_Am <chr>, EndType_Am <chr>, EndSettle <chr>,
-    ## #   Sovereignty_Am <chr>, EuroDip <chr>, Borders <chr>, Borders_Am <chr>, …
-    ## 
-    ## $HUGGO
-    ## # A tibble: 470 × 14
-    ##    stateID StateName  Capital    Begin     End   Latitude Longitude Constitution
-    ##    <chr>   <chr>      <chr>      <mdate>   <mda> <chr>    <chr>     <chr>       
-    ##  1 SMR     San Marino San Marino 0301-09-… 9999… 43.9367  12.4463   San Marino,…
-    ##  2 BGR     Bulgaria   Sofia      0681-12-… 1018… 42.69751 23.32415  <NA>        
-    ##  3 HRV     Croatia    Zagreb     0879-06-… 1102… 45.81444 15.97798  <NA>        
-    ##  4 CHM     Chamba     Chamba     0920-01-… 1846… 32.5558  76.12592  <NA>        
-    ##  5 DRV     Annam      Hue        0939-01-… 1883… 16.46667 107.6     <NA>        
-    ##  6 HUN     Hungary    Budapest   1000-12-… 1526… 47.49801 19.03991  <NA>        
-    ##  7 POL     Poland     Warsaw     1025-04-… 1795… 52.22977 21.01178  <NA>        
-    ##  8 MMR     Myanmar    Rangoon    1044-01-… 1885… 16.80528 96.15611  As provided…
-    ##  9 RWA     Ruanda     Kigali     1081-01-… 1890… -1.94995 30.05885  <NA>        
-    ## 10 MPR     Manipur    Imphal     1110-01-… 1891… 24.80805 93.9442   <NA>        
-    ## # ℹ 460 more rows
-    ## # ℹ 6 more variables: RatProcedure <chr>, Area <chr>, Region <chr>,
-    ## #   StateName2 <chr>, Capital2 <chr>, Source_rat <chr>
+    ## # A tibble: 499 × 36
+    ##    stateID StateName       Begin End   StateNameAlt Latitude Longitude StartType
+    ##    <chr>   <chr>           <mda> <mda> <chr>        <chr>    <chr>         <dbl>
+    ##  1 DEU     Germany         0006… 1945… Prussia      52 31 1… 13 24 18…         3
+    ##  2 KOR     Korea           0676… 1905… Koryo, Chos… 37 34 0… 126 58 0…         4
+    ##  3 JPN     Japan           0710… 1945… <NA>         35 41 2… 139 41 3…         1
+    ##  4 CHI     Chien Khouang/… 0800… 1831… <NA>         19 19 2… 103 21 3…         2
+    ##  5 KHM     Cambodia        0802… 1863… Khmer Kingd… 11 34 1… 104 55 1…         1
+    ##  6 FRA     France          0843… 1942… <NA>         48 51 2… 2 21 8 E          3
+    ##  7 DNK     Denmark         0950… 1940… <NA>         55 40 3… 12 34 6 E         1
+    ##  8 GBR     United Kingdom  1066… 2016… <NA>         51 30 2… 0 7 39 W          1
+    ##  9 TON     Tonga           1100… 1900… Kingdom Of … 21 8 0 S 175 12 0…         4
+    ## 10 OWO     Owo             1150… 1893… <NA>         7 11 0 N 5 35 0 E          1
+    ## # ℹ 489 more rows
+    ## # ℹ 28 more variables: EndType <dbl>, cowID <chr>, cowNR <dbl>,
+    ## #   ISD_Category <dbl>, Region <dbl>, Start_Am <dbl>, EStart_Am <dbl>,
+    ## #   Declare <dbl>, DecDate <chr>, Population <chr>, PopDate <dbl>, PopAm <dbl>,
+    ## #   PopulationHigh <dbl>, PopulationLow <dbl>, StartType_Am <dbl>,
+    ## #   StartSettle <dbl>, End_Am <dbl>, EndType_Am <dbl>, EndSettle <dbl>,
+    ## #   Sovereignty_Am <dbl>, EuroDip <dbl>, Borders <dbl>, Borders_Am <dbl>, …
     ## 
     ## $GW
-    ## # A tibble: 216 × 6
-    ##    stateID Begin        End          StateName            cowID cowNR
-    ##    <chr>   <mdate>      <mdate>      <chr>                <chr> <chr>
-    ##  1 AFG     ..1816-01-01 1888-12-30   Afghanistan          AFG   700  
-    ##  2 AFG     1919-05-01   2017-12-31.. Afghanistan          AFG   700  
-    ##  3 AGO     1975-11-11   2017-12-31.. Angola               ANG   540  
-    ##  4 ALB     1913-01-01   2017-12-31.. Albania              ALB   339  
-    ##  5 ALG     ..1816-01-01 1830-07-05   Algeria              ALG   615  
-    ##  6 ALG     1962-07-05   2017-12-31.. Algeria              ALG   615  
-    ##  7 ARE     1971-12-02   2017-12-31.. United Arab Emirates UAE   696  
-    ##  8 ARG     1816-07-09   2017-12-31.. Argentina            ARG   160  
-    ##  9 ARM     1991-12-21   2017-12-31.. Armenia              ARM   371  
-    ## 10 AUH     ..1816-01-01 1918-11-13   Austria-Hungary      AUH   300  
+    ## # A tibble: 216 × 7
+    ##    stateID StateName       Begin        End          StateNameAlt cowID cowNR
+    ##    <chr>   <chr>           <mdate>      <mdate>      <chr>        <chr> <chr>
+    ##  1 AFG     Afghanistan     ..1816-01-01 1888-12-30   <NA>         AFG   700  
+    ##  2 AUH     Austria-Hungary ..1816-01-01 1918-11-13   <NA>         AUH   300  
+    ##  3 BAD     Baden           ..1816-01-01 1871-01-17   <NA>         BAD   267  
+    ##  4 BAV     Bavaria         ..1816-01-01 1871-01-17   <NA>         BAV   245  
+    ##  5 CHE     Switzerland     ..1816-01-01 2017-12-31.. <NA>         SWZ   225  
+    ##  6 CHN     China           ..1816-01-01 2017-12-31.. <NA>         CHN   710  
+    ##  7 DEU     Germany         ..1816-01-01 1945-05-07   Prussia      GMY   255  
+    ##  8 DNK     Denmark         ..1816-01-01 2017-12-31.. <NA>         DEN   390  
+    ##  9 DZA     Algeria         ..1816-01-01 1830-07-05   <NA>         ALG   615  
+    ## 10 ESP     Spain           ..1816-01-01 2017-12-31.. <NA>         SPN   230  
     ## # ℹ 206 more rows
+    ## 
+    ## $GGO
+    ## # A tibble: 407 × 14
+    ##    stateID StateName  Capital Begin End   Latitude Longitude Region StateNameAlt
+    ##    <chr>   <chr>      <chr>   <mda> <mda>    <dbl>     <dbl> <chr>  <chr>       
+    ##  1 ITA     Italy      Rome    -075… 9999…     41.9    12.5   Weste… <NA>        
+    ##  2 SMR     San Marino San Ma… 0301… 9999…     43.9    12.4   South… <NA>        
+    ##  3 BGR     Bulgaria   Sofia   0681… 1018…     42.7    23.3   South… <NA>        
+    ##  4 ABK     Abkhazia   Anakop… 0778… 1008…     43.0    41.0   Weste… Kingdom of …
+    ##  5 DNK     Denmark    Copenh… 0793… 9999…     55.7    12.6   North… <NA>        
+    ##  6 FRA     France     Paris   0843… 9999…     48.9     2.35  Weste… <NA>        
+    ##  7 HRV     Croatia    Zagreb  0879… 1102…     45.8    16.0   South… <NA>        
+    ##  8 CHM     Chamba     Chamba  0920… 1846…     32.6    76.1   South… <NA>        
+    ##  9 GBR     United Ki… London  0927… 9999…     51.5    -0.128 Weste… <NA>        
+    ## 10 DRV     Annam      Hue     0939… 1883…     16.5   108.    South… <NA>        
+    ## # ℹ 397 more rows
+    ## # ℹ 5 more variables: CapitalAlt <chr>, RatProcedure <chr>, Coder <chr>,
+    ## #   Comments <chr>, Source <chr>
 
 Working with ensembles of related data has many advantages for robust
 analysis. Just take a look at our vignettes
@@ -123,14 +127,17 @@ analysis. Just take a look at our vignettes
 
 ## Included functions
 
-In addition to the datasets, the package also includes a number of
-functions that help you work with state data. `code_states()` is a
-particularly useful function that helps you identify states or
-state-like entities when referenced within text data. By default it will
-identify the first state mentioned in each text, but it is possible to
-look for multiple states by setting the `max_count` argument to a value
-greater than 1. By default, the function will return ISO 3166 alpha-3
-codes, but it is possible to return a standardised state name instead.
+In addition to the datasets, the package also includes two main
+functions that help you work with state data.
+
+### code_states()
+
+`code_states()` is useful for identifying states or state-like entities
+within text data. By default it will identify the first state mentioned
+in each text, but it is possible to look for multiple states by setting
+the `max_count` argument to a value greater than 1. By default, the
+function will return ISO 3166 alpha-3 codes, but it is possible to
+return a standardised state name instead.
 
 ``` r
 manystates::code_states(c("This was done in the United Kingdom", 
@@ -140,7 +147,13 @@ manystates::code_states(c("This was done in the United Kingdom",
 
     ## [1] "GBR"       "{CHE,NZL}"
 
-Additionally, there is a somewhat whimsical function that generates a
+The function can currently discern 499 different states or state-like
+entities. This is likely to increase in future releases, but is already
+2.2 times more than the next best package, `{states}`, for instance.
+
+### generate_states()
+
+Additionally, there is a seemingly whimsical function that generates a
 number of random state names. This function is inspired by observed
 state names, but is not intended to reflect any actual states. It is
 primarily designed for use in class exercises when a number of novel
@@ -151,7 +164,13 @@ state names for creative writing or games.
 manystates::generate_states(3)
 ```
 
-    ## [1] "Jawar"           "Aramin Union"    "Maliwar Kingdom"
+    ## [1] "Ndzuwa"            "Ngo Libya Kingdom" "Rat Re"
+
+It is based on a Markov model of syllable patterns found in real state
+names. Your mileage with the results of this function may vary, but it
+should get more realistic as we add more state names to the underlying
+library, and in the meantime it might even be instructive for classroom
+exercises.
 
 Feedback on either of these functions is most welcome.
 
@@ -161,6 +180,34 @@ The development of [many
 packages](https://github.com/globalgov/manydata) is aimed at collecting,
 connecting and correcting network data across issue-domains of global
 governance.
+
+``` r
+citation("manystates")
+```
+
+    ## To cite manystates in publications use:
+    ## 
+    ##   James Hollway (2021) ‘manystates: Many data on state and state-like
+    ##   actors in the international system’. doi:10.5281/zenodo.5205704.
+    ## 
+    ## A BibTeX entry for LaTeX users is
+    ## 
+    ##   @Manual{,
+    ##     title = {manystates: Many data on state and state-like actors in the international system},
+    ##     author = {James Hollway},
+    ##     year = {2021},
+    ##     url = {https://github.com/globalgov/manystates},
+    ##     doi = {https://doi.org/10.5281/zenodo.5205704},
+    ##   }
+
+## Funding details
+
+Development on this package has been funded by the Swiss National
+Science Foundation (SNSF) [Grant Number
+188976](https://data.snf.ch/grants/grant/188976): “Power and Networks
+and the Rate of Change in Institutional Complexes” (PANARCHIC).
+
+## Citations
 
 While some ‘many packages’ can and do include novel data, much of what
 they offer involves standing on the shoulders of giants. ‘many packages’
@@ -172,21 +219,33 @@ providers for their work assembling the data by using the function
 below.
 
 ``` r
-citation("manystates")
+states <- manystates::states
+manydata::call_citations(states, output = "console")
 ```
 
-    ## To cite manystates in publications use:
-    ## 
-    ##   J. Hollway. manystates: States for manydata. 2021.
-    ## 
-    ## A BibTeX entry for LaTeX users is
-    ## 
-    ##   @Manual{,
-    ##     title = {manystates: States for manydata},
-    ##     author = {James Hollway},
-    ##     year = {2021},
-    ##     url = {https://github.com/globalgov/qStates},
-    ##   }
+    ## Found in: manystates
+
+    ## Please cite the included datasets: 
+    ## • Griffiths, Ryan D., and Charles R. Butcher. 'Introducing the international system(s) dataset (ISD), 1816-2011'. International Interactions 39.5 (2013), pp. 748-768.
+    ## • Hand-coded data by the GGO team
+    ## • Gleditsch, Kristian S., and Michael D. Ward. 'Interstate system membership: A revised list of the independent states since 1816'. International Interactions 25.4 (1999), pp. 393-413.
+
+For the [Gleditsch and Ward (GW)
+dataset](http://ksgleditsch.com/statelist.html):
+
+Gleditsch, Kristian S., and Michael D. Ward. 1999. “[A revised list of
+independent states since the congress of
+Vienna](https://doi.org/10.1080/03050629908434958).” *International
+Interactions* 25: 393-413.
+
+For the [International System(s) Dataset
+(ISD)](https://www.ryan-griffiths.com/data):
+
+Butcher, Charles R., and Ryan D. Griffiths. 2020. “[States and their
+international relations since 1816: introducing version 2 of the
+International System(s) Dataset
+(ISD)](https://doi.org/10.1080/03050629.2020.1707199)”. *International
+Interactions*, 46(2), 291–308.
 
 ## Contributing
 
@@ -207,10 +266,3 @@ data.
 If you have any other ideas about how this package or the manydata
 universe more broadly might better facilitate your empirical analysis,
 we’d be very happy to hear from you.
-
-## Funding details
-
-Development on this package has been funded by the Swiss National
-Science Foundation (SNSF) [Grant Number
-188976](https://data.snf.ch/grants/grant/188976): “Power and Networks
-and the Rate of Change in Institutional Complexes” (PANARCHIC).

@@ -12,19 +12,23 @@ output: github_document
 [![CodeFactor](https://www.codefactor.io/repository/github/globalgov/manystates/badge)](https://www.codefactor.io/repository/github/globalgov/manystates)
 <!-- badges: end -->
 
-`manystates` is a data package within the
-[many universe of packages](https://github.com/globalgov).
+`manystates` is a package within the [many universe of packages](https://github.com/globalgov)
+useful for working with states and state-like entities.
 It contains an ensemble of datasets currently available on states and 
 state-like entities in the world,
 including information on states' beginning and, where applicable, end dates,
-and geographical characteristics. 
-An important aim of `manystates` is to record and include states as far back in history as possible. 
-The package is geared towards global governance research, 
-but can also be used by anyone interested in state actors across time. 
-
+and geographical and other characteristics. 
 Please also check out [`{manydata}`](https://github.com/globalgov/manydata) for
 more information about the other packages and tools to handle data from the
 many universe of packages. 
+
+In addition, the package includes several unique functions to help you work with
+state data, including `code_states()` to identify states mentioned in text data,
+and `generate_states()` to create fictional state names.
+It also includes data from
+An important aim of `manystates` is to record and include states as far back in history as possible. 
+The package is geared towards global governance research, 
+but can also be used by anyone interested in state actors across time. 
 
 ## How to install
 
@@ -46,8 +50,7 @@ package, `states`, as follows.
 You can see that currently the datacube combines three datasets:
 Gleditsch and Ward's (1999) state list,
 the International System(s) Dataset (ISD) by Griffiths and Butcher (2013),
-and the state list developed by Hollway, Sposito, and Tan (2021) for
-this package.
+and the GGO state list developed by the PANARCHIC team for this package.
 
 ```{r datasets, eval = TRUE}
 manydata::describe_datacube(manystates::states)
@@ -59,10 +62,13 @@ Just take a look at our vignettes [here](https://globalgov.github.io/manydata/ar
 
 ## Included functions
 
-In addition to the datasets, the package also includes a number of
+In addition to the datasets, the package also includes two main
 functions that help you work with state data.
-`code_states()` is a particularly useful function that helps you
-identify states or state-like entities when referenced within text data.
+
+### code_states()
+
+`code_states()` is useful for identifying states or state-like entities 
+within text data.
 By default it will identify the first state mentioned in each text,
 but it is possible to look for multiple states by setting the
 `max_count` argument to a value greater than 1.
@@ -75,7 +81,13 @@ manystates::code_states(c("This was done in the United Kingdom",
             max_count = 2)
 ```
 
-Additionally, there is a somewhat whimsical function that generates
+The function can currently discern `r nrow(manystates::code_states())` different states or state-like entities.
+This is likely to increase in future releases,
+but is already `r round(nrow(manystates::code_states())/230, 1)` times more than the next best package, `{states}`, for instance.
+
+### generate_states()
+
+Additionally, there is a seemingly whimsical function that generates
 a number of random state names.
 This function is inspired by observed state names,
 but is not intended to reflect any actual states.
@@ -88,6 +100,11 @@ creative writing or games.
 manystates::generate_states(3)
 ```
 
+It is based on a Markov model of syllable patterns found in real state names.
+Your mileage with the results of this function may vary,
+but it should get more realistic as we add more state names to the underlying library,
+and in the meantime it might even be instructive for classroom exercises.
+
 Feedback on either of these functions is most welcome.
 
 ## Many packages
@@ -95,6 +112,19 @@ Feedback on either of these functions is most welcome.
 The development of [many packages](https://github.com/globalgov/manydata) is aimed
 at collecting, connecting and correcting network data across issue-domains of
 global governance.
+
+
+```{r cites}
+citation("manystates")
+```
+
+## Funding details
+
+Development on this package has been funded by the Swiss National Science Foundation (SNSF)
+[Grant Number 188976](https://data.snf.ch/grants/grant/188976): 
+"Power and Networks and the Rate of Change in Institutional Complexes" (PANARCHIC).
+
+## Citations
 
 While some 'many packages' can and do include novel data,
 much of what they offer involves standing on the shoulders of giants.
@@ -105,9 +135,18 @@ by listing the official references using the function above,
 as well as the package providers for their work assembling the data
 by using the function below.
 
-```{r cites}
-citation("manystates")
+```{r cites2}
+states <- manystates::states
+manydata::call_citations(states, output = "console")
 ```
+
+For the [Gleditsch and Ward (GW) dataset](http://ksgleditsch.com/statelist.html):
+
+Gleditsch, Kristian S., and Michael D. Ward. 1999. “[A revised list of independent states since the congress of Vienna](https://doi.org/10.1080/03050629908434958).” _International Interactions_ 25: 393-413.
+
+For the [International System(s) Dataset (ISD)](https://www.ryan-griffiths.com/data):
+
+Butcher, Charles R., and Ryan D. Griffiths. 2020. "[States and their international relations since 1816: introducing version 2 of the International System(s) Dataset (ISD)](https://doi.org/10.1080/03050629.2020.1707199)". _International Interactions_, 46(2), 291–308.
 
 ## Contributing
 
@@ -126,9 +165,3 @@ clean, consistent global governance data.
 If you have any other ideas about how this package or the manydata 
 universe more broadly might better facilitate your empirical analysis, we'd be
 very happy to hear from you.
-
-## Funding details
-
-Development on this package has been funded by the Swiss National Science Foundation (SNSF)
-[Grant Number 188976](https://data.snf.ch/grants/grant/188976): 
-"Power and Networks and the Rate of Change in Institutional Complexes" (PANARCHIC).
