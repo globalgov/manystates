@@ -17,8 +17,9 @@
 - Improved `states$ISD`
   - Updated ISD to version 2.2
   - Fixed ISD preparation script so that `$Begin` and `$End` are coded correctly
-- Improved `states$HUGGO`
-  - Simplified HUGGO preparation script by exporting and working on clean csv
+- Improved `states$GGO`
+  - Renamed from `states$HUGGO` to reflect new name of the dataset
+  - Simplified GGO preparation script by exporting and working on clean csv
   - Fixed current states ending as 9999-12-31 (closed #85)
   - Removed ~64 duplicated or overlapping records (closed #84)
   - Added details on many states (closed #83, thanks @myevrard)

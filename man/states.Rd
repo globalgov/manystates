@@ -9,9 +9,9 @@
 \item{ISD: }{A dataset with 499
 observations and 36 variables:
 stateID, StateName, Begin, End, StateNameAlt, Latitude, Longitude, StartType, EndType, cowID, cowNR, ISD_Category, Region, Start_Am, EStart_Am, Declare, DecDate, Population, ..., VioEnd, and VioEnd_Am.}
-\item{HUGGO: }{A dataset with 408
-observations and 16 variables:
-stateID, StateName, Capital, Begin, Basis, End, Grounds, Latitude, Longitude, Region, StateNameAlt, CapitalAlt, RatProcedure, Coder, Comments, and Source.}
+\item{HUGGO: }{A dataset with
+observations and  variables:
+.}
 \item{GW: }{A dataset with 216
 observations and 7 variables:
 stateID, StateName, Begin, End, StateNameAlt, cowID, and cowNR.}
@@ -22,15 +22,15 @@ please use the \code{manydata::call_sources()} and \code{manydata::compare_dimen
 \source{
 \itemize{
 \item Griffiths, Ryan D., and Charles R. Butcher. 'Introducing the international system(s) dataset (ISD), 1816-2011'. International Interactions 39.5 (2013), pp. 748-768.
-\item Hollway, James, Henrique Sposito, and Jael Tan. 2021. States for manydata.
 \item Gleditsch, Kristian S., and Michael D. Ward. 'Interstate system membership: A revised list of the independent states since 1816'. International Interactions 25.4 (1999), pp. 393-413.
+\item Hand-coded data by the GGO team
 }
 }
 \usage{
 states
 }
 \description{
-The \code{manystates::states} datacube is a list containing 3 datasets: ISD, HUGGO, and GW.
+The \code{manystates::states} datacube is a list containing 3 datasets: ISD, GW, and GGO.
 It is a work-in-progress, so please let us know if you have any comments or suggestions.
 }
 \details{
@@ -77,29 +77,6 @@ It is a work-in-progress, so please let us know if you have any comments or sugg
 #> ---------------------------------------------------------
 #> 
 #> 
-#> $HUGGO
-#> -------------------------------------------------------
-#> |  Variable  |  Class  |  Obs  |  Missing  |  Miss \%  |
-#> -------------------------------------------------------
-#> |stateID     |character|    408|          0|         0|
-#> |StateName   |character|    408|          0|         0|
-#> |Capital     |character|    407|          1|      0.25|
-#> |Begin       |mdate    |    407|          1|      0.25|
-#> |Basis       |character|     65|        343|     84.07|
-#> |End         |mdate    |    408|          0|         0|
-#> |Grounds     |character|    241|        167|     40.93|
-#> |Latitude    |numeric  |    408|          0|         0|
-#> |Longitude   |numeric  |    408|          0|         0|
-#> |Region      |character|    408|          0|         0|
-#> |StateNameAlt|character|     56|        352|     86.27|
-#> |CapitalAlt  |character|      7|        401|     98.28|
-#> |RatProcedure|character|     45|        363|     88.97|
-#> |Coder       |character|     56|        352|     86.27|
-#> |Comments    |character|     67|        341|     83.58|
-#> |Source      |character|     76|        332|     81.37|
-#> -------------------------------------------------------
-#> 
-#> 
 #> $GW
 #> -------------------------------------------------------
 #> |  Variable  |  Class  |  Obs  |  Missing  |  Miss \%  |
@@ -112,11 +89,32 @@ It is a work-in-progress, so please let us know if you have any comments or sugg
 #> |cowID       |character|    216|          0|         0|
 #> |cowNR       |character|    216|          0|         0|
 #> -------------------------------------------------------
+#> 
+#> 
+#> $GGO
+#> -------------------------------------------------------
+#> |  Variable  |  Class  |  Obs  |  Missing  |  Miss \%  |
+#> -------------------------------------------------------
+#> |stateID     |character|    407|          0|         0|
+#> |StateName   |character|    407|          0|         0|
+#> |Capital     |character|    406|          1|      0.25|
+#> |Begin       |mdate    |    406|          1|      0.25|
+#> |End         |mdate    |    407|          0|         0|
+#> |Latitude    |numeric  |    407|          0|         0|
+#> |Longitude   |numeric  |    407|          0|         0|
+#> |Region      |character|    407|          0|         0|
+#> |StateNameAlt|character|     55|        352|     86.49|
+#> |CapitalAlt  |character|      7|        400|     98.28|
+#> |RatProcedure|character|     56|        351|     86.24|
+#> |Coder       |character|     90|        317|     77.89|
+#> |Comments    |character|     76|        331|     81.33|
+#> |Source      |character|    110|        297|     72.97|
+#> -------------------------------------------------------
 }\if{html}{\out{</div>}}
 }
 \section{Mapping}{
 \tabular{lll}{
-   \emph{manystates} \tab \emph{GW} \tab \emph{ISD} \cr
+   \emph{GGO} \tab \emph{GW} \tab \emph{ISD} \cr
    stateID \tab  \tab  \cr
    Begin \tab Start \tab Start \cr
    End \tab Finish \tab Finish \cr
