@@ -20,6 +20,7 @@ GW <- tibble::as_tibble(GW) %>%
                 StateNameAlt = stringi::stri_replace_all_regex(StateNameAlt, "\\)", ""),
                 StateNameAlt = stringi::stri_replace_all_regex(StateNameAlt, "/", ", "),
                 StateName = t(as.data.frame(stringi::stri_split_fixed(StateName, "(")))[,1],
+                StateName = stringi::stri_replace_all_regex(StateName, "/", ", "),
                 StateName = stringi::stri_trim_both(StateName),
                 StateNameAlt = dplyr::if_else(StateNameAlt == StateName, NA_character_, StateNameAlt),
                 stateID = code_states(StateName)) %>%

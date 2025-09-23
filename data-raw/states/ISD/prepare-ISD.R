@@ -28,6 +28,7 @@ ISD <- tibble::as_tibble(ISD) %>%
                 End = messydates::as_messydate(End),
                 End = ifelse(End_Am == 1, messydates::as_uncertain(End), End),
                 Begin = messydates::as_messydate(Begin),
+                StateName = stringi::stri_replace_all_regex(StateName, "/", ", "),
                 End = messydates::as_messydate(End),
                 End = messydates::as_messydate(ifelse(End == "2016-12-31",
                                                 messydates::on_or_after(End),
