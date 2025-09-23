@@ -30,6 +30,7 @@ This function generates a vector of fictional country names.
 While the generated names are designed to resemble real country names,
 the results will not match (at least not exactly) country names from
 the library provided.
+Please note that the function is still \emph{experimental}.
 
 The names are generated using a Markov chain approach based on
 syllable patterns found in a library of real country names.

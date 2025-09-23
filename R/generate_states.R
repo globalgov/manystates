@@ -4,6 +4,7 @@
 #'   While the generated names are designed to resemble real country names,
 #'   the results will not match (at least not exactly) country names from
 #'   the library provided.
+#'   Please note that the function is still _experimental_.
 #'   
 #'   The names are generated using a Markov chain approach based on
 #'   syllable patterns found in a library of real country names.
@@ -63,6 +64,7 @@ generate_states <- function(n = 10, countries = NULL) {
                                           manystates::states[[x]]$StateNameAlt) } else {
                                             manystates::states[[x]]$StateName
                                           })))
+    countries <- unique(c(countries,countryRegex$Label))
   } 
   unique_countries <- unique(tolower(stringi::stri_trans_general(countries, 
                                                                  "Latin-ASCII")))
@@ -165,6 +167,7 @@ syllabise_states <- function(word) {
   # Regex: match consonant cluster + vowel cluster as a unit
   # This captures patterns like "bra", "zil", "ar", "gen", "ti", "na"
   specials <- "burg|stan|land|dem|ia|king|af|ab|st |tion|acy|turk|stadt|-|arc|sax|nam"
+  specials <- c(specials, "empire|republic|united|union")
   pattern <- paste0("(?i)(?:", specials, ")|\\s+|(?:[^aeiou\\s]*[aeiou]+(?:[^aeiou\\s]*?(?=(?:", specials, ")|\\s|$))?)")
   stringi::stri_extract_all_regex(word, pattern)[[1]]
 }
