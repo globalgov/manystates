@@ -85,7 +85,7 @@ It is a work-in-progress, so please let us know if you have any comments or sugg
 #> |StateName   |character|    216|          0|         0|
 #> |Begin       |mdate    |    216|          0|         0|
 #> |End         |mdate    |    216|          0|         0|
-#> |StateNameAlt|character|     20|        196|     90.74|
+#> |StateNameAlt|character|     18|        198|     91.67|
 #> |cowID       |character|    216|          0|         0|
 #> |cowNR       |character|    216|          0|         0|
 #> -------------------------------------------------------
@@ -95,20 +95,20 @@ It is a work-in-progress, so please let us know if you have any comments or sugg
 #> -------------------------------------------------------
 #> |  Variable  |  Class  |  Obs  |  Missing  |  Miss \%  |
 #> -------------------------------------------------------
-#> |stateID     |character|    407|          0|         0|
-#> |StateName   |character|    407|          0|         0|
-#> |Capital     |character|    406|          1|      0.25|
-#> |Begin       |mdate    |    406|          1|      0.25|
-#> |End         |mdate    |    407|          0|         0|
-#> |Latitude    |numeric  |    407|          0|         0|
-#> |Longitude   |numeric  |    407|          0|         0|
-#> |Region      |character|    407|          0|         0|
-#> |StateNameAlt|character|     55|        352|     86.49|
-#> |CapitalAlt  |character|      7|        400|     98.28|
-#> |RatProcedure|character|     56|        351|     86.24|
-#> |Coder       |character|     90|        317|     77.89|
-#> |Comments    |character|     76|        331|     81.33|
-#> |Source      |character|    110|        297|     72.97|
+#> |stateID     |character|    410|          0|         0|
+#> |StateName   |character|    410|          0|         0|
+#> |Capital     |character|    409|          1|      0.24|
+#> |Begin       |mdate    |    410|          0|         0|
+#> |End         |mdate    |    410|          0|         0|
+#> |Latitude    |numeric  |    410|          0|         0|
+#> |Longitude   |numeric  |    410|          0|         0|
+#> |Region      |character|    410|          0|         0|
+#> |StateNameAlt|character|     61|        349|     85.12|
+#> |CapitalAlt  |character|      7|        403|     98.29|
+#> |RatProcedure|character|     56|        354|     86.34|
+#> |Coder       |character|    410|          0|         0|
+#> |Comments    |character|     72|        338|     82.44|
+#> |Source      |character|    137|        273|     66.59|
 #> -------------------------------------------------------
 }\if{html}{\out{</div>}}
 }
