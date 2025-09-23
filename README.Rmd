@@ -14,7 +14,7 @@ output: github_document
 
 `manystates` is a package within the [many universe of packages](https://github.com/globalgov)
 useful for working with states and state-like entities.
-It contains an ensemble of datasets currently available on states and 
+It contains an ensemble of datasets on states and 
 state-like entities in the world,
 including information on states' beginning and, where applicable, end dates,
 and geographical and other characteristics. 
@@ -23,17 +23,15 @@ more information about the other packages and tools to handle data from the
 many universe of packages. 
 
 In addition, the package includes several unique functions to help you work with
-state data, including `code_states()` to identify states mentioned in text data,
+state data, including `code_states()` to identify states within texts,
 and `generate_states()` to create fictional state names.
-It also includes data from
-An important aim of `manystates` is to record and include states as far back in history as possible. 
 The package is geared towards global governance research, 
 but can also be used by anyone interested in state actors across time. 
 
 ## How to install
 
-We've made it easier than ever to install and start analysing global governance
-data in R. Simply install the core package,
+It is easy to install and start analysing global governance data in R. 
+Simply install the core package,
 [manydata](https://github.com/globalgov/manydata), as follows,
 and then you can discover, install and update various 'many packages' from the
 console.
@@ -58,7 +56,7 @@ manystates::states
 ```
 
 Working with ensembles of related data has many advantages for robust analysis.
-Just take a look at our vignettes [here](https://globalgov.github.io/manydata/articles/user.html).
+Take a look at our vignettes [here](https://globalgov.github.io/manydata/articles/user.html).
 
 ## Included functions
 
@@ -69,15 +67,24 @@ functions that help you work with state data.
 
 `code_states()` is useful for identifying states or state-like entities 
 within text data.
+This is a non-trivial task, as state names can vary widely in their
+spelling, abbreviation, and context,
+and there are many potential ambiguities (e.g., "Korea" could refer to
+North or South Korea).
+The function uses a comprehensive library of contemporary and historical 
+state names and their variants to identify states in a given text.
+It returns a data frame with the identified states and their
+corresponding ISO 3166 alpha-3 codes or standardised names.
+
+It can handle both single strings and vectors of strings.
 By default it will identify the first state mentioned in each text,
-but it is possible to look for multiple states by setting the
+but it is possible to search for multiple states by setting the
 `max_count` argument to a value greater than 1.
-By default, the function will return ISO 3166 alpha-3 codes,
-but it is possible to return a standardised state name instead.
 
 ```{r codestates, eval = TRUE}
-manystates::code_states(c("This was done in the United Kingdom", 
-            "Switzerland and New Zealand made an agreement"),
+manystates::code_states(c("The event took place in the United Kingdom.", 
+            "Switzerland and New Zealand agreed that...",
+            "One of the oldest princely states is Chamba."),
             max_count = 2)
 ```
 
@@ -123,6 +130,10 @@ citation("manystates")
 Development on this package has been funded by the Swiss National Science Foundation (SNSF)
 [Grant Number 188976](https://data.snf.ch/grants/grant/188976): 
 "Power and Networks and the Rate of Change in Institutional Complexes" (PANARCHIC).
+
+James Hollway wishes to thank all the team that have contributed to this package, 
+including:
+Bernard Bieri, Loic Modoux, Henrique Sposito, and Jael Tan.
 
 ## Citations
 

@@ -17,26 +17,24 @@ coverage](https://codecov.io/gh/globalgov/manystates/branch/main/graph/badge.svg
 
 `manystates` is a package within the [many universe of
 packages](https://github.com/globalgov) useful for working with states
-and state-like entities. It contains an ensemble of datasets currently
-available on states and state-like entities in the world, including
-information on states’ beginning and, where applicable, end dates, and
-geographical and other characteristics. Please also check out
+and state-like entities. It contains an ensemble of datasets on states
+and state-like entities in the world, including information on states’
+beginning and, where applicable, end dates, and geographical and other
+characteristics. Please also check out
 [`{manydata}`](https://github.com/globalgov/manydata) for more
 information about the other packages and tools to handle data from the
 many universe of packages.
 
 In addition, the package includes several unique functions to help you
 work with state data, including `code_states()` to identify states
-mentioned in text data, and `generate_states()` to create fictional
-state names. It also includes data from An important aim of `manystates`
-is to record and include states as far back in history as possible. The
-package is geared towards global governance research, but can also be
-used by anyone interested in state actors across time.
+within texts, and `generate_states()` to create fictional state names.
+The package is geared towards global governance research, but can also
+be used by anyone interested in state actors across time.
 
 ## How to install
 
-We’ve made it easier than ever to install and start analysing global
-governance data in R. Simply install the core package,
+It is easy to install and start analysing global governance data in R.
+Simply install the core package,
 [manydata](https://github.com/globalgov/manydata), as follows, and then
 you can discover, install and update various ‘many packages’ from the
 console.
@@ -72,7 +70,7 @@ manystates::states
     ##  1 DEU     Germany         0006… 1945… Prussia      52 31 1… 13 24 18…         3
     ##  2 KOR     Korea           0676… 1905… Koryo, Chos… 37 34 0… 126 58 0…         4
     ##  3 JPN     Japan           0710… 1945… <NA>         35 41 2… 139 41 3…         1
-    ##  4 CHI     Chien Khouang/… 0800… 1831… <NA>         19 19 2… 103 21 3…         2
+    ##  4 CHI     Chien Khouang,… 0800… 1831… <NA>         19 19 2… 103 21 3…         2
     ##  5 KHM     Cambodia        0802… 1863… Khmer Kingd… 11 34 1… 104 55 1…         1
     ##  6 FRA     France          0843… 1942… <NA>         48 51 2… 2 21 8 E          3
     ##  7 DNK     Denmark         0950… 1940… <NA>         55 40 3… 12 34 6 E         1
@@ -104,7 +102,7 @@ manystates::states
     ## # ℹ 206 more rows
     ## 
     ## $GGO
-    ## # A tibble: 407 × 14
+    ## # A tibble: 410 × 14
     ##    stateID StateName  Capital Begin End   Latitude Longitude Region StateNameAlt
     ##    <chr>   <chr>      <chr>   <mda> <mda>    <dbl>     <dbl> <chr>  <chr>       
     ##  1 ITA     Italy      Rome    -075… 9999…     41.9    12.5   Weste… <NA>        
@@ -117,12 +115,12 @@ manystates::states
     ##  8 CHM     Chamba     Chamba  0920… 1846…     32.6    76.1   South… <NA>        
     ##  9 GBR     United Ki… London  0927… 9999…     51.5    -0.128 Weste… <NA>        
     ## 10 DRV     Annam      Hue     0939… 1883…     16.5   108.    South… <NA>        
-    ## # ℹ 397 more rows
+    ## # ℹ 400 more rows
     ## # ℹ 5 more variables: CapitalAlt <chr>, RatProcedure <chr>, Coder <chr>,
     ## #   Comments <chr>, Source <chr>
 
 Working with ensembles of related data has many advantages for robust
-analysis. Just take a look at our vignettes
+analysis. Take a look at our vignettes
 [here](https://globalgov.github.io/manydata/articles/user.html).
 
 ## Included functions
@@ -133,21 +131,29 @@ functions that help you work with state data.
 ### code_states()
 
 `code_states()` is useful for identifying states or state-like entities
-within text data. By default it will identify the first state mentioned
-in each text, but it is possible to look for multiple states by setting
-the `max_count` argument to a value greater than 1. By default, the
-function will return ISO 3166 alpha-3 codes, but it is possible to
-return a standardised state name instead.
+within text data. This is a non-trivial task, as state names can vary
+widely in their spelling, abbreviation, and context, and there are many
+potential ambiguities (e.g., “Korea” could refer to North or South
+Korea). The function uses a comprehensive library of contemporary and
+historical state names and their variants to identify states in a given
+text. It returns a data frame with the identified states and their
+corresponding ISO 3166 alpha-3 codes or standardised names.
+
+It can handle both single strings and vectors of strings. By default it
+will identify the first state mentioned in each text, but it is possible
+to search for multiple states by setting the `max_count` argument to a
+value greater than 1.
 
 ``` r
-manystates::code_states(c("This was done in the United Kingdom", 
-            "Switzerland and New Zealand made an agreement"),
+manystates::code_states(c("The event took place in the United Kingdom.", 
+            "Switzerland and New Zealand agreed that...",
+            "One of the oldest princely states is Chamba."),
             max_count = 2)
 ```
 
-    ## [1] "GBR"       "{CHE,NZL}"
+    ## [1] "GBR"       "{CHE,NZL}" "CHM"
 
-The function can currently discern 499 different states or state-like
+The function can currently discern 500 different states or state-like
 entities. This is likely to increase in future releases, but is already
 2.2 times more than the next best package, `{states}`, for instance.
 
@@ -164,7 +170,8 @@ state names for creative writing or games.
 manystates::generate_states(3)
 ```
 
-    ## [1] "Ndzuwa"            "Ngo Libya Kingdom" "Rat Re"
+    ## [1] "Cke Wa"                            "Meri"                             
+    ## [3] "Mel Southern Kong Te South Kaluwu"
 
 It is based on a Markov model of syllable patterns found in real state
 names. Your mileage with the results of this function may vary, but it
@@ -207,6 +214,10 @@ Science Foundation (SNSF) [Grant Number
 188976](https://data.snf.ch/grants/grant/188976): “Power and Networks
 and the Rate of Change in Institutional Complexes” (PANARCHIC).
 
+James Hollway wishes to thank all the team that have contributed to this
+package, including: Bernard Bieri, Loic Modoux, Henrique Sposito, and
+Jael Tan.
+
 ## Citations
 
 While some ‘many packages’ can and do include novel data, much of what
@@ -227,8 +238,8 @@ manydata::call_citations(states, output = "console")
 
     ## Please cite the included datasets: 
     ## • Griffiths, Ryan D., and Charles R. Butcher. 'Introducing the international system(s) dataset (ISD), 1816-2011'. International Interactions 39.5 (2013), pp. 748-768.
-    ## • Hand-coded data by the GGO team
     ## • Gleditsch, Kristian S., and Michael D. Ward. 'Interstate system membership: A revised list of the independent states since 1816'. International Interactions 25.4 (1999), pp. 393-413.
+    ## • Hand-coded data by the GGO team
 
 For the [Gleditsch and Ward (GW)
 dataset](http://ksgleditsch.com/statelist.html):
