@@ -560,6 +560,7 @@ countryRegex <- dplyr::tribble(
   "VEN","Bolivarian Republic of Venezuela","v[ee]n[ee]zu[ee]la",
   "VGB","British Virgin Islands","british.virgin.is|iles.virgin.britanniques",
   "VIR","U.S. Virgin Islands","u[[:punct:]]s[[:punct:]].virgin.is|iles.virgin.des.etats-unis",
+  "VLS","Valais Republic","valais.rep",
   "VNM","Viet Nam","(?<=socialist|democratic|north).*viet.?nam|viet.?nam socialist|viet.?nam democratic|viet.?nam.?dem|dem.?rep.?viet.?nam|viet.?nam n|viet.?nam, n|viet.?nam, d|viet.?nam d|(?<!republic of )viet.?nam",
   "VTN","Vientiane","vientiane|viang.chan",
   "VUT","Vanuatu","vanuatu|new.?hebrides|vanuatu",
