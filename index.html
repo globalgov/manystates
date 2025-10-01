@@ -5,15 +5,15 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>States for manydata • manystates</title>
+<title>Many data on state and state-like actors in the international system • manystates</title>
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><link href="extra.css" rel="stylesheet">
-<meta property="og:title" content="States for manydata">
-<meta name="description" content="manystates provide data on states in the international system across time. The package combines and cross-references several existing datasets consistent with the manydata package aims.">
-<meta property="og:description" content="manystates provide data on states in the international system across time. The package combines and cross-references several existing datasets consistent with the manydata package aims.">
+<meta property="og:title" content="Many data on state and state-like actors in the international system">
+<meta name="description" content="manystates provides data on states and state-like entities in the international system across time. The package combines and cross-references several existing datasets consistent with the aims of the manydata package. It also includes functions for identifying state references in text, and for generating fictional state names.">
+<meta property="og:description" content="manystates provides data on states and state-like entities in the international system across time. The package combines and cross-references several existing datasets consistent with the aims of the manydata package. It also includes functions for identifying state references in text, and for generating fictional state names.">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -23,7 +23,7 @@
 
     <a class="navbar-brand me-2" href="index.html">manystates</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.3.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,6 +34,7 @@
       <ul class="navbar-nav me-auto">
 <li class="active nav-item"><a class="nav-link" href="index.html" aria-label="Go home"><span class="fa fa-home fa-lg"></span></a></li>
 <li class="nav-item"><a class="nav-link" href="reference/index.html">Reference</a></li>
+<li class="nav-item"><a class="nav-link" href="articles/GGO_states_codebook.html">Codebook</a></li>
 <li class="nav-item"><a class="nav-link" href="news/index.html">News</a></li>
       </ul>
 <ul class="navbar-nav">
@@ -43,7 +44,7 @@
 <li><a class="external-link dropdown-item" href="https://globalgov.github.io/manydata/">manydata</a></li>
     <li><a class="external-link dropdown-item" href="https://globalgov.github.io/manypkgs/">manypkgs</a></li>
     <li><a class="external-link dropdown-item" href="https://globalgov.github.io/manytreaties/">manytreaties</a></li>
-    <li><a class="external-link dropdown-item" href="https://globalgov.github.io/manyigos/">manyigos</a></li>
+    <li><a class="external-link dropdown-item" href="https://globalgov.github.io/manyios/">manyios</a></li>
   </ul>
 </li>
 <li class="nav-item"><a class="external-link nav-link" href="https://github.com/globalgov/manystates" aria-label="Go to the Github page"><span class="fa fab fa-github fa-lg"></span></a></li>
@@ -58,51 +59,132 @@
 <div class="page-header"><h1 id="manystates-">manystates <img src="reference/figures/manystates_hexlogo.png" alt="The manystates logo" align="right" width="220"><a class="anchor" aria-label="anchor" href="#manystates-"></a>
 </h1></div>
 <!-- badges: start -->
-<p><code>manystates</code> is a data package within the <a href="https://github.com/globalgov" class="external-link">many universe of packages</a>. It contains an ensemble of datasets currently available on states in the world, including information on states’ beginning and, where applicable, end dates, and geographical characteristics. An important aim of <code>manystates</code> is to record and include states as far back in history as possible. The package is geared towards global governance research, but can also be used by anyone interested in state actors across time.</p>
-<p>Please also check out <a href="https://github.com/globalgov/manydata" class="external-link"><code>{manydata}</code></a> for more information about the other packages and tools to handle data from the many universe of packages.</p>
+<p><code>manystates</code> is a package within the <a href="https://github.com/globalgov" class="external-link">many universe of packages</a> useful for working with states and state-like entities. It contains an ensemble of datasets on states and state-like entities in the world, including information on states’ beginning and, where applicable, end dates, and geographical and other characteristics. Please also check out <a href="https://github.com/globalgov/manydata" class="external-link"><code>{manydata}</code></a> for more information about the other packages and tools to handle data from the many universe of packages.</p>
+<p>In addition, the package includes several unique functions to help you work with state data, including <code><a href="reference/code_states.html">code_states()</a></code> to identify states within texts, and <code><a href="reference/generate_states.html">generate_states()</a></code> to create fictional state names. The package is geared towards global governance research, but can also be used by anyone interested in state actors across time.</p>
 <div class="section level2">
 <h2 id="how-to-install">How to install<a class="anchor" aria-label="anchor" href="#how-to-install"></a>
 </h2>
-<p>We’ve made it easier than ever to install and start analysing global governance data in R. Simply install the core package, <a href="https://github.com/globalgov/manydata" class="external-link">manydata</a>, as follows, and then you can discover, install and update various ‘many packages’ from the console.</p>
+<p>It is easy to install and start analysing global governance data in R. Simply install the core package, <a href="https://github.com/globalgov/manydata" class="external-link">manydata</a>, as follows, and then you can discover, install and update various ‘many packages’ from the console.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">manydata</span><span class="fu">::</span><span class="fu"><a href="https://globalgov.github.io/manydata/reference/call_packages.html" class="external-link">call_packages</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># this prints a list of the publicly available data packages currently available</span></span>
+<code class="sourceCode R"><span><span class="co"># install.packages("manydata") # install the core package</span></span>
+<span><span class="fu">manydata</span><span class="fu">::</span><span class="fu"><a href="https://www.manydata.ch/reference/call_packages.html" class="external-link">call_packages</a></span><span class="op">(</span><span class="op">)</span> <span class="co"># this prints a list of the publicly available data packages currently available</span></span>
 <span><span class="co"># manydata::call_packages("manystates") # this downloads and installs the named package</span></span></code></pre></div>
 </div>
 <div class="section level2">
-<h2 id="data-included">Data included<a class="anchor" aria-label="anchor" href="#data-included"></a>
+<h2 id="included-data">Included data<a class="anchor" aria-label="anchor" href="#included-data"></a>
 </h2>
-<p>Once you have installed the package, you can see the different datasets included in a specific datacube in the {<code>manystates</code>} package using the following function.</p>
+<p>Once you have installed the package, you can access the primary datacube in the package, <code>states</code>, as follows. You can see that currently the datacube combines three datasets: Gleditsch and Ward’s (1999) state list, the International System(s) Dataset (ISD) by Griffiths and Butcher (2013), and the GGO state list developed by the PANARCHIC team for this package.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">manydata</span><span class="fu">::</span><span class="fu"><a href="https://globalgov.github.io/manydata/reference/call_sources.html" class="external-link">call_sources</a></span><span class="op">(</span><span class="st">"manystates"</span>, <span class="st">"states"</span><span class="op">)</span></span></code></pre></div>
-<p>Working with ensembles of related data has many advantages for robust analysis. Just take a look at our vignettes <a href="https://globalgov.github.io/manydata/articles/user.html" class="external-link">here</a>.</p>
-</div>
-<div class="section level2">
-<h2 id="many-packages">Many packages<a class="anchor" aria-label="anchor" href="#many-packages"></a>
-</h2>
-<p>The development of <a href="https://github.com/globalgov/manydata" class="external-link">many packages</a> is aimed at collecting, connecting and correcting network data across issue-domains of global governance.</p>
+<code class="sourceCode R"><span><span class="fu">manydata</span><span class="fu">::</span><span class="fu"><a href="https://www.manydata.ch/reference/describe.html" class="external-link">describe_datacube</a></span><span class="op">(</span><span class="fu">manystates</span><span class="fu">::</span><span class="va"><a href="reference/states.html">states</a></span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">## [1] "The `manystates::states` datacube is a list containing 3 datasets: ISD, GW, and GGO"</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">manystates</span><span class="fu">::</span><span class="va"><a href="reference/states.html">states</a></span></span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="co">## $ISD</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="co">## # A tibble: 499 × 36</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co">##    stateID StateName       Begin End   StateNameAlt Latitude Longitude StartType</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co">##    &lt;chr&gt;   &lt;chr&gt;           &lt;mda&gt; &lt;mda&gt; &lt;chr&gt;        &lt;chr&gt;    &lt;chr&gt;         &lt;dbl&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="co">##  1 DEU     Germany         0006… 1945… Prussia      52 31 1… 13 24 18…         3</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="co">##  2 KOR     Korea           0676… 1905… Koryo, Chos… 37 34 0… 126 58 0…         4</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a><span class="co">##  3 JPN     Japan           0710… 1945… &lt;NA&gt;         35 41 2… 139 41 3…         1</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="co">##  4 CHI     Chien Khouang,… 0800… 1831… &lt;NA&gt;         19 19 2… 103 21 3…         2</span></span>
+<span id="cb5-9"><a href="#cb5-9"></a><span class="co">##  5 KHM     Cambodia        0802… 1863… Khmer Kingd… 11 34 1… 104 55 1…         1</span></span>
+<span id="cb5-10"><a href="#cb5-10"></a><span class="co">##  6 FRA     France          0843… 1942… &lt;NA&gt;         48 51 2… 2 21 8 E          3</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a><span class="co">##  7 DNK     Denmark         0950… 1940… &lt;NA&gt;         55 40 3… 12 34 6 E         1</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a><span class="co">##  8 GBR     United Kingdom  1066… 2016… &lt;NA&gt;         51 30 2… 0 7 39 W          1</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a><span class="co">##  9 TON     Tonga           1100… 1900… Kingdom Of … 21 8 0 S 175 12 0…         4</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a><span class="co">## 10 OWO     Owo             1150… 1893… &lt;NA&gt;         7 11 0 N 5 35 0 E          1</span></span>
+<span id="cb5-15"><a href="#cb5-15"></a><span class="co">## # ℹ 489 more rows</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a><span class="co">## # ℹ 28 more variables: EndType &lt;dbl&gt;, cowID &lt;chr&gt;, cowNR &lt;dbl&gt;,</span></span>
+<span id="cb5-17"><a href="#cb5-17"></a><span class="co">## #   ISD_Category &lt;dbl&gt;, Region &lt;dbl&gt;, Start_Am &lt;dbl&gt;, EStart_Am &lt;dbl&gt;,</span></span>
+<span id="cb5-18"><a href="#cb5-18"></a><span class="co">## #   Declare &lt;dbl&gt;, DecDate &lt;chr&gt;, Population &lt;chr&gt;, PopDate &lt;dbl&gt;, PopAm &lt;dbl&gt;,</span></span>
+<span id="cb5-19"><a href="#cb5-19"></a><span class="co">## #   PopulationHigh &lt;dbl&gt;, PopulationLow &lt;dbl&gt;, StartType_Am &lt;dbl&gt;,</span></span>
+<span id="cb5-20"><a href="#cb5-20"></a><span class="co">## #   StartSettle &lt;dbl&gt;, End_Am &lt;dbl&gt;, EndType_Am &lt;dbl&gt;, EndSettle &lt;dbl&gt;,</span></span>
+<span id="cb5-21"><a href="#cb5-21"></a><span class="co">## #   Sovereignty_Am &lt;dbl&gt;, EuroDip &lt;dbl&gt;, Borders &lt;dbl&gt;, Borders_Am &lt;dbl&gt;, …</span></span>
+<span id="cb5-22"><a href="#cb5-22"></a><span class="co">## </span></span>
+<span id="cb5-23"><a href="#cb5-23"></a><span class="co">## $GW</span></span>
+<span id="cb5-24"><a href="#cb5-24"></a><span class="co">## # A tibble: 216 × 7</span></span>
+<span id="cb5-25"><a href="#cb5-25"></a><span class="co">##    stateID StateName       Begin        End          StateNameAlt cowID cowNR</span></span>
+<span id="cb5-26"><a href="#cb5-26"></a><span class="co">##    &lt;chr&gt;   &lt;chr&gt;           &lt;mdate&gt;      &lt;mdate&gt;      &lt;chr&gt;        &lt;chr&gt; &lt;chr&gt;</span></span>
+<span id="cb5-27"><a href="#cb5-27"></a><span class="co">##  1 AFG     Afghanistan     ..1816-01-01 1888-12-30   &lt;NA&gt;         AFG   700  </span></span>
+<span id="cb5-28"><a href="#cb5-28"></a><span class="co">##  2 AUH     Austria-Hungary ..1816-01-01 1918-11-13   &lt;NA&gt;         AUH   300  </span></span>
+<span id="cb5-29"><a href="#cb5-29"></a><span class="co">##  3 BAD     Baden           ..1816-01-01 1871-01-17   &lt;NA&gt;         BAD   267  </span></span>
+<span id="cb5-30"><a href="#cb5-30"></a><span class="co">##  4 BAV     Bavaria         ..1816-01-01 1871-01-17   &lt;NA&gt;         BAV   245  </span></span>
+<span id="cb5-31"><a href="#cb5-31"></a><span class="co">##  5 CHE     Switzerland     ..1816-01-01 2017-12-31.. &lt;NA&gt;         SWZ   225  </span></span>
+<span id="cb5-32"><a href="#cb5-32"></a><span class="co">##  6 CHN     China           ..1816-01-01 2017-12-31.. &lt;NA&gt;         CHN   710  </span></span>
+<span id="cb5-33"><a href="#cb5-33"></a><span class="co">##  7 DEU     Germany         ..1816-01-01 1945-05-07   Prussia      GMY   255  </span></span>
+<span id="cb5-34"><a href="#cb5-34"></a><span class="co">##  8 DNK     Denmark         ..1816-01-01 2017-12-31.. &lt;NA&gt;         DEN   390  </span></span>
+<span id="cb5-35"><a href="#cb5-35"></a><span class="co">##  9 DZA     Algeria         ..1816-01-01 1830-07-05   &lt;NA&gt;         ALG   615  </span></span>
+<span id="cb5-36"><a href="#cb5-36"></a><span class="co">## 10 ESP     Spain           ..1816-01-01 2017-12-31.. &lt;NA&gt;         SPN   230  </span></span>
+<span id="cb5-37"><a href="#cb5-37"></a><span class="co">## # ℹ 206 more rows</span></span>
+<span id="cb5-38"><a href="#cb5-38"></a><span class="co">## </span></span>
+<span id="cb5-39"><a href="#cb5-39"></a><span class="co">## $GGO</span></span>
+<span id="cb5-40"><a href="#cb5-40"></a><span class="co">## # A tibble: 409 × 13</span></span>
+<span id="cb5-41"><a href="#cb5-41"></a><span class="co">##    stateID StateName  Capital Begin End   Latitude Longitude Region StateNameAlt</span></span>
+<span id="cb5-42"><a href="#cb5-42"></a><span class="co">##    &lt;chr&gt;   &lt;chr&gt;      &lt;chr&gt;   &lt;mda&gt; &lt;mda&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;       </span></span>
+<span id="cb5-43"><a href="#cb5-43"></a><span class="co">##  1 ITA     Italy      Rome    -075… 9999…     41.9    12.5   Weste… &lt;NA&gt;        </span></span>
+<span id="cb5-44"><a href="#cb5-44"></a><span class="co">##  2 SMR     San Marino San Ma… 0301… 9999…     43.9    12.4   South… &lt;NA&gt;        </span></span>
+<span id="cb5-45"><a href="#cb5-45"></a><span class="co">##  3 BGR     Bulgaria   Sofia   0681… 1018…     42.7    23.3   South… &lt;NA&gt;        </span></span>
+<span id="cb5-46"><a href="#cb5-46"></a><span class="co">##  4 ABK     Abkhazia   Anakop… 0778… 1008…     43.0    41.0   Weste… Kingdom of …</span></span>
+<span id="cb5-47"><a href="#cb5-47"></a><span class="co">##  5 DNK     Denmark    Copenh… 0793… 9999…     55.7    12.6   North… &lt;NA&gt;        </span></span>
+<span id="cb5-48"><a href="#cb5-48"></a><span class="co">##  6 FRA     France     Paris   0843… 9999…     48.9     2.35  Weste… &lt;NA&gt;        </span></span>
+<span id="cb5-49"><a href="#cb5-49"></a><span class="co">##  7 HRV     Croatia    Zagreb  0879… 1102…     45.8    16.0   South… &lt;NA&gt;        </span></span>
+<span id="cb5-50"><a href="#cb5-50"></a><span class="co">##  8 CHM     Chamba     Chamba  0920… 1846…     32.6    76.1   South… &lt;NA&gt;        </span></span>
+<span id="cb5-51"><a href="#cb5-51"></a><span class="co">##  9 GBR     United Ki… London  0927… 9999…     51.5    -0.128 Weste… &lt;NA&gt;        </span></span>
+<span id="cb5-52"><a href="#cb5-52"></a><span class="co">## 10 DRV     Annam      Hue     0939… 1883…     16.5   108.    South… &lt;NA&gt;        </span></span>
+<span id="cb5-53"><a href="#cb5-53"></a><span class="co">## # ℹ 399 more rows</span></span>
+<span id="cb5-54"><a href="#cb5-54"></a><span class="co">## # ℹ 4 more variables: CapitalAlt &lt;chr&gt;, Coder &lt;chr&gt;, Comments &lt;chr&gt;,</span></span>
+<span id="cb5-55"><a href="#cb5-55"></a><span class="co">## #   Source &lt;chr&gt;</span></span></code></pre></div>
+<p>Working with ensembles of related data has many advantages for robust analysis. For more information on how to work with ensembles of data, please see the <a href="https://manydata.ch/index.html" class="external-link">manydata package website</a>.</p>
+<div class="section level3">
+<h3 id="dataset-citations">Dataset citations<a class="anchor" aria-label="anchor" href="#dataset-citations"></a>
+</h3>
 <p>While some ‘many packages’ can and do include novel data, much of what they offer involves standing on the shoulders of giants. ‘many packages’ endeavour to be as transparent as possible about where data comes from, how it has been coded and/or relabelled, and who has done the work. As such, we make it easy to cite the datasets you use by listing the official references using the function above, as well as the package providers for their work assembling the data by using the function below.</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/citation.html" class="external-link">citation</a></span><span class="op">(</span><span class="st">"manystates"</span><span class="op">)</span></span></code></pre></div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">## To cite manystates in publications use:</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a><span class="co">## </span></span>
-<span id="cb4-3"><a href="#cb4-3"></a><span class="co">##   J. Hollway. manystates: States for manydata. 2021.</span></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="co">## </span></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="co">## A BibTeX entry for LaTeX users is</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="co">## </span></span>
-<span id="cb4-7"><a href="#cb4-7"></a><span class="co">##   @Manual{,</span></span>
-<span id="cb4-8"><a href="#cb4-8"></a><span class="co">##     title = {manystates: States for manydata},</span></span>
-<span id="cb4-9"><a href="#cb4-9"></a><span class="co">##     author = {James Hollway},</span></span>
-<span id="cb4-10"><a href="#cb4-10"></a><span class="co">##     year = {2021},</span></span>
-<span id="cb4-11"><a href="#cb4-11"></a><span class="co">##     url = {https://github.com/globalgov/qStates},</span></span>
-<span id="cb4-12"><a href="#cb4-12"></a><span class="co">##   }</span></span></code></pre></div>
+<p>For the <a href="http://ksgleditsch.com/statelist.html" class="external-link">Gleditsch and Ward (GW) dataset</a>:</p>
+<p>Gleditsch, Kristian S., and Michael D. Ward. 1999. “<a href="https://doi.org/10.1080/03050629908434958" class="external-link">A revised list of independent states since the congress of Vienna</a>.” <em>International Interactions</em> 25: 393-413.</p>
+<p>For the <a href="https://www.ryan-griffiths.com/data" class="external-link">International System(s) Dataset (ISD)</a>:</p>
+<p>Butcher, Charles R., and Ryan D. Griffiths. 2020. “<a href="https://doi.org/10.1080/03050629.2020.1707199" class="external-link">States and their international relations since 1816: introducing version 2 of the International System(s) Dataset (ISD)</a>”. <em>International Interactions</em>, 46(2), 291–308.</p>
+</div>
 </div>
 <div class="section level2">
-<h2 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
+<h2 id="included-functions">Included functions<a class="anchor" aria-label="anchor" href="#included-functions"></a>
 </h2>
-<p><a href="https://github.com/globalgov/manypkgs" class="external-link"><code>{manypkgs}</code></a> also makes it easy to contribute in lots of different ways.</p>
-<p>If you have already developed a dataset salient to this package, please reach out by flagging this as an <a href="https://github.com/globalgov/manystates/issues" class="external-link">issue</a> for us, or by forking, further developing the package yourself, and opening a <a href="https://github.com/globalgov/manystates/pulls" class="external-link">pull request</a> so that your data can be used easily.</p>
-<p>If you have collected or developed other data that may not be best for this package, but could be useful within the wider universe of <code>many packages</code>, <a href="https://github.com/globalgov/manypkgs" class="external-link"><code>{manypkgs}</code></a> includes a number of functions that make it easy to create a new <code>many package</code> and populate it with clean, consistent global governance data.</p>
-<p>If you have any other ideas about how this package or the manydata universe more broadly might better facilitate your empirical analysis, we’d be very happy to hear from you.</p>
+<p>In addition to the datasets, the package also includes two main functions that help you work with state data.</p>
+<div class="section level3">
+<h3 id="code_states">code_states()<a class="anchor" aria-label="anchor" href="#code_states"></a>
+</h3>
+<p><code><a href="reference/code_states.html">code_states()</a></code> is useful for identifying states or state-like entities within text data. This is a non-trivial task, as state names can vary widely in their spelling, abbreviation, and context, and there are many potential ambiguities (e.g., “Korea” could refer to North or South Korea). The function uses a comprehensive library of contemporary and historical state names and their variants to identify states in a given text. It returns a data frame with the identified states and their corresponding ISO 3166 alpha-3 codes or standardised names.</p>
+<p>It can handle both single strings and vectors of strings. By default it will identify the first state mentioned in each text, but it is possible to search for multiple states by setting the <code>max_count</code> argument to a value greater than 1.</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">manystates</span><span class="fu">::</span><span class="fu"><a href="reference/code_states.html">code_states</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"The event took place in the United Kingdom."</span>, </span>
+<span>            <span class="st">"Switzerland and New Zealand agreed that..."</span>,</span>
+<span>            <span class="st">"One of the oldest princely states is Chamba."</span><span class="op">)</span>,</span>
+<span>            max_count <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">## [1] "GBR"       "{CHE,NZL}" "CHM"</span></span></code></pre></div>
+<p>The function can currently discern 500 different states or state-like entities. This is likely to increase in future releases, but is already 2.2 times more than the next best package, <a href="https://github.com/andybega/states" class="external-link">states</a>, for instance.</p>
+</div>
+<div class="section level3">
+<h3 id="generate_states">generate_states()<a class="anchor" aria-label="anchor" href="#generate_states"></a>
+</h3>
+<p>Additionally, there is a seemingly whimsical function that generates a number of random state names. This function is inspired by observed state names, but is not intended to reflect any actual states. It is primarily designed for use in class exercises when a number of novel state names are required. It can also be used to generate fictional state names for creative writing or games.</p>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">manystates</span><span class="fu">::</span><span class="fu"><a href="reference/generate_states.html">generate_states</a></span><span class="op">(</span><span class="fl">3</span><span class="op">)</span></span></code></pre></div>
+<p>It is based on a Markov model of syllable patterns found in real state names. Your mileage with the results of this function may vary, but it should get more realistic as we add more state names to the underlying library, and in the meantime it might even be instructive for classroom exercises.</p>
+<p>Feedback on either of these functions is most welcome.</p>
+</div>
+</div>
+<div class="section level2">
+<h2 id="development">Development<a class="anchor" aria-label="anchor" href="#development"></a>
+</h2>
+<div class="section level3">
+<h3 id="funding-details">Funding details<a class="anchor" aria-label="anchor" href="#funding-details"></a>
+</h3>
+<p>Development on this package has been funded by the Swiss National Science Foundation (SNSF) <a href="https://data.snf.ch/grants/grant/188976" class="external-link">Grant Number 188976</a>: “Power and Networks and the Rate of Change in Institutional Complexes” (PANARCHIC). If you find the package useful, please cite the package.</p>
+</div>
+<div class="section level3">
+<h3 id="contributing">Contributing<a class="anchor" aria-label="anchor" href="#contributing"></a>
+</h3>
+<p>If you have already developed a dataset salient to this package, please reach out by flagging this as an <a href="https://github.com/globalgov/manystates/issues" class="external-link">issue</a> for us, or by forking, further developing the package yourself, and opening a <a href="https://github.com/globalgov/manystates/pulls" class="external-link">pull request</a> so that your data can be made available at the next opportunity.</p>
+</div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">

@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">manystates</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">0.3.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,13 +17,14 @@
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto"><li class="nav-item"><a class="nav-link" href="../index.html" aria-label="Go home"><span class="fa fa-home fa-lg"></span></a></li>
 <li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+<li class="nav-item"><a class="nav-link" href="../articles/GGO_states_codebook.html">Codebook</a></li>
 <li class="active nav-item"><a class="nav-link" href="../news/index.html">News</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item dropdown">
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-other-packages" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Other packages</button>
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-other-packages"><li><a class="external-link dropdown-item" href="https://globalgov.github.io/manydata/">manydata</a></li>
     <li><a class="external-link dropdown-item" href="https://globalgov.github.io/manypkgs/">manypkgs</a></li>
     <li><a class="external-link dropdown-item" href="https://globalgov.github.io/manytreaties/">manytreaties</a></li>
-    <li><a class="external-link dropdown-item" href="https://globalgov.github.io/manyigos/">manyigos</a></li>
+    <li><a class="external-link dropdown-item" href="https://globalgov.github.io/manyios/">manyios</a></li>
   </ul></li>
 <li class="nav-item"><a class="external-link nav-link" href="https://github.com/globalgov/manystates" aria-label="Go to the Github page"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul></div>
@@ -38,6 +39,55 @@
       <small>Source: <a href="https://github.com/globalgov/manystates/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="1.0.0" id="manystates-100">manystates 1.0.0<a class="anchor" aria-label="anchor" href="#manystates-100"></a></h2>
+<div class="section level3">
+<h3 id="package-1-0-0">Package<a class="anchor" aria-label="anchor" href="#package-1-0-0"></a></h3>
+<ul><li>Dropped unnecessary dependencies for CRAN submission</li>
+<li>Added more description of included data and functions to the README (closed <a href="https://github.com/globalgov/manystates/issues/78" class="external-link">#78</a>)</li>
+<li>Added funding details to the README</li>
+<li>Package still under development but considered stable (closed <a href="https://github.com/globalgov/manystates/issues/76" class="external-link">#76</a>)</li>
+<li>Fixed code coverage</li>
+<li>Updated CITATION</li>
+</ul></div>
+<div class="section level3">
+<h3 id="data-1-0-0">Data<a class="anchor" aria-label="anchor" href="#data-1-0-0"></a></h3>
+<ul><li>Improved <code>states$GW</code><ul><li>Fixed GW preparation script so that <code>$stateID</code> is coded correctly</li>
+<li>Added <code>$StateNameAlt</code> from secondary labels in parentheses</li>
+</ul></li>
+<li>Improved <code>states$ISD</code><ul><li>Updated ISD to version 2.2</li>
+<li>Fixed ISD preparation script so that <code>$Begin</code> and <code>$End</code> are coded correctly</li>
+</ul></li>
+<li>Improved <code>states$GGO</code><ul><li>Renamed from <code>states$HUGGO</code> to reflect new name of the dataset</li>
+<li>Simplified GGO preparation script by exporting and working on clean csv</li>
+<li>Fixed current states ending as 9999-12-31 (closed <a href="https://github.com/globalgov/manystates/issues/85" class="external-link">#85</a>)</li>
+<li>Removed ~64 duplicated or overlapping records (closed <a href="https://github.com/globalgov/manystates/issues/84" class="external-link">#84</a>)</li>
+<li>Added details on many states (closed <a href="https://github.com/globalgov/manystates/issues/83" class="external-link">#83</a>, thanks <a href="https://github.com/myevrard" class="external-link">@myevrard</a>)</li>
+</ul></li>
+</ul></div>
+<div class="section level3">
+<h3 id="functions-1-0-0">Functions<a class="anchor" aria-label="anchor" href="#functions-1-0-0"></a></h3>
+<ul><li>Improved <code><a href="../reference/code_states.html">code_states()</a></code><ul><li>Now uses <a href="https://stringi.gagolewski.com/" class="external-link">stringi</a> exclusively</li>
+<li>Fixed Burgundy (BOU) identification in <code><a href="../reference/code_states.html">code_states()</a></code> (fixed <a href="https://github.com/globalgov/manystates/issues/79" class="external-link">#79</a>)</li>
+<li>Fixed various negative lookup bugs in regex patterns for e.g. Korea</li>
+<li>Added 172 new regex patterns to <code><a href="../reference/code_states.html">code_states()</a></code>
+</li>
+<li>Added tests for <code><a href="../reference/code_states.html">code_states()</a></code> that cover all datasets in <code>states</code>
+</li>
+<li>Added tests to make sure that no ISO reserved codes assigned</li>
+<li>Added tests to make sure that all states identified uniquely</li>
+</ul></li>
+<li>Improved <code><a href="../reference/generate_states.html">generate_states()</a></code><ul><li>Now uses <a href="https://stringi.gagolewski.com/" class="external-link">stringi</a> exclusively</li>
+<li>Added <code><a href="../reference/generate_states.html">syllabise_states()</a></code> for splitting state names into syllables</li>
+<li>Improved state name generation algorithm to be based off of a Markov chain of syllables</li>
+<li>Improved state name generation algorithm to better match the length distribution of real state names</li>
+<li>Added checks to avoid generating existing, duplicate, or awkward state names</li>
+<li>Added tests for <code><a href="../reference/generate_states.html">generate_states()</a></code>
+</li>
+</ul></li>
+<li>Added <code>filter_datacube()</code> in <a href="https://www.manydata.ch/" class="external-link">manydata</a> to filter the state system by a given year (closed <a href="https://github.com/globalgov/manystates/issues/77" class="external-link">#77</a>)</li>
+</ul></div>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.3.1" id="manystates-031">manystates 0.3.1<a class="anchor" aria-label="anchor" href="#manystates-031"></a></h2>
 <div class="section level3">
@@ -109,7 +159,7 @@
 <ul><li>Closed <a href="https://github.com/globalgov/manystates/issues/61" class="external-link">#61</a> by updating functions to import <a href="https://github.com/vdeminstitute" class="external-link">Varieties of Democracy</a> data from the Github package with standardised variable names.</li>
 <li>Updated <code>import_vdem()</code>, <code>import_vparty()</code>, and <code>import_cshapes()</code> function by fixing CMD warnings and notes.</li>
 <li>Closed <a href="https://github.com/globalgov/manystates/issues/54" class="external-link">#54</a> by moving <code><a href="../reference/code_states.html">code_states()</a></code> to <code>{manypkgs}</code> for consistency across packages.</li>
-<li>Added first draft of vignette to publicize <a href="https://globalgov.github.io/manystates">manystates</a> data.</li>
+<li>Added first draft of vignette to publicize <a href="https://globalgov.github.io/manystates/">manystates</a> data.</li>
 <li>Updated pkgdown.yml file</li>
 </ul></div>
 <div class="section level3">
@@ -152,7 +202,7 @@
 <h3 id="package-0-0-6">Package<a class="anchor" aria-label="anchor" href="#package-0-0-6"></a></h3>
 <ul><li>Fixed <a href="https://github.com/globalgov/manystates/issues/43" class="external-link">#43</a> by extending the regex pattern matching process of <code><a href="../reference/code_states.html">code_states()</a></code>
 </li>
-<li>Changed the package name from <code>{qStates}</code> to <a href="https://globalgov.github.io/manystates">manystates</a>
+<li>Changed the package name from <code>{qStates}</code> to <a href="https://globalgov.github.io/manystates/">manystates</a>
 </li>
 </ul></div>
 </div>
