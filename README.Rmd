@@ -37,6 +37,7 @@ and then you can discover, install and update various 'many packages' from the
 console.
 
 ```{r install, eval= FALSE}
+# install.packages("manydata") # install the core package
 manydata::call_packages() # this prints a list of the publicly available data packages currently available
 # manydata::call_packages("manystates") # this downloads and installs the named package
 ```
@@ -56,7 +57,27 @@ manystates::states
 ```
 
 Working with ensembles of related data has many advantages for robust analysis.
-Take a look at our vignettes [here](https://globalgov.github.io/manydata/articles/user.html).
+For more information on how to work with ensembles of data, please see the
+[manydata package website](https://manydata.ch/index.html).
+
+### Dataset citations
+
+While some 'many packages' can and do include novel data,
+much of what they offer involves standing on the shoulders of giants.
+'many packages' endeavour to be as transparent as possible about where data
+comes from, how it has been coded and/or relabelled, and who has done the work.
+As such, we make it easy to cite the datasets you use
+by listing the official references using the function above,
+as well as the package providers for their work assembling the data
+by using the function below.
+
+For the [Gleditsch and Ward (GW) dataset](http://ksgleditsch.com/statelist.html):
+
+Gleditsch, Kristian S., and Michael D. Ward. 1999. “[A revised list of independent states since the congress of Vienna](https://doi.org/10.1080/03050629908434958).” _International Interactions_ 25: 393-413.
+
+For the [International System(s) Dataset (ISD)](https://www.ryan-griffiths.com/data):
+
+Butcher, Charles R., and Ryan D. Griffiths. 2020. "[States and their international relations since 1816: introducing version 2 of the International System(s) Dataset (ISD)](https://doi.org/10.1080/03050629.2020.1707199)". _International Interactions_, 46(2), 291–308.
 
 ## Included functions
 
@@ -103,7 +124,7 @@ state names are required.
 It can also be used to generate fictional state names for
 creative writing or games.
 
-```{r genstates, eval = TRUE}
+```{r genstates, eval = FALSE}
 manystates::generate_states(3)
 ```
 
@@ -114,65 +135,19 @@ and in the meantime it might even be instructive for classroom exercises.
 
 Feedback on either of these functions is most welcome.
 
-## Many packages
+## Development
 
-The development of [many packages](https://github.com/globalgov/manydata) is aimed
-at collecting, connecting and correcting network data across issue-domains of
-global governance.
-
-
-```{r cites}
-citation("manystates")
-```
-
-## Funding details
+### Funding details
 
 Development on this package has been funded by the Swiss National Science Foundation (SNSF)
 [Grant Number 188976](https://data.snf.ch/grants/grant/188976): 
 "Power and Networks and the Rate of Change in Institutional Complexes" (PANARCHIC).
+If you find the package useful, please cite the package.
 
-James Hollway wishes to thank all the team that have contributed to this package, 
-including:
-Bernard Bieri, Loic Modoux, Henrique Sposito, and Jael Tan.
-
-## Citations
-
-While some 'many packages' can and do include novel data,
-much of what they offer involves standing on the shoulders of giants.
-'many packages' endeavour to be as transparent as possible about where data
-comes from, how it has been coded and/or relabelled, and who has done the work.
-As such, we make it easy to cite the datasets you use
-by listing the official references using the function above,
-as well as the package providers for their work assembling the data
-by using the function below.
-
-```{r cites2}
-states <- manystates::states
-manydata::call_citations(states, output = "console")
-```
-
-For the [Gleditsch and Ward (GW) dataset](http://ksgleditsch.com/statelist.html):
-
-Gleditsch, Kristian S., and Michael D. Ward. 1999. “[A revised list of independent states since the congress of Vienna](https://doi.org/10.1080/03050629908434958).” _International Interactions_ 25: 393-413.
-
-For the [International System(s) Dataset (ISD)](https://www.ryan-griffiths.com/data):
-
-Butcher, Charles R., and Ryan D. Griffiths. 2020. "[States and their international relations since 1816: introducing version 2 of the International System(s) Dataset (ISD)](https://doi.org/10.1080/03050629.2020.1707199)". _International Interactions_, 46(2), 291–308.
-
-## Contributing
+### Contributing
 
 If you have already developed a dataset salient to this package,
 please reach out by flagging this as an [issue](https://github.com/globalgov/manystates/issues)
 for us, or by forking, further developing the package yourself, and opening a
 [pull request](https://github.com/globalgov/manystates/pulls)
-so that your data can be used easily.
-
-If you have collected or developed other data that may not be best for this
-package, but could be useful within the wider universe of `many packages`, 
-[`{manypkgs}`](https://github.com/globalgov/manypkgs) includes a number of
-functions that make it easy to create a new `many package` and populate it with
-clean, consistent global governance data.
-
-If you have any other ideas about how this package or the manydata 
-universe more broadly might better facilitate your empirical analysis, we'd be
-very happy to hear from you.
+so that your data can be made available at the next opportunity.

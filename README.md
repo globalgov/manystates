@@ -40,6 +40,7 @@ you can discover, install and update various ‘many packages’ from the
 console.
 
 ``` r
+# install.packages("manydata") # install the core package
 manydata::call_packages() # this prints a list of the publicly available data packages currently available
 # manydata::call_packages("manystates") # this downloads and installs the named package
 ```
@@ -102,7 +103,7 @@ manystates::states
     ## # ℹ 206 more rows
     ## 
     ## $GGO
-    ## # A tibble: 410 × 14
+    ## # A tibble: 409 × 13
     ##    stateID StateName  Capital Begin End   Latitude Longitude Region StateNameAlt
     ##    <chr>   <chr>      <chr>   <mda> <mda>    <dbl>     <dbl> <chr>  <chr>       
     ##  1 ITA     Italy      Rome    -075… 9999…     41.9    12.5   Weste… <NA>        
@@ -115,13 +116,42 @@ manystates::states
     ##  8 CHM     Chamba     Chamba  0920… 1846…     32.6    76.1   South… <NA>        
     ##  9 GBR     United Ki… London  0927… 9999…     51.5    -0.128 Weste… <NA>        
     ## 10 DRV     Annam      Hue     0939… 1883…     16.5   108.    South… <NA>        
-    ## # ℹ 400 more rows
-    ## # ℹ 5 more variables: CapitalAlt <chr>, RatProcedure <chr>, Coder <chr>,
-    ## #   Comments <chr>, Source <chr>
+    ## # ℹ 399 more rows
+    ## # ℹ 4 more variables: CapitalAlt <chr>, Coder <chr>, Comments <chr>,
+    ## #   Source <chr>
 
 Working with ensembles of related data has many advantages for robust
-analysis. Take a look at our vignettes
-[here](https://globalgov.github.io/manydata/articles/user.html).
+analysis. For more information on how to work with ensembles of data,
+please see the [manydata package
+website](https://manydata.ch/index.html).
+
+### Dataset citations
+
+While some ‘many packages’ can and do include novel data, much of what
+they offer involves standing on the shoulders of giants. ‘many packages’
+endeavour to be as transparent as possible about where data comes from,
+how it has been coded and/or relabelled, and who has done the work. As
+such, we make it easy to cite the datasets you use by listing the
+official references using the function above, as well as the package
+providers for their work assembling the data by using the function
+below.
+
+For the [Gleditsch and Ward (GW)
+dataset](http://ksgleditsch.com/statelist.html):
+
+Gleditsch, Kristian S., and Michael D. Ward. 1999. “[A revised list of
+independent states since the congress of
+Vienna](https://doi.org/10.1080/03050629908434958).” *International
+Interactions* 25: 393-413.
+
+For the [International System(s) Dataset
+(ISD)](https://www.ryan-griffiths.com/data):
+
+Butcher, Charles R., and Ryan D. Griffiths. 2020. “[States and their
+international relations since 1816: introducing version 2 of the
+International System(s) Dataset
+(ISD)](https://doi.org/10.1080/03050629.2020.1707199)”. *International
+Interactions*, 46(2), 291–308.
 
 ## Included functions
 
@@ -170,9 +200,6 @@ state names for creative writing or games.
 manystates::generate_states(3)
 ```
 
-    ## [1] "Cke Wa"                            "Meri"                             
-    ## [3] "Mel Southern Kong Te South Kaluwu"
-
 It is based on a Markov model of syllable patterns found in real state
 names. Your mileage with the results of this function may vary, but it
 should get more realistic as we add more state names to the underlying
@@ -181,99 +208,21 @@ exercises.
 
 Feedback on either of these functions is most welcome.
 
-## Many packages
+## Development
 
-The development of [many
-packages](https://github.com/globalgov/manydata) is aimed at collecting,
-connecting and correcting network data across issue-domains of global
-governance.
-
-``` r
-citation("manystates")
-```
-
-    ## To cite manystates in publications use:
-    ## 
-    ##   James Hollway (2021) ‘manystates: Many data on state and state-like
-    ##   actors in the international system’. doi:10.5281/zenodo.5205704.
-    ## 
-    ## A BibTeX entry for LaTeX users is
-    ## 
-    ##   @Manual{,
-    ##     title = {manystates: Many data on state and state-like actors in the international system},
-    ##     author = {James Hollway},
-    ##     year = {2021},
-    ##     url = {https://github.com/globalgov/manystates},
-    ##     doi = {https://doi.org/10.5281/zenodo.5205704},
-    ##   }
-
-## Funding details
+### Funding details
 
 Development on this package has been funded by the Swiss National
 Science Foundation (SNSF) [Grant Number
 188976](https://data.snf.ch/grants/grant/188976): “Power and Networks
-and the Rate of Change in Institutional Complexes” (PANARCHIC).
+and the Rate of Change in Institutional Complexes” (PANARCHIC). If you
+find the package useful, please cite the package.
 
-James Hollway wishes to thank all the team that have contributed to this
-package, including: Bernard Bieri, Loic Modoux, Henrique Sposito, and
-Jael Tan.
-
-## Citations
-
-While some ‘many packages’ can and do include novel data, much of what
-they offer involves standing on the shoulders of giants. ‘many packages’
-endeavour to be as transparent as possible about where data comes from,
-how it has been coded and/or relabelled, and who has done the work. As
-such, we make it easy to cite the datasets you use by listing the
-official references using the function above, as well as the package
-providers for their work assembling the data by using the function
-below.
-
-``` r
-states <- manystates::states
-manydata::call_citations(states, output = "console")
-```
-
-    ## Found in: manystates
-
-    ## Please cite the included datasets: 
-    ## • Griffiths, Ryan D., and Charles R. Butcher. 'Introducing the international system(s) dataset (ISD), 1816-2011'. International Interactions 39.5 (2013), pp. 748-768.
-    ## • Gleditsch, Kristian S., and Michael D. Ward. 'Interstate system membership: A revised list of the independent states since 1816'. International Interactions 25.4 (1999), pp. 393-413.
-    ## • Hand-coded data by the GGO team
-
-For the [Gleditsch and Ward (GW)
-dataset](http://ksgleditsch.com/statelist.html):
-
-Gleditsch, Kristian S., and Michael D. Ward. 1999. “[A revised list of
-independent states since the congress of
-Vienna](https://doi.org/10.1080/03050629908434958).” *International
-Interactions* 25: 393-413.
-
-For the [International System(s) Dataset
-(ISD)](https://www.ryan-griffiths.com/data):
-
-Butcher, Charles R., and Ryan D. Griffiths. 2020. “[States and their
-international relations since 1816: introducing version 2 of the
-International System(s) Dataset
-(ISD)](https://doi.org/10.1080/03050629.2020.1707199)”. *International
-Interactions*, 46(2), 291–308.
-
-## Contributing
+### Contributing
 
 If you have already developed a dataset salient to this package, please
 reach out by flagging this as an
 [issue](https://github.com/globalgov/manystates/issues) for us, or by
 forking, further developing the package yourself, and opening a [pull
 request](https://github.com/globalgov/manystates/pulls) so that your
-data can be used easily.
-
-If you have collected or developed other data that may not be best for
-this package, but could be useful within the wider universe of
-`many packages`, [`{manypkgs}`](https://github.com/globalgov/manypkgs)
-includes a number of functions that make it easy to create a new
-`many package` and populate it with clean, consistent global governance
-data.
-
-If you have any other ideas about how this package or the manydata
-universe more broadly might better facilitate your empirical analysis,
-we’d be very happy to hear from you.
+data can be made available at the next opportunity.
