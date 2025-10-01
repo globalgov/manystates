@@ -72,7 +72,6 @@ reference:
   - title: "Data on states and state-like entities"
     contents:
     - states
-    - state_system
     # - contiguity
 footer:
   structure:

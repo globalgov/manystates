@@ -41,7 +41,7 @@
   - Improved state name generation algorithm to better match the length distribution of real state names
   - Added checks to avoid generating existing, duplicate, or awkward state names
   - Added tests for `generate_states()`
-- Added `state_system()` to filter the state system by a given year (closed #77)
+- Added `filter_datacube()` in `{manydata}` to filter the state system by a given year (closed #77)
 
 # manystates 0.3.1
 
