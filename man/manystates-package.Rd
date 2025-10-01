@@ -6,12 +6,12 @@
 \alias{manystates-package}
 \title{manystates: Many data on state and state-like actors in the international system}
 \description{
-manystates provides data on states in the international system across time. The package combines and cross-references several existing datasets consistent with the aims of the manydata package. It also includes functions for identifying state references in text, and for generating fictional state names.
+manystates provides data on states and state-like entities in the international system across time. The package combines and cross-references several existing datasets consistent with the aims of the manydata package. It also includes functions for identifying state references in text, and for generating fictional state names.
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://globalgov.github.io/manystates}
+  \item \url{https://globalgov.github.io/manystates/}
   \item Report bugs at \url{https://github.com/globalgov/manystates/issues}
 }
 
@@ -23,6 +23,7 @@ Other contributors:
 \itemize{
   \item Henrique Sposito (\href{https://orcid.org/0000-0003-3420-6085}{ORCID}) (IHEID) [contributor]
   \item Bernhard Bieri (\href{https://orcid.org/0000-0001-5943-9059}{ORCID}) (IHEID) [contributor]
+  \item Mylan Evrard (\href{https://orcid.org/0009-0009-4404-1078}{ORCID}) (IHEID) [contributor]
   \item Esther Peev (\href{https://orcid.org/0000-0002-9678-2777}{ORCID}) (IHEID) [contributor]
   \item Jael Tan (\href{https://orcid.org/0000-0002-6234-9764}{ORCID}) (IHEID) [contributor]
 }

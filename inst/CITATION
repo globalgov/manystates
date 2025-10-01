@@ -4,9 +4,9 @@ bibentry(
   bibtype    = "Manual",
   title    = "manystates: Many data on state and state-like actors in the international system",
   author   = "James Hollway",
-  year     = "2021",
+  year     = "2025",
   url      = "https://github.com/globalgov/manystates",
-  doi      = "https://doi.org/10.5281/zenodo.5205704",
-  textVersion = paste("James Hollway (2021) ‘manystates: Many data on state and state-like actors in the international system’. doi:10.5281/zenodo.5205704."
+  doi      = "10.5281/zenodo.5205704",
+  textVersion = paste("James Hollway (2025) ‘manystates: Many data on state and state-like actors in the international system’. doi:10.5281/zenodo.5205704."
   )
 )
