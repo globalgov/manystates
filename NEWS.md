@@ -1,3 +1,9 @@
+# manystates 1.0.1
+
+## Package
+
+- Fixed README and DESCRIPTION issues
+
 # manystates 1.0.0
 
 ## Package
@@ -23,6 +29,7 @@
   - Fixed current states ending as 9999-12-31 (closed #85)
   - Removed ~64 duplicated or overlapping records (closed #84)
   - Added details on many states (closed #83, thanks @myevrard)
+  - Added a codebook vignette for `states$GGO` (closed #87)
 
 ## Functions
 
