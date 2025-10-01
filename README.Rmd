@@ -4,7 +4,7 @@ output: github_document
 # manystates <img src="man/figures/manystates_hexlogo.png" alt="The manystates logo" align="right" width="220"/>
 
 <!-- badges: start -->
-[![lifecycle](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![lifecycle](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/globalgov/manystates)
 ![GitHub Release Date](https://img.shields.io/github/release-date/globalgov/manystates)
 ![GitHub issues](https://img.shields.io/github/issues-raw/globalgov/manystates)
@@ -58,7 +58,7 @@ manystates::states
 
 Working with ensembles of related data has many advantages for robust analysis.
 For more information on how to work with ensembles of data, please see the
-[manydata package website](https://manydata.ch/index.html).
+[manydata package website](https://www.manydata.ch/index.html).
 
 ### Dataset citations
 
