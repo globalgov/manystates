@@ -10,3 +10,5 @@
 ^.*\.RDataTmp
 ^codecov\.yml$
 ^next$
+^CRAN-SUBMISSION$
+^cran-comments\.md$
