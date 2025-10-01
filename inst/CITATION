@@ -1,11 +1,12 @@
 citHeader("To cite manystates in publications use:")
 
-citEntry(
-  entry    = "Manual",
-  title    = "manystates: States for manydata",
+bibentry(
+  bibtype    = "Manual",
+  title    = "manystates: Many data on state and state-like actors in the international system",
   author   = "James Hollway",
-  year     = "2021",
-  url      = "https://github.com/globalgov/qStates",
-  textVersion = paste("J. Hollway. manystates: States for manydata. 2021."
+  year     = "2025",
+  url      = "https://github.com/globalgov/manystates",
+  doi      = "10.5281/zenodo.5205704",
+  textVersion = paste("James Hollway (2025) ‘manystates: Many data on state and state-like actors in the international system’. doi:10.5281/zenodo.5205704."
   )
 )

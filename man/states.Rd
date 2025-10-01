@@ -6,15 +6,15 @@
 \title{States datacube}
 \format{
 \describe{
-\item{ISD: }{A dataset with 482
-observations and 35 variables:
-stateID, StateName, StateName2, Begin, End, Latitude, Longitude, StartType, EndType, cowID, cowNR, ISD_Category, Region, Start_Am, EStart_Am, Declare, DecDate, Population, ..., VioEnd, and VioEnd_Am.}
-\item{HUGGO: }{A dataset with 470
-observations and 14 variables:
-stateID, StateName, Capital, Begin, End, Latitude, Longitude, Constitution, RatProcedure, Area, Region, StateName2, Capital2, and Source_rat.}
+\item{ISD: }{A dataset with 499
+observations and 36 variables:
+stateID, StateName, Begin, End, StateNameAlt, Latitude, Longitude, StartType, EndType, cowID, cowNR, ISD_Category, Region, Start_Am, EStart_Am, Declare, DecDate, Population, ..., VioEnd, and VioEnd_Am.}
+\item{HUGGO: }{A dataset with
+observations and  variables:
+.}
 \item{GW: }{A dataset with 216
-observations and 6 variables:
-stateID, Begin, End, StateName, cowID, and cowNR.}
+observations and 7 variables:
+stateID, StateName, Begin, End, StateNameAlt, cowID, and cowNR.}
 }
 For more information and references to each of the datasets used,
 please use the \code{manydata::call_sources()} and \code{manydata::compare_dimensions()} functions.
@@ -22,15 +22,15 @@ please use the \code{manydata::call_sources()} and \code{manydata::compare_dimen
 \source{
 \itemize{
 \item Griffiths, Ryan D., and Charles R. Butcher. 'Introducing the international system(s) dataset (ISD), 1816-2011'. International Interactions 39.5 (2013), pp. 748-768.
-\item Hollway, James, Henrique Sposito, and Jael Tan. 2021. States for manydata.
 \item Gleditsch, Kristian S., and Michael D. Ward. 'Interstate system membership: A revised list of the independent states since 1816'. International Interactions 25.4 (1999), pp. 393-413.
+\item Hand-coded data by the GGO team
 }
 }
 \usage{
 states
 }
 \description{
-The \code{manystates::states} datacube is a list containing 3 datasets: ISD, HUGGO, and GW.
+The \code{manystates::states} datacube is a list containing 3 datasets: ISD, GW, and GGO.
 It is a work-in-progress, so please let us know if you have any comments or suggestions.
 }
 \details{
@@ -38,63 +38,43 @@ It is a work-in-progress, so please let us know if you have any comments or sugg
 #> ---------------------------------------------------------
 #> |   Variable   |  Class  |  Obs  |  Missing  |  Miss \%  |
 #> ---------------------------------------------------------
-#> |stateID       |character|    482|          0|         0|
-#> |StateName     |character|    482|          0|         0|
-#> |StateName2    |character|    188|        294|        61|
-#> |Begin         |mdate    |    482|          0|         0|
-#> |End           |mdate    |    482|          0|         0|
-#> |Latitude      |character|    282|        200|     41.49|
-#> |Longitude     |character|    282|        200|     41.49|
-#> |StartType     |character|    278|        204|     42.32|
-#> |EndType       |character|    263|        219|     45.44|
-#> |cowID         |character|    482|          0|         0|
-#> |cowNR         |character|    482|          0|         0|
-#> |ISD_Category  |character|    482|          0|         0|
-#> |Region        |character|    482|          0|         0|
-#> |Start_Am      |character|    482|          0|         0|
-#> |EStart_Am     |character|    202|        280|     58.09|
-#> |Declare       |character|    257|        225|     46.68|
-#> |DecDate       |character|     53|        429|        89|
-#> |Population    |character|    266|        216|     44.81|
-#> |PopDate       |character|    265|        217|     45.02|
-#> |PopAm         |character|    283|        199|     41.29|
-#> |PopulationHigh|character|    132|        350|     72.61|
-#> |PopulationLow |character|    103|        379|     78.63|
-#> |StartType_Am  |character|    280|        202|     41.91|
-#> |StartSettle   |character|    261|        221|     45.85|
-#> |End_Am        |character|    482|          0|         0|
-#> |EndType_Am    |character|    260|        222|     46.06|
-#> |EndSettle     |character|    253|        229|     47.51|
-#> |Sovereignty_Am|character|    482|          0|         0|
-#> |EuroDip       |character|    273|        209|     43.36|
-#> |Borders       |character|    273|        209|     43.36|
-#> |Borders_Am    |character|    283|        199|     41.29|
-#> |VioStart      |character|    264|        218|     45.23|
-#> |VioStart_Am   |character|    273|        209|     43.36|
-#> |VioEnd        |character|    259|        223|     46.27|
-#> |VioEnd_Am     |character|    264|        218|     45.23|
+#> |stateID       |character|    499|          0|         0|
+#> |StateName     |character|    499|          0|         0|
+#> |Begin         |mdate    |    282|        217|     43.49|
+#> |End           |mdate    |    499|          0|         0|
+#> |StateNameAlt  |character|    210|        289|     57.92|
+#> |Latitude      |character|    343|        156|     31.26|
+#> |Longitude     |character|    343|        156|     31.26|
+#> |StartType     |numeric  |    337|        162|     32.46|
+#> |EndType       |numeric  |    296|        203|     40.68|
+#> |cowID         |character|    499|          0|         0|
+#> |cowNR         |numeric  |    499|          0|         0|
+#> |ISD_Category  |numeric  |    497|          2|       0.4|
+#> |Region        |numeric  |    499|          0|         0|
+#> |Start_Am      |numeric  |    499|          0|         0|
+#> |EStart_Am     |numeric  |    232|        267|     53.51|
+#> |Declare       |numeric  |    315|        184|     36.87|
+#> |DecDate       |character|     72|        427|     85.57|
+#> |Population    |character|    319|        180|     36.07|
+#> |PopDate       |numeric  |    316|        183|     36.67|
+#> |PopAm         |numeric  |    339|        160|     32.06|
+#> |PopulationHigh|numeric  |    139|        360|     72.14|
+#> |PopulationLow |numeric  |    108|        391|     78.36|
+#> |StartType_Am  |numeric  |    339|        160|     32.06|
+#> |StartSettle   |numeric  |    320|        179|     35.87|
+#> |End_Am        |numeric  |    499|          0|         0|
+#> |EndType_Am    |numeric  |    294|        205|     41.08|
+#> |EndSettle     |numeric  |    282|        217|     43.49|
+#> |Sovereignty_Am|numeric  |    499|          0|         0|
+#> |EuroDip       |numeric  |    331|        168|     33.67|
+#> |Borders       |numeric  |    332|        167|     33.47|
+#> |Borders_Am    |numeric  |    342|        157|     31.46|
+#> |Capital       |character|    284|        215|     43.09|
+#> |VioStart      |numeric  |    318|        181|     36.27|
+#> |VioStart_Am   |numeric  |    327|        172|     34.47|
+#> |VioEnd        |numeric  |    292|        207|     41.48|
+#> |VioEnd_Am     |numeric  |    297|        202|     40.48|
 #> ---------------------------------------------------------
-#> 
-#> 
-#> $HUGGO
-#> -------------------------------------------------------
-#> |  Variable  |  Class  |  Obs  |  Missing  |  Miss \%  |
-#> -------------------------------------------------------
-#> |stateID     |character|    470|          0|         0|
-#> |StateName   |character|    470|          0|         0|
-#> |Capital     |character|    467|          3|      0.64|
-#> |Begin       |mdate    |    320|        150|     31.91|
-#> |End         |mdate    |    320|        150|     31.91|
-#> |Latitude    |character|    467|          3|      0.64|
-#> |Longitude   |character|    467|          3|      0.64|
-#> |Constitution|character|     30|        440|     93.62|
-#> |RatProcedure|character|     30|        440|     93.62|
-#> |Area        |character|    211|        259|     55.11|
-#> |Region      |character|    211|        259|     55.11|
-#> |StateName2  |character|      6|        464|     98.72|
-#> |Capital2    |character|      1|        469|     99.79|
-#> |Source_rat  |character|     38|        432|     91.91|
-#> -------------------------------------------------------
 #> 
 #> 
 #> $GW
@@ -102,17 +82,38 @@ It is a work-in-progress, so please let us know if you have any comments or sugg
 #> |  Variable  |  Class  |  Obs  |  Missing  |  Miss \%  |
 #> -------------------------------------------------------
 #> |stateID     |character|    216|          0|         0|
+#> |StateName   |character|    216|          0|         0|
 #> |Begin       |mdate    |    216|          0|         0|
 #> |End         |mdate    |    216|          0|         0|
-#> |StateName   |character|    216|          0|         0|
+#> |StateNameAlt|character|     18|        198|     91.67|
 #> |cowID       |character|    216|          0|         0|
 #> |cowNR       |character|    216|          0|         0|
+#> -------------------------------------------------------
+#> 
+#> 
+#> $GGO
+#> -------------------------------------------------------
+#> |  Variable  |  Class  |  Obs  |  Missing  |  Miss \%  |
+#> -------------------------------------------------------
+#> |stateID     |character|    409|          0|         0|
+#> |StateName   |character|    409|          0|         0|
+#> |Capital     |character|    409|          0|         0|
+#> |Begin       |mdate    |    409|          0|         0|
+#> |End         |mdate    |    409|          0|         0|
+#> |Latitude    |numeric  |    409|          0|         0|
+#> |Longitude   |numeric  |    409|          0|         0|
+#> |Region      |character|    409|          0|         0|
+#> |StateNameAlt|character|     61|        348|     85.09|
+#> |CapitalAlt  |character|      7|        402|     98.29|
+#> |Coder       |character|    409|          0|         0|
+#> |Comments    |character|     72|        337|      82.4|
+#> |Source      |character|    136|        273|     66.75|
 #> -------------------------------------------------------
 }\if{html}{\out{</div>}}
 }
 \section{Mapping}{
 \tabular{lll}{
-   \emph{manystates} \tab \emph{GW} \tab \emph{ISD} \cr
+   \emph{GGO} \tab \emph{GW} \tab \emph{ISD} \cr
    stateID \tab  \tab  \cr
    Begin \tab Start \tab Start \cr
    End \tab Finish \tab Finish \cr

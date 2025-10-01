@@ -1,10 +1,14 @@
 Package: manystates
-Title: States for manydata
-Version: 0.3.1
-Date: 2025-05-30
-Description: manystates provide data on states in the international system across time. 
-    The package combines and cross-references several existing datasets consistent with the manydata package aims.
-URL: https://globalgov.github.io/manystates
+Title: Many data on state and state-like actors in the international system
+Version: 1.0.0
+Date: 2025-10-01
+Description: manystates provides data on states and state-like entities 
+    in the international system across time. 
+    The package combines and cross-references several existing datasets 
+    consistent with the aims of the manydata package.
+    It also includes functions for identifying state references in text,
+    and for generating fictional state names.
+URL: https://globalgov.github.io/manystates/
 BugReports: https://github.com/globalgov/manystates/issues
 Authors@R: 
     c(person(given = "James",
@@ -12,18 +16,22 @@ Authors@R:
              role = c("cre", "aut", "ctb"),
              email = "james.hollway@graduateinstitute.ch",
              comment = c("IHEID", ORCID = "0000-0002-8361-9647")),
-      person(given = "Henrique",
-             family = "Sposito",
-             role = "ctb",
-             comment = c("IHEID", ORCID = "0000-0003-3420-6085")),
       person(given = "Bernhard",
              family = "Bieri",
              role = "ctb",
              comment = c("IHEID", ORCID = "0000-0001-5943-9059")),
+      person(given = "Mylan",
+             family = "Evrard",
+             role = "ctb",
+             comment = c("IHEID", ORCID = "0009-0009-4404-1078")),
       person(given = "Esther",
              family = "Peev",
              role = "ctb",
              comment = c("IHEID", ORCID = "0000-0002-9678-2777")),
+      person(given = "Henrique",
+             family = "Sposito",
+             role = "ctb",
+             comment = c("IHEID", ORCID = "0000-0003-3420-6085")),
       person(given = "Jael",
              family = "Tan",
              role = "ctb",
@@ -36,19 +44,15 @@ Depends:
 Imports:
     knitr,
     purrr,
-    stringr
+    stringi
 Suggests:
-    ggplot2,
     pointblank,
     messydates,
-    lubridate,
-    stringi,
-    testthat (>= 3.0.0)
-Remotes:
-    globalgov/manypkgs
+    testthat (>= 3.0.0),
+    rmarkdown
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+RoxygenNote: 7.3.3
 Config/Needs/check: 
     covr,
     lintr,
@@ -57,5 +61,5 @@ Config/Needs/website:
     pkgdown
 Config/testthat/parallel: true
 Config/testthat/edition: 3
-Config/testthat/start-first: V-Party 
-
+Config/testthat/start-first: code_states 
+VignetteBuilder: knitr

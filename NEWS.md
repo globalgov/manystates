@@ -1,3 +1,48 @@
+# manystates 1.0.0
+
+## Package
+
+- Dropped unnecessary dependencies for CRAN submission
+- Added more description of included data and functions to the README (closed #78)
+- Added funding details to the README
+- Package still under development but considered stable (closed #76)
+- Fixed code coverage
+- Updated CITATION
+
+## Data
+
+- Improved `states$GW`
+  - Fixed GW preparation script so that `$stateID` is coded correctly
+  - Added `$StateNameAlt` from secondary labels in parentheses
+- Improved `states$ISD`
+  - Updated ISD to version 2.2
+  - Fixed ISD preparation script so that `$Begin` and `$End` are coded correctly
+- Improved `states$GGO`
+  - Renamed from `states$HUGGO` to reflect new name of the dataset
+  - Simplified GGO preparation script by exporting and working on clean csv
+  - Fixed current states ending as 9999-12-31 (closed #85)
+  - Removed ~64 duplicated or overlapping records (closed #84)
+  - Added details on many states (closed #83, thanks @myevrard)
+
+## Functions
+
+- Improved `code_states()`
+  - Now uses `{stringi}` exclusively
+  - Fixed Burgundy (BOU) identification in `code_states()` (fixed #79)
+  - Fixed various negative lookup bugs in regex patterns for e.g. Korea
+  - Added 172 new regex patterns to `code_states()`
+  - Added tests for `code_states()` that cover all datasets in `states`
+  - Added tests to make sure that no ISO reserved codes assigned
+  - Added tests to make sure that all states identified uniquely
+- Improved `generate_states()`
+  - Now uses `{stringi}` exclusively
+  - Added `syllabise_states()` for splitting state names into syllables
+  - Improved state name generation algorithm to be based off of a Markov chain of syllables
+  - Improved state name generation algorithm to better match the length distribution of real state names
+  - Added checks to avoid generating existing, duplicate, or awkward state names
+  - Added tests for `generate_states()`
+- Added `filter_datacube()` in `{manydata}` to filter the state system by a given year (closed #77)
+
 # manystates 0.3.1
 
 ## Package
