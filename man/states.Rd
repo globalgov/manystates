@@ -95,20 +95,19 @@ It is a work-in-progress, so please let us know if you have any comments or sugg
 #> -------------------------------------------------------
 #> |  Variable  |  Class  |  Obs  |  Missing  |  Miss \%  |
 #> -------------------------------------------------------
-#> |stateID     |character|    410|          0|         0|
-#> |StateName   |character|    410|          0|         0|
-#> |Capital     |character|    409|          1|      0.24|
-#> |Begin       |mdate    |    410|          0|         0|
-#> |End         |mdate    |    410|          0|         0|
-#> |Latitude    |numeric  |    410|          0|         0|
-#> |Longitude   |numeric  |    410|          0|         0|
-#> |Region      |character|    410|          0|         0|
-#> |StateNameAlt|character|     61|        349|     85.12|
-#> |CapitalAlt  |character|      7|        403|     98.29|
-#> |RatProcedure|character|     56|        354|     86.34|
-#> |Coder       |character|    410|          0|         0|
-#> |Comments    |character|     72|        338|     82.44|
-#> |Source      |character|    137|        273|     66.59|
+#> |stateID     |character|    409|          0|         0|
+#> |StateName   |character|    409|          0|         0|
+#> |Capital     |character|    409|          0|         0|
+#> |Begin       |mdate    |    409|          0|         0|
+#> |End         |mdate    |    409|          0|         0|
+#> |Latitude    |numeric  |    409|          0|         0|
+#> |Longitude   |numeric  |    409|          0|         0|
+#> |Region      |character|    409|          0|         0|
+#> |StateNameAlt|character|     61|        348|     85.09|
+#> |CapitalAlt  |character|      7|        402|     98.29|
+#> |Coder       |character|    409|          0|         0|
+#> |Comments    |character|     72|        337|      82.4|
+#> |Source      |character|    136|        273|     66.75|
 #> -------------------------------------------------------
 }\if{html}{\out{</div>}}
 }

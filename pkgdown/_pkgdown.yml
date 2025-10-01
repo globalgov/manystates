@@ -30,7 +30,7 @@ navbar:
       href: reference/index.html
     articles:
       text: Codebook
-      href: articles/HUGGO_states_codebook.html
+      href: articles/GGO_states_codebook.html
     news:
       text: News
       href: news/index.html
