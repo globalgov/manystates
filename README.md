@@ -3,7 +3,7 @@
 
 <!-- badges: start -->
 
-[![lifecycle](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://www.tidyverse.org/lifecycle/#stable)
+[![lifecycle](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 ![GitHub release (latest by
 date)](https://img.shields.io/github/v/release/globalgov/manystates)
 ![GitHub Release
@@ -123,7 +123,7 @@ manystates::states
 Working with ensembles of related data has many advantages for robust
 analysis. For more information on how to work with ensembles of data,
 please see the [manydata package
-website](https://manydata.ch/index.html).
+website](https://www.manydata.ch/index.html).
 
 ### Dataset citations
 
