@@ -4,6 +4,10 @@
 
 - Fixed DESCRIPTION Description
 
+## Functions
+
+- Fixed lack of return documentation for `code_states()`
+
 # manystates 1.0.1
 
 ## Package

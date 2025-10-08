@@ -23,6 +23,13 @@
 #'   Where more than one country is matched, the countries are returned as a set,
 #'   i.e. in the format "\{AUS,NZL\}".
 #'   By default `max_count = 1`, which will just return the first match.
+#' @returns A character vector of the same length as `text`,
+#'  with either the three-letter abbreviation (an extended version of ISO-3166 alpha-3),
+#'  or the name of the state, or `NA` where no match was found.
+#'  If `max_count > 1`, multiple matches are returned as a set,
+#'  i.e. in the format "\{AUS,NZL\}".
+#'  If the function is run without an argument, it returns
+#'  a data frame with the complete list of entities and their search terms.
 #' @importFrom stringi stri_trans_general stri_detect_regex
 #' @importFrom knitr kable
 #' @examples

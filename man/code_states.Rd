@@ -22,6 +22,15 @@ Where more than one country is matched, the countries are returned as a set,
 i.e. in the format "\{AUS,NZL\}".
 By default \code{max_count = 1}, which will just return the first match.}
 }
+\value{
+A character vector of the same length as \code{text},
+with either the three-letter abbreviation (an extended version of ISO-3166 alpha-3),
+or the name of the state, or \code{NA} where no match was found.
+If \code{max_count > 1}, multiple matches are returned as a set,
+i.e. in the format "\{AUS,NZL\}".
+If the function is run without an argument, it returns
+a data frame with the complete list of entities and their search terms.
+}
 \description{
 This function allows for contemporary and historical countries or states
 to be identified in text.

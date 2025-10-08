@@ -40,7 +40,7 @@ info_states <- tibble::tibble(Dataset = c("ISD", "GW", "GGO"),
                               Updated = c(2025, 1999, 2025),
                               Source = c("Griffiths, Ryan D., and Charles R. Butcher. 'Introducing the international system(s) dataset (ISD), 1816-2011'. International Interactions 39.5 (2013), pp. 748-768.",
                                          "Gleditsch, Kristian S., and Michael D. Ward. 'Interstate system membership: A revised list of the independent states since 1816'. International Interactions 25.4 (1999), pp. 393-413.",
-                                         "Hand-coded data by the GGO team"),
+                                         "Hollway, James, and Jael Tan. 'Global governance observations on states and state-like entities' (2025)"),
                               URL = c("http://www.ryan-griffiths.com/data",
                                       "http://ksgleditsch.com/data-4.html",
                                       "https://panarchic.ch"))

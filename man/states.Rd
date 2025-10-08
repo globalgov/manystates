@@ -23,7 +23,7 @@ please use the \code{manydata::call_sources()} and \code{manydata::compare_dimen
 \itemize{
 \item Griffiths, Ryan D., and Charles R. Butcher. 'Introducing the international system(s) dataset (ISD), 1816-2011'. International Interactions 39.5 (2013), pp. 748-768.
 \item Gleditsch, Kristian S., and Michael D. Ward. 'Interstate system membership: A revised list of the independent states since 1816'. International Interactions 25.4 (1999), pp. 393-413.
-\item Hand-coded data by the GGO team
+\item Hollway, James, and Jael Tan. 'Global governance observations on states and state-like entities' (2025)
 }
 }
 \usage{
