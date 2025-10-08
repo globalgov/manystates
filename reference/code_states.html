@@ -25,7 +25,7 @@ Updates, bug reports, and suggestions welcome."></head><body>
 
     <a class="navbar-brand me-2" href="../index.html">manystates</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Released version">1.0.2</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -101,6 +101,16 @@ i.e. in the format "{AUS,NZL}".
 By default <code>max_count = 1</code>, which will just return the first match.</p></dd>
 
 </dl></div>
+    <div class="section level2">
+    <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
+    <p>A character vector of the same length as <code>text</code>,
+with either the three-letter abbreviation (an extended version of ISO-3166 alpha-3),
+or the name of the state, or <code>NA</code> where no match was found.
+If <code>max_count &gt; 1</code>, multiple matches are returned as a set,
+i.e. in the format "{AUS,NZL}".
+If the function is run without an argument, it returns
+a data frame with the complete list of entities and their search terms.</p>
+    </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
