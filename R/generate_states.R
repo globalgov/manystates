@@ -30,6 +30,8 @@
 #' @param n Integer number of country names to generate
 #'   from a library of fictional country names.
 #'   Default is 10.
+#' @param countries Optionally, a list of country names (string vector)
+#'   from which to identify the prevalence of modifiers.
 #' @param short Logical whether to reference a list of shorter country names,
 #'   or to include longer alternative names as well.
 #'   Default is `FALSE`, meaning both shorter and longer names are used.
@@ -41,12 +43,10 @@ NULL
 #' @examples
 #'   generate_states(12)
 #' @export
-generate_states <- function(n = 10, short = FALSE) {
-  results <- character()
-  while (length(results) < n) {
-    candidate <- generate_name(short)
-    if (!(tolower(candidate) %in% tolower(results))) {
-      results <- c(results, candidate)
+generate_states <- function(n = 10, countries = NULL, short = FALSE) {
+  
+  if(!is.null(countries)) {
+    stnames <- countries
     }
   }
   results

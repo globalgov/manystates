@@ -6,7 +6,7 @@
 \alias{syllabize_states}
 \title{Generate fictional country names}
 \usage{
-generate_states(n = 10, short = FALSE)
+generate_states(n = 10, countries = NULL, short = FALSE)
 
 syllabise_states(word)
 
@@ -16,6 +16,9 @@ syllabize_states(word)
 \item{n}{Integer number of country names to generate
 from a library of fictional country names.
 Default is 10.}
+
+\item{countries}{Optionally, a list of country names (string vector)
+from which to identify the prevalence of modifiers.}
 
 \item{short}{Logical whether to reference a list of shorter country names,
 or to include longer alternative names as well.
