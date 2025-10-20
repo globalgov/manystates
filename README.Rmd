@@ -128,7 +128,6 @@ creative writing or games.
 manystates::generate_states(30)
 ```
 
-It is based on a Markov model of syllable patterns found in real state names.
 Your mileage with the results of this function may vary,
 but it should get more realistic as we add more state names to the underlying library,
 and in the meantime it might even be instructive for classroom exercises.

@@ -200,21 +200,20 @@ state names for creative writing or games.
 manystates::generate_states(30)
 ```
 
-    ##  [1] "Varia"                "Zorford"              "Turtanvia"           
-    ##  [4] "Orakiaton"            "Belvarburg"           "Quazorford"          
-    ##  [7] "Polpolnia"            "East Zortia"          "Oraberg"             
-    ## [10] "East Poldom"          "Marpolstan"           "Kingdom of Venzornia"
-    ## [13] "Maracy"               "South Niaia"          "Kiaton"              
-    ## [16] "Emirate of Quapolria" "Republic of Polburg"  "Quakiaacy"           
-    ## [19] "Kiavarmere"           "Oraford"              "Zoracy"              
-    ## [22] "Marvia"               "Niaturberg"           "Polsia"              
-    ## [25] "Turia"                "Polbelia"             "Marford"             
-    ## [28] "Emirate of Oradom"    "Kiavartia"            "Tanberg"
+    ##  [1] "Polvarstein"            "Okostan"                "Kingdom of the Marberg"
+    ##  [4] "Republic of Varbelstan" "Quagerton"              "Germarland"            
+    ##  [7] "Turtia"                 "Varkiaacy"              "Niaventon"             
+    ## [10] "Belbarsia"              "Orakiamere"             "Polvaria"              
+    ## [13] "Republic of Gerany"     "Republic of Tangerland" "Okooraland"            
+    ## [16] "Niastan"                "Polia"                  "Tankiaberg"            
+    ## [19] "Martia"                 "Kiapolstan"             "Gervartia"             
+    ## [22] "Vartanberg"             "Kiaany"                 "Polican"               
+    ## [25] "Turstein"               "Tannia"                 "Quavarican"            
+    ## [28] "Tanbarican"             "Venbeldom"              "Kiapolvia"
 
-It is based on a Markov model of syllable patterns found in real state
-names. Your mileage with the results of this function may vary, but it
-should get more realistic as we add more state names to the underlying
-library, and in the meantime it might even be instructive for classroom
+Your mileage with the results of this function may vary, but it should
+get more realistic as we add more state names to the underlying library,
+and in the meantime it might even be instructive for classroom
 exercises.
 
 Feedback on either of these functions is most welcome.
