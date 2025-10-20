@@ -47,30 +47,40 @@ generate_states <- function(n = 10, countries = NULL, short = FALSE) {
   
   if(!is.null(countries)) {
     stnames <- countries
+  } else {
+    if (short) {
+      stnames <- manystates::states$GGO$StateName
+    } else {
+      stnames <- stats::na.omit(c(manystates::states$GGO$StateName, 
+                           manystates::states$GGO$StateNameAlt))
     }
   }
-  results
-}
-
-generate_name <- function(short = FALSE) {
-  stnames <- `if`(short,
-                  states$GGO$StateName,
-                  na.omit(c(manystates::states$GGO$StateName, 
-                            manystates::states$GGO$StateNameAlt)))
   modifiers <- c("New", "North", "South", "East", "West", "Central", 
                  "Northern","Southern","Eastern","Western",
                  "United", "United States of", "United Republic of",
                  "Old", "Great", "Upper", "Lower", "Isle of",
                  "Federal", "Federation of", "Saint", "San", "The",
                  "Democratic People's Republic of", "Federal Republic of", 
-                 "Republic of", "Republic of the",
+                 "Republic of", "Republic of the", "Commonwealth of",
                  "Kingdom of", "Kingdom of the", "Principality of", "Emirate of")
   modweights <- vapply(modifiers, 
                        FUN = function(x) sum(stringi::stri_detect_fixed(stnames, x)), 
                        FUN.VALUE = integer(1))
-  modweights <- c("BLANK"=length(stnames)-sum(modweights), modweights)
+  modweights <- c("BLANK"=max(length(stnames)-sum(modweights),0), modweights)
   modifiers <- c("", modifiers)
   modweights <- modweights/length(stnames)
+  
+  results <- character()
+  while (length(results) < n) {
+    candidate <- generate_name(modifiers, modweights)
+    if (!(tolower(candidate) %in% tolower(results))) {
+      results <- c(results, candidate)
+    }
+  }
+  results
+}
+
+generate_name <- function(modifiers, modweights) {
   # forms <- c("", "Republic", "Kingdom", "Empire", "Union", "Confederation", 
   # "Islands", "Federation")
   
