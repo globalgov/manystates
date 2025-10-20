@@ -7,7 +7,6 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
+0 errors | 0 warnings | 0 notes
 
-* This is a new release.
-* Fixed README and DESCRIPTION issues
+* Fixed issue with a function that in rare, simulated situations caused a warning in R CMD check.
