@@ -124,8 +124,8 @@ state names are required.
 It can also be used to generate fictional state names for
 creative writing or games.
 
-```{r genstates, eval = FALSE}
-manystates::generate_states(3)
+```{r genstates, eval = TRUE}
+manystates::generate_states(30)
 ```
 
 It is based on a Markov model of syllable patterns found in real state names.

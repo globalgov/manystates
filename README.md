@@ -197,8 +197,19 @@ state names are required. It can also be used to generate fictional
 state names for creative writing or games.
 
 ``` r
-manystates::generate_states(3)
+manystates::generate_states(30)
 ```
+
+    ##  [1] "Varia"                "Zorford"              "Turtanvia"           
+    ##  [4] "Orakiaton"            "Belvarburg"           "Quazorford"          
+    ##  [7] "Polpolnia"            "East Zortia"          "Oraberg"             
+    ## [10] "East Poldom"          "Marpolstan"           "Kingdom of Venzornia"
+    ## [13] "Maracy"               "South Niaia"          "Kiaton"              
+    ## [16] "Emirate of Quapolria" "Republic of Polburg"  "Quakiaacy"           
+    ## [19] "Kiavarmere"           "Oraford"              "Zoracy"              
+    ## [22] "Marvia"               "Niaturberg"           "Polsia"              
+    ## [25] "Turia"                "Polbelia"             "Marford"             
+    ## [28] "Emirate of Oradom"    "Kiavartia"            "Tanberg"
 
 It is based on a Markov model of syllable patterns found in real state
 names. Your mileage with the results of this function may vary, but it
