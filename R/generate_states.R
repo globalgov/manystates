@@ -73,7 +73,7 @@ generate_states <- function(n = 10, countries = NULL, short = FALSE) {
   results <- character()
   while (length(results) < n) {
     candidate <- generate_name(modifiers, modweights)
-    if (!(tolower(candidate) %in% tolower(results,stnames))) {
+    if (!(tolower(candidate) %in% c(tolower(results),tolower(stnames)))) {
       results <- c(results, candidate)
     }
   }
