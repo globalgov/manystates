@@ -1,3 +1,16 @@
+# manystates 1.0.3
+
+## Package
+
+- Improved README to reveal generated state names
+
+## Functions
+
+- Fixed `generate_states()` to avoid generation failure on rare edge cases
+- Improved `generate_states()` to avoid preposition repetitions, prepositions beginning or ending state names, and other issues
+- Note that `generate_states()` no longer uses the Markov chain approach advertised in the previous version, but generates more realistic names overall
+- Improved `generate_states()` to include modifying prefixes according to real-world distributions
+
 # manystates 1.0.2
 
 ## Package

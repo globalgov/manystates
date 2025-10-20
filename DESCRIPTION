@@ -1,7 +1,7 @@
 Package: manystates
 Title: Many Data on State and State-Like Actors in the International System
-Version: 1.0.2
-Date: 2025-10-08
+Version: 1.0.3
+Date: 2025-10-20
 Description: Comprehensively identifying states and state-like actors is difficult.
     This package provides data on states and state-like entities in the international system across time.
     The package combines and cross-references several existing datasets consistent with the aims and functions of the manydata package.

@@ -197,13 +197,23 @@ state names are required. It can also be used to generate fictional
 state names for creative writing or games.
 
 ``` r
-manystates::generate_states(3)
+manystates::generate_states(30)
 ```
 
-It is based on a Markov model of syllable patterns found in real state
-names. Your mileage with the results of this function may vary, but it
-should get more realistic as we add more state names to the underlying
-library, and in the meantime it might even be instructive for classroom
+    ##  [1] "Polvarstein"            "Okostan"                "Kingdom of the Marberg"
+    ##  [4] "Republic of Varbelstan" "Quagerton"              "Germarland"            
+    ##  [7] "Turtia"                 "Varkiaacy"              "Niaventon"             
+    ## [10] "Belbarsia"              "Orakiamere"             "Polvaria"              
+    ## [13] "Republic of Gerany"     "Republic of Tangerland" "Okooraland"            
+    ## [16] "Niastan"                "Polia"                  "Tankiaberg"            
+    ## [19] "Martia"                 "Kiapolstan"             "Gervartia"             
+    ## [22] "Vartanberg"             "Kiaany"                 "Polican"               
+    ## [25] "Turstein"               "Tannia"                 "Quavarican"            
+    ## [28] "Tanbarican"             "Venbeldom"              "Kiapolvia"
+
+Your mileage with the results of this function may vary, but it should
+get more realistic as we add more state names to the underlying library,
+and in the meantime it might even be instructive for classroom
 exercises.
 
 Feedback on either of these functions is most welcome.

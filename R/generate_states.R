@@ -6,24 +6,9 @@
 #'   the library provided.
 #'   Please note that the function is still _experimental_.
 #'   
-#'   The names are generated using a Markov chain approach based on
-#'   syllable patterns found in a library of real country names.
-#'   The function `generate_states()` uses the `syllabise_states()` function
-#'   to split existing country names into syllable-like units,
-#'   providing special attention to common patterns in country names
-#'   such as "land", "stan", "burg", and others.
-#'   A transition matrix is then built from these syllable units,
-#'   allowing for the generation of new names that mimic the structure and
-#'   length of real country names.
 #'   Checks are included to ensure that the generated names
 #'   are unique, do not match any existing country names,
 #'   and avoid certain uncommon patterns such as ending on a preposition.
-#'   
-#'   If no library of country names is provided,
-#'   the function defaults to using a comprehensive list
-#'   of country names from the `{manystates}` package.
-#'   However, users can supply their own list of country names
-#'   to customize the generation process.
 #'   
 #'   This function can be useful for creating fictional datasets
 #'   for testing, illustrative, or pedagogical purposes.
@@ -45,8 +30,11 @@
 #' @param n Integer number of country names to generate
 #'   from a library of fictional country names.
 #'   Default is 10.
-#' @param countries Optional string vector of country names
-#'   to use as a library for generating fictional names.
+#' @param countries Optionally, a list of country names (string vector)
+#'   from which to identify the prevalence of modifiers.
+#' @param short Logical whether to reference a list of shorter country names,
+#'   or to include longer alternative names as well.
+#'   Default is `FALSE`, meaning both shorter and longer names are used.
 #' @return String vector of fictional country names
 #' @importFrom stringi stri_trim_both
 NULL
@@ -55,100 +43,70 @@ NULL
 #' @examples
 #'   generate_states(12)
 #' @export
-generate_states <- function(n = 10, countries = NULL) {
+generate_states <- function(n = 10, countries = NULL, short = FALSE) {
   
-  if(is.null(countries)){
-    countries <- unique(unlist(lapply(names(manystates::states), 
-                                      function(x) if("StateNameAlt" %in% names(manystates::states[[x]])) {
-                                        c(manystates::states[[x]]$StateName, 
-                                          manystates::states[[x]]$StateNameAlt) } else {
-                                            manystates::states[[x]]$StateName
-                                          })))
-    countries <- unique(c(countries,countryRegex$Label))
-  } 
-  unique_countries <- unique(tolower(stringi::stri_trans_general(countries, 
-                                                                 "Latin-ASCII")))
-  unique_countries <- stringi::stri_replace_all_regex(unique_countries, "\\(|\\)", "")
-  unique_countries <- stringi::stri_replace_all_regex(unique_countries, ",", "")
-  
-  # Use improved syllable splitter
-  syllable_list <- syllabise_states(unique_countries)
-  
-  # Record syllable length distribution
-  syllable_lengths <- sapply(syllable_list, length)
-  
-  # Build transitions
-  transitions <- list()
-  for (sylls in syllable_list) {
-    seq <- c(sylls, "END")
-    for (i in seq_along(seq)[-length(seq)]) {
-      from <- seq[i]
-      to <- seq[i + 1]
-      transitions[[from]] <- c(transitions[[from]], to)
-    }
-  }
-  
-  # prefixlib <- c("The ", "Central ", 
-  #                "North ", "Northern ", "South", "Southern ", 
-  #                "West ", "Western ", "East ", "Eastern ", 
-  #                "Empire of ", "Kingdom of ", "Republic of ", 
-  #                "United ", "United States of ", 
-  #                "Isle of ", 
-  #                "New ", 
-  #                "Saint ", "San ", 
-  #                "Upper ", "Lower ")
-  # suffixlib <- c(" Confederacy", " Empire", " Islands", " Kingdom", " Republic", 
-  #                " Union", " United", " Republic")
-  
-  generate_name <- function() {
-    target_len <- sample(syllable_lengths, 1)
-    poss_starts <- names(transitions)
-    poss_starts <- poss_starts[!stringi::stri_detect_regex(poss_starts, 
-                                                           "^.( |-)|and|of", 
-                                                           case_insensitive=TRUE)]
-    state <- sample(poss_starts, 1)
-    name_parts <- c(state)
-    
-    while (state != "END" && length(name_parts) < target_len) {
-      state <- sample(transitions[[state]], 1)
-      if(state == "END" && length(name_parts) < target_len){
-        state <- " "
-      }
-      if(state == " " && name_parts[length(name_parts)] == " ") next
-      # avoid preposition chaining
-      if(state == "and" && name_parts[length(name_parts)-1] %in% c("and","of","the")) next
-      if(state == "of" && name_parts[length(name_parts)-1] %in% c("and","of","the")) next
-      if(state == "the" && name_parts[length(name_parts)-1] %in% c("and","of","the")) next
-      name_parts <- c(name_parts, state)
-    }
-    
-    name <- paste(name_parts, collapse = "")
-    stringi::stri_trim_both(stringi::stri_trans_totitle(name))
-  }
-  
-  check_candidate <- function(candidate, results, unique_countries){
-    
-    lcand <- tolower(candidate)
-    
-    if(lcand %in% tolower(results)){ # check unique
-      return(results)
-    } else if(lcand %in% tolower(unique_countries)){ # check fictional
-      return(results)
-    } else if(grepl("-$| of$|^saint$| [a-z]$", lcand)){ # check ending
-      return(results)
+  if(!is.null(countries)) {
+    stnames <- countries
+  } else {
+    if (short) {
+      stnames <- manystates::states$GGO$StateName
     } else {
-      return(c(results, candidate))
+      stnames <- stats::na.omit(c(manystates::states$GGO$StateName, 
+                           manystates::states$GGO$StateNameAlt))
     }
   }
+  modifiers <- c("New", "North", "South", "East", "West", "Central", 
+                 "Northern","Southern","Eastern","Western",
+                 "United", "United States of", "United Republic of",
+                 "Old", "Great", "Upper", "Lower", "Isle of",
+                 "Federal", "Federation of", "Saint", "San", "The",
+                 "Democratic People's Republic of", "Federal Republic of", 
+                 "Republic of", "Republic of the", "Commonwealth of",
+                 "Kingdom of", "Kingdom of the", "Principality of", "Emirate of")
+  modweights <- vapply(modifiers, 
+                       FUN = function(x) sum(stringi::stri_detect_fixed(stnames, x)), 
+                       FUN.VALUE = integer(1))
+  modweights <- c("BLANK"=max(length(stnames)-sum(modweights),0), modweights)
+  modifiers <- c("", modifiers)
+  modweights <- modweights/length(stnames)
   
   results <- character()
   while (length(results) < n) {
-    candidate <- generate_name()
-    results <- check_candidate(candidate, results, unique_countries)
+    candidate <- generate_name(modifiers, modweights)
+    if (!(tolower(candidate) %in% c(tolower(results),tolower(stnames)))) {
+      results <- c(results, candidate)
+    }
   }
-  
   results
 }
+
+generate_name <- function(modifiers, modweights) {
+  # forms <- c("", "Republic", "Kingdom", "Empire", "Union", "Confederation", 
+  # "Islands", "Federation")
+  
+  core <- generate_place()
+  mod <- sample(modifiers, 1, prob = modweights)
+  # form <- sample(forms, 1)
+  
+  stringi::stri_trim_both(paste(mod, core))
+}
+
+generate_place <- function() {
+  syllables <- c("bar","bel","ger","kia","mar","nia","oko","ora","pol","qua",
+                 "tan","tur","var","ven","zor")
+  suffixes <- c("acy", "any", 
+                "burg", "berg", 
+                "ia", "nia", "via", "ria", "sia",
+                "land", "stan", 
+                "tia", "dom", "tion","stein","ican",
+                "mere", "ford", "ton")
+  n <- sample(1:2, 1)
+  core <- paste0(sample(syllables, n, replace=TRUE), collapse="")
+  suffix <- sample(suffixes, 1)
+  core <- paste0(core, suffix)
+  stringi::stri_trans_totitle(core)
+}
+
 
 #' @rdname generate_states
 #' @param word One or more words (character vector) to split into syllable-like units.
@@ -163,7 +121,7 @@ syllabise_states <- function(word) {
   # standardise input
   word <- tolower(stringi::stri_trans_general(word, "Latin-ASCII")) # remove accents
   word <- stringi::stri_trim_both(word)
-
+  
   # Regex: match consonant cluster + vowel cluster as a unit
   # This captures patterns like "bra", "zil", "ar", "gen", "ti", "na"
   specials <- "burg|stan|land|dem|ia|king|af|ab|st |tion|acy|turk|stadt|-|arc|sax|nam"

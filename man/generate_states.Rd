@@ -6,7 +6,7 @@
 \alias{syllabize_states}
 \title{Generate fictional country names}
 \usage{
-generate_states(n = 10, countries = NULL)
+generate_states(n = 10, countries = NULL, short = FALSE)
 
 syllabise_states(word)
 
@@ -17,8 +17,12 @@ syllabize_states(word)
 from a library of fictional country names.
 Default is 10.}
 
-\item{countries}{Optional string vector of country names
-to use as a library for generating fictional names.}
+\item{countries}{Optionally, a list of country names (string vector)
+from which to identify the prevalence of modifiers.}
+
+\item{short}{Logical whether to reference a list of shorter country names,
+or to include longer alternative names as well.
+Default is \code{FALSE}, meaning both shorter and longer names are used.}
 
 \item{word}{One or more words (character vector) to split into syllable-like units.}
 }
@@ -32,24 +36,9 @@ the results will not match (at least not exactly) country names from
 the library provided.
 Please note that the function is still \emph{experimental}.
 
-The names are generated using a Markov chain approach based on
-syllable patterns found in a library of real country names.
-The function \code{generate_states()} uses the \code{syllabise_states()} function
-to split existing country names into syllable-like units,
-providing special attention to common patterns in country names
-such as "land", "stan", "burg", and others.
-A transition matrix is then built from these syllable units,
-allowing for the generation of new names that mimic the structure and
-length of real country names.
 Checks are included to ensure that the generated names
 are unique, do not match any existing country names,
 and avoid certain uncommon patterns such as ending on a preposition.
-
-If no library of country names is provided,
-the function defaults to using a comprehensive list
-of country names from the \code{{manystates}} package.
-However, users can supply their own list of country names
-to customize the generation process.
 
 This function can be useful for creating fictional datasets
 for testing, illustrative, or pedagogical purposes.
