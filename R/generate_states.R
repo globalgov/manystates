@@ -92,11 +92,14 @@ generate_name <- function(modifiers, modweights) {
 }
 
 generate_place <- function() {
-  syllables <- c("bel","var","tan","qua","zor","nia","mar","pol","ora",
-                 "ven","tur","kia")
-  suffixes <- c("land", "stan", "ia", "burg", "berg", "nia", "via", "ria", 
-                "tia", "dom", "acy", "tion",
-                "mere", "ford", "ton", "sia")
+  syllables <- c("bar","bel","ger","kia","mar","nia","oko","ora","pol","qua",
+                 "tan","tur","var","ven","zor")
+  suffixes <- c("acy", "any", 
+                "burg", "berg", 
+                "ia", "nia", "via", "ria", "sia",
+                "land", "stan", 
+                "tia", "dom", "tion","stein","ican",
+                "mere", "ford", "ton")
   n <- sample(1:2, 1)
   core <- paste0(sample(syllables, n, replace=TRUE), collapse="")
   suffix <- sample(suffixes, 1)
